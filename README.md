@@ -43,6 +43,8 @@ This is a template for creating an [HTML GitBook style](https://bookdown.org/yih
 
 - [ ] 4. If it looks good, commit and push all changed files to GitHub. 
 
+This does not work, I am afraid
+
 (You will need to repeat steps 2 and 4 every time you wish to update the book online.)
 
 ### Edit README
