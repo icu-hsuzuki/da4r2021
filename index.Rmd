@@ -5,5 +5,8 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Test Title Again Second Time
+# About {-}
 
+This is a lecture note of a course jointly taught in the Winter term AY2021.
+
+First we start with the contents of the slides and gradually include other contents into this book.
