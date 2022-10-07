@@ -1,0 +1,1207 @@
+# Exploratory Data Analysis (EDA) 2 {#eda2}
+
+### Course Contents {-}
+
+  1. 2021-12-08: Introduction: About the course  
+    - An introduction to open and public data, and data science
+  2. 2021-12-15: Exploratory Data Analysis (EDA) 1 [lead by hs]  
+    - R Basics with RStudio and/or RStudio.cloud; R Script, swirl
+  3. **2021-12-22: Exploratory Data Analysis (EDA) 2** [lead by hs]   
+    - **R Markdown; Introduction to `tidyverse`; RStudio Primers**
+  4. 2022-01-12: Exploratory Data Analysis (EDA) 3 [lead by hs]  
+    - Introduction to `tidyverse`; Public Data, WDI, etc
+  5. 2022-01-19: Exploratory Data Analysis (EDA) 4 [lead by hs]  
+    - Introduction to `tidyverse`; WDI, UN, WHO, etc
+  6. 2022-01-26: Exploratory Data Analysis (EDA) 5 [lead by hs]  
+    - Introduction to `tidyverse`; WDI, OECD, US gov, etc
+  7. 2022-02-02: Inference Statistics 1
+  8. 2022-02-09: Inference Statistics 2
+  9. 2022-02-16: Inference Statistics 3
+  10. 2022-02-23: Project Presentation
+
+### EDA and Data Visualization {-}
+
+* Communication in the EDA Cycle
+* Data Visualization in the EDA Cycle
+  - Tidyverse Package centered at `ggplot2`
+	
+#### EDA (A diagram from R4DS by H.W. and G.G.) {-}
+
+![EDA from r4ds](./data/data-science.png)
+
+### Contents of EDA2 {-}
+
+* Reproducible Research
+* Literate Programming
+* R Markdown
+  - **R Notebook**
+  - Formats
+    + HTML
+    + pdf
+    + MS Word
+  - Presentation
+  - _and more_
+* Practicum I: R Markdown and R Notebook
+* Introduction to `tidyverse` package
+  - `ggplot2`
+  - ggplot(), aes(), geoms, etc.
+* Practicum II: `tidyverse`, `ggplot2` on R Notebook
+* Learning Resources: RStuido Primers, etc.
+
+
+## Part I: R Markdown for Communication
+
+
+### Records of EDA and Communication
+
+1. Memo on scratch paper: R Scripts
+2. Record on a notebook: R Notebook (a type of an R Markdown format)
+3. Short paper or a digital communication: R Notebook
+3. Paper or a report: R Markdown (html, pdf, or MS Word)
+4. Presentation
+  * R Markdown with a presentation format (html, pdf, or PowerPoint)
+6. Publication of a Book
+  * [BOOKDOWN: Write HTML, PDF, ePub, and Kindle books with R Markdown](https://bookdown.org). Free online document is provided in [pdf as well](https://bookdown.org/yihui/rmarkdown/rmarkdown.pdf)
+  - [Arxive Page](https://bookdown.org/home/archive/) 
+
+### What is R Markdown Notebook
+
+R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both
+
+* save and execute code
+* generate high quality reports that can be shared with an audience
+
+R Notebooks are an implementation of Literate Programming that allows for direct interaction with R while producing a reproducible document with publication-quality output.
+
+An R Notebook is an R Markdown document with chunks that can be executed independently and interactively, with output visible immediately beneath the input.
+
+(Reference: [R Markdown: The Definitive Guide, 3.2 Notebook](https://bookdown.org/yihui/rmarkdown/notebook.html))
+
+### R Studio Setup
+
+1. Start R Studio
+2. Create a Project
+3. Tool > Install Packages `rmarkdown`
+    * Or on Console: `install.packages("rmarkdown")`
+4. Tool > Install Packages `tinytex` (for pdf generation)
+5. Let's try!  
+    a. File > New File > R Notebook
+    b. Save with a file name, say, test-notebook
+    c. Preview by [Preview] button
+    d. Run Code Chunk `plot(cars)` and then Preview again.
+    e. Knit PDF, Word (and HTML)
+
+Note: R Notebooks are relatively new feature of RStudio and are only available in version 1.0 or higher of RStudio. 
+
+### Default YAML: R Notebook, HTML, PDF, WORD
+
+```
+---
+title: "The Title of This R Notebook"
+author: "Your Name"
+date: "2021-12-22"
+output:
+  html_notebook: default
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+```
+
+* Original format is `output: html_document`
+* Indention matters in YAML. So it is safer to copy and paste `output:` to `pdf_document: default`
+* R Notebook is also an HTML format, so html_notebook part may disappear after knitting in HTML.
+
+### An Example of R Notebooks
+
+1. Moodle: QALL401 2021W 2021-12-22 Examples of R Notebook
+
+2. Open the file 
+
+  * R Codes with Outputs
+  * Headings, Links, Explanations, etc.
+  * [Hide] button, and [Code] button with a menu
+  * Choose: Download Rmd
+
+3. Save as "_file_name_.nb.html" in your R project directory
+
+4. Download and Save "jhu_covid.Rmd". (Or, open the file in editor)
+
+5. Preview by [Preview] button.
+
+6. Knit to other formats, e.g. Word under [Preview] button
+
+N.B. If Step 4 does not work, create a new R Notebook and copy and paste [R Markdown Source File] in Moodle
+
+
+### Knit, Notebook Mode and Preview of Default.Rmd
+
+1. Knit to HTML
+2. Knit to PDF (require \TeX \ system, install `tinytex` package)
+3. Knit to Word
+4. Controlling a code chunk and its output
+
+  * Highlight and run
+  * Run all chunks above
+  * Expand, collapse and clear output
+  * Show output in other window
+  * Modify chunk options
+
+5. Output Options:
+
+  * Notebook, HTML, PDF, Word
+  * General, Figures and Advanced
+
+### `yaml` - YAML Ain't a Markup Language - Example
+
+```
+---
+title: "File Name --Subtitle--"
+author: "My Name"
+date: "2021/12/22"
+output:
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+  word_document:
+    fig_caption: yes
+    fig_height: 5
+    fig_width: 6
+#    reference_docx: word-styles-reference-01.docx
+---
+```
+
+
+
+### R Markdown: Quick References (See Moodle)
+
+* R Studio Help (menu bar) > Markdown Quick Reference
+* R Studio Help (menu bar) > Cheat Sheet 
+  - R Markdown Cheat Sheet
+  - R Markdown Reference Guide
+* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, Garrett Grolemund
+* In Textbook: [R for Data Science: Communicate](https://r4ds.had.co.nz/communicate-intro.html#communicate-intro)
+* Markdown: R Markdown is based on the Markdown language of Pandoc
+  - [Pandoc's Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown): Detailed Information
+  - [Markdown Tutorials](https://www.markdowntutorial.com): Interactive Practicum
+  - [DARING FIREBALL: Markdown](https://daringfireball.net/projects/markdown/) (detailed explanation and editor as Dingus)
+
+
+### Markdown Language -- or use WYSIWYG editor
+
+* Headers: \#, \#\#, \#\#\#, \#\#\#\#
+* Lists: 1. 2. \ldots, * 
+* Links: [linked phrase](http://example.com)
+* Images: `![alt text](figures/filename.jpg)`
+* Block quotes" > (block) 
+* \LaTeX\  equations: e.g. `$\frac{a}{b}$` for $\frac{a}{b}$
+* Horizontal rules: Three or more asterisks or dashes (*** or  - - - )
+* Tables
+* Footnotes
+* Bibliographies and Citations
+* Slide breaks
+* _Italicized text_ by `_italic_`, **Bold text** by `**bold**`
+* Superscripts, Subscripts, Strikethrough text
+
+
+
+### MS Word: [Happy collaboration with Rmd to docx](https://rmarkdown.rstudio.com/articles_docx.html)
+
+* Use R Markdown to create a Word document
+  - Save as: ``word-styles-reference-01.docx''
+* Edit the Word styles
+  - Edit the styles of the file ``word-styles-reference-01.docx'' .
+* Save this document as your style reference docx file
+* Format an Rmd report using the styles reference docx file
+```
+---
+title: "Test Report"
+author: "Your Name"
+date: "January 6, 2021"
+output:
+  word_document:
+    reference_docx: word-styles-reference-01.docx
+---
+```
+
+### Why R Markdown?
+
+#### R Markdown Cheat Sheet
+
+* .Rmd files: 
+An R Markdown (.Rmd) file is a record of your research. It contains 
+  1. the code that a scientist needs to reproduce your work along with 
+  2. the narration that a reader needs to understand your work.
+* Reproducible Research: 
+At the click of a button, or the type
+of a command, you can rerun the
+code in an R Markdown file to Rmd reproduce your work and export
+the results as a finished report.
+* Dynamic Documents: 
+You can choose to export the finished report as a html, nb.html, pdf, MS Word, ODT, RTF, or markdown document; or as a html or pdf based slide show.
+
+
+
+
+### Literate Programming by D. Knuth
+
+Literate programming is an approach to programming introduced by Donald Knuth in which a program is given as an explanation of the program logic in a natural language, such as English, interspersed with snippets of macros and traditional source code, from which a compilable source code can be generated
+
+#### [D. Knuth](https://www.brainyquote.com/quotes/donald_knuth_181634)
+Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.
+
+### Reproducible Research - Quote from a Coursera Course
+
+#### [Reproducible Research](https://www.coursera.org/learn/reproducible-research)
+
+Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.  The need for reproducibility is increasing dramatically as data analyses become more complex, involving larger datasets and more sophisticated computations. Reproducibility allows for people to focus on the actual content of a data analysis, rather than on superficial details reported in a written summary. In addition, reproducibility makes an analysis more useful to others because the data and code that actually conducted the analysis are available. 
+
+### [R Markdown workflow, R for Data Science](https://r4ds.had.co.nz/r-markdown-workflow.html#r-markdown-workflow)
+
+R Markdown is also important because it so tightly integrates prose and code. This makes it a great analysis notebook because it lets you develop code and record your thoughts. It:
+
+* Records what you did and why you did it. Regardless of how great your memory is, if you don’t record what you do, there will come a time when you have forgotten important details. Write them down so you don’t forget!
+
+* Supports rigorous thinking. You are more likely to come up with a strong analysis if you record your thoughts as you go, and continue to reflect on them. This also saves you time when you eventually write up your analysis to share with others.
+
+* Helps others understand your work. It is rare to do data analysis by yourself, and you’ll often be working as part of a team. A lab notebook helps you share why you did it with your colleagues or lab mates.
+
+#### Examples of yaml
+
+```
+---
+title: "R Notebook"
+output: html_notebook
+---
+```
+
+##### Default + author + date
+The format of date can be changed.
+
+```
+---
+title: "Title of the Notebook"
+author: "Your Name"
+date: "2021-12-22" 
+output: html_notebook
+---
+```
+
+##### Examples
+##### Notebook of Coronavirus
+
+```
+---
+title: "A Study of Cases of Coronavirus Pandemic"
+author: "Hiroshi Suzuki"
+date: "2021/12/22"
+output:
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+---
+```
+
+##### Notebook of Coronavirus + pdf + word
+
+```
+---
+title: "A Study of Cases of Coronavirus Pandemic"
+author: "Hiroshi Suzuki"
+date: "2021/12/22"
+output:
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: true
+    number_sections: true
+  word_document: default
+---
+```
+
+##### Edit the word file file_show.docx to create my-styles.docx, e.g., a4-my-styles.docx changed the paper size to A4 from US letter.
+
+```
+---
+title: "A Study of Cases of Coronavirus Pandemic"
+author: "Hiroshi Suzuki"
+date: "2021/12/22"
+output:
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: true
+    number_sections: true
+  word_document:
+    reference_docx: a4-my-styles.docx
+---
+
+```
+
+### Learning Resources, EDA2-1
+
+* Textbook: [R for Data Science, Part V Communicate](https://r4ds.had.co.nz/communicate-intro.html#communicate-intro)
+
+* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, Garrett Grolemund [Last Revised: 2020-12-14]
+* [BOOKDOWN: Write HTML, PDF, ePub, and Kindle books with R Markdown](https://bookdown.org). Free online document is provided in [pdf as well](https://bookdown.org/yihui/rmarkdown/rmarkdown.pdf)
+  - [Arxive Page](https://bookdown.org/home/archive/)
+* [RMarkdown for Scientists](https://rmd4sci.njtierney.com) by Nicholas Tierney [Last Revised: 2020-09-09]
+* [Report Writing for Data Science in R](https://leanpub.com/reportwriting) by Roger Peng
+* [Social Science Computing Cooperative at the University of Wisconsin](https://www.ssc.wisc.edu/sscc/)
+  - [R for Researchers: R Markdown](https://www.ssc.wisc.edu/sscc/pubs/RFR/RFR_RMarkdown.html) [Last Revised: 2015-04-16]
+
+### Practicum: R Markdown and R Notebook
+
+1. Install `rmarkdown`, `tinytex`, `tidyverse` (and `timetk`)
+2. Try RMarkdown: HTML, PDF, Word
+3. Try R Notebook:
+  - Code Chunk
+  - RStudio Help
+  - Visual Editor
+  - Download from Moodle
+  - Export and import files
+  - _file name_.nb.html and _file name_.Rmd
+4. YAML
+5. Shared link to RStudio.cloud: https://moodle3.icu.ac.jp/mod/url/view.php?id=185785
+
+NB. `Sys.setenv(LANG = "en")`
+
+  
+## Part II: Data Visualization and Tidyverse Package
+
+### Introduction to `tidyverse` R Packages
+
+* CRAN: https://cran.r-project.org > Packages (menu)
+  - [Contributed Packages](https://cran.r-project.org/web/packages/)
+  - Currently, the CRAN package repository features 16850 available packages. 
+* RStudio:
+  - [R Packages](https://rstudio.com/products/rpackages/)
+  - [Quick list of useful R packages](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
+* Tidyverse: https://www.tidyverse.org
+  1. Install `tidyverse`
+      a. install.packages("tidyverse")
+      b. RStudio Menu: Tools > Install Packages > `tidyverse`
+  2. Attaching `tidyverse`
+      - `library(tidyverse)`
+  3. The following packages are attached automatically: 
+      - `ggplot2`, `tibble`, `tidyr`, `readr`, `purrr`, `dplyr`, `stringr`, `forcats`
+
+### `ggplot2` [Overview](https://ggplot2.tidyverse.org)
+
+`ggplot2` is a system for declaratively creating graphics, based on [The Grammar of Graphics](https://amzn.to/2ef1eWp). You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
+
+**Examples**
+```
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+```
+ggplot(data = mpg) + 
+  geom_boxplot(mapping = aes(x = class, y = hwy))
+```
+
+**Template**
+```
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+```
+
+### Practicum: `ggplot2` on R Notebook
+
+1. `library(tidyverse)`
+2. `cars` and `iris`
+  - `df_cars <- cars`, `df_iris <- iris`
+3. `geom_point`, `geom_line`, `geom_histogram`, `goem_boxplot`
+4. `aes()`, `color = ()`
+5. `facet_wrap(vars())`
+6. Examples in Moodle
+
+
+### Basics of Fundamentals of Statistics
+
+#### R Commands Related to R Basics
+
+* Fundamentals of Statistics: statistical measurements such as 
+  - mean: `mean()` or `mean(x, na.rm = TRUE)`
+  - median: `median()` or `median(x, na.rm = TRUE)`
+  - quantile: `quantile()` or `quantile(x, na.rm = TRUE)`
+  - variance: `var()` or `var(x, na.rm = TRUE)`
+  - standard deviation: `sd()`
+  - covariance: `cov()`
+  - correlation: `cor()` 
+* summary()
+
+<!-- ### The Third Assignment (in Moodle) -->
+
+<!-- * Pick two data from the built-in dataset. (`library(help = "datasets")` or go to the site [The R Datasets Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)) -->
+<!--   - One of them can be `iris` but do not choose `cars` or `AirPassengers`.  -->
+<!--   - `ggplot2` examples of `cars`, `iris` and `AirPassengers` are given below. -->
+<!-- * Create an R Notebook of a Data Analysis containing the following and submit the rendered HTML file (_file name_.nb.html): -->
+<!--   1. title, date, and author, i.e., Your Name -->
+<!--   2. an explanation of the data and the variables -->
+<!--   3. at least one code chunk containing the following: -->
+<!--     - `head()`, `str()`  -->
+<!--   4. for each dataset, at least one code chunk containing graphs using ggplot2. Please try at least two `geoms`: -->
+<!--     - `geom_hist()`, `geom_boxplot()`, `goem_col()`, etc. -->
+<!--     - `geom_line()`, `geom_point()`, etc.  -->
+<!--   5. your findings and/or questions -->
+<!--   6. file name: ID.nb.html, e.g. 123456.nb.html -->
+<!--   <!-- 7. option: `median()`, `mean()`, `sd()` of a quantitative (numeric) variable, `cor()` of two quantitative (numeric) variables (or a correlation table) --> -->
+<!-- * Submit your R Notebook file to Moodle by 2021-01-11 23:59:00 -->
+
+### RStudio Primers created by [`learnr`](https://rstudio.github.io/learnr/index.html)
+
+<!-- * [`learnr` Interactive Tutorials for R](https://rstudio.github.io/learnr/index.html) -->
+
+::: {.block}
+#### RStudio Primers https://rstudio.cloud/learn/primers
+
+1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+  - [Programming Basics](https://rstudio.cloud/learn/primers/1.2): _Try this first!_
+  - [Visualization Basics](https://rstudio.cloud/learn/primers/1.1)
+2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+  - Working with Tibbles
+  - Isolating Data with dplyr
+  - Deriving Information with dplyr
+3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+5. Iterate -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+6. Write Functions -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+7. Report Reproductively -- [r4ds: Communicate](https://r4ds.had.co.nz/communicate-intro.html)
+8. Build Interactive Web Apps -- [r4ds: Communicate](https://r4ds.had.co.nz/communicate-intro.html)
+::: 
+
+
+### Learning Resources, EDA2-2
+
+https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/
+
+* Textbook: [R for Data Science, Part I Explore](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+* RStuio Primers: See References in Moodle at the bottom
+ 
+* Stackoverflow https://stackoverflow.com
+  - For non-English system users: 
+    + Set `Sys.setenv(LANGUAGE = "en")`: It is helpful for searching information on the internet when you get an error. 
+
+
+* Books: 
+  - R Cookbook, 2nd Edition, James (JD) Long and Paul Teetor: 
+  https://rc2e.com
+  - Fundamentals of Data Visualization, by Claus O. Wilke: https://clauswilke.com/dataviz/index.html
+
+
+<!-- --- -->
+
+<!-- \vfill -->
+<!-- \begin{center} -->
+<!-- \LARGE The END of Introduction -->
+<!-- \end{center} -->
+
+<!-- \vfill -->
+
+## The Week Three Assignment (in Moodle)
+
+-   Pick two data from the built-in dataset. (`library(help = "datasets")` or go to the site [The R Datasets Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html))
+
+    -   One of them can be `iris` but do not choose `cars` or `AirPassengers`.
+    -   `ggplot2` examples of `cars`, `iris` and `AirPassengers` are given below.
+
+-   Create an R Notebook of a Data Analysis containing the following and submit the rendered HTML file (*file name*.nb.html):
+
+    1.  title, date, and author, i.e., Your Name
+    2.  an explanation of the data and the variables
+    3.  at least one code chunk containing the following:
+
+    -   `head()`, `str()`
+
+    4.  for each dataset, at least one code chunk containing graphs using ggplot2. Please try at least two `geoms`:
+
+    -   `geom_hist()`, `geom_boxplot()`, `goem_col()`, etc.
+    -   `geom_line()`, `geom_point()`, etc.
+
+    5.  your findings and/or questions
+    6.  file name: ID.nb.html, e.g. 123456.nb.html
+    7.  option: `median()`, `mean()`, `sd()` of a quantitative (numeric) variable, `cor()` of two quantitative (numeric) variables (or a correlation table)
+
+-   Submit your R Notebook file to Moodle (The Third Assignment) by 2021-01-11 23:59:00
+
+
+### Note on R Notebook
+
+Please note the following.
+
+* There are essentially three modes: R Scripts, R Notebook and R Markdown. 
+* R Notebook is a special type of R Markdown but please use R Notebook at least for Suzuki's assignments.
+* To start, choose R Notebook from New File in the File Menu. If you started with R Markdown, please switch it with the Preview button hidden under the triangle on the right of the knit button. 
+* The file we preview has the name _file name_.nb.html. For example if the original file name is a3_12345.Rmd, then a3_12345.nb.html is created. You can check it using Files tab.
+* When you preview R Notebook, on the top right, you can find Code button. If you press it you also can find download Rmd, which is the source of R Notebook you edited. In this way we can share both the outputs and the source.
+* One difficulty is that you cannot include the outputs of the code chunk in the preview. 
+* Check Preview on Save and/or save the file before preview, i.e., pressing the preview button. 
+* Select Run all under Run button. Then all outputs apear on your editor and all outputs will appear in your preview.
+* If some of your code chunks have problems, run each code chunk from top to bottom so that all outputs appear in your editor or viewer.
+* When you share your R Notebook, do not forget to share _file name_.nb.html.
+* If you have a _file name_.nb.html, then find it from Files in R Studio, you can automatically create _file name_.Rmd to edit the source. 
+* To create a fancy document with R Notebook, see the Markdown Quick Reference under Help on top menu for the editor. If you are using Visual Editor using A bottun on top left pane, see https://rstudio.github.io/visual-markdown-editing/. 
+* R Studio introduced Visual Editor last year. It seems to be stable but it is not perfect to go back and forth from the original editor using tags. I always use the original editor and I am confident on all the functions of it but I do not have much experience on Visual Editor.  
+
+------------------------------------------------------------------------
+
+### Set up
+
+We will use `ggplot2` package which is a part of `tidyverse` package.
+
+```{r}
+# install.packages("tidyverse") # only once
+library(tidyverse) 
+```
+
+### Data `cars`
+
+We will study the data `cars` in an R package `datasets`.
+
+-   **Name:** Speed and Stopping Distances of　[Cars](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/cars.html)
+
+-   **Description:** The data give the speed of cars and the distances taken to stop. Note that the data were recorded in the 1920s.
+
+-   **Source:**
+
+    -   The data give the speed of cars and the distances taken to stop. Note that the data were recorded in the 1920s.
+
+-   **References**
+
+    -   McNeil, D. R. (1977) Interactive Data Analysis. Wiley.
+
+```{r}
+data(cars) # to refresh data, it is better to start with this.
+df_cars <- cars # You can use cars as is, but it is safer to assign it to other name
+head(df_cars)
+str(df_cars)
+```
+
+#### Observations on Data Structure
+
+-   There are two numeric variables of lenght 50: speed, dist
+
+#### Data Visualization by `ggplot2`
+
+##### Scatter Plot by `geom_point()`
+
+```{r}
+ggplot(df_cars) +
+  geom_point(aes(x = speed, y = dist)) + 
+  labs(x = "speed (mph)", y = "dist (ft)", title = "Speed and Stopping Distances of Cars")
+```
+
+**Observation 1**
+
+-   Roughly the `dist` is proportional to the `speed`.
+
+```{r}
+cor(df_cars)
+```
+
+-   The correlation is 0.806. So we say strongly correlated.
+
+-   In the following, since the mapping `aes()` are the same for two geoms, we can place it in `ggplot()`. We will study linear regression in Week 6 and on.
+
+```{r}
+ggplot(df_cars, aes(x = speed, y = dist)) +
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(x = "speed (mph)", y = "dist (ft)", title = "Speed and Stopping Distances of Cars")
+```
+
+```{r}
+summary(lm(df_cars$dist ~ df_cars$speed))
+```
+
+##### Histograms by `geom_histogram()`
+
+```{r}
+ggplot(df_cars) +
+  geom_histogram(aes(x = speed)) +
+  labs(title = "Histogram of speed")
+```
+
+```{r}
+ggplot(df_cars) +
+  geom_histogram(aes(x = speed), binwidth = 1) +
+  labs(title = "Histogram of speed")
+```
+
+```{r}
+ggplot(df_cars) +
+  geom_histogram(aes(x = dist)) +
+  labs(title = "Histogram of speed")
+```
+
+```{r}
+ggplot(df_cars) +
+  geom_histogram(aes(x = dist), binwidth = 1) +
+  labs(title = "Histogram of speed")
+```
+
+### Data `iris`
+
+We will study the data `iris` in an R package `datasets`.
+
+-   **Name:** [Edgar Anderson's Iris Data](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html)
+
+-   **Description:** This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
+
+-   **Source:**
+
+    -   Fisher, R. A. (1936) [The use of multiple measurements in taxonomic problems](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.1936.tb02137.x). Annals of Eugenics, 7, Part II, 179--188.
+    -   The data were collected by Anderson, Edgar (1935). The irises of the Gaspe Peninsula, Bulletin of the American Iris Society, 59, 2--5.
+
+```{r}
+data(iris) # to refresh data, it is better to start with this.
+df_iris <- iris # You can use iris as is, but it is safer to assign it to other name
+head(df_iris)
+str(df_iris)
+unique(df_iris$Species)
+```
+
+#### Observations on Data Structure
+
+1.  There are five variables: Sepal.Length, Sepal.Width, Petal.Length, Petal.Width and Species
+
+-   First four variables are numeric, and the fifth is a character vector in factor
+
+2.  Species have three levels corresponding to three kinds of iris: setosa versicolor virginica
+
+#### Data Analysis of Each Variable, i.e., Univariate Analysis
+
+-   For `geom_histogram` the default of `stat` is "bin" for continuous data. Set `stat = "count"`, and adjust the bins by the number of bins, i.e. `bins` option with 30 for default or `biwidth` option that overrides bins.
+
+```{r}
+ggplot(df_iris) + 
+  geom_histogram(aes(x = Sepal.Length)) + 
+  labs(title = "Histogram of Sepal.Length")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_histogram(aes(x = Sepal.Length), bins = 10) + 
+  labs(title = "Histogram of Sepal.Length")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_histogram(aes(x = Sepal.Length), binwidth = 0.1) + 
+  labs(title = "Histogram of Sepal.Length")
+```
+
+The previous graph is similar to the next.
+
+```{r}
+ggplot(df_iris) + 
+  geom_histogram(aes(x = Sepal.Length), stat = "count") + 
+  labs(title = "Histogram of Sepal.Length")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_histogram(aes(x = Sepal.Length, fill = Species), stat = "count") + 
+  labs(title = "Histogram of Sepal.Length")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_histogram(aes(x = Sepal.Length, fill = Species), binwidth = 0.1) + 
+  labs(title = "Histogram of Sepal.Length")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_boxplot(aes(x = Species, y = Sepal.Length)) + 
+  labs(title = "Boxplot of Sepal.Lenght")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_boxplot(aes(x = Species, y = Sepal.Width)) + 
+  labs(title = "Boxplot of Sepal.Width")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_boxplot(aes(x = Species, y = Petal.Length)) + 
+  labs(title = "Boxplot of Petal.Length")
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_boxplot(aes(x = Species, y = Petal.Width)) + 
+  labs(title = "Boxplot of Petal.Width")
+```
+
+#### Data Analysis of Two Variables, i.e., Multivariate Analysis
+
+The following is a simple scatter plot. However, from the univariate analysis, it is clear that Species are key factors.
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Length, y = Sepal.Width))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Length, y = Sepal.Width, color = Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Length, y = Sepal.Width)) + 
+  facet_wrap(vars(Species))
+```
+
+Let us check the correlation matrix
+
+```{r}
+cor(df_iris[,1:4])
+```
+
+Petal.Length and Petal.Width have very strong positive correlation, and so are Sepal.Length and Petal.Length. Sepal.Width and Petal.Length have weak negative correlation, and so are Sepal.Width and Petal.Width.
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Petal.Length, y = Petal.Width, color = Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Petal.Length, y = Petal.Width)) + 
+  facet_wrap(vars(Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Length, y = Petal.Length)) + 
+  facet_wrap(vars(Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Width, y = Petal.Length, color = Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Width, y = Petal.Length)) + 
+  facet_wrap(vars(Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Width, y = Petal.Width, color = Species))
+```
+
+```{r}
+ggplot(df_iris) + 
+  geom_point(aes(x = Sepal.Width, y = Petal.Width)) + 
+  facet_wrap(vars(Species))
+```
+
+As we have seen above the situation is more complicated.
+
+-   Observation: Altogether `Sepal.Width` and `Petal.Width` have a negative correlation. However, if we look at the graph for each, they seem to have a positive correlation.
+
+In statistics we say that the `Species` is the confounder.
+
+### Data `AirPassengers`
+
+Next, we look at the data `AirPassengers` in an R package `datasets`.
+
+-   **Name:** [Monthly Airline Passenger Numbers 1949-1960](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/AirPassengers.html)
+
+-   **Description:** The classic Box & Jenkins airline data. Monthly totals of international airline passengers, 1949 to 1960.
+
+-   **Source:**
+
+    -   Box, G. E. P., Jenkins, G. M. and Reinsel, G. C. (1976) Time Series Analysis, Forecasting and Control. Third Edition. Holden-Day. Series G.
+
+```{r}
+data(AirPassengers) # to refresh data, it is better to start with this.
+df_AirPassengers <- AirPassengers # You can use iris as is, but it is safer to assign it to other name
+head(df_AirPassengers)
+str(df_AirPassengers)
+```
+
+This is a time series data, a special data format of Base R.
+
+```{r}
+plot(df_AirPassengers)
+```
+
+We can handle this type of data using `tidyverse` but now it is easier to use the following package.
+
+-   `timetk` Package <https://CRAN.R-project.org/package=timetk>
+
+```{r}
+# install.packages("timetk") # run this line or install `timetk` from Install Packages in Tool
+library(timetk)
+df_ap <- tk_tbl(df_AirPassengers)
+df_ap
+```
+
+```{r}
+ggplot(df_ap) +
+  geom_line(aes(x = index, y = value)) + 
+  labs(title = "Line Graph of AirPassengers")
+```
+
+-   Observation: There is a seasonal pattern.
+
+```{r}
+ggplot(df_ap) +
+  geom_histogram(aes(x = value)) + 
+  labs(title = "Histogram of AirPassengers")
+```
+
+### Recommended Study Plan
+
+1.  Review the class note, slides and/or videos
+2.  RStudio Primers: Programming Basics, and Visualization Basics
+3.  Review this note
+4.  Look at [The R Datasets Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)) or in Console, `library(help = "datasets")` and use Help to check each data in the built-in datasets.
+5.  Try this assignment
+6.  Study the chapters 1-8 under Explore in the textbook.
+
+## Responses to the Week Three Assignment
+
+### Setup
+
+We load two packages; `datasets` and `ggplot2`. The `datasets` are loaded automatically and you do not need the first line of the followiong code chunk. But it is safer to include it because some data names are used previously for different purposes.
+
+```{r}
+library(datasets)
+library(ggplot2)
+```
+
+For explanation, we use the following population data of WDI.
+
+```{r}
+library(WDI)
+pop <- WDI(
+  country = c("NG", "BD", "RU", "MX", "JP"), 
+  indicator = c(population = "SP.POP.TOTL"),
+  start = 1960, end = 2020)
+head(pop)
+```
+
+<!-- # R Notebook -->
+
+<!-- Please note the following. -->
+
+<!-- * There are essentially three modes: R Scripts, R Notebook and R Markdown.  -->
+<!-- * R Notebook is a special type of R Markdown but please use R Notebook at least for Suzuki's assignments. -->
+<!-- * To start, choose R Notebook from New File in the File Menu. If you started with R Markdown, please switch it with the Preview button hidden under the triangle on the right of the knit button.  -->
+<!-- * The file we preview has the name _file name_.nb.html. For example if the original file name is a3_12345.Rmd, then a3_12345.nb.html is created. You can check it using Files tab. -->
+<!-- * When you preview R Notebook, on the top right, you can find Code button. If you press it you also can find download Rmd, which is the source of R Notebook you edited. In this way we can share both the outputs and the source. -->
+<!-- * One difficulty is that you cannot include the outputs of the code chunk in the preview.  -->
+<!-- * Check Preview on Save and/or save the file before preview, i.e., pressing the preview button.  -->
+<!-- * Select Run all under Run button. Then all outputs apear on your editor and all outputs will appear in your preview. -->
+<!-- * If some of your code chunks have problems, run each code chunk from top to bottom so that all outputs appear in your editor or viewer. -->
+<!-- * When you share your R Notebook, do not forget to share _file name_.nb.html. -->
+<!-- * If you have a _file name_.nb.html, then find it from Files in R Studio, you can automatically create _file name_.Rmd to edit the source.  -->
+<!-- * To create a fancy document with R Notebook, see the Markdown Quick Reference under Help on top menu for the editor. If you are using Visual Editor using A bottun on top left pane, see https://rstudio.github.io/visual-markdown-editing/.  -->
+<!-- * R Studio introduced Visual Editor last year. It seems to be stable but it is not perfect to go back and forth from the original editor using tags. I always use the original editor and I am confident on all the functions of it but I do not have much experience on Visual Editor.   -->
+
+### Visualization of Two Variables
+
+```{r}
+iris_df <- iris
+```
+
+```{r}
+str(iris_df)
+```
+
+```{r}
+head(iris_df)
+```
+
+Let us look at two plots, one with `geom_point()` and the other with `geom_line()`
+
+```{r}
+ggplot(iris_df) +
+  geom_point(mapping = aes(x=Petal.Length, y=Petal.Width))
+```
+
+```{r}
+ggplot(iris_df) +
+  geom_line(mapping = aes(x=Petal.Length, y=Petal.Width))
+```
+
+-   The line graph is not appropriate. Can you see why?
+
+-   By help(geom_line) or Help tab with `geom_line` in the search window, we get the following: `geom_line()` connects them in order of the variable on the x axis.
+
+    -   See <https://ggplot2.tidyverse.org/reference/geom_path.html>
+
+-   In this case lines are meaningless especially the vertical lines.
+
+```{r}
+ggplot(iris_df) +
+  geom_point(mapping = aes(x=Petal.Length, y=Petal.Width, color = Species))
+```
+
+```{r}
+ggplot(iris_df) +
+  geom_line(mapping = aes(x=Petal.Length, y=Petal.Width, color = Species))
+```
+
+-   It is good to add colors for Species in `geom_point`, however, `geom_line` is not appropriate in this case.
+
+Let us look at the population data of WDI.
+
+```{r}
+ggplot(pop) +
+  geom_point(mapping = aes(x=year, y=population))
+```
+
+This is OK.
+
+```{r}
+ggplot(pop) +
+  geom_line(mapping = aes(x=year, y=population))
+```
+
+We have a similar problem with `geom_line()`. However,
+
+```{r}
+ggplot(pop) +
+  geom_line(mapping = aes(x=year, y=population, color = country))
+```
+
+This looks just fine. In this case `geom_line()` with color aestic is better than `geom_point()` above.
+
+If you have two numerical data, it is safer to use `geom_point()` first and decide to choose a better option. It is not easy to decide whether the lines between the points are meaningful or not. Please think carefully what you want to communicate. In some cases, you may want to choose the following. Note that I moved the `aes()` to `ggplot()` as it is common to both `geom_line()` and `geom_point()`.
+
+```{r}
+ggplot(pop, mapping = aes(x=year, y=population, color = country)) +
+  geom_line() +
+  geom_point()
+```
+
+See other examples
+
+```{r}
+df_tg <- ToothGrowth
+head(df_tg)
+str(df_tg)
+```
+
+```{r}
+ggplot(df_tg) +
+  geom_point(aes(x = dose, y = len, color = supp))
+```
+
+```{r}
+ggplot(df_tg) +
+  geom_boxplot(aes(x = factor(dose), y = len)) +
+  facet_wrap(vars(supp))
+```
+
+### Visualization of One Variable
+
+```{r}
+df_chickwts <- chickwts
+df_chickwts
+```
+
+```{r}
+ggplot(df_chickwts) +
+  geom_point(aes(x = feed, y = weight))
+```
+
+```{r}
+ggplot(df_chickwts) +
+  geom_boxplot(aes(x = feed, y = weight))
+```
+
+-   Since there are two variables, you can use `geom_point()`. However, one of them is a categorical variable and `box_plot()` works better, I believe.
+
+-   It is called a box and whiskers plot (in the style of Turkey). Please look at Help.
+
+    -   The boxplot compactly displays the distribution of a continuous variable. It visualises five summary statistics (the median, two hinges and two whiskers), and all "outlying" points individually.
+    -   See also <https://ggplot2.tidyverse.org/reference/geom_boxplot.html>.
+
+-   The other popular visualization is `geom_histogram()`. Please try `fill` and `color` options to see the difference.
+
+```{r}
+ggplot(df_chickwts) +
+  geom_histogram(aes(x = weight, fill = feed))
+```
+
+```{r}
+ggplot(df_chickwts) +
+  geom_freqpoly(aes(x = weight, color = feed))
+```
+
+```{r}
+ggplot(df_chickwts) +
+  geom_histogram(aes(x = weight), bins = 10) +
+  facet_wrap(vars(feed))
+```
+
+-   Which one do you like best? There are many options. Again, it depends on what you want to communicate.
+
+```{r}
+# `rivers` is a numeric vector, so changed into a dataframe.
+df_riv <- data.frame(length = rivers) # it is safer to assign it to other name
+head(df_riv)
+```
+
+Since there is no meaning in ordering, `geom_histogram()` may be an appropriate choice.
+
+```{r}
+ggplot(df_riv, aes(length)) +
+  geom_histogram()
+```
+
+### More Examples
+
+#### Weight versus age of chicks on different diets
+
+* **Description:** The ChickWeight data frame has 578 rows and 4 columns from an experiment on the effect of diet on early growth of chicks.
+
+* **Format:** An object of class c("nfnGroupedData", "nfGroupedData", "groupedData", "data.frame") containing the following columns:
+
+    -   weight: a numeric vector giving the body weight of the chick (gm).
+
+    -   Time: a numeric vector giving the number of days since birth when the measurement was made.
+
+    -   Chick: an ordered factor with levels 18 \< ... \< 48 giving a unique identifier for the chick. The ordering of the levels groups chicks on the same diet together and orders them according to their final weight (lightest to heaviest) within diet.
+
+    -   Diet: a factor with levels 1, ..., 4 indicating which experimental diet the chick received.
+
+* **Details:** The body weights of the chicks were measured at birth and every second day thereafter until day 20. They were also measured on day 21. There were four groups on chicks on different protein diets.
+
+
+```{r}
+df_chickweight <- ChickWeight
+head(df_chickweight)
+str(df_chickweight)
+summary(df_chickweight)
+```
+
+```{r}
+ggplot(df_chickweight) +
+  geom_point(aes(x = Time, y = weight, color = Diet))
+```
+
+If we use `dplyr()`, we can summarize the mean, i.e., average weight in each category.
+
+```{r}
+library(dplyr)
+df_chickweight %>% group_by(Diet, Time) %>% summarize(wt = mean(weight)) %>%
+  ggplot() +
+  geom_line(aes(x = Time, y = wt, color = Diet))
+```
+
+If we use `geom_smooth()`, we can plot the smoothed conditional means. See <https://ggplot2.tidyverse.org/reference/geom_smooth.html>.
+
+```{r}
+ggplot(df_chickweight) +
+  geom_smooth(aes(x = Time, y = weight, color = Diet))
+```
+
+
+#### Carbon Dioxide Uptake in Grass Plants
+
+-   **Description:** The CO2 data frame has 84 rows and 5 columns of data from an experiment on the cold tolerance of the grass species Echinochloa crus-galli.
+
+-   **Usage:** CO2
+
+-   **Format:** An object of class c("nfnGroupedData", "nfGroupedData", "groupedData", "data.frame") containing the following columns:
+
+    -   Plant an ordered factor with levels Qn1 \< Qn2 \< Qn3 \< ... \< Mc1 giving a unique identifier for each plant.
+
+    -   Type a factor with levels Quebec Mississippi giving the origin of the plant
+
+    -   Treatment a factor with levels nonchilled chilled
+
+    -   conc a numeric vector of ambient carbon dioxide concentrations (mL/L).
+
+    -   uptake a numeric vector of carbon dioxide uptake rates (umol/m\^2 sec).
+
+    -   Details The CO2 uptake of six plants from Quebec and six plants from Mississippi was measured at several levels of ambient CO2 concentration. Half the plants of each type were chilled overnight before the experiment was conducted.
+
+
+```{r}
+df_CO2 <- CO2
+head(df_CO2)
+str(df_CO2)
+summary(df_CO2)
+```
+
+```{r}
+ggplot(df_CO2) +
+  geom_point(aes(x = conc, y = uptake, color = Type)) +
+  facet_wrap(vars(Treatment))
+```
+
+```{r}
+ggplot(df_CO2) +
+  geom_smooth(aes(x = conc, y = uptake, color = Type)) +
+  facet_wrap(vars(Treatment))
+```
+
+#### Growth of Orange Trees
+
+* **Description:**
+The Orange data frame has 35 rows and 3 columns of records of the growth of orange trees.
+
+* **Usage:**
+Orange
+
+* **Format:**
+An object of class c("nfnGroupedData", "nfGroupedData", "groupedData", "data.frame") containing the following columns:
+
+  - Tree
+an ordered factor indicating the tree on which the measurement is made. The ordering is according to increasing maximum diameter.
+
+  - age
+a numeric vector giving the age of the tree (days since 1968/12/31)
+
+  - circumference
+a numeric vector of trunk circumferences (mm). This is probably “circumference at breast height”, a standard measurement in forestry.
+
+* **Details:**
+This dataset was originally part of package nlme, and that has methods (including for [, as.data.frame, plot and print) for its grouped-data classes.
+
+```{r}
+df_orange <- Orange
+head(df_orange)
+str(df_orange)
+summary(df_orange)
+```
+
+```{r}
+ggplot(df_orange) +
+  geom_point(aes(x = age, y = circumference, color = Tree))
+```
+
+```{r}
+ggplot(df_orange) +
+  geom_boxplot(aes(x = factor(age), y = circumference))
+```
+
+```{r}
+ggplot(df_orange) +
+  geom_smooth(aes(x = age, y = circumference))
+```
+
