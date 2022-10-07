@@ -621,8 +621,9 @@ When you are at the R prompt (>):
 #### coronavirus.R
 
 The script and its outputs.
+__coronavirus.csv__ is too large
 
-```{r coronascript, cash = TRUE}
+```
 # https://coronavirus.jhu.edu/map.html
 # JHU Covid-19 global time series data
 # See R pakage coronavirus at: https://github.com/RamiKrispin/coronavirus
