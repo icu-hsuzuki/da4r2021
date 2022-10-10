@@ -622,7 +622,7 @@ When you are at the R prompt (>):
 The script and its outputs.
 __coronavirus.csv__ is too large
 
-```
+```{r cash = TRUE}
 # https://coronavirus.jhu.edu/map.html
 # JHU Covid-19 global time series data
 # See R pakage coronavirus at: https://github.com/RamiKrispin/coronavirus
@@ -632,7 +632,7 @@ Sys.Date()
 
 ## Download and read csv (comma separated value) file
 coronavirus <- read.csv("https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv")
-write.csv(coronavirus, "data/coronavirus.csv")
+# write.csv(coronavirus, "data/coronavirus.csv")
 
 ## Summaries and structures of the data
 head(coronavirus)
