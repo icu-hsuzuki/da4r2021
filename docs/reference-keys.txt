@@ -1,9 +1,3 @@
-down-the-rabbit-hole
-the-pool-of-tears
-a-caucus-race-and-a-long-tale
-test-title
-test-title-again
-test-title-again-second-time
 course
 coures-information
 about-qall401-data-analysis-for-researchers
@@ -19,14 +13,10 @@ data-science-ds
 eda-by-r-language-and-r-programming
 eda-a-diagram-from-r4ds-by-h.w.-and-g.g.
 visualization-in-eda
-data-science-wikipedia
-from-professor-shimizus-lecture-slide-3
-visualization-charting
-the-first-step-look-at-various-visualiation
 florence-nightingale-1820-1910
 hans-rosling-1948-2017
 factfulness-is-from-the-book
-data-science-wikipedia-1
+data-science-wikipedia
 data-for-data-science
 we-will-use
 for-data-or-chart-representing-statistical-data
@@ -38,7 +28,7 @@ goverments
 other-open-public-data
 what-is-ds-why-ds-for-researchers
 covid-19
-r-and-r-studio
+the-first-step-type-of-variables
 eda1
 r-with-r-studio-andor-r-studio.cloud
 course-contents
@@ -148,4 +138,3 @@ more-examples
 weight-versus-age-of-chicks-on-different-diets
 carbon-dioxide-uptake-in-grass-plants
 growth-of-orange-trees
-the-first-step-type-of-variables

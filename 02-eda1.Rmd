@@ -37,10 +37,13 @@
 #### Other Resources (MOOCs)
 
 * edX: HarvardX [Data Science](https://www.edx.org/professional-certificate/harvardx-data-science) - 9 courses. Textbook:
-  - ["Introduction to Data Science"](https://leanpub.com/datasciencebook) by Rafael A. Irizarry. [\underline{Free Online Book}](https://rafalab.github.io/dsbook/)
+  - ["Introduction to Data Science"](https://leanpub.com/datasciencebook) by Rafael A. Irizarry. 
+  - [Free Online Book](http://rafalab.dfci.harvard.edu/dsbook/) by Rafael A. Irizarry.
 * coursera: [JHU Data Science](https://www.coursera.org/specializations/jhu-data-science) - 10 courses. List of Companion Books:
-  - ["R Programming for Data Science"](https://leanpub.com/rprogramming?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2) by Roger Peng. [\underline{Free Online Book}](https://bookdown.org/rdpeng/rprogdatascience/)
-  - ["Exploratory Data Analysis with R"](https://leanpub.com/exdata?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2) by Roger Peng. [\underline{Free online Book}](https://bookdown.org/rdpeng/exdata/)
+  - ["R Programming for Data Science"](https://leanpub.com/rprogramming?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2) by Roger Peng. 
+  - [Free Online Book](https://bookdown.org/rdpeng/rprogdatascience/) by Roger Peng. 
+  - ["Exploratory Data Analysis with R"](https://leanpub.com/exdata?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2) by Roger Peng.
+  - [Free online Book](https://bookdown.org/rdpeng/exdata/) by Roger Peng.
   - ["Report Writing for Data Science in R"](https://leanpub.com/reportwriting?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2) by Roger Peng
   - ["Statistical Inference for Data Science"](https://leanpub.com/LittleInferenceBook) by Brian Caffo
   -  ["Regression Modeling for Data Science in R"](https://leanpub.com/regmods) by Brian Caffo 
@@ -99,14 +102,12 @@ When you talk about choosing programming languages, I always say you shouldn’t
 plot(cars)
 ```
 
----
 
 ```{r}
 plot(cars) # cars: Speed and Stopping Distances of Cars
 abline(lm(cars$dist~cars$speed))
 ```
 
----
 
 ```{r}
 head(cars)
@@ -117,7 +118,6 @@ summary(cars)
 ```
 
 
----
 ```{r}
 summary(lm(cars$dist~cars$speed))
 ```
@@ -506,7 +506,6 @@ swirl() # Everytime you start or resume swirl
 * Section 2 discusses the directories and file systems of a computer
 * Sections 9, 10, 11 are for programming
 
----
 
 #### Controling a `swirl` Session
 
