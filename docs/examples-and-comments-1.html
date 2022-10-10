@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -147,9 +149,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="course.html"><a href="course.html#introduction-slide-presentation-1"><i class="fa fa-check"></i><b>1.2.1</b> Introduction (Slide Presentation 1)</a></li>
 <li class="chapter" data-level="1.2.2" data-path="course.html"><a href="course.html#data-analytics-data-science-overview-slide-presentation-2"><i class="fa fa-check"></i><b>1.2.2</b> Data Analytics / Data Science Overview (Slide Presentation 2)</a></li>
-<li class="chapter" data-level="1.2.3" data-path="course.html"><a href="course.html#r-and-r-studio"><i class="fa fa-check"></i><b>1.2.3</b> R and R Studio</a></li>
-<li class="chapter" data-level="1.2.4" data-path="course.html"><a href="course.html#schedule-tentative"><i class="fa fa-check"></i><b>1.2.4</b> Schedule (tentative)</a></li>
-<li class="chapter" data-level="1.2.5" data-path="course.html"><a href="course.html#responses-of-students"><i class="fa fa-check"></i><b>1.2.5</b> Responses of Students</a></li>
+<li class="chapter" data-level="1.2.3" data-path="course.html"><a href="course.html#schedule-tentative"><i class="fa fa-check"></i><b>1.2.3</b> Schedule (tentative)</a></li>
+<li class="chapter" data-level="1.2.4" data-path="course.html"><a href="course.html#responses-of-students"><i class="fa fa-check"></i><b>1.2.4</b> Responses of Students</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="course.html"><a href="course.html#introduction-in-ay2020-by-suzuki"><i class="fa fa-check"></i><b>1.3</b> Introduction in AY2020 by Suzuki</a>
 <ul>
@@ -384,14 +385,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1.11" data-path="eda5.html"><a href="eda5.html#the-first-example-1"><i class="fa fa-check"></i><b>7.1.11</b> The First Example</a></li>
 <li class="chapter" data-level="7.1.12" data-path="eda5.html"><a href="eda5.html#model-analysis-with-tidyverse-modelr"><i class="fa fa-check"></i><b>7.1.12</b> Model Analysis with <code>tidyverse</code>: <code>modelr</code></a></li>
 <li class="chapter" data-level="7.1.13" data-path="eda5.html"><a href="eda5.html#predictions-haty-a_1-a_2x-and-residuals-y---haty"><i class="fa fa-check"></i><b>7.1.13</b> Predictions <span class="math inline">\(\hat{y} = a_1 + a_2x\)</span> and Residuals <span class="math inline">\(y - \hat{y}\)</span></a></li>
-<li class="chapter" data-level="7.1.14" data-path="eda5.html"><a href="eda5.html#geom_jitter"><i class="fa fa-check"></i><b>7.1.14</b> geom_jitter()</a></li>
-<li class="chapter" data-level="7.1.15" data-path="eda5.html"><a href="eda5.html#iris-1"><i class="fa fa-check"></i><b>7.1.15</b> iris</a></li>
-<li class="chapter" data-level="7.1.16" data-path="eda5.html"><a href="eda5.html#linear-model-sepal.w-sepal.l"><i class="fa fa-check"></i><b>7.1.16</b> Linear Model: Sepal.W ~ Sepal.L</a></li>
-<li class="chapter" data-level="7.1.17" data-path="eda5.html"><a href="eda5.html#linear-model-petal.w-petal.l"><i class="fa fa-check"></i><b>7.1.17</b> Linear Model: Petal.W ~ Petal.L</a></li>
-<li class="chapter" data-level="7.1.18" data-path="eda5.html"><a href="eda5.html#correlation"><i class="fa fa-check"></i><b>7.1.18</b> Correlation</a></li>
-<li class="chapter" data-level="7.1.19" data-path="eda5.html"><a href="eda5.html#filterspecies-setosa"><i class="fa fa-check"></i><b>7.1.19</b> <code>filter(Species == "setosa")</code></a></li>
-<li class="chapter" data-level="7.1.20" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>7.1.20</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
-<li class="chapter" data-level="7.1.21" data-path="eda5.html"><a href="eda5.html#linear-regression-quick-reference"><i class="fa fa-check"></i><b>7.1.21</b> Linear Regression Quick Reference</a></li>
+<li class="chapter" data-level="7.1.14" data-path="eda5.html"><a href="eda5.html#iris-1"><i class="fa fa-check"></i><b>7.1.14</b> iris</a></li>
+<li class="chapter" data-level="7.1.15" data-path="eda5.html"><a href="eda5.html#linear-model-sepal.w-sepal.l"><i class="fa fa-check"></i><b>7.1.15</b> Linear Model: Sepal.W ~ Sepal.L</a></li>
+<li class="chapter" data-level="7.1.16" data-path="eda5.html"><a href="eda5.html#linear-model-petal.w-petal.l"><i class="fa fa-check"></i><b>7.1.16</b> Linear Model: Petal.W ~ Petal.L</a></li>
+<li class="chapter" data-level="7.1.17" data-path="eda5.html"><a href="eda5.html#correlation"><i class="fa fa-check"></i><b>7.1.17</b> Correlation</a></li>
+<li class="chapter" data-level="7.1.18" data-path="eda5.html"><a href="eda5.html#filterspecies-setosa"><i class="fa fa-check"></i><b>7.1.18</b> <code>filter(Species == "setosa")</code></a></li>
+<li class="chapter" data-level="7.1.19" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>7.1.19</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="7.1.20" data-path="eda5.html"><a href="eda5.html#linear-regression-quick-reference"><i class="fa fa-check"></i><b>7.1.20</b> Linear Regression Quick Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="eda5.html"><a href="eda5.html#part-ii-practicum---model-analysis-warnings"><i class="fa fa-check"></i><b>7.2</b> Part II: Practicum - Model Analysis Warnings</a>
 <ul>
@@ -425,6 +425,189 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3.10" data-path="eda5.html"><a href="eda5.html#education"><i class="fa fa-check"></i><b>7.3.10</b> Education</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="topics1.html"><a href="topics1.html"><i class="fa fa-check"></i><b>8</b> Topics in Exploratory Data Analysis I　</a>
+<ul>
+<li class="chapter" data-level="" data-path="topics1.html"><a href="topics1.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="topics1.html"><a href="topics1.html#dot-place-holder-in-lm."><i class="fa fa-check"></i>Dot Place Holder in <code>lm</code>.</a></li>
+<li class="chapter" data-level="8.1" data-path="topics1.html"><a href="topics1.html#part-i-regression-1"><i class="fa fa-check"></i><b>8.1</b> Part I: Regression 1:</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="topics1.html"><a href="topics1.html#why-does-gdp-vary-from-country-to-country"><i class="fa fa-check"></i><b>8.1.1</b> Why does GDP vary from country to country?</a></li>
+<li class="chapter" data-level="8.1.2" data-path="topics1.html"><a href="topics1.html#regression"><i class="fa fa-check"></i><b>8.1.2</b> Regression</a></li>
+<li class="chapter" data-level="8.1.3" data-path="topics1.html"><a href="topics1.html#checking-for-multicollinearity"><i class="fa fa-check"></i><b>8.1.3</b> Checking for multicollinearity</a></li>
+<li class="chapter" data-level="8.1.4" data-path="topics1.html"><a href="topics1.html#vif-determination-of-multi-collinearity"><i class="fa fa-check"></i><b>8.1.4</b> vif: Determination of multi-collinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="topics1.html"><a href="topics1.html#a-time-series-data-of-world-from-1960-to-2020"><i class="fa fa-check"></i><b>8.2</b> A time series data of World from 1960 to 2020</a></li>
+<li class="chapter" data-level="8.3" data-path="topics1.html"><a href="topics1.html#excercise"><i class="fa fa-check"></i><b>8.3</b> Excercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html"><i class="fa fa-check"></i><b>9</b> Regression 2 : CO2 Emission</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#project"><i class="fa fa-check"></i><b>9.1</b> Project</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#regression-analysis"><i class="fa fa-check"></i><b>9.1.1</b> Regression Analysis</a></li>
+<li class="chapter" data-level="9.1.2" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#wdi-indicator-cordes"><i class="fa fa-check"></i><b>9.1.2</b> WDI Indicator cordes</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#regression-1"><i class="fa fa-check"></i><b>9.2</b> Regression</a></li>
+<li class="chapter" data-level="9.3" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#we-select-regression-model"><i class="fa fa-check"></i><b>9.3</b> We select regression model;</a></li>
+<li class="chapter" data-level="9.4" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#a-time-series-data-of-world-from-1960-to-2020-1"><i class="fa fa-check"></i><b>9.4</b> A time series data of World from 1960 to 2020</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html"><i class="fa fa-check"></i><b>10</b> Regression 3: CO2 emission (Standardization)</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#regression-2"><i class="fa fa-check"></i><b>10.1</b> Regression</a></li>
+<li class="chapter" data-level="10.2" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#not-standardized"><i class="fa fa-check"></i><b>10.2</b> Not Standardized</a></li>
+<li class="chapter" data-level="10.3" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#regression-3"><i class="fa fa-check"></i><b>10.3</b> Regression</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#standadized-again"><i class="fa fa-check"></i><b>10.3.1</b> Standadized (Again)</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#we-select-regression-model-1"><i class="fa fa-check"></i><b>10.3.2</b> We select regression model;</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html"><i class="fa fa-check"></i><b>11</b> Regression of Categorical Variables and ANOVA</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html#regression-4"><i class="fa fa-check"></i><b>11.1</b> Regression</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html#t-test"><i class="fa fa-check"></i><b>11.1.1</b> t-test</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html#week-7-assignment"><i class="fa fa-check"></i><b>11.2</b> Week 7 Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="topics2.html"><a href="topics2.html"><i class="fa fa-check"></i><b>12</b> Topics in Exploratory Data Analysis II　</a>
+<ul>
+<li class="chapter" data-level="" data-path="topics2.html"><a href="topics2.html#project-1"><i class="fa fa-check"></i>Project</a></li>
+<li class="chapter" data-level="12.1" data-path="topics2.html"><a href="topics2.html#classification-iris-dataset"><i class="fa fa-check"></i><b>12.1</b> Classification IRIS dataset</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="topics2.html"><a href="topics2.html#setup-1"><i class="fa fa-check"></i><b>12.1.1</b> Setup</a></li>
+<li class="chapter" data-level="12.1.2" data-path="topics2.html"><a href="topics2.html#data-iris-1"><i class="fa fa-check"></i><b>12.1.2</b> Data: <code>iris</code></a></li>
+<li class="chapter" data-level="12.1.3" data-path="topics2.html"><a href="topics2.html#binary-classification"><i class="fa fa-check"></i><b>12.1.3</b> Binary classification</a></li>
+<li class="chapter" data-level="12.1.4" data-path="topics2.html"><a href="topics2.html#various-logistic-models"><i class="fa fa-check"></i><b>12.1.4</b> Various Logistic Models</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="topics2.html"><a href="topics2.html#conclusions"><i class="fa fa-check"></i><b>12.2</b> Conclusions</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="topics2.html"><a href="topics2.html#hypothesis-generation-vs.-hypothesis-confirmation-1"><i class="fa fa-check"></i><b>12.2.1</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="12.2.2" data-path="topics2.html"><a href="topics2.html#references"><i class="fa fa-check"></i><b>12.2.2</b> References</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="guest.html"><a href="guest.html"><i class="fa fa-check"></i><b>13</b> Guest Lecture and/or Examples</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="guest.html"><a href="guest.html#guest-lecture-by-zheng-nan"><i class="fa fa-check"></i><b>13.1</b> Guest Lecture by Zheng Nan</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="guest.html"><a href="guest.html#exploring-the-bitcoin-market-efficiency-using-r"><i class="fa fa-check"></i><b>13.1.1</b> Exploring the bitcoin market efficiency using R</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="guest.html"><a href="guest.html#topics-of-eda"><i class="fa fa-check"></i><b>13.2</b> Topics of EDA</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="guest.html"><a href="guest.html#contents"><i class="fa fa-check"></i><b>13.2.1</b> Contents</a></li>
+<li class="chapter" data-level="13.2.2" data-path="guest.html"><a href="guest.html#financial-data"><i class="fa fa-check"></i><b>13.2.2</b> Financial Data</a></li>
+<li class="chapter" data-level="13.2.3" data-path="guest.html"><a href="guest.html#your-course-project-part-i"><i class="fa fa-check"></i><b>13.2.3</b> Your Course Project, Part I</a></li>
+<li class="chapter" data-level="13.2.4" data-path="guest.html"><a href="guest.html#your-course-project-part-ii"><i class="fa fa-check"></i><b>13.2.4</b> Your Course Project, Part II</a></li>
+<li class="chapter" data-level="13.2.5" data-path="guest.html"><a href="guest.html#presentation-format"><i class="fa fa-check"></i><b>13.2.5</b> Presentation Format</a></li>
+<li class="chapter" data-level="13.2.6" data-path="guest.html"><a href="guest.html#the-eighth-assignment-in-moodle"><i class="fa fa-check"></i><b>13.2.6</b> The Eighth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="13.2.7" data-path="guest.html"><a href="guest.html#learning-resources-viii"><i class="fa fa-check"></i><b>13.2.7</b> Learning Resources, VIII</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="presentation.html"><a href="presentation.html"><i class="fa fa-check"></i><b>14</b> 2022-02-16 Presentation</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="presentation.html"><a href="presentation.html#presentation-1"><i class="fa fa-check"></i><b>14.0.1</b> Presentation</a></li>
+<li class="chapter" data-level="14.0.2" data-path="presentation.html"><a href="presentation.html#the-ninth-assignment-in-moodle"><i class="fa fa-check"></i><b>14.0.2</b> The Ninth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="14.0.3" data-path="presentation.html"><a href="presentation.html#presentation-on-2021-02-17"><i class="fa fa-check"></i><b>14.0.3</b> Presentation on 2021-02-17</a></li>
+<li class="chapter" data-level="14.0.4" data-path="presentation.html"><a href="presentation.html#presentation-on-2021-02-24"><i class="fa fa-check"></i><b>14.0.4</b> Presentation on 2021-02-24</a></li>
+<li class="chapter" data-level="14.0.5" data-path="presentation.html"><a href="presentation.html#learning-resources-ix"><i class="fa fa-check"></i><b>14.0.5</b> Learning Resources, IX</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html"><i class="fa fa-check"></i><b>15</b> Presentation, Learning Resources</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#part-i-presentation-part-ii"><i class="fa fa-check"></i><b>15.1</b> Part I: Presentation, Part II</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#the-tenth-assignment-in-moodle"><i class="fa fa-check"></i><b>15.1.1</b> The Tenth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="15.1.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#presentation-on-2021-02-24-1"><i class="fa fa-check"></i><b>15.1.2</b> Presentation on 2021-02-24</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#part-ii-roundup-learning-resources"><i class="fa fa-check"></i><b>15.2</b> Part II: Roundup, Learning Resources</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#contents-1"><i class="fa fa-check"></i><b>15.2.1</b> Contents</a></li>
+<li class="chapter" data-level="15.2.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#focus-of-this-course-exploratory-data-analysis"><i class="fa fa-check"></i><b>15.2.2</b> Focus of This Course – Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="15.2.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#schedule-and-grades"><i class="fa fa-check"></i><b>15.2.3</b> Schedule and Grades</a></li>
+<li class="chapter" data-level="15.2.4" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#your-course-project-part-i-1"><i class="fa fa-check"></i><b>15.2.4</b> Your Course Project, Part I</a></li>
+<li class="chapter" data-level="15.2.5" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#your-course-project-part-ii-1"><i class="fa fa-check"></i><b>15.2.5</b> Your Course Project, Part II</a></li>
+<li class="chapter" data-level="15.2.6" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-notebook-ms-word-and-pdf-workflow"><i class="fa fa-check"></i><b>15.2.6</b> R Notebook, MS Word and PDF, Workflow</a></li>
+<li class="chapter" data-level="15.2.7" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#export-ms-word-using-a-style-file"><i class="fa fa-check"></i><b>15.2.7</b> Export MS Word Using a Style File</a></li>
+<li class="chapter" data-level="15.2.8" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#edit-chunk-options"><i class="fa fa-check"></i><b>15.2.8</b> Edit Chunk Options</a></li>
+<li class="chapter" data-level="15.2.9" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#chunk-options"><i class="fa fa-check"></i><b>15.2.9</b> Chunk Options</a></li>
+<li class="chapter" data-level="15.2.10" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#examples-and-references"><i class="fa fa-check"></i><b>15.2.10</b> Examples and References</a></li>
+<li class="chapter" data-level="15.2.11" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#references-for-your-short-paper-and-paper"><i class="fa fa-check"></i><b>15.2.11</b> References for Your Short-Paper and Paper</a></li>
+<li class="chapter" data-level="15.2.12" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-studio-run-codes"><i class="fa fa-check"></i><b>15.2.12</b> R Studio: Run Codes</a></li>
+<li class="chapter" data-level="15.2.13" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-studio-1.4---released-on-2021-01-19"><i class="fa fa-check"></i><b>15.2.13</b> R Studio 1.4 - Released on 2021-01-19</a></li>
+<li class="chapter" data-level="15.2.14" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-interactive-practicum"><i class="fa fa-check"></i><b>15.2.14</b> Learning Resources, X – Interactive Practicum</a></li>
+<li class="chapter" data-level="15.2.15" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-books"><i class="fa fa-check"></i><b>15.2.15</b> Learning Resources, X – Books</a></li>
+<li class="chapter" data-level="15.2.16" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-moocs-and-online-courses"><i class="fa fa-check"></i><b>15.2.16</b> Learning Resources, X – Moocs and Online Courses</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#resources"><i class="fa fa-check"></i><b>15.3</b> Learning Resources</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-interactive-practicum-1"><i class="fa fa-check"></i><b>15.3.1</b> Learning Resources, X – Interactive Practicum</a></li>
+<li class="chapter" data-level="15.3.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-books-1"><i class="fa fa-check"></i><b>15.3.2</b> Learning Resources, X – Books</a></li>
+<li class="chapter" data-level="15.3.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-moocs-and-online-courses-1"><i class="fa fa-check"></i><b>15.3.3</b> Learning Resources, X – Moocs and Online Courses</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="nightingale.html"><a href="nightingale.html"><i class="fa fa-check"></i><b>A</b> Appendix A Nightingale’s Data</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="nightingale.html"><a href="nightingale.html#basic-references"><i class="fa fa-check"></i><b>A.1</b> Basic References</a></li>
+<li class="chapter" data-level="A.2" data-path="nightingale.html"><a href="nightingale.html#histdata-data-sets-from-the-history-of-statistics-and-data-visualization"><i class="fa fa-check"></i><b>A.2</b> HistData: Data Sets from the History of Statistics and Data Visualization</a>
+<ul>
+<li class="chapter" data-level="A.2.1" data-path="nightingale.html"><a href="nightingale.html#nightingale-datasets"><i class="fa fa-check"></i><b>A.2.1</b> Nightingale Datasets</a></li>
+<li class="chapter" data-level="A.2.2" data-path="nightingale.html"><a href="nightingale.html#references-1"><i class="fa fa-check"></i><b>A.2.2</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="A.3" data-path="nightingale.html"><a href="nightingale.html#exploratory-data-analysis-using-tidyverse-package"><i class="fa fa-check"></i><b>A.3</b> Exploratory Data Analysis Using <code>tidyverse</code> Package</a>
+<ul>
+<li class="chapter" data-level="A.3.1" data-path="nightingale.html"><a href="nightingale.html#reading-nightingale-data-and-glimpse-the-structure"><i class="fa fa-check"></i><b>A.3.1</b> Reading Nightingale Data and Glimpse the Structure</a></li>
+<li class="chapter" data-level="A.3.2" data-path="nightingale.html"><a href="nightingale.html#comparison-of-death-causes"><i class="fa fa-check"></i><b>A.3.2</b> Comparison of Death Causes</a></li>
+<li class="chapter" data-level="A.3.3" data-path="nightingale.html"><a href="nightingale.html#data-wrangling---tidying-data"><i class="fa fa-check"></i><b>A.3.3</b> Data Wrangling - Tidying Data</a></li>
+</ul></li>
+<li class="chapter" data-level="A.4" data-path="nightingale.html"><a href="nightingale.html#original-code-in-nightingale-document"><i class="fa fa-check"></i><b>A.4</b> Original Code in Nightingale document</a>
+<ul>
+<li class="chapter" data-level="A.4.1" data-path="nightingale.html"><a href="nightingale.html#reshape-package-flexibly-reshape-data"><i class="fa fa-check"></i><b>A.4.1</b> <code>reshape</code> Package: Flexibly Reshape Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i><b>B</b> Appendix B Public Data</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="public.html"><a href="public.html#introduction-1"><i class="fa fa-check"></i><b>B.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="public.html"><a href="public.html#open-data-defined-by-world-bank"><i class="fa fa-check"></i><b>B.1.1</b> Open Data Defined by World Bank</a></li>
+<li class="chapter" data-level="B.1.2" data-path="public.html"><a href="public.html#a-list-of-open-data-catalogue-1"><i class="fa fa-check"></i><b>B.1.2</b> A List of Open Data Catalogue</a></li>
+<li class="chapter" data-level="B.1.3" data-path="public.html"><a href="public.html#examples-1"><i class="fa fa-check"></i><b>B.1.3</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="public.html"><a href="public.html#world-bank"><i class="fa fa-check"></i><b>B.2</b> World Bank</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="public.html"><a href="public.html#about-1"><i class="fa fa-check"></i><b>B.2.1</b> About</a></li>
+<li class="chapter" data-level="B.2.2" data-path="public.html"><a href="public.html#wdi---world-development-indicaters"><i class="fa fa-check"></i><b>B.2.2</b> WDI - World Development Indicaters</a></li>
+<li class="chapter" data-level="B.2.3" data-path="public.html"><a href="public.html#r-package-wdi-1"><i class="fa fa-check"></i><b>B.2.3</b> R Package WDI</a></li>
+<li class="chapter" data-level="B.2.4" data-path="public.html"><a href="public.html#the-first-example-2"><i class="fa fa-check"></i><b>B.2.4</b> The First Example</a></li>
+<li class="chapter" data-level="B.2.5" data-path="public.html"><a href="public.html#world-bank-country-and-lending-groups-and-an-option-extra-true"><i class="fa fa-check"></i><b>B.2.5</b> World Bank Country and Lending Groups and an Option <code>extra = TRUE</code></a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="public.html"><a href="public.html#united-nations"><i class="fa fa-check"></i><b>B.3</b> United Nations</a>
+<ul>
+<li class="chapter" data-level="B.3.1" data-path="public.html"><a href="public.html#importing-data-2"><i class="fa fa-check"></i><b>B.3.1</b> Importing Data</a></li>
+<li class="chapter" data-level="B.3.2" data-path="public.html"><a href="public.html#example"><i class="fa fa-check"></i><b>B.3.2</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>C</b> Appendix C Modeling</a>
+<ul>
+<li class="chapter" data-level="" data-path="model.html"><a href="model.html#eda-a-diagram-from-r4ds-by-h.w.-and-g.g.-6"><i class="fa fa-check"></i>EDA (A diagram from R4DS by H.W. and G.G.)</a></li>
+<li class="chapter" data-level="" data-path="model.html"><a href="model.html#contents-of-eda5-1"><i class="fa fa-check"></i>Contents of EDA5</a></li>
+<li class="chapter" data-level="C.1" data-path="model.html"><a href="model.html#exploration-in-visualization-1"><i class="fa fa-check"></i><b>C.1</b> Exploration in Visualization</a>
+<ul>
+<li class="chapter" data-level="C.1.1" data-path="model.html"><a href="model.html#exploration-in-visualization-i"><i class="fa fa-check"></i><b>C.1.1</b> Exploration in Visualization, I</a></li>
+<li class="chapter" data-level="C.1.2" data-path="model.html"><a href="model.html#exploration-in-visualization-ii"><i class="fa fa-check"></i><b>C.1.2</b> Exploration in Visualization, II</a></li>
+<li class="chapter" data-level="C.1.3" data-path="model.html"><a href="model.html#exploration-in-visualization-iii"><i class="fa fa-check"></i><b>C.1.3</b> Exploration in Visualization, III</a></li>
+</ul></li>
+<li class="chapter" data-level="C.2" data-path="model.html"><a href="model.html#exploration-in-visualization-iv"><i class="fa fa-check"></i><b>C.2</b> Exploration in Visualization, IV</a></li>
+<li class="chapter" data-level="C.3" data-path="model.html"><a href="model.html#exploration-and-data-modeling"><i class="fa fa-check"></i><b>C.3</b> Exploration and Data Modeling</a>
+<ul>
+<li class="chapter" data-level="C.3.1" data-path="model.html"><a href="model.html#hypothesis-generation-vs.-hypothesis-confirmation-2"><i class="fa fa-check"></i><b>C.3.1</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="C.3.2" data-path="model.html"><a href="model.html#model-basics"><i class="fa fa-check"></i><b>C.3.2</b> Model Basics</a></li>
+</ul></li>
+<li class="chapter" data-level="C.4" data-path="model.html"><a href="model.html#examples-2"><i class="fa fa-check"></i><b>C.4</b> Examples</a>
+<ul>
+<li class="chapter" data-level="C.4.1" data-path="model.html"><a href="model.html#cars"><i class="fa fa-check"></i><b>C.4.1</b> <code>cars</code></a></li>
+<li class="chapter" data-level="C.4.2" data-path="model.html"><a href="model.html#iris-2"><i class="fa fa-check"></i><b>C.4.2</b> iris</a></li>
+<li class="chapter" data-level="C.4.3" data-path="model.html"><a href="model.html#model-analysis-warnings"><i class="fa fa-check"></i><b>C.4.3</b> Model Analysis Warnings</a></li>
+<li class="chapter" data-level="C.4.4" data-path="model.html"><a href="model.html#regression-analyais-summary-1"><i class="fa fa-check"></i><b>C.4.4</b> Regression Analyais: Summary</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -452,14 +635,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The first way is to use the option <code>extra = TRUE</code> when you import the data using <code>WDI</code>.</p>
 <div id="population-of-zimbabwe-and-similar-countries" class="section level3 hasAnchor" number="6.1.1">
 <h3><span class="header-section-number">6.1.1</span> Population of Zimbabwe and Similar Countries<a href="examples-and-comments-1.html#population-of-zimbabwe-and-similar-countries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="examples-and-comments-1.html#cb96-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
-<span id="cb96-2"><a href="examples-and-comments-1.html#cb96-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
-<span id="cb96-3"><a href="examples-and-comments-1.html#cb96-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="at">population =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>),</span>
-<span id="cb96-4"><a href="examples-and-comments-1.html#cb96-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
-<span id="cb96-5"><a href="examples-and-comments-1.html#cb96-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
-<span id="cb96-6"><a href="examples-and-comments-1.html#cb96-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">TRUE</span></span>
-<span id="cb96-7"><a href="examples-and-comments-1.html#cb96-7" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb96-8"><a href="examples-and-comments-1.html#cb96-8" aria-hidden="true" tabindex="-1"></a>df_population</span></code></pre></div>
+<div class="sourceCode" id="cb447"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb447-1"><a href="examples-and-comments-1.html#cb447-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
+<span id="cb447-2"><a href="examples-and-comments-1.html#cb447-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
+<span id="cb447-3"><a href="examples-and-comments-1.html#cb447-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="at">population =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>),</span>
+<span id="cb447-4"><a href="examples-and-comments-1.html#cb447-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
+<span id="cb447-5"><a href="examples-and-comments-1.html#cb447-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
+<span id="cb447-6"><a href="examples-and-comments-1.html#cb447-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">TRUE</span></span>
+<span id="cb447-7"><a href="examples-and-comments-1.html#cb447-7" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb447-8"><a href="examples-and-comments-1.html#cb447-8" aria-hidden="true" tabindex="-1"></a>df_population</span></code></pre></div>
 <pre><code>## # A tibble: 16,226 × 13
 ##    iso2c country    population  year status lastu…¹ iso3c region capital longi…²
 ##    &lt;chr&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  
@@ -476,15 +659,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## # … with 16,216 more rows, 3 more variables: latitude &lt;chr&gt;, income &lt;chr&gt;,
 ## #   lending &lt;chr&gt;, and abbreviated variable names ¹​lastupdated, ²​longitude</code></pre>
 <p>Find out extra information on Zimbabwe, i.e., which group Zimbabwe is in for region, income and lending.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="examples-and-comments-1.html#cb98-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span></span>
-<span id="cb98-2"><a href="examples-and-comments-1.html#cb98-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Zimbabwe&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(region, income, lending) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb449"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb449-1"><a href="examples-and-comments-1.html#cb449-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span></span>
+<span id="cb449-2"><a href="examples-and-comments-1.html#cb449-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Zimbabwe&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(region, income, lending) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>()</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 3
 ##   region             income              lending
 ##   &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;  
 ## 1 Sub-Saharan Africa Lower middle income Blend</code></pre>
 <p>Find out all countries in the same groups as Zimbabwe.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="examples-and-comments-1.html#cb100-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
-<span id="cb100-2"><a href="examples-and-comments-1.html#cb100-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>, lending <span class="sc">==</span> <span class="st">&quot;Blend&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(country)</span></code></pre></div>
+<div class="sourceCode" id="cb451"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb451-1"><a href="examples-and-comments-1.html#cb451-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
+<span id="cb451-2"><a href="examples-and-comments-1.html#cb451-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>, lending <span class="sc">==</span> <span class="st">&quot;Blend&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(country)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 1
 ##   country    
 ##   &lt;chr&gt;      
@@ -495,8 +678,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5 Nigeria    
 ## 6 Zimbabwe</code></pre>
 <p>Since there are only 6 countries belonging to the same group as Zimbabwe, let us widen our search.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="examples-and-comments-1.html#cb102-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
-<span id="cb102-2"><a href="examples-and-comments-1.html#cb102-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(country)</span></code></pre></div>
+<div class="sourceCode" id="cb453"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb453-1"><a href="examples-and-comments-1.html#cb453-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
+<span id="cb453-2"><a href="examples-and-comments-1.html#cb453-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(country)</span></code></pre></div>
 <pre><code>## # A tibble: 17 × 1
 ##    country              
 ##    &lt;chr&gt;                
@@ -518,48 +701,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 16 Tanzania             
 ## 17 Zimbabwe</code></pre>
 <p>The following is the first chart.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="examples-and-comments-1.html#cb104-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
-<span id="cb104-2"><a href="examples-and-comments-1.html#cb104-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>, lending <span class="sc">==</span> <span class="st">&quot;Blend&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb104-3"><a href="examples-and-comments-1.html#cb104-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb104-4"><a href="examples-and-comments-1.html#cb104-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> population, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb104-5"><a href="examples-and-comments-1.html#cb104-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-46-1.png" width="672" />
+<div class="sourceCode" id="cb455"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb455-1"><a href="examples-and-comments-1.html#cb455-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
+<span id="cb455-2"><a href="examples-and-comments-1.html#cb455-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>, lending <span class="sc">==</span> <span class="st">&quot;Blend&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb455-3"><a href="examples-and-comments-1.html#cb455-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb455-4"><a href="examples-and-comments-1.html#cb455-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> population, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb455-5"><a href="examples-and-comments-1.html#cb455-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-158-1.png" width="672" />
 The second chart.</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="examples-and-comments-1.html#cb105-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
-<span id="cb105-2"><a href="examples-and-comments-1.html#cb105-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb105-3"><a href="examples-and-comments-1.html#cb105-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb105-4"><a href="examples-and-comments-1.html#cb105-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> population, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb105-5"><a href="examples-and-comments-1.html#cb105-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-47-1.png" width="672" />
+<div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="examples-and-comments-1.html#cb456-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> </span>
+<span id="cb456-2"><a href="examples-and-comments-1.html#cb456-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Sub-Saharan Africa&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb456-3"><a href="examples-and-comments-1.html#cb456-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb456-4"><a href="examples-and-comments-1.html#cb456-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> population, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb456-5"><a href="examples-and-comments-1.html#cb456-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-159-1.png" width="672" />
 Fixing the income level and compare the regions.</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="examples-and-comments-1.html#cb106-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>)  <span class="sc">%&gt;%</span></span>
-<span id="cb106-2"><a href="examples-and-comments-1.html#cb106-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, year) <span class="sc">%&gt;%</span> </span>
-<span id="cb106-3"><a href="examples-and-comments-1.html#cb106-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_in_region =</span> <span class="fu">mean</span>(population, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb106-4"><a href="examples-and-comments-1.html#cb106-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb106-5"><a href="examples-and-comments-1.html#cb106-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> average_in_region, <span class="at">color =</span> region))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;region&#39;. You can override using the
-## `.groups` argument.</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-48-1.png" width="672" />
+<div class="sourceCode" id="cb457"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb457-1"><a href="examples-and-comments-1.html#cb457-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb457-2"><a href="examples-and-comments-1.html#cb457-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, year) <span class="sc">%&gt;%</span> </span>
+<span id="cb457-3"><a href="examples-and-comments-1.html#cb457-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_in_region =</span> <span class="fu">mean</span>(population, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb457-4"><a href="examples-and-comments-1.html#cb457-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb457-5"><a href="examples-and-comments-1.html#cb457-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> average_in_region, <span class="at">color =</span> region))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;region&#39;. You can override using the `.groups`
+## argument.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-160-1.png" width="672" />
 A chart in log 10 scale.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="examples-and-comments-1.html#cb108-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>)  <span class="sc">%&gt;%</span></span>
-<span id="cb108-2"><a href="examples-and-comments-1.html#cb108-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, year) <span class="sc">%&gt;%</span> </span>
-<span id="cb108-3"><a href="examples-and-comments-1.html#cb108-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_in_region =</span> <span class="fu">mean</span>(population, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb108-4"><a href="examples-and-comments-1.html#cb108-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb108-5"><a href="examples-and-comments-1.html#cb108-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> average_in_region, <span class="at">color =</span> region)) <span class="sc">+</span></span>
-<span id="cb108-6"><a href="examples-and-comments-1.html#cb108-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;region&#39;. You can override using the
-## `.groups` argument.</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb459-1"><a href="examples-and-comments-1.html#cb459-1" aria-hidden="true" tabindex="-1"></a>df_population <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb459-2"><a href="examples-and-comments-1.html#cb459-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, year) <span class="sc">%&gt;%</span> </span>
+<span id="cb459-3"><a href="examples-and-comments-1.html#cb459-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_in_region =</span> <span class="fu">mean</span>(population, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb459-4"><a href="examples-and-comments-1.html#cb459-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb459-5"><a href="examples-and-comments-1.html#cb459-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> average_in_region, <span class="at">color =</span> region)) <span class="sc">+</span></span>
+<span id="cb459-6"><a href="examples-and-comments-1.html#cb459-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;region&#39;. You can override using the `.groups`
+## argument.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-161-1.png" width="672" /></p>
 </div>
 <div id="fertility-rate-of-japan-and-similar-countries" class="section level3 hasAnchor" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> Fertility Rate of Japan and Similar Countries<a href="examples-and-comments-1.html#fertility-rate-of-japan-and-similar-countries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="examples-and-comments-1.html#cb110-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
-<span id="cb110-2"><a href="examples-and-comments-1.html#cb110-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
-<span id="cb110-3"><a href="examples-and-comments-1.html#cb110-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="at">fertility =</span> <span class="st">&quot;SP.DYN.TFRT.IN&quot;</span>), </span>
-<span id="cb110-4"><a href="examples-and-comments-1.html#cb110-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
-<span id="cb110-5"><a href="examples-and-comments-1.html#cb110-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
-<span id="cb110-6"><a href="examples-and-comments-1.html#cb110-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb110-7"><a href="examples-and-comments-1.html#cb110-7" aria-hidden="true" tabindex="-1"></a>df_fertility</span></code></pre></div>
+<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="examples-and-comments-1.html#cb461-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
+<span id="cb461-2"><a href="examples-and-comments-1.html#cb461-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
+<span id="cb461-3"><a href="examples-and-comments-1.html#cb461-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="at">fertility =</span> <span class="st">&quot;SP.DYN.TFRT.IN&quot;</span>), </span>
+<span id="cb461-4"><a href="examples-and-comments-1.html#cb461-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
+<span id="cb461-5"><a href="examples-and-comments-1.html#cb461-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
+<span id="cb461-6"><a href="examples-and-comments-1.html#cb461-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb461-7"><a href="examples-and-comments-1.html#cb461-7" aria-hidden="true" tabindex="-1"></a>df_fertility</span></code></pre></div>
 <pre><code>## # A tibble: 16,226 × 13
 ##    iso2c country    fertility  year status lastup…¹ iso3c region capital longi…²
 ##    &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  
@@ -575,14 +758,14 @@ A chart in log 10 scale.</p>
 ## 10 1A    Arab World      6.59  1976 &quot;&quot;     2022-09… ARB   Aggre… &quot;&quot;      &quot;&quot;     
 ## # … with 16,216 more rows, 3 more variables: latitude &lt;chr&gt;, income &lt;chr&gt;,
 ## #   lending &lt;chr&gt;, and abbreviated variable names ¹​lastupdated, ²​longitude</code></pre>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="examples-and-comments-1.html#cb112-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Japan&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb112-2"><a href="examples-and-comments-1.html#cb112-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(region, income, lending) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb463"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb463-1"><a href="examples-and-comments-1.html#cb463-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Japan&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb463-2"><a href="examples-and-comments-1.html#cb463-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(region, income, lending) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>()</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 3
 ##   region              income      lending       
 ##   &lt;chr&gt;               &lt;chr&gt;       &lt;chr&gt;         
 ## 1 East Asia &amp; Pacific High income Not classified</code></pre>
 <p>Let us compare Japan’s fertility rate with similar countries, i.e., high income countries in East Asia &amp; Pacific</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="examples-and-comments-1.html#cb114-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;East Asia &amp; Pacific&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(country)</span></code></pre></div>
+<div class="sourceCode" id="cb465"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb465-1"><a href="examples-and-comments-1.html#cb465-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;East Asia &amp; Pacific&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(country)</span></code></pre></div>
 <pre><code>## # A tibble: 13 × 1
 ##    country                 
 ##    &lt;chr&gt;                   
@@ -599,16 +782,16 @@ A chart in log 10 scale.</p>
 ## 11 New Zealand             
 ## 12 French Polynesia        
 ## 13 Singapore</code></pre>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="examples-and-comments-1.html#cb116-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;East Asia &amp; Pacific&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>)  <span class="sc">%&gt;%</span></span>
-<span id="cb116-2"><a href="examples-and-comments-1.html#cb116-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb116-3"><a href="examples-and-comments-1.html#cb116-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb116-4"><a href="examples-and-comments-1.html#cb116-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Fertility Rate of High Income Countries in East Asia &amp; Pacific&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb467"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb467-1"><a href="examples-and-comments-1.html#cb467-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;East Asia &amp; Pacific&quot;</span>, income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb467-2"><a href="examples-and-comments-1.html#cb467-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb467-3"><a href="examples-and-comments-1.html#cb467-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb467-4"><a href="examples-and-comments-1.html#cb467-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Fertility Rate of High Income Countries in East Asia &amp; Pacific&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 122 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-53-1.png" width="672" />
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-165-1.png" width="672" />
 Let us check the number of countries in each region.</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="examples-and-comments-1.html#cb118-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>)  <span class="sc">%&gt;%</span></span>
-<span id="cb118-2"><a href="examples-and-comments-1.html#cb118-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, region) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb118-3"><a href="examples-and-comments-1.html#cb118-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_countries =</span> <span class="fu">n_distinct</span>(country))</span></code></pre></div>
+<div class="sourceCode" id="cb469"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb469-1"><a href="examples-and-comments-1.html#cb469-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb469-2"><a href="examples-and-comments-1.html#cb469-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, region) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb469-3"><a href="examples-and-comments-1.html#cb469-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_countries =</span> <span class="fu">n_distinct</span>(country))</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 2
 ##   region                     number_of_countries
 ##   &lt;chr&gt;                                    &lt;int&gt;
@@ -618,24 +801,24 @@ Let us check the number of countries in each region.</p>
 ## 4 Middle East &amp; North Africa                   8
 ## 5 North America                                3
 ## 6 Sub-Saharan Africa                           1</code></pre>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="examples-and-comments-1.html#cb120-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>)  <span class="sc">%&gt;%</span></span>
-<span id="cb120-2"><a href="examples-and-comments-1.html#cb120-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, year) <span class="sc">%&gt;%</span> </span>
-<span id="cb120-3"><a href="examples-and-comments-1.html#cb120-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_in_region =</span> <span class="fu">mean</span>(fertility, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb120-4"><a href="examples-and-comments-1.html#cb120-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb120-5"><a href="examples-and-comments-1.html#cb120-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> average_in_region, <span class="at">color =</span> region))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;region&#39;. You can override using the
-## `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb471"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb471-1"><a href="examples-and-comments-1.html#cb471-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb471-2"><a href="examples-and-comments-1.html#cb471-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, year) <span class="sc">%&gt;%</span> </span>
+<span id="cb471-3"><a href="examples-and-comments-1.html#cb471-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_in_region =</span> <span class="fu">mean</span>(fertility, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb471-4"><a href="examples-and-comments-1.html#cb471-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb471-5"><a href="examples-and-comments-1.html#cb471-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> average_in_region, <span class="at">color =</span> region))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;region&#39;. You can override using the `.groups`
+## argument.</code></pre>
 <pre><code>## Warning: Removed 16 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-167-1.png" width="672" /></p>
 </div>
 </div>
 <div id="other-groups" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Other Groups<a href="examples-and-comments-1.html#other-groups" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So far we used only three classifications of groups, region, income and lending. However, <code>CLASS.xls</code> contains more information.</p>
 <p>For example if we compare data within a group, say Arab World (ARB), we need the information taken from <code>CLASS.xls</code>. If you need the information of the aggregated data of the group, it is included. We know that there are 22 countries.</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="examples-and-comments-1.html#cb123-1" aria-hidden="true" tabindex="-1"></a>wb_arb <span class="ot">&lt;-</span> wb_groups <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gcode <span class="sc">==</span> <span class="st">&quot;ARB&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(iso3c, country)</span>
-<span id="cb123-2"><a href="examples-and-comments-1.html#cb123-2" aria-hidden="true" tabindex="-1"></a>wb_arb_vec <span class="ot">&lt;-</span> wb_arb <span class="sc">%&gt;%</span> <span class="fu">pull</span>(iso3c)</span>
-<span id="cb123-3"><a href="examples-and-comments-1.html#cb123-3" aria-hidden="true" tabindex="-1"></a>wb_arb</span></code></pre></div>
+<div class="sourceCode" id="cb474"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb474-1"><a href="examples-and-comments-1.html#cb474-1" aria-hidden="true" tabindex="-1"></a>wb_arb <span class="ot">&lt;-</span> wb_groups <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gcode <span class="sc">==</span> <span class="st">&quot;ARB&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(iso3c, country)</span>
+<span id="cb474-2"><a href="examples-and-comments-1.html#cb474-2" aria-hidden="true" tabindex="-1"></a>wb_arb_vec <span class="ot">&lt;-</span> wb_arb <span class="sc">%&gt;%</span> <span class="fu">pull</span>(iso3c)</span>
+<span id="cb474-3"><a href="examples-and-comments-1.html#cb474-3" aria-hidden="true" tabindex="-1"></a>wb_arb</span></code></pre></div>
 <pre><code>## # A tibble: 22 × 2
 ##    iso3c country             
 ##    &lt;chr&gt; &lt;chr&gt;               
@@ -650,42 +833,42 @@ Let us check the number of countries in each region.</p>
 ##  9 KWT   Kuwait              
 ## 10 LBN   Lebanon             
 ## # … with 12 more rows</code></pre>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="examples-and-comments-1.html#cb125-1" aria-hidden="true" tabindex="-1"></a>wb_arb_vec</span></code></pre></div>
+<div class="sourceCode" id="cb476"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb476-1"><a href="examples-and-comments-1.html#cb476-1" aria-hidden="true" tabindex="-1"></a>wb_arb_vec</span></code></pre></div>
 <pre><code>##  [1] &quot;ARE&quot; &quot;BHR&quot; &quot;COM&quot; &quot;DJI&quot; &quot;DZA&quot; &quot;EGY&quot; &quot;IRQ&quot; &quot;JOR&quot; &quot;KWT&quot; &quot;LBN&quot; &quot;LBY&quot; &quot;MAR&quot;
 ## [13] &quot;MRT&quot; &quot;OMN&quot; &quot;PSE&quot; &quot;QAT&quot; &quot;SAU&quot; &quot;SDN&quot; &quot;SOM&quot; &quot;SYR&quot; &quot;TUN&quot; &quot;YEM&quot;</code></pre>
 <p>I created the data frame containing Arab World countries and their iso3c codes together with a vector containing iso3c only.</p>
 <div id="iso3c-vector-wb_arb_vec" class="section level3 hasAnchor" number="6.2.1">
 <h3><span class="header-section-number">6.2.1</span> iso3c vector: <code>wb_arb_vec</code><a href="examples-and-comments-1.html#iso3c-vector-wb_arb_vec" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="examples-and-comments-1.html#cb127-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(iso3c <span class="sc">%in%</span> wb_arb_vec) <span class="sc">%&gt;%</span></span>
-<span id="cb127-2"><a href="examples-and-comments-1.html#cb127-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb127-3"><a href="examples-and-comments-1.html#cb127-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb478"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb478-1"><a href="examples-and-comments-1.html#cb478-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">filter</span>(iso3c <span class="sc">%in%</span> wb_arb_vec) <span class="sc">%&gt;%</span></span>
+<span id="cb478-2"><a href="examples-and-comments-1.html#cb478-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb478-3"><a href="examples-and-comments-1.html#cb478-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
 <pre><code>## Warning: Removed 30 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-57-1.png" width="672" />
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-169-1.png" width="672" />
 ### Data Frame: <code>wb_arb</code></p>
 <p>For example, if the original data does not have an iso3c code, you can obtain a part of data refering to the column they share in common. In the following I used <code>by = "country"</code> in the second code chunk.</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="examples-and-comments-1.html#cb129-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(wb_arb) <span class="sc">%&gt;%</span></span>
-<span id="cb129-2"><a href="examples-and-comments-1.html#cb129-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb129-3"><a href="examples-and-comments-1.html#cb129-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb129-4"><a href="examples-and-comments-1.html#cb129-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;right_join without using by&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb480"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb480-1"><a href="examples-and-comments-1.html#cb480-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(wb_arb) <span class="sc">%&gt;%</span></span>
+<span id="cb480-2"><a href="examples-and-comments-1.html#cb480-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb480-3"><a href="examples-and-comments-1.html#cb480-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb480-4"><a href="examples-and-comments-1.html#cb480-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;right_join without using by&quot;</span>)</span></code></pre></div>
 <pre><code>## Joining, by = c(&quot;country&quot;, &quot;iso3c&quot;)</code></pre>
 <pre><code>## Warning: Removed 30 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="examples-and-comments-1.html#cb132-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(wb_arb, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb132-2"><a href="examples-and-comments-1.html#cb132-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb132-3"><a href="examples-and-comments-1.html#cb132-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()  <span class="sc">+</span> </span>
-<span id="cb132-4"><a href="examples-and-comments-1.html#cb132-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;`right_join` with `by`&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-170-1.png" width="672" /></p>
+<div class="sourceCode" id="cb483"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb483-1"><a href="examples-and-comments-1.html#cb483-1" aria-hidden="true" tabindex="-1"></a>df_fertility <span class="sc">%&gt;%</span> <span class="fu">right_join</span>(wb_arb, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb483-2"><a href="examples-and-comments-1.html#cb483-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> fertility, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb483-3"><a href="examples-and-comments-1.html#cb483-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()  <span class="sc">+</span> </span>
+<span id="cb483-4"><a href="examples-and-comments-1.html#cb483-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;`right_join` with `by`&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 30 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-171-1.png" width="672" /></p>
 </div>
 </div>
 <div id="wangling-transform-and-tidy-data" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Wangling: Transform and Tidy Data<a href="examples-and-comments-1.html#wangling-transform-and-tidy-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="examples-and-comments-1.html#cb134-1" aria-hidden="true" tabindex="-1"></a>url_class <span class="ot">&lt;-</span> <span class="st">&quot;https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=excel&quot;</span></span>
-<span id="cb134-2"><a href="examples-and-comments-1.html#cb134-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_class, <span class="at">mode =</span> <span class="st">&quot;wb&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb485"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb485-1"><a href="examples-and-comments-1.html#cb485-1" aria-hidden="true" tabindex="-1"></a>url_class <span class="ot">&lt;-</span> <span class="st">&quot;https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=excel&quot;</span></span>
+<span id="cb485-2"><a href="examples-and-comments-1.html#cb485-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_class, <span class="at">mode =</span> <span class="st">&quot;wb&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls&quot;</span>)</span></code></pre></div>
 <div id="tidying-data" class="section level3 hasAnchor" number="6.3.1">
 <h3><span class="header-section-number">6.3.1</span> Tidying data<a href="examples-and-comments-1.html#tidying-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="examples-and-comments-1.html#cb135-1" aria-hidden="true" tabindex="-1"></a>country_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">3</span>, <span class="at">n_max =</span><span class="dv">271</span>) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="examples-and-comments-1.html#cb136-1" aria-hidden="true" tabindex="-1"></a>country_tmp</span></code></pre></div>
+<div class="sourceCode" id="cb486"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb486-1"><a href="examples-and-comments-1.html#cb486-1" aria-hidden="true" tabindex="-1"></a>country_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">3</span>, <span class="at">n_max =</span><span class="dv">271</span>) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb487"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb487-1"><a href="examples-and-comments-1.html#cb487-1" aria-hidden="true" tabindex="-1"></a>country_tmp</span></code></pre></div>
 <pre><code>## # A tibble: 265 × 66
 ##    Country N…¹ Count…² Indic…³ Indic…⁴ `1960` `1961` `1962` `1963` `1964` `1965`
 ##    &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt; 
@@ -707,11 +890,11 @@ Let us check the number of countries in each region.</p>
 ## #   `1988` &lt;lgl&gt;, `1989` &lt;lgl&gt;, `1990` &lt;dbl&gt;, `1991` &lt;dbl&gt;, `1992` &lt;dbl&gt;,
 ## #   `1993` &lt;dbl&gt;, `1994` &lt;dbl&gt;, `1995` &lt;dbl&gt;, `1996` &lt;dbl&gt;, `1997` &lt;dbl&gt;, …</code></pre>
 <p>The following is an original code chunk.</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="examples-and-comments-1.html#cb138-1" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="ot">&lt;-</span> country_tmp <span class="sc">%&gt;%</span></span>
-<span id="cb138-2"><a href="examples-and-comments-1.html#cb138-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">Country Name</span><span class="st">`</span>, <span class="st">`</span><span class="at">Country Code</span><span class="st">`</span>, <span class="st">`</span><span class="at">Indicator Name</span><span class="st">`</span>, <span class="st">`</span><span class="at">Indicator Code</span><span class="st">`</span>,<span class="st">`</span><span class="at">1960</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">2018</span><span class="st">`</span>)</span>
-<span id="cb138-3"><a href="examples-and-comments-1.html#cb138-3" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(Co2_country,<span class="at">cols =</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">63</span>, <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;Co2&quot;</span>, <span class="at">values_drop_na =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb138-4"><a href="examples-and-comments-1.html#cb138-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">ID =</span> <span class="st">`</span><span class="at">Country Code</span><span class="st">`</span>, <span class="at">Country =</span> <span class="st">`</span><span class="at">Country Name</span><span class="st">`</span>, year, Co2)</span>
-<span id="cb138-5"><a href="examples-and-comments-1.html#cb138-5" aria-hidden="true" tabindex="-1"></a>Co2_country</span></code></pre></div>
+<div class="sourceCode" id="cb489"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb489-1"><a href="examples-and-comments-1.html#cb489-1" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="ot">&lt;-</span> country_tmp <span class="sc">%&gt;%</span></span>
+<span id="cb489-2"><a href="examples-and-comments-1.html#cb489-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">Country Name</span><span class="st">`</span>, <span class="st">`</span><span class="at">Country Code</span><span class="st">`</span>, <span class="st">`</span><span class="at">Indicator Name</span><span class="st">`</span>, <span class="st">`</span><span class="at">Indicator Code</span><span class="st">`</span>,<span class="st">`</span><span class="at">1960</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">2018</span><span class="st">`</span>)</span>
+<span id="cb489-3"><a href="examples-and-comments-1.html#cb489-3" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(Co2_country,<span class="at">cols =</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">63</span>, <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;Co2&quot;</span>, <span class="at">values_drop_na =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb489-4"><a href="examples-and-comments-1.html#cb489-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">ID =</span> <span class="st">`</span><span class="at">Country Code</span><span class="st">`</span>, <span class="at">Country =</span> <span class="st">`</span><span class="at">Country Name</span><span class="st">`</span>, year, Co2)</span>
+<span id="cb489-5"><a href="examples-and-comments-1.html#cb489-5" aria-hidden="true" tabindex="-1"></a>Co2_country</span></code></pre></div>
 <pre><code>## # A tibble: 6,905 × 4
 ##    ID    Country                     year    Co2
 ##    &lt;chr&gt; &lt;chr&gt;                       &lt;chr&gt; &lt;dbl&gt;
@@ -726,37 +909,37 @@ Let us check the number of countries in each region.</p>
 ##  9 AFE   Africa Eastern and Southern 1998  0.967
 ## 10 AFE   Africa Eastern and Southern 1999  0.905
 ## # … with 6,895 more rows</code></pre>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="examples-and-comments-1.html#cb140-1" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb140-2"><a href="examples-and-comments-1.html#cb140-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Co2)) <span class="sc">+</span></span>
-<span id="cb140-3"><a href="examples-and-comments-1.html#cb140-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb491"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb491-1"><a href="examples-and-comments-1.html#cb491-1" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb491-2"><a href="examples-and-comments-1.html#cb491-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Co2)) <span class="sc">+</span></span>
+<span id="cb491-3"><a href="examples-and-comments-1.html#cb491-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
 <pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
 ## the group aesthetic?</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-176-1.png" width="672" /></p>
 <p>Empty chart. The following is much better but we cannot see year and a line graph may be preferable to see changes.
 Please notice that year is in character not in integer.</p>
-<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="examples-and-comments-1.html#cb142-1" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb142-2"><a href="examples-and-comments-1.html#cb142-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Co2)) <span class="sc">+</span></span>
-<span id="cb142-3"><a href="examples-and-comments-1.html#cb142-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-65-1.png" width="672" />
+<div class="sourceCode" id="cb493"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb493-1"><a href="examples-and-comments-1.html#cb493-1" aria-hidden="true" tabindex="-1"></a>Co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb493-2"><a href="examples-and-comments-1.html#cb493-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Co2)) <span class="sc">+</span></span>
+<span id="cb493-3"><a href="examples-and-comments-1.html#cb493-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-177-1.png" width="672" />
 In the following I used Base R command. Co2_country_rev$year denotes the column year of the data frame Co2_country_rev.</p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="examples-and-comments-1.html#cb143-1" aria-hidden="true" tabindex="-1"></a>Co2_country_rev <span class="ot">&lt;-</span> Co2_country</span>
-<span id="cb143-2"><a href="examples-and-comments-1.html#cb143-2" aria-hidden="true" tabindex="-1"></a>Co2_country_rev<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(Co2_country_rev<span class="sc">$</span>year) </span>
-<span id="cb143-3"><a href="examples-and-comments-1.html#cb143-3" aria-hidden="true" tabindex="-1"></a>Co2_country_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb143-4"><a href="examples-and-comments-1.html#cb143-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Co2)) <span class="sc">+</span></span>
-<span id="cb143-5"><a href="examples-and-comments-1.html#cb143-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-66-1.png" width="672" />
+<div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="examples-and-comments-1.html#cb494-1" aria-hidden="true" tabindex="-1"></a>Co2_country_rev <span class="ot">&lt;-</span> Co2_country</span>
+<span id="cb494-2"><a href="examples-and-comments-1.html#cb494-2" aria-hidden="true" tabindex="-1"></a>Co2_country_rev<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(Co2_country_rev<span class="sc">$</span>year) </span>
+<span id="cb494-3"><a href="examples-and-comments-1.html#cb494-3" aria-hidden="true" tabindex="-1"></a>Co2_country_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb494-4"><a href="examples-and-comments-1.html#cb494-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Co2)) <span class="sc">+</span></span>
+<span id="cb494-5"><a href="examples-and-comments-1.html#cb494-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-178-1.png" width="672" />
 Using <code>dplyr</code>, the following is an alternative.</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="examples-and-comments-1.html#cb144-1" aria-hidden="true" tabindex="-1"></a>Co2_country_rev2 <span class="ot">&lt;-</span> Co2_country <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year))</span>
-<span id="cb144-2"><a href="examples-and-comments-1.html#cb144-2" aria-hidden="true" tabindex="-1"></a>Co2_country_rev2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb144-3"><a href="examples-and-comments-1.html#cb144-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y=</span> Co2)) <span class="sc">+</span></span>
-<span id="cb144-4"><a href="examples-and-comments-1.html#cb144-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<div class="sourceCode" id="cb495"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb495-1"><a href="examples-and-comments-1.html#cb495-1" aria-hidden="true" tabindex="-1"></a>Co2_country_rev2 <span class="ot">&lt;-</span> Co2_country <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year))</span>
+<span id="cb495-2"><a href="examples-and-comments-1.html#cb495-2" aria-hidden="true" tabindex="-1"></a>Co2_country_rev2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(ID <span class="sc">==</span> <span class="st">&quot;WLD&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb495-3"><a href="examples-and-comments-1.html#cb495-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y=</span> Co2)) <span class="sc">+</span></span>
+<span id="cb495-4"><a href="examples-and-comments-1.html#cb495-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-179-1.png" width="672" /></p>
 <p>It is possible to set year to be an integer variable when pivot_longer is applied by adding <code>names_transform = list(year = as.integer)</code>.</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="examples-and-comments-1.html#cb145-1" aria-hidden="true" tabindex="-1"></a>co2_country <span class="ot">&lt;-</span> country_tmp <span class="sc">%&gt;%</span></span>
-<span id="cb145-2"><a href="examples-and-comments-1.html#cb145-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">&#39;Country Name&#39;</span>, <span class="st">&#39;Country Code&#39;</span>, <span class="st">&#39;Indicator Name&#39;</span>, <span class="st">&#39;Indicator Code&#39;</span>,<span class="st">&#39;1960&#39;</span><span class="sc">:</span><span class="st">&#39;2018&#39;</span>)</span>
-<span id="cb145-3"><a href="examples-and-comments-1.html#cb145-3" aria-hidden="true" tabindex="-1"></a>co2_country <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(co2_country,<span class="at">cols =</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">63</span>, <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="at">names_transform =</span> <span class="fu">list</span>(<span class="at">year =</span> as.integer), <span class="at">values_to =</span> <span class="st">&quot;Co2&quot;</span>, <span class="at">values_drop_na =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb145-4"><a href="examples-and-comments-1.html#cb145-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">ID =</span> <span class="st">&#39;Country Code&#39;</span>, <span class="at">Country =</span> <span class="st">&#39;Country Name&#39;</span>, year, Co2)</span>
-<span id="cb145-5"><a href="examples-and-comments-1.html#cb145-5" aria-hidden="true" tabindex="-1"></a>co2_country</span></code></pre></div>
+<div class="sourceCode" id="cb496"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb496-1"><a href="examples-and-comments-1.html#cb496-1" aria-hidden="true" tabindex="-1"></a>co2_country <span class="ot">&lt;-</span> country_tmp <span class="sc">%&gt;%</span></span>
+<span id="cb496-2"><a href="examples-and-comments-1.html#cb496-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">&#39;Country Name&#39;</span>, <span class="st">&#39;Country Code&#39;</span>, <span class="st">&#39;Indicator Name&#39;</span>, <span class="st">&#39;Indicator Code&#39;</span>,<span class="st">&#39;1960&#39;</span><span class="sc">:</span><span class="st">&#39;2018&#39;</span>)</span>
+<span id="cb496-3"><a href="examples-and-comments-1.html#cb496-3" aria-hidden="true" tabindex="-1"></a>co2_country <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(co2_country,<span class="at">cols =</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">63</span>, <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="at">names_transform =</span> <span class="fu">list</span>(<span class="at">year =</span> as.integer), <span class="at">values_to =</span> <span class="st">&quot;Co2&quot;</span>, <span class="at">values_drop_na =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb496-4"><a href="examples-and-comments-1.html#cb496-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">ID =</span> <span class="st">&#39;Country Code&#39;</span>, <span class="at">Country =</span> <span class="st">&#39;Country Name&#39;</span>, year, Co2)</span>
+<span id="cb496-5"><a href="examples-and-comments-1.html#cb496-5" aria-hidden="true" tabindex="-1"></a>co2_country</span></code></pre></div>
 <pre><code>## # A tibble: 6,905 × 4
 ##    ID    Country                      year   Co2
 ##    &lt;chr&gt; &lt;chr&gt;                       &lt;int&gt; &lt;dbl&gt;
@@ -771,11 +954,11 @@ Using <code>dplyr</code>, the following is an alternative.</p>
 ##  9 AFE   Africa Eastern and Southern  1998 0.967
 ## 10 AFE   Africa Eastern and Southern  1999 0.905
 ## # … with 6,895 more rows</code></pre>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="examples-and-comments-1.html#cb147-1" aria-hidden="true" tabindex="-1"></a>co2_country <span class="ot">&lt;-</span> country_tmp <span class="sc">%&gt;%</span> </span>
-<span id="cb147-2"><a href="examples-and-comments-1.html#cb147-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">63</span>, <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="at">names_transform =</span> <span class="fu">list</span>(<span class="at">year =</span> as.integer), </span>
-<span id="cb147-3"><a href="examples-and-comments-1.html#cb147-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;co2&quot;</span>, <span class="at">values_drop_na =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb147-4"><a href="examples-and-comments-1.html#cb147-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">id =</span> <span class="st">&#39;Country Code&#39;</span>, <span class="at">country =</span> <span class="st">&#39;Country Name&#39;</span>, year, co2)</span>
-<span id="cb147-5"><a href="examples-and-comments-1.html#cb147-5" aria-hidden="true" tabindex="-1"></a>co2_country</span></code></pre></div>
+<div class="sourceCode" id="cb498"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb498-1"><a href="examples-and-comments-1.html#cb498-1" aria-hidden="true" tabindex="-1"></a>co2_country <span class="ot">&lt;-</span> country_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb498-2"><a href="examples-and-comments-1.html#cb498-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">63</span>, <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="at">names_transform =</span> <span class="fu">list</span>(<span class="at">year =</span> as.integer), </span>
+<span id="cb498-3"><a href="examples-and-comments-1.html#cb498-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;co2&quot;</span>, <span class="at">values_drop_na =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb498-4"><a href="examples-and-comments-1.html#cb498-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">id =</span> <span class="st">&#39;Country Code&#39;</span>, <span class="at">country =</span> <span class="st">&#39;Country Name&#39;</span>, year, co2)</span>
+<span id="cb498-5"><a href="examples-and-comments-1.html#cb498-5" aria-hidden="true" tabindex="-1"></a>co2_country</span></code></pre></div>
 <pre><code>## # A tibble: 6,905 × 4
 ##    id    country                      year   co2
 ##    &lt;chr&gt; &lt;chr&gt;                       &lt;int&gt; &lt;dbl&gt;
@@ -790,23 +973,23 @@ Using <code>dplyr</code>, the following is an alternative.</p>
 ##  9 AFE   Africa Eastern and Southern  1998 0.967
 ## 10 AFE   Africa Eastern and Southern  1999 0.905
 ## # … with 6,895 more rows</code></pre>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="examples-and-comments-1.html#cb149-1" aria-hidden="true" tabindex="-1"></a>co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(id <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WLD&quot;</span>, <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;CHN&quot;</span>, <span class="st">&quot;JPN&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb149-2"><a href="examples-and-comments-1.html#cb149-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y=</span> co2, <span class="at">color =</span> id)) <span class="sc">+</span></span>
-<span id="cb149-3"><a href="examples-and-comments-1.html#cb149-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="examples-and-comments-1.html#cb150-1" aria-hidden="true" tabindex="-1"></a>COUNTRIES <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;China&quot;</span>,<span class="st">&quot;Japan&quot;</span>,<span class="st">&quot;United States&quot;</span>,<span class="st">&quot;Great Britain&quot;</span>,<span class="st">&quot;India&quot;</span>,<span class="st">&quot;South Africa&quot;</span>,<span class="st">&quot;Malaysia&quot;</span>,<span class="st">&quot;Russia&quot;</span>,<span class="st">&quot;Australia&quot;</span>, <span class="st">&quot;Canada&quot;</span>, <span class="st">&quot;Vietnam&quot;</span>)</span>
-<span id="cb150-2"><a href="examples-and-comments-1.html#cb150-2" aria-hidden="true" tabindex="-1"></a>co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> COUNTRIES) <span class="sc">%&gt;%</span> </span>
-<span id="cb150-3"><a href="examples-and-comments-1.html#cb150-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y=</span> co2, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb150-4"><a href="examples-and-comments-1.html#cb150-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb150-5"><a href="examples-and-comments-1.html#cb150-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-71-1.png" width="672" />
+<div class="sourceCode" id="cb500"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb500-1"><a href="examples-and-comments-1.html#cb500-1" aria-hidden="true" tabindex="-1"></a>co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(id <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WLD&quot;</span>, <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;CHN&quot;</span>, <span class="st">&quot;JPN&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb500-2"><a href="examples-and-comments-1.html#cb500-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y=</span> co2, <span class="at">color =</span> id)) <span class="sc">+</span></span>
+<span id="cb500-3"><a href="examples-and-comments-1.html#cb500-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-182-1.png" width="672" /></p>
+<div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="examples-and-comments-1.html#cb501-1" aria-hidden="true" tabindex="-1"></a>COUNTRIES <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;China&quot;</span>,<span class="st">&quot;Japan&quot;</span>,<span class="st">&quot;United States&quot;</span>,<span class="st">&quot;Great Britain&quot;</span>,<span class="st">&quot;India&quot;</span>,<span class="st">&quot;South Africa&quot;</span>,<span class="st">&quot;Malaysia&quot;</span>,<span class="st">&quot;Russia&quot;</span>,<span class="st">&quot;Australia&quot;</span>, <span class="st">&quot;Canada&quot;</span>, <span class="st">&quot;Vietnam&quot;</span>)</span>
+<span id="cb501-2"><a href="examples-and-comments-1.html#cb501-2" aria-hidden="true" tabindex="-1"></a>co2_country <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">%in%</span> COUNTRIES) <span class="sc">%&gt;%</span> </span>
+<span id="cb501-3"><a href="examples-and-comments-1.html#cb501-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y=</span> co2, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb501-4"><a href="examples-and-comments-1.html#cb501-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb501-5"><a href="examples-and-comments-1.html#cb501-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-183-1.png" width="672" />
 Compare the data above and the those in WDI.</p>
 <ul>
 <li>WID Data</li>
 <li>URL: <a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT" class="uri">https://data.worldbank.org/indicator/EN.ATM.CO2E.KT</a></li>
 <li>Description:</li>
 </ul>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="examples-and-comments-1.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;co2&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb502"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb502-1"><a href="examples-and-comments-1.html#cb502-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;co2&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code></pre></div>
 <pre><code>## # A tibble: 154 × 2
 ##    indicator      name                                                          
 ##    &lt;chr&gt;          &lt;chr&gt;                                                         
@@ -827,20 +1010,20 @@ Compare the data above and the those in WDI.</p>
 <h2><span class="header-section-number">6.4</span> Population Analysis<a href="examples-and-comments-1.html#population-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The original analysis uses Base R commands a lot, I do a similar analysis using <code>tidyverse</code> as an example.</p>
 <p>The following population data has seven variables.</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="examples-and-comments-1.html#cb153-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://data.un.org/_Docs/SYB/CSV/SYB64_246_202110_Population%20Growth,%20Fertility%20and%20Mortality%20Indicators.csv&quot;</span></span>
-<span id="cb153-2"><a href="examples-and-comments-1.html#cb153-2" aria-hidden="true" tabindex="-1"></a>df_un_pop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(url, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb504"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb504-1"><a href="examples-and-comments-1.html#cb504-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://data.un.org/_Docs/SYB/CSV/SYB64_246_202110_Population%20Growth,%20Fertility%20and%20Mortality%20Indicators.csv&quot;</span></span>
+<span id="cb504-2"><a href="examples-and-comments-1.html#cb504-2" aria-hidden="true" tabindex="-1"></a>df_un_pop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(url, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## New names:
 ## • `` -&gt; `...2`</code></pre>
 <pre><code>## Warning: One or more parsing issues, see `problems()` for details</code></pre>
 <pre><code>## Rows: 4899 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (4): ...2, Series, Footnotes, Source
 ## dbl (3): Region/Country/Area, Year, Value
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="examples-and-comments-1.html#cb157-1" aria-hidden="true" tabindex="-1"></a>df_un_pop</span></code></pre></div>
+<div class="sourceCode" id="cb508"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb508-1"><a href="examples-and-comments-1.html#cb508-1" aria-hidden="true" tabindex="-1"></a>df_un_pop</span></code></pre></div>
 <pre><code>## # A tibble: 4,899 × 7
 ##    `Region/Country/Area` ...2                   Year Series Value Footn…¹ Source
 ##                    &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
@@ -856,7 +1039,7 @@ Compare the data above and the those in WDI.</p>
 ## 10                     1 Total, all countries…  2015 Infan…  33.9 Data r… &quot;Unit…
 ## # … with 4,889 more rows, and abbreviated variable name ¹​Footnotes</code></pre>
 <p>Check the regions of interst.</p>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="examples-and-comments-1.html#cb159-1" aria-hidden="true" tabindex="-1"></a>df_un_pop <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">9</span>,<span class="dv">21</span>,<span class="dv">419</span>,<span class="dv">142</span>,<span class="dv">150</span>)) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">...2</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb510"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb510-1"><a href="examples-and-comments-1.html#cb510-1" aria-hidden="true" tabindex="-1"></a>df_un_pop <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">9</span>,<span class="dv">21</span>,<span class="dv">419</span>,<span class="dv">142</span>,<span class="dv">150</span>)) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">...2</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 1
 ##   ...2                         
 ##   &lt;chr&gt;                        
@@ -866,10 +1049,10 @@ Compare the data above and the those in WDI.</p>
 ## 4 Asia                         
 ## 5 Europe                       
 ## 6 Oceania</code></pre>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="examples-and-comments-1.html#cb161-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="ot">&lt;-</span> df_un_pop <span class="sc">%&gt;%</span> </span>
-<span id="cb161-2"><a href="examples-and-comments-1.html#cb161-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">rn =</span> <span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, <span class="at">region =</span> <span class="st">`</span><span class="at">...2</span><span class="st">`</span>, <span class="at">year =</span> Year, <span class="at">series =</span> Series, <span class="at">value =</span> Value) <span class="sc">%&gt;%</span></span>
-<span id="cb161-3"><a href="examples-and-comments-1.html#cb161-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(rn <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">9</span>,<span class="dv">21</span>,<span class="dv">419</span>,<span class="dv">142</span>,<span class="dv">150</span>))</span>
-<span id="cb161-4"><a href="examples-and-comments-1.html#cb161-4" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev</span></code></pre></div>
+<div class="sourceCode" id="cb512"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb512-1"><a href="examples-and-comments-1.html#cb512-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="ot">&lt;-</span> df_un_pop <span class="sc">%&gt;%</span> </span>
+<span id="cb512-2"><a href="examples-and-comments-1.html#cb512-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">rn =</span> <span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, <span class="at">region =</span> <span class="st">`</span><span class="at">...2</span><span class="st">`</span>, <span class="at">year =</span> Year, <span class="at">series =</span> Series, <span class="at">value =</span> Value) <span class="sc">%&gt;%</span></span>
+<span id="cb512-3"><a href="examples-and-comments-1.html#cb512-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(rn <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">9</span>,<span class="dv">21</span>,<span class="dv">419</span>,<span class="dv">142</span>,<span class="dv">150</span>))</span>
+<span id="cb512-4"><a href="examples-and-comments-1.html#cb512-4" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev</span></code></pre></div>
 <pre><code>## # A tibble: 120 × 5
 ##       rn region  year series                                               value
 ##    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;                                                &lt;dbl&gt;
@@ -884,7 +1067,7 @@ Compare the data above and the those in WDI.</p>
 ##  9     2 Africa  2015 Infant mortality for both sexes (per 1,000 live bir…  55.9
 ## 10     2 Africa  2015 Life expectancy at birth for both sexes (years)       60.2
 ## # … with 110 more rows</code></pre>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="examples-and-comments-1.html#cb163-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(series)</span></code></pre></div>
+<div class="sourceCode" id="cb514"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb514-1"><a href="examples-and-comments-1.html#cb514-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(series)</span></code></pre></div>
 <pre><code>## # A tibble: 7 × 1
 ##   series                                                  
 ##   &lt;chr&gt;                                                   
@@ -895,32 +1078,32 @@ Compare the data above and the those in WDI.</p>
 ## 5 Life expectancy at birth for males (years)              
 ## 6 Life expectancy at birth for females (years)            
 ## 7 Maternal mortality ratio (deaths per 100,000 population)</code></pre>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="examples-and-comments-1.html#cb165-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(series <span class="sc">==</span> <span class="st">&quot;Population annual rate of increase (percent)&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb165-2"><a href="examples-and-comments-1.html#cb165-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> </span>
-<span id="cb165-3"><a href="examples-and-comments-1.html#cb165-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb165-4"><a href="examples-and-comments-1.html#cb165-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Population annual rate of increase (percent)&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="examples-and-comments-1.html#cb166-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(series <span class="sc">==</span> <span class="st">&quot;Total fertility rate (children per women)&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb166-2"><a href="examples-and-comments-1.html#cb166-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> </span>
-<span id="cb166-3"><a href="examples-and-comments-1.html#cb166-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb166-4"><a href="examples-and-comments-1.html#cb166-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Total fertility rate (children per women)&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="examples-and-comments-1.html#cb167-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(series <span class="sc">==</span> <span class="st">&quot;Infant mortality for both sexes (per 1,000 live births)&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb167-2"><a href="examples-and-comments-1.html#cb167-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> </span>
-<span id="cb167-3"><a href="examples-and-comments-1.html#cb167-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb167-4"><a href="examples-and-comments-1.html#cb167-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Infant mortality for both sexes (per 1,000 live births)&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<div class="sourceCode" id="cb516"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb516-1"><a href="examples-and-comments-1.html#cb516-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(series <span class="sc">==</span> <span class="st">&quot;Population annual rate of increase (percent)&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb516-2"><a href="examples-and-comments-1.html#cb516-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> </span>
+<span id="cb516-3"><a href="examples-and-comments-1.html#cb516-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb516-4"><a href="examples-and-comments-1.html#cb516-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Population annual rate of increase (percent)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+<div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb517-1"><a href="examples-and-comments-1.html#cb517-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(series <span class="sc">==</span> <span class="st">&quot;Total fertility rate (children per women)&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb517-2"><a href="examples-and-comments-1.html#cb517-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> </span>
+<span id="cb517-3"><a href="examples-and-comments-1.html#cb517-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb517-4"><a href="examples-and-comments-1.html#cb517-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Total fertility rate (children per women)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
+<div class="sourceCode" id="cb518"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb518-1"><a href="examples-and-comments-1.html#cb518-1" aria-hidden="true" tabindex="-1"></a>df_un_pop_rev <span class="sc">%&gt;%</span> <span class="fu">filter</span>(series <span class="sc">==</span> <span class="st">&quot;Infant mortality for both sexes (per 1,000 live births)&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb518-2"><a href="examples-and-comments-1.html#cb518-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> </span>
+<span id="cb518-3"><a href="examples-and-comments-1.html#cb518-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb518-4"><a href="examples-and-comments-1.html#cb518-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Infant mortality for both sexes (per 1,000 live births)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
 </div>
 <div id="literacy-rate-youth-total-of-people-ages-15-24" class="section level2 hasAnchor" number="6.5">
 <h2><span class="header-section-number">6.5</span> Literacy rate, youth total (% of people ages 15-24)<a href="examples-and-comments-1.html#literacy-rate-youth-total-of-people-ages-15-24" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>I will introduce this because it uses <code>semi_join</code> to choose countries’ data deleting aggrigated data.</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="examples-and-comments-1.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;SE.ADT.1524.LT.ZS&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb519"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb519-1"><a href="examples-and-comments-1.html#cb519-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;SE.ADT.1524.LT.ZS&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <pre><code>##                                             indicator 
 ##                                   &quot;SE.ADT.1524.LT.ZS&quot; 
 ##                                                  name 
 ## &quot;Literacy rate, youth total (% of people ages 15-24)&quot;</code></pre>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="examples-and-comments-1.html#cb170-1" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth <span class="ot">&lt;-</span> <span class="fu">WDI</span>(<span class="at">country =</span> <span class="st">&quot;all&quot;</span>, <span class="at">indicator =</span> <span class="st">&quot;SE.ADT.1524.LT.ZS&quot;</span>)</span>
-<span id="cb170-2"><a href="examples-and-comments-1.html#cb170-2" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth</span></code></pre></div>
+<div class="sourceCode" id="cb521"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb521-1"><a href="examples-and-comments-1.html#cb521-1" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth <span class="ot">&lt;-</span> <span class="fu">WDI</span>(<span class="at">country =</span> <span class="st">&quot;all&quot;</span>, <span class="at">indicator =</span> <span class="st">&quot;SE.ADT.1524.LT.ZS&quot;</span>)</span>
+<span id="cb521-2"><a href="examples-and-comments-1.html#cb521-2" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth</span></code></pre></div>
 <pre><code>##       iso2c                                              country
 ## 1        ZH                          Africa Eastern and Southern
 ## 2        ZH                          Africa Eastern and Southern
@@ -33920,8 +34103,8 @@ Compare the data above and the those in WDI.</p>
 <li>deleted some of the aggregated data</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="examples-and-comments-1.html#cb172-1" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_country <span class="ot">&lt;-</span> literacy_rate_youth <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>)</span>
-<span id="cb172-2"><a href="examples-and-comments-1.html#cb172-2" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_country</span></code></pre></div>
+<div class="sourceCode" id="cb523"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb523-1"><a href="examples-and-comments-1.html#cb523-1" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_country <span class="ot">&lt;-</span> literacy_rate_youth <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>)</span>
+<span id="cb523-2"><a href="examples-and-comments-1.html#cb523-2" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_country</span></code></pre></div>
 <pre><code>##       iso2c                        country SE.ADT.1524.LT.ZS year
 ## 1        AF                    Afghanistan          55.92940 2021
 ## 2        AF                    Afghanistan                NA 2020
@@ -47068,8 +47251,8 @@ Compare the data above and the those in WDI.</p>
 ## 13143    ZW                       Zimbabwe                NA 1961
 ## 13144    ZW                       Zimbabwe                NA 1960</code></pre>
 <p>Compare with the following.</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="examples-and-comments-1.html#cb174-1" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_aggregated <span class="ot">&lt;-</span> literacy_rate_youth <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>)</span>
-<span id="cb174-2"><a href="examples-and-comments-1.html#cb174-2" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_aggregated</span></code></pre></div>
+<div class="sourceCode" id="cb525"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb525-1"><a href="examples-and-comments-1.html#cb525-1" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_aggregated <span class="ot">&lt;-</span> literacy_rate_youth <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>)</span>
+<span id="cb525-2"><a href="examples-and-comments-1.html#cb525-2" aria-hidden="true" tabindex="-1"></a>literacy_rate_youth_aggregated</span></code></pre></div>
 <pre><code>##      iso2c                                              country
 ## 1       ZH                          Africa Eastern and Southern
 ## 2       ZH                          Africa Eastern and Southern
@@ -53780,18 +53963,18 @@ Compare the data above and the those in WDI.</p>
 <li>Copied CSV download link for “Ratio of girls to boys in primary, secondary and tertiary levels”</li>
 <li>Pasted the link below⇩</li>
 </ul>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="examples-and-comments-1.html#cb176-1" aria-hidden="true" tabindex="-1"></a>url_of_data <span class="ot">&lt;-</span> <span class="st">&quot;http://data.un.org/_Docs/SYB/CSV/SYB64_319_202110_Ratio%20of%20girls%20to%20boys%20in%20education.csv&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="examples-and-comments-1.html#cb177-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;http://data.un.org/_Docs/SYB/CSV/SYB64_319_202110_Ratio%20of%20girls%20to%20boys%20in%20education.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb527"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb527-1"><a href="examples-and-comments-1.html#cb527-1" aria-hidden="true" tabindex="-1"></a>url_of_data <span class="ot">&lt;-</span> <span class="st">&quot;http://data.un.org/_Docs/SYB/CSV/SYB64_319_202110_Ratio%20of%20girls%20to%20boys%20in%20education.csv&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb528"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb528-1"><a href="examples-and-comments-1.html#cb528-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;http://data.un.org/_Docs/SYB/CSV/SYB64_319_202110_Ratio%20of%20girls%20to%20boys%20in%20education.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## New names:
 ## Rows: 2881 Columns: 7
 ## ── Column specification
-## ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (3):
-## Region/Country/Area, Year, Value
-## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-## Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## ────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (3): Region/Country/Area,
+## Year, Value
+## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ Specify the
+## column types or set `show_col_types = FALSE` to quiet this message.
 ## • `` -&gt; `...2`</code></pre>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="examples-and-comments-1.html#cb179-1" aria-hidden="true" tabindex="-1"></a>gender_education</span></code></pre></div>
+<div class="sourceCode" id="cb530"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb530-1"><a href="examples-and-comments-1.html#cb530-1" aria-hidden="true" tabindex="-1"></a>gender_education</span></code></pre></div>
 <pre><code>## # A tibble: 2,881 × 7
 ##    `Region/Country/Area` ...2                   Year Series Value Footn…¹ Source
 ##                    &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
@@ -53806,14 +53989,14 @@ Compare the data above and the those in WDI.</p>
 ##  9                     1 Total, all countries…  2005 Ratio…  0.95 &lt;NA&gt;    Unite…
 ## 10                     1 Total, all countries…  2010 Ratio…  0.97 &lt;NA&gt;    Unite…
 ## # … with 2,871 more rows, and abbreviated variable name ¹​Footnotes</code></pre>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="examples-and-comments-1.html#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(gender_education)</span></code></pre></div>
+<div class="sourceCode" id="cb532"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb532-1"><a href="examples-and-comments-1.html#cb532-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(gender_education)</span></code></pre></div>
 <pre><code>## [1] &quot;Region/Country/Area&quot; &quot;...2&quot;                &quot;Year&quot;               
 ## [4] &quot;Series&quot;              &quot;Value&quot;               &quot;Footnotes&quot;          
 ## [7] &quot;Source&quot;</code></pre>
 <p>It is a good try to use <code>pivot_wider</code>, and it is easy to see the data. However for visualization using tidyverse it is not necessary if you use filter and/or grouping.</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="examples-and-comments-1.html#cb183-1" aria-hidden="true" tabindex="-1"></a>gender_education_tbl <span class="ot">&lt;-</span> gender_education <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">num =</span> <span class="st">&quot;Region/Country/Area&quot;</span>, <span class="at">region =</span> <span class="st">&quot;...2&quot;</span>, <span class="at">year =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">series =</span> <span class="st">&quot;Series&quot;</span>, <span class="at">value =</span> <span class="st">&quot;Value&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb183-2"><a href="examples-and-comments-1.html#cb183-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) </span>
-<span id="cb183-3"><a href="examples-and-comments-1.html#cb183-3" aria-hidden="true" tabindex="-1"></a>gender_education_tbl</span></code></pre></div>
+<div class="sourceCode" id="cb534"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb534-1"><a href="examples-and-comments-1.html#cb534-1" aria-hidden="true" tabindex="-1"></a>gender_education_tbl <span class="ot">&lt;-</span> gender_education <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">num =</span> <span class="st">&quot;Region/Country/Area&quot;</span>, <span class="at">region =</span> <span class="st">&quot;...2&quot;</span>, <span class="at">year =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">series =</span> <span class="st">&quot;Series&quot;</span>, <span class="at">value =</span> <span class="st">&quot;Value&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb534-2"><a href="examples-and-comments-1.html#cb534-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) </span>
+<span id="cb534-3"><a href="examples-and-comments-1.html#cb534-3" aria-hidden="true" tabindex="-1"></a>gender_education_tbl</span></code></pre></div>
 <pre><code>## # A tibble: 1,173 × 6
 ##      num region                         year Ratio of girls to…¹ Ratio…² Ratio…³
 ##    &lt;dbl&gt; &lt;chr&gt;                         &lt;dbl&gt;               &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -53837,44 +54020,44 @@ Compare the data above and the those in WDI.</p>
 <ol style="list-style-type: decimal">
 <li>First select one region and make a scatter plot and see the data.</li>
 </ol>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="examples-and-comments-1.html#cb185-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span>  </span>
-<span id="cb185-2"><a href="examples-and-comments-1.html#cb185-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb185-3"><a href="examples-and-comments-1.html#cb185-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value))</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-89-1.png" width="672" />
+<div class="sourceCode" id="cb536"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb536-1"><a href="examples-and-comments-1.html#cb536-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span>  </span>
+<span id="cb536-2"><a href="examples-and-comments-1.html#cb536-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb536-3"><a href="examples-and-comments-1.html#cb536-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-201-1.png" width="672" />
 2. Since there are a few data in each year, use color and geom_line as well.</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="examples-and-comments-1.html#cb186-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span>  </span>
-<span id="cb186-2"><a href="examples-and-comments-1.html#cb186-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">color =</span> Series)) <span class="sc">+</span></span>
-<span id="cb186-3"><a href="examples-and-comments-1.html#cb186-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb186-4"><a href="examples-and-comments-1.html#cb186-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-90-1.png" width="672" />
+<div class="sourceCode" id="cb537"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb537-1"><a href="examples-and-comments-1.html#cb537-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span>  </span>
+<span id="cb537-2"><a href="examples-and-comments-1.html#cb537-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">color =</span> Series)) <span class="sc">+</span></span>
+<span id="cb537-3"><a href="examples-and-comments-1.html#cb537-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb537-4"><a href="examples-and-comments-1.html#cb537-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-202-1.png" width="672" />
 3. Now we choose several countries and start analyzing what you want.
 Probably it is easier to see in separate charts. I wanted to introduce <code>facet-grid</code>.</p>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="examples-and-comments-1.html#cb187-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="sc">%&gt;%</span> </span>
-<span id="cb187-2"><a href="examples-and-comments-1.html#cb187-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, <span class="at">region =</span> <span class="st">`</span><span class="at">...2</span><span class="st">`</span>, <span class="at">year =</span> Year, <span class="at">value =</span> Value, <span class="at">series =</span> Series) <span class="sc">%&gt;%</span></span>
-<span id="cb187-3"><a href="examples-and-comments-1.html#cb187-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year)) <span class="sc">%&gt;%</span></span>
-<span id="cb187-4"><a href="examples-and-comments-1.html#cb187-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">15</span>, <span class="dv">202</span>, <span class="dv">21</span>, <span class="dv">419</span>, <span class="dv">143</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">34</span>, <span class="dv">145</span>, <span class="dv">150</span>, <span class="dv">9</span>)) <span class="sc">%&gt;%</span>  </span>
-<span id="cb187-5"><a href="examples-and-comments-1.html#cb187-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span></span>
-<span id="cb187-6"><a href="examples-and-comments-1.html#cb187-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb187-7"><a href="examples-and-comments-1.html#cb187-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb187-8"><a href="examples-and-comments-1.html#cb187-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(series))</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
+<div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb538-1"><a href="examples-and-comments-1.html#cb538-1" aria-hidden="true" tabindex="-1"></a>gender_education <span class="sc">%&gt;%</span> </span>
+<span id="cb538-2"><a href="examples-and-comments-1.html#cb538-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, <span class="at">region =</span> <span class="st">`</span><span class="at">...2</span><span class="st">`</span>, <span class="at">year =</span> Year, <span class="at">value =</span> Value, <span class="at">series =</span> Series) <span class="sc">%&gt;%</span></span>
+<span id="cb538-3"><a href="examples-and-comments-1.html#cb538-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year)) <span class="sc">%&gt;%</span></span>
+<span id="cb538-4"><a href="examples-and-comments-1.html#cb538-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">15</span>, <span class="dv">202</span>, <span class="dv">21</span>, <span class="dv">419</span>, <span class="dv">143</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">34</span>, <span class="dv">145</span>, <span class="dv">150</span>, <span class="dv">9</span>)) <span class="sc">%&gt;%</span>  </span>
+<span id="cb538-5"><a href="examples-and-comments-1.html#cb538-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span></span>
+<span id="cb538-6"><a href="examples-and-comments-1.html#cb538-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb538-7"><a href="examples-and-comments-1.html#cb538-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb538-8"><a href="examples-and-comments-1.html#cb538-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(series))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-203-1.png" width="672" /></p>
 </div>
 </div>
 <div id="proportion-of-seats-held-by-women-in-national-parliament." class="section level3 hasAnchor" number="6.6.2">
 <h3><span class="header-section-number">6.6.2</span> Proportion of seats held by women in national parliament.<a href="examples-and-comments-1.html#proportion-of-seats-held-by-women-in-national-parliament." class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="examples-and-comments-1.html#cb188-1" aria-hidden="true" tabindex="-1"></a>url_of_df <span class="ot">&lt;-</span> <span class="st">&quot;http://data.un.org/_Docs/SYB/CSV/SYB64_317_202110_Seats%20held%20by%20women%20in%20Parliament.csv&quot;</span></span>
-<span id="cb188-2"><a href="examples-and-comments-1.html#cb188-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_of_df, <span class="at">destfile =</span> <span class="st">&quot;data/UN_WO.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="examples-and-comments-1.html#cb189-1" aria-hidden="true" tabindex="-1"></a>df_UN_WO <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/UN_WO.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb539"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb539-1"><a href="examples-and-comments-1.html#cb539-1" aria-hidden="true" tabindex="-1"></a>url_of_df <span class="ot">&lt;-</span> <span class="st">&quot;http://data.un.org/_Docs/SYB/CSV/SYB64_317_202110_Seats%20held%20by%20women%20in%20Parliament.csv&quot;</span></span>
+<span id="cb539-2"><a href="examples-and-comments-1.html#cb539-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_of_df, <span class="at">destfile =</span> <span class="st">&quot;data/UN_WO.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb540"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb540-1"><a href="examples-and-comments-1.html#cb540-1" aria-hidden="true" tabindex="-1"></a>df_UN_WO <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/UN_WO.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## New names:
 ## Rows: 1958 Columns: 9
 ## ── Column specification
-## ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot; chr (5): ...2, Series, Last Election Date, Footnotes, Source dbl
-## (3): Region/Country/Area, Year, Value lgl (1): Last Election Date footnote
-## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-## Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## ────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot; chr (5): ...2, Series, Last Election Date, Footnotes, Source dbl (3):
+## Region/Country/Area, Year, Value lgl (1): Last Election Date footnote
+## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ Specify the
+## column types or set `show_col_types = FALSE` to quiet this message.
 ## • `` -&gt; `...2`</code></pre>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="examples-and-comments-1.html#cb191-1" aria-hidden="true" tabindex="-1"></a>df_UN_WO</span></code></pre></div>
+<div class="sourceCode" id="cb542"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb542-1"><a href="examples-and-comments-1.html#cb542-1" aria-hidden="true" tabindex="-1"></a>df_UN_WO</span></code></pre></div>
 <pre><code>## # A tibble: 1,958 × 9
 ##    `Region/Country/Area` ...2   Year Series Last …¹ Last …² Value Footn…³ Source
 ##                    &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;lgl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
@@ -53890,15 +54073,15 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ## 10                    15 Nort…  2000 Seats… &lt;NA&gt;    NA        5.4 &lt;NA&gt;    &quot;Inte…
 ## # … with 1,948 more rows, and abbreviated variable names ¹​`Last Election Date`,
 ## #   ²​`Last Election Date footnote`, ³​Footnotes</code></pre>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="examples-and-comments-1.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(df_UN_WO)</span></code></pre></div>
+<div class="sourceCode" id="cb544"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb544-1"><a href="examples-and-comments-1.html#cb544-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(df_UN_WO)</span></code></pre></div>
 <pre><code>## [1] &quot;Region/Country/Area&quot;         &quot;...2&quot;                       
 ## [3] &quot;Year&quot;                        &quot;Series&quot;                     
 ## [5] &quot;Last Election Date&quot;          &quot;Last Election Date footnote&quot;
 ## [7] &quot;Value&quot;                       &quot;Footnotes&quot;                  
 ## [9] &quot;Source&quot;</code></pre>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="examples-and-comments-1.html#cb195-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl <span class="ot">&lt;-</span> df_UN_WO <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">num =</span> <span class="st">&quot;Region/Country/Area&quot;</span>, <span class="at">region =</span> <span class="st">&quot;...2&quot;</span>, <span class="at">year =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">series =</span> <span class="st">&quot;Series&quot;</span>, <span class="at">LED =</span> <span class="st">&quot;Last Election Date&quot;</span>, <span class="at">value =</span> <span class="st">&quot;Value&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb195-2"><a href="examples-and-comments-1.html#cb195-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_wider</span> (<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) </span>
-<span id="cb195-3"><a href="examples-and-comments-1.html#cb195-3" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl</span></code></pre></div>
+<div class="sourceCode" id="cb546"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb546-1"><a href="examples-and-comments-1.html#cb546-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl <span class="ot">&lt;-</span> df_UN_WO <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">num =</span> <span class="st">&quot;Region/Country/Area&quot;</span>, <span class="at">region =</span> <span class="st">&quot;...2&quot;</span>, <span class="at">year =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">series =</span> <span class="st">&quot;Series&quot;</span>, <span class="at">LED =</span> <span class="st">&quot;Last Election Date&quot;</span>, <span class="at">value =</span> <span class="st">&quot;Value&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb546-2"><a href="examples-and-comments-1.html#cb546-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_wider</span> (<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) </span>
+<span id="cb546-3"><a href="examples-and-comments-1.html#cb546-3" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl</span></code></pre></div>
 <pre><code>## # A tibble: 1,958 × 5
 ##      num region                         year LED   Seats held by women in nati…¹
 ##    &lt;dbl&gt; &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;                         &lt;dbl&gt;
@@ -53914,8 +54097,8 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ## 10    15 Northern Africa                2000 &lt;NA&gt;                            5.4
 ## # … with 1,948 more rows, and abbreviated variable name
 ## #   ¹​`Seats held by women in national parliament, as of February (%)`</code></pre>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="examples-and-comments-1.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(UN_WO_tbl) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;num&quot;</span>, <span class="st">&quot;region&quot;</span>, <span class="st">&quot;year&quot;</span>, <span class="st">&quot;LED&quot;</span>, <span class="st">&quot;seats&quot;</span>)</span>
-<span id="cb197-2"><a href="examples-and-comments-1.html#cb197-2" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl</span></code></pre></div>
+<div class="sourceCode" id="cb548"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb548-1"><a href="examples-and-comments-1.html#cb548-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(UN_WO_tbl) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;num&quot;</span>, <span class="st">&quot;region&quot;</span>, <span class="st">&quot;year&quot;</span>, <span class="st">&quot;LED&quot;</span>, <span class="st">&quot;seats&quot;</span>)</span>
+<span id="cb548-2"><a href="examples-and-comments-1.html#cb548-2" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl</span></code></pre></div>
 <pre><code>## # A tibble: 1,958 × 5
 ##      num region                         year LED   seats
 ##    &lt;dbl&gt; &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
@@ -53930,8 +54113,8 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ##  9     1 Total, all countries or areas  2021 &lt;NA&gt;   25.6
 ## 10    15 Northern Africa                2000 &lt;NA&gt;    5.4
 ## # … with 1,948 more rows</code></pre>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="examples-and-comments-1.html#cb199-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="ot">&lt;-</span> UN_WO_tbl <span class="sc">%&gt;%</span> <span class="fu">select</span>(region, year, seats)</span>
-<span id="cb199-2"><a href="examples-and-comments-1.html#cb199-2" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short</span></code></pre></div>
+<div class="sourceCode" id="cb550"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb550-1"><a href="examples-and-comments-1.html#cb550-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="ot">&lt;-</span> UN_WO_tbl <span class="sc">%&gt;%</span> <span class="fu">select</span>(region, year, seats)</span>
+<span id="cb550-2"><a href="examples-and-comments-1.html#cb550-2" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short</span></code></pre></div>
 <pre><code>## # A tibble: 1,958 × 3
 ##    region                         year seats
 ##    &lt;chr&gt;                         &lt;dbl&gt; &lt;dbl&gt;
@@ -53946,8 +54129,8 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ##  9 Total, all countries or areas  2021  25.6
 ## 10 Northern Africa                2000   5.4
 ## # … with 1,948 more rows</code></pre>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="examples-and-comments-1.html#cb201-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(UN_WO_tbl_short<span class="sc">$</span>year)</span>
-<span id="cb201-2"><a href="examples-and-comments-1.html#cb201-2" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short</span></code></pre></div>
+<div class="sourceCode" id="cb552"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb552-1"><a href="examples-and-comments-1.html#cb552-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(UN_WO_tbl_short<span class="sc">$</span>year)</span>
+<span id="cb552-2"><a href="examples-and-comments-1.html#cb552-2" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short</span></code></pre></div>
 <pre><code>## # A tibble: 1,958 × 3
 ##    region                         year seats
 ##    &lt;chr&gt;                         &lt;int&gt; &lt;dbl&gt;
@@ -53964,15 +54147,15 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ## # … with 1,948 more rows</code></pre>
 <div id="visualization-1" class="section level4 hasAnchor" number="6.6.2.1">
 <h4><span class="header-section-number">6.6.2.1</span> Visualization<a href="examples-and-comments-1.html#visualization-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="examples-and-comments-1.html#cb203-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2005</span>, <span class="dv">2010</span>, <span class="dv">2015</span>, <span class="dv">2020</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb203-2"><a href="examples-and-comments-1.html#cb203-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.factor</span>(year)) <span class="sc">%&gt;%</span></span>
-<span id="cb203-3"><a href="examples-and-comments-1.html#cb203-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb203-4"><a href="examples-and-comments-1.html#cb203-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> seats, <span class="at">color =</span> year))</span></code></pre></div>
+<div class="sourceCode" id="cb554"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb554-1"><a href="examples-and-comments-1.html#cb554-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2005</span>, <span class="dv">2010</span>, <span class="dv">2015</span>, <span class="dv">2020</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb554-2"><a href="examples-and-comments-1.html#cb554-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.factor</span>(year)) <span class="sc">%&gt;%</span></span>
+<span id="cb554-3"><a href="examples-and-comments-1.html#cb554-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb554-4"><a href="examples-and-comments-1.html#cb554-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> seats, <span class="at">color =</span> year))</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="examples-and-comments-1.html#cb205-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2005</span>, <span class="dv">2010</span>, <span class="dv">2015</span>, <span class="dv">2020</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb205-2"><a href="examples-and-comments-1.html#cb205-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.factor</span>(year)) <span class="sc">%&gt;%</span></span>
-<span id="cb205-3"><a href="examples-and-comments-1.html#cb205-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> <span class="fu">count</span>(<span class="fu">cut_width</span>(seats, <span class="dv">5</span>))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-211-1.png" width="672" /></p>
+<div class="sourceCode" id="cb556"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb556-1"><a href="examples-and-comments-1.html#cb556-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2005</span>, <span class="dv">2010</span>, <span class="dv">2015</span>, <span class="dv">2020</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb556-2"><a href="examples-and-comments-1.html#cb556-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.factor</span>(year)) <span class="sc">%&gt;%</span></span>
+<span id="cb556-3"><a href="examples-and-comments-1.html#cb556-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> <span class="fu">count</span>(<span class="fu">cut_width</span>(seats, <span class="dv">5</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 57 × 3
 ## # Groups:   year [5]
 ##    year  `cut_width(seats, 5)`     n
@@ -53988,7 +54171,7 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ##  9 2000  (42.5,47.5]               1
 ## 10 2005  [-2.5,2.5]               17
 ## # … with 47 more rows</code></pre>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="examples-and-comments-1.html#cb207-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short</span></code></pre></div>
+<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb558-1"><a href="examples-and-comments-1.html#cb558-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short</span></code></pre></div>
 <pre><code>## # A tibble: 1,958 × 3
 ##    region                         year seats
 ##    &lt;chr&gt;                         &lt;int&gt; &lt;dbl&gt;
@@ -54003,7 +54186,7 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ##  9 Total, all countries or areas  2021  25.6
 ## 10 Northern Africa                2000   5.4
 ## # … with 1,948 more rows</code></pre>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="examples-and-comments-1.html#cb209-1" aria-hidden="true" tabindex="-1"></a>wb_regions</span></code></pre></div>
+<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="examples-and-comments-1.html#cb560-1" aria-hidden="true" tabindex="-1"></a>wb_regions</span></code></pre></div>
 <pre><code>## # A tibble: 45 × 2
 ##    region                                        iso3c
 ##    &lt;chr&gt;                                         &lt;chr&gt;
@@ -54018,9 +54201,9 @@ Probably it is easier to see in separate charts. I wanted to introduce <code>fac
 ##  9 Europe &amp; Central Asia (excluding high income) ECA  
 ## 10 Europe &amp; Central Asia (IDA &amp; IBRD)            TEC  
 ## # … with 35 more rows</code></pre>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="examples-and-comments-1.html#cb211-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Total, all countries or areas&quot;</span>, <span class="st">&quot;Northern Africa&quot;</span>, <span class="st">&quot;Sub-Saharan Africa&quot;</span>, <span class="st">&quot;Eastern Africa&quot;</span>, <span class="st">&quot;Middle Africa&quot;</span>, <span class="st">&quot;Southern Africa&quot;</span>, <span class="st">&quot;Western Africa&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb211-2"><a href="examples-and-comments-1.html#cb211-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y=</span> seats, <span class="at">color=</span> region)) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Seats of Women in Parliament&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-103-1.png" width="672" /></p>
+<div class="sourceCode" id="cb562"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb562-1"><a href="examples-and-comments-1.html#cb562-1" aria-hidden="true" tabindex="-1"></a>UN_WO_tbl_short <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Total, all countries or areas&quot;</span>, <span class="st">&quot;Northern Africa&quot;</span>, <span class="st">&quot;Sub-Saharan Africa&quot;</span>, <span class="st">&quot;Eastern Africa&quot;</span>, <span class="st">&quot;Middle Africa&quot;</span>, <span class="st">&quot;Southern Africa&quot;</span>, <span class="st">&quot;Western Africa&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb562-2"><a href="examples-and-comments-1.html#cb562-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y=</span> seats, <span class="at">color=</span> region)) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Seats of Women in Parliament&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-215-1.png" width="672" /></p>
 <p>Good Luck!</p>
 <p>If you need help, please drop me a line. I would set up a Zoom Office Hour.</p>
 <p>HS</p>

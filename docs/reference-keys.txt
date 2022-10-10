@@ -138,7 +138,6 @@ more-examples
 weight-versus-age-of-chicks-on-different-diets
 carbon-dioxide-uptake-in-grass-plants
 growth-of-orange-trees
-r-and-r-studio
 eda3
 part-i-importing-data-by-readr-and-wdi-package
 tidyverse-package-review
@@ -268,7 +267,6 @@ history-of-regression-analysis-wikipedia
 the-first-example-1
 model-analysis-with-tidyverse-modelr
 predictions-haty-a_1-a_2x-and-residuals-y---haty
-geom_jitter
 iris-1
 linear-model-sepal.w-sepal.l
 linear-model-petal.w-petal.l
@@ -328,12 +326,10 @@ importing-3
 glimpsing-2
 transforming-1
 visualising-2
-modeling-2
 education
 importing-4
 transforming-2
-modeling-3
-data-frame-wb_arb
+modeling-2
 topics1
 part-i-regression-1
 why-does-gdp-vary-from-country-to-country
@@ -398,6 +394,7 @@ the-eighth-assignment-in-moodle
 learning-resources-viii
 rstudio-primers-see-references-in-moodle-at-the-bottom-3
 presentation
+presentation-1
 minutes-5-7-min.-presentation-and-3-5-min.-qa-1
 share-your-exploratory-data-analysis-experience
 the-ninth-assignment-in-moodle
@@ -439,7 +436,6 @@ swirl-courses-github-1
 rstudio-primers-httpsrstudio.cloudlearnprimers-2
 learning-resources-x-books-1
 learning-resources-x-moocs-and-online-courses-1
-presentation-1
 nightingale
 basic-references
 histdata-data-sets-from-the-history-of-statistics-and-data-visualization
@@ -474,7 +470,6 @@ function-wdisearch-1
 the-first-example-2
 setup-2
 gdp-per-capita
-more-examples-1
 search-indicators-related-to-gdp
 population
 more-than-one-indicator
@@ -510,7 +505,6 @@ history-of-regression-analysis-wikipedia-1
 galtons-example
 summary-of-the-data
 what-type-of-variation-occurs-within-my-variables
-r-commands-on-statistical-measurements
 what-type-of-covariation-occurs-between-my-variables
 basic-facts
 visual-illustration

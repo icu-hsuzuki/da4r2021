@@ -1,4 +1,4 @@
-# A2. Public Data {#public}
+# Appendix B Public Data {#public}
 
 ## Introduction
 
