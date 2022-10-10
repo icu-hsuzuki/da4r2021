@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 13 A4. Modeling | Data Analysis for Researchers</title>
+  <meta name="description" content="Chapter 13 A4. Modeling | Data Analysis for Researchers" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 13 A4. Modeling | Data Analysis for Researchers" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 13 A4. Modeling | Data Analysis for Researchers" />
+  
+  
+  
+
+<meta name="author" content="DS SL" />
+
+
+<meta name="date" content="2022-10-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="public.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Researchers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="1" data-path="course.html"><a href="course.html"><i class="fa fa-check"></i><b>1</b> About the Course</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="course.html"><a href="course.html#coures-information"><i class="fa fa-check"></i><b>1.1</b> Coures Information</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="course.html"><a href="course.html#about-qall401-data-analysis-for-researchers"><i class="fa fa-check"></i><b>1.1.1</b> About ‘QALL401 Data Analysis for Researchers’</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="course.html"><a href="course.html#introduction-by-professor-kaizoji"><i class="fa fa-check"></i><b>1.2</b> Introduction by Professor Kaizoji</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="course.html"><a href="course.html#introduction-slide-presentation-1"><i class="fa fa-check"></i><b>1.2.1</b> Introduction (Slide Presentation 1)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="course.html"><a href="course.html#data-analytics-data-science-overview-slide-presentation-2"><i class="fa fa-check"></i><b>1.2.2</b> Data Analytics / Data Science Overview (Slide Presentation 2)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="course.html"><a href="course.html#r-and-r-studio"><i class="fa fa-check"></i><b>1.2.3</b> R and R Studio</a></li>
+<li class="chapter" data-level="1.2.4" data-path="course.html"><a href="course.html#schedule-tentative"><i class="fa fa-check"></i><b>1.2.4</b> Schedule (tentative)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="course.html"><a href="course.html#responses-of-students"><i class="fa fa-check"></i><b>1.2.5</b> Responses of Students</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="course.html"><a href="course.html#introduction-in-ay2020-by-suzuki"><i class="fa fa-check"></i><b>1.3</b> Introduction in AY2020 by Suzuki</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="course.html"><a href="course.html#requirements-and-grades"><i class="fa fa-check"></i><b>1.3.1</b> Requirements and Grades</a></li>
+<li class="chapter" data-level="1.3.2" data-path="course.html"><a href="course.html#data-science-ds"><i class="fa fa-check"></i><b>1.3.2</b> Data Science (DS)</a></li>
+<li class="chapter" data-level="1.3.3" data-path="course.html"><a href="course.html#eda-by-r-language-and-r-programming"><i class="fa fa-check"></i><b>1.3.3</b> EDA by R Language and R Programming</a></li>
+<li class="chapter" data-level="1.3.4" data-path="course.html"><a href="course.html#visualization-in-eda"><i class="fa fa-check"></i><b>1.3.4</b> Visualization in EDA</a></li>
+<li class="chapter" data-level="1.3.5" data-path="course.html"><a href="course.html#data-science-wikipedia"><i class="fa fa-check"></i><b>1.3.5</b> Data Science (Wikipedia)</a></li>
+<li class="chapter" data-level="1.3.6" data-path="course.html"><a href="course.html#data-for-data-science"><i class="fa fa-check"></i><b>1.3.6</b> Data for Data Science</a></li>
+<li class="chapter" data-level="1.3.7" data-path="course.html"><a href="course.html#open-and-public-data"><i class="fa fa-check"></i><b>1.3.7</b> Open and Public Data</a></li>
+<li class="chapter" data-level="1.3.8" data-path="course.html"><a href="course.html#a-list-of-open-data-catalogue"><i class="fa fa-check"></i><b>1.3.8</b> A List of Open Data Catalogue</a></li>
+<li class="chapter" data-level="1.3.9" data-path="course.html"><a href="course.html#what-is-ds-why-ds-for-researchers"><i class="fa fa-check"></i><b>1.3.9</b> What is DS? Why DS? For researchers?</a></li>
+<li class="chapter" data-level="1.3.10" data-path="course.html"><a href="course.html#the-first-step-type-of-variables"><i class="fa fa-check"></i><b>1.3.10</b> The First Step: Type of Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="eda1.html"><a href="eda1.html"><i class="fa fa-check"></i><b>2</b> Exploratory Data Analysis (EDA) 1</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="eda1.html"><a href="eda1.html#r-with-r-studio-andor-r-studio.cloud"><i class="fa fa-check"></i><b>2.1</b> R with R Studio and/or R Studio.cloud</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="eda1.html"><a href="eda1.html#course-contents"><i class="fa fa-check"></i><b>2.1.1</b> Course Contents</a></li>
+<li class="chapter" data-level="2.1.2" data-path="eda1.html"><a href="eda1.html#learning-resources-i"><i class="fa fa-check"></i><b>2.1.2</b> Learning Resources, I</a></li>
+<li class="chapter" data-level="2.1.3" data-path="eda1.html"><a href="eda1.html#eda1-contents"><i class="fa fa-check"></i><b>2.1.3</b> EDA1: Contents</a></li>
+<li class="chapter" data-level="2.1.4" data-path="eda1.html"><a href="eda1.html#what-is-r"><i class="fa fa-check"></i><b>2.1.4</b> What is R?</a></li>
+<li class="chapter" data-level="2.1.5" data-path="eda1.html"><a href="eda1.html#why-r-responses-by-hadley-wickham"><i class="fa fa-check"></i><b>2.1.5</b> Why R? – Responses by Hadley Wickham</a></li>
+<li class="chapter" data-level="2.1.6" data-path="eda1.html"><a href="eda1.html#the-first-example"><i class="fa fa-check"></i><b>2.1.6</b> The First Example</a></li>
+<li class="chapter" data-level="2.1.7" data-path="eda1.html"><a href="eda1.html#what-is-rstudio-httpsrstudio.com"><i class="fa fa-check"></i><b>2.1.7</b> What is RStudio? <span>https://rstudio.com</span></a></li>
+<li class="chapter" data-level="2.1.8" data-path="eda1.html"><a href="eda1.html#installation-of-r-and-r-studio"><i class="fa fa-check"></i><b>2.1.8</b> Installation of R and R Studio</a></li>
+<li class="chapter" data-level="2.1.9" data-path="eda1.html"><a href="eda1.html#r-studio"><i class="fa fa-check"></i><b>2.1.9</b> R Studio</a></li>
+<li class="chapter" data-level="2.1.10" data-path="eda1.html"><a href="eda1.html#r-studio-cloud"><i class="fa fa-check"></i><b>2.1.10</b> R Studio Cloud</a></li>
+<li class="chapter" data-level="2.1.11" data-path="eda1.html"><a href="eda1.html#lets-try-r-basics"><i class="fa fa-check"></i><b>2.1.11</b> Let’s Try R Basics</a></li>
+<li class="chapter" data-level="2.1.12" data-path="eda1.html"><a href="eda1.html#more-on-r-script-examples"><i class="fa fa-check"></i><b>2.1.12</b> More on R Script: Examples</a></li>
+<li class="chapter" data-level="2.1.13" data-path="eda1.html"><a href="eda1.html#practicum-r-studio-cloud-or-r-studio-and-r-basics"><i class="fa fa-check"></i><b>2.1.13</b> Practicum: R Studio Cloud (or R Studio) and R basics</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="eda1.html"><a href="eda1.html#practicum-swirl-and-more-on-r-script"><i class="fa fa-check"></i><b>2.2</b> Practicum: Swirl and more on R Script</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="eda1.html"><a href="eda1.html#swirl-an-interactive-learning-environment-for-r-and-statistics"><i class="fa fa-check"></i><b>2.2.1</b> Swirl: An interactive learning environment for R and statistics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="eda1.html"><a href="eda1.html#install-and-start-swirl-courses"><i class="fa fa-check"></i><b>2.2.2</b> Install and Start Swirl Courses</a></li>
+<li class="chapter" data-level="2.2.3" data-path="eda1.html"><a href="eda1.html#the-first-eda-using-coronavirus.r"><i class="fa fa-check"></i><b>2.2.3</b> The First EDA using coronavirus.R</a></li>
+<li class="chapter" data-level="2.2.4" data-path="eda1.html"><a href="eda1.html#basics-of-fundamentals-of-statistics"><i class="fa fa-check"></i><b>2.2.4</b> Basics of Fundamentals of Statistics</a></li>
+<li class="chapter" data-level="2.2.5" data-path="eda1.html"><a href="eda1.html#summary"><i class="fa fa-check"></i><b>2.2.5</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="eda2.html"><a href="eda2.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis (EDA) 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#course-contents-1"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#eda-and-data-visualization"><i class="fa fa-check"></i>EDA and Data Visualization</a></li>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#contents-of-eda2"><i class="fa fa-check"></i>Contents of EDA2</a></li>
+<li class="chapter" data-level="3.1" data-path="eda2.html"><a href="eda2.html#part-i-r-markdown-for-communication"><i class="fa fa-check"></i><b>3.1</b> Part I: R Markdown for Communication</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="eda2.html"><a href="eda2.html#records-of-eda-and-communication"><i class="fa fa-check"></i><b>3.1.1</b> Records of EDA and Communication</a></li>
+<li class="chapter" data-level="3.1.2" data-path="eda2.html"><a href="eda2.html#what-is-r-markdown-notebook"><i class="fa fa-check"></i><b>3.1.2</b> What is R Markdown Notebook</a></li>
+<li class="chapter" data-level="3.1.3" data-path="eda2.html"><a href="eda2.html#r-studio-setup"><i class="fa fa-check"></i><b>3.1.3</b> R Studio Setup</a></li>
+<li class="chapter" data-level="3.1.4" data-path="eda2.html"><a href="eda2.html#default-yaml-r-notebook-html-pdf-word"><i class="fa fa-check"></i><b>3.1.4</b> Default YAML: R Notebook, HTML, PDF, WORD</a></li>
+<li class="chapter" data-level="3.1.5" data-path="eda2.html"><a href="eda2.html#an-example-of-r-notebooks"><i class="fa fa-check"></i><b>3.1.5</b> An Example of R Notebooks</a></li>
+<li class="chapter" data-level="3.1.6" data-path="eda2.html"><a href="eda2.html#knit-notebook-mode-and-preview-of-default.rmd"><i class="fa fa-check"></i><b>3.1.6</b> Knit, Notebook Mode and Preview of Default.Rmd</a></li>
+<li class="chapter" data-level="3.1.7" data-path="eda2.html"><a href="eda2.html#yaml---yaml-aint-a-markup-language---example"><i class="fa fa-check"></i><b>3.1.7</b> <code>yaml</code> - YAML Ain’t a Markup Language - Example</a></li>
+<li class="chapter" data-level="3.1.8" data-path="eda2.html"><a href="eda2.html#r-markdown-quick-references-see-moodle"><i class="fa fa-check"></i><b>3.1.8</b> R Markdown: Quick References (See Moodle)</a></li>
+<li class="chapter" data-level="3.1.9" data-path="eda2.html"><a href="eda2.html#markdown-language-or-use-wysiwyg-editor"><i class="fa fa-check"></i><b>3.1.9</b> Markdown Language – or use WYSIWYG editor</a></li>
+<li class="chapter" data-level="3.1.10" data-path="eda2.html"><a href="eda2.html#ms-word-happy-collaboration-with-rmd-to-docx"><i class="fa fa-check"></i><b>3.1.10</b> MS Word: <span>Happy collaboration with Rmd to docx</span></a></li>
+<li class="chapter" data-level="3.1.11" data-path="eda2.html"><a href="eda2.html#why-r-markdown"><i class="fa fa-check"></i><b>3.1.11</b> Why R Markdown?</a></li>
+<li class="chapter" data-level="3.1.12" data-path="eda2.html"><a href="eda2.html#literate-programming-by-d.-knuth"><i class="fa fa-check"></i><b>3.1.12</b> Literate Programming by D. Knuth</a></li>
+<li class="chapter" data-level="3.1.13" data-path="eda2.html"><a href="eda2.html#reproducible-research---quote-from-a-coursera-course"><i class="fa fa-check"></i><b>3.1.13</b> Reproducible Research - Quote from a Coursera Course</a></li>
+<li class="chapter" data-level="3.1.14" data-path="eda2.html"><a href="eda2.html#r-markdown-workflow-r-for-data-science"><i class="fa fa-check"></i><b>3.1.14</b> <span>R Markdown workflow, R for Data Science</span></a></li>
+<li class="chapter" data-level="3.1.15" data-path="eda2.html"><a href="eda2.html#learning-resources-eda2-1"><i class="fa fa-check"></i><b>3.1.15</b> Learning Resources, EDA2-1</a></li>
+<li class="chapter" data-level="3.1.16" data-path="eda2.html"><a href="eda2.html#practicum-r-markdown-and-r-notebook"><i class="fa fa-check"></i><b>3.1.16</b> Practicum: R Markdown and R Notebook</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="eda2.html"><a href="eda2.html#part-ii-data-visualization-and-tidyverse-package"><i class="fa fa-check"></i><b>3.2</b> Part II: Data Visualization and Tidyverse Package</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="eda2.html"><a href="eda2.html#introduction-to-tidyverse-r-packages"><i class="fa fa-check"></i><b>3.2.1</b> Introduction to <code>tidyverse</code> R Packages</a></li>
+<li class="chapter" data-level="3.2.2" data-path="eda2.html"><a href="eda2.html#ggplot2-overview"><i class="fa fa-check"></i><b>3.2.2</b> <code>ggplot2</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="3.2.3" data-path="eda2.html"><a href="eda2.html#practicum-ggplot2-on-r-notebook"><i class="fa fa-check"></i><b>3.2.3</b> Practicum: <code>ggplot2</code> on R Notebook</a></li>
+<li class="chapter" data-level="3.2.4" data-path="eda2.html"><a href="eda2.html#basics-of-fundamentals-of-statistics-1"><i class="fa fa-check"></i><b>3.2.4</b> Basics of Fundamentals of Statistics</a></li>
+<li class="chapter" data-level="3.2.5" data-path="eda2.html"><a href="eda2.html#rstudio-primers-created-by-learnr"><i class="fa fa-check"></i><b>3.2.5</b> RStudio Primers created by <span><code>learnr</code></span></a></li>
+<li class="chapter" data-level="3.2.6" data-path="eda2.html"><a href="eda2.html#learning-resources-eda2-2"><i class="fa fa-check"></i><b>3.2.6</b> Learning Resources, EDA2-2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="eda2.html"><a href="eda2.html#the-week-three-assignment-in-moodle"><i class="fa fa-check"></i><b>3.3</b> The Week Three Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="eda2.html"><a href="eda2.html#note-on-r-notebook"><i class="fa fa-check"></i><b>3.3.1</b> Note on R Notebook</a></li>
+<li class="chapter" data-level="3.3.2" data-path="eda2.html"><a href="eda2.html#set-up"><i class="fa fa-check"></i><b>3.3.2</b> Set up</a></li>
+<li class="chapter" data-level="3.3.3" data-path="eda2.html"><a href="eda2.html#data-cars"><i class="fa fa-check"></i><b>3.3.3</b> Data <code>cars</code></a></li>
+<li class="chapter" data-level="3.3.4" data-path="eda2.html"><a href="eda2.html#data-iris"><i class="fa fa-check"></i><b>3.3.4</b> Data <code>iris</code></a></li>
+<li class="chapter" data-level="3.3.5" data-path="eda2.html"><a href="eda2.html#data-airpassengers"><i class="fa fa-check"></i><b>3.3.5</b> Data <code>AirPassengers</code></a></li>
+<li class="chapter" data-level="3.3.6" data-path="eda2.html"><a href="eda2.html#recommended-study-plan"><i class="fa fa-check"></i><b>3.3.6</b> Recommended Study Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="eda2.html"><a href="eda2.html#responses-to-the-week-three-assignment"><i class="fa fa-check"></i><b>3.4</b> Responses to the Week Three Assignment</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="eda2.html"><a href="eda2.html#setup"><i class="fa fa-check"></i><b>3.4.1</b> Setup</a></li>
+<li class="chapter" data-level="3.4.2" data-path="eda2.html"><a href="eda2.html#visualization-of-two-variables"><i class="fa fa-check"></i><b>3.4.2</b> Visualization of Two Variables</a></li>
+<li class="chapter" data-level="3.4.3" data-path="eda2.html"><a href="eda2.html#visualization-of-one-variable"><i class="fa fa-check"></i><b>3.4.3</b> Visualization of One Variable</a></li>
+<li class="chapter" data-level="3.4.4" data-path="eda2.html"><a href="eda2.html#more-examples"><i class="fa fa-check"></i><b>3.4.4</b> More Examples</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="eda3.html"><a href="eda3.html"><i class="fa fa-check"></i><b>4</b> Exploratory Data Analysis (EDA) 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#course-contents-2"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#importing-and-transforming-data"><i class="fa fa-check"></i>Importing and Transforming Data</a></li>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#contents-of-eda3"><i class="fa fa-check"></i>Contents of EDA3</a></li>
+<li class="chapter" data-level="4.1" data-path="eda3.html"><a href="eda3.html#part-i-importing-data-by-readr-and-wdi-package"><i class="fa fa-check"></i><b>4.1</b> Part I: Importing Data by <code>readr</code> and WDI Package</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="eda3.html"><a href="eda3.html#tidyverse-package-review"><i class="fa fa-check"></i><b>4.1.1</b> <code>tidyverse</code> Package Review</a></li>
+<li class="chapter" data-level="4.1.2" data-path="eda3.html"><a href="eda3.html#r-package-an-example---readr-in-tidyverse"><i class="fa fa-check"></i><b>4.1.2</b> R Package: An Example - <code>readr</code> in <code>tidyverse</code></a></li>
+<li class="chapter" data-level="4.1.3" data-path="eda3.html"><a href="eda3.html#reading-data-files---readr-readxl-etc."><i class="fa fa-check"></i><b>4.1.3</b> Reading Data Files - readr, (readxl, etc.)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="eda3.html"><a href="eda3.html#basics-of-importing-data-i"><i class="fa fa-check"></i><b>4.1.4</b> Basics of Importing Data, I</a></li>
+<li class="chapter" data-level="4.1.5" data-path="eda3.html"><a href="eda3.html#basics-of-importing-data-ii"><i class="fa fa-check"></i><b>4.1.5</b> Basics of Importing Data, II</a></li>
+<li class="chapter" data-level="4.1.6" data-path="eda3.html"><a href="eda3.html#tibble-overview"><i class="fa fa-check"></i><b>4.1.6</b> <code>tibble</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="4.1.7" data-path="eda3.html"><a href="eda3.html#variables"><i class="fa fa-check"></i><b>4.1.7</b> Variables</a></li>
+<li class="chapter" data-level="4.1.8" data-path="eda3.html"><a href="eda3.html#example-i"><i class="fa fa-check"></i><b>4.1.8</b> Example I</a></li>
+<li class="chapter" data-level="4.1.9" data-path="eda3.html"><a href="eda3.html#open-and-public-data-world-bank"><i class="fa fa-check"></i><b>4.1.9</b> Open and Public Data, World Bank</a></li>
+<li class="chapter" data-level="4.1.10" data-path="eda3.html"><a href="eda3.html#world-bank-wdi---world-development-indicaters"><i class="fa fa-check"></i><b>4.1.10</b> World Bank: WDI - World Development Indicaters</a></li>
+<li class="chapter" data-level="4.1.11" data-path="eda3.html"><a href="eda3.html#r-package-wdi"><i class="fa fa-check"></i><b>4.1.11</b> R Package <span>WDI</span></a></li>
+<li class="chapter" data-level="4.1.12" data-path="eda3.html"><a href="eda3.html#function-wdi"><i class="fa fa-check"></i><b>4.1.12</b> Function WDI</a></li>
+<li class="chapter" data-level="4.1.13" data-path="eda3.html"><a href="eda3.html#function-wdisearch"><i class="fa fa-check"></i><b>4.1.13</b> Function WDIsearch</a></li>
+<li class="chapter" data-level="4.1.14" data-path="eda3.html"><a href="eda3.html#example-ii"><i class="fa fa-check"></i><b>4.1.14</b> Example II</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="eda3.html"><a href="eda3.html#part-ii-data-transforamtion-with-dplyr"><i class="fa fa-check"></i><b>4.2</b> Part II: Data Transforamtion with <code>dplyr</code></a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="eda3.html"><a href="eda3.html#dplyr-overview"><i class="fa fa-check"></i><b>4.2.1</b> <code>dplyr</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="4.2.2" data-path="eda3.html"><a href="eda3.html#select-subset-columns-using-their-names-and-types"><i class="fa fa-check"></i><b>4.2.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="4.2.3" data-path="eda3.html"><a href="eda3.html#filter-subset-rows-using-column-values"><i class="fa fa-check"></i><b>4.2.3</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="4.2.4" data-path="eda3.html"><a href="eda3.html#arrange-and-pipe"><i class="fa fa-check"></i><b>4.2.4</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="4.2.5" data-path="eda3.html"><a href="eda3.html#example-iii-and-practicum"><i class="fa fa-check"></i><b>4.2.5</b> Example III and Practicum</a></li>
+<li class="chapter" data-level="4.2.6" data-path="eda3.html"><a href="eda3.html#learning-resources-iii"><i class="fa fa-check"></i><b>4.2.6</b> Learning Resources, III</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="eda3.html"><a href="eda3.html#the-fourth-assignment-in-moodle"><i class="fa fa-check"></i><b>4.3</b> The Fourth Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="eda3.html"><a href="eda3.html#setup-and-yaml"><i class="fa fa-check"></i><b>4.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="4.3.2" data-path="eda3.html"><a href="eda3.html#examples-and-comments"><i class="fa fa-check"></i><b>4.3.2</b> Examples and Comments</a></li>
+<li class="chapter" data-level="4.3.3" data-path="eda3.html"><a href="eda3.html#theme-for-ggplot2"><i class="fa fa-check"></i><b>4.3.3</b> <code>theme()</code> for <code>ggplot2()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ed4.html"><a href="ed4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
+<li class="chapter" data-level="5.1" data-path="ed4.html"><a href="ed4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ed4.html"><a href="ed4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ed4.html"><a href="ed4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="5.1.3" data-path="ed4.html"><a href="ed4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ed4.html"><a href="ed4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
+<li class="chapter" data-level="5.1.5" data-path="ed4.html"><a href="ed4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="5.1.6" data-path="ed4.html"><a href="ed4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
+<li class="chapter" data-level="5.1.7" data-path="ed4.html"><a href="ed4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="5.1.8" data-path="ed4.html"><a href="ed4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
+<li class="chapter" data-level="5.1.9" data-path="ed4.html"><a href="ed4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
+<li class="chapter" data-level="5.1.10" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
+<li class="chapter" data-level="5.1.11" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
+<li class="chapter" data-level="5.1.12" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
+<li class="chapter" data-level="5.1.13" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
+<li class="chapter" data-level="5.1.14" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
+<li class="chapter" data-level="5.1.15" data-path="ed4.html"><a href="ed4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.16" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.17" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.18" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.19" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.20" data-path="ed4.html"><a href="ed4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.21" data-path="ed4.html"><a href="ed4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.22" data-path="ed4.html"><a href="ed4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.23" data-path="ed4.html"><a href="ed4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.24" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.25" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
+<li class="chapter" data-level="5.1.26" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.27" data-path="ed4.html"><a href="ed4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ed4.html"><a href="ed4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="ed4.html"><a href="ed4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ed4.html"><a href="ed4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ed4.html"><a href="ed4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
+<li class="chapter" data-level="5.2.6" data-path="ed4.html"><a href="ed4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="ed4.html"><a href="ed4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
+<li class="chapter" data-level="5.2.8" data-path="ed4.html"><a href="ed4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
+<li class="chapter" data-level="5.2.9" data-path="ed4.html"><a href="ed4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
+<li class="chapter" data-level="5.2.10" data-path="ed4.html"><a href="ed4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
+<li class="chapter" data-level="5.2.11" data-path="ed4.html"><a href="ed4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="ed4.html"><a href="ed4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="ed4.html"><a href="ed4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="ed4.html"><a href="ed4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ed4.html"><a href="ed4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="ed4.html"><a href="ed4.html#information-obtained-by-extra-true"><i class="fa fa-check"></i><b>5.5</b> Information Obtained by <code>extra = TRUE</code></a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="ed4.html"><a href="ed4.html#population-of-zimbabwe-and-similar-countries"><i class="fa fa-check"></i><b>5.5.1</b> Population of Zimbabwe and Similar Countries</a></li>
+<li class="chapter" data-level="5.5.2" data-path="ed4.html"><a href="ed4.html#fertility-rate-of-japan-and-similar-countries"><i class="fa fa-check"></i><b>5.5.2</b> Fertility Rate of Japan and Similar Countries</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="ed4.html"><a href="ed4.html#other-groups"><i class="fa fa-check"></i><b>5.6</b> Other Groups</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="ed4.html"><a href="ed4.html#iso3c-vector-wb_arb_vec"><i class="fa fa-check"></i><b>5.6.1</b> iso3c vector: <code>wb_arb_vec</code></a></li>
+<li class="chapter" data-level="5.6.2" data-path="ed4.html"><a href="ed4.html#data-frame-wb_arb"><i class="fa fa-check"></i><b>5.6.2</b> Data Frame: <code>wb_arb</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="ed4.html"><a href="ed4.html#wangling-transform-and-tidy-data"><i class="fa fa-check"></i><b>5.7</b> Wangling: Transform and Tidy Data</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="ed4.html"><a href="ed4.html#tidying-data"><i class="fa fa-check"></i><b>5.7.1</b> Tidying data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="ed4.html"><a href="ed4.html#population-analysis"><i class="fa fa-check"></i><b>5.8</b> Population Analysis</a></li>
+<li class="chapter" data-level="5.9" data-path="ed4.html"><a href="ed4.html#literacy-rate-youth-total-of-people-ages-15-24"><i class="fa fa-check"></i><b>5.9</b> Literacy rate, youth total (% of people ages 15-24)</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="ed4.html"><a href="ed4.html#filtering-joins-1"><i class="fa fa-check"></i><b>5.9.1</b> Filtering joins</a></li>
+</ul></li>
+<li class="chapter" data-level="5.10" data-path="ed4.html"><a href="ed4.html#visualization-of-the-data"><i class="fa fa-check"></i><b>5.10</b> Visualization of the data</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="ed4.html"><a href="ed4.html#gender-ratio-of-girls-to-boys-in-primary-secondary-and-tertiary-levels"><i class="fa fa-check"></i><b>5.10.1</b> Gender: Ratio of girls to boys in primary, secondary and tertiary levels</a></li>
+<li class="chapter" data-level="5.10.2" data-path="ed4.html"><a href="ed4.html#proportion-of-seats-held-by-women-in-national-parliament."><i class="fa fa-check"></i><b>5.10.2</b> Proportion of seats held by women in national parliament.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="eda5.html"><a href="eda5.html"><i class="fa fa-check"></i><b>6</b> Exploratory Data Analysis (EDA) 5</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#course-contents-4"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#data-modeling-and-eda"><i class="fa fa-check"></i>Data Modeling and EDA</a></li>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#contents-of-eda5"><i class="fa fa-check"></i>Contents of EDA5</a></li>
+<li class="chapter" data-level="6.1" data-path="eda5.html"><a href="eda5.html#part-i-exploratory-data-analysis-and-data-modeling"><i class="fa fa-check"></i><b>6.1</b> Part I: Exploratory Data Analysis and Data Modeling</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-i-r4dseda"><i class="fa fa-check"></i><b>6.1.1</b> Exploration in Visualization, I – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.2" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-ii-r4dseda"><i class="fa fa-check"></i><b>6.1.2</b> Exploration in Visualization, II – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.3" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-iii-r4dseda"><i class="fa fa-check"></i><b>6.1.3</b> Exploration in Visualization, III – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.4" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-iv-r4dseda"><i class="fa fa-check"></i><b>6.1.4</b> Exploration in Visualization, IV – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.5" data-path="eda5.html"><a href="eda5.html#eda-and-data-modeling-simple-summary-of-data"><i class="fa fa-check"></i><b>6.1.5</b> EDA and Data Modeling: Simple Summary of Data</a></li>
+<li class="chapter" data-level="6.1.6" data-path="eda5.html"><a href="eda5.html#hypothesis-generation-vs.-hypothesis-confirmation"><i class="fa fa-check"></i><b>6.1.6</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="6.1.7" data-path="eda5.html"><a href="eda5.html#r4ds-model-basics"><i class="fa fa-check"></i><b>6.1.7</b> <span>R4DS: Model Basics</span></a></li>
+<li class="chapter" data-level="6.1.8" data-path="eda5.html"><a href="eda5.html#all-models-are-wrong-but-some-are-useful.---george-e.p.-box-1919-2013"><i class="fa fa-check"></i><b>6.1.8</b> All models are wrong, but some are useful. - George E.P. Box (1919-2013)</a></li>
+<li class="chapter" data-level="6.1.9" data-path="eda5.html"><a href="eda5.html#regression-analysis-wikipedia"><i class="fa fa-check"></i><b>6.1.9</b> Regression Analysis (<span>wikipedia</span>)</a></li>
+<li class="chapter" data-level="6.1.10" data-path="eda5.html"><a href="eda5.html#history-of-regression-analysis-wikipedia"><i class="fa fa-check"></i><b>6.1.10</b> History of Regression Analysis (<span>wikipedia</span>)</a></li>
+<li class="chapter" data-level="6.1.11" data-path="eda5.html"><a href="eda5.html#the-first-example-1"><i class="fa fa-check"></i><b>6.1.11</b> The First Example</a></li>
+<li class="chapter" data-level="6.1.12" data-path="eda5.html"><a href="eda5.html#model-analysis-with-tidyverse-modelr"><i class="fa fa-check"></i><b>6.1.12</b> Model Analysis with <code>tidyverse</code>: <code>modelr</code></a></li>
+<li class="chapter" data-level="6.1.13" data-path="eda5.html"><a href="eda5.html#predictions-haty-a_1-a_2x-and-residuals-y---haty"><i class="fa fa-check"></i><b>6.1.13</b> Predictions <span class="math inline">\(\hat{y} = a_1 + a_2x\)</span> and Residuals <span class="math inline">\(y - \hat{y}\)</span></a></li>
+<li class="chapter" data-level="6.1.14" data-path="eda5.html"><a href="eda5.html#geom_jitter"><i class="fa fa-check"></i><b>6.1.14</b> geom_jitter()</a></li>
+<li class="chapter" data-level="6.1.15" data-path="eda5.html"><a href="eda5.html#iris-1"><i class="fa fa-check"></i><b>6.1.15</b> iris</a></li>
+<li class="chapter" data-level="6.1.16" data-path="eda5.html"><a href="eda5.html#linear-model-sepal.w-sepal.l"><i class="fa fa-check"></i><b>6.1.16</b> Linear Model: Sepal.W ~ Sepal.L</a></li>
+<li class="chapter" data-level="6.1.17" data-path="eda5.html"><a href="eda5.html#linear-model-petal.w-petal.l"><i class="fa fa-check"></i><b>6.1.17</b> Linear Model: Petal.W ~ Petal.L</a></li>
+<li class="chapter" data-level="6.1.18" data-path="eda5.html"><a href="eda5.html#correlation"><i class="fa fa-check"></i><b>6.1.18</b> Correlation</a></li>
+<li class="chapter" data-level="6.1.19" data-path="eda5.html"><a href="eda5.html#filterspecies-setosa"><i class="fa fa-check"></i><b>6.1.19</b> <code>filter(Species == "setosa")</code></a></li>
+<li class="chapter" data-level="6.1.20" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>6.1.20</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="6.1.21" data-path="eda5.html"><a href="eda5.html#linear-regression-quick-reference"><i class="fa fa-check"></i><b>6.1.21</b> Linear Regression Quick Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="eda5.html"><a href="eda5.html#part-ii-practicum---model-analysis-warnings"><i class="fa fa-check"></i><b>6.2</b> Part II: Practicum - Model Analysis Warnings</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="eda5.html"><a href="eda5.html#linear-regression-aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>6.2.1</b> Linear Regression: <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="6.2.2" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species-1"><i class="fa fa-check"></i><b>6.2.2</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="6.2.3" data-path="eda5.html"><a href="eda5.html#correlation-and-covariance"><i class="fa fa-check"></i><b>6.2.3</b> Correlation and Covariance</a></li>
+<li class="chapter" data-level="6.2.4" data-path="eda5.html"><a href="eda5.html#useful-mathematical-formula"><i class="fa fa-check"></i><b>6.2.4</b> Useful Mathematical Formula</a></li>
+<li class="chapter" data-level="6.2.5" data-path="eda5.html"><a href="eda5.html#p-value"><i class="fa fa-check"></i><b>6.2.5</b> p-value</a></li>
+<li class="chapter" data-level="6.2.6" data-path="eda5.html"><a href="eda5.html#t-statistic"><i class="fa fa-check"></i><b>6.2.6</b> t-statistic</a></li>
+<li class="chapter" data-level="6.2.7" data-path="eda5.html"><a href="eda5.html#mathematical-formulas-i"><i class="fa fa-check"></i><b>6.2.7</b> Mathematical Formulas, I</a></li>
+<li class="chapter" data-level="6.2.8" data-path="eda5.html"><a href="eda5.html#mathematical-formulas-ii"><i class="fa fa-check"></i><b>6.2.8</b> Mathematical Formulas, II</a></li>
+<li class="chapter" data-level="6.2.9" data-path="eda5.html"><a href="eda5.html#regression-analyais-summary"><i class="fa fa-check"></i><b>6.2.9</b> Regression Analyais: Summary</a></li>
+<li class="chapter" data-level="6.2.10" data-path="eda5.html"><a href="eda5.html#the-asa-statement-on-p-values-context-process-and-purpose"><i class="fa fa-check"></i><b>6.2.10</b> <span>The ASA Statement on p-Values: Context, Process, and Purpose</span></a></li>
+<li class="chapter" data-level="6.2.11" data-path="eda5.html"><a href="eda5.html#public-data-un-data-and-us-census"><i class="fa fa-check"></i><b>6.2.11</b> Public Data: UN Data and US Census</a></li>
+<li class="chapter" data-level="6.2.12" data-path="eda5.html"><a href="eda5.html#an-example-us-census-bureau"><i class="fa fa-check"></i><b>6.2.12</b> An Example: US Census Bureau</a></li>
+<li class="chapter" data-level="6.2.13" data-path="eda5.html"><a href="eda5.html#oecd-about-who-we-are"><i class="fa fa-check"></i><b>6.2.13</b> <span>OECD: About Who we are</span></a></li>
+<li class="chapter" data-level="6.2.14" data-path="eda5.html"><a href="eda5.html#learning-resources-v"><i class="fa fa-check"></i><b>6.2.14</b> Learning Resources, V</a></li>
+<li class="chapter" data-level="6.2.15" data-path="eda5.html"><a href="eda5.html#learning-resources-summary"><i class="fa fa-check"></i><b>6.2.15</b> Learning Resources – Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="eda5.html"><a href="eda5.html#the-sixth-assignment-in-moodle"><i class="fa fa-check"></i><b>6.3</b> The Sixth Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="eda5.html"><a href="eda5.html#setup-and-yaml-2"><i class="fa fa-check"></i><b>6.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="6.3.2" data-path="eda5.html"><a href="eda5.html#packages-to-load"><i class="fa fa-check"></i><b>6.3.2</b> Packages to load</a></li>
+<li class="chapter" data-level="6.3.3" data-path="eda5.html"><a href="eda5.html#modeling-and-eda-summary"><i class="fa fa-check"></i><b>6.3.3</b> Modeling and EDA Summary</a></li>
+<li class="chapter" data-level="6.3.4" data-path="eda5.html"><a href="eda5.html#examples-and-comments-1"><i class="fa fa-check"></i><b>6.3.4</b> Examples and Comments</a></li>
+<li class="chapter" data-level="6.3.5" data-path="eda5.html"><a href="eda5.html#class.xlsx"><i class="fa fa-check"></i><b>6.3.5</b> CLASS.xlsx</a></li>
+<li class="chapter" data-level="6.3.6" data-path="eda5.html"><a href="eda5.html#population-and-gdp-per-capita"><i class="fa fa-check"></i><b>6.3.6</b> Population and GDP per Capita</a></li>
+<li class="chapter" data-level="6.3.7" data-path="eda5.html"><a href="eda5.html#internet"><i class="fa fa-check"></i><b>6.3.7</b> Internet</a></li>
+<li class="chapter" data-level="6.3.8" data-path="eda5.html"><a href="eda5.html#bond-yields"><i class="fa fa-check"></i><b>6.3.8</b> Bond Yields</a></li>
+<li class="chapter" data-level="6.3.9" data-path="eda5.html"><a href="eda5.html#elderly-population"><i class="fa fa-check"></i><b>6.3.9</b> Elderly Population</a></li>
+<li class="chapter" data-level="6.3.10" data-path="eda5.html"><a href="eda5.html#education"><i class="fa fa-check"></i><b>6.3.10</b> Education</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="topics1.html"><a href="topics1.html"><i class="fa fa-check"></i><b>7</b> Topics in Exploratory Data Analysis I　</a>
+<ul>
+<li class="chapter" data-level="" data-path="topics1.html"><a href="topics1.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="topics1.html"><a href="topics1.html#dot-place-holder-in-lm."><i class="fa fa-check"></i>Dot Place Holder in <code>lm</code>.</a></li>
+<li class="chapter" data-level="7.1" data-path="topics1.html"><a href="topics1.html#part-i-regression-1"><i class="fa fa-check"></i><b>7.1</b> Part I: Regression 1:</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="topics1.html"><a href="topics1.html#why-does-gdp-vary-from-country-to-country"><i class="fa fa-check"></i><b>7.1.1</b> Why does GDP vary from country to country?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="topics1.html"><a href="topics1.html#regression"><i class="fa fa-check"></i><b>7.1.2</b> Regression</a></li>
+<li class="chapter" data-level="7.1.3" data-path="topics1.html"><a href="topics1.html#checking-for-multicollinearity"><i class="fa fa-check"></i><b>7.1.3</b> Checking for multicollinearity</a></li>
+<li class="chapter" data-level="7.1.4" data-path="topics1.html"><a href="topics1.html#vif-determination-of-multi-collinearity"><i class="fa fa-check"></i><b>7.1.4</b> vif: Determination of multi-collinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="topics1.html"><a href="topics1.html#a-time-series-data-of-world-from-1960-to-2020"><i class="fa fa-check"></i><b>7.2</b> A time series data of World from 1960 to 2020</a></li>
+<li class="chapter" data-level="7.3" data-path="topics1.html"><a href="topics1.html#excercise"><i class="fa fa-check"></i><b>7.3</b> Excercise:</a></li>
+<li class="chapter" data-level="7.4" data-path="topics1.html"><a href="topics1.html#project"><i class="fa fa-check"></i><b>7.4</b> Project</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="topics1.html"><a href="topics1.html#regression-analysis"><i class="fa fa-check"></i><b>7.4.1</b> Regression Analysis</a></li>
+<li class="chapter" data-level="7.4.2" data-path="topics1.html"><a href="topics1.html#wdi-indicator-cordes"><i class="fa fa-check"></i><b>7.4.2</b> WDI Indicator cordes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="topics1.html"><a href="topics1.html#regression-1"><i class="fa fa-check"></i><b>7.5</b> Regression</a></li>
+<li class="chapter" data-level="7.6" data-path="topics1.html"><a href="topics1.html#we-select-regression-model"><i class="fa fa-check"></i><b>7.6</b> We select regression model;</a></li>
+<li class="chapter" data-level="7.7" data-path="topics1.html"><a href="topics1.html#a-time-series-data-of-world-from-1960-to-2020-1"><i class="fa fa-check"></i><b>7.7</b> A time series data of World from 1960 to 2020</a></li>
+<li class="chapter" data-level="7.8" data-path="topics1.html"><a href="topics1.html#regression-2"><i class="fa fa-check"></i><b>7.8</b> Regression</a></li>
+<li class="chapter" data-level="7.9" data-path="topics1.html"><a href="topics1.html#not-standardized"><i class="fa fa-check"></i><b>7.9</b> Not Standardized</a></li>
+<li class="chapter" data-level="7.10" data-path="topics1.html"><a href="topics1.html#regression-3"><i class="fa fa-check"></i><b>7.10</b> Regression</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="topics1.html"><a href="topics1.html#standadized-again"><i class="fa fa-check"></i><b>7.10.1</b> Standadized (Again)</a></li>
+<li class="chapter" data-level="7.10.2" data-path="topics1.html"><a href="topics1.html#we-select-regression-model-1"><i class="fa fa-check"></i><b>7.10.2</b> We select regression model;</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="topics1.html"><a href="topics1.html#regression-4"><i class="fa fa-check"></i><b>7.11</b> Regression</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="topics1.html"><a href="topics1.html#t-test"><i class="fa fa-check"></i><b>7.11.1</b> t-test</a></li>
+</ul></li>
+<li class="chapter" data-level="7.12" data-path="topics1.html"><a href="topics1.html#week-7-assignment"><i class="fa fa-check"></i><b>7.12</b> Week 7 Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="topics2.html"><a href="topics2.html"><i class="fa fa-check"></i><b>8</b> Topics in Exploratory Data Analysis II　</a>
+<ul>
+<li class="chapter" data-level="" data-path="topics2.html"><a href="topics2.html#project-1"><i class="fa fa-check"></i>Project</a></li>
+<li class="chapter" data-level="8.1" data-path="topics2.html"><a href="topics2.html#classification-iris-dataset"><i class="fa fa-check"></i><b>8.1</b> Classification IRIS dataset</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="topics2.html"><a href="topics2.html#setup-1"><i class="fa fa-check"></i><b>8.1.1</b> Setup</a></li>
+<li class="chapter" data-level="8.1.2" data-path="topics2.html"><a href="topics2.html#data-iris-1"><i class="fa fa-check"></i><b>8.1.2</b> Data: <code>iris</code></a></li>
+<li class="chapter" data-level="8.1.3" data-path="topics2.html"><a href="topics2.html#binary-classification"><i class="fa fa-check"></i><b>8.1.3</b> Binary classification</a></li>
+<li class="chapter" data-level="8.1.4" data-path="topics2.html"><a href="topics2.html#various-logistic-models"><i class="fa fa-check"></i><b>8.1.4</b> Various Logistic Models</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="topics2.html"><a href="topics2.html#conclusions"><i class="fa fa-check"></i><b>8.2</b> Conclusions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="topics2.html"><a href="topics2.html#hypothesis-generation-vs.-hypothesis-confirmation-1"><i class="fa fa-check"></i><b>8.2.1</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="8.2.2" data-path="topics2.html"><a href="topics2.html#references"><i class="fa fa-check"></i><b>8.2.2</b> References</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="guest.html"><a href="guest.html"><i class="fa fa-check"></i><b>9</b> Guest Lecture and/or Examples</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="guest.html"><a href="guest.html#guest-lecture-by-zheng-nan"><i class="fa fa-check"></i><b>9.1</b> Guest Lecture by Zheng Nan</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="guest.html"><a href="guest.html#exploring-the-bitcoin-market-efficiency-using-r"><i class="fa fa-check"></i><b>9.1.1</b> Exploring the bitcoin market efficiency using R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="guest.html"><a href="guest.html#topics-of-eda"><i class="fa fa-check"></i><b>9.2</b> Topics of EDA</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="guest.html"><a href="guest.html#contents"><i class="fa fa-check"></i><b>9.2.1</b> Contents</a></li>
+<li class="chapter" data-level="9.2.2" data-path="guest.html"><a href="guest.html#financial-data"><i class="fa fa-check"></i><b>9.2.2</b> Financial Data</a></li>
+<li class="chapter" data-level="9.2.3" data-path="guest.html"><a href="guest.html#your-course-project-part-i"><i class="fa fa-check"></i><b>9.2.3</b> Your Course Project, Part I</a></li>
+<li class="chapter" data-level="9.2.4" data-path="guest.html"><a href="guest.html#your-course-project-part-ii"><i class="fa fa-check"></i><b>9.2.4</b> Your Course Project, Part II</a></li>
+<li class="chapter" data-level="9.2.5" data-path="guest.html"><a href="guest.html#presentation-format"><i class="fa fa-check"></i><b>9.2.5</b> Presentation Format</a></li>
+<li class="chapter" data-level="9.2.6" data-path="guest.html"><a href="guest.html#the-eighth-assignment-in-moodle"><i class="fa fa-check"></i><b>9.2.6</b> The Eighth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="9.2.7" data-path="guest.html"><a href="guest.html#learning-resources-viii"><i class="fa fa-check"></i><b>9.2.7</b> Learning Resources, VIII</a></li>
+<li class="chapter" data-level="9.2.8" data-path="guest.html"><a href="guest.html#presentation"><i class="fa fa-check"></i><b>9.2.8</b> Presentation</a></li>
+<li class="chapter" data-level="9.2.9" data-path="guest.html"><a href="guest.html#the-ninth-assignment-in-moodle"><i class="fa fa-check"></i><b>9.2.9</b> The Ninth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="9.2.10" data-path="guest.html"><a href="guest.html#presentation-on-2021-02-17"><i class="fa fa-check"></i><b>9.2.10</b> Presentation on 2021-02-17</a></li>
+<li class="chapter" data-level="9.2.11" data-path="guest.html"><a href="guest.html#presentation-on-2021-02-24"><i class="fa fa-check"></i><b>9.2.11</b> Presentation on 2021-02-24</a></li>
+<li class="chapter" data-level="9.2.12" data-path="guest.html"><a href="guest.html#learning-resources-ix"><i class="fa fa-check"></i><b>9.2.12</b> Learning Resources, IX</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html"><i class="fa fa-check"></i><b>10</b> Presentation, Learning Resources</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#part-i-presentation-part-ii"><i class="fa fa-check"></i><b>10.1</b> Part I: Presentation, Part II</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#the-tenth-assignment-in-moodle"><i class="fa fa-check"></i><b>10.1.1</b> The Tenth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="10.1.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#presentation-on-2021-02-24-1"><i class="fa fa-check"></i><b>10.1.2</b> Presentation on 2021-02-24</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#part-ii-roundup-learning-resources"><i class="fa fa-check"></i><b>10.2</b> Part II: Roundup, Learning Resources</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#contents-1"><i class="fa fa-check"></i><b>10.2.1</b> Contents</a></li>
+<li class="chapter" data-level="10.2.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#focus-of-this-course-exploratory-data-analysis"><i class="fa fa-check"></i><b>10.2.2</b> Focus of This Course – Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="10.2.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#schedule-and-grades"><i class="fa fa-check"></i><b>10.2.3</b> Schedule and Grades</a></li>
+<li class="chapter" data-level="10.2.4" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#your-course-project-part-i-1"><i class="fa fa-check"></i><b>10.2.4</b> Your Course Project, Part I</a></li>
+<li class="chapter" data-level="10.2.5" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#your-course-project-part-ii-1"><i class="fa fa-check"></i><b>10.2.5</b> Your Course Project, Part II</a></li>
+<li class="chapter" data-level="10.2.6" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-notebook-ms-word-and-pdf-workflow"><i class="fa fa-check"></i><b>10.2.6</b> R Notebook, MS Word and PDF, Workflow</a></li>
+<li class="chapter" data-level="10.2.7" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#export-ms-word-using-a-style-file"><i class="fa fa-check"></i><b>10.2.7</b> Export MS Word Using a Style File</a></li>
+<li class="chapter" data-level="10.2.8" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#edit-chunk-options"><i class="fa fa-check"></i><b>10.2.8</b> Edit Chunk Options</a></li>
+<li class="chapter" data-level="10.2.9" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#chunk-options"><i class="fa fa-check"></i><b>10.2.9</b> Chunk Options</a></li>
+<li class="chapter" data-level="10.2.10" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#examples-and-references"><i class="fa fa-check"></i><b>10.2.10</b> Examples and References</a></li>
+<li class="chapter" data-level="10.2.11" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#references-for-your-short-paper-and-paper"><i class="fa fa-check"></i><b>10.2.11</b> References for Your Short-Paper and Paper</a></li>
+<li class="chapter" data-level="10.2.12" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-studio-run-codes"><i class="fa fa-check"></i><b>10.2.12</b> R Studio: Run Codes</a></li>
+<li class="chapter" data-level="10.2.13" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-studio-1.4---released-on-2021-01-19"><i class="fa fa-check"></i><b>10.2.13</b> R Studio 1.4 - Released on 2021-01-19</a></li>
+<li class="chapter" data-level="10.2.14" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-interactive-practicum"><i class="fa fa-check"></i><b>10.2.14</b> Learning Resources, X – Interactive Practicum</a></li>
+<li class="chapter" data-level="10.2.15" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-books"><i class="fa fa-check"></i><b>10.2.15</b> Learning Resources, X – Books</a></li>
+<li class="chapter" data-level="10.2.16" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-moocs-and-online-courses"><i class="fa fa-check"></i><b>10.2.16</b> Learning Resources, X – Moocs and Online Courses</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#resources"><i class="fa fa-check"></i><b>10.3</b> Learning Resources</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-interactive-practicum-1"><i class="fa fa-check"></i><b>10.3.1</b> Learning Resources, X – Interactive Practicum</a></li>
+<li class="chapter" data-level="10.3.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-books-1"><i class="fa fa-check"></i><b>10.3.2</b> Learning Resources, X – Books</a></li>
+<li class="chapter" data-level="10.3.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-moocs-and-online-courses-1"><i class="fa fa-check"></i><b>10.3.3</b> Learning Resources, X – Moocs and Online Courses</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="nightingale.html"><a href="nightingale.html"><i class="fa fa-check"></i><b>11</b> A3. Nightingale’s Data</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="nightingale.html"><a href="nightingale.html#basic-references"><i class="fa fa-check"></i><b>11.1</b> Basic References</a></li>
+<li class="chapter" data-level="11.2" data-path="nightingale.html"><a href="nightingale.html#histdata-data-sets-from-the-history-of-statistics-and-data-visualization"><i class="fa fa-check"></i><b>11.2</b> HistData: Data Sets from the History of Statistics and Data Visualization</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="nightingale.html"><a href="nightingale.html#nightingale-datasets"><i class="fa fa-check"></i><b>11.2.1</b> Nightingale Datasets</a></li>
+<li class="chapter" data-level="11.2.2" data-path="nightingale.html"><a href="nightingale.html#references-1"><i class="fa fa-check"></i><b>11.2.2</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="nightingale.html"><a href="nightingale.html#exploratory-data-analysis-using-tidyverse-package"><i class="fa fa-check"></i><b>11.3</b> Exploratory Data Analysis Using <code>tidyverse</code> Package</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="nightingale.html"><a href="nightingale.html#reading-nightingale-data-and-glimpse-the-structure"><i class="fa fa-check"></i><b>11.3.1</b> Reading Nightingale Data and Glimpse the Structure</a></li>
+<li class="chapter" data-level="11.3.2" data-path="nightingale.html"><a href="nightingale.html#comparison-of-death-causes"><i class="fa fa-check"></i><b>11.3.2</b> Comparison of Death Causes</a></li>
+<li class="chapter" data-level="11.3.3" data-path="nightingale.html"><a href="nightingale.html#data-wrangling---tidying-data"><i class="fa fa-check"></i><b>11.3.3</b> Data Wrangling - Tidying Data</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="nightingale.html"><a href="nightingale.html#original-code-in-nightingale-document"><i class="fa fa-check"></i><b>11.4</b> Original Code in Nightingale document</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="nightingale.html"><a href="nightingale.html#reshape-package-flexibly-reshape-data"><i class="fa fa-check"></i><b>11.4.1</b> <code>reshape</code> Package: Flexibly Reshape Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i><b>12</b> A2. Public Data</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="public.html"><a href="public.html#introduction-1"><i class="fa fa-check"></i><b>12.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="public.html"><a href="public.html#open-data-defined-by-world-bank"><i class="fa fa-check"></i><b>12.1.1</b> Open Data Defined by World Bank</a></li>
+<li class="chapter" data-level="12.1.2" data-path="public.html"><a href="public.html#a-list-of-open-data-catalogue-1"><i class="fa fa-check"></i><b>12.1.2</b> A List of Open Data Catalogue</a></li>
+<li class="chapter" data-level="12.1.3" data-path="public.html"><a href="public.html#examples-1"><i class="fa fa-check"></i><b>12.1.3</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="public.html"><a href="public.html#world-bank"><i class="fa fa-check"></i><b>12.2</b> World Bank</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="public.html"><a href="public.html#about-1"><i class="fa fa-check"></i><b>12.2.1</b> About</a></li>
+<li class="chapter" data-level="12.2.2" data-path="public.html"><a href="public.html#wdi---world-development-indicaters"><i class="fa fa-check"></i><b>12.2.2</b> WDI - World Development Indicaters</a></li>
+<li class="chapter" data-level="12.2.3" data-path="public.html"><a href="public.html#r-package-wdi-1"><i class="fa fa-check"></i><b>12.2.3</b> R Package WDI</a></li>
+<li class="chapter" data-level="12.2.4" data-path="public.html"><a href="public.html#the-first-example-2"><i class="fa fa-check"></i><b>12.2.4</b> The First Example</a></li>
+<li class="chapter" data-level="12.2.5" data-path="public.html"><a href="public.html#more-examples-1"><i class="fa fa-check"></i><b>12.2.5</b> More Examples</a></li>
+<li class="chapter" data-level="12.2.6" data-path="public.html"><a href="public.html#world-bank-country-and-lending-groups-and-an-option-extra-true"><i class="fa fa-check"></i><b>12.2.6</b> World Bank Country and Lending Groups and an Option <code>extra = TRUE</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="public.html"><a href="public.html#united-nations"><i class="fa fa-check"></i><b>12.3</b> United Nations</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="public.html"><a href="public.html#importing-data-2"><i class="fa fa-check"></i><b>12.3.1</b> Importing Data</a></li>
+<li class="chapter" data-level="12.3.2" data-path="public.html"><a href="public.html#example"><i class="fa fa-check"></i><b>12.3.2</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>13</b> A4. Modeling</a>
+<ul>
+<li class="chapter" data-level="" data-path="model.html"><a href="model.html#eda-a-diagram-from-r4ds-by-h.w.-and-g.g.-6"><i class="fa fa-check"></i>EDA (A diagram from R4DS by H.W. and G.G.)</a></li>
+<li class="chapter" data-level="" data-path="model.html"><a href="model.html#contents-of-eda5-1"><i class="fa fa-check"></i>Contents of EDA5</a></li>
+<li class="chapter" data-level="13.1" data-path="model.html"><a href="model.html#exploration-in-visualization-1"><i class="fa fa-check"></i><b>13.1</b> Exploration in Visualization</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="model.html"><a href="model.html#exploration-in-visualization-i"><i class="fa fa-check"></i><b>13.1.1</b> Exploration in Visualization, I</a></li>
+<li class="chapter" data-level="13.1.2" data-path="model.html"><a href="model.html#exploration-in-visualization-ii"><i class="fa fa-check"></i><b>13.1.2</b> Exploration in Visualization, II</a></li>
+<li class="chapter" data-level="13.1.3" data-path="model.html"><a href="model.html#exploration-in-visualization-iii"><i class="fa fa-check"></i><b>13.1.3</b> Exploration in Visualization, III</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="model.html"><a href="model.html#exploration-in-visualization-iv"><i class="fa fa-check"></i><b>13.2</b> Exploration in Visualization, IV</a></li>
+<li class="chapter" data-level="13.3" data-path="model.html"><a href="model.html#exploration-and-data-modeling"><i class="fa fa-check"></i><b>13.3</b> Exploration and Data Modeling</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="model.html"><a href="model.html#hypothesis-generation-vs.-hypothesis-confirmation-2"><i class="fa fa-check"></i><b>13.3.1</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="13.3.2" data-path="model.html"><a href="model.html#model-basics"><i class="fa fa-check"></i><b>13.3.2</b> Model Basics</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="model.html"><a href="model.html#examples-2"><i class="fa fa-check"></i><b>13.4</b> Examples</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="model.html"><a href="model.html#cars"><i class="fa fa-check"></i><b>13.4.1</b> <code>cars</code></a></li>
+<li class="chapter" data-level="13.4.2" data-path="model.html"><a href="model.html#iris-2"><i class="fa fa-check"></i><b>13.4.2</b> iris</a></li>
+<li class="chapter" data-level="13.4.3" data-path="model.html"><a href="model.html#model-analysis-warnings"><i class="fa fa-check"></i><b>13.4.3</b> Model Analysis Warnings</a></li>
+<li class="chapter" data-level="13.4.4" data-path="model.html"><a href="model.html#regression-analyais-summary-1"><i class="fa fa-check"></i><b>13.4.4</b> Regression Analyais: Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="model" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">Chapter 13</span> A4. Modeling<a href="model.html#model" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ul>
+<li>Modeling using <code>tidyverse</code></li>
+</ul>
+<div id="eda-a-diagram-from-r4ds-by-h.w.-and-g.g.-6" class="section level3 unnumbered hasAnchor">
+<h3>EDA (A diagram from R4DS by H.W. and G.G.)<a href="model.html#eda-a-diagram-from-r4ds-by-h.w.-and-g.g.-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure">
+<img src="data/data-science.png" alt="" />
+<p class="caption">EDA from r4ds</p>
+</div>
+</div>
+<div id="contents-of-eda5-1" class="section level3 unnumbered hasAnchor">
+<h3>Contents of EDA5<a href="model.html#contents-of-eda5-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>Data Science is empirical!?</p>
+</blockquote>
+<p><strong>empirical</strong>: based on, concerned with, or verifiable by observation or experience rather than theory or pure logic</p>
+<p><strong>Part I: Data Modeling</strong></p>
+<ul>
+<li><p>Exploration in Visualization</p></li>
+<li><p>Modeling</p>
+<ul>
+<li>Scientific: Why? Prediction! - Do you support this?</li>
+<li>Evidence based! - What does it mean?</li>
+<li>What is regression, and why regression? </li>
+<li>Linear Regression, ggplot2</li>
+<li>Predictions and Residues</li>
+</ul></li>
+</ul>
+<p><strong>Part II: Examples and Practicum</strong></p>
+</div>
+<div id="exploration-in-visualization-1" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Exploration in Visualization<a href="model.html#exploration-in-visualization-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Reference: <a href="https://r4ds.had.co.nz/exploratory-data-analysis.html#exploratory-data-analysis">r4ds:EDA</a></p>
+<div id="exploration-in-visualization-i" class="section level3 hasAnchor" number="13.1.1">
+<h3><span class="header-section-number">13.1.1</span> Exploration in Visualization, I<a href="model.html#exploration-in-visualization-i" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>EDA is an iterative cycle. You:</p>
+<ol style="list-style-type: decimal">
+<li><p>Generate questions about your data.</p></li>
+<li><p>Search for answers by visualising, transforming, and modelling your data. - <em>Methods in Data Science</em></p></li>
+<li><p>Use what you learn to refine your questions and/or generate new questions.</p></li>
+</ol>
+<blockquote>
+<p>“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox (1924.7.15-2022.1.18)</p>
+</blockquote>
+<p><a href="https://rss.org.uk/news-publication/news-publications/2022/general-news/sir-david-cox-1924-2022/">Obituary:</a> Sir David Cox, 1924-2022, Royal Statistical Society</p>
+<blockquote>
+<p>“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey (1915.6.16-2000.7.26)</p>
+</blockquote>
+<p><em>Exploratory Data Analysis cannot be done by statistical routines or a list of routine questions.</em></p>
+</div>
+<div id="exploration-in-visualization-ii" class="section level3 hasAnchor" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> Exploration in Visualization, II<a href="model.html#exploration-in-visualization-ii" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>The very basic questions:</strong></p>
+<ul>
+<li><p>What type of variation occurs within my variables? –<em>one variable</em></p></li>
+<li><p>What type of covariation occurs between my variables? - <em>two or more variables</em></p></li>
+</ul>
+<p><strong>Typical values</strong></p>
+<ul>
+<li>Which values are the most common? Why?
+<ul>
+<li>median, mean, mode, etc.</li>
+</ul></li>
+<li>Which values are rare? Why? Does that match your expectations?
+<ul>
+<li>outlier, exceptional</li>
+</ul></li>
+<li>Can you see any unusual patterns? What might explain them?</li>
+</ul>
+</div>
+<div id="exploration-in-visualization-iii" class="section level3 hasAnchor" number="13.1.3">
+<h3><span class="header-section-number">13.1.3</span> Exploration in Visualization, III<a href="model.html#exploration-in-visualization-iii" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Clusters and Groups</strong></p>
+<ul>
+<li><p>How are the observations within each cluster similar to each other?</p></li>
+<li><p>How are the observations in separate clusters different from each other?</p></li>
+<li><p>How can you explain or describe the clusters?</p></li>
+<li><p>Why might the appearance of clusters be misleading?</p></li>
+</ul>
+<p><strong>Outliers and Unusual Values</strong></p>
+<p>Sometimes outliers are data entry errors; other times outliers suggest important new science.</p>
+</div>
+</div>
+<div id="exploration-in-visualization-iv" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Exploration in Visualization, IV<a href="model.html#exploration-in-visualization-iv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Patterns and models</strong></p>
+<ul>
+<li><p>Could this pattern be due to coincidence (i.e. random chance)?</p></li>
+<li><p>How can you describe the relationship implied by the pattern?</p></li>
+<li><p>How strong is the relationship implied by the pattern?</p></li>
+<li><p>What other variables might affect the relationship?</p></li>
+<li><p>Does the relationship change if you look at individual subgroups of the data?</p></li>
+</ul>
+</div>
+<div id="exploration-and-data-modeling" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Exploration and Data Modeling<a href="model.html#exploration-and-data-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Model is a simple summary of data</strong></p>
+<blockquote>
+<p><strong>Goal</strong>: A simple low-dimensional summary of a dataset. Ideally, the model will capture true “signals” (i.e. patterns generated by the phenomenon of interest), and ignore “noise” (i.e. random variation that you’re not interested in).</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>“predictive” models: supervised</li>
+<li>“data discovery” models: unsupervised</li>
+</ol>
+<div id="hypothesis-generation-vs.-hypothesis-confirmation-2" class="section level3 hasAnchor" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Hypothesis generation vs. hypothesis confirmation<a href="model.html#hypothesis-generation-vs.-hypothesis-confirmation-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Each observation can either be used for exploration or confirmation, not both.</p></li>
+<li><p>You can use an observation as many times as you like for exploration, but you can only use it once for confirmation. As soon as you use an observation twice, you’ve switched from confirmation to exploration.</p></li>
+</ol>
+<p>If you are serious about doing an confirmatory analysis, one approach is to split your data into three pieces before you begin the analysis:</p>
+<ol style="list-style-type: decimal">
+<li><p>60% of your data goes into a training (or exploration) set. You’re allowed to do anything you like with this data: visualise it and fit tons of models to it.</p></li>
+<li><p>20% goes into a query set. You can use this data to compare models or visualisations by hand, but you’re not allowed to use it as part of an automated process.</p></li>
+<li><p>20% is held back for a test set. You can only use this data ONCE, to test your final model.</p></li>
+</ol>
+</div>
+<div id="model-basics" class="section level3 hasAnchor" number="13.3.2">
+<h3><span class="header-section-number">13.3.2</span> Model Basics<a href="model.html#model-basics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Reference: <a href="https://r4ds.had.co.nz/model-basics.html#model-basics">R4DS: Model Basics</a></p>
+<p>There are two parts to a model:</p>
+<ol style="list-style-type: decimal">
+<li><p>First, you define a family of models that express a precise, but generic, pattern that you want to capture. For example, the pattern might be a straight line, or a quadratic curve. You will express the model family as an equation like <span class="math inline">\(y = a_1 * x + a_2\)</span> or <span class="math inline">\(y = a_1 * x ^ {a_2}\)</span>. Here, <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are known variables from your data, and <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span> are parameters that can vary to capture different patterns.</p></li>
+<li><p>Next, you generate a fitted model by finding the model from the family that is the closest to your data. This takes the generic model family and makes it specific, like <span class="math inline">\(y = 3 * x + 7\)</span> or <span class="math inline">\(y = 9 * x ^ 2\)</span>.</p></li>
+</ol>
+<p>It’s important to understand that <strong>a fitted model is just the closest model from a family of models</strong>. That implies that you have the “best” model (according to some criteria); it doesn’t imply that you have a good model and it certainly doesn’t imply that the model is “true”.</p>
+<blockquote>
+<p>All models are wrong, but some are useful. - George E.P. Box (1919-2013)</p>
+</blockquote>
+<p>Now it would be very remarkable if any system existing in the real world could be exactly represented by any simple model. However, cunningly chosen parsimonious models often do provide remarkably useful approximations. For example, the law PV = RT relating pressure P, volume V and temperature T of an “ideal” gas via a constant R is not exactly true for any real gas, but it frequently provides a <strong>useful approximation</strong> and furthermore its structure is informative since it springs from a physical view of the behavior of gas molecules.</p>
+<p>For such a model there is no need to ask the question “Is the model true?”. If “truth” is to be the “whole truth” the answer must be “No”. The only question of interest is “<strong>Is the model illuminating and useful?</strong>”.</p>
+<blockquote>
+<p>The goal of a model is not to uncover truth, but to discover a simple approximation that is still useful.</p>
+</blockquote>
+<div id="regression-analysis-wikipedia-1" class="section level4 hasAnchor" number="13.3.2.1">
+<h4><span class="header-section-number">13.3.2.1</span> Regression Analysis (<a href="https://en.wikipedia.org/wiki/Regression_analysis">wikipedia</a>)<a href="model.html#regression-analysis-wikipedia-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In statistical modeling, regression analysis is a set of statistical processes for estimating the relationships between a dependent variable (‘outcome variable’) and one or more independent variables (‘predictors’, ‘covariates’, or ‘features’). The most common form of regression analysis is linear regression, in which a researcher finds the line (or a more complex linear combination) that most closely fits the data according to a specific mathematical criterion.</p>
+<p>Two purposes of regression analysis: First, regression analysis is widely used for <strong>prediction and forecasting</strong>. Second, regression analysis can be used to infer causal relationships between the independent and dependent variables. Importantly, regressions by themselves only reveal relationships between a dependent variable and a collection of independent variables in a fixed dataset. To use regressions for prediction or to infer causal relationships, respectively, a researcher must carefully justify why existing relationships have predictive power for a new context or why a relationship between two variables has a causal interpretation.</p>
+</div>
+<div id="history-of-regression-analysis-wikipedia-1" class="section level4 hasAnchor" number="13.3.2.2">
+<h4><span class="header-section-number">13.3.2.2</span> History of Regression Analysis (<a href="https://en.wikipedia.org/wiki/Regression_analysis">wikipedia</a>)<a href="model.html#history-of-regression-analysis-wikipedia-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The earliest form of regression was the method of least squares, which was published by Legendre in 1805, and by Gauss in 1809. Legendre and Gauss both applied the method to the problem of determining, from astronomical observations, the orbits of bodies about the Sun (mostly comets, but also later the then newly discovered minor planets). Gauss published a further development of the theory of least squares in 1821, including a version of the Gauss–Markov theorem.</p>
+<p>The term “regression” was coined by Francis Galton in the nineteenth century to describe a biological phenomenon. The phenomenon was that the heights of descendants of tall ancestors tend to <strong>regress</strong> down towards a normal average (a phenomenon also known as regression toward the mean). For Galton, regression had only this biological meaning, but his work was later extended by Udny Yule and Karl Pearson to a more general statistical context.</p>
+</div>
+<div id="galtons-example" class="section level4 hasAnchor" number="13.3.2.3">
+<h4><span class="header-section-number">13.3.2.3</span> Galton’s Example<a href="model.html#galtons-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We use <code>HistData</code> Package. See <a href="https://CRAN.R-project.org/package=HistData" class="uri">https://CRAN.R-project.org/package=HistData</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="model.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.3.6      ✔ purrr   0.3.4 
+## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
+## ✔ tidyr   1.2.1      ✔ stringr 1.4.1 
+## ✔ readr   2.1.2      ✔ forcats 0.5.2 
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="model.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr)</span>
+<span id="cb3-2"><a href="model.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets)</span>
+<span id="cb3-3"><a href="model.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(HistData)</span></code></pre></div>
+<p><strong>Galton’s data on the heights of parents and their children, by child</strong></p>
+<ul>
+<li><strong>Description:</strong>
+This data set lists the individual observations for 934 children in 205 families on which Galton (1886) based his cross-tabulation.</li>
+</ul>
+<p>In addition to the question of the relation between heights of parents and their offspring, for which this data is mainly famous, Galton had another purpose which the data in this form allows to address: Does marriage selection indicate a relationship between the heights of husbands and wives, a topic he called assortative mating? Keen <a href="2010">p. 297-298</a> provides a brief discussion of this topic.</p>
+<ul>
+<li>See Help: GaltonFamilies</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="model.html#cb4-1" aria-hidden="true" tabindex="-1"></a>gf <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(GaltonFamilies)</span>
+<span id="cb4-2"><a href="model.html#cb4-2" aria-hidden="true" tabindex="-1"></a>gf</span></code></pre></div>
+<pre><code>## # A tibble: 934 × 8
+##    family father mother midparentHeight children childNum gender childHeight
+##    &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt; &lt;fct&gt;        &lt;dbl&gt;
+##  1 001      78.5   67              75.4        4        1 male          73.2
+##  2 001      78.5   67              75.4        4        2 female        69.2
+##  3 001      78.5   67              75.4        4        3 female        69  
+##  4 001      78.5   67              75.4        4        4 female        69  
+##  5 002      75.5   66.5            73.7        4        1 male          73.5
+##  6 002      75.5   66.5            73.7        4        2 male          72.5
+##  7 002      75.5   66.5            73.7        4        3 female        65.5
+##  8 002      75.5   66.5            73.7        4        4 female        65.5
+##  9 003      75     64              72.1        2        1 male          71  
+## 10 003      75     64              72.1        2        2 female        68  
+## # … with 924 more rows</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="model.html#cb6-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="model.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-3"><a href="model.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(father, childHeight)) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="model.html#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;father&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;son&#39;s height&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="model.html#cb7-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="model.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-3"><a href="model.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(mother, childHeight)) <span class="sc">+</span></span>
+<span id="cb7-4"><a href="model.html#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;mother&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;daughter&#39;s height&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<blockquote>
+<p>“The heights of descendants of tall ancestors tend to regress down towards a normal average (a phenomenon also known as regression toward the mean).”</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="model.html#cb8-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="model.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="model.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb8-4"><a href="model.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="model.html#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;father&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;son&#39;s height&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="model.html#cb10-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="model.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(mother, childHeight)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="model.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-4"><a href="model.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="model.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;mother&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;daughter&#39;s height&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="model.html#cb12-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="model.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = childHeight ~ father, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -9.3959 -1.5122  0.0413  1.6217  9.3808 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 38.36258    3.30837  11.596   &lt;2e-16 ***
+## father       0.44652    0.04783   9.337   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.416 on 479 degrees of freedom
+## Multiple R-squared:  0.154,  Adjusted R-squared:  0.1522 
+## F-statistic: 87.17 on 1 and 479 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="model.html#cb14-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="model.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> mother, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = childHeight ~ mother, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -6.8749 -1.5340  0.0799  1.4434  6.7616 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 43.68897    3.00171  14.555  &lt; 2e-16 ***
+## mother       0.31824    0.04676   6.805 3.22e-11 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.246 on 451 degrees of freedom
+## Multiple R-squared:  0.09313,    Adjusted R-squared:  0.09111 
+## F-statistic: 46.31 on 1 and 451 DF,  p-value: 3.222e-11</code></pre>
+<ul>
+<li><strong>midparentHeight:</strong>
+mid-parent height, calculated as (father + 1.08*mother)/2</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="model.html#cb16-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-2"><a href="model.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> midparentHeight, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = childHeight ~ midparentHeight, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -9.5431 -1.5160  0.1844  1.5082  9.0860 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     19.91346    4.08943   4.869 1.52e-06 ***
+## midparentHeight  0.71327    0.05912  12.064  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.3 on 479 degrees of freedom
+## Multiple R-squared:  0.2331, Adjusted R-squared:  0.2314 
+## F-statistic: 145.6 on 1 and 479 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="summary-of-the-data" class="section level4 hasAnchor" number="13.3.2.4">
+<h4><span class="header-section-number">13.3.2.4</span> Summary of the Data<a href="model.html#summary-of-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="model.html#cb18-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>##      family        father         mother      midparentHeight    children     
+##  185    : 15   Min.   :62.0   Min.   :58.00   Min.   :64.40   Min.   : 1.000  
+##  066    : 11   1st Qu.:68.0   1st Qu.:63.00   1st Qu.:68.14   1st Qu.: 4.000  
+##  120    : 11   Median :69.0   Median :64.00   Median :69.25   Median : 6.000  
+##  130    : 11   Mean   :69.2   Mean   :64.09   Mean   :69.21   Mean   : 6.171  
+##  166    : 11   3rd Qu.:71.0   3rd Qu.:65.88   3rd Qu.:70.14   3rd Qu.: 8.000  
+##  097    : 10   Max.   :78.5   Max.   :70.50   Max.   :75.43   Max.   :15.000  
+##  (Other):865                                                                  
+##     childNum         gender     childHeight   
+##  Min.   : 1.000   female:453   Min.   :56.00  
+##  1st Qu.: 2.000   male  :481   1st Qu.:64.00  
+##  Median : 3.000                Median :66.50  
+##  Mean   : 3.586                Mean   :66.75  
+##  3rd Qu.: 5.000                3rd Qu.:69.70  
+##  Max.   :15.000                Max.   :79.00  
+## </code></pre>
+<p>The following information can be found in summary above.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="model.html#cb20-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">n_father =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(father)), </span>
+<span id="cb20-2"><a href="model.html#cb20-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_mother =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(mother)), </span>
+<span id="cb20-3"><a href="model.html#cb20-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_male =</span> <span class="fu">sum</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>),</span>
+<span id="cb20-4"><a href="model.html#cb20-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_female =</span> <span class="fu">sum</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>))</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 4
+##   n_father n_mother n_male n_female
+##      &lt;int&gt;    &lt;int&gt;  &lt;int&gt;    &lt;int&gt;
+## 1      934      934    481      453</code></pre>
+</div>
+<div id="what-type-of-variation-occurs-within-my-variables" class="section level4 hasAnchor" number="13.3.2.5">
+<h4><span class="header-section-number">13.3.2.5</span> What type of variation occurs within my variables?<a href="model.html#what-type-of-variation-occurs-within-my-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="model.html#cb22-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(childHeight) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>##   childHeight   
+##  Min.   :56.00  
+##  1st Qu.:64.00  
+##  Median :66.50  
+##  Mean   :66.75  
+##  3rd Qu.:69.70  
+##  Max.   :79.00</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="model.html#cb24-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb24-2"><a href="model.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<ul>
+<li><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html"><code>geom_boxplot()</code></a></li>
+</ul>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="model.html#cb25-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb25-2"><a href="model.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight))</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="model.html#cb27-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(gender, childHeight) <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="model.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
+<span id="cb27-3"><a href="model.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">q1 =</span> <span class="fu">quantile</span>(childHeight, <span class="fl">0.25</span>), <span class="at">med =</span> <span class="fu">median</span>(childHeight), <span class="at">q3 =</span> <span class="fu">quantile</span>(childHeight, <span class="fl">0.75</span>), <span class="at">left =</span> q1 <span class="sc">-</span> <span class="fl">1.5</span><span class="sc">*</span>(q3<span class="sc">-</span>q1), <span class="at">right =</span> q3 <span class="sc">+</span> <span class="fl">1.5</span><span class="sc">*</span>(q3<span class="sc">-</span>q1))</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+##   gender    q1   med    q3  left right
+##   &lt;fct&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 female  62.5  64    65.5  58    70  
+## 2 male    67.5  69.2  71    62.2  76.2</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="model.html#cb29-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb29-2"><a href="model.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">y =</span> gender))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="model.html#cb30-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb30-2"><a href="model.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">fill =</span> gender), <span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="model.html#cb32-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb32-2"><a href="model.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">fill =</span> gender)) <span class="sc">+</span></span>
+<span id="cb32-3"><a href="model.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="model.html#cb34-1" aria-hidden="true" tabindex="-1"></a>mm <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-2"><a href="model.html#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(childHeight)), <span class="at">ave =</span> <span class="fu">mean</span>(childHeight), <span class="at">se =</span> <span class="fu">sd</span>(childHeight))</span>
+<span id="cb34-3"><a href="model.html#cb34-3" aria-hidden="true" tabindex="-1"></a>mm</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##       m   ave    se
+##   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1   481  69.2  2.62</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="model.html#cb36-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb36-2"><a href="model.html#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight)) <span class="sc">+</span> </span>
+<span id="cb36-3"><a href="model.html#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb36-4"><a href="model.html#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb36-5"><a href="model.html#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave <span class="sc">-</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb36-6"><a href="model.html#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave <span class="sc">+</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="model.html#cb38-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a href="model.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(childHeight <span class="sc">&gt;=</span> mm<span class="sc">$</span>ave <span class="sc">-</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb38-3"><a href="model.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(childHeight <span class="sc">&lt;=</span> mm<span class="sc">$</span>ave <span class="sc">+</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb38-4"><a href="model.html#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(childHeight)), <span class="at">ratio =</span> n<span class="sc">/</span>mm<span class="sc">$</span>m)</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 2
+##       n ratio
+##   &lt;int&gt; &lt;dbl&gt;
+## 1   458 0.952</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="model.html#cb40-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb40-2"><a href="model.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
+<span id="cb40-3"><a href="model.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
+<span id="cb40-4"><a href="model.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="model.html#cb41-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb41-2"><a href="model.html#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
+<span id="cb41-3"><a href="model.html#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
+<span id="cb41-4"><a href="model.html#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="model.html#cb42-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> </span>
+<span id="cb42-2"><a href="model.html#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
+<span id="cb42-3"><a href="model.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
+<span id="cb42-4"><a href="model.html#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="model.html#cb43-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb43-2"><a href="model.html#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">color =</span> gender))</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="model.html#cb45-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb45-2"><a href="model.html#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> father), <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb45-3"><a href="model.html#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> mother), <span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="model.html#cb47-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb47-2"><a href="model.html#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> father), <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb47-3"><a href="model.html#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> mother), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="model.html#cb49-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb49-2"><a href="model.html#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> childHeight))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="model.html#cb50-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(father, mother) <span class="sc">%&gt;%</span></span>
+<span id="cb50-2"><a href="model.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">&quot;parents&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;height&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb50-3"><a href="model.html#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb50-4"><a href="model.html#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> parents, <span class="at">y =</span> height))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-30-1.png" width="672" />
+##### R commands on statistical measurements</p>
+<p><strong>One Variable</strong></p>
+<ul>
+<li>mean: average, i.e., the sum of values divided by the number of values.
+<ul>
+<li><code>mean()</code> or <code>mean(x, na.rm = TRUE)</code></li>
+</ul></li>
+<li>median: middle value, i.e., the value separating the higher half from the lower half of a data sample.
+<ul>
+<li><code>median()</code> or <code>median(x, na.rm = TRUE)</code></li>
+</ul></li>
+<li>quantile: <code>quantile()</code> or <code>quantile(x, na.rm = TRUE)</code></li>
+<li>variance: spread from the mean i.e., the expectation of the squared standard deviation of a variable from its mean, or how much a set of numbers are spread out from the mean.
+<ul>
+<li><code>var()</code> or <code>var(x, na.rm = TRUE)</code></li>
+</ul></li>
+<li>standard deviation: a measure of spread from the mean, i.e., a measure that is used to quantify the amount of variation or dispersion of a set of data value. The standard deviation is the square root of the variance.
+<ul>
+<li><code>sd()</code></li>
+</ul></li>
+</ul>
+<p><strong>More Than One variable</strong></p>
+<ul>
+<li>covariance: a measure indicating the extent to which two random variables change in tandem (either positively or negatively). It’s unit is that of the variable. A large covariance can mean a strong relationship between variables.
+<ul>
+<li><code>cov()</code></li>
+</ul></li>
+<li>correlation: a statistical measure that indicates how strongly two variables are related. It’s a scaled version of covariance. It’s value always lies between -1 and +1.
+<ul>
+<li><code>cor()</code>, cor(x, y, use = “everything”)
+<ul>
+<li>A resulting value will be NA whenever one of its contributing observations is NA.</li>
+</ul></li>
+<li>`cor(x, y, use = “pairwise.complete.obs”)
+<ul>
+<li>It uses all complete pairs of observations on those variables.</li>
+</ul></li>
+</ul></li>
+<li>summary()</li>
+</ul>
+</div>
+<div id="what-type-of-covariation-occurs-between-my-variables" class="section level4 hasAnchor" number="13.3.2.6">
+<h4><span class="header-section-number">13.3.2.6</span> What type of covariation occurs between my variables?<a href="model.html#what-type-of-covariation-occurs-between-my-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="model.html#cb51-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb51-2"><a href="model.html#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> father, <span class="at">y =</span> childHeight, <span class="at">color =</span> gender))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="model.html#cb52-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb52-2"><a href="model.html#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> father, <span class="at">y =</span> childHeight, <span class="at">color =</span> gender)) <span class="sc">+</span></span>
+<span id="cb52-3"><a href="model.html#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="model.html#cb53-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(father, mother, gender, childHeight) <span class="sc">%&gt;%</span></span>
+<span id="cb53-2"><a href="model.html#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb53-3"><a href="model.html#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="st">&quot;cor_w/father&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(father, childHeight), <span class="st">&quot;sq_w/father&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(father, childHeight)<span class="sc">^</span><span class="dv">2</span>, <span class="st">&quot;cor_w/mother&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(mother, childHeight), <span class="st">&quot;sq_w/mother&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(mother, childHeight)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 5
+##   gender `cor_w/father` `sq_w/father` `cor_w/mother` `sq_w/mother`
+##   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;
+## 1 female          0.428         0.184          0.305        0.0931
+## 2 male            0.392         0.154          0.323        0.104</code></pre>
+<ul>
+<li>Let <span class="math inline">\(x = c(x_1, x_2, \ldots, x_n)\)</span> be the independent variable, e.g., the height of fathers</li>
+<li>Let <span class="math inline">\(y = c(y_1, y_2, \ldots, y_n)\)</span> be the dependent variable, i.e., height of children</li>
+<li>Let <span class="math inline">\(\mbox{pred} = c(\hat{y}_1, \hat{y}_2, \ldots, \hat{y}_n)\)</span> be the predicted values by linear regression.</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+\mbox{unbiased covariance: } cov(x,y) &amp;= \frac{\sum_{i=1}^n(x_i - mean(x))(y_i - mean(y))}{n-1}\\
+\mbox{unviased variance: } var(x) &amp;= cov(x,x) \\
+\mbox{correlation: } cor(x.y) &amp;= \frac{cov(x,y)}{\sqrt{var(x)var(y)}}\\
+\mbox{slope of the regression line}  &amp;= \frac{cov(x,y)}{var(x)} = \frac{cor(x,y)\sqrt{var(y)}}{\sqrt{var(x)}}\\
+\mbox{total sum of squares} &amp;= SS_{tot} = \sum_{i=1}^n((y_i-mean(y))^2)\\
+\mbox{residual sum of squares} &amp;= SS_{res} = \sum_{i=1}^n((y_i-\hat{y}_i)^2)\\
+\mbox{R squared} = R^2 &amp; = 1 - \frac{SS_{res}}{SS_{tot}} = cor(x,y)^2
+\end{aligned}
+\]</span></p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="model.html#cb55-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight, <span class="at">color =</span> gender)) <span class="sc">+</span> </span>
+<span id="cb55-2"><a href="model.html#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) </span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="model.html#cb57-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight, <span class="at">group =</span> gender)) <span class="sc">+</span> </span>
+<span id="cb57-2"><a href="model.html#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb57-3"><a href="model.html#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="model.html#cb59-1" aria-hidden="true" tabindex="-1"></a>mod_mf <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, .) </span>
+<span id="cb59-2"><a href="model.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_mf)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = childHeight ~ father, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -9.3959 -1.5122  0.0413  1.6217  9.3808 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 38.36258    3.30837  11.596   &lt;2e-16 ***
+## father       0.44652    0.04783   9.337   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.416 on 479 degrees of freedom
+## Multiple R-squared:  0.154,  Adjusted R-squared:  0.1522 
+## F-statistic: 87.17 on 1 and 479 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="model.html#cb61-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb61-2"><a href="model.html#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod_mf) <span class="sc">%&gt;%</span> </span>
+<span id="cb61-3"><a href="model.html#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(mod_mf)</span></code></pre></div>
+<pre><code>## # A tibble: 481 × 10
+##    family father mother midparentH…¹ child…² child…³ gender child…⁴  pred  resid
+##    &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+##  1 001      78.5   67           75.4       4       1 male      73.2  73.4 -0.215
+##  2 002      75.5   66.5         73.7       4       1 male      73.5  72.1  1.42 
+##  3 002      75.5   66.5         73.7       4       2 male      72.5  72.1  0.425
+##  4 003      75     64           72.1       2       1 male      71    71.9 -0.852
+##  5 004      75     64           72.1       5       1 male      70.5  71.9 -1.35 
+##  6 004      75     64           72.1       5       2 male      68.5  71.9 -3.35 
+##  7 005      75     58.5         69.1       6       1 male      72    71.9  0.148
+##  8 005      75     58.5         69.1       6       2 male      69    71.9 -2.85 
+##  9 005      75     58.5         69.1       6       3 male      68    71.9 -3.85 
+## 10 007      74     68           73.7       6       1 male      76.5  71.4  5.09 
+## # … with 471 more rows, and abbreviated variable names ¹​midparentHeight,
+## #   ²​children, ³​childNum, ⁴​childHeight</code></pre>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="model.html#cb63-1" aria-hidden="true" tabindex="-1"></a>mod_ff <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, .) </span>
+<span id="cb63-2"><a href="model.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_ff)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = childHeight ~ father, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -7.6234 -1.5047 -0.0767  1.4953  6.7831 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 37.69497    2.62458   14.36   &lt;2e-16 ***
+## father       0.38130    0.03787   10.07   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.131 on 451 degrees of freedom
+## Multiple R-squared:  0.1836, Adjusted R-squared:  0.1817 
+## F-statistic: 101.4 on 1 and 451 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="model.html#cb65-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb65-2"><a href="model.html#cb65-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod_ff) <span class="sc">%&gt;%</span> </span>
+<span id="cb65-3"><a href="model.html#cb65-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(mod_ff)</span></code></pre></div>
+<pre><code>## # A tibble: 453 × 10
+##    family father mother midparentH…¹ child…² child…³ gender child…⁴  pred  resid
+##    &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+##  1 001      78.5   67           75.4       4       2 female    69.2  67.6  1.57 
+##  2 001      78.5   67           75.4       4       3 female    69    67.6  1.37 
+##  3 001      78.5   67           75.4       4       4 female    69    67.6  1.37 
+##  4 002      75.5   66.5         73.7       4       3 female    65.5  66.5 -0.983
+##  5 002      75.5   66.5         73.7       4       4 female    65.5  66.5 -0.983
+##  6 003      75     64           72.1       2       2 female    68    66.3  1.71 
+##  7 004      75     64           72.1       5       3 female    67    66.3  0.707
+##  8 004      75     64           72.1       5       4 female    64.5  66.3 -1.79 
+##  9 004      75     64           72.1       5       5 female    63    66.3 -3.29 
+## 10 005      75     58.5         69.1       6       4 female    66.5  66.3  0.207
+## # … with 443 more rows, and abbreviated variable names ¹​midparentHeight,
+## #   ²​children, ³​childNum, ⁴​childHeight</code></pre>
+<div id="basic-facts" class="section level5 hasAnchor" number="13.3.2.6.1">
+<h5><span class="header-section-number">13.3.2.6.1</span> Basic Facts<a href="model.html#basic-facts" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(-1 \leq cor(x,y) \leq 1\)</span>: positive (or negative) correlation</li>
+<li>If <span class="math inline">\(cor(x,y)\)</span> is positive [resp. negative], the slope of the regression line is positive [resp. negative].</li>
+<li>If the possibility of the slope of the regression line being zero is very low, <span class="math inline">\(p\)</span>-value of the slope becomes very small.</li>
+<li>R squared is the square of <span class="math inline">\(cor(x,y)\)</span> which is between 0 and 1.</li>
+<li>If the regression line fits well, R squared value is close to 1.</li>
+</ol>
+<p>What do you want to observe from this dataset?</p>
+<p>Reference: <a href="https://rafalab.github.io/dsbook/regression.html#regression">Introduction to Data Science by Rafael A. Irizarry, Chapter 18 Regression</a> includes a Galton’s example.</p>
+</div>
+</div>
+<div id="visual-illustration" class="section level4 hasAnchor" number="13.3.2.7">
+<h4><span class="header-section-number">13.3.2.7</span> Visual Illustration<a href="model.html#visual-illustration" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-1.-strong-positive-correlation" class="section level5 hasAnchor" number="13.3.2.7.1">
+<h5><span class="header-section-number">13.3.2.7.1</span> Example 1. Strong positive correlation<a href="model.html#example-1.-strong-positive-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="model.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb67-2"><a href="model.html#cb67-2" aria-hidden="true" tabindex="-1"></a>dt1 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.8</span>, <span class="fl">0.8</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span></code></pre></div>
+<pre><code>## Warning: The `x` argument of `as_tibble.matrix()` must have unique column names if `.name_repair` is omitted as of tibble 2.0.0.
+## Using compatibility `.name_repair`.</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="model.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb69-2"><a href="model.html#cb69-2" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="model.html#cb70-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##     cor   ave1   ave2
+##   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 0.794 0.0751 0.0814</code></pre>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="model.html#cb72-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb72-2"><a href="model.html#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb72-3"><a href="model.html#cb72-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb72-4"><a href="model.html#cb72-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb72-5"><a href="model.html#cb72-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="model.html#cb74-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = V2 ~ V1, data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.54654 -0.39681  0.01574  0.42024  2.27416 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  0.02194    0.02704   0.811    0.417    
+## V1           0.79149    0.02717  29.133   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.6028 on 498 degrees of freedom
+## Multiple R-squared:  0.6302, Adjusted R-squared:  0.6295 
+## F-statistic: 848.7 on 1 and 498 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="example-2.-weak-positive-correlation" class="section level5 hasAnchor" number="13.3.2.7.2">
+<h5><span class="header-section-number">13.3.2.7.2</span> Example 2. Weak positive correlation<a href="model.html#example-2.-weak-positive-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="model.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb76-2"><a href="model.html#cb76-2" aria-hidden="true" tabindex="-1"></a>dt2 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
+<span id="cb76-3"><a href="model.html#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb76-4"><a href="model.html#cb76-4" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="model.html#cb77-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##     cor   ave1   ave2
+##   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 0.184 0.0576 0.0702</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="model.html#cb79-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb79-2"><a href="model.html#cb79-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb79-3"><a href="model.html#cb79-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt2<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb79-4"><a href="model.html#cb79-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt2<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb79-5"><a href="model.html#cb79-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="model.html#cb81-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = V2 ~ V1, data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -2.7468 -0.6567 -0.0172  0.6584  3.9938 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  0.05962    0.04383   1.360    0.174    
+## V1           0.18290    0.04384   4.173 3.56e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.9785 on 498 degrees of freedom
+## Multiple R-squared:  0.03378,    Adjusted R-squared:  0.03184 
+## F-statistic: 17.41 on 1 and 498 DF,  p-value: 3.555e-05</code></pre>
+</div>
+<div id="example-3.-strong-negative-correlation" class="section level5 hasAnchor" number="13.3.2.7.3">
+<h5><span class="header-section-number">13.3.2.7.3</span> Example 3. Strong negative correlation<a href="model.html#example-3.-strong-negative-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="model.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb83-2"><a href="model.html#cb83-2" aria-hidden="true" tabindex="-1"></a>dt3 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.8</span>, <span class="sc">-</span><span class="fl">0.8</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
+<span id="cb83-3"><a href="model.html#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt3) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb83-4"><a href="model.html#cb83-4" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="model.html#cb84-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##      cor    ave1   ave2
+##    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 -0.794 -0.0814 0.0751</code></pre>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="model.html#cb86-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb86-2"><a href="model.html#cb86-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb86-3"><a href="model.html#cb86-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb86-4"><a href="model.html#cb86-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb86-5"><a href="model.html#cb86-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="model.html#cb88-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = V2 ~ V1, data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.78510 -0.40850  0.00444  0.37938  1.84887 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  0.01030    0.02713   0.379    0.704    
+## V1          -0.79624    0.02733 -29.133   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.6046 on 498 degrees of freedom
+## Multiple R-squared:  0.6302, Adjusted R-squared:  0.6295 
+## F-statistic: 848.7 on 1 and 498 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="example-4.-weak-negative-correlation" class="section level5 hasAnchor" number="13.3.2.7.4">
+<h5><span class="header-section-number">13.3.2.7.4</span> Example 4. Weak negative correlation<a href="model.html#example-4.-weak-negative-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="model.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb90-2"><a href="model.html#cb90-2" aria-hidden="true" tabindex="-1"></a>dt4 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.2</span>, <span class="sc">-</span><span class="fl">0.2</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
+<span id="cb90-3"><a href="model.html#cb90-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt4) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb90-4"><a href="model.html#cb90-4" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="model.html#cb91-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##      cor    ave1   ave2
+##    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 -0.184 -0.0702 0.0576</code></pre>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="model.html#cb93-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb93-2"><a href="model.html#cb93-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb93-3"><a href="model.html#cb93-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb93-4"><a href="model.html#cb93-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb93-5"><a href="model.html#cb93-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="model.html#cb95-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = V2 ~ V1, data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.67763 -0.72072 -0.03253  0.67127  2.95515 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  0.04463    0.04408   1.012    0.312    
+## V1          -0.18468    0.04426  -4.173 3.56e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.9833 on 498 degrees of freedom
+## Multiple R-squared:  0.03378,    Adjusted R-squared:  0.03184 
+## F-statistic: 17.41 on 1 and 498 DF,  p-value: 3.555e-05</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="examples-2" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Examples<a href="model.html#examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="cars" class="section level3 hasAnchor" number="13.4.1">
+<h3><span class="header-section-number">13.4.1</span> <code>cars</code><a href="model.html#cars" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="model.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="model.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="model.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars) <span class="co"># cars: Speed and Stopping Distances of Cars</span></span>
+<span id="cb99-2"><a href="model.html#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(cars<span class="sc">$</span>dist<span class="sc">~</span>cars<span class="sc">$</span>speed))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="model.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(cars<span class="sc">$</span>dist<span class="sc">~</span>cars<span class="sc">$</span>speed))</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = cars$dist ~ cars$speed)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -29.069  -9.525  -2.272   9.215  43.201 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -17.5791     6.7584  -2.601   0.0123 *  
+## cars$speed    3.9324     0.4155   9.464 1.49e-12 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.38 on 48 degrees of freedom
+## Multiple R-squared:  0.6511, Adjusted R-squared:  0.6438 
+## F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
+<div id="model-analysis-with-tidyverse-modelr-1" class="section level4 hasAnchor" number="13.4.1.1">
+<h4><span class="header-section-number">13.4.1.1</span> Model Analysis with <code>tidyverse</code>: <code>modelr</code><a href="model.html#model-analysis-with-tidyverse-modelr-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Tidymodels: <a href="https://www.tidymodels.org" class="uri">https://www.tidymodels.org</a></li>
+<li><code>modelr</code>: <a href="https://modelr.tidyverse.org" class="uri">https://modelr.tidyverse.org</a>
+<ul>
+<li><a href="https://modelr.tidyverse.org/reference/model-quality.html">Compute model quality for a given dataset</a></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="model.html#cb102-1" aria-hidden="true" tabindex="-1"></a>t_cars <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="model.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars) <span class="sc">+</span></span>
+<span id="cb103-2"><a href="model.html#cb103-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(speed, dist))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="model.html#cb104-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> t_cars)</span>
+<span id="cb104-2"><a href="model.html#cb104-2" aria-hidden="true" tabindex="-1"></a>mod</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = dist ~ speed, data = t_cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932</code></pre>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="model.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = dist ~ speed, data = t_cars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -29.069  -9.525  -2.272   9.215  43.201 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -17.5791     6.7584  -2.601   0.0123 *  
+## speed         3.9324     0.4155   9.464 1.49e-12 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.38 on 48 degrees of freedom
+## Multiple R-squared:  0.6511, Adjusted R-squared:  0.6438 
+## F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
+<p>Note that <code>cor(speed, dist)</code> = 0.8068949.</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="model.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars, <span class="fu">aes</span>(speed, dist)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb108-2"><a href="model.html#cb108-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="fu">coef</span>(mod)[[<span class="dv">2</span>]], <span class="at">intercept =</span> <span class="fu">coef</span>(mod)[[<span class="dv">1</span>]])</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="model.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars, <span class="fu">aes</span>(speed, dist)) <span class="sc">+</span> <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb109-2"><a href="model.html#cb109-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+</div>
+<div id="predictions-haty-a_1-a_2x-and-residuals-y---haty-1" class="section level4 hasAnchor" number="13.4.1.2">
+<h4><span class="header-section-number">13.4.1.2</span> Predictions <span class="math inline">\(\hat{y} = a_1 + a_2x\)</span> and Residuals <span class="math inline">\(y - \hat{y}\)</span><a href="model.html#predictions-haty-a_1-a_2x-and-residuals-y---haty-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="model.html#cb111-1" aria-hidden="true" tabindex="-1"></a>mod_table <span class="ot">&lt;-</span> t_cars <span class="sc">%&gt;%</span> <span class="fu">add_predictions</span>(mod) <span class="sc">%&gt;%</span> <span class="fu">add_residuals</span>(mod, <span class="at">var =</span> <span class="st">&quot;resid&quot;</span>)</span>
+<span id="cb111-2"><a href="model.html#cb111-2" aria-hidden="true" tabindex="-1"></a>mod_table</span></code></pre></div>
+<pre><code>## # A tibble: 50 × 4
+##    speed  dist  pred resid
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1     4     2 -1.85  3.85
+##  2     4    10 -1.85 11.8 
+##  3     7     4  9.95 -5.95
+##  4     7    22  9.95 12.1 
+##  5     8    16 13.9   2.12
+##  6     9    10 17.8  -7.81
+##  7    10    18 21.7  -3.74
+##  8    10    26 21.7   4.26
+##  9    10    34 21.7  12.3 
+## 10    11    17 25.7  -8.68
+## # … with 40 more rows</code></pre>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="model.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_table)</span></code></pre></div>
+<pre><code>##      speed           dist             pred            resid        
+##  Min.   : 4.0   Min.   :  2.00   Min.   :-1.849   Min.   :-29.069  
+##  1st Qu.:12.0   1st Qu.: 26.00   1st Qu.:29.610   1st Qu.: -9.525  
+##  Median :15.0   Median : 36.00   Median :41.407   Median : -2.272  
+##  Mean   :15.4   Mean   : 42.98   Mean   :42.980   Mean   :  0.000  
+##  3rd Qu.:19.0   3rd Qu.: 56.00   3rd Qu.:57.137   3rd Qu.:  9.215  
+##  Max.   :25.0   Max.   :120.00   Max.   :80.731   Max.   : 43.201</code></pre>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="model.html#cb115-1" aria-hidden="true" tabindex="-1"></a>mod_table <span class="sc">%&gt;%</span> </span>
+<span id="cb115-2"><a href="model.html#cb115-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(speed, resid)) <span class="sc">+</span> </span>
+<span id="cb115-3"><a href="model.html#cb115-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<ul>
+<li><code>geom_jitter()</code></li>
+</ul>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="model.html#cb116-1" aria-hidden="true" tabindex="-1"></a>t_cars <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(speed, dist) <span class="sc">%&gt;%</span> </span>
+<span id="cb116-2"><a href="model.html#cb116-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(count))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;speed&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 49 × 3
+## # Groups:   speed [19]
+##    speed  dist count
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;
+##  1    13    34     2
+##  2     4     2     1
+##  3     4    10     1
+##  4     7     4     1
+##  5     7    22     1
+##  6     8    16     1
+##  7     9    10     1
+##  8    10    18     1
+##  9    10    26     1
+## 10    10    34     1
+## # … with 39 more rows</code></pre>
+</div>
+</div>
+<div id="iris-2" class="section level3 hasAnchor" number="13.4.2">
+<h3><span class="header-section-number">13.4.2</span> iris<a href="model.html#iris-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="model.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="model.html#cb120-1" aria-hidden="true" tabindex="-1"></a>t_iris <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(iris)</span>
+<span id="cb120-2"><a href="model.html#cb120-2" aria-hidden="true" tabindex="-1"></a>t_iris</span></code></pre></div>
+<pre><code>## # A tibble: 150 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+##  1          5.1         3.5          1.4         0.2 setosa 
+##  2          4.9         3            1.4         0.2 setosa 
+##  3          4.7         3.2          1.3         0.2 setosa 
+##  4          4.6         3.1          1.5         0.2 setosa 
+##  5          5           3.6          1.4         0.2 setosa 
+##  6          5.4         3.9          1.7         0.4 setosa 
+##  7          4.6         3.4          1.4         0.3 setosa 
+##  8          5           3.4          1.5         0.2 setosa 
+##  9          4.4         2.9          1.4         0.2 setosa 
+## 10          4.9         3.1          1.5         0.1 setosa 
+## # … with 140 more rows</code></pre>
+<div id="linear-model-sepal.width-sepal.length" class="section level4 hasAnchor" number="13.4.2.1">
+<h4><span class="header-section-number">13.4.2.1</span> Linear Model: Sepal.Width ~ Sepal.Length<a href="model.html#linear-model-sepal.width-sepal.length" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="model.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(Sepal.Width <span class="sc">~</span> Sepal.Length, <span class="at">data =</span> t_iris)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Sepal.Width ~ Sepal.Length, data = t_iris)
+## 
+## Coefficients:
+##  (Intercept)  Sepal.Length  
+##      3.41895      -0.06188</code></pre>
+</div>
+<div id="linear-model-petal.width-petal.length" class="section level4 hasAnchor" number="13.4.2.2">
+<h4><span class="header-section-number">13.4.2.2</span> Linear Model: Petal.Width ~ Petal.Length<a href="model.html#linear-model-petal.width-petal.length" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="model.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(Petal.Width <span class="sc">~</span> Petal.Length, <span class="at">data =</span> t_iris)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Petal.Width ~ Petal.Length, data = t_iris)
+## 
+## Coefficients:
+##  (Intercept)  Petal.Length  
+##      -0.3631        0.4158</code></pre>
+</div>
+<div id="correlation-1" class="section level4 hasAnchor" number="13.4.2.3">
+<h4><span class="header-section-number">13.4.2.3</span> Correlation<a href="model.html#correlation-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="model.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<pre><code>##              Sepal.Length Sepal.Width Petal.Length Petal.Width
+## Sepal.Length    1.0000000  -0.1175698    0.8717538   0.8179411
+## Sepal.Width    -0.1175698   1.0000000   -0.4284401  -0.3661259
+## Petal.Length    0.8717538  -0.4284401    1.0000000   0.9628654
+## Petal.Width     0.8179411  -0.3661259    0.9628654   1.0000000</code></pre>
+</div>
+<div id="filterspecies-setosa-1" class="section level4 hasAnchor" number="13.4.2.4">
+<h4><span class="header-section-number">13.4.2.4</span> <code>filter(Species == "setosa")</code><a href="model.html#filterspecies-setosa-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+</div>
+<div id="aessepal.length-sepal.width-color-species" class="section level4 hasAnchor" number="13.4.2.5">
+<h4><span class="header-section-number">13.4.2.5</span> <code>aes(Sepal.Length, Sepal.Width, color = Species)</code><a href="model.html#aessepal.length-sepal.width-color-species" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="model.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_iris, <span class="fu">aes</span>(Sepal.Length, Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
+<span id="cb128-2"><a href="model.html#cb128-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) </span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+</div>
+</div>
+<div id="model-analysis-warnings" class="section level3 hasAnchor" number="13.4.3">
+<h3><span class="header-section-number">13.4.3</span> Model Analysis Warnings<a href="model.html#model-analysis-warnings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="linear-regression-aessepal.length-sepal.width-color-species" class="section level4 hasAnchor" number="13.4.3.1">
+<h4><span class="header-section-number">13.4.3.1</span> Linear Regression: <code>aes(Sepal.Length, Sepal.Width, color = Species)</code><a href="model.html#linear-regression-aessepal.length-sepal.width-color-species" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
+</div>
+<div id="aessepal.length-sepal.width-color-species-1" class="section level4 hasAnchor" number="13.4.3.2">
+<h4><span class="header-section-number">13.4.3.2</span> <code>aes(Sepal.Length, Sepal.Width, color = Species)</code><a href="model.html#aessepal.length-sepal.width-color-species-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+</div>
+<div id="correlation-and-covariance-1" class="section level4 hasAnchor" number="13.4.3.3">
+<h4><span class="header-section-number">13.4.3.3</span> Correlation and Covariance<a href="model.html#correlation-and-covariance-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="model.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<pre><code>##              Sepal.Length Sepal.Width Petal.Length Petal.Width
+## Sepal.Length    1.0000000  -0.1175698    0.8717538   0.8179411
+## Sepal.Width    -0.1175698   1.0000000   -0.4284401  -0.3661259
+## Petal.Length    0.8717538  -0.4284401    1.0000000   0.9628654
+## Petal.Width     0.8179411  -0.3661259    0.9628654   1.0000000</code></pre>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="model.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<pre><code>##              Sepal.Length Sepal.Width Petal.Length Petal.Width
+## Sepal.Length    0.6856935  -0.0424340    1.2743154   0.5162707
+## Sepal.Width    -0.0424340   0.1899794   -0.3296564  -0.1216394
+## Petal.Length    1.2743154  -0.3296564    3.1162779   1.2956094
+## Petal.Width     0.5162707  -0.1216394    1.2956094   0.5810063</code></pre>
+</div>
+</div>
+<div id="regression-analyais-summary-1" class="section level3 hasAnchor" number="13.4.4">
+<h3><span class="header-section-number">13.4.4</span> Regression Analyais: Summary<a href="model.html#regression-analyais-summary-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>R-Squared: Higher the better (&gt; 0.70)
+<ul>
+<li>How well the prediction fit to the data. <span class="math inline">\(0 \leq R2 \leq 1\)</span>.</li>
+<li>For linear regression between two variables <code>x</code> and <code>y</code>, R-squared is the square of <code>cor(x,y)</code>.</li>
+<li>R-Squared can be measured on any prediction model.</li>
+</ul></li>
+<li>t-statistic: The absolute value should be greater 1.96, and for p-value be less than 0.05
+<ul>
+<li>The model and the choice of variable(s) are suitable or not.</li>
+<li>p-value appears in Hypothesis testing (A/B test, sensitivity - specificity, etc.)</li>
+</ul></li>
+</ol>
+<div id="the-asa-statement-on-p-values-context-process-and-purpose-1" class="section level4 hasAnchor" number="13.4.4.1">
+<h4><span class="header-section-number">13.4.4.1</span> <a href="https://amstat.tandfonline.com/doi/pdf/10.1080/00031305.2016.1154108?needAccess=true">The ASA Statement on p-Values: Context, Process, and Purpose</a><a href="model.html#the-asa-statement-on-p-values-context-process-and-purpose-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>P-values can indicate how incompatible the data are with a specified statistical model.</li>
+<li>P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.</li>
+<li>Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.</li>
+<li>Proper inference requires full reporting and transparency.</li>
+<li>A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.</li>
+<li>By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.</li>
+</ol>
+<ul>
+<li><a href="https://www.amstat.org/asa/files/pdfs/P-ValueStatement.pdf">AMERICAN STATISTICAL ASSOCIATION RELEASES STATEMENT ON STATISTICAL SIGNIFICANCE AND P-VALUES</a></li>
+</ul>
+</div>
+<div id="linear-regression-quick-reference-1" class="section level4 hasAnchor" number="13.4.4.2">
+<h4><span class="header-section-number">13.4.4.2</span> Linear Regression Quick Reference<a href="model.html#linear-regression-quick-reference-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Textbook: R for Data Science
+<ul>
+<li>Introduction to Model: <a href="https://r4ds.had.co.nz/model-intro.html#model-intro" class="uri">https://r4ds.had.co.nz/model-intro.html#model-intro</a></li>
+<li>Model Basics: <a href="https://r4ds.had.co.nz/model-basics.html#model-basics" class="uri">https://r4ds.had.co.nz/model-basics.html#model-basics</a></li>
+</ul></li>
+<li>Introduction to Data Science by Rafael A. Irizarry, Chapters 18, 19:
+<ul>
+<li>Regression: <a href="https://rafalab.github.io/dsbook/regression.html#regression" class="uri">https://rafalab.github.io/dsbook/regression.html#regression</a></li>
+<li>Linear Models: <a href="https://rafalab.github.io/dsbook/linear-models.html#linear-models" class="uri">https://rafalab.github.io/dsbook/linear-models.html#linear-models</a></li>
+</ul></li>
+<li>DataCamp:
+<ul>
+<li><a href="https://www.datacamp.com/community/tutorials/linear-regression-R" class="uri">https://www.datacamp.com/community/tutorials/linear-regression-R</a>
+<ol style="list-style-type: decimal">
+<li>What is a linear regression?</li>
+<li>Creating a linear regression in R.</li>
+<li>Learn the concepts of coefficients and residuals.</li>
+<li>How to test if your linear model has a good fit?</li>
+<li>Detecting influential points.</li>
+</ol></li>
+<li>DataCamp Top: <a href="https://www.datacamp.com" class="uri">https://www.datacamp.com</a> - to be introduced</li>
+</ul></li>
+<li>r-statistics.co by Selva Prabhakaran:
+<ul>
+<li><a href="http://r-statistics.co/Linear-Regression.html" class="uri">http://r-statistics.co/Linear-Regression.html</a>
+<ul>
+<li>The aim of linear regression is to model a continuous variable Y as a mathematical function of one or more X variable(s), so that we can use this regression model to predict the Y when only the X is known. This mathematical equation can be generalized as follows:</li>
+<li><span class="math inline">\(Y = \beta_1 + \beta_2 X + \varepsilon\)</span></li>
+</ul></li>
+<li>r-statistics.co Top: <a href="http://r-statistics.co" class="uri">http://r-statistics.co</a>
+<ul>
+<li>An educational resource for those seeking knowledge related to machine learning and statistical computing in R.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="public.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ds-sl/da4r/edit/master/13-modeling.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ds-sl/da4r/blob/master/13-modeling.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

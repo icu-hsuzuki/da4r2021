@@ -1,0 +1,650 @@
+# A2. Public Data {#public}
+
+## Introduction
+
+### Open Data Defined by World Bank
+
+* See the following URL: http://opendatatoolkit.worldbank.org
+
+The term "Open Data" has a very precise meaning. Data or content is open if anyone is free to use, re-use or redistribute it, subject at most to measures that preserve provenance and openness.
+
+1. The data must be \underline{legally open}, which means they must be placed in the public domain or under liberal terms of use with minimal restrictions.
+2. The data must be \underline{technically open}, which means they must be published in electronic formats that are machine readable and non-proprietary, so that anyone can access and use the data using common, freely available software tools. Data must also be publicly available and accessible on a public server, without password or firewall restrictions. To make Open Data easier to find, most organizations create and manage Open Data catalogs.
+
+
+### A List of Open Data Catalogue
+
+#### International Institutions
+
+* World Bank: _New Ways of Looking at Poverty_
+  -  Open Data: https://data.worldbank.org
+  -  World Development Indicators: http://datatopics.worldbank.org/world-development-indicators/
+* UN Data: http://data.un.org
+* WHO Data: https://www.who.int/gho/en/
+* OECD: https://data.oecd.org
+* European Union: http://data.europa.eu/euodp/en/home
+* African Union: https://au.int/en/ea/statistics
+
+#### Goverments
+
+* United States: https://www.data.gov
+* United Kingdom: https://data.gov.uk
+* China: http://www.stats.gov.cn/english/
+* Japan: https://www.data.go.jp/list-of-database/?lang=en
+
+#### Other Open Public Data
+
+* Google Public Data Explore: https://www.google.com/publicdata/directory?hl=en_US
+  - Google Dataset Search: https://toolbox.google.com/datasetsearch
+  - Google Trends: https://trends.google.com/trends/?geo=US
+* Open Knowledge Foundation: https://okfn.org
+  - Global Open Data Index: https://index.okfn.org
+  - A global, non-profit network that promotes and shares information at no charge, including both content and data. It was founded by Rufus Pollock on 20 May 2004 and launched on 24 May 2004 in Cambridge, UK. It is incorporated in England and Wales as a company limited by guarantee. \hfill (Wikipedia)
+* Our World in Data: https://ourworldindata.org
+  - A scientific online publication that focuses on large global problems such as poverty, disease, hunger, climate change, war, existential risks, and inequality.
+The publication's founder is the social historian and development economist Max Roser. The research team is based at the University of Oxford. \hfill (Wikipedia)
+
+
+#### Financial Data
+
+##### Quandl
+
+* [Quandl](https://www.quandl.com)
+* R package: https://cran.r-project.org/web/packages/Quandl/Quandl.pdf
+* Quandl: [Bitcoin Market Price USD](https://www.quandl.com/data/BCHAIN/MKPRU-Bitcoin-Market-Price-USD)
+
+
+##### Quantmod   
+
+* [`quantmod`](http://www.quantmod.com): Quantitative Financial Modelling & Trading Framework for `R` 
+* `R` package `quantmod: https://cran.r-project.org/web/packages/quantmod/quantmod.pdf
+* [`quantmod` R documentation](https://www.rdocumentation.org/packages/quantmod/versions/0.4-16)
+* [Yahoo Finance Data Using `quantmod`](https://www.rdocumentation.org/packages/quantmod/versions/0.4-16/topics/getSymbols.yahoo)
+* Reference: [CryptCurrency Bitcoin Analysis Using `quantmod`](https://rstudio-pubs-static.s3.amazonaws.com/350293_4a6865773da942278d9ef8880b33a834.html)
+
+
+
+### Examples
+
+#### Florence Nightingale (1820 – 1910)
+
+> Florence Nightingale was an English social reformer, statistician and the founder of modern nursing. ([wikipedia](https://en.wikipedia.org/wiki/Florence_Nightingale))
+
+* [Diagram of the Causes of Motality in the Army in the East](https://en.wikipedia.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg)
+* [Insights in Social History, Books and Research by Hugh Small](http://www.florence-nightingale-avenging-angel.co.uk) 
+    * Florence Nightingale's Statistical Diagrams: https://www.york.ac.uk/depts/maths/histstat/small.htm
+* [Florence Nightingale Museum](https://www.florence-nightingale.co.uk)
+  - https://www.florence-nightingale.co.uk/learning/
+  - Meet Miss Nightingale: https://www.florence-nightingale.co.uk/meet-miss-nightingale/
+* Book: [A contribution to the sanitary history of the British army during the late war with Russia](https://curiosity.lib.harvard.edu/contagion/catalog/36-990101646750203941)
+* Project Gutenberg: [Books by Nightingale, Florence](http://www.gutenberg.org/ebooks/author/4370)
+  - [Notes on Nursing: What It Is, and What It Is Not](http://www.gutenberg.org/ebooks/12439)
+* Nightingale: [The Journal of the Data Visualization Society, Medium](https://medium.com/nightingale/tagged/data-science)
+
+#### Hans Rosling (1948 – 2017)
+
+> Hans Rosling was a Swedish physician, academic, and public speaker. He was a professor of international health at Karolinska Institute[4] and was the co-founder and chairman of the Gapminder Foundation, which developed the Trendalyzer software system. ([wikipedia](https://en.wikipedia.org/wiki/Hans_Rosling))
+
+* Books: 
+  - Factfulness: Ten Reasons We're Wrong About The World - And Why Things Are Better Than You Think, 2018
+  - How I Learned to Understand the World: A Memoir, 2020
+* Gapminder: https://www.gapminder.org
+  - [You are probably wrong about: Upgrade Your World View](https://upgrader.gapminder.org)
+  - [Bubble Chart](https://www.gapminder.org/tools/#$state$time$value=2020;;&chart-type=bubbles): Income vs Life Expectancy over time, 1800 - 2020
+    + How many variables?
+* Videos: [The best stats you’ve ever seen, Hans Rosling](http://www.edtech.events/the-best-stats-youve-ever-seen-hans-rosling/)
+* [Google Public Data](https://www.google.com/publicdata/directory?hl=en_US&dl=en_US#!): [Example: World Development Indicator](https://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&ctype=b&strail=false&nselm=s&met_x=sp_dyn_le00_in&scale_x=lin&ind_x=false&met_y=sp_dyn_tfrt_in&scale_y=lin&ind_y=false&met_s=sp_pop_totl&scale_s=lin&ind_s=false&dimp_c=country:region&ifdim=country&hl=en_US&dl=en_US&iconSize=0.5&uniSize=0.035)
+
+##### Factfulness is ...  _From the book_
+
+recognizing when a decision feels urgent and remembering that it rarely is.
+
+To control the urgency instinct, take small steps.
+
+* Take a breath. When your urgency instinct is triggered, your other instincts kick in and your analysis shuts down. Ask for more time and more information. It’s rarely now or never and it’s rarely either/or.
+* Insist on the data. If something is urgent and important, it should be measured. Beware of data that is relevant but inaccurate, or accurate but irrelevant. Only relevant and accurate data is useful.
+* Beware of fortune-tellers. Any prediction about the future is uncertain. Be wary of predictions that fail to acknowledge that. Insist on a full range of scenarios, never just the best or worst case. Ask how often such predictions have been right before.
+* Be wary of drastic action. Ask what the side effects will be. Ask how the idea has been tested. Step-by-step practical improvements, and evaluation of their impact, are less dramatic but usually more effective.
+
+
+
+## World Bank
+
+### About
+
+* World Bank: https://www.worldbank.org
+* [Who we are](https://www.worldbank.org/en/who-we-are):
+  - To end extreme poverty: By reducing the share of the global population that lives in extreme poverty to 3 percent by 2030.
+  - To promote shared prosperity: By increasing the incomes of the poorest 40 percent of people in every country. 
+* World Bank Open Data: https://data.worldbank.org
+
+
+
+### WDI - World Development Indicaters
+
+* [World Development Indicators (WDI) ](https://datatopics.worldbank.org/world-development-indicators/): the World Bank’s premier compilation of cross-country comparable data on development.
+  - Poverty and Inequality
+  - People
+  - Environment
+  - Economy
+  - States and Markets
+  - Global Links
+
+
+### R Package WDI
+
+* [WDI](https://CRAN.R-project.org/package=WDI): World Development Indicators and Other World Bank Data
+* Search and download data from over 40 databases hosted by the World Bank, including the World Development Indicators ('WDI'), International Debt Statistics, Doing Business, Human Capital Index, and Sub-national Poverty indicators.
+* Version: 2.7.4
+* Materials:	[README](https://cran.r-project.org/web/packages/WDI/readme/README.html) - _usage_
+  - [NEWS](https://cran.r-project.org/web/packages/WDI/news/news.html) - _version history_
+* Published: 	2021-04-06
+* Reference manual:	[WDI.pdf](https://cran.r-project.org/web/packages/WDI/WDI.pdf)
+
+#### Function WDI: World Development Indicators (World Bank)
+
+* **Description:**
+Downloads the requested data by using the World Bank’s API, parses the resulting XML file, and formats it in long country-year format.
+* **Usage**
+```
+WDI(
+  country = "all",
+  indicator = "NY.GDP.PCAP.KD",
+  start = 1960,
+  end = 2020,
+  extra = FALSE,
+  cache = NULL,
+  latest = NULL,
+  language = "en"
+)
+```
+* **Arguments**
+  - country: 	
+Vector of countries (ISO-2 character codes, e.g. "BR", "US", "CA") for which the data is needed. Using the string "all" instead of individual iso codes pulls data for every available country.
+    + https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+    + https://www.nationsonline.org/oneworld/country_code_list.htm
+
+  - indicator: 	
+Character vector of indicators codes. See the WDIsearch() function. If you supply a named vector, the indicators will be automatically renamed: ‘c(’women_private_sector' = 'BI.PWK.PRVS.FE.ZS')'
+
+  - start: 
+Start date, usually a year in integer format. Must be 1960 or greater.
+
+  - end: 	
+End date, usually a year in integer format. Must be greater than the 'start' argument.
+
+  - extra: 	
+TRUE returns extra variables such as region, iso3c code, and incomeLevel
+
+  - cache: 	
+NULL (optional) a list created by WDIcache() to be used with the extra=TRUE argument
+
+  - Value:
+Data frame with country-year observations. You can extract a data.frame with indicator names and descriptive labels by inspecting the `label` attribute of the resulting data.frame: `attr(dat, 'label')`
+
+#### Function WDIsearch 
+
+**Search names and descriptions of available WDI series**
+
+* **Description**  
+Data frame with series code, name, description, and source for the WDI series which match the given criteria  
+
+* **Usage**  
+WDIsearch(string = "gdp", field = "name", short = TRUE, cache = NULL)  
+
+* **Arguments**
+
+  - string: 	
+Character string. Search for this string using grep with ignore.case=TRUE.
+
+  - field: 	
+Character string. Search this field. Admissible fields: 'indicator', 'name', 'description', 'sourceDatabase', 'sourceOrganization'
+
+  - short; 	
+TRUE: Returns only the indicator's code and name. FALSE: Returns the indicator's code, name, description, and source.
+
+  - cache; 	
+Data list generated by the WDIcache function. If omitted, WDIsearch will search a local list of series.
+
+  - Value; 
+Data frame with code, name, source, and description of all series which match the criteria.
+
+### The First Example
+
+#### Setup
+
+In this R Notebook, we will use the following packages. Istall them before you compile this R Notebook.
+
+1. `tidyverse` Package, a collection of packages for data science
+2. `WDI` Package for World Development Indicators
+
+```{r}
+library(tidyverse)
+library(WDI)
+```
+#### GDP Per Capita
+
+The following is taken from the usage.
+
+```{r eval=FALSE}
+WDI(
+  country = "all",
+  indicator = "NY.GDP.PCAP.KD",
+  start = 1960,
+  end = 2020,
+  extra = FALSE,
+  cache = NULL,
+  latest = NULL,
+  language = "en"
+)
+```
+
+
+
+```{r}
+WDIsearch(string = "NY.GDP.PCAP.KD", field = "indicator", cache = NULL)
+```
+```{r}
+WDIsearch(string = "NY.GDP.PCAP.KD", field = "indicator", short = FALSE, cache = NULL)
+```
+
+```{r cash = TRUE}
+df <- as_tibble(WDI(
+  country = c("CN", "IN", "US", "ID","PK", "BR", "NG", "BD", "RU", "MX", "JP"), 
+  indicator = "NY.GDP.PCAP.KD",
+  start = 1960,
+  end = 2020,
+  extra = FALSE,
+  cache = NULL,
+  latest = NULL,
+  language = "en"
+))
+df
+```
+
+```{r}
+ggplot(df) + 
+  geom_line(aes(x = year, y = NY.GDP.PCAP.KD, color = country)) +
+  labs(title = "GDP per capita (constant 2010 US$)")
+```
+
+```{r}
+ggplot(df) + 
+  geom_line(aes(x = year, y = NY.GDP.PCAP.KD, color = country)) +
+  scale_y_continuous(trans='log10') +
+  labs(title = "GDP per capita (constant 2010 US$)", 
+       subtitle = "Log10 Scale")
+```
+```{r}
+ggplot(df) + 
+  geom_line(aes(x = year, y = NY.GDP.PCAP.KD, color = country)) +
+  scale_y_continuous(trans='log10') +
+  facet_wrap(vars(country)) +
+  labs(title = "GDP per capita (constant 2010 US$)", 
+      subtitle = "Log10 Scale")
+```
+### More Examples
+
+#### Search Indicators Related to "GDP"
+
+```{r cash = TRUE}
+as_tibble(WDIsearch(string = "gdp", field = "name", cache = NULL))
+```
+
+#### Population
+
+```{r}
+WDIsearch(string = "Population, Total", field = "name", cache = NULL)
+```
+
+```{r}
+WDIsearch(string = "SP.POP.TOTL", field = "indicator", cache = NULL)
+```
+#### More Than One Indicator
+
+```{r cash = TRUE}
+dfp <- as_tibble(WDI(
+  country = c("CN", "IN", "US", "ID","PK", "BR", "NG", "BD", "RU", "MX", "JP"), 
+  indicator = c("NY.GDP.PCAP.KD","SP.POP.TOTL"),
+  start = 1960,
+  end = 2020,
+  extra = FALSE,
+  cache = NULL,
+  latest = NULL,
+  language = "en"
+))
+dfp
+```
+
+```{r}
+ggplot(dfp) + 
+  geom_line(aes(x = year, y = SP.POP.TOTL, color = country)) +
+  labs(title = "Population, total")
+```
+```{r}
+ggplot(dfp) + 
+  geom_line(aes(x = year, y = SP.POP.TOTL, color = country)) +
+  scale_y_continuous(trans='log10') +
+  labs(title = "Population, total", 
+       subtitle = "Log10 Scale")
+```
+
+##### All Countries
+
+```{r cash = TRUE}
+df_gdp_all <- as_tibble(WDI(
+  country = "all", 
+  indicator = c("NY.GDP.PCAP.KD","SP.POP.TOTL"),
+  start = 1960,
+  end = 2020,
+  extra = FALSE,
+  cache = NULL,
+  latest = NULL,
+  language = "en"
+))
+df_gdp_all
+```
+
+```{r cash = TRUE}
+df_gdp_all %>% filter(year == 2020) %>% arrange(desc(SP.POP.TOTL))
+```
+
+```{r cash = TRUE}
+df_gdp_all %>% filter(year == 2020) %>% arrange(NY.GDP.PCAP.KD)
+```
+
+```{r cash = TRUE}
+df_gdp_all %>% filter(year == 2020) %>% arrange(desc(NY.GDP.PCAP.KD))
+```
+
+```{r cash = TRUE}
+df_gdp_all %>% filter(year == 2020) %>% mutate(GDP = NY.GDP.PCAP.KD * SP.POP.TOTL) %>% arrange(desc(GDP))
+```
+
+#### Gender
+
+```{r}
+as_tibble(WDIsearch(string = "Gender", field = "name", cache = NULL))
+```
+
+```{r}
+as_tibble(WDIsearch(string = "Females", field = "name", cache = NULL))
+```
+
+
+```{r}
+WDIsearch(string = "BI.PWK.PRVS.FE.ZS", field = "indicator", cache = NULL)
+```
+
+```{r}
+WDIsearch(string = "BI.PWK.PUBS.FE.ZS", field = "indicator", cache = NULL)
+```
+
+```{r cash = TRUE}
+# Rename indicators on the fly
+dfwe <- as_tibble(WDI(country = c("CN", "IN", "US", "ID","PK", "BR", "NG", "BD", "RU", "MX", "JP"), 
+               indicator = c('women_private_sector' = 'BI.PWK.PRVS.FE.ZS',
+                                  'women_public_sector' = 'BI.PWK.PUBS.FE.ZS')))
+dfwe
+```
+
+
+```{r}
+summary(dfwe, country)
+```
+
+```{r}
+dfwe %>% group_by(country) %>% select(2,4,5) %>%
+  summarize(private_n = sum(is.na(women_private_sector)), 
+            private = mean(is.na(women_private_sector)), 
+            public_n = sum(is.na(women_public_sector)), 
+            public = mean(is.na(women_public_sector)))
+```
+
+### World Bank Country and Lending Groups and an Option `extra = TRUE`
+
+#### Review Basics: World Development Indicators: ?WDI
+
+1. Basic Usage
+```
+WDI(country = "all", indicator = "NY.GDP.PCAP.KD")
+```
+2. Vector Notation
+```
+WDI(country = c("US", "CN", JP"), # ISO-2 codes
+   indicator = c("gdp_pcap" = "NY.GDP.PCAP.KD", 
+                "life_exp" = "SP.DYN.LE00.IN"))
+```
+3. Use Extra
+```
+WDI(country = "all", 
+   indicator = c("gdp_pcap" = NY.GDP.PCAP.KD", 
+                "life_exp" = "SP.DYN.LE00.IN"), extra = TRUE)
+```
+extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel
+
+#### World Bank Country and Lending Groups
+
+* URL [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
+* [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls) 
+
+##### About CLASS.xls
+
+This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are: 
+
+* low income, $1,035 or less; 
+* lower middle income, $1,036 - 4,045; 
+* upper middle income, $4,046 - 12,535; 
+* and high income, $12,536 or more. 
+  
+The effective operational cutoff for IDA eligibility is $1,185 or less.								
+	
+
+
+##### Geographic classifications					
+
+* **IBRD:** International Bank for Reconstruction and Development
+* **IDA:** International Development Association
+
+&nbsp;
+								
+* IDA countries are those that lack the financial ability to borrow from IBRD. 
+
+* IDA credits are deeply concessional—interest-free loans and grants for programs aimed at boosting economic growth and improving living conditions. 
+
+* IBRD loans are noncessional. 
+
+* Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.								
+
+
+##### Note
+
+* The term country, used interchangeably with economy, does not imply political independence but refers to any territory for which authorities report separate social or economic statistics. 
+
+* Income classifications set on 1 July 2020 remain in effect until 1 July 2021. 
+
+* Argentina, which was temporarily unclassified in July 2016 pending release of revised national accounts statistics, was classified as upper middle income for FY17 as of 29 September 2016 based on alternative conversion factors. Also effective 29 September 2016, Syrian Arab Republic is reclassified from IBRD lending category to IDA-only. 
+
+* On 29 March 2017, new country codes were introduced to align World Bank 3-letter codes with ISO 3-letter codes: Andorra (AND), Dem. Rep. Congo (COD), Isle of Man (IMN), Kosovo (XKX), Romania (ROU), Timor-Leste (TLS), and West Bank and Gaza (PSE).								
+
+
+#### Importing Excel Files
+
+* CLASS.xlsx: - _copy the following link_
+  - [The current classification by income in XLS format](https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx) 
+* readxl: https://readxl.tidyverse.org
+* Help: `read_excel`, `read_xls`, `read_xlsx`
+
+```{r cash = TRUE}
+url_class <- "https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx"
+download.file(url = url_class, destfile = "data/CLASS.xlsx")
+```
+##### Countries
+
+Let us look at the first sheet.
+
+1. The column names are in the 5th row.
+2. The country data starts from the 7th row.
+3. Zimbabue is at the last row.
+
+```{r}
+library(readxl)
+wb_countries_tmp <- read_excel("data/CLASS.xlsx", sheet = 1, skip = 0, n_max =219) 
+wb_countries <- wb_countries_tmp %>% 
+  select(country = Economy, iso3c = Code, region = Region, income = `Income group`, lending = "Lending category", other = "Other (EMU or HIPC)")
+wb_countries
+```
+
+##### Regions
+
+* readxl: https://readxl.tidyverse.org
+* Help: `read_excel`, `read_xls`, `read_xlsx`
+
+1. Regions start from the 227th row.
+2. Regions end at the 272th row.
+
+```{r}
+wb_regions_tmp <- read_excel("data/CLASS.xlsx", sheet = 1, skip = 0, n_max =266) %>% 
+  slice(-(1:220))
+wb_regions <- wb_regions_tmp %>% 
+  select(region = Economy, iso3c = Code) %>% drop_na()
+wb_regions
+```
+
+Let us look at the second sheet.
+
+```{r}
+wb_groups_tmp <- read_excel("data/CLASS.xlsx", sheet = "Groups") # sheet = 3
+wb_groups <- wb_groups_tmp %>% 
+  select(gcode = GroupCode, group = GroupName, iso3c = CountryCode, country = CountryName)
+```
+
+
+#### Filtering Join
+
+**Description**
+
+* Filtering joins filter rows from x based on the presence or absence of matches in y:
+
+  - semi_join() return all rows from x with a match in y.
+  - anti_join() return all rows from x without a match in y.
+
+* https://dplyr.tidyverse.org/reference/filter-joins.html
+
+
+```{r cash = TRUE}
+gdp_pcap <- WDI(country = "all", indicator = "NY.GDP.PCAP.KD")
+gdp_pcap
+```
+```{r}
+gdp_pcap_extra <- WDI(country = "all", indicator = "NY.GDP.PCAP.KD", extra = TRUE)
+gdp_pcap_extra
+```
+
+* Compare the following:
+
+  - 16,226 rows = 13,054 rows (country) + 3172 rows (not country)
+
+```{r}
+gdp_pcap_country <- gdp_pcap %>% semi_join(wb_countries, by = "country")
+head(gdp_pcap_country)
+```
+```{r}
+gdp_pcap_extra %>% filter(region != "Aggregates") 
+```
+
+* What is the difference?
+
+  - 13,176 rows is not equal to  13,054 rows + 183 rows
+
+```{r}
+gdp_pcap_extra %>% filter(region != "Aggregates") %>% anti_join(gdp_pcap_country)
+```
+
+
+```{r}
+gdp_pcap %>% anti_join(wb_countries)
+```
+
+**Note:** World Bank provides the WDI_csv for more information.
+
+1. WDICountry-Series.csv - 965,9KB
+2. WDICountry.csv - 125.8KB
+3. WDIData.csv - 193 MB
+4. WDIFootNote.csv - 61.1MB
+5. WDISeries-Time.csv - 46.1KB
+6. WDISeries.csv" - 3.5MB   
+
+
+#### Join Tables
+
+There are three types of joining tables. Commands are from tidyverse packages though there is a way to do the same by Base R with appropriate arguments.
+
+1. Bind rows: bind_rows(), intersect(), setdiff(), union()
+2. Bind columns: bind_cols(), left_join(), right_join(), inner_join(), full_join()
+3. Filtering join: semi_join(), anti_join()
+
+* https://dplyr.tidyverse.org/reference/bind.html
+
+#### Join Tables: Quick References
+
+1. https://r4ds.had.co.nz/relational-data.html#relational-data
+
+2. Cheatsheet: Data Transformation, pages 2 and 3. You can download it from RStudio > Help.
+
+3. Tidyverse Homepage:
+    a. [Efficiently bind multiple data frames by row and column](https://dplyr.tidyverse.org/reference/bind.html): bind_rows(), bind_cols()
+    b. [Set operations](https://dplyr.tidyverse.org/reference/setops.html): intersect(), setdiff(), union()
+    c. [Mutating joins](https://dplyr.tidyverse.org/reference/mutate-joins.html): left_join(), right_join(), inner_join(), full_join()
+    d. [Filtering joins](https://dplyr.tidyverse.org/reference/filter-joins.html): semi_join(), anti_join()
+
+4. R Studio Primers: Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+    - Reshape Data, Separate and Unite Columns, **Join Data Sets**
+
+
+## United Nations
+`
+* UN Data: https://data.un.org
+  - Datamarts: http://data.un.org/Explorer.aspx
+  
+
+### Importing Data
+
+1. Get the URL (uniform resource locator) - copy the link
+  * `url_of_data <- "https://data.un.org/--long url--.csv"`
+2. Download the file into the `destfile` in data folder:
+  * `download.file(url = url_of_data, destfile = "data/un_pop.csv")`
+3. Read the file:
+  * `df_un_pop <- read_csv("data/un_pop.csv")`
+
+Alternative, skip 2 and read the file using the URL.
+  * `read_csv(url)`
+  
+### Example
+
+#### Population
+
+* [Population, surface area and density in PDF](https://data.un.org/_Docs/SYB/PDFs/SYB64_1_202110_Population,%20Surface%20Area%20and%20Density.pdf)
+
+The followind do not look line the pdf above. 
+
+
+```{r cash = TRUE}
+df_un_pop <- read_csv("https://data.un.org/_Docs/SYB/CSV/SYB64_1_202110_Population,%20Surface%20Area%20and%20Density.csv", skip = 1)
+df_un_pop
+```
+
+```{r}
+colnames(df_un_pop)
+```
+
+
+```{r}
+un_pop_tbl <- df_un_pop %>% select(num = "Region/Country/Area", region = "...2", year = "Year", series = "Series", value = "Value") %>% 
+  pivot_wider(names_from = series, values_from = value) 
+un_pop_tbl
+```
+```{r}
+colnames(un_pop_tbl) <- c("num", "region", "year", "total", "male", "female", "ratio", "0-14", "60+", "density", "area")
+un_pop_tbl
+```
