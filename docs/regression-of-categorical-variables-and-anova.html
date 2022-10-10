@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Regression of Categorical Variables and ANOVA | Data Analysis for Researchers</title>
+  <meta name="description" content="Chapter 10 Regression of Categorical Variables and ANOVA | Data Analysis for Researchers" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Regression of Categorical Variables and ANOVA | Data Analysis for Researchers" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Regression of Categorical Variables and ANOVA | Data Analysis for Researchers" />
+  
+  
+  
+
+<meta name="author" content="DS SL" />
+
+
+<meta name="date" content="2022-10-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="regression-3-co2-emission-standardization.html"/>
+<link rel="next" href="topics2.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Researchers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="1" data-path="course.html"><a href="course.html"><i class="fa fa-check"></i><b>1</b> About the Course</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="course.html"><a href="course.html#coures-information"><i class="fa fa-check"></i><b>1.1</b> Coures Information</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="course.html"><a href="course.html#about-qall401-data-analysis-for-researchers"><i class="fa fa-check"></i><b>1.1.1</b> About ‘QALL401 Data Analysis for Researchers’</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="course.html"><a href="course.html#introduction-by-professor-kaizoji"><i class="fa fa-check"></i><b>1.2</b> Introduction by Professor Kaizoji</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="course.html"><a href="course.html#introduction-slide-presentation-1"><i class="fa fa-check"></i><b>1.2.1</b> Introduction (Slide Presentation 1)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="course.html"><a href="course.html#data-analytics-data-science-overview-slide-presentation-2"><i class="fa fa-check"></i><b>1.2.2</b> Data Analytics / Data Science Overview (Slide Presentation 2)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="course.html"><a href="course.html#r-and-r-studio"><i class="fa fa-check"></i><b>1.2.3</b> R and R Studio</a></li>
+<li class="chapter" data-level="1.2.4" data-path="course.html"><a href="course.html#schedule-tentative"><i class="fa fa-check"></i><b>1.2.4</b> Schedule (tentative)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="course.html"><a href="course.html#responses-of-students"><i class="fa fa-check"></i><b>1.2.5</b> Responses of Students</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="course.html"><a href="course.html#introduction-in-ay2020-by-suzuki"><i class="fa fa-check"></i><b>1.3</b> Introduction in AY2020 by Suzuki</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="course.html"><a href="course.html#requirements-and-grades"><i class="fa fa-check"></i><b>1.3.1</b> Requirements and Grades</a></li>
+<li class="chapter" data-level="1.3.2" data-path="course.html"><a href="course.html#data-science-ds"><i class="fa fa-check"></i><b>1.3.2</b> Data Science (DS)</a></li>
+<li class="chapter" data-level="1.3.3" data-path="course.html"><a href="course.html#eda-by-r-language-and-r-programming"><i class="fa fa-check"></i><b>1.3.3</b> EDA by R Language and R Programming</a></li>
+<li class="chapter" data-level="1.3.4" data-path="course.html"><a href="course.html#visualization-in-eda"><i class="fa fa-check"></i><b>1.3.4</b> Visualization in EDA</a></li>
+<li class="chapter" data-level="1.3.5" data-path="course.html"><a href="course.html#data-science-wikipedia"><i class="fa fa-check"></i><b>1.3.5</b> Data Science (Wikipedia)</a></li>
+<li class="chapter" data-level="1.3.6" data-path="course.html"><a href="course.html#data-for-data-science"><i class="fa fa-check"></i><b>1.3.6</b> Data for Data Science</a></li>
+<li class="chapter" data-level="1.3.7" data-path="course.html"><a href="course.html#open-and-public-data"><i class="fa fa-check"></i><b>1.3.7</b> Open and Public Data</a></li>
+<li class="chapter" data-level="1.3.8" data-path="course.html"><a href="course.html#a-list-of-open-data-catalogue"><i class="fa fa-check"></i><b>1.3.8</b> A List of Open Data Catalogue</a></li>
+<li class="chapter" data-level="1.3.9" data-path="course.html"><a href="course.html#what-is-ds-why-ds-for-researchers"><i class="fa fa-check"></i><b>1.3.9</b> What is DS? Why DS? For researchers?</a></li>
+<li class="chapter" data-level="1.3.10" data-path="course.html"><a href="course.html#the-first-step-type-of-variables"><i class="fa fa-check"></i><b>1.3.10</b> The First Step: Type of Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="eda1.html"><a href="eda1.html"><i class="fa fa-check"></i><b>2</b> Exploratory Data Analysis (EDA) 1</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="eda1.html"><a href="eda1.html#r-with-r-studio-andor-r-studio.cloud"><i class="fa fa-check"></i><b>2.1</b> R with R Studio and/or R Studio.cloud</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="eda1.html"><a href="eda1.html#course-contents"><i class="fa fa-check"></i><b>2.1.1</b> Course Contents</a></li>
+<li class="chapter" data-level="2.1.2" data-path="eda1.html"><a href="eda1.html#learning-resources-i"><i class="fa fa-check"></i><b>2.1.2</b> Learning Resources, I</a></li>
+<li class="chapter" data-level="2.1.3" data-path="eda1.html"><a href="eda1.html#eda1-contents"><i class="fa fa-check"></i><b>2.1.3</b> EDA1: Contents</a></li>
+<li class="chapter" data-level="2.1.4" data-path="eda1.html"><a href="eda1.html#what-is-r"><i class="fa fa-check"></i><b>2.1.4</b> What is R?</a></li>
+<li class="chapter" data-level="2.1.5" data-path="eda1.html"><a href="eda1.html#why-r-responses-by-hadley-wickham"><i class="fa fa-check"></i><b>2.1.5</b> Why R? – Responses by Hadley Wickham</a></li>
+<li class="chapter" data-level="2.1.6" data-path="eda1.html"><a href="eda1.html#the-first-example"><i class="fa fa-check"></i><b>2.1.6</b> The First Example</a></li>
+<li class="chapter" data-level="2.1.7" data-path="eda1.html"><a href="eda1.html#what-is-rstudio-httpsrstudio.com"><i class="fa fa-check"></i><b>2.1.7</b> What is RStudio? <span>https://rstudio.com</span></a></li>
+<li class="chapter" data-level="2.1.8" data-path="eda1.html"><a href="eda1.html#installation-of-r-and-r-studio"><i class="fa fa-check"></i><b>2.1.8</b> Installation of R and R Studio</a></li>
+<li class="chapter" data-level="2.1.9" data-path="eda1.html"><a href="eda1.html#r-studio"><i class="fa fa-check"></i><b>2.1.9</b> R Studio</a></li>
+<li class="chapter" data-level="2.1.10" data-path="eda1.html"><a href="eda1.html#r-studio-cloud"><i class="fa fa-check"></i><b>2.1.10</b> R Studio Cloud</a></li>
+<li class="chapter" data-level="2.1.11" data-path="eda1.html"><a href="eda1.html#lets-try-r-basics"><i class="fa fa-check"></i><b>2.1.11</b> Let’s Try R Basics</a></li>
+<li class="chapter" data-level="2.1.12" data-path="eda1.html"><a href="eda1.html#more-on-r-script-examples"><i class="fa fa-check"></i><b>2.1.12</b> More on R Script: Examples</a></li>
+<li class="chapter" data-level="2.1.13" data-path="eda1.html"><a href="eda1.html#practicum-r-studio-cloud-or-r-studio-and-r-basics"><i class="fa fa-check"></i><b>2.1.13</b> Practicum: R Studio Cloud (or R Studio) and R basics</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="eda1.html"><a href="eda1.html#practicum-swirl-and-more-on-r-script"><i class="fa fa-check"></i><b>2.2</b> Practicum: Swirl and more on R Script</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="eda1.html"><a href="eda1.html#swirl-an-interactive-learning-environment-for-r-and-statistics"><i class="fa fa-check"></i><b>2.2.1</b> Swirl: An interactive learning environment for R and statistics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="eda1.html"><a href="eda1.html#install-and-start-swirl-courses"><i class="fa fa-check"></i><b>2.2.2</b> Install and Start Swirl Courses</a></li>
+<li class="chapter" data-level="2.2.3" data-path="eda1.html"><a href="eda1.html#the-first-eda-using-coronavirus.r"><i class="fa fa-check"></i><b>2.2.3</b> The First EDA using coronavirus.R</a></li>
+<li class="chapter" data-level="2.2.4" data-path="eda1.html"><a href="eda1.html#basics-of-fundamentals-of-statistics"><i class="fa fa-check"></i><b>2.2.4</b> Basics of Fundamentals of Statistics</a></li>
+<li class="chapter" data-level="2.2.5" data-path="eda1.html"><a href="eda1.html#summary"><i class="fa fa-check"></i><b>2.2.5</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="eda2.html"><a href="eda2.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis (EDA) 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#course-contents-1"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#eda-and-data-visualization"><i class="fa fa-check"></i>EDA and Data Visualization</a></li>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#contents-of-eda2"><i class="fa fa-check"></i>Contents of EDA2</a></li>
+<li class="chapter" data-level="3.1" data-path="eda2.html"><a href="eda2.html#part-i-r-markdown-for-communication"><i class="fa fa-check"></i><b>3.1</b> Part I: R Markdown for Communication</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="eda2.html"><a href="eda2.html#records-of-eda-and-communication"><i class="fa fa-check"></i><b>3.1.1</b> Records of EDA and Communication</a></li>
+<li class="chapter" data-level="3.1.2" data-path="eda2.html"><a href="eda2.html#what-is-r-markdown-notebook"><i class="fa fa-check"></i><b>3.1.2</b> What is R Markdown Notebook</a></li>
+<li class="chapter" data-level="3.1.3" data-path="eda2.html"><a href="eda2.html#r-studio-setup"><i class="fa fa-check"></i><b>3.1.3</b> R Studio Setup</a></li>
+<li class="chapter" data-level="3.1.4" data-path="eda2.html"><a href="eda2.html#default-yaml-r-notebook-html-pdf-word"><i class="fa fa-check"></i><b>3.1.4</b> Default YAML: R Notebook, HTML, PDF, WORD</a></li>
+<li class="chapter" data-level="3.1.5" data-path="eda2.html"><a href="eda2.html#an-example-of-r-notebooks"><i class="fa fa-check"></i><b>3.1.5</b> An Example of R Notebooks</a></li>
+<li class="chapter" data-level="3.1.6" data-path="eda2.html"><a href="eda2.html#knit-notebook-mode-and-preview-of-default.rmd"><i class="fa fa-check"></i><b>3.1.6</b> Knit, Notebook Mode and Preview of Default.Rmd</a></li>
+<li class="chapter" data-level="3.1.7" data-path="eda2.html"><a href="eda2.html#yaml---yaml-aint-a-markup-language---example"><i class="fa fa-check"></i><b>3.1.7</b> <code>yaml</code> - YAML Ain’t a Markup Language - Example</a></li>
+<li class="chapter" data-level="3.1.8" data-path="eda2.html"><a href="eda2.html#r-markdown-quick-references-see-moodle"><i class="fa fa-check"></i><b>3.1.8</b> R Markdown: Quick References (See Moodle)</a></li>
+<li class="chapter" data-level="3.1.9" data-path="eda2.html"><a href="eda2.html#markdown-language-or-use-wysiwyg-editor"><i class="fa fa-check"></i><b>3.1.9</b> Markdown Language – or use WYSIWYG editor</a></li>
+<li class="chapter" data-level="3.1.10" data-path="eda2.html"><a href="eda2.html#ms-word-happy-collaboration-with-rmd-to-docx"><i class="fa fa-check"></i><b>3.1.10</b> MS Word: <span>Happy collaboration with Rmd to docx</span></a></li>
+<li class="chapter" data-level="3.1.11" data-path="eda2.html"><a href="eda2.html#why-r-markdown"><i class="fa fa-check"></i><b>3.1.11</b> Why R Markdown?</a></li>
+<li class="chapter" data-level="3.1.12" data-path="eda2.html"><a href="eda2.html#literate-programming-by-d.-knuth"><i class="fa fa-check"></i><b>3.1.12</b> Literate Programming by D. Knuth</a></li>
+<li class="chapter" data-level="3.1.13" data-path="eda2.html"><a href="eda2.html#reproducible-research---quote-from-a-coursera-course"><i class="fa fa-check"></i><b>3.1.13</b> Reproducible Research - Quote from a Coursera Course</a></li>
+<li class="chapter" data-level="3.1.14" data-path="eda2.html"><a href="eda2.html#r-markdown-workflow-r-for-data-science"><i class="fa fa-check"></i><b>3.1.14</b> <span>R Markdown workflow, R for Data Science</span></a></li>
+<li class="chapter" data-level="3.1.15" data-path="eda2.html"><a href="eda2.html#learning-resources-eda2-1"><i class="fa fa-check"></i><b>3.1.15</b> Learning Resources, EDA2-1</a></li>
+<li class="chapter" data-level="3.1.16" data-path="eda2.html"><a href="eda2.html#practicum-r-markdown-and-r-notebook"><i class="fa fa-check"></i><b>3.1.16</b> Practicum: R Markdown and R Notebook</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="eda2.html"><a href="eda2.html#part-ii-data-visualization-and-tidyverse-package"><i class="fa fa-check"></i><b>3.2</b> Part II: Data Visualization and Tidyverse Package</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="eda2.html"><a href="eda2.html#introduction-to-tidyverse-r-packages"><i class="fa fa-check"></i><b>3.2.1</b> Introduction to <code>tidyverse</code> R Packages</a></li>
+<li class="chapter" data-level="3.2.2" data-path="eda2.html"><a href="eda2.html#ggplot2-overview"><i class="fa fa-check"></i><b>3.2.2</b> <code>ggplot2</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="3.2.3" data-path="eda2.html"><a href="eda2.html#practicum-ggplot2-on-r-notebook"><i class="fa fa-check"></i><b>3.2.3</b> Practicum: <code>ggplot2</code> on R Notebook</a></li>
+<li class="chapter" data-level="3.2.4" data-path="eda2.html"><a href="eda2.html#basics-of-fundamentals-of-statistics-1"><i class="fa fa-check"></i><b>3.2.4</b> Basics of Fundamentals of Statistics</a></li>
+<li class="chapter" data-level="3.2.5" data-path="eda2.html"><a href="eda2.html#rstudio-primers-created-by-learnr"><i class="fa fa-check"></i><b>3.2.5</b> RStudio Primers created by <span><code>learnr</code></span></a></li>
+<li class="chapter" data-level="3.2.6" data-path="eda2.html"><a href="eda2.html#learning-resources-eda2-2"><i class="fa fa-check"></i><b>3.2.6</b> Learning Resources, EDA2-2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="eda2.html"><a href="eda2.html#the-week-three-assignment-in-moodle"><i class="fa fa-check"></i><b>3.3</b> The Week Three Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="eda2.html"><a href="eda2.html#note-on-r-notebook"><i class="fa fa-check"></i><b>3.3.1</b> Note on R Notebook</a></li>
+<li class="chapter" data-level="3.3.2" data-path="eda2.html"><a href="eda2.html#set-up"><i class="fa fa-check"></i><b>3.3.2</b> Set up</a></li>
+<li class="chapter" data-level="3.3.3" data-path="eda2.html"><a href="eda2.html#data-cars"><i class="fa fa-check"></i><b>3.3.3</b> Data <code>cars</code></a></li>
+<li class="chapter" data-level="3.3.4" data-path="eda2.html"><a href="eda2.html#data-iris"><i class="fa fa-check"></i><b>3.3.4</b> Data <code>iris</code></a></li>
+<li class="chapter" data-level="3.3.5" data-path="eda2.html"><a href="eda2.html#data-airpassengers"><i class="fa fa-check"></i><b>3.3.5</b> Data <code>AirPassengers</code></a></li>
+<li class="chapter" data-level="3.3.6" data-path="eda2.html"><a href="eda2.html#recommended-study-plan"><i class="fa fa-check"></i><b>3.3.6</b> Recommended Study Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="eda2.html"><a href="eda2.html#responses-to-the-week-three-assignment"><i class="fa fa-check"></i><b>3.4</b> Responses to the Week Three Assignment</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="eda2.html"><a href="eda2.html#setup"><i class="fa fa-check"></i><b>3.4.1</b> Setup</a></li>
+<li class="chapter" data-level="3.4.2" data-path="eda2.html"><a href="eda2.html#visualization-of-two-variables"><i class="fa fa-check"></i><b>3.4.2</b> Visualization of Two Variables</a></li>
+<li class="chapter" data-level="3.4.3" data-path="eda2.html"><a href="eda2.html#visualization-of-one-variable"><i class="fa fa-check"></i><b>3.4.3</b> Visualization of One Variable</a></li>
+<li class="chapter" data-level="3.4.4" data-path="eda2.html"><a href="eda2.html#more-examples"><i class="fa fa-check"></i><b>3.4.4</b> More Examples</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="eda3.html"><a href="eda3.html"><i class="fa fa-check"></i><b>4</b> Exploratory Data Analysis (EDA) 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#course-contents-2"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#importing-and-transforming-data"><i class="fa fa-check"></i>Importing and Transforming Data</a></li>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#contents-of-eda3"><i class="fa fa-check"></i>Contents of EDA3</a></li>
+<li class="chapter" data-level="4.1" data-path="eda3.html"><a href="eda3.html#part-i-importing-data-by-readr-and-wdi-package"><i class="fa fa-check"></i><b>4.1</b> Part I: Importing Data by <code>readr</code> and WDI Package</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="eda3.html"><a href="eda3.html#tidyverse-package-review"><i class="fa fa-check"></i><b>4.1.1</b> <code>tidyverse</code> Package Review</a></li>
+<li class="chapter" data-level="4.1.2" data-path="eda3.html"><a href="eda3.html#r-package-an-example---readr-in-tidyverse"><i class="fa fa-check"></i><b>4.1.2</b> R Package: An Example - <code>readr</code> in <code>tidyverse</code></a></li>
+<li class="chapter" data-level="4.1.3" data-path="eda3.html"><a href="eda3.html#reading-data-files---readr-readxl-etc."><i class="fa fa-check"></i><b>4.1.3</b> Reading Data Files - readr, (readxl, etc.)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="eda3.html"><a href="eda3.html#basics-of-importing-data-i"><i class="fa fa-check"></i><b>4.1.4</b> Basics of Importing Data, I</a></li>
+<li class="chapter" data-level="4.1.5" data-path="eda3.html"><a href="eda3.html#basics-of-importing-data-ii"><i class="fa fa-check"></i><b>4.1.5</b> Basics of Importing Data, II</a></li>
+<li class="chapter" data-level="4.1.6" data-path="eda3.html"><a href="eda3.html#tibble-overview"><i class="fa fa-check"></i><b>4.1.6</b> <code>tibble</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="4.1.7" data-path="eda3.html"><a href="eda3.html#variables"><i class="fa fa-check"></i><b>4.1.7</b> Variables</a></li>
+<li class="chapter" data-level="4.1.8" data-path="eda3.html"><a href="eda3.html#example-i"><i class="fa fa-check"></i><b>4.1.8</b> Example I</a></li>
+<li class="chapter" data-level="4.1.9" data-path="eda3.html"><a href="eda3.html#open-and-public-data-world-bank"><i class="fa fa-check"></i><b>4.1.9</b> Open and Public Data, World Bank</a></li>
+<li class="chapter" data-level="4.1.10" data-path="eda3.html"><a href="eda3.html#world-bank-wdi---world-development-indicaters"><i class="fa fa-check"></i><b>4.1.10</b> World Bank: WDI - World Development Indicaters</a></li>
+<li class="chapter" data-level="4.1.11" data-path="eda3.html"><a href="eda3.html#r-package-wdi"><i class="fa fa-check"></i><b>4.1.11</b> R Package <span>WDI</span></a></li>
+<li class="chapter" data-level="4.1.12" data-path="eda3.html"><a href="eda3.html#function-wdi"><i class="fa fa-check"></i><b>4.1.12</b> Function WDI</a></li>
+<li class="chapter" data-level="4.1.13" data-path="eda3.html"><a href="eda3.html#function-wdisearch"><i class="fa fa-check"></i><b>4.1.13</b> Function WDIsearch</a></li>
+<li class="chapter" data-level="4.1.14" data-path="eda3.html"><a href="eda3.html#example-ii"><i class="fa fa-check"></i><b>4.1.14</b> Example II</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="eda3.html"><a href="eda3.html#part-ii-data-transforamtion-with-dplyr"><i class="fa fa-check"></i><b>4.2</b> Part II: Data Transforamtion with <code>dplyr</code></a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="eda3.html"><a href="eda3.html#dplyr-overview"><i class="fa fa-check"></i><b>4.2.1</b> <code>dplyr</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="4.2.2" data-path="eda3.html"><a href="eda3.html#select-subset-columns-using-their-names-and-types"><i class="fa fa-check"></i><b>4.2.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="4.2.3" data-path="eda3.html"><a href="eda3.html#filter-subset-rows-using-column-values"><i class="fa fa-check"></i><b>4.2.3</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="4.2.4" data-path="eda3.html"><a href="eda3.html#arrange-and-pipe"><i class="fa fa-check"></i><b>4.2.4</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="4.2.5" data-path="eda3.html"><a href="eda3.html#example-iii-and-practicum"><i class="fa fa-check"></i><b>4.2.5</b> Example III and Practicum</a></li>
+<li class="chapter" data-level="4.2.6" data-path="eda3.html"><a href="eda3.html#learning-resources-iii"><i class="fa fa-check"></i><b>4.2.6</b> Learning Resources, III</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="eda3.html"><a href="eda3.html#the-fourth-assignment-in-moodle"><i class="fa fa-check"></i><b>4.3</b> The Fourth Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="eda3.html"><a href="eda3.html#setup-and-yaml"><i class="fa fa-check"></i><b>4.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="4.3.2" data-path="eda3.html"><a href="eda3.html#examples-and-comments"><i class="fa fa-check"></i><b>4.3.2</b> Examples and Comments</a></li>
+<li class="chapter" data-level="4.3.3" data-path="eda3.html"><a href="eda3.html#theme-for-ggplot2"><i class="fa fa-check"></i><b>4.3.3</b> <code>theme()</code> for <code>ggplot2()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ed4.html"><a href="ed4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
+<li class="chapter" data-level="5.1" data-path="ed4.html"><a href="ed4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ed4.html"><a href="ed4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ed4.html"><a href="ed4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="5.1.3" data-path="ed4.html"><a href="ed4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ed4.html"><a href="ed4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
+<li class="chapter" data-level="5.1.5" data-path="ed4.html"><a href="ed4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="5.1.6" data-path="ed4.html"><a href="ed4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
+<li class="chapter" data-level="5.1.7" data-path="ed4.html"><a href="ed4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="5.1.8" data-path="ed4.html"><a href="ed4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
+<li class="chapter" data-level="5.1.9" data-path="ed4.html"><a href="ed4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
+<li class="chapter" data-level="5.1.10" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
+<li class="chapter" data-level="5.1.11" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
+<li class="chapter" data-level="5.1.12" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
+<li class="chapter" data-level="5.1.13" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
+<li class="chapter" data-level="5.1.14" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
+<li class="chapter" data-level="5.1.15" data-path="ed4.html"><a href="ed4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.16" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.17" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.18" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.19" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.20" data-path="ed4.html"><a href="ed4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.21" data-path="ed4.html"><a href="ed4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.22" data-path="ed4.html"><a href="ed4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.23" data-path="ed4.html"><a href="ed4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.24" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.25" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
+<li class="chapter" data-level="5.1.26" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.27" data-path="ed4.html"><a href="ed4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ed4.html"><a href="ed4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="ed4.html"><a href="ed4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ed4.html"><a href="ed4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ed4.html"><a href="ed4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
+<li class="chapter" data-level="5.2.6" data-path="ed4.html"><a href="ed4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="ed4.html"><a href="ed4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
+<li class="chapter" data-level="5.2.8" data-path="ed4.html"><a href="ed4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
+<li class="chapter" data-level="5.2.9" data-path="ed4.html"><a href="ed4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
+<li class="chapter" data-level="5.2.10" data-path="ed4.html"><a href="ed4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
+<li class="chapter" data-level="5.2.11" data-path="ed4.html"><a href="ed4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="ed4.html"><a href="ed4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="ed4.html"><a href="ed4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="ed4.html"><a href="ed4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ed4.html"><a href="ed4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="ed4.html"><a href="ed4.html#information-obtained-by-extra-true"><i class="fa fa-check"></i><b>5.5</b> Information Obtained by <code>extra = TRUE</code></a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="ed4.html"><a href="ed4.html#population-of-zimbabwe-and-similar-countries"><i class="fa fa-check"></i><b>5.5.1</b> Population of Zimbabwe and Similar Countries</a></li>
+<li class="chapter" data-level="5.5.2" data-path="ed4.html"><a href="ed4.html#fertility-rate-of-japan-and-similar-countries"><i class="fa fa-check"></i><b>5.5.2</b> Fertility Rate of Japan and Similar Countries</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="ed4.html"><a href="ed4.html#other-groups"><i class="fa fa-check"></i><b>5.6</b> Other Groups</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="ed4.html"><a href="ed4.html#iso3c-vector-wb_arb_vec"><i class="fa fa-check"></i><b>5.6.1</b> iso3c vector: <code>wb_arb_vec</code></a></li>
+<li class="chapter" data-level="5.6.2" data-path="ed4.html"><a href="ed4.html#data-frame-wb_arb"><i class="fa fa-check"></i><b>5.6.2</b> Data Frame: <code>wb_arb</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="ed4.html"><a href="ed4.html#wangling-transform-and-tidy-data"><i class="fa fa-check"></i><b>5.7</b> Wangling: Transform and Tidy Data</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="ed4.html"><a href="ed4.html#tidying-data"><i class="fa fa-check"></i><b>5.7.1</b> Tidying data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="ed4.html"><a href="ed4.html#population-analysis"><i class="fa fa-check"></i><b>5.8</b> Population Analysis</a></li>
+<li class="chapter" data-level="5.9" data-path="ed4.html"><a href="ed4.html#literacy-rate-youth-total-of-people-ages-15-24"><i class="fa fa-check"></i><b>5.9</b> Literacy rate, youth total (% of people ages 15-24)</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="ed4.html"><a href="ed4.html#filtering-joins-1"><i class="fa fa-check"></i><b>5.9.1</b> Filtering joins</a></li>
+</ul></li>
+<li class="chapter" data-level="5.10" data-path="ed4.html"><a href="ed4.html#visualization-of-the-data"><i class="fa fa-check"></i><b>5.10</b> Visualization of the data</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="ed4.html"><a href="ed4.html#gender-ratio-of-girls-to-boys-in-primary-secondary-and-tertiary-levels"><i class="fa fa-check"></i><b>5.10.1</b> Gender: Ratio of girls to boys in primary, secondary and tertiary levels</a></li>
+<li class="chapter" data-level="5.10.2" data-path="ed4.html"><a href="ed4.html#proportion-of-seats-held-by-women-in-national-parliament."><i class="fa fa-check"></i><b>5.10.2</b> Proportion of seats held by women in national parliament.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="eda5.html"><a href="eda5.html"><i class="fa fa-check"></i><b>6</b> Exploratory Data Analysis (EDA) 5</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#course-contents-4"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#data-modeling-and-eda"><i class="fa fa-check"></i>Data Modeling and EDA</a></li>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#contents-of-eda5"><i class="fa fa-check"></i>Contents of EDA5</a></li>
+<li class="chapter" data-level="6.1" data-path="eda5.html"><a href="eda5.html#part-i-exploratory-data-analysis-and-data-modeling"><i class="fa fa-check"></i><b>6.1</b> Part I: Exploratory Data Analysis and Data Modeling</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-i-r4dseda"><i class="fa fa-check"></i><b>6.1.1</b> Exploration in Visualization, I – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.2" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-ii-r4dseda"><i class="fa fa-check"></i><b>6.1.2</b> Exploration in Visualization, II – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.3" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-iii-r4dseda"><i class="fa fa-check"></i><b>6.1.3</b> Exploration in Visualization, III – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.4" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-iv-r4dseda"><i class="fa fa-check"></i><b>6.1.4</b> Exploration in Visualization, IV – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="6.1.5" data-path="eda5.html"><a href="eda5.html#eda-and-data-modeling-simple-summary-of-data"><i class="fa fa-check"></i><b>6.1.5</b> EDA and Data Modeling: Simple Summary of Data</a></li>
+<li class="chapter" data-level="6.1.6" data-path="eda5.html"><a href="eda5.html#hypothesis-generation-vs.-hypothesis-confirmation"><i class="fa fa-check"></i><b>6.1.6</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="6.1.7" data-path="eda5.html"><a href="eda5.html#r4ds-model-basics"><i class="fa fa-check"></i><b>6.1.7</b> <span>R4DS: Model Basics</span></a></li>
+<li class="chapter" data-level="6.1.8" data-path="eda5.html"><a href="eda5.html#all-models-are-wrong-but-some-are-useful.---george-e.p.-box-1919-2013"><i class="fa fa-check"></i><b>6.1.8</b> All models are wrong, but some are useful. - George E.P. Box (1919-2013)</a></li>
+<li class="chapter" data-level="6.1.9" data-path="eda5.html"><a href="eda5.html#regression-analysis-wikipedia"><i class="fa fa-check"></i><b>6.1.9</b> Regression Analysis (<span>wikipedia</span>)</a></li>
+<li class="chapter" data-level="6.1.10" data-path="eda5.html"><a href="eda5.html#history-of-regression-analysis-wikipedia"><i class="fa fa-check"></i><b>6.1.10</b> History of Regression Analysis (<span>wikipedia</span>)</a></li>
+<li class="chapter" data-level="6.1.11" data-path="eda5.html"><a href="eda5.html#the-first-example-1"><i class="fa fa-check"></i><b>6.1.11</b> The First Example</a></li>
+<li class="chapter" data-level="6.1.12" data-path="eda5.html"><a href="eda5.html#model-analysis-with-tidyverse-modelr"><i class="fa fa-check"></i><b>6.1.12</b> Model Analysis with <code>tidyverse</code>: <code>modelr</code></a></li>
+<li class="chapter" data-level="6.1.13" data-path="eda5.html"><a href="eda5.html#predictions-haty-a_1-a_2x-and-residuals-y---haty"><i class="fa fa-check"></i><b>6.1.13</b> Predictions <span class="math inline">\(\hat{y} = a_1 + a_2x\)</span> and Residuals <span class="math inline">\(y - \hat{y}\)</span></a></li>
+<li class="chapter" data-level="6.1.14" data-path="eda5.html"><a href="eda5.html#geom_jitter"><i class="fa fa-check"></i><b>6.1.14</b> geom_jitter()</a></li>
+<li class="chapter" data-level="6.1.15" data-path="eda5.html"><a href="eda5.html#iris-1"><i class="fa fa-check"></i><b>6.1.15</b> iris</a></li>
+<li class="chapter" data-level="6.1.16" data-path="eda5.html"><a href="eda5.html#linear-model-sepal.w-sepal.l"><i class="fa fa-check"></i><b>6.1.16</b> Linear Model: Sepal.W ~ Sepal.L</a></li>
+<li class="chapter" data-level="6.1.17" data-path="eda5.html"><a href="eda5.html#linear-model-petal.w-petal.l"><i class="fa fa-check"></i><b>6.1.17</b> Linear Model: Petal.W ~ Petal.L</a></li>
+<li class="chapter" data-level="6.1.18" data-path="eda5.html"><a href="eda5.html#correlation"><i class="fa fa-check"></i><b>6.1.18</b> Correlation</a></li>
+<li class="chapter" data-level="6.1.19" data-path="eda5.html"><a href="eda5.html#filterspecies-setosa"><i class="fa fa-check"></i><b>6.1.19</b> <code>filter(Species == "setosa")</code></a></li>
+<li class="chapter" data-level="6.1.20" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>6.1.20</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="6.1.21" data-path="eda5.html"><a href="eda5.html#linear-regression-quick-reference"><i class="fa fa-check"></i><b>6.1.21</b> Linear Regression Quick Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="eda5.html"><a href="eda5.html#part-ii-practicum---model-analysis-warnings"><i class="fa fa-check"></i><b>6.2</b> Part II: Practicum - Model Analysis Warnings</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="eda5.html"><a href="eda5.html#linear-regression-aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>6.2.1</b> Linear Regression: <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="6.2.2" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species-1"><i class="fa fa-check"></i><b>6.2.2</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="6.2.3" data-path="eda5.html"><a href="eda5.html#correlation-and-covariance"><i class="fa fa-check"></i><b>6.2.3</b> Correlation and Covariance</a></li>
+<li class="chapter" data-level="6.2.4" data-path="eda5.html"><a href="eda5.html#useful-mathematical-formula"><i class="fa fa-check"></i><b>6.2.4</b> Useful Mathematical Formula</a></li>
+<li class="chapter" data-level="6.2.5" data-path="eda5.html"><a href="eda5.html#p-value"><i class="fa fa-check"></i><b>6.2.5</b> p-value</a></li>
+<li class="chapter" data-level="6.2.6" data-path="eda5.html"><a href="eda5.html#t-statistic"><i class="fa fa-check"></i><b>6.2.6</b> t-statistic</a></li>
+<li class="chapter" data-level="6.2.7" data-path="eda5.html"><a href="eda5.html#mathematical-formulas-i"><i class="fa fa-check"></i><b>6.2.7</b> Mathematical Formulas, I</a></li>
+<li class="chapter" data-level="6.2.8" data-path="eda5.html"><a href="eda5.html#mathematical-formulas-ii"><i class="fa fa-check"></i><b>6.2.8</b> Mathematical Formulas, II</a></li>
+<li class="chapter" data-level="6.2.9" data-path="eda5.html"><a href="eda5.html#regression-analyais-summary"><i class="fa fa-check"></i><b>6.2.9</b> Regression Analyais: Summary</a></li>
+<li class="chapter" data-level="6.2.10" data-path="eda5.html"><a href="eda5.html#the-asa-statement-on-p-values-context-process-and-purpose"><i class="fa fa-check"></i><b>6.2.10</b> <span>The ASA Statement on p-Values: Context, Process, and Purpose</span></a></li>
+<li class="chapter" data-level="6.2.11" data-path="eda5.html"><a href="eda5.html#public-data-un-data-and-us-census"><i class="fa fa-check"></i><b>6.2.11</b> Public Data: UN Data and US Census</a></li>
+<li class="chapter" data-level="6.2.12" data-path="eda5.html"><a href="eda5.html#an-example-us-census-bureau"><i class="fa fa-check"></i><b>6.2.12</b> An Example: US Census Bureau</a></li>
+<li class="chapter" data-level="6.2.13" data-path="eda5.html"><a href="eda5.html#oecd-about-who-we-are"><i class="fa fa-check"></i><b>6.2.13</b> <span>OECD: About Who we are</span></a></li>
+<li class="chapter" data-level="6.2.14" data-path="eda5.html"><a href="eda5.html#learning-resources-v"><i class="fa fa-check"></i><b>6.2.14</b> Learning Resources, V</a></li>
+<li class="chapter" data-level="6.2.15" data-path="eda5.html"><a href="eda5.html#learning-resources-summary"><i class="fa fa-check"></i><b>6.2.15</b> Learning Resources – Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="eda5.html"><a href="eda5.html#the-sixth-assignment-in-moodle"><i class="fa fa-check"></i><b>6.3</b> The Sixth Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="eda5.html"><a href="eda5.html#setup-and-yaml-2"><i class="fa fa-check"></i><b>6.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="6.3.2" data-path="eda5.html"><a href="eda5.html#packages-to-load"><i class="fa fa-check"></i><b>6.3.2</b> Packages to load</a></li>
+<li class="chapter" data-level="6.3.3" data-path="eda5.html"><a href="eda5.html#modeling-and-eda-summary"><i class="fa fa-check"></i><b>6.3.3</b> Modeling and EDA Summary</a></li>
+<li class="chapter" data-level="6.3.4" data-path="eda5.html"><a href="eda5.html#examples-and-comments-1"><i class="fa fa-check"></i><b>6.3.4</b> Examples and Comments</a></li>
+<li class="chapter" data-level="6.3.5" data-path="eda5.html"><a href="eda5.html#class.xlsx"><i class="fa fa-check"></i><b>6.3.5</b> CLASS.xlsx</a></li>
+<li class="chapter" data-level="6.3.6" data-path="eda5.html"><a href="eda5.html#population-and-gdp-per-capita"><i class="fa fa-check"></i><b>6.3.6</b> Population and GDP per Capita</a></li>
+<li class="chapter" data-level="6.3.7" data-path="eda5.html"><a href="eda5.html#internet"><i class="fa fa-check"></i><b>6.3.7</b> Internet</a></li>
+<li class="chapter" data-level="6.3.8" data-path="eda5.html"><a href="eda5.html#bond-yields"><i class="fa fa-check"></i><b>6.3.8</b> Bond Yields</a></li>
+<li class="chapter" data-level="6.3.9" data-path="eda5.html"><a href="eda5.html#elderly-population"><i class="fa fa-check"></i><b>6.3.9</b> Elderly Population</a></li>
+<li class="chapter" data-level="6.3.10" data-path="eda5.html"><a href="eda5.html#education"><i class="fa fa-check"></i><b>6.3.10</b> Education</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="topics1.html"><a href="topics1.html"><i class="fa fa-check"></i><b>7</b> Topics in Exploratory Data Analysis I　</a>
+<ul>
+<li class="chapter" data-level="" data-path="topics1.html"><a href="topics1.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="topics1.html"><a href="topics1.html#dot-place-holder-in-lm."><i class="fa fa-check"></i>Dot Place Holder in <code>lm</code>.</a></li>
+<li class="chapter" data-level="7.1" data-path="topics1.html"><a href="topics1.html#part-i-regression-1"><i class="fa fa-check"></i><b>7.1</b> Part I: Regression 1:</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="topics1.html"><a href="topics1.html#why-does-gdp-vary-from-country-to-country"><i class="fa fa-check"></i><b>7.1.1</b> Why does GDP vary from country to country?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="topics1.html"><a href="topics1.html#regression"><i class="fa fa-check"></i><b>7.1.2</b> Regression</a></li>
+<li class="chapter" data-level="7.1.3" data-path="topics1.html"><a href="topics1.html#checking-for-multicollinearity"><i class="fa fa-check"></i><b>7.1.3</b> Checking for multicollinearity</a></li>
+<li class="chapter" data-level="7.1.4" data-path="topics1.html"><a href="topics1.html#vif-determination-of-multi-collinearity"><i class="fa fa-check"></i><b>7.1.4</b> vif: Determination of multi-collinearity</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="topics1.html"><a href="topics1.html#a-time-series-data-of-world-from-1960-to-2020"><i class="fa fa-check"></i><b>7.2</b> A time series data of World from 1960 to 2020</a></li>
+<li class="chapter" data-level="7.3" data-path="topics1.html"><a href="topics1.html#excercise"><i class="fa fa-check"></i><b>7.3</b> Excercise:</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html"><i class="fa fa-check"></i><b>8</b> Regression 2 : CO2 Emission</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#project"><i class="fa fa-check"></i><b>8.1</b> Project</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#regression-analysis"><i class="fa fa-check"></i><b>8.1.1</b> Regression Analysis</a></li>
+<li class="chapter" data-level="8.1.2" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#wdi-indicator-cordes"><i class="fa fa-check"></i><b>8.1.2</b> WDI Indicator cordes</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#regression-1"><i class="fa fa-check"></i><b>8.2</b> Regression</a></li>
+<li class="chapter" data-level="8.3" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#we-select-regression-model"><i class="fa fa-check"></i><b>8.3</b> We select regression model;</a></li>
+<li class="chapter" data-level="8.4" data-path="regression-2-co2-emission.html"><a href="regression-2-co2-emission.html#a-time-series-data-of-world-from-1960-to-2020-1"><i class="fa fa-check"></i><b>8.4</b> A time series data of World from 1960 to 2020</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html"><i class="fa fa-check"></i><b>9</b> Regression 3: CO2 emission (Standardization)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#regression-2"><i class="fa fa-check"></i><b>9.1</b> Regression</a></li>
+<li class="chapter" data-level="9.2" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#not-standardized"><i class="fa fa-check"></i><b>9.2</b> Not Standardized</a></li>
+<li class="chapter" data-level="9.3" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#regression-3"><i class="fa fa-check"></i><b>9.3</b> Regression</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#standadized-again"><i class="fa fa-check"></i><b>9.3.1</b> Standadized (Again)</a></li>
+<li class="chapter" data-level="9.3.2" data-path="regression-3-co2-emission-standardization.html"><a href="regression-3-co2-emission-standardization.html#we-select-regression-model-1"><i class="fa fa-check"></i><b>9.3.2</b> We select regression model;</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html"><i class="fa fa-check"></i><b>10</b> Regression of Categorical Variables and ANOVA</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html#regression-4"><i class="fa fa-check"></i><b>10.1</b> Regression</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html#t-test"><i class="fa fa-check"></i><b>10.1.1</b> t-test</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-of-categorical-variables-and-anova.html"><a href="regression-of-categorical-variables-and-anova.html#week-7-assignment"><i class="fa fa-check"></i><b>10.2</b> Week 7 Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="topics2.html"><a href="topics2.html"><i class="fa fa-check"></i><b>11</b> Topics in Exploratory Data Analysis II　</a>
+<ul>
+<li class="chapter" data-level="" data-path="topics2.html"><a href="topics2.html#project-1"><i class="fa fa-check"></i>Project</a></li>
+<li class="chapter" data-level="11.1" data-path="topics2.html"><a href="topics2.html#classification-iris-dataset"><i class="fa fa-check"></i><b>11.1</b> Classification IRIS dataset</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="topics2.html"><a href="topics2.html#setup-1"><i class="fa fa-check"></i><b>11.1.1</b> Setup</a></li>
+<li class="chapter" data-level="11.1.2" data-path="topics2.html"><a href="topics2.html#data-iris-1"><i class="fa fa-check"></i><b>11.1.2</b> Data: <code>iris</code></a></li>
+<li class="chapter" data-level="11.1.3" data-path="topics2.html"><a href="topics2.html#binary-classification"><i class="fa fa-check"></i><b>11.1.3</b> Binary classification</a></li>
+<li class="chapter" data-level="11.1.4" data-path="topics2.html"><a href="topics2.html#various-logistic-models"><i class="fa fa-check"></i><b>11.1.4</b> Various Logistic Models</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="topics2.html"><a href="topics2.html#conclusions"><i class="fa fa-check"></i><b>11.2</b> Conclusions</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="topics2.html"><a href="topics2.html#hypothesis-generation-vs.-hypothesis-confirmation-1"><i class="fa fa-check"></i><b>11.2.1</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="11.2.2" data-path="topics2.html"><a href="topics2.html#references"><i class="fa fa-check"></i><b>11.2.2</b> References</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="guest.html"><a href="guest.html"><i class="fa fa-check"></i><b>12</b> Guest Lecture and/or Examples</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="guest.html"><a href="guest.html#guest-lecture-by-zheng-nan"><i class="fa fa-check"></i><b>12.1</b> Guest Lecture by Zheng Nan</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="guest.html"><a href="guest.html#exploring-the-bitcoin-market-efficiency-using-r"><i class="fa fa-check"></i><b>12.1.1</b> Exploring the bitcoin market efficiency using R</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="guest.html"><a href="guest.html#topics-of-eda"><i class="fa fa-check"></i><b>12.2</b> Topics of EDA</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="guest.html"><a href="guest.html#contents"><i class="fa fa-check"></i><b>12.2.1</b> Contents</a></li>
+<li class="chapter" data-level="12.2.2" data-path="guest.html"><a href="guest.html#financial-data"><i class="fa fa-check"></i><b>12.2.2</b> Financial Data</a></li>
+<li class="chapter" data-level="12.2.3" data-path="guest.html"><a href="guest.html#your-course-project-part-i"><i class="fa fa-check"></i><b>12.2.3</b> Your Course Project, Part I</a></li>
+<li class="chapter" data-level="12.2.4" data-path="guest.html"><a href="guest.html#your-course-project-part-ii"><i class="fa fa-check"></i><b>12.2.4</b> Your Course Project, Part II</a></li>
+<li class="chapter" data-level="12.2.5" data-path="guest.html"><a href="guest.html#presentation-format"><i class="fa fa-check"></i><b>12.2.5</b> Presentation Format</a></li>
+<li class="chapter" data-level="12.2.6" data-path="guest.html"><a href="guest.html#the-eighth-assignment-in-moodle"><i class="fa fa-check"></i><b>12.2.6</b> The Eighth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="12.2.7" data-path="guest.html"><a href="guest.html#learning-resources-viii"><i class="fa fa-check"></i><b>12.2.7</b> Learning Resources, VIII</a></li>
+<li class="chapter" data-level="12.2.8" data-path="guest.html"><a href="guest.html#presentation"><i class="fa fa-check"></i><b>12.2.8</b> Presentation</a></li>
+<li class="chapter" data-level="12.2.9" data-path="guest.html"><a href="guest.html#the-ninth-assignment-in-moodle"><i class="fa fa-check"></i><b>12.2.9</b> The Ninth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="12.2.10" data-path="guest.html"><a href="guest.html#presentation-on-2021-02-17"><i class="fa fa-check"></i><b>12.2.10</b> Presentation on 2021-02-17</a></li>
+<li class="chapter" data-level="12.2.11" data-path="guest.html"><a href="guest.html#presentation-on-2021-02-24"><i class="fa fa-check"></i><b>12.2.11</b> Presentation on 2021-02-24</a></li>
+<li class="chapter" data-level="12.2.12" data-path="guest.html"><a href="guest.html#learning-resources-ix"><i class="fa fa-check"></i><b>12.2.12</b> Learning Resources, IX</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html"><i class="fa fa-check"></i><b>13</b> Presentation, Learning Resources</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#part-i-presentation-part-ii"><i class="fa fa-check"></i><b>13.1</b> Part I: Presentation, Part II</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#the-tenth-assignment-in-moodle"><i class="fa fa-check"></i><b>13.1.1</b> The Tenth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="13.1.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#presentation-on-2021-02-24-1"><i class="fa fa-check"></i><b>13.1.2</b> Presentation on 2021-02-24</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#part-ii-roundup-learning-resources"><i class="fa fa-check"></i><b>13.2</b> Part II: Roundup, Learning Resources</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#contents-1"><i class="fa fa-check"></i><b>13.2.1</b> Contents</a></li>
+<li class="chapter" data-level="13.2.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#focus-of-this-course-exploratory-data-analysis"><i class="fa fa-check"></i><b>13.2.2</b> Focus of This Course – Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="13.2.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#schedule-and-grades"><i class="fa fa-check"></i><b>13.2.3</b> Schedule and Grades</a></li>
+<li class="chapter" data-level="13.2.4" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#your-course-project-part-i-1"><i class="fa fa-check"></i><b>13.2.4</b> Your Course Project, Part I</a></li>
+<li class="chapter" data-level="13.2.5" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#your-course-project-part-ii-1"><i class="fa fa-check"></i><b>13.2.5</b> Your Course Project, Part II</a></li>
+<li class="chapter" data-level="13.2.6" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-notebook-ms-word-and-pdf-workflow"><i class="fa fa-check"></i><b>13.2.6</b> R Notebook, MS Word and PDF, Workflow</a></li>
+<li class="chapter" data-level="13.2.7" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#export-ms-word-using-a-style-file"><i class="fa fa-check"></i><b>13.2.7</b> Export MS Word Using a Style File</a></li>
+<li class="chapter" data-level="13.2.8" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#edit-chunk-options"><i class="fa fa-check"></i><b>13.2.8</b> Edit Chunk Options</a></li>
+<li class="chapter" data-level="13.2.9" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#chunk-options"><i class="fa fa-check"></i><b>13.2.9</b> Chunk Options</a></li>
+<li class="chapter" data-level="13.2.10" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#examples-and-references"><i class="fa fa-check"></i><b>13.2.10</b> Examples and References</a></li>
+<li class="chapter" data-level="13.2.11" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#references-for-your-short-paper-and-paper"><i class="fa fa-check"></i><b>13.2.11</b> References for Your Short-Paper and Paper</a></li>
+<li class="chapter" data-level="13.2.12" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-studio-run-codes"><i class="fa fa-check"></i><b>13.2.12</b> R Studio: Run Codes</a></li>
+<li class="chapter" data-level="13.2.13" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#r-studio-1.4---released-on-2021-01-19"><i class="fa fa-check"></i><b>13.2.13</b> R Studio 1.4 - Released on 2021-01-19</a></li>
+<li class="chapter" data-level="13.2.14" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-interactive-practicum"><i class="fa fa-check"></i><b>13.2.14</b> Learning Resources, X – Interactive Practicum</a></li>
+<li class="chapter" data-level="13.2.15" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-books"><i class="fa fa-check"></i><b>13.2.15</b> Learning Resources, X – Books</a></li>
+<li class="chapter" data-level="13.2.16" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-moocs-and-online-courses"><i class="fa fa-check"></i><b>13.2.16</b> Learning Resources, X – Moocs and Online Courses</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#resources"><i class="fa fa-check"></i><b>13.3</b> Learning Resources</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-interactive-practicum-1"><i class="fa fa-check"></i><b>13.3.1</b> Learning Resources, X – Interactive Practicum</a></li>
+<li class="chapter" data-level="13.3.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-books-1"><i class="fa fa-check"></i><b>13.3.2</b> Learning Resources, X – Books</a></li>
+<li class="chapter" data-level="13.3.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-moocs-and-online-courses-1"><i class="fa fa-check"></i><b>13.3.3</b> Learning Resources, X – Moocs and Online Courses</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regression-of-categorical-variables-and-anova" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Regression of Categorical Variables and ANOVA<a href="regression-of-categorical-variables-and-anova.html#regression-of-categorical-variables-and-anova" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>If you start from here, you need to load the following packages.</p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="regression-of-categorical-variables-and-anova.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co">#tidyverse Package, a collection of packages for data science</span></span>
+<span id="cb174-2"><a href="regression-of-categorical-variables-and-anova.html#cb174-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI) <span class="co">#WDI Package for World Development Indicators</span></span>
+<span id="cb174-3"><a href="regression-of-categorical-variables-and-anova.html#cb174-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car) <span class="co">#VIF function</span></span>
+<span id="cb174-4"><a href="regression-of-categorical-variables-and-anova.html#cb174-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co">#Table of the regression results</span></span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="regression-of-categorical-variables-and-anova.html#cb175-1" aria-hidden="true" tabindex="-1"></a>wb_co2</span></code></pre></div>
+<pre><code>## # A tibble: 16,226 × 16
+##    iso2c country  year status lastu…¹   co2      gdp    pop  cereal iso3c region
+##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+##  1 1A    Arab W…  1963 &quot;&quot;     2022-0…    NA NA       1.00e8  1.83e7 ARB   Aggre…
+##  2 1A    Arab W…  1960 &quot;&quot;     2022-0…    NA NA       9.22e7 NA      ARB   Aggre…
+##  3 1A    Arab W…  1971 &quot;&quot;     2022-0…    NA  4.98e10 1.25e8  1.70e7 ARB   Aggre…
+##  4 1A    Arab W…  1972 &quot;&quot;     2022-0…    NA  5.94e10 1.29e8  1.88e7 ARB   Aggre…
+##  5 1A    Arab W…  1961 &quot;&quot;     2022-0…    NA NA       9.47e7  1.67e7 ARB   Aggre…
+##  6 1A    Arab W…  1962 &quot;&quot;     2022-0…    NA NA       9.73e7  1.73e7 ARB   Aggre…
+##  7 1A    Arab W…  1975 &quot;&quot;     2022-0…    NA  1.58e11 1.40e8  1.87e7 ARB   Aggre…
+##  8 1A    Arab W…  1976 &quot;&quot;     2022-0…    NA  1.97e11 1.44e8  2.01e7 ARB   Aggre…
+##  9 1A    Arab W…  1973 &quot;&quot;     2022-0…    NA  7.53e10 1.32e8  1.78e7 ARB   Aggre…
+## 10 1A    Arab W…  1974 &quot;&quot;     2022-0…    NA  1.43e11 1.36e8  1.84e7 ARB   Aggre…
+## # … with 16,216 more rows, 5 more variables: capital &lt;chr&gt;, longitude &lt;chr&gt;,
+## #   latitude &lt;chr&gt;, income &lt;chr&gt;, lending &lt;chr&gt;, and abbreviated variable name
+## #   ¹​lastupdated</code></pre>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="regression-of-categorical-variables-and-anova.html#cb177-1" aria-hidden="true" tabindex="-1"></a>wb_co2_4anova <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2016</span>, region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb177-2"><a href="regression-of-categorical-variables-and-anova.html#cb177-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(iso2c, co2, gdp, income) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb177-3"><a href="regression-of-categorical-variables-and-anova.html#cb177-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log_co2 =</span> <span class="fu">log10</span>(co2), <span class="at">log_gdp =</span> <span class="fu">log10</span>(gdp))</span>
+<span id="cb177-4"><a href="regression-of-categorical-variables-and-anova.html#cb177-4" aria-hidden="true" tabindex="-1"></a>wb_co2_4anova</span></code></pre></div>
+<pre><code>## # A tibble: 186 × 6
+##    iso2c     co2     gdp income              log_co2 log_gdp
+##    &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt;   &lt;dbl&gt;
+##  1 AD       470. 2.90e 9 High income            2.67    9.46
+##  2 AE    201080. 3.57e11 High income            5.30   11.6 
+##  3 AF      5300. 1.81e10 Low income             3.72   10.3 
+##  4 AG       500  1.44e 9 High income            2.70    9.16
+##  5 AL      4480. 1.19e10 Upper middle income    3.65   10.1 
+##  6 AM      5070. 1.05e10 Upper middle income    3.71   10.0 
+##  7 AO     29760. 4.98e10 Lower middle income    4.47   10.7 
+##  8 AR    183160. 5.58e11 Upper middle income    5.26   11.7 
+##  9 AT     63680. 3.96e11 High income            4.80   11.6 
+## 10 AU    384990. 1.21e12 High income            5.59   12.1 
+## # … with 176 more rows</code></pre>
+<pre><code>CO2 &lt;- as_tibble(read.csv(&quot;CO2CAPITA.csv&quot;))
+CO2
+str(CO2)
+head(CO2)
+tail(CO2)</code></pre>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="regression-of-categorical-variables-and-anova.html#cb180-1" aria-hidden="true" tabindex="-1"></a>wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(income) <span class="sc">%&gt;%</span> </span>
+<span id="cb180-2"><a href="regression-of-categorical-variables-and-anova.html#cb180-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n_distinct</span>(iso2c), <span class="at">co2_mean =</span> <span class="fu">mean</span>(co2), <span class="at">gdp_mean =</span> <span class="fu">mean</span>(gdp), <span class="at">log_co2_mean =</span> <span class="fu">mean</span>(log_co2), <span class="at">log_gdp_mean =</span> <span class="fu">mean</span>(log_gdp))</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 6
+##   income                  n co2_mean      gdp_mean log_co2_mean log_gdp_mean
+##   &lt;chr&gt;               &lt;int&gt;    &lt;dbl&gt;         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+## 1 High income            56  217188. 857319296294.         4.46        11.1 
+## 2 Low income             25    5053.  17841983559.         3.39         9.99
+## 3 Lower middle income    53   96503. 129620974752.         3.98        10.3 
+## 4 Upper middle income    52  286264. 375800809797.         4.10        10.4</code></pre>
+<div id="regression-4" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Regression<a href="regression-of-categorical-variables-and-anova.html#regression-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>y &lt;- CO2$EN.ATM.CO2E.PC #CO2 Emission per capita
+x &lt;- CO2$NY.GDP.PCAP.PP.CD/10000 #GDP per capita, PPP
+summary(x)
+summary(y)</code></pre>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="regression-of-categorical-variables-and-anova.html#cb183-1" aria-hidden="true" tabindex="-1"></a>wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(log_gdp, log_co2)) <span class="sc">+</span></span>
+<span id="cb183-2"><a href="regression-of-categorical-variables-and-anova.html#cb183-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb183-3"><a href="regression-of-categorical-variables-and-anova.html#cb183-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb183-4"><a href="regression-of-categorical-variables-and-anova.html#cb183-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission per capita and GDP per capita in log-log scale&quot;</span>, </span>
+<span id="cb183-5"><a href="regression-of-categorical-variables-and-anova.html#cb183-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;GDP per capita&quot;</span>, <span class="at">y =</span> <span class="st">&quot;CO2 emission per capita&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<pre><code>CO2 %&gt;% ggplot(aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;, se = FALSE) +
+  labs(title = &quot;CO2 emission per capita and GDP per capita&quot;, 
+       x = &quot;GDP per capita&quot;, y = &quot;CO2 emission per capita&quot;)
+
+model_1 &lt;-lm(y ~ x, data=CO2)
+summary(model_1)
+msummary(model_1, statistic = &#39;p.value&#39;)</code></pre>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="regression-of-categorical-variables-and-anova.html#cb186-1" aria-hidden="true" tabindex="-1"></a>wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> log_co2, <span class="at">fill =</span>  income)) <span class="sc">+</span> </span>
+<span id="cb186-2"><a href="regression-of-categorical-variables-and-anova.html#cb186-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>( ) </span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="regression-of-categorical-variables-and-anova.html#cb188-1" aria-hidden="true" tabindex="-1"></a>wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> log_co2, <span class="at">y =</span> income, <span class="at">fill =</span>  income)) <span class="sc">+</span> </span>
+<span id="cb188-2"><a href="regression-of-categorical-variables-and-anova.html#cb188-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="regression-of-categorical-variables-and-anova.html#cb189-1" aria-hidden="true" tabindex="-1"></a>wb_co2_anova <span class="ot">&lt;-</span> wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">hi =</span> <span class="fu">as.numeric</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="regression-of-categorical-variables-and-anova.html#cb190-1" aria-hidden="true" tabindex="-1"></a>wb_co2_model <span class="ot">&lt;-</span> wb_co2_anova <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp <span class="sc">+</span> hi, .)</span>
+<span id="cb190-2"><a href="regression-of-categorical-variables-and-anova.html#cb190-2" aria-hidden="true" tabindex="-1"></a>wb_co2_model <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = co2 ~ gdp + hi, data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2775444   -69456   -66758    54673  5112814 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  6.850e+04  4.110e+04   1.667  0.09727 .  
+## gdp          4.178e-07  2.066e-08  20.221  &lt; 2e-16 ***
+## hi          -2.095e+05  7.570e+04  -2.768  0.00623 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 466100 on 183 degrees of freedom
+## Multiple R-squared:  0.6912, Adjusted R-squared:  0.6878 
+## F-statistic: 204.8 on 2 and 183 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="regression-of-categorical-variables-and-anova.html#cb192-1" aria-hidden="true" tabindex="-1"></a>wb_co2_log_model <span class="ot">&lt;-</span> wb_co2_anova <span class="sc">%&gt;%</span> <span class="fu">lm</span>(log_co2 <span class="sc">~</span> log_gdp <span class="sc">+</span> hi, .)</span>
+<span id="cb192-2"><a href="regression-of-categorical-variables-and-anova.html#cb192-2" aria-hidden="true" tabindex="-1"></a>wb_co2_log_model <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = log_co2 ~ log_gdp + hi, data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.97183 -0.19548 -0.02953  0.16620  0.69532 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -6.72924    0.23113 -29.114  &lt; 2e-16 ***
+## log_gdp      1.03559    0.02235  46.337  &lt; 2e-16 ***
+## hi          -0.26638    0.05022  -5.304 3.24e-07 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2943 on 183 degrees of freedom
+## Multiple R-squared:  0.9258, Adjusted R-squared:  0.925 
+## F-statistic:  1142 on 2 and 183 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="regression-of-categorical-variables-and-anova.html#cb194-1" aria-hidden="true" tabindex="-1"></a>income_model <span class="ot">&lt;-</span> wb_co2_anova <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> <span class="fu">factor</span>(income), .) </span>
+<span id="cb194-2"><a href="regression-of-categorical-variables-and-anova.html#cb194-2" aria-hidden="true" tabindex="-1"></a>income_model <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = co2 ~ factor(income), data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -286254 -215768  -96018   -3903 9588396 
+## 
+## Coefficients:
+##                                   Estimate Std. Error t value Pr(&gt;|t|)  
+## (Intercept)                         217188     111597   1.946   0.0532 .
+## factor(income)Low income           -212135     200875  -1.056   0.2923  
+## factor(income)Lower middle income  -120685     160040  -0.754   0.4518  
+## factor(income)Upper middle income    69076     160829   0.429   0.6681  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 835100 on 182 degrees of freedom
+## Multiple R-squared:  0.01392,    Adjusted R-squared:  -0.002335 
+## F-statistic: 0.8563 on 3 and 182 DF,  p-value: 0.4649</code></pre>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="regression-of-categorical-variables-and-anova.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">co2_model =</span> wb_co2_model, <span class="at">co2_log_model =</span> wb_co2_log_model, <span class="at">co2_income_model =</span> income_model), <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+co2_model
+</th>
+<th style="text-align:center;">
+co2_log_model
+</th>
+<th style="text-align:center;">
+co2_income_model
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+68502.943
+</td>
+<td style="text-align:center;">
+−6.729
+</td>
+<td style="text-align:center;">
+217187.858
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+(0.097)
+</td>
+<td style="text-align:center;">
+(0.000)
+</td>
+<td style="text-align:center;">
+(0.053)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+gdp
+</td>
+<td style="text-align:center;">
+0.000
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+(0.000)
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hi
+</td>
+<td style="text-align:center;">
+−209509.183
+</td>
+<td style="text-align:center;">
+−0.266
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+(0.006)
+</td>
+<td style="text-align:center;">
+(0.000)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+log_gdp
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+1.036
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+(0.000)
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+factor(income)Low income
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+−212135.058
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+(0.292)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+factor(income)Lower middle income
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+−120685.215
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+(0.452)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+factor(income)Upper middle income
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+69075.992
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1px">
+(0.668)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+186
+</td>
+<td style="text-align:center;">
+186
+</td>
+<td style="text-align:center;">
+186
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.691
+</td>
+<td style="text-align:center;">
+0.926
+</td>
+<td style="text-align:center;">
+0.014
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.688
+</td>
+<td style="text-align:center;">
+0.925
+</td>
+<td style="text-align:center;">
+−0.002
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AIC
+</td>
+<td style="text-align:center;">
+5388.2
+</td>
+<td style="text-align:center;">
+77.7
+</td>
+<td style="text-align:center;">
+5606.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BIC
+</td>
+<td style="text-align:center;">
+5401.1
+</td>
+<td style="text-align:center;">
+90.7
+</td>
+<td style="text-align:center;">
+5622.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Log.Lik.
+</td>
+<td style="text-align:center;">
+−2690.100
+</td>
+<td style="text-align:center;">
+−34.874
+</td>
+<td style="text-align:center;">
+−2798.072
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMSE
+</td>
+<td style="text-align:center;">
+462298.61
+</td>
+<td style="text-align:center;">
+0.29
+</td>
+<td style="text-align:center;">
+826089.87
+</td>
+</tr>
+</tbody>
+</table>
+<div id="t-test" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> t-test<a href="regression-of-categorical-variables-and-anova.html#t-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="regression-of-categorical-variables-and-anova.html#cb197-1" aria-hidden="true" tabindex="-1"></a>high <span class="ot">&lt;-</span> wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(co2)</span>
+<span id="cb197-2"><a href="regression-of-categorical-variables-and-anova.html#cb197-2" aria-hidden="true" tabindex="-1"></a>low <span class="ot">&lt;-</span> wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Low income&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(co2)</span>
+<span id="cb197-3"><a href="regression-of-categorical-variables-and-anova.html#cb197-3" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(high, low)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  high and low
+## t = 2.3527, df = 55.024, p-value = 0.02224
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   31435.4 392834.7
+## sample estimates:
+## mean of x mean of y 
+##  217187.9    5052.8</code></pre>
+<p>#Regression analysis with categorical variables</p>
+<p>model_3=lm(EN.ATM.CO2E.PC ~ factor(income), data = CO2)</p>
+<p>summary(model_3) # summary</p>
+<p>msummary(model_3, statistic = ‘p.value’)</p>
+<p>#ANOVA (Analysis of Variance)</p>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="regression-of-categorical-variables-and-anova.html#cb199-1" aria-hidden="true" tabindex="-1"></a>wb_co2_4anova <span class="sc">%&gt;%</span> <span class="fu">aov</span>(co2 <span class="sc">~</span> <span class="fu">factor</span>(income), .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>##                 Df    Sum Sq   Mean Sq F value Pr(&gt;F)
+## factor(income)   3 1.792e+12 5.972e+11   0.856  0.465
+## Residuals      182 1.269e+14 6.974e+11</code></pre>
+</div>
+</div>
+<div id="week-7-assignment" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Week 7 Assignment<a href="regression-of-categorical-variables-and-anova.html#week-7-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Week 7: Assignment on regression analysis and PPDAC cycle</p></li>
+<li><p>Work on the following problem.</p></li>
+<li><p>Problem: Find one problem from the SGDs goal.</p></li>
+<li><p>Example: WDI environment</p></li>
+<li><p><a href="https://datatopics.worldbank.org/world-development-indicators/themes/environment.html" class="uri">https://datatopics.worldbank.org/world-development-indicators/themes/environment.html</a></p></li>
+<li><p>Plan: Analyze the data to find out why the problem is occurring.</p></li>
+<li><p>Data: Collect data from WDI and other sources (OECD, UN, IMF, etc.).</p></li>
+<li><p>Analysis: Analyze the data. Use what you have learned about regression analysis and descriptive statistics in the previous lectures.</p></li>
+<li><p>Conclusion: Briefly describe what you learn from the data analysis.</p></li>
+<li><p>Submission: Your rmd file (Rmarkdown) on Moodle box.</p></li>
+</ul>
+<p>*Deadline : Feb. 8.</p>
+<!-- ## Part I: Topics in Exploratory Data Analysis -->
+<!-- ### Topological Data Analysis -->
+<!-- > Lecture by Professor Taisei Kaizoji -->
+<!-- ## Part II: Towards Your Course Project -->
+<!-- ### Contents -->
+<!-- * About Assignment 6, World Development Indicator -->
+<!--   - WDI -->
+<!--   - `read_excel` -->
+<!--   - Filtering Join -->
+<!-- * Join Tables -->
+<!--   - Bind rows -->
+<!--   - Bind columns -->
+<!--   - Filtering join -->
+<!-- * Your Course Project -->
+<!--   - Short Paper -->
+<!--   - Presentation -->
+<!--   - Paper -->
+<!-- <!-- ### World Development Indicators: ?WDI -->
+<p>–&gt;</p>
+<!-- <!-- 1. Basic Usage -->
+<p>–&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- WDI(country = "all", indicator = "NY.GDP.PCAP.KD") --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- 2. Vector Notation --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- WDI(country = c("US", "CN", JP"), # ISO-2 codes --> –&gt;
+<!-- <!--    indicator = c("gdp_pcap" = "NY.GDP.PCAP.KD",  --> –&gt;
+<!-- <!--                 "life_exp" = "SP.DYN.LE00.IN")) --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- 3. Use Extra:  --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- WDI(country = "all",  --> –&gt;
+<!-- <!--    indicator = c("gdp_pcap" = NY.GDP.PCAP.KD",  --> –&gt;
+<!-- <!--                 "life_exp" = "SP.DYN.LE00.IN"), extra = TRUE) --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel --> –&gt;</p>
+<!-- <!-- ### World Bank Country and Lending Groups -->
+<p>–&gt;</p>
+<!-- <!-- * URL [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups) -->
+<p>–&gt;
+<!-- <!-- * [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls)  --> –&gt;</p>
+<!-- <!-- #### About CLASS.xls -->
+<p>–&gt;</p>
+<!-- <!-- This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are:  -->
+<p>–&gt;</p>
+<!-- <!-- * low income, $1,035 or less;  -->
+<p>–&gt;
+<!-- <!-- * lower middle income, $1,036 - 4,045;  --> –&gt;
+<!-- <!-- * upper middle income, $4,046 - 12,535;  --> –&gt;
+<!-- <!-- * and high income, $12,536 or more.  --> –&gt;</p>
+<!-- <!-- The effective operational cutoff for IDA eligibility is $1,185 or less.                                -->
+<p>–&gt;</p>
+<!-- <!-- --- -->
+<p>–&gt;</p>
+<!-- <!-- #### Geographic classifications                            -->
+<p>–&gt;</p>
+<!-- <!-- * IDA countries are those that lack the financial ability to borrow from IBRD.  -->
+<p>–&gt;</p>
+<!-- <!-- * IDA credits are deeply concessional—interest-free loans and grants for programs aimed at boosting economic growth and improving living conditions.  -->
+<p>–&gt;</p>
+<!-- <!-- * IBRD loans are noncessional.  -->
+<p>–&gt;</p>
+<!-- <!-- * Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.                               -->
+<p>–&gt;</p>
+<!-- <!-- --- -->
+<p>–&gt;</p>
+<!-- <!-- #### Note -->
+<p>–&gt;</p>
+<!-- <!-- * The term country, used interchangeably with economy, does not imply political independence but refers to any territory for which authorities report separate social or economic statistics.  -->
+<p>–&gt;</p>
+<!-- <!-- * Income classifications set on 1 July 2020 remain in effect until 1 July 2021.  -->
+<p>–&gt;</p>
+<!-- <!-- * Argentina, which was temporarily unclassified in July 2016 pending release of revised national accounts statistics, was classified as upper middle income for FY17 as of 29 September 2016 based on alternative conversion factors. Also effective 29 September 2016, Syrian Arab Republic is reclassified from IBRD lending category to IDA-only.  -->
+<p>–&gt;</p>
+<!-- <!-- * On 29 March 2017, new country codes were introduced to align World Bank 3-letter codes with ISO 3-letter codes: Andorra (AND), Dem. Rep. Congo (COD), Isle of Man (IMN), Kosovo (XKX), Romania (ROU), Timor-Leste (TLS), and West Bank and Gaza (PSE).                               -->
+<p>–&gt;</p>
+<!-- <!-- ### Importing Excel Files, Part I -->
+<p>–&gt;</p>
+<!-- <!-- * CLASS.xls: - _copy the following link_ -->
+<p>–&gt;
+<!-- <!--   - [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls)  --> –&gt;
+<!-- <!-- * readxl: https://readxl.tidyverse.org --> –&gt;
+<!-- <!-- * Help: `read_excel`, `read_xls`, `read_xlsx` --> –&gt;</p>
+<!-- <!-- ``` -->
+<p>–&gt;
+<!-- <!-- url_class <- "http://databank.worldbank.org/  --> –&gt;
+<!-- <!--   data/download/site-content/CLASS.xls" --> –&gt;
+<!-- <!-- download.file(url = url_class, destfile = "data/CLASS.xls") --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- library(readxl) --> –&gt;
+<!-- <!-- wb_countries_tmp <- read_excel("data/CLASS.xls",  --> –&gt;
+<!-- <!--   sheet = 1, skip = 4, n_max =219) %>% slice(-1) --> –&gt;
+<!-- <!-- wb_countries <- wb_countries_tmp %>%  --> –&gt;
+<!-- <!--   select(Economy, Code, Region, `Income group`,  --> –&gt;
+<!-- <!--         Code, Region:Other) --> –&gt;
+<!-- <!-- wb_countries --> –&gt;
+<!-- <!-- ``` --> –&gt;</p>
+<!-- <!-- ### Importing Excel Files, Part II -->
+<p>–&gt;</p>
+<!-- <!-- * readxl: https://readxl.tidyverse.org -->
+<p>–&gt;
+<!-- <!-- * Help: `read_excel`, `read_xls`, `read_xlsx` --> –&gt;</p>
+<!-- <!-- ``` -->
+<p>–&gt;
+<!-- <!-- wb_regions_tmp <- read_excel("data/CLASS.xls",  --> –&gt;
+<!-- <!--   sheet = 1, skip = 4, n_max =272) %>%  --> –&gt;
+<!-- <!--   slice(-(1:221)) --> –&gt;
+<!-- <!-- wb_regions <- wb_regions_tmp %>%  --> –&gt;
+<!-- <!--   select(Economy:Code) %>% drop_na() --> –&gt;
+<!-- <!-- wb_regions --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- wb_groups_tmp <- read_excel("data/CLASS.xls",  --> –&gt;
+<!-- <!--   sheet = "Groups") # sheet = 3 --> –&gt;
+<!-- <!-- wb_groups_tmp --> –&gt;
+<!-- <!-- ``` --> –&gt;</p>
+<!-- <!-- * Please study 'About Assignment Five' in Moodle -->
+<p>–&gt;</p>
+<!-- <!-- ### Filtering Join -->
+<p>–&gt;</p>
+<!-- <!-- ``` -->
+<p>–&gt;
+<!-- <!-- gdp_pcap <- WDI(country = "all",  --> –&gt;
+<!-- <!--     indicator = "NY.GDP.PCAP.KD") --> –&gt;
+<!-- <!-- gdp_pcap_extra <- WDI(country = "all",  --> –&gt;
+<!-- <!--     indicator = "NY.GDP.PCAP.KD", extra = TRUE) --> –&gt;
+<!-- <!-- ``` --> –&gt;</p>
+<!-- <!-- * Compare the following: -->
+<p>–&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- gdp_pcap %>% semi_join(country_list) --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- gdp_pcap %>% filter(region != "Aggregates") --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- ``` --> –&gt;
+<!-- <!-- gdp_pcap %>% anti_join(country_list) --> –&gt;
+<!-- <!-- ``` --> –&gt;</p>
+<!-- <!-- * Please study 'About Assignment Five' in Moodle -->
+<p>–&gt;</p>
+<!-- <!-- ### Join Tables -->
+<p>–&gt;</p>
+<!-- <!-- There are three types of joining tables. Commands are from tidyverse packages though there is a way to do the same by Base R with appropriate arguments. -->
+<p>–&gt;</p>
+<!-- <!-- 1. Bind rows: bind_rows(), intersect(), setdiff(), union() -->
+<p>–&gt;
+<!-- <!-- 2. Bind columns: bind_cols(), left_join(), right_join(), inner_join(), full_join() --> –&gt;
+<!-- <!-- 3. Filtering join: semi_join(), anti_join() --> –&gt;</p>
+<!-- <!-- ### Join Tables: Quick References -->
+<p>–&gt;</p>
+<!-- <!-- 1. https://r4ds.had.co.nz/relational-data.html#relational-data -->
+<p>–&gt;</p>
+<!-- <!-- 2. Cheatsheet: Data Transformation, pages 2 and 3. You can download it from RStudio > Help. -->
+<p>–&gt;</p>
+<!-- <!-- 3. Tidyverse Homepage: -->
+<p>–&gt;
+<!-- <!--     a. [Efficiently bind multiple data frames by row and column](https://dplyr.tidyverse.org/reference/bind.html): bind_rows(), bind_cols() --> –&gt;
+<!-- <!--     b. [Set operations](https://dplyr.tidyverse.org/reference/setops.html): intersect(), setdiff(), union() --> –&gt;
+<!-- <!--     c. [Mutating joins](https://dplyr.tidyverse.org/reference/mutate-joins.html): left_join(), right_join(), inner_join(), full_join() --> –&gt;
+<!-- <!--     d. [Filtering joins](https://dplyr.tidyverse.org/reference/filter-joins.html): semi_join(), anti_join() --> –&gt;</p>
+<!-- <!-- 4. R Studio Primers: Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<p>–&gt;
+<!-- <!--     - Reshape Data, Separate and Unite Columns, **Join Data Sets** --> –&gt;</p>
+<!-- ### About This Course -->
+<!-- * Features: -->
+<!--   - Inter-disciplinary field -->
+<!--   - Empirical: based on, concerned with, or verifiable by observation or experience rather than theory or pure logic -->
+<!--   - Extract knowledge and insights from data using scientific methods, processes, algorithms and systems  -->
+<!-- * Learning Methods: -->
+<!--   - Getting Information, Knowledge and Raise Questions: Lectures and Readings, Assignment 1 -->
+<!--   - Interactive Practicum: `swirl`, R Studio Primers, etc. Assignment 2 -->
+<!--   - Mini Projects: Assignment 3 - Assignment 6 -->
+<!--   - Project and Collaboration with Communication - Assignment 7, Your Course Project -->
+<!--     + Project Design, Exploration, Presentation and Share, Final Output -->
+<!-- * Assignments: -->
+<!--   - Enroll:12 > A1:12 > A2:12(15) > A3:12 > A4:10 > A5:9 > A6:7 -->
+<!--   - _Better Late Than Never_ -->
+<!-- ### Your Course Project, Part I -->
+<!-- All documents must contain 'ID', 'Name', 'Date' of submission -->
+<!-- 1. 'Short Paper' (that can be much longer than the Paper -->
+<!--   * Due: 2021-02-09 for Interim Report (and 2021-03-03: supporting doc for Paper) -->
+<!--   * Contents:  -->
+<!--      a. Objective: What and Why  -->
+<!--      b. Data  -->
+<!--      c. Reproducible Exploratory Data Analysis with Explanations -->
+<!--      d. Questions based on your findings and technical quesitons -->
+<!--   * Format: R Notebook (*.nb.html) -->
+<!-- 2. Presentation: 10 minutes (5-7 min. presentation and 3-5 min. QA) -->
+<!--   * On 2021-02-17 [or 2021-02-24, a reserve] -->
+<!--   * With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share -->
+<!--   * Note: Be ready to show your codes by R Notebook or R Scripts, when requested -->
+<!-- ###  Your Course Project, Part II -->
+<!-- 3. Paper: 5 to 10 pages -->
+<!--   * Due: 2021-03-03 -->
+<!--   * Contents: Exploratory Data Analysis Using **Public Data** -->
+<!--       a. Introduction - include what and why -->
+<!--       b. Description of Data -->
+<!--       c. Exposition of Your Exploration with Visualization of Data -->
+<!--       d. Concluding Remarks -->
+<!--       e. References, if any -->
+<!--       f. Acknowledgements, if any (can give a credit to your classmate) -->
+<!--   * Note: -->
+<!--       - Give logical explanations of your observations using data tables and charts -->
+<!--       - No need to include the whole process -->
+<!--       - Include codes only when necessary -->
+<!--   * Format: pdf. (Rmd > pdf, Rmd > MS Word > pdf, Rmd > MS Word > Google Doc > pdf) -->
+<!-- ### The Seventh Assignment (in Moodle) -->
+<!-- A. Share a part (a and possibly b) of your 'Short Paper'. -->
+<!--   1. What do you want to analyze? -->
+<!--   2. Why do you want to analyze it? -->
+<!-- B. Share your thoughts about this course. -->
+<!--   1. What have you learned? -->
+<!--   2. What do you want to learn, understand, or clarify towards the end of this course? -->
+<!--   3. Requests and suggestions to improve this course. -->
+<!-- C. Option: Share the link(s) to your R Notebook(s) in RStudio.cloud -->
+<!-- * Submit your response to Moodle (The Seventh Assignment) by 2021-02-09 23:59:00 -->
+<!-- ### Learning Resources, VII -->
+<!-- * [R for Data Science, Part VI Communicate](https://r4ds.had.co.nz/communicate-intro.html#communicate-intro) -->
+<!--   - [Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html#graphics-for-communication) -->
+<!--   - [R Markdown workflow](https://r4ds.had.co.nz/r-markdown-workflow.html#r-markdown-workflow) -->
+<!-- * Data analysis write-ups: https://jgscott.github.io/teaching/writeups/write_ups/ -->
+<!-- ::: {.block} -->
+<!-- #### RStudio Primers: See References in Moodle at the bottom -->
+<!-- 1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!-- 2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!-- 3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!--   - Exploratory Data Analysis, Bar Charts, Histograms -->
+<!--   - **Boxplots and Counts, Scatterplots, Line Plots** -->
+<!--   - Overplotting and Big Data, Customize Your Plots -->
+<!-- 4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!--   - Reshape Data, Separate and Unite Columns, Join Data Sets -->
+<!-- :::  -->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regression-3-co2-emission-standardization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="topics2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ds-sl/da4r/edit/master/07-topics1.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ds-sl/da4r/blob/master/07-topics1.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

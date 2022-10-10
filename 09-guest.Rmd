@@ -1,0 +1,267 @@
+# Guest Lecture and/or Examples {#guest}
+
+## Guest Lecture by Zheng Nan
+
+### Exploring the bitcoin market efficiency using R
+
+**Data, methodology, and interpretations**
+
+1. Opening: Challenges in data analysis
+    - Collecting data, defining data, and preprocessing data. 
+    - Methodology and models
+    - Interpretations of the results
+
+2. Background
+    - Bitcoin
+    - Efficient Market Hypothesis (EMH)
+    - Random Walk Hypothesis
+        + Augmented Dickey-Fuller (ADF) test
+    - Bitcoin exchange (BX) rate
+    - Methodologies
+
+3. Practice - R Script and Data are in Moodle
+
+4. Results
+
+
+
+## Topics of EDA
+
+### Contents
+
+* Financial Data
+  - Sites and Packages: Quandl, quanmod
+  - Stock Market and Crypt Currency
+
+* Model Analysis
+  - Linear Regression Review
+  - Stratification and Confounder
+  - R squared and p-value
+  - About Sixth Assignment - in Moodle
+
+* Presentation on 2021-02-17 and 2021-02-24
+
+* The Eighth Assignment
+
+
+### Financial Data
+
+::: {.block}
+#### Quandl
+
+* [Quandl](https://www.quandl.com)
+* R package: https://cran.r-project.org/web/packages/Quandl/Quandl.pdf
+* Quandl: [Bitcoin Market Price USD](https://www.quandl.com/data/BCHAIN/MKPRU-Bitcoin-Market-Price-USD)
+:::
+
+::: {.block}
+#### Quantmod   
+
+* [`quantmod`](http://www.quantmod.com): Quantitative Financial Modelling & Trading Framework for `R` 
+* `R` package `quantmod: https://cran.r-project.org/web/packages/quantmod/quantmod.pdf
+* [`quantmod` R documentation](https://www.rdocumentation.org/packages/quantmod/versions/0.4-16)
+* [Yahoo Finance Data Using `quantmod`](https://www.rdocumentation.org/packages/quantmod/versions/0.4-16/topics/getSymbols.yahoo)
+* Reference: [CryptCurrency Bitcoin Analysis Using `quantmod`](https://rstudio-pubs-static.s3.amazonaws.com/350293_4a6865773da942278d9ef8880b33a834.html)
+:::
+
+
+
+### Your Course Project, Part I
+
+All documents must contain 'ID', 'Name', 'Date' of submission
+
+1. 'Short Paper' (that can be much longer than the Paper
+  * Due: 2021-02-09 for Interim Report (and 2021-03-03: supporting doc for Paper)
+  * Contents: 
+     a. Objective: What and Why 
+     b. Data 
+     c. Reproducible Exploratory Data Analysis with Explanations
+     d. Questions based on your findings and technical quesitons
+  * Format: R Notebook (*.nb.html)
+  
+2. Presentation: 10 minutes (5-7 min. presentation and 3-5 min. QA)
+  * On 2021-02-17 [or 2021-02-24, a reserve]
+  * With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share
+  * Note: Be ready to show your codes by R Notebook or R Scripts, when requested
+
+###  Your Course Project, Part II
+
+3. Paper: 5 to 10 pages
+  * Due: 2021-03-03
+  * Contents: Exploratory Data Analysis Using **Public Data**
+      a. Introduction - include what and why
+      b. Description of Data
+      c. Exposition of Your Exploration with Visualization of Data
+      d. Concluding Remarks
+      e. References, if any
+      f. Acknowledgements, if any (can give a credit to your classmate)
+  * Note:
+      - Give logical explanations of your observations using data tables and charts
+      - No need to include the whole process
+      - Include codes only when necessary
+  * Format: pdf. (Rmd > pdf, Rmd > MS Word > pdf, Rmd > MS Word > Google Doc > pdf)
+
+### Presentation Format
+
+#### 10 minutes (5-7 min. presentation and 3-5 min. QA)
+
+* On 2021-02-17 and 2021-02-24
+* Revised: 15 minutes (7-10 min. presentation and 5-8 min. QA)
+* With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share
+* Note: Be ready to show your codes by R Notebook or R Scripts, when requested
+ 
+
+<!-- ### Presentation Schedule on 2021-02-17 -->
+
+<!-- 1. SHIQI YANG:   -->
+
+<!-- 2. YAPING TU:  -->
+
+<!-- 3. TATSUYA ORYU: -->
+
+<!-- 4. AYANE MARUICHI -->
+
+<!-- 5. YURI INAO -->
+
+<!-- 6. LAKMINI KAUSHALYA HERATH -->
+
+<!-- 7. NIROSHA HARSHANI NAGALMULLE KANKANAMALAGE -->
+
+<!-- 8. RYU OGURO -->
+
+<!-- ### Presentation Schedule on 2021-02-24 -->
+
+<!-- 1. OLIVIA WELLESLEY-COLE -->
+
+<!-- 2. CHISAKI TAKENAKA -->
+
+<!-- 3. MEGUMI KOGA -->
+
+<!-- 4. NOOR UL HUDA MALLICK -->
+
+
+### The Eighth Assignment (in Moodle)
+
+A. Give your feedback to your classmates' posts on the Forum, Seventh Assignment as [Reply] to keep in a thread.
+
+  1. Comments on the project?
+  2. Write your questions related to the topic?
+
+B. Add explanations or responses to your topic.
+
+  1. Add questions to investigate.
+  2. Share the difficulties you are facing.
+  3. Respond to the comments of your classmates.
+  
+C. Option: Share the link(s) to your R Notebook(s) in RStudio.cloud
+
+* Submit your response to Moodle (The Seventh Assignment) by 2021-02-16 23:59:00
+
+
+### Learning Resources, VIII
+
+* [R for Data Science, Part III Wrangle](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) - Tidy and Relational
+* [R for Data Science, Part IV Model](https://r4ds.had.co.nz/model-intro.html#model-intro)
+
+::: {.block}
+#### RStudio Primers: See References in Moodle at the bottom
+
+1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+  - Exploratory Data Analysis, Bar Charts, Histograms
+  - Boxplots and Counts, Scatterplots, Line Plots
+  - **Overplotting and Big Data, Customize Your Plots**
+4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+  - Reshape Data, Separate and Unite Columns, Join Data Sets
+::: 
+
+# 2022-02-16 Presentation
+
+### Presentation
+
+:::{.block}
+#### 10 minutes (5-7 min. presentation and 3-5 min. QA)
+
+* On 2021-02-17 and 2021-02-24
+* \textcolor{red}{Revised: 15 minutes (7-10 min. presentation and 5-8 min. QA)}
+* With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share
+* Note: Be ready to show your codes by R Notebook or R Scripts, when requested
+:::
+
+:::{.block}
+#### Share Your Exploratory Data Analysis Experience
+
+**Presentation Example:**
+
+* Motivation and Questions: What and Why
+* About the Data
+* Findings
+* Problems and Difficulties
+* What Remains to be Done; Questions and/or Analysis
+:::
+
+### The Ninth Assignment (in Moodle)
+
+Write your feedback to each of your classmates' presentation on the Forum in Moodle.
+
+* First, include the name of the presenter and/or the title of the presentation on the topic of your post
+
+* Write on the following
+
+  1. Comments on the presentation,
+  2. Suggestions on the project, or 
+  3. Technical or general questions related to the presentation
+
+* You can write comments on your own presentation, and/or responses to comments.
+
+* Submit your response to Moodle (The Ninth Assignment) by 2021-02-23 23:59:00
+
+
+### Presentation on 2021-02-17
+
+1. SHIQI YANG:  
+
+2. YAPING TU: 
+
+3. TATSUYA ORYU:
+
+4. AYANE MARUICHI
+
+5. YURI INAO
+
+6. LAKMINI KAUSHALYA HERATH
+
+7. NIROSHA HARSHANI NAGALMULLE KANKANAMALAGE
+
+8. RYU OGURO
+
+### Presentation on 2021-02-24
+
+1. OLIVIA WELLESLEY-COLE
+
+2. CHISAKI TAKENAKA
+
+3. MEGUMI KOGA
+
+4. NOOR UL HUDA MALLICK
+
+### Learning Resources, IX
+
+* [R for Data Science, Part III Wrangle](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+* [R for Data Science, Part VI Communicate](https://r4ds.had.co.nz/communicate-intro.html#communicate-intro)
+* [Data analysis write-ups](https://jgscott.github.io/teaching/writeups/write_ups/)
+* [Structure of a Data Analysis Report](http://www.stat.cmu.edu/~brian/701/notes/paper-structure.pdf)
+
+::: {.block}
+#### RStudio Primers: See References in Moodle at the bottom
+
+1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+  - Exploratory Data Analysis, Bar Charts, Histograms
+  - Boxplots and Counts, Scatterplots, Line Plots
+  - Overplotting and Big Data, Customize Your Plots
+4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+  - **Reshape Data, Separate and Unite Columns, Join Data Sets**
+::: 

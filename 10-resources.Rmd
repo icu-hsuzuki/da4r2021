@@ -1,0 +1,371 @@
+# Presentation, Learning Resources
+
+## Part I: Presentation, Part II
+
+### The Tenth Assignment (in Moodle)
+
+A. Write your feedback to each of your classmates' presentation on the Forum in Moodle.
+
+* First, include the name of the presenter and/or the title of the presentation on the topic
+
+* Write on the following
+
+  1. Comments on the presentation,
+  2. Suggestions on the project, or 
+  3. Technical or general questions related to the presentation
+  
+* You may add comments on your own presentation, and/or responses to comments.
+
+B. Comments and/or questions about the data analysis (or data science)
+
+  1. Your plan for the future. What do you want to learn as the next step?
+  2. Technical or general questions related to the final paper
+
+* Submit your response to Moodle (The Tenth Assignment) by 2021-03-02 23:59:00
+
+### Presentation on 2021-02-24
+
+1. OLIVIA WELLESLEY-COLE
+
+2. CHISAKI TAKENAKA
+
+3. MEGUMI KOGA
+
+4. NOOR UL HUDA MALLICK
+
+## Part II: Roundup, Learning Resources
+
+### Contents
+
+1. Review of Data Analysis for Researchers
+
+2. Your Course Project
+
+3. R Notebook, MS Word and PDF, Workflow
+
+4. Chunk Options
+
+5. Run Codes by R Studio
+
+6. References for Your Course Project
+
+7. Learning Resources
+
+### Focus of This Course -- Exploratory Data Analysis
+
+1. Introduction to EDA -- three weeks
+2. EDA for Beginners -- three to four weeks
+3. Experiencing EDA -- three to four weeks
+	
+#### EDA: Visualize (surprize but not sclae), Model (scale but not surprise))
+
+![EDA from r4ds](./data/data-science.png)
+
+### Schedule and Grades
+
+:::{.alertblock}
+#### Moodle Submission Deadline: 2021-03-03
+
+1. 'Short Paper': Supporting Document of Reproducible EDA with Explanation for you Paper in R Notebook (*.nb.html)
+2. Paper: EDA Using Public Data, 5 to 10 pages, in PDF (*.pdf)
+:::
+
+:::{.block}
+#### Grades - \textcolor{red}{revised}
+
+* Class participation and online quizzes - 30 %  (3 x 10)
+  - \textcolor{red}{Assignment 1 to 10}
+* Short paper: research proposal - 20 %
+  - \textcolor{red}{Research Proposal and Supporting Document}
+* Presentation - 10 %
+* Final paper - 40 %
+:::
+
+
+### Your Course Project, Part I
+
+All documents must contain 'ID', 'Name', 'Date' of submission
+
+1. 'Short Paper' (that can be much longer than the Paper
+  * Due: 2021-02-09 for Interim Report (and 2021-03-03: supporting doc for Paper)
+  * Contents: 
+     a. Objective: What and Why 
+     b. Data 
+     c. Reproducible Exploratory Data Analysis with Explanations
+     d. Questions based on your findings and technical quesitons
+  * Format: R Notebook (*.nb.html)
+  
+2. Presentation: 10 minutes (5-7 min. presentation and 3-5 min. QA)
+  * On 2021-02-17 [or 2021-02-24, a reserve]
+  * With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share
+  * Note: Be ready to show your codes by R Notebook or R Scripts, when requested
+
+###  Your Course Project, Part II
+
+3. Paper: 5 to 10 pages
+  * Due: 2021-03-03
+  * Contents: Exploratory Data Analysis Using **Public Data**
+      a. Introduction - include what and why
+      b. Description of Data
+      c. Exposition of Your Exploration with Visualization of Data
+      d. Concluding Remarks
+      e. References, if any
+      f. Acknowledgements, if any (can give a credit to your classmate)
+  * Note:
+      - Give logical explanations of your observations using data tables and charts
+      - No need to include the whole process
+      - Include codes only when necessary
+  * Format: pdf. (Rmd > pdf, Rmd > MS Word > pdf, Rmd > MS Word > Google Doc > pdf)
+
+
+
+
+### R Notebook, MS Word and PDF, Workflow
+
+1. Rmd > pdf: Use knit pdf, one of the knit options you can find under the knit button. 
+2. Rmd > MS Word > pdf: Use knit Word, one of the knit options you can find under the knit button. Then, use one of the print options of MS Word to obtain a pdf file. 
+3. Rmd > MS Word > Google Doc > pdf: If you do not have MS Word, upload your MS Word file obtained by knit Word into your Google Doc and edit it. You can create and download a PDF file easily using Google Doc. Since you can edit the file as an MS Word file now with Google Doc, you can make the style file mentioned above.
+
+In the following, we focus on the second option and explain how to handle chunks and the MS Word style file.
+
+---
+
+```
+title: "Title of Your Paper"
+author: "Your Name"
+date: '2021-03-03'
+output:
+  html_notebook:
+    toc: yes
+    number_sections: yes
+    toc_float: yes
+  html_document:
+    toc: yes
+    number_sections: yes
+    toc_float: yes
+  pdf_document: default
+  word_document:
+    number_sections: yes
+#    reference_docx: "word-styles-reference-01.docx" 
+```
+
+### Export MS Word Using a Style File
+
+* Use R Markdown to create a Word document
+  - Save as: ``word-styles-reference-01.docx''
+* Edit the Word styles you find there\par
+  - Edit the styles of file ``word-styles-reference-01.docx'' .
+  - e.g. Change the page size: US Letter to A4 Paper
+* Save this document as your style reference docx file
+* Format an Rmd report using the styles reference docx file
+
+**References:** 
+
+1. Happy collaboration with Rmd to docx: https://rmarkdown.rstudio.com/articles_docx.html
+2. R Markdown: Definitive Guide - Word Document: https://bookdown.org/yihui/rmarkdown/word-document.html
+3. Custom Word templates: R Markdown Cookbook: https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html
+
+
+### Edit Chunk Options
+
+#### Before Exporting MS Word Document by knit Word
+
+In the paper, you may want to deal with the following issues.
+
+1. You want to include the chart but not the code.
+2. You do not want to show your codes, results, messages, or warnings.
+3. You want to adjust the size of the figure to your document.
+4. You do not want to include a long table.
+5. ... and many more.
+
+### Chunk Options
+
+* include = FALSE prevents code and results from appearing in the finished file. R Markdown still runs the chunk code, and other chunks can use the resulting output.
+  - You should add this option after you check the code does not have an error. 
+* echo = FALSE prevents code, but not the results from appearing in the finished file. It is a useful way to embed figures.
+* message = FALSE prevents messages generated by code from appearing in the finished file.
+* warning = FALSE prevents warnings generated by code from appearing in the finished.
+  - You should add this option after you check the warnings. You may get errors or unexpected output.
+* fig.cap = "..." adds a caption to graphical results.
+* fig.height, fig.width: The width and height to use in R for plots created by the chunk (in inches).
+
+Link to Chunk Option Quick Reference: https://rmarkdown.rstudio.com/lesson-3.html
+
+See the [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.62932271.1605278448.1613370139-645191567.1613003746) for a complete list of knit chunk options.
+
+### Examples and References
+
+It is a good idea to explain the packages you used but does not need to show everything in your paper as the number of pages is restricted. 
+
+1. You can hide your setting by `include = FALSE`.
+
+2. In HTML, you can include a big table, but in MS Word, you need to control the number of rows to appear. Here I used `slice(1:10)`, a `tidyverse` command corresponding to `head(10)` in base R. 
+
+3. You can include your chart without showing your code by `echo = FALSE`.
+
+**Chunk Option Quick Reference:** https://rmarkdown.rstudio.com/lesson-3.html
+
+* [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.62932271.1605278448.1613370139-645191567.1613003746) for a complete list of knit chunk options.
+
+
+### References for Your Short-Paper and Paper
+
+1. R Markdown
+  * [R Markdown from R Studio](https://rmarkdown.rstudio.com)
+  * [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+  * [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+  * [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
+
+2. Data Analysis Write-Ups
+
+  * [R for Data Science, Part VI Communicate](https://r4ds.had.co.nz/communicate-intro.html#communicate-intro)
+  * Data analysis write-ups: https://jgscott.github.io/teaching/writeups/write_ups/
+  * Structure of a Data Analysis Report: http://www.stat.cmu.edu/~brian/701/notes/paper-structure.pdf
+
+### R Studio: Run Codes
+
+There are many ways to run your codes. You can use key bindings as well, I believe. However, before complete editing, your final product, make sure that your code chunks run correctly without error. You need to check this process because, with R Notebook, you can edit back and forth, but to be consistent, your product has to be read consistently from top to bottom. There are many options under the Run button, including Run All and Restart R, and Run All Chunks. I recommend you the following:
+
+1. Restart R and run all chunks.
+2. Knit your R Markdown file with the format of the final product.
+3. Check the output carefully.
+
+Good luck! See Roundup.nb.html in Moodle
+
+### R Studio 1.4 - Released on 2021-01-19
+
+:::{.block}
+#### [Announcing RStudio 1.4](https://blog.rstudio.com/2021/01/19/announcing-rstudio-1-4/) by Daniel Petzold and Carl Howe
+
+  - A [**visual markdown editor**](https://rstudio.github.io/visual-markdown-editing/#/) provides improved productivity for composing longer-form articles and analyses with R Markdown.
+  - The ability to add source columns to the IDE workspace for side-by-side text editing.
+    +  To switch into the visual mode for a markdown document, use the button with the compass icon at the top-right of the editor toolbar
+  - A new command palette (accessible via Ctrl+Shift+P) provides easy keyboard access to all RStudio commands, add-ins, and options.
+  - Support for [**rainbow parentheses**](https://blog.rstudio.com/2020/11/04/rstudio-1-4-preview-rainbow-parentheses/) in the source editor (enabled via Options -> Code -> Display).
+:::
+
+_RStudio.cloud is in 1.4. For your computer you need to install RStudio 1.4._
+
+
+### Learning Resources, X -- Interactive Practicum
+
+:::{.block}
+#### Swirl Courses: [Github](https://github.com/swirldev/swirl_courses#swirl-courses) 
+
+1. R Programming: The basics of programming in R --- _done_
+2. Regression Models: The basics of regression modeling in R
+3. Statistical Inference: The basics of statistical inference in R
+4. Exploratory Data Analysis: The basics of exploring data in R
+:::
+
+:::{.block}
+#### RStudio Primers https://rstudio.cloud/learn/primers
+
+1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+5. **Iterate** -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+6. **Write Functions** -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+7. Report Reproducibly and more ... __Coming Soon__
+::: 
+
+### Learning Resources, X -- Books
+
+* [R for Data Science by Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/)
+  - \textcolor{red}{Strongly Recommended}  -- _you are ready to learn_
+* [ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham](https://ggplot2-book.org/index.html)
+  - the on-line version of work-in-progress 3rd edition
+  
+* Bookdown: https://bookdown.org
+  -  [Introduction to Data Science by Rafael A. Irizarry](https://rafalab.github.io/dsbook/)
+  -  [R Graphics Cookbook, 2nd edition, by Winston Chang](https://r-graphics.org)
+  - many more ...
+  
+* Books on Statistics
+  - _difficult to choose_...
+
+### Learning Resources, X -- Moocs and Online Courses
+
+* edX
+  - HarvardX [Data Science](https://www.edx.org/professional-certificate/harvardx-data-science) - 9 courses. [Textbook](https://rafalab.github.io/dsbook/)
+* coursera
+  - [JHU Data Science](https://www.coursera.org/specializations/jhu-data-science) - 10 courses
+  - [JHU Data Science: Foundations using R Specialization](https://www.coursera.org/specializations/data-science-foundations-r), 5 courses
+
+* Interactive Learning Sites:
+  - DataCamp: https://www.datacamp.com
+  - Dataquest: https://www.dataquest.io
+
+
+---
+
+\vfill
+\begin{center}
+\LARGE The END of Data Analysis for Researchers
+\end{center}
+
+\vfill
+
+## Learning Resources {#resources}
+
+### Learning Resources, X -- Interactive Practicum
+
+:::{.block}
+#### Swirl Courses: [Github](https://github.com/swirldev/swirl_courses#swirl-courses) 
+
+1. R Programming: The basics of programming in R --- _done_
+2. Regression Models: The basics of regression modeling in R
+3. Statistical Inference: The basics of statistical inference in R
+4. Exploratory Data Analysis: The basics of exploring data in R
+:::
+
+:::{.block}
+#### RStudio Primers https://rstudio.cloud/learn/primers
+
+1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+5. **Iterate** -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+6. **Write Functions** -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+7. Report Reproducibly and more ... __Coming Soon__
+::: 
+
+### Learning Resources, X -- Books
+
+* [R for Data Science by Hadley Wickham and Garrett Grolemund](https://r4ds.had.co.nz/)
+  - \textcolor{red}{Strongly Recommended}  -- _you are ready to learn_
+* [ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham](https://ggplot2-book.org/index.html)
+  - the on-line version of work-in-progress 3rd edition
+  
+* Bookdown: https://bookdown.org
+  -  [Introduction to Data Science by Rafael A. Irizarry](https://rafalab.github.io/dsbook/)
+  -  [R Graphics Cookbook, 2nd edition, by Winston Chang](https://r-graphics.org)
+  - many more ...
+  
+* Books on Statistics
+  - _difficult to choose_...
+
+### Learning Resources, X -- Moocs and Online Courses
+
+* edX
+  - HarvardX [Data Science](https://www.edx.org/professional-certificate/harvardx-data-science) - 9 courses. [Textbook](https://rafalab.github.io/dsbook/)
+* coursera
+  - [JHU Data Science](https://www.coursera.org/specializations/jhu-data-science) - 10 courses
+  - [JHU Data Science: Foundations using R Specialization](https://www.coursera.org/specializations/data-science-foundations-r), 5 courses
+
+* Interactive Learning Sites:
+  - DataCamp: https://www.datacamp.com
+  - Dataquest: https://www.dataquest.io
+
+
+---
+
+\vfill
+\begin{center}
+\LARGE The END of Data Analysis for Researchers
+\end{center}
+
+\vfill
+

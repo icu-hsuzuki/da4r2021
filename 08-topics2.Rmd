@@ -1,0 +1,346 @@
+# Topics in Exploratory Data Analysis II　{#topics2}
+
+Lecture by Prof. Keisuke Ishibashi and R Notebook Compiled by HS
+
+### Project {-}
+
+1. Classification
+2. Example: simple guessing by sepal length
+3. Example: classification by sepal length using `glm`
+4. Evaluation of classifications
+5. Example: classification with various combinations
+6. Evaluation
+7. Summary of Classification
+8. References
+
+
+
+## Classification IRIS dataset
+
+### Setup
+
+```{r}
+library(tidyverse)
+library(modelr) # a part of tidyverse package but not a core and need to load
+library(modelsummary) # handy comparison introduced by Prof. Kaizoji
+library(datasets) # attached as default
+```
+
+### Data: `iris`
+
+We want to consider a problem to classify iris by species using the data provided.
+
+```{r}
+data(iris) # renew the data
+head(iris)
+```
+Since it is easier to handle data and we add many columns later, we shorten the column names. 
+
+```{r}
+iris_tbl <- as_tibble(iris) #%>%
+colnames(iris_tbl) <- c("sl", "sw", "pl", "pw", "species")
+#rename(sl = Sepal.Length, sw = Sepal.Width, pl = Petal.Length, pw = Petal.Width, species = Species)
+iris_tbl
+```
+Before we start, let us look at the basic imformation of the data.
+There are three kinds of species.
+
+```{r}
+iris_tbl %>% summary()
+```
+
+#### Visualization
+
+The following already tell something about species.
+
+```{r}
+iris_tbl %>% ggplot(aes(pw,pl, color = species)) + geom_point()
+```
+
+```{r}
+iris_tbl %>% group_by(species) %>% 
+  summarize(sl_mean = mean(sl), sw_mean = mean(sw), pl_mean = mean(pl), pw_mean = mean(pw))
+```
+The mean of setosa's petal length is very small compared with others. So it may be possible to classify setosa by petal lenght.
+
+The following are a boxplot and a frequency polygon of the data by petal length.
+
+```{r}
+iris_tbl %>% ggplot(aes(pl, fill = species)) + geom_boxplot()
+```
+```{r}
+iris_tbl %>% ggplot(aes(pl, color = species)) + geom_freqpoly()
+```
+
+```{r}
+iris_tbl %>% group_by(species) %>% 
+  summarize(min_of_petal_lenght = min(pl), max_of_petal_lenght = max(pl))
+```
+Hence if we set the threshhold to be around 2.5, we can separate setosa.
+
+```{r}
+iris_tbl2 <- iris_tbl %>% filter(pl >= 2.5)
+summary(iris_tbl2)
+```
+
+Since it looks difficult to classify versicolor and virginica only by petal length, let us look at other variables.
+
+```{r}
+iris_tbl %>% ggplot(aes(sl,pl, color = species)) + geom_point()
+```
+
+#### Sepal Length
+
+You can find different features of charts, boxplots and frequency polygons of sepal length.
+
+```{r}
+iris_tbl2 %>% ggplot(aes(sl, fill = species)) + geom_boxplot()
+```
+```{r}
+iris_tbl2 %>% ggplot(aes(sl, color = species)) + geom_freqpoly()
+```
+
+
+### Binary classification
+
+Let us set a numerical marker 1 to virginica.
+
+```{r}
+iris_tbl2ext <- iris_tbl2 %>% 
+  mutate(virginica = as.numeric(species == 'virginica'))
+iris_tbl2ext %>% arrange(-virginica)
+```
+#### Manual Classificaiton Using Boxplot
+
+```{r}
+iris_tbl2ext %>% group_by(species) %>% 
+  summarize(min = quantile(sl)[1], `25%` = quantile(sl)[2], `55%` = quantile(sl)[3], `75%` = quantile(sl)[4], max = quantile(sl)[5])
+```
+By the boxplot, the value between 6.225 and 6.3 can be a candidate. So let us take 6.263.
+
+```{r}
+iris_tbl2ext <- iris_tbl2ext %>% mutate(v0 = as.integer(sl > 6.263))
+iris_tbl2ext
+```
+#### Logistic Model Using `glm()` General Linear Model: Sepal Length
+
+```{r}
+iris_mod1 <-iris_tbl2ext %>% glm(virginica~sl, family = binomial, .)
+iris_mod1 %>% summary()
+```
+
+```{r}
+iris_tbl2ext_1 <- iris_tbl2ext %>% 
+  add_predictions(iris_mod1, var = "pred_1", type = "response") %>% 
+  add_residuals(iris_mod1, var = "resid_1") %>%
+  mutate(v1 = as.integer(pred_1 >= 0.5))
+iris_tbl2ext_1  %>% arrange(desc(sl))
+```
+
+```{r}
+iris_tbl2ext_1 %>% ggplot() + 
+  geom_point(aes(x = sl, y = virginica, color = species)) +
+  geom_line(aes(x = sl, y = pred_1))
+```
+
+```{r}
+iris_tbl2ext_1 %>% filter(v0 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_1 %>% filter(v1 == 1, virginica == 1) %>% nrow()/50
+```
+
+For both models, 74% of virginica was classified as virginica.
+
+#### Confusion Matrices
+
+```{r}
+iris_tbl2ext_1 %>% xtabs(~ v0 + virginica, .)
+```
+
+```{r}
+iris_tbl2ext_1 %>% xtabs(~ v1 + virginica, .)
+```
+
+### Various Logistic Models
+
+#### One Variable
+
+```{r}
+iris_mod2 <-iris_tbl2ext %>% glm(virginica~sw, family = binomial, .)
+iris_mod3 <-iris_tbl2ext %>% glm(virginica~pl, family = binomial, .)
+iris_mod4 <-iris_tbl2ext %>% glm(virginica~pw, family = binomial, .)
+```
+
+```{r}
+iris_tbl2ext_one <- iris_tbl2ext_1 %>% 
+  add_predictions(iris_mod2, var = "pred_2", type = "response") %>% 
+  mutate(v2 = as.integer(pred_2 >= 0.5)) %>%
+  add_predictions(iris_mod3, var = "pred_3", type = "response") %>% 
+  mutate(v3 = as.integer(pred_3 >= 0.5)) %>%
+  add_predictions(iris_mod4, var = "pred_4", type = "response") %>% 
+  mutate(v4 = as.integer(pred_4 >= 0.5))
+iris_tbl2ext_one  %>% arrange(desc(sl))
+```
+
+```{r}
+iris_tbl2ext_one %>% filter(v2 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_one %>% filter(v3 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_one %>% filter(v4 == 1, virginica == 1) %>% nrow()/50
+```
+
+#### Model Summary
+
+```{r}
+msummary(list(mod1 = iris_mod1, mod2 = iris_mod2, mod3 = iris_mod3, mod4 = iris_mod3), statistic = 'p.value')
+```
+
+
+#### Two Variables
+
+```{r}
+iris_mod12 <-iris_tbl2ext %>% glm(virginica~sl + sw, family = binomial, .)
+iris_mod13 <-iris_tbl2ext %>% glm(virginica~sl + pl, family = binomial, .)
+iris_mod14 <-iris_tbl2ext %>% glm(virginica~sl + pw, family = binomial, .)
+iris_mod23 <-iris_tbl2ext %>% glm(virginica~sw + pl, family = binomial, .)
+iris_mod24 <-iris_tbl2ext %>% glm(virginica~sw + pw, family = binomial, .)
+iris_mod34 <-iris_tbl2ext %>% glm(virginica~pl + pw, family = binomial, .)
+```
+
+```{r}
+iris_tbl2ext_two <- iris_tbl2ext_one %>% 
+  add_predictions(iris_mod12, var = "pred_12", type = "response") %>% 
+  mutate(v12 = as.integer(pred_12 >= 0.5)) %>%
+  add_predictions(iris_mod13, var = "pred_13", type = "response") %>% 
+  mutate(v13 = as.integer(pred_13 >= 0.5)) %>%
+  add_predictions(iris_mod14, var = "pred_14", type = "response") %>% 
+  mutate(v14 = as.integer(pred_14 >= 0.5)) %>%
+  add_predictions(iris_mod23, var = "pred_23", type = "response") %>% 
+  mutate(v23 = as.integer(pred_23 >= 0.5)) %>%
+  add_predictions(iris_mod24, var = "pred_24", type = "response") %>% 
+  mutate(v24 = as.integer(pred_24 >= 0.5)) %>%
+  add_predictions(iris_mod34, var = "pred_34", type = "response") %>% 
+  mutate(v34 = as.integer(pred_34 >= 0.5))
+iris_tbl2ext_two  %>% arrange(desc(sl))
+```
+```{r}
+iris_tbl2ext_two %>% filter(v12 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_two %>% filter(v13 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_two %>% filter(v14 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_two %>% filter(v23 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_two %>% filter(v24 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_two %>% filter(v34 == 1, virginica == 1) %>% nrow()/50
+```
+
+#### Model Summary
+
+```{r}
+msummary(list(mod12 = iris_mod12, mod13 = iris_mod13, mod14 = iris_mod14, mod23 = iris_mod23, mod24 = iris_mod24, mod34 = iris_mod34), statistic = 'p.value')
+```
+
+#### Three and All Variables
+
+```{r}
+iris_mod123 <-iris_tbl2ext %>% glm(virginica~sl + sw + pl, family = binomial, .)
+iris_mod124 <-iris_tbl2ext %>% glm(virginica~sl + sw + pw, family = binomial, .)
+iris_mod134 <-iris_tbl2ext %>% glm(virginica~sl + pl + pw, family = binomial, .)
+iris_mod234 <-iris_tbl2ext %>% glm(virginica~sw + pl + pw, family = binomial, .)
+iris_mod1234 <-iris_tbl2ext %>% glm(virginica~sl + sw + pl + pw, family = binomial, .)
+```
+
+```{r}
+iris_tbl2ext_all <- iris_tbl2ext_two %>% 
+  add_predictions(iris_mod123, var = "pred_123", type = "response") %>% 
+  mutate(v123 = as.integer(pred_123 >= 0.5)) %>%
+  add_predictions(iris_mod124, var = "pred_124", type = "response") %>% 
+  mutate(v124 = as.integer(pred_124 >= 0.5)) %>%
+  add_predictions(iris_mod134, var = "pred_134", type = "response") %>% 
+  mutate(v134 = as.integer(pred_134 >= 0.5)) %>%
+  add_predictions(iris_mod234, var = "pred_234", type = "response") %>% 
+  mutate(v234 = as.integer(pred_234 >= 0.5)) %>%
+  add_predictions(iris_mod1234, var = "pred_1234", type = "response") %>% 
+  mutate(v1234 = as.integer(pred_1234 >= 0.5)) 
+iris_tbl2ext_all  %>% arrange(desc(sl))
+```
+```{r}
+iris_tbl2ext_all %>% filter(v123 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_all %>% filter(v124 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_all %>% filter(v134 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_all %>% filter(v234 == 1, virginica == 1) %>% nrow()/50
+```
+
+```{r}
+iris_tbl2ext_all %>% filter(v1234 == 1, virginica == 1) %>% nrow()/50
+```
+
+#### Confusion Matrices
+
+```{r}
+iris_tbl2ext_all %>% xtabs(~ v134 + virginica, .)
+```
+
+```{r}
+iris_tbl2ext_all %>% xtabs(~ v234 + virginica, .)
+```
+```{r}
+iris_tbl2ext_all %>% xtabs(~ v1234 + virginica, .)
+```
+
+#### Model Summary
+
+```{r}
+msummary(list(mod123 = iris_mod123, mod124 = iris_mod124, mod134 = iris_mod134, mod234 = iris_mod234, mod1234 = iris_mod1234), statistic = 'p.value')
+```   
+```{r}
+iris_tbl2ext_all %>% select(virginica, v0, v1, v2, v3, v4, v12, v13, v14, v23, v24, v34, v123, v124, v134, v234, v1234)
+```
+## Conclusions
+
+### Hypothesis generation vs. hypothesis confirmation
+
+1. Each observation can either be used for exploration or confirmation, not both.
+
+2. You can use an observation as many times as you like for exploration, but you can only use it once for confirmation. As soon as you use an observation twice, you’ve switched from confirmation to exploration.
+
+If you are serious about doing an confirmatory analysis, one approach is to split your data into three pieces before you begin the analysis:
+
+1. 60% of your data goes into a training (or exploration) set. You’re allowed to do anything you like with this data: visualise it and fit tons of models to it.
+
+2. 20% goes into a query set. You can use this data to compare models or visualisations by hand, but you’re not allowed to use it as part of an automated process.
+
+3. 20% is held back for a test set. You can only use this data ONCE, to test your final model.
+
+### References
+
+* Iris Classification: https://github.com/trevorwitter/Iris-classification-R

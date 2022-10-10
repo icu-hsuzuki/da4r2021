@@ -1,0 +1,985 @@
+# Topics in Exploratory Data Analysis I　{#topics1}
+
+Prof. Taisei Kaizoji and R Notebook Compiled by HS
+
+
+* Get AGCO2rv.csv from Moodle and place it at the same place as this file.
+
+* Reference: Data Analysis for Researchers Week 7(02/02)
+  - Inference Statistics Regression Analysis
+  
+### Summary {-}
+
+1. Give a descriptive name to each variable, when importing data by `WDI` command. 
+1. Save data of investigation by `write_csv`, but if you have RNotebook, you do not need to save at every step.
+2. If you use pipe in `tidyverse`, i.e, %>%, properly, you do not need to `attach(data)` or `dettach(data)`.
+
+### Dot Place Holder in `lm`. {-}
+
+In the following, the following format is used.
+
+```
+df %>% lm(y ~ x, .)
+```
+
+This is same as 
+
+```
+lm(y ~ x, data = df)
+```
+
+'.' is called the dot place holder. Recall that most of the function (or command) we use in tidyverse, the first argument is the data frame. When we use piping, we omit the first argiment. For example,
+
+```
+df %>% ggplot(aes(x, y)) + geom_point()
+```
+ is same as
+ 
+```
+ggplot(df, aes(x,y)) + geom_point()
+```
+
+However, the data frame argument of `lm()` is not the first one, therefore we use the dot place holder to show the place the data frame should be inserted.
+
+
+## Part I: Regression 1: 
+
+Run the following only once, or you can install these packages using install packages in the Tool menu.
+
+```
+install.packages("car")
+install.packages("modelsummary")
+```
+
+
+### Why does GDP vary from country to country?
+
+```{r}
+library(tidyverse) # tidyverse Package, a collection of packages for data science
+library(WDI) # WDI Package for World Development Indicators
+library(car) #VIF Tool for checking multi-collinearity
+library(modelsummary) # Tool for writting tables of the regression results
+```
+
+* WDI Indicators
+  - NY.GDP.MKTP.CD: GDP (current US$)
+  - SP.POP.TOTL: Population, total
+  - AG.LND.TOTL.K2: Land area (sq. km)
+
+```{r cash = TRUE}
+wb <- as_tibble(WDI(country="all", 
+                    indicator=c(gdp = "NY.GDP.MKTP.CD", pop = "SP.POP.TOTL", land = "AG.LND.TOTL.K2"),
+                    start=1960, end=2020,
+                    extra=TRUE))
+wb
+```
+
+<!-- ### Save wb as csv file. -->
+
+<!-- ```{r} -->
+<!-- write_csv(wb, file="wb_gdp_pop_land.csv") -->
+<!-- ``` -->
+
+```{r cash = TRUE}
+wb_ag20 <- wb %>% filter(year == 2020 & region=="Aggregates")
+wb_ag20
+```
+
+
+### Regression
+
+```{r cash = TRUE}
+wb_ag20 %>% ggplot(aes(pop, gdp)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "GDP and Population", 
+       x = "total population", y = "GDP")
+```
+
+
+```{r}
+gdp_pop <-wb_ag20 %>% lm(gdp ~ pop, .)
+summary(gdp_pop)
+```
+
+```{r}
+wb_ag20 %>% ggplot(aes(land, gdp)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "GDP and Land Area", 
+       x = "land area", y = "GDP")
+```
+
+
+```{r}
+gdp_land <-wb_ag20 %>% lm(gdp ~ land, .)
+summary(gdp_land)
+```
+
+```{r}
+gdp_pop_and_land <-wb_ag20 %>% lm(gdp ~ pop + land, .)
+summary(gdp_pop_and_land)
+```
+
+```{r}
+gpa_models <- list(gdp_pop = gdp_pop, gdp_land = gdp_land, gdp_pop_and_land = gdp_pop_and_land)
+msummary(gpa_models, statistic = 'p.value')
+```
+* The default is: `msummary(gpa_models)`. `msummary(gpa_models, statistic = 'p.value')` replaces the standard error by p-value. Compare the following with the one above and the `Std.Error` of the summaries of each model.
+
+```{r}
+msummary(gpa_models)
+```
+
+
+```{r}
+wb_ag20 %>% ggplot(aes(pop, land)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "population and Land", 
+       x = "population", y = "land")
+```
+
+
+### Checking for multicollinearity 
+
+```{r}
+pop_land <-wb_ag20 %>% lm(pop ~ land, .)
+summary(pop_land)
+```
+
+
+
+### vif: Determination of multi-collinearity
+
+VIF = 1/(1-{R<sub>i</sub>}<sup>2</sup>)
+
+
+#### VIF (Variance Inflation Factor)
+
+```{r}
+gdp_pop_and_land %>% vif()
+```
+
+#### Conclusion
+
+* Regions which have large population have large GDP.
+* It was also found that the larger the region, the more populated the region. This suggests that the GPs of regions with large regions and large populations are significant.
+* This result suggests a positive relationship between population and economic activity.
+
+## A time series data of World from 1960 to 2020
+
+
+```{r}
+wb_world <- wb %>% filter(country=="World") %>% arrange(year)
+wb_world
+```
+
+```{r}
+wb_world %>% ggplot() + 
+  geom_line(aes(x = year, y = gdp)) +
+  labs(title = "GDP (current US$)")
+```
+
+```{r}
+wb_world %>% ggplot() + 
+  geom_line(aes(x = year, y = pop)) +
+  labs(title = "Total population)")
+```
+
+```{r}
+wb_world %>% lm(gdp ~ pop, .) %>% summary()
+```
+
+```{r}
+wb_world %>% ggplot() +
+  geom_point(aes(pop, gdp)) +
+  labs(title = "World GDP and World population", 
+       x = "Total population", y = "GDP (current US$)")
+```
+```{r}
+wb_world_extra <- wb_world %>% mutate(diff_gdp = gdp - lag(gdp), diff_pop = pop - lag(pop)) 
+wb_world_extra
+```
+
+```{r}
+wb_world_extra %>% ggplot(aes(x = year, y = diff_gdp)) + geom_line() +
+  labs(title = "World GDP changes", y = "gdp changes")
+```
+```{r}
+wb_world_extra %>% ggplot(aes(x = year, y = diff_pop)) + geom_line() +
+  labs(title = "World population changes", y = "population changes")
+```
+```{r}
+wb_world_extra %>% ggplot(aes(x = diff_pop, y = diff_gdp)) + geom_point() +
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "World GDP changes and World GDP changes", x = "population changes", y = "GDP changes") 
+```
+```{r}
+wb_world_extra %>% lm(diff_gdp ~ diff_pop, .) %>% summary()
+```
+
+## Excercise: 
+
+1.  Select a region from the following; 
+
+  - East Asia & Pacific
+  - Europe & Central Asia
+  - Middle East & North Africa
+  - Sub-Saharan Africa
+  - Latin America & Caribbean
+
+2. Preform regression analysis. 
+
+3. Select the best model.
+
+# Regression 2 : CO2 Emission
+
+## Project
+
+* Problem: “What are the causes of increased CO2 emissions?”
+* Plan: To develop and test the hypothesis that CO2 emissions depends on GDP, population and land under cereal production of each region.
+  
+* Data: Using the World Bank's World Development Indicators (WDI), we will collect data on GDP, population and land area for regions around the world.
+  - WDIindicators
+  - GDP(Y):"NY.GDP.MKTP.CD"
+  - Total Population (X1): "SP.POP.TOTL"
+  - Land under cereal production (hectares): "AG.LND.CREL.HA"
+  
+### Regression Analysis
+
+* Regression equation:Y =c + a x1 + b x2 + d x3 Y: CO2 emission: independent variable
+  - x1: GDP (Y) : independent variable
+  - x2: Total Population (X1) : independent variable x3: Land under cereal production (hectares):
+independent variable
+* We perform a regression analysis of the above regression equation (estimate the parameters, c (intercept), a, b, d) and elect the best model.
+
+
+### WDI Indicator cordes
+
+* co2 = EN.ATM.CO2E.KT: CO2 Emission 
+* gdp =  NY.GDP.MKTP.CD:  GDP (current USD)
+* pop = SP.POP.TOTL: Total Population
+* cereal = AG.LND.CREL.HA:  Land under cereal production (hectares)
+
+```{r}
+WDIsearch(string = "EN.ATM.CO2E.KT", field = "indicator", short = FALSE)[[3]]
+```
+
+
+```{r cash = TRUE}
+wb_co2<- as_tibble(WDI(country="all", 
+                   indicator=c(co2 = "EN.ATM.CO2E.KT",
+                               gdp = "NY.GDP.MKTP.CD",
+                               pop = "SP.POP.TOTL",
+                               cereal = "AG.LND.CREL.HA"),
+                   start=1960,
+                   end=2020,
+                   extra=TRUE))
+wb_co2
+```
+
+
+<!-- ### Save CO2 as csv file. -->
+
+<!-- ```{r} -->
+<!-- write_csv(wb_co2, file="wb_co2.csv") -->
+<!-- ``` -->
+
+In the lecture the folloiwng is used. However, regions are overlapping and it seems to be better to chooose non-aggregated data.
+
+```{r}
+wb_co2_16 <- wb_co2 %>% filter(year == 2016 & region=="Aggregates")
+wb_co2_16
+```
+
+```{r}
+wb_co2 %>% filter(region != "Aggregates", !is.na(co2)) %>% 
+  group_by(year) %>% summarize(n = n_distinct(country)) %>% arrange(desc(n), desc(year))
+```
+
+Let us choose non-aggregated data in 2018.
+
+```{r}
+wb_co2_18 <- wb_co2 %>% filter(region != "Aggregates", !is.na(co2), year == 2018) 
+wb_co2_18
+```
+
+
+
+
+
+## Regression
+
+```{r}
+wb_co2_18 %>% ggplot(aes(gdp, co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "CO2 emission and GDP")
+```
+
+```{r}
+wb_co2_18 %>% ggplot(aes(gdp, co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  scale_x_log10() + scale_y_log10() +
+  labs(title = "CO2 emission and GDP in Log-Log scale")
+```
+Let us take log-log plot
+
+```{r}
+wb_co2_18 %>% ggplot(aes(pop, co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  scale_x_log10() + scale_y_log10() +
+  labs(title = "CO2 emission and Population in Log-Log scale")
+```
+```{r}
+wb_co2_18 %>% ggplot(aes(cereal, co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  scale_x_log10() + scale_y_log10() +
+  labs(title = "CO2 emission and Land under cereal production in Log-Log scale")
+```
+
+
+```{r}
+wb_co2_18m <- wb_co2_18 %>% filter(!is.na(co2), !is.na(gdp), !is.na(pop), !is.na(cereal), cereal > 0)
+co2_gdp <- wb_co2_18m %>% lm(log10(co2) ~ log10(gdp), .)
+co2_pop <- wb_co2_18m %>% lm(log10(co2) ~ log10(pop), .)
+co2_cereal <- wb_co2_18m %>% lm(log10(co2) ~ log10(cereal), .)
+co2_gdp_pop <- wb_co2_18m %>% lm(log10(co2) ~ log10(gdp) + log10(pop), .)
+co2_gdp_cereal <- wb_co2_18m %>% lm(log10(co2) ~ log10(gdp) + log10(cereal), .)
+co2_pop_cereal <- wb_co2_18m %>% lm(log10(co2) ~ log10(pop) + log10(cereal), .)
+co2_all <- wb_co2_18m %>% lm(log10(co2) ~ log10(gdp) + log10(pop) + log10(cereal), .)
+```
+
+```{r}
+msummary(list(gdp = co2_gdp, pop = co2_pop, cereal = co2_cereal, gdp_pop = co2_gdp_pop, gdp_cereal = co2_gdp_cereal, pop_cereal = co2_pop_cereal, all = co2_all))
+```
+```{r}
+vif(co2_gdp_pop)
+vif(co2_gdp_cereal)
+vif(co2_pop_cereal)
+vif(co2_all)
+```
+```{r}
+list(gdp_pop = vif(co2_gdp_pop), gdp_cereal = vif(co2_gdp_cereal), pop_cereal = vif(co2_pop_cereal), all = vif(co2_all))
+```
+
+
+## We select regression model; 
+
+
+CO2 emission = c + a (GDP) + b (population)
+
+(Omit land because of multicollinearity)
+
+
+## A time series data of World from 1960 to 2020
+
+
+```{r}
+wb_co2_world <- wb_co2 %>% filter(country=="World")
+wb_co2_world 
+```
+
+
+```{r}
+wb_co2_world  %>% ggplot() + 
+  geom_line(aes(x = year, y = co2)) +
+  labs(title = "Co2 Emmision of the World")
+```
+```{r}
+wb_co2_world %>% ggplot() + 
+  geom_line(aes(x = year, y = gdp)) +
+  labs(title = "GDP (current US$)")
+```
+
+```{r}
+wb_co2_world_extra <- wb_co2_world %>% 
+  mutate(diff_co2 = co2 - lag(co2), diff_gdp = gdp - lag(gdp))
+wb_co2_world_extra
+```
+
+```{r}
+wb_co2_world_extra %>% ggplot(aes(x = year, y = diff_co2)) + geom_line() +
+  labs(title = "Changes of World CO2 emission")
+```
+```{r}
+wb_co2_world_extra %>% ggplot(aes(x = year, y = diff_gdp)) + geom_line() +
+  labs(title = "Changes of World GDP")
+```
+
+```{r}
+wb_co2_world_extra %>% lm(diff_co2 ~ diff_gdp, .) %>% summary()
+```
+
+
+# Regression 3: CO2 emission (Standardization)
+
+* Prof. Kaizoji provided a data in csv format in Moodle and use scale function to standardize the data, let us proceed one step by one step.
+* He starts with a WDI data in 2016 and use the aggregated part. There may be arguments on the set of data, let us use the same one.
+* He defines variance in his slides, and the codes below uses unbiased variance. The difference is minor.
+
+
+```{r}
+ wb_co2
+```
+
+```{r}
+co2_ag16 <- wb_co2 %>% filter(year == 2016, region=="Aggregates") %>%
+  select(iso2c, co2, gdp, pop, cereal) %>% drop_na()
+co2_ag16
+```
+
+```{r}
+co2_al16_std <- co2_ag16 %>% mutate(st_co2 = (co2 - mean(co2))/sd(co2),
+                                    st_gdp = (gdp - mean(gdp))/sd(gdp),
+                                    st_pop = (pop - mean(pop))/sd(pop),
+                                    st_cereal = (cereal - mean(cereal))/sd(cereal))
+co2_al16_std
+```
+
+```{r}
+co2_al16_scaled <- co2_ag16 %>% mutate(st_co2 = scale(co2),
+                                    st_gdp = scale(gdp),
+                                    st_pop = scale(pop),
+                                    st_cereal = scale(cereal))
+co2_al16_scaled 
+```
+
+```{r}
+co2_ag16 %>% select(-1) %>% scale() %>% as_tibble()
+```
+
+
+```{r}
+co2_ag16_rv <- read_csv("data/AGCO2rv.csv") 
+co2_ag16_rv
+```
+
+```{r}
+colnames(co2_ag16_rv) <- c("st_co2", "st_gdp", "st_pop", "st_cereal")
+co2_ag16_rv
+```
+
+
+
+
+## Regression
+
+```{r}
+co2_al16_scaled  %>% ggplot(aes(st_gdp, st_co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "CO2 emission and GDP: Standardized")
+```
+
+```{r}
+co2_al16_scaled  %>% ggplot(aes(st_pop, st_co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "CO2 emission and Population: Standardized")
+```
+```{r}
+co2_al16_scaled  %>% ggplot(aes(st_cereal, st_co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "CO2 emission and Land under cereal production: Standardized")
+```
+
+
+```{r}
+st_co2_gdp <- co2_al16_scaled  %>% lm(st_co2 ~ st_gdp, .)
+st_co2_pop <- co2_al16_scaled  %>% lm(st_co2 ~ st_pop, .)
+st_co2_cereal <- co2_al16_scaled  %>% lm(st_co2 ~ st_cereal, .)
+st_co2_gdp_pop <- co2_al16_scaled %>% lm(st_co2 ~ st_gdp + st_pop, .)
+st_co2_gdp_cereal <- co2_al16_scaled  %>% lm(st_co2 ~ st_gdp + st_cereal, .)
+st_co2_pop_cereal <- co2_al16_scaled  %>% lm(st_co2 ~ st_pop + st_cereal, .)
+st_co2_all <- co2_al16_scaled  %>% lm(st_co2 ~ st_gdp + st_pop + st_cereal, .)
+```
+
+```{r}
+msummary(list(st_gdp = st_co2_gdp, st_pop = st_co2_pop, st_cereal = st_co2_cereal, st_gdp_pop = st_co2_gdp_pop, st_gdp_cereal = st_co2_gdp_cereal, st_pop_cereal = st_co2_pop_cereal, st_all = st_co2_all))
+```
+```{r}
+vif(st_co2_gdp_pop)
+vif(st_co2_gdp_cereal)
+vif(st_co2_pop_cereal)
+vif(st_co2_all)
+```
+
+
+## Not Standardized
+
+```{r}
+co2_al16 <- wb_co2 %>% filter(region != "Aggregates", year == 2016)
+co2_al16
+```
+
+## Regression
+
+```{r}
+co2_al16 %>% ggplot(aes(gdp, co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "CO2 emission and GDP")
+```
+
+```{r}
+co2_al16 %>% ggplot(aes(pop, co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "CO2 emission and Population")
+```
+```{r}
+co2_al16 %>% ggplot(aes(cereal, co2)) + geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(title = "CO2 emission and Land under cereal production")
+```
+
+
+```{r}
+orig_co2_gdp <- wb_co2_18 %>% lm(co2 ~ gdp, .)
+orig_co2_pop <- wb_co2_18 %>% lm(co2 ~ pop, .)
+orig_co2_cereal <- wb_co2_18 %>% lm(co2 ~ cereal, .)
+orig_co2_gdp_pop <- wb_co2_18 %>% lm(co2 ~ gdp + pop, .)
+orig_co2_gdp_cereal <- wb_co2_18 %>% lm(co2 ~ gdp + cereal, .)
+orig_co2_pop_cereal <- wb_co2_18 %>% lm(co2 ~ pop + cereal, .)
+orig_co2_all <- wb_co2_18 %>% lm(co2 ~ gdp + pop + cereal, .)
+```
+
+```{r}
+msummary(list(orog_gdp = orig_co2_gdp, orig_pop = orig_co2_pop, orig_cereal = orig_co2_cereal, orig_gdp_pop = orig_co2_gdp_pop, orig_gdp_cereal = orig_co2_gdp_cereal, orig_pop_cereal = orig_co2_pop_cereal, orig_all = orig_co2_all))
+```
+```{r}
+vif(orig_co2_gdp_pop)
+vif(orig_co2_gdp_cereal)
+vif(orig_co2_pop_cereal)
+vif(orig_co2_all)
+```
+### Standadized (Again)
+
+```{r}
+msummary(list(st_gdp = st_co2_gdp, st_pop = st_co2_pop, st_cereal = st_co2_cereal, st_gdp_pop = st_co2_gdp_pop, st_gdp_cereal = st_co2_gdp_cereal, st_pop_cereal = st_co2_pop_cereal, st_all = st_co2_all))
+```
+```{r}
+vif(st_co2_gdp_pop)
+vif(st_co2_gdp_cereal)
+vif(st_co2_pop_cereal)
+vif(st_co2_all)
+```
+
+
+### We select regression model; 
+
+* CO2 emission = c + a (GDP) + b (population)
+
+* (Omit land because of multicollinearity)
+
+
+
+# Regression of Categorical Variables and ANOVA
+
+If you start from here, you need to load the following packages.
+
+```{r}
+library(tidyverse) #tidyverse Package, a collection of packages for data science
+library(WDI) #WDI Package for World Development Indicators
+library(car) #VIF function
+library(modelsummary) #Table of the regression results
+```
+
+```{r}
+wb_co2
+```
+
+```{r}
+wb_co2_4anova <- wb_co2 %>% filter(year == 2016, region != "Aggregates") %>%
+  select(iso2c, co2, gdp, income) %>% drop_na() %>%
+  mutate(log_co2 = log10(co2), log_gdp = log10(gdp))
+wb_co2_4anova
+```
+
+```
+CO2 <- as_tibble(read.csv("CO2CAPITA.csv"))
+CO2
+str(CO2)
+head(CO2)
+tail(CO2)
+```
+
+```{r}
+wb_co2_4anova %>% group_by(income) %>% 
+  summarize(n = n_distinct(iso2c), co2_mean = mean(co2), gdp_mean = mean(gdp), log_co2_mean = mean(log_co2), log_gdp_mean = mean(log_gdp))
+```
+
+
+
+## Regression
+
+```
+y <- CO2$EN.ATM.CO2E.PC #CO2 Emission per capita
+x <- CO2$NY.GDP.PCAP.PP.CD/10000 #GDP per capita, PPP
+summary(x)
+summary(y)
+```
+
+```{r}
+wb_co2_4anova %>% ggplot(aes(log_gdp, log_co2)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "CO2 emission per capita and GDP per capita in log-log scale", 
+       x = "GDP per capita", y = "CO2 emission per capita")
+```
+
+```
+CO2 %>% ggplot(aes(x, y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "CO2 emission per capita and GDP per capita", 
+       x = "GDP per capita", y = "CO2 emission per capita")
+
+model_1 <-lm(y ~ x, data=CO2)
+summary(model_1)
+msummary(model_1, statistic = 'p.value')
+```
+
+```{r}
+wb_co2_4anova %>% ggplot(aes(x = log_co2, fill =  income)) + 
+  geom_histogram( ) 
+```
+```{r}
+wb_co2_4anova %>% ggplot(aes(x = log_co2, y = income, fill =  income)) + 
+  geom_boxplot()
+```
+
+```{r}
+wb_co2_anova <- wb_co2_4anova %>% mutate(hi = as.numeric(income == "High income"))
+```
+
+```{r}
+wb_co2_model <- wb_co2_anova %>% lm(co2 ~ gdp + hi, .)
+wb_co2_model %>% summary()
+```
+```{r}
+wb_co2_log_model <- wb_co2_anova %>% lm(log_co2 ~ log_gdp + hi, .)
+wb_co2_log_model %>% summary()
+```
+```{r}
+income_model <- wb_co2_anova %>% lm(co2 ~ factor(income), .) 
+income_model %>% summary()
+```
+
+
+```{r}
+msummary(list(co2_model = wb_co2_model, co2_log_model = wb_co2_log_model, co2_income_model = income_model), statistic = 'p.value')
+```
+
+### t-test
+
+```{r}
+high <- wb_co2_4anova %>% filter(income == "High income") %>% pull(co2)
+low <- wb_co2_4anova %>% filter(income == "Low income") %>% pull(co2)
+t.test(high, low)
+```
+
+#Regression analysis with categorical variables
+
+model_3=lm(EN.ATM.CO2E.PC ~ factor(income), data = CO2) 
+
+summary(model_3) # summary
+
+msummary(model_3, statistic = 'p.value')
+
+
+
+#ANOVA (Analysis of Variance)
+
+```{r}
+wb_co2_4anova %>% aov(co2 ~ factor(income), .) %>% summary()
+```
+
+
+## Week 7 Assignment
+
+* Week 7: Assignment on regression analysis and PPDAC cycle
+
+* Work on the following problem.
+
+* Problem: Find one problem from the SGDs goal.
+
+* Example: WDI environment
+
+* https://datatopics.worldbank.org/world-development-indicators/themes/environment.html
+
+* Plan: Analyze the data to find out why the problem is occurring.
+
+* Data: Collect data from WDI and other sources (OECD, UN, IMF, etc.).
+
+* Analysis: Analyze the data. Use what you have learned about regression analysis and descriptive statistics in the previous lectures.
+
+* Conclusion: Briefly describe what you learn from the data analysis.
+
+* Submission: Your rmd file (Rmarkdown) on Moodle box. 
+
+*Deadline : Feb. 8. 
+
+<!-- ## Part I: Topics in Exploratory Data Analysis -->
+
+<!-- ### Topological Data Analysis -->
+
+<!-- > Lecture by Professor Taisei Kaizoji -->
+
+<!-- ## Part II: Towards Your Course Project -->
+
+<!-- ### Contents -->
+
+<!-- * About Assignment 6, World Development Indicator -->
+<!--   - WDI -->
+<!--   - `read_excel` -->
+<!--   - Filtering Join -->
+
+<!-- * Join Tables -->
+<!--   - Bind rows -->
+<!--   - Bind columns -->
+<!--   - Filtering join -->
+
+<!-- * Your Course Project -->
+<!--   - Short Paper -->
+<!--   - Presentation -->
+<!--   - Paper -->
+
+<!-- <!-- ### World Development Indicators: ?WDI --> -->
+
+<!-- <!-- 1. Basic Usage --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- WDI(country = "all", indicator = "NY.GDP.PCAP.KD") --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- 2. Vector Notation --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- WDI(country = c("US", "CN", JP"), # ISO-2 codes --> -->
+<!-- <!--    indicator = c("gdp_pcap" = "NY.GDP.PCAP.KD",  --> -->
+<!-- <!--                 "life_exp" = "SP.DYN.LE00.IN")) --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- 3. Use Extra:  --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- WDI(country = "all",  --> -->
+<!-- <!--    indicator = c("gdp_pcap" = NY.GDP.PCAP.KD",  --> -->
+<!-- <!--                 "life_exp" = "SP.DYN.LE00.IN"), extra = TRUE) --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel --> -->
+
+<!-- <!-- ### World Bank Country and Lending Groups --> -->
+
+<!-- <!-- * URL [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups) --> -->
+<!-- <!-- * [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls)  --> -->
+
+<!-- <!-- #### About CLASS.xls --> -->
+
+<!-- <!-- This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are:  --> -->
+
+<!-- <!-- * low income, $1,035 or less;  --> -->
+<!-- <!-- * lower middle income, $1,036 - 4,045;  --> -->
+<!-- <!-- * upper middle income, $4,046 - 12,535;  --> -->
+<!-- <!-- * and high income, $12,536 or more.  --> -->
+
+<!-- <!-- The effective operational cutoff for IDA eligibility is $1,185 or less.								 --> -->
+
+<!-- <!-- --- --> -->
+
+<!-- <!-- #### Geographic classifications							 --> -->
+
+<!-- <!-- * IDA countries are those that lack the financial ability to borrow from IBRD.  --> -->
+
+<!-- <!-- * IDA credits are deeply concessional—interest-free loans and grants for programs aimed at boosting economic growth and improving living conditions.  --> -->
+
+<!-- <!-- * IBRD loans are noncessional.  --> -->
+
+<!-- <!-- * Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.								 --> -->
+
+<!-- <!-- --- --> -->
+
+<!-- <!-- #### Note --> -->
+
+<!-- <!-- * The term country, used interchangeably with economy, does not imply political independence but refers to any territory for which authorities report separate social or economic statistics.  --> -->
+
+<!-- <!-- * Income classifications set on 1 July 2020 remain in effect until 1 July 2021.  --> -->
+
+<!-- <!-- * Argentina, which was temporarily unclassified in July 2016 pending release of revised national accounts statistics, was classified as upper middle income for FY17 as of 29 September 2016 based on alternative conversion factors. Also effective 29 September 2016, Syrian Arab Republic is reclassified from IBRD lending category to IDA-only.  --> -->
+
+<!-- <!-- * On 29 March 2017, new country codes were introduced to align World Bank 3-letter codes with ISO 3-letter codes: Andorra (AND), Dem. Rep. Congo (COD), Isle of Man (IMN), Kosovo (XKX), Romania (ROU), Timor-Leste (TLS), and West Bank and Gaza (PSE).								 --> -->
+
+<!-- <!-- ### Importing Excel Files, Part I --> -->
+
+<!-- <!-- * CLASS.xls: - _copy the following link_ --> -->
+<!-- <!--   - [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls)  --> -->
+<!-- <!-- * readxl: https://readxl.tidyverse.org --> -->
+<!-- <!-- * Help: `read_excel`, `read_xls`, `read_xlsx` --> -->
+
+<!-- <!-- ``` --> -->
+<!-- <!-- url_class <- "http://databank.worldbank.org/  --> -->
+<!-- <!--   data/download/site-content/CLASS.xls" --> -->
+<!-- <!-- download.file(url = url_class, destfile = "data/CLASS.xls") --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- library(readxl) --> -->
+<!-- <!-- wb_countries_tmp <- read_excel("data/CLASS.xls",  --> -->
+<!-- <!--   sheet = 1, skip = 4, n_max =219) %>% slice(-1) --> -->
+<!-- <!-- wb_countries <- wb_countries_tmp %>%  --> -->
+<!-- <!--   select(Economy, Code, Region, `Income group`,  --> -->
+<!-- <!--         Code, Region:Other) --> -->
+<!-- <!-- wb_countries --> -->
+<!-- <!-- ``` --> -->
+
+<!-- <!-- ### Importing Excel Files, Part II --> -->
+
+<!-- <!-- * readxl: https://readxl.tidyverse.org --> -->
+<!-- <!-- * Help: `read_excel`, `read_xls`, `read_xlsx` --> -->
+
+<!-- <!-- ``` --> -->
+<!-- <!-- wb_regions_tmp <- read_excel("data/CLASS.xls",  --> -->
+<!-- <!--   sheet = 1, skip = 4, n_max =272) %>%  --> -->
+<!-- <!--   slice(-(1:221)) --> -->
+<!-- <!-- wb_regions <- wb_regions_tmp %>%  --> -->
+<!-- <!--   select(Economy:Code) %>% drop_na() --> -->
+<!-- <!-- wb_regions --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- wb_groups_tmp <- read_excel("data/CLASS.xls",  --> -->
+<!-- <!--   sheet = "Groups") # sheet = 3 --> -->
+<!-- <!-- wb_groups_tmp --> -->
+<!-- <!-- ``` --> -->
+
+<!-- <!-- * Please study 'About Assignment Five' in Moodle --> -->
+
+<!-- <!-- ### Filtering Join --> -->
+
+<!-- <!-- ``` --> -->
+<!-- <!-- gdp_pcap <- WDI(country = "all",  --> -->
+<!-- <!--     indicator = "NY.GDP.PCAP.KD") --> -->
+<!-- <!-- gdp_pcap_extra <- WDI(country = "all",  --> -->
+<!-- <!--     indicator = "NY.GDP.PCAP.KD", extra = TRUE) --> -->
+<!-- <!-- ``` --> -->
+
+<!-- <!-- * Compare the following: --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- gdp_pcap %>% semi_join(country_list) --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- gdp_pcap %>% filter(region != "Aggregates") --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> -->
+<!-- <!-- gdp_pcap %>% anti_join(country_list) --> -->
+<!-- <!-- ``` --> -->
+
+<!-- <!-- * Please study 'About Assignment Five' in Moodle --> -->
+
+
+<!-- <!-- ### Join Tables --> -->
+
+<!-- <!-- There are three types of joining tables. Commands are from tidyverse packages though there is a way to do the same by Base R with appropriate arguments. --> -->
+
+<!-- <!-- 1. Bind rows: bind_rows(), intersect(), setdiff(), union() --> -->
+<!-- <!-- 2. Bind columns: bind_cols(), left_join(), right_join(), inner_join(), full_join() --> -->
+<!-- <!-- 3. Filtering join: semi_join(), anti_join() --> -->
+
+<!-- <!-- ### Join Tables: Quick References --> -->
+
+<!-- <!-- 1. https://r4ds.had.co.nz/relational-data.html#relational-data --> -->
+
+<!-- <!-- 2. Cheatsheet: Data Transformation, pages 2 and 3. You can download it from RStudio > Help. --> -->
+
+<!-- <!-- 3. Tidyverse Homepage: --> -->
+<!-- <!--     a. [Efficiently bind multiple data frames by row and column](https://dplyr.tidyverse.org/reference/bind.html): bind_rows(), bind_cols() --> -->
+<!-- <!--     b. [Set operations](https://dplyr.tidyverse.org/reference/setops.html): intersect(), setdiff(), union() --> -->
+<!-- <!--     c. [Mutating joins](https://dplyr.tidyverse.org/reference/mutate-joins.html): left_join(), right_join(), inner_join(), full_join() --> -->
+<!-- <!--     d. [Filtering joins](https://dplyr.tidyverse.org/reference/filter-joins.html): semi_join(), anti_join() --> -->
+
+<!-- <!-- 4. R Studio Primers: Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) --> -->
+<!-- <!--     - Reshape Data, Separate and Unite Columns, **Join Data Sets** --> -->
+
+<!-- ### About This Course -->
+
+<!-- * Features: -->
+<!--   - Inter-disciplinary field -->
+<!--   - Empirical: based on, concerned with, or verifiable by observation or experience rather than theory or pure logic -->
+<!--   - Extract knowledge and insights from data using scientific methods, processes, algorithms and systems  -->
+
+<!-- * Learning Methods: -->
+<!--   - Getting Information, Knowledge and Raise Questions: Lectures and Readings, Assignment 1 -->
+<!--   - Interactive Practicum: `swirl`, R Studio Primers, etc. Assignment 2 -->
+<!--   - Mini Projects: Assignment 3 - Assignment 6 -->
+<!--   - Project and Collaboration with Communication - Assignment 7, Your Course Project -->
+<!--     + Project Design, Exploration, Presentation and Share, Final Output -->
+
+<!-- * Assignments: -->
+<!--   - Enroll:12 > A1:12 > A2:12(15) > A3:12 > A4:10 > A5:9 > A6:7 -->
+<!--   - _Better Late Than Never_ -->
+
+
+<!-- ### Your Course Project, Part I -->
+
+<!-- All documents must contain 'ID', 'Name', 'Date' of submission -->
+
+<!-- 1. 'Short Paper' (that can be much longer than the Paper -->
+<!--   * Due: 2021-02-09 for Interim Report (and 2021-03-03: supporting doc for Paper) -->
+<!--   * Contents:  -->
+<!--      a. Objective: What and Why  -->
+<!--      b. Data  -->
+<!--      c. Reproducible Exploratory Data Analysis with Explanations -->
+<!--      d. Questions based on your findings and technical quesitons -->
+<!--   * Format: R Notebook (*.nb.html) -->
+
+<!-- 2. Presentation: 10 minutes (5-7 min. presentation and 3-5 min. QA) -->
+<!--   * On 2021-02-17 [or 2021-02-24, a reserve] -->
+<!--   * With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share -->
+<!--   * Note: Be ready to show your codes by R Notebook or R Scripts, when requested -->
+
+<!-- ###  Your Course Project, Part II -->
+
+<!-- 3. Paper: 5 to 10 pages -->
+<!--   * Due: 2021-03-03 -->
+<!--   * Contents: Exploratory Data Analysis Using **Public Data** -->
+<!--       a. Introduction - include what and why -->
+<!--       b. Description of Data -->
+<!--       c. Exposition of Your Exploration with Visualization of Data -->
+<!--       d. Concluding Remarks -->
+<!--       e. References, if any -->
+<!--       f. Acknowledgements, if any (can give a credit to your classmate) -->
+<!--   * Note: -->
+<!--       - Give logical explanations of your observations using data tables and charts -->
+<!--       - No need to include the whole process -->
+<!--       - Include codes only when necessary -->
+<!--   * Format: pdf. (Rmd > pdf, Rmd > MS Word > pdf, Rmd > MS Word > Google Doc > pdf) -->
+
+<!-- ### The Seventh Assignment (in Moodle) -->
+
+<!-- A. Share a part (a and possibly b) of your 'Short Paper'. -->
+
+<!--   1. What do you want to analyze? -->
+<!--   2. Why do you want to analyze it? -->
+
+<!-- B. Share your thoughts about this course. -->
+
+<!--   1. What have you learned? -->
+<!--   2. What do you want to learn, understand, or clarify towards the end of this course? -->
+<!--   3. Requests and suggestions to improve this course. -->
+
+<!-- C. Option: Share the link(s) to your R Notebook(s) in RStudio.cloud -->
+
+<!-- * Submit your response to Moodle (The Seventh Assignment) by 2021-02-09 23:59:00 -->
+
+<!-- ### Learning Resources, VII -->
+
+<!-- * [R for Data Science, Part VI Communicate](https://r4ds.had.co.nz/communicate-intro.html#communicate-intro) -->
+<!--   - [Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html#graphics-for-communication) -->
+<!--   - [R Markdown workflow](https://r4ds.had.co.nz/r-markdown-workflow.html#r-markdown-workflow) -->
+<!-- * Data analysis write-ups: https://jgscott.github.io/teaching/writeups/write_ups/ -->
+
+<!-- ::: {.block} -->
+<!-- #### RStudio Primers: See References in Moodle at the bottom -->
+
+<!-- 1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!-- 2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!-- 3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!--   - Exploratory Data Analysis, Bar Charts, Histograms -->
+<!--   - **Boxplots and Counts, Scatterplots, Line Plots** -->
+<!--   - Overplotting and Big Data, Customize Your Plots -->
+<!-- 4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!--   - Reshape Data, Separate and Unite Columns, Join Data Sets -->
+<!-- :::  -->
+
+
