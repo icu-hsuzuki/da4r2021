@@ -251,33 +251,9 @@ Through the first week's study, I generally understand the concept of data scien
 
 ### Visualization in EDA
 
-####  Data Science (Wikipedia) 
+Let's look at examples.
 
-An inter-disciplinary field that uses scientific methods, processes, algorithms and systems to **extract knowledge and insights** from many structural and unstructured data. Data science is related to data mining, machine learning and big data.
-
-#### From Professor Shimizu's lecture, slide 3
-
-**Insights** from data may come
-from a well conceived **visualization** of the data,
-from modern methods of statistical learning and **model selection** as well as from time-honored formal statistical procedures.
-
-### Visualization: Charting
-
-#### The First Step: Look at Various Visualiation
-
-1. What are varibles? How many variables?
-2. Quantitative variable? Qualitative variable?
-  - Numerical variable? Categorical variable?
-3. In R, there are six types:
-    a. Double
-    b. Integer 
-    c. Character
-    d. Logical
-    e. Raw
-    f. Complex
-4. Study a, b, c, d carefully. 0, 1, 2, ... can be double, integer, character, and logical symbols T and F can be computed as 1 and 0 
-
-### Florence Nightingale (1820 – 1910)
+#### Florence Nightingale (1820 – 1910)
 
 > Florence Nightingale was an English social reformer, statistician and the founder of modern nursing. ([wikipedia](https://en.wikipedia.org/wiki/Florence_Nightingale))
 
@@ -292,7 +268,7 @@ from modern methods of statistical learning and **model selection** as well as f
   - [Notes on Nursing: What It Is, and What It Is Not](http://www.gutenberg.org/ebooks/12439)
 * Nightingale: [The Journal of the Data Visualization Society, Medium](https://medium.com/nightingale/tagged/data-science)
 
-### Hans Rosling (1948 – 2017)
+#### Hans Rosling (1948 – 2017)
 
 > Hans Rosling was a Swedish physician, academic, and public speaker. He was a professor of international health at Karolinska Institute[4] and was the co-founder and chairman of the Gapminder Foundation, which developed the Trendalyzer software system. ([wikipedia](https://en.wikipedia.org/wiki/Hans_Rosling))
 
@@ -306,7 +282,7 @@ from modern methods of statistical learning and **model selection** as well as f
 * Videos: [The best stats you’ve ever seen, Hans Rosling](http://www.edtech.events/the-best-stats-youve-ever-seen-hans-rosling/)
 * [Google Public Data](https://www.google.com/publicdata/directory?hl=en_US&dl=en_US#!): [Example: World Development Indicator](https://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&ctype=b&strail=false&nselm=s&met_x=sp_dyn_le00_in&scale_x=lin&ind_x=false&met_y=sp_dyn_tfrt_in&scale_y=lin&ind_y=false&met_s=sp_pop_totl&scale_s=lin&ind_s=false&dimp_c=country:region&ifdim=country&hl=en_US&dl=en_US&iconSize=0.5&uniSize=0.035)
 
-### Factfulness is ... \hfill _From the book_
+##### Factfulness is ... \hfill _From the book_
 
 recognizing when a decision feels urgent and remembering that it rarely is.
 
@@ -378,8 +354,6 @@ The term ``Open Data'' has a very precise meaning. Data or content is open if an
 * China: http://www.stats.gov.cn/english/
 * Japan: https://www.data.go.jp/list-of-database/?lang=en
 
----
-
 #### Other Open Public Data
 
 * Google Public Data Explore: https://www.google.com/publicdata/directory?hl=en_US
@@ -409,6 +383,20 @@ The publication's founder is the social historian and development economist Max 
     + Menu: Country Ranking
 
 
+
+### The First Step: Type of Variables
+
+1. What are varibles? How many variables?
+2. Quantitative variable? Qualitative variable?
+  - Numerical variable? Categorical variable?
+3. In R, there are six types:
+    a. Double
+    b. Integer 
+    c. Character
+    d. Logical
+    e. Raw
+    f. Complex
+4. Study a, b, c, d carefully. 0, 1, 2, ... can be double, integer, character, and logical symbols T and F can be computed as 1 and 0 
 
 
 <!-- ### The First Assignment (in Moodle) -->
