@@ -1,0 +1,823 @@
+# Exploratory Data Analysis (EDA) 3 {#eda3}
+
+### Course Contents {-}
+
+  1. 2021-12-08: Introduction: About the course  
+    - An introduction to open and public data, and data science
+  2. 2021-12-15: Exploratory Data Analysis (EDA) 1 [lead by hs]  
+    - R Basics with RStudio and/or RStudio.cloud; R Script, swirl
+  3. 2021-12-22: Exploratory Data Analysis (EDA) 2 [lead by hs]   
+    - R Markdown; Introduction to `tidyverse`; RStudio Primers
+  4. **2022-01-12: Exploratory Data Analysis (EDA) 3** [lead by hs]  
+    - **Introduction to `tidyverse`; Public Data, WDI, etc**
+  5. 2022-01-19: Exploratory Data Analysis (EDA) 4 [lead by hs]  
+    - Introduction to `tidyverse`; WDI, UN, WHO, etc
+  6. 2022-01-26: Exploratory Data Analysis (EDA) 5 [lead by hs]  
+    - Introduction to `tidyverse`; WDI, OECD, US gov, etc
+  7. 2022-02-02: Inference Statistics 1
+  8. 2022-02-09: Inference Statistics 2
+  9. 2022-02-16: Inference Statistics 3
+  10. 2022-02-23: Project Presentation
+
+### Importing and Transforming Data {-}
+
+* Importing Data by `readr` in `tidyverse` and `WDI`
+* Transforming Data by `dplyr` in `tidyverse`
+
+#### EDA (A diagram from R4DS by H.W. and G.G.) {-}
+
+![EDA from r4ds](./data/data-science.png)
+
+### Contents of EDA3 {-}
+
+* Importing Data by `readr`
+  - Basics
+  
+* Public Data revisited
+  
+* Importing Data with API (Application Programming Interface)
+  - WDI of World Bank
+  
+* Exploratory Data Analysis (EDA)
+  - Variables
+
+* Data Transformation (Wrangling, Reshaping) with `tidyverse` Packages
+  - dplyr: select, filter, mutate, arrange, group_by, summarize, etc.
+
+
+## Part I: Importing Data by `readr` and WDI Package
+
+### `tidyverse` Package Review
+
+* CRAN: https://cran.r-project.org > Packages (menu)
+  - [Contributed Packages](https://cran.r-project.org/web/packages/)
+  - Currently, the CRAN package repository features 16850 available packages. 
+* RStudio:
+  - [R Packages](https://rstudio.com/products/rpackages/)
+  - [Quick list of useful R packages](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
+* Tidyverse: https://www.tidyverse.org
+  1. Install `tidyverse`
+      a. install.packages("tidyverse")
+      b. RStudio Menu: Tools > Install Packages > `tidyverse`
+  2. Attaching `tidyverse`
+      - `library(tidyverse)`
+  3. The following packages are attached automatically: 
+      - `ggplot2`, `tibble`, `tidyr`, `readr`, `purrr`, `dplyr`, `stringr`, `forcats`
+
+
+### R Package: An Example - `readr` in `tidyverse`
+
+#### CRAN - Package readr ([r-project.org › package=readr](https://CRAN.R-project.org/package=readr))
+
+* readr: Read Rectangular Text Data _short description_ 
+* The goal of 'readr' is to provide a fast and friendly way to read rectangular data (like 'csv', 'tsv', and 'fwf'). It is designed to flexibly parse many types of data found in the wild, while still cleanly failing when data unexpectedly changes. _description_  
+* Version: 2.1.1
+* Depends: R ($\geq$ 3.1)
+* Imports: cli, clipr, crayon, hms ($\geq$ 0.4.1), methods, rlang, R6, tibble, utils, lifecycle
+* URL: 	https://readr.tidyverse.org, https://github.com/tidyverse/readr
+* Reference manual:	[readr.pdf](https://cran.r-project.org/web/packages/readr/readr.pdf)
+* Vignettes: _usage with explanations_
+  - [Locales](https://cran.r-project.org/web/packages/readr/vignettes/locales.html)   
+  - [Introduction to readr](https://cran.r-project.org/web/packages/readr/vignettes/readr.html)
+  
+
+### Reading Data Files - readr, (readxl, etc.)
+
+#### readr: [Overview](https://readr.tidyverse.org)
+
+The goal of readr is to provide a fast and friendly way to read rectangular data (like csv, tsv, and fwf). It is designed to flexibly parse many types of data. If you are new to readr, the best place to start is [the data import chapter in R for data science](https://r4ds.had.co.nz/data-import.html).
+
+* `read_csv`: comma separated (CSV) files
+  - e.g. heights <- read_csv("data/heights.csv")
+
+* `read_delim`: general delimited files
+* _Use [Help] to find out the detail, or go to the sites above._
+
+#### readxl: [Overview](https://readxl.tidyverse.org)
+
+The readxl package makes it easy to get data out of Excel and into R.
+
+* `read_excel` reads both xls and xlsx files and detects the format from the extension.
+  - eg. df1 <- read_excel("file_name.xlsx", sheet = 1)
+
+### Basics of Importing Data, I
+
+1. Get the URL (uniform resource locator) - copy the link
+  * `data_url <- "https://github.com/RamiKrispin/  
+  coronavirus/raw/master/csv/coronavirus.csv"`
+2. Download the file into the `destfile` in data folder:
+  * `download.file(url = data_url, destfile = "data/corinavirus.csv")`
+3. Read the file:
+  * `df_coronavirus <- read_csv("data/corinavirus.csv")`  
+
+* Option 1 after 2: RStudio: Files > Import Dataset
+* Option 2:Skip 2 and `df_coronavirus <- read_csv(data_url)`
+* Write data: `write_csv(df_coronavirus, "data/coronavirus20220112.csv")`
+
+* _Note that the data is very big now._
+
+### Basics of Importing Data, II
+
+1. Get the URL (uniform resource locator) - copy the link
+  * e.g. Go to UN Data: https://data.un.org/
+  * Copy the link: e.g. Population, surface area and density  
+  * `url_of_data <- "https://data.un.org/--long url--.csv"`
+2. Download the file into the `destfile` in data folder:
+  * `download.file(url = url_of_data, destfile = "data/un_pop.csv")`
+  * Or, directly download the file, and rename it.
+3. Read the file:
+  * `df_un_pop <- read_csv("data/un_pop.csv", skip = 1)`
+  
+### `tibble` [Overview](https://tibble.tidyverse.org)
+
+A **tibble**, or tbl_df, is a modern reimagining of the data.frame, keeping what time has proven to be effective, and throwing out what is not. Tibbles are data.frames that are lazy and surly: they do less (i.e. they don’t change variable names or types, and don’t do partial matching) and complain more (e.g. when a variable does not exist). This forces you to confront problems earlier, typically leading to cleaner, more expressive code. Tibbles also have an enhanced print() method which makes them easier to use with large datasets containing complex objects.
+
+If you are new to tibbles, the best place to start is [the tibbles chapter in R for data science](https://r4ds.had.co.nz/tibbles.html).
+
+**Examples**
+
+```
+iris_tbl <- as_tibble(iris)
+iris_tbl
+glimpse(iris_tbl)
+```
+
+### Variables
+
+#### The First Step: Look at Various Visualiation
+
+1. What are varibles? How many variables?
+2. Quantitative variable? Qualitative variable?
+  - Numerical variable? Categorical variable?
+3. In R, there are six types:
+    a. **Double**
+    b. **Integer** 
+    c. **Character**
+    d. **Logical**
+    e. Raw
+    f. Complex
+4. Study a, b, c, d carefully. 0, 1, 2, ... can be double, integer, character, and logical symbols T and F can be computed as 1 and 0 
+
+### Example I
+
+**A Study of Cases of Coronavirus Pandemic, II**
+
+4.  Importing and Transforming Data with readr and dplyr in tidyverse Packages
+
+  - 4.1 Review
+  - 4.2 library: Loading/Attaching Packages
+  - 4.3 Importing data by readr in tidyverse
+
+### Open and Public Data, World Bank
+
+#### [Open Government Data Toolkit](http://opendatatoolkit.worldbank.org): [Open Data Defined](http://opendatatoolkit.worldbank.org/en/essentials.html)
+
+The term ``Open Data'' has a very precise meaning. Data or content is open if anyone is free to use, re-use or redistribute it, subject at most to measures that preserve provenance and openness.
+
+1. The data must be \underline{legally open}, which means they must be placed in the public domain or under liberal terms of use with minimal restrictions.
+2. The data must be \underline{technically open}, which means they must be published in electronic formats that are machine readable and non-proprietary, so that anyone can access and use the data using common, freely available software tools. Data must also be publicly available and accessible on a public server, without password or firewall restrictions. To make Open Data easier to find, most organizations create and manage Open Data catalogs.
+
+
+
+### World Bank: WDI - World Development Indicaters
+
+* World Bank: https://www.worldbank.org
+* [Who we are](https://www.worldbank.org/en/who-we-are):
+  - To end extreme poverty: By reducing the share of the global population that lives in extreme poverty to 3 percent by 2030.
+  - To promote shared prosperity: By increasing the incomes of the poorest 40 percent of people in every country. 
+* World Bank Open Data: https://data.worldbank.org
+* [World Development Indicators (WDI)](https://datatopics.worldbank.org/world-development-indicators/) : the World Bank’s premier compilation of cross-country comparable data on development.
+  - Poverty and Inequality
+  - People
+  - Environment
+  - Economy
+  - States and Markets
+  - Global Links
+  
+<!-- ### World Bank: WDI - World Development Indicaters -->
+
+<!-- * World Bank: https://www.worldbank.org -->
+<!-- * [Who we are](https://www.worldbank.org/en/who-we-are): -->
+<!--   - To end extreme poverty: By reducing the share of the global population that lives in extreme poverty to 3 percent by 2030. -->
+<!--   - To promote shared prosperity: By increasing the incomes of the poorest 40 percent of people in every country.  -->
+<!-- * World Bank Open Data: https://data.worldbank.org -->
+<!-- * World Development Indicators (WDI) : the World Bank’s premier compilation of cross-country comparable data on development. -->
+<!--   - Poverty and Inequality -->
+<!--   - People -->
+<!--   - Environment -->
+<!--   - Economy -->
+<!--   - States and Markets -->
+<!--   - Global Links -->
+
+### R Package [WDI](https://CRAN.R-project.org/package=WDI)
+
+* [WDI](https://CRAN.R-project.org/package=WDI): World Development Indicators and Other World Bank Data
+* Search and download data from over 40 databases hosted by the World Bank, including the World Development Indicators ('WDI'), International Debt Statistics, Doing Business, Human Capital Index, and Sub-national Poverty indicators.
+* Version: 2.7.4
+* Materials:	[README](https://cran.r-project.org/web/packages/WDI/readme/README.html)   - _usage_
+  - [NEWS](https://cran.r-project.org/web/packages/WDI/news/news.html) - _version history_
+* Published: 2021-04-06
+* README: https://cran.r-project.org/web/packages/WDI/readme/README.html
+* Reference manual:	[WDI.pdf](https://cran.r-project.org/web/packages/WDI/WDI.pdf)
+
+### Function WDI
+
+* **Usage**
+
+```
+WDI(country = "all",
+    indicator = "NY.GDP.PCAP.KD",
+    start = 1960,
+    end = 2020,
+    extra = FALSE,
+    cache = NULL)
+```
+
+* **Arguments**
+  - country: Vector of countries (ISO-2 character codes, e.g. "BR", "US", "CA", or "all") 
+  - indicator: If you supply a named vector, the indicators will be automatically renamed: `c('women_private_sector' = 'BI.PWK.PRVS.FE.ZS')`
+  
+### Function WDIsearch
+
+```{r}
+library(WDI)
+```
+```{r}
+WDIsearch(string = "NY.GDP.PCAP.KD", 
+          field = "indicator", cache = NULL)
+```
+```
+WDIsearch(string = "NY.GDP.PCAP.KD", 
+  field = "indicator", short = FALSE, cache = NULL)
+```
+```
+WDIsearch(string = "gdp", 
+  field = "name", short = TRUE, cache = NULL) 
+```
+
+### Example II
+
+**Introduction to WDI**
+
+1. World Bank
+
+ - 1.1 About
+ - 1.2 Open Data Defined
+ - 1.3 WDI - World Development Indicaters
+ 
+2. R Package WDI
+
+ - 2.1 Function WDI: World Development Indicators (World Bank)
+ - 2.2 Function WDIsearch
+ 
+3. The First Example
+ 
+ - 3.1 Setup
+ - 3.2 GDP Per Capita
+
+## Part II: Data Transforamtion with `dplyr`
+
+### `dplyr` [Overview](https://dplyr.tidyverse.org)
+
+dplyr is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges:
+
+* `select()` picks variables based on their names.
+* `filter()` picks cases based on their values.
+* `mutate()` adds new variables that are functions of existing variables
+* `summarise()` reduces multiple values down to a single summary.
+* `arrange()` changes the ordering of the rows.
+* `group_by()` takes an existing tbl and converts it into a grouped tbl.
+
+You can learn more about them in vignette("dplyr"). As well as these single-table verbs, dplyr also provides a variety of two-table verbs, which you can learn about in vignette("two-table").
+
+If you are new to dplyr, the best place to start is [the data transformation chapter in R for data science](http://r4ds.had.co.nz/transform.html).
+
+### [`select`](https://dplyr.tidyverse.org/reference/select.html): Subset columns using their names and types
+
+Helper Function	| Use	| Example
+---|-------|--------
+-	| Columns except	| select(babynames, -prop)
+:	| Columns between (inclusive)	| select(babynames, year:n)
+contains() |	Columns that contains a string |	select(babynames, contains("n"))
+ends_with()	| Columns that ends with a string	| select(babynames, ends_with("n"))
+matches()	| Columns that matches a regex |	select(babynames, matches("n"))
+num_range()	| Columns with a numerical suffix in the range | Not applicable with babynames
+one_of() |	Columns whose name appear in the given set |	select(babynames, one_of(c("sex", "gender")))
+starts_with()	| Columns that starts with a string	| select(babynames, starts_with("n"))
+
+### [`filter`](https://dplyr.tidyverse.org/reference/filter.html): Subset rows using column values
+
+Logical operator	| tests	| Example
+--|-----|---
+>	| Is x greater than y? |	x > y
+>=	| Is x greater than or equal to y? |	x >= y
+<	| Is x less than y?	| x < y
+<=	| Is x less than or equal to y? | 	x <= y
+==	| Is x equal to y? |	x == y
+!=	| Is x not equal to y? |	x != y
+is.na()	| Is x an NA?	| is.na(x)
+!is.na() |	Is x not an NA? |	!is.na(x)
+
+### [`arrange`](https://dplyr.tidyverse.org/reference/arrange.html) and `Pipe %>%`
+
+* `arrange()` orders the rows of a data frame by the values of selected columns.
+
+Unlike other `dplyr` verbs, `arrange()` largely ignores grouping; you need to explicitly mention grouping variables (`or use .by_group = TRUE) in order to group by them, and functions of variables are evaluated once per data frame, not once per group.
+
+* [`pipes`](https://r4ds.had.co.nz/pipes.html) in R for Data Science.
+
+**Examples**
+
+```
+arrange(<data>, <varible>)
+arrange(<data>, desc(<variable>))
+```
+
+```
+<data> %>% ggplot() + geom_point(aes(x = <>, y = <>))
+```
+
+<!-- ### RStudio Primers created by `learnr` -->
+
+<!-- * [`learnr` Interactive Tutorials for R](https://rstudio.github.io/learnr/index.html) -->
+
+<!-- ::: {.block} -->
+<!-- #### RStudio Primers https://rstudio.cloud/learn/primers -->
+
+<!-- 1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!--   - [Visualization Basics](https://rstudio.cloud/learn/primers/1.1) -->
+<!--   - [Programming Basics](https://rstudio.cloud/learn/primers/1.2) -->
+<!-- 2. **Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)** -->
+<!--   - **Working with Tibbles** -->
+<!--   - **Isolating Data with dplyr** -->
+<!--   - **Deriving Information with dplyr** -->
+<!-- 3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!-- 4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!-- 5. Iterate -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- 6. Write Functions -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- :::  -->
+
+
+<!-- ### Learning Resources, IV -->
+
+<!-- https://rstudio.com/resources/webinars/a-gentle-introduction-to-tidy-statistics-in-r/ -->
+
+<!-- * Textbook: [R for Data Science, Part I Explore](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!-- * RStuio Primers: See References in Moodle at the bottom -->
+
+<!-- * Stackoverflow https://stackoverflow.com -->
+<!--   - For non-English system users:  -->
+<!--     + Set `Sys.setenv(LANGUAGE = "en")`: It is helpful for searching information on the internet when you get an error.  -->
+
+
+<!-- * Books:  -->
+<!--   - R Cookbook, 2nd Edition, James (JD) Long and Paul Teetor:  -->
+<!--   https://rc2e.com -->
+<!--   - Fundamentals of Data Visualization, by Claus O. Wilke: https://clauswilke.com/dataviz/index.html -->
+
+
+<!-- ### References -->
+
+<!-- * Moodle: -->
+<!--   - Example: Visualization of `iris` data -->
+<!--   - Example of EDA: Florence Nightingale File -->
+<!--   - Example of EDA: Studying Population and Population Pyramids -->
+
+<!-- \vfill -->
+<!-- > To understand God’s thoughts we must study statistics, for these are the measure of his purpose. – Florence Nightingale -->
+
+<!-- \vfill -->
+<!-- > The Five Global Risks We Should Worry About: the risks of global pandemic, financial collapse, world war, climate change, and extreme poverty. - Hans Rosling -->
+
+<!-- ### The Fourth Assignment (in Moodle) -->
+
+<!-- * Choose any UN data or use International Data Base (IDB) of US Census Burea. -->
+<!-- * Create an R Notebook (_file name_.nb.html) of an Expository Data Analysis containing: -->
+
+<!--   1. title, date, and author, i.e., Your Name -->
+<!--   2. an explanation of the data and the varibles (? _your data_) -->
+<!--   3. chunks containing the following: -->
+<!--     - `library(tidyverse)`, -->
+<!--     - `read_csv("your file name") -->
+<!--     - `glimpse` -->
+<!--     - `ggplot()` using at least two distinct `geom`s.  -->
+<!--   4. your findings and/or questions -->
+
+<!-- * Submit your R Notebook file to Moodle (The Fourth Assignment) by 2021-01-19 23:59:00 -->
+
+### Example III and Practicum
+
+**A Study of Cases of Coronavirus Pandemic, II**
+
+4.  Importing and Transforming Data with readr and dplyr in tidyverse Packages
+
+  - 4.4 Transforming data by dplyr in tidyverse
+    + 4.4.1 slice(): Subset rows using their positions
+    + 4.4.2 select() Subset columns using their names and types
+    + 4.4.3 filter() Subset rows using column values
+    + 4.4.4 mutate(): Create, modify, and delete columns
+    + 4.4.5 ggplot(): Plotting
+    + 4.4.6 Summary
+    + 4.4.7 Pipes
+  
+**Introduction to WDI**
+
+4. More Examples
+
+### Learning Resources, III
+
+* Textbook: [R for Data Science, Part II Explore](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+
+::: {.block}
+#### RStudio Primers: See References in Moodle at the bottom
+
+1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+  - [Visualization Basics](https://rstudio.cloud/learn/primers/1.1)
+  - [Programming Basics](https://rstudio.cloud/learn/primers/1.2)
+2. **Work with Data** -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+  - **Working with Tibbles**
+  - **Isolating Data with dplyr**
+  - **Deriving Information with dplyr**
+3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+5. Iterate -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+6. Write Functions -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro)
+::: 
+
+<!-- ### The Fourth Assignment (in Moodle) -->
+
+<!-- * Choose one or more World Development Indicater(s), WDI -->
+<!-- * Use the WDI function and analyse the (combined) data. -->
+<!-- * Create an R Notebook (_file name_.nb.html) of an EDA containing: -->
+
+<!--   1. title, date, and author, i.e., Your Name -->
+<!--   2. your motivation and/or objectives to analyse the data, and your questions -->
+<!--   3. an explanation of the data and the varibles (WDIsearch?) -->
+<!--   4. chunks containing the following: -->
+<!--       - `library(tidyverse)`, `library(WDI)` -->
+<!--       - `WDI(country = , indicator = , ...)` -->
+<!--       - visualize the data with `ggplot()`  -->
+<!--   5. your findings and/or questions -->
+<!--   6. file name: a4_ID.nb.html, e.g. a4_123456.nb.html -->
+
+<!-- * Submit your R Notebook file to Moodle (The Fourth Assignment) by 2022-01-25 23:59:00 -->
+
+
+<!-- ### RStudio Primers created by [`learnr`](https://rstudio.github.io/learnr/index.html) -->
+
+<!-- <!-- * [`learnr` Interactive Tutorials for R](https://rstudio.github.io/learnr/index.html) -->
+
+<!-- ::: {.block} -->
+<!-- #### RStudio Primers https://rstudio.cloud/learn/primers -->
+
+<!-- 1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!--   - [Programming Basics](https://rstudio.cloud/learn/primers/1.2): _Try this first!_ -->
+<!--   - [Visualization Basics](https://rstudio.cloud/learn/primers/1.1) -->
+<!-- 2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!--   - Working with Tibbles -->
+<!--   - Isolating Data with dplyr -->
+<!--   - Deriving Information with dplyr -->
+<!-- 3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!-- 4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!-- 5. Iterate -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- 6. Write Functions -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- 7. Report Reproductively -- [r4ds: Communicate](https://r4ds.had.co.nz/communicate-intro.html) -->
+<!-- 8. Build Interactive Web Apps -- [r4ds: Communicate](https://r4ds.had.co.nz/communicate-intro.html) -->
+<!-- :::  -->
+
+
+## The Fourth Assignment (in Moodle) 
+
+Choose one or more World Development Indicator(s), WDI
+Use the WDI function and analyse the (combined) data.
+
+Create an R Notebook (_file name_.nb.html) of an EDA containing:
+
+1. title, date, and author, i.e., Your Name
+2. your motivation and/or objectives to analyse the data, and your questions
+3. an explanation of the data and the variables (WDIsearch?)
+4. chunks containing the following:
+  - `library(tidyverse)`, `library(WDI)`
+  - 'WDI(country = , indicator = , ...)'
+  - visualize the data with `ggplot()`
+5. your findings and/or questions
+6. file name: `a4_ID.nb.html`, e.g. `a4_123456.nb.html`
+
+* Submit your R Notebook file to Moodle (The Fourth Assignment) by 2022-01-25 23:59:00
+
+---
+
+### Setup and YAML
+
+As YAML, R Notebook setting at the top, I used the following.
+
+
+```
+---
+title: "Responses to the Fourth Assignment"
+author: "p000117x Hiroshi Suzuki"
+date: '2021-01-29'
+output: 
+  html_notebook:
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+---
+```
+
+Section numbers will be automatically generated and the table of contents appear on left top. If you do not want to include the section number or skip a section, add {-} after the title name.
+
+If you do not need to include section numbers at all, use the following.
+
+```
+---
+title: "Responses to the Fourth Assignment"
+author: "p000117x Hiroshi Suzuki"
+date: '2021-01-29'
+output: 
+  html_notebook
+---
+```
+
+or
+
+```
+---
+title: "Responses to the Fourth Assignment"
+author: "p000117x Hiroshi Suzuki"
+date: '2021-01-29'
+output: html_notebook
+---
+```
+
+See examples of YAML in the Week 3 section of the Moodle page.
+
+For JIS keyboard users, the back-tick is typed by `SHIFT+@`.
+
+We load two packages; `tidyverse` and `WDI`. You need to load these once in the R Noebook file, and you do not need to add library(ggplot2) or library(dplyr) as these are automatically loaded when tidyverse package is loaded.
+
+```{r}
+library(tidyverse)
+library(WDI)
+```
+
+Run all or run code chunks you want to include in the output file `filename.nb.html` before you preview. It is safer to check `Preview on Save` on the top of the editor.
+
+The file name of this ends with `.Rmd`, the notebook file with `.nb.html` at the end is created by pressing Preview button. Please check it under the Files tab in the right below pane. This is the HTML file I want you to submit. Don't knit HTML hiding behind Preview. If you knit HTML, the YAML will be changed.
+
+To see the examples, open R notebook files I created and from top right button, download Rmd file and open it in R Studio.
+
+
+In R notebook, you can and should include comments of each step for communication. It will benefit you as well as a record.
+
+
+### Examples and Comments
+
+In the following I include my feedback keeping anonymity.
+
+#### Search string 
+
+I answered a question that you can add two search words in vector format. However, this does not work. Sorry. Only the first element will be used in the following.
+
+```
+WDIsearch(string = c("female", "gdp"), field = "name")
+```
+
+#### Avoiding a long search result to include in R Notebook
+
+It is OK to get a very long search result, but to include it in R Notebook, it is better to use `as_tibble()`.
+
+```{r}
+as_tibble(WDIsearch(string = "savings", field = "name", cache = NULL))
+```
+
+
+#### Summary by countries
+
+```{r}
+WDIsearch(string = "SE.XPD.TOTL.GD.ZS", field = "indicator", cache = NULL)
+```
+
+```{r cash = TRUE}
+df_e <- as_tibble(WDI(
+  country = c("CN", "IN", "US", "ID","PK", "BR", "NG", "BD", "RU", "MX", "JP","LKA" ), 
+  indicator = c(education = "SE.XPD.TOTL.GD.ZS"),
+  start = 2000,
+  end = 2020))
+df_e
+```
+```{r}
+ggplot(df_e) + 
+  geom_line(aes(x = year, y = education, color = country)) +
+  labs(title = "Government expenditure on education")
+```
+
+```{r}
+summary(df_e)
+```
+A summary of the government expenditure on education by country.
+
+```{r}
+df_e %>% group_by(country) %>%
+  summarize(
+    min = min(education, na.rm = TRUE),
+    median = median(education, na.rm = TRUE), 
+    max = max(education, na.rm = TRUE),  
+    mean = mean(education, na.rm = TRUE)) %>%
+  arrange(desc(mean))
+  
+```
+
+
+#### Comparison of two variables, I
+
+
+```{r}
+WDIsearch(string = "NY.GDS.TOTL.CD", field = "indicator")
+```
+
+```{r cash = TRUE}
+df_pk <- as_tibble(
+  WDI(
+  country = "PK",
+  indicator = c(gdpcap = "NY.GDP.MKTP.CD", saving = "NY.GDS.TOTL.CD"), 
+  start = 1976,
+  end = 2020)
+  )
+df_pk
+```
+
+```{r}
+df_pk %>% ggplot(aes(x = gdpcap, y = saving)) +
+  geom_point() +
+  geom_line()
+```
+
+```{r}
+cor(df_pk$gdpcap, df_pk$saving)
+```
+
+```{r}
+df_pk %>% summarize(correlation = cor(gdpcap, saving))
+```
+
+#### Comparison of two variables, II
+
+```{r}
+WDIsearch(string = "FP.CPI.TOTL", field = "indicator")
+```
+```{r}
+WDIsearch(string = "NE.CON.TOTL.KD.ZG", field = "indicator")
+```
+
+
+```{r cash = TRUE}
+df_cp_con <- as_tibble(WDI(
+  country = c("CN", "VN", "US", "TH", "GB", "FR", "RU", "DE", "JP"),
+  indicator = c(cp = "FP.CPI.TOTL", con ="NE.CON.TOTL.KD.ZG"),
+  start = 1990,
+  end = 2020
+))
+df_cp_con
+```
+Let us have a try.
+
+```{r}
+df_cp_con %>% filter(year == 2020) %>%
+  ggplot() +
+  geom_point(aes(x = cp, y = con))
+```
+It may be interesting to plot all countries in this format.
+
+```{r}
+df_cp_con %>% ggplot(aes(x = cp, y = con, color = country)) +
+  geom_point() +
+  geom_line()
+```
+
+```{r}
+df_cp_con %>% ggplot(aes(x = cp, y = con)) +
+  geom_point() +
+  geom_line() +
+  facet_wrap(vars(country))
+```
+
+
+#### Comparison of two variables in different scales
+
+```{r}
+WDIsearch(string = "SP.DYN.TFRT.IN", field = "indicator", short = FALSE)
+```
+
+
+```{r cash = TRUE}
+df_jp <- as_tibble(WDI(
+  country = "JP",
+  indicator = c(total = "SP.POP.TOTL", fertility = "SP.DYN.TFRT.IN"), 
+  start = 1960,
+  end = 2020))
+df_jp
+```
+
+```{r}
+df_jp %>% ggplot() +
+  geom_line(aes(x = year, y = total/1000000), color = "blue") + 
+  geom_line(aes(x = year, y = fertility*60), color = "red") + 
+  scale_y_continuous("Population (in million)", sec.axis = sec_axis(~ ./60, name = "Fertility")) +
+  labs(title = "Total Population and Fertility Rate in Japan")
+```
+
+
+#### The data with many missing data.
+
+```{r}
+WDIsearch(string = "NY.GNP.PCAP.PP.CD", field = "indicator", cache = NULL)
+```
+```{r cash = TRUE}
+df_gni <- as_tibble(WDI(
+  country = c("CN", "IN", "US", "ID","PK", "BR", "NG", "BD", "VN", "MX", "JP"), 
+  indicator = c(gni ="NY.GNP.PCAP.PP.CD"),
+  start = 1960,
+  end = 2020,
+))
+df_gni
+```
+```{r}
+ggplot(df_gni) + 
+  geom_line(aes(x = year, y = gni, color = country)) +
+  labs(title = "GNI per capita, PPP (current international $)")
+```
+The following code is counting the year there is at least one value, i.e., non NA value. `is.na(x)` gives a value, 1 for TRUE and 0 for FALSE, and `!is.na(x)` is the opposite. By taking a sum, you can find years with values. The following tells you that after 1990 11 countries have values while no country has value before 1989.
+
+```{r}
+df_gni %>% group_by(year) %>%
+  summarize(noNA = sum(!is.na(gni)))
+```
+```{r}
+df_recent <- filter(df_gni, (year >= 1990))
+```
+
+
+```{r}
+ggplot(df_recent) + 
+  geom_line(aes(x = year, y = gni, color = country)) +
+  scale_y_continuous(trans='log10') +
+  labs(title = "GNI per capita, PPP (current international $)", 
+       subtitle = "Log10 Scale")
+```
+
+#### The data in two columns in one chart.
+
+```{r}
+WDIsearch(string ="SE.SEC.ENRR", field = "indicator")
+```
+
+The school enrollment of male and female for the lower secondary in ASIAN countries.
+
+```{r cash = TRUE}
+df_enrr <- as_tibble(WDI(
+  country = c("BN", "KH", "TL", "ID","LA", "MY", "MM", "PH", "SG", "TH", "VN"),
+  indicator = c(all = "SE.SEC.ENRR", female = "SE.SEC.ENRR.LO.FE", male = "SE.SEC.ENRR.LO.MA"),
+  start = 2016,
+  end = 2018
+ ))
+df_enrr
+```
+
+The first solution.
+
+```{r}
+ggplot(df_enrr, aes(x = year, color = country)) +
+  geom_line(aes(y = female, linetype = "dashed")) +
+  geom_line(aes(y = male, linetype = "twodashed")) +
+  labs(x= "Year", y= "Enrollment Ratio ", title = "Ratio of School enrollment\nLower secondary (% gross) in ASEAN", subtitle = "female - dashed lines, male - two dashed lines")
+```
+
+The second solution would be:
+
+```{r}
+df_enrr %>% pivot_longer(cols = c(female, male), names_to = "gender", values_to = "percent") %>%
+  ggplot(aes(x = year, y = percent, color = country, linetype = gender)) +
+  geom_line() +
+  labs(x= "Year", y= "Enrollment Ratio ", title = "Ratio of School enrollment\nLower secondary (% gross) in ASEAN", subtitle = "female - dashed lines, male - two dashed lines")
+```
+
+The third solution could be:
+
+```{r}
+df_enrr %>% pivot_longer(cols = c(female, male), names_to = "gender", values_to = "percent") %>%
+  ggplot(aes(x = year, y = percent, color = country)) +
+  geom_line() + geom_point() +
+  facet_grid(cols = vars(gender)) + 
+  labs(x= "Year", y= "Enrollment Ratio ", title = "Ratio of School enrollment\nLower secondary (% gross) in ASEAN")
+```
+
+
+### `theme()` for `ggplot2()`
+
+I did not introduce themes for `ggplot2`. If you are interested in it, please visit the following sites:
+
+  * https://ggplot2-book.org/polishing.html
+  * https://ggplot2.tidyverse.org/reference/theme.html, 
+  * https://ggplot2.tidyverse.org/reference/ggtheme.html.
+
