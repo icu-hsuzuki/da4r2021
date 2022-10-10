@@ -529,3 +529,9 @@ correlation-and-covariance-1
 regression-analyais-summary-1
 the-asa-statement-on-p-values-context-process-and-purpose-1
 linear-regression-quick-reference-1
+r-and-r-studio
+data-frame-wb_arb
+geom_jitter
+modeling-3
+r-commands-on-statistical-measurements
+more-examples-1
