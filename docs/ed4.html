@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Exploratory Data Analysis (EDA) 4 | Data Analysis for Researchers</title>
+  <meta name="description" content="Chapter 5 Exploratory Data Analysis (EDA) 4 | Data Analysis for Researchers" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Exploratory Data Analysis (EDA) 4 | Data Analysis for Researchers" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Exploratory Data Analysis (EDA) 4 | Data Analysis for Researchers" />
+  
+  
+  
+
+<meta name="author" content="DS SL" />
+
+
+<meta name="date" content="2022-10-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="eda3.html"/>
+<link rel="next" href="examples-and-comments-1.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Researchers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="1" data-path="course.html"><a href="course.html"><i class="fa fa-check"></i><b>1</b> About the Course</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="course.html"><a href="course.html#coures-information"><i class="fa fa-check"></i><b>1.1</b> Coures Information</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="course.html"><a href="course.html#about-qall401-data-analysis-for-researchers"><i class="fa fa-check"></i><b>1.1.1</b> About ‘QALL401 Data Analysis for Researchers’</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="course.html"><a href="course.html#introduction-by-professor-kaizoji"><i class="fa fa-check"></i><b>1.2</b> Introduction by Professor Kaizoji</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="course.html"><a href="course.html#introduction-slide-presentation-1"><i class="fa fa-check"></i><b>1.2.1</b> Introduction (Slide Presentation 1)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="course.html"><a href="course.html#data-analytics-data-science-overview-slide-presentation-2"><i class="fa fa-check"></i><b>1.2.2</b> Data Analytics / Data Science Overview (Slide Presentation 2)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="course.html"><a href="course.html#r-and-r-studio"><i class="fa fa-check"></i><b>1.2.3</b> R and R Studio</a></li>
+<li class="chapter" data-level="1.2.4" data-path="course.html"><a href="course.html#schedule-tentative"><i class="fa fa-check"></i><b>1.2.4</b> Schedule (tentative)</a></li>
+<li class="chapter" data-level="1.2.5" data-path="course.html"><a href="course.html#responses-of-students"><i class="fa fa-check"></i><b>1.2.5</b> Responses of Students</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="course.html"><a href="course.html#introduction-in-ay2020-by-suzuki"><i class="fa fa-check"></i><b>1.3</b> Introduction in AY2020 by Suzuki</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="course.html"><a href="course.html#requirements-and-grades"><i class="fa fa-check"></i><b>1.3.1</b> Requirements and Grades</a></li>
+<li class="chapter" data-level="1.3.2" data-path="course.html"><a href="course.html#data-science-ds"><i class="fa fa-check"></i><b>1.3.2</b> Data Science (DS)</a></li>
+<li class="chapter" data-level="1.3.3" data-path="course.html"><a href="course.html#eda-by-r-language-and-r-programming"><i class="fa fa-check"></i><b>1.3.3</b> EDA by R Language and R Programming</a></li>
+<li class="chapter" data-level="1.3.4" data-path="course.html"><a href="course.html#visualization-in-eda"><i class="fa fa-check"></i><b>1.3.4</b> Visualization in EDA</a></li>
+<li class="chapter" data-level="1.3.5" data-path="course.html"><a href="course.html#data-science-wikipedia"><i class="fa fa-check"></i><b>1.3.5</b> Data Science (Wikipedia)</a></li>
+<li class="chapter" data-level="1.3.6" data-path="course.html"><a href="course.html#data-for-data-science"><i class="fa fa-check"></i><b>1.3.6</b> Data for Data Science</a></li>
+<li class="chapter" data-level="1.3.7" data-path="course.html"><a href="course.html#open-and-public-data"><i class="fa fa-check"></i><b>1.3.7</b> Open and Public Data</a></li>
+<li class="chapter" data-level="1.3.8" data-path="course.html"><a href="course.html#a-list-of-open-data-catalogue"><i class="fa fa-check"></i><b>1.3.8</b> A List of Open Data Catalogue</a></li>
+<li class="chapter" data-level="1.3.9" data-path="course.html"><a href="course.html#what-is-ds-why-ds-for-researchers"><i class="fa fa-check"></i><b>1.3.9</b> What is DS? Why DS? For researchers?</a></li>
+<li class="chapter" data-level="1.3.10" data-path="course.html"><a href="course.html#the-first-step-type-of-variables"><i class="fa fa-check"></i><b>1.3.10</b> The First Step: Type of Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="eda1.html"><a href="eda1.html"><i class="fa fa-check"></i><b>2</b> Exploratory Data Analysis (EDA) 1</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="eda1.html"><a href="eda1.html#r-with-r-studio-andor-r-studio.cloud"><i class="fa fa-check"></i><b>2.1</b> R with R Studio and/or R Studio.cloud</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="eda1.html"><a href="eda1.html#course-contents"><i class="fa fa-check"></i><b>2.1.1</b> Course Contents</a></li>
+<li class="chapter" data-level="2.1.2" data-path="eda1.html"><a href="eda1.html#learning-resources-i"><i class="fa fa-check"></i><b>2.1.2</b> Learning Resources, I</a></li>
+<li class="chapter" data-level="2.1.3" data-path="eda1.html"><a href="eda1.html#eda1-contents"><i class="fa fa-check"></i><b>2.1.3</b> EDA1: Contents</a></li>
+<li class="chapter" data-level="2.1.4" data-path="eda1.html"><a href="eda1.html#what-is-r"><i class="fa fa-check"></i><b>2.1.4</b> What is R?</a></li>
+<li class="chapter" data-level="2.1.5" data-path="eda1.html"><a href="eda1.html#why-r-responses-by-hadley-wickham"><i class="fa fa-check"></i><b>2.1.5</b> Why R? – Responses by Hadley Wickham</a></li>
+<li class="chapter" data-level="2.1.6" data-path="eda1.html"><a href="eda1.html#the-first-example"><i class="fa fa-check"></i><b>2.1.6</b> The First Example</a></li>
+<li class="chapter" data-level="2.1.7" data-path="eda1.html"><a href="eda1.html#what-is-rstudio-httpsrstudio.com"><i class="fa fa-check"></i><b>2.1.7</b> What is RStudio? <span>https://rstudio.com</span></a></li>
+<li class="chapter" data-level="2.1.8" data-path="eda1.html"><a href="eda1.html#installation-of-r-and-r-studio"><i class="fa fa-check"></i><b>2.1.8</b> Installation of R and R Studio</a></li>
+<li class="chapter" data-level="2.1.9" data-path="eda1.html"><a href="eda1.html#r-studio"><i class="fa fa-check"></i><b>2.1.9</b> R Studio</a></li>
+<li class="chapter" data-level="2.1.10" data-path="eda1.html"><a href="eda1.html#r-studio-cloud"><i class="fa fa-check"></i><b>2.1.10</b> R Studio Cloud</a></li>
+<li class="chapter" data-level="2.1.11" data-path="eda1.html"><a href="eda1.html#lets-try-r-basics"><i class="fa fa-check"></i><b>2.1.11</b> Let’s Try R Basics</a></li>
+<li class="chapter" data-level="2.1.12" data-path="eda1.html"><a href="eda1.html#more-on-r-script-examples"><i class="fa fa-check"></i><b>2.1.12</b> More on R Script: Examples</a></li>
+<li class="chapter" data-level="2.1.13" data-path="eda1.html"><a href="eda1.html#practicum-r-studio-cloud-or-r-studio-and-r-basics"><i class="fa fa-check"></i><b>2.1.13</b> Practicum: R Studio Cloud (or R Studio) and R basics</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="eda1.html"><a href="eda1.html#practicum-swirl-and-more-on-r-script"><i class="fa fa-check"></i><b>2.2</b> Practicum: Swirl and more on R Script</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="eda1.html"><a href="eda1.html#swirl-an-interactive-learning-environment-for-r-and-statistics"><i class="fa fa-check"></i><b>2.2.1</b> Swirl: An interactive learning environment for R and statistics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="eda1.html"><a href="eda1.html#install-and-start-swirl-courses"><i class="fa fa-check"></i><b>2.2.2</b> Install and Start Swirl Courses</a></li>
+<li class="chapter" data-level="2.2.3" data-path="eda1.html"><a href="eda1.html#the-first-eda-using-coronavirus.r"><i class="fa fa-check"></i><b>2.2.3</b> The First EDA using coronavirus.R</a></li>
+<li class="chapter" data-level="2.2.4" data-path="eda1.html"><a href="eda1.html#basics-of-fundamentals-of-statistics"><i class="fa fa-check"></i><b>2.2.4</b> Basics of Fundamentals of Statistics</a></li>
+<li class="chapter" data-level="2.2.5" data-path="eda1.html"><a href="eda1.html#summary"><i class="fa fa-check"></i><b>2.2.5</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="eda2.html"><a href="eda2.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis (EDA) 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#course-contents-1"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#eda-and-data-visualization"><i class="fa fa-check"></i>EDA and Data Visualization</a></li>
+<li class="chapter" data-level="" data-path="eda2.html"><a href="eda2.html#contents-of-eda2"><i class="fa fa-check"></i>Contents of EDA2</a></li>
+<li class="chapter" data-level="3.1" data-path="eda2.html"><a href="eda2.html#part-i-r-markdown-for-communication"><i class="fa fa-check"></i><b>3.1</b> Part I: R Markdown for Communication</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="eda2.html"><a href="eda2.html#records-of-eda-and-communication"><i class="fa fa-check"></i><b>3.1.1</b> Records of EDA and Communication</a></li>
+<li class="chapter" data-level="3.1.2" data-path="eda2.html"><a href="eda2.html#what-is-r-markdown-notebook"><i class="fa fa-check"></i><b>3.1.2</b> What is R Markdown Notebook</a></li>
+<li class="chapter" data-level="3.1.3" data-path="eda2.html"><a href="eda2.html#r-studio-setup"><i class="fa fa-check"></i><b>3.1.3</b> R Studio Setup</a></li>
+<li class="chapter" data-level="3.1.4" data-path="eda2.html"><a href="eda2.html#default-yaml-r-notebook-html-pdf-word"><i class="fa fa-check"></i><b>3.1.4</b> Default YAML: R Notebook, HTML, PDF, WORD</a></li>
+<li class="chapter" data-level="3.1.5" data-path="eda2.html"><a href="eda2.html#an-example-of-r-notebooks"><i class="fa fa-check"></i><b>3.1.5</b> An Example of R Notebooks</a></li>
+<li class="chapter" data-level="3.1.6" data-path="eda2.html"><a href="eda2.html#knit-notebook-mode-and-preview-of-default.rmd"><i class="fa fa-check"></i><b>3.1.6</b> Knit, Notebook Mode and Preview of Default.Rmd</a></li>
+<li class="chapter" data-level="3.1.7" data-path="eda2.html"><a href="eda2.html#yaml---yaml-aint-a-markup-language---example"><i class="fa fa-check"></i><b>3.1.7</b> <code>yaml</code> - YAML Ain’t a Markup Language - Example</a></li>
+<li class="chapter" data-level="3.1.8" data-path="eda2.html"><a href="eda2.html#r-markdown-quick-references-see-moodle"><i class="fa fa-check"></i><b>3.1.8</b> R Markdown: Quick References (See Moodle)</a></li>
+<li class="chapter" data-level="3.1.9" data-path="eda2.html"><a href="eda2.html#markdown-language-or-use-wysiwyg-editor"><i class="fa fa-check"></i><b>3.1.9</b> Markdown Language – or use WYSIWYG editor</a></li>
+<li class="chapter" data-level="3.1.10" data-path="eda2.html"><a href="eda2.html#ms-word-happy-collaboration-with-rmd-to-docx"><i class="fa fa-check"></i><b>3.1.10</b> MS Word: <span>Happy collaboration with Rmd to docx</span></a></li>
+<li class="chapter" data-level="3.1.11" data-path="eda2.html"><a href="eda2.html#why-r-markdown"><i class="fa fa-check"></i><b>3.1.11</b> Why R Markdown?</a></li>
+<li class="chapter" data-level="3.1.12" data-path="eda2.html"><a href="eda2.html#literate-programming-by-d.-knuth"><i class="fa fa-check"></i><b>3.1.12</b> Literate Programming by D. Knuth</a></li>
+<li class="chapter" data-level="3.1.13" data-path="eda2.html"><a href="eda2.html#reproducible-research---quote-from-a-coursera-course"><i class="fa fa-check"></i><b>3.1.13</b> Reproducible Research - Quote from a Coursera Course</a></li>
+<li class="chapter" data-level="3.1.14" data-path="eda2.html"><a href="eda2.html#r-markdown-workflow-r-for-data-science"><i class="fa fa-check"></i><b>3.1.14</b> <span>R Markdown workflow, R for Data Science</span></a></li>
+<li class="chapter" data-level="3.1.15" data-path="eda2.html"><a href="eda2.html#learning-resources-eda2-1"><i class="fa fa-check"></i><b>3.1.15</b> Learning Resources, EDA2-1</a></li>
+<li class="chapter" data-level="3.1.16" data-path="eda2.html"><a href="eda2.html#practicum-r-markdown-and-r-notebook"><i class="fa fa-check"></i><b>3.1.16</b> Practicum: R Markdown and R Notebook</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="eda2.html"><a href="eda2.html#part-ii-data-visualization-and-tidyverse-package"><i class="fa fa-check"></i><b>3.2</b> Part II: Data Visualization and Tidyverse Package</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="eda2.html"><a href="eda2.html#introduction-to-tidyverse-r-packages"><i class="fa fa-check"></i><b>3.2.1</b> Introduction to <code>tidyverse</code> R Packages</a></li>
+<li class="chapter" data-level="3.2.2" data-path="eda2.html"><a href="eda2.html#ggplot2-overview"><i class="fa fa-check"></i><b>3.2.2</b> <code>ggplot2</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="3.2.3" data-path="eda2.html"><a href="eda2.html#practicum-ggplot2-on-r-notebook"><i class="fa fa-check"></i><b>3.2.3</b> Practicum: <code>ggplot2</code> on R Notebook</a></li>
+<li class="chapter" data-level="3.2.4" data-path="eda2.html"><a href="eda2.html#basics-of-fundamentals-of-statistics-1"><i class="fa fa-check"></i><b>3.2.4</b> Basics of Fundamentals of Statistics</a></li>
+<li class="chapter" data-level="3.2.5" data-path="eda2.html"><a href="eda2.html#rstudio-primers-created-by-learnr"><i class="fa fa-check"></i><b>3.2.5</b> RStudio Primers created by <span><code>learnr</code></span></a></li>
+<li class="chapter" data-level="3.2.6" data-path="eda2.html"><a href="eda2.html#learning-resources-eda2-2"><i class="fa fa-check"></i><b>3.2.6</b> Learning Resources, EDA2-2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="eda2.html"><a href="eda2.html#the-week-three-assignment-in-moodle"><i class="fa fa-check"></i><b>3.3</b> The Week Three Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="eda2.html"><a href="eda2.html#note-on-r-notebook"><i class="fa fa-check"></i><b>3.3.1</b> Note on R Notebook</a></li>
+<li class="chapter" data-level="3.3.2" data-path="eda2.html"><a href="eda2.html#set-up"><i class="fa fa-check"></i><b>3.3.2</b> Set up</a></li>
+<li class="chapter" data-level="3.3.3" data-path="eda2.html"><a href="eda2.html#data-cars"><i class="fa fa-check"></i><b>3.3.3</b> Data <code>cars</code></a></li>
+<li class="chapter" data-level="3.3.4" data-path="eda2.html"><a href="eda2.html#data-iris"><i class="fa fa-check"></i><b>3.3.4</b> Data <code>iris</code></a></li>
+<li class="chapter" data-level="3.3.5" data-path="eda2.html"><a href="eda2.html#data-airpassengers"><i class="fa fa-check"></i><b>3.3.5</b> Data <code>AirPassengers</code></a></li>
+<li class="chapter" data-level="3.3.6" data-path="eda2.html"><a href="eda2.html#recommended-study-plan"><i class="fa fa-check"></i><b>3.3.6</b> Recommended Study Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="eda2.html"><a href="eda2.html#responses-to-the-week-three-assignment"><i class="fa fa-check"></i><b>3.4</b> Responses to the Week Three Assignment</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="eda2.html"><a href="eda2.html#setup"><i class="fa fa-check"></i><b>3.4.1</b> Setup</a></li>
+<li class="chapter" data-level="3.4.2" data-path="eda2.html"><a href="eda2.html#visualization-of-two-variables"><i class="fa fa-check"></i><b>3.4.2</b> Visualization of Two Variables</a></li>
+<li class="chapter" data-level="3.4.3" data-path="eda2.html"><a href="eda2.html#visualization-of-one-variable"><i class="fa fa-check"></i><b>3.4.3</b> Visualization of One Variable</a></li>
+<li class="chapter" data-level="3.4.4" data-path="eda2.html"><a href="eda2.html#more-examples"><i class="fa fa-check"></i><b>3.4.4</b> More Examples</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="eda3.html"><a href="eda3.html"><i class="fa fa-check"></i><b>4</b> Exploratory Data Analysis (EDA) 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#course-contents-2"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#importing-and-transforming-data"><i class="fa fa-check"></i>Importing and Transforming Data</a></li>
+<li class="chapter" data-level="" data-path="eda3.html"><a href="eda3.html#contents-of-eda3"><i class="fa fa-check"></i>Contents of EDA3</a></li>
+<li class="chapter" data-level="4.1" data-path="eda3.html"><a href="eda3.html#part-i-importing-data-by-readr-and-wdi-package"><i class="fa fa-check"></i><b>4.1</b> Part I: Importing Data by <code>readr</code> and WDI Package</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="eda3.html"><a href="eda3.html#tidyverse-package-review"><i class="fa fa-check"></i><b>4.1.1</b> <code>tidyverse</code> Package Review</a></li>
+<li class="chapter" data-level="4.1.2" data-path="eda3.html"><a href="eda3.html#r-package-an-example---readr-in-tidyverse"><i class="fa fa-check"></i><b>4.1.2</b> R Package: An Example - <code>readr</code> in <code>tidyverse</code></a></li>
+<li class="chapter" data-level="4.1.3" data-path="eda3.html"><a href="eda3.html#reading-data-files---readr-readxl-etc."><i class="fa fa-check"></i><b>4.1.3</b> Reading Data Files - readr, (readxl, etc.)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="eda3.html"><a href="eda3.html#basics-of-importing-data-i"><i class="fa fa-check"></i><b>4.1.4</b> Basics of Importing Data, I</a></li>
+<li class="chapter" data-level="4.1.5" data-path="eda3.html"><a href="eda3.html#basics-of-importing-data-ii"><i class="fa fa-check"></i><b>4.1.5</b> Basics of Importing Data, II</a></li>
+<li class="chapter" data-level="4.1.6" data-path="eda3.html"><a href="eda3.html#tibble-overview"><i class="fa fa-check"></i><b>4.1.6</b> <code>tibble</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="4.1.7" data-path="eda3.html"><a href="eda3.html#variables"><i class="fa fa-check"></i><b>4.1.7</b> Variables</a></li>
+<li class="chapter" data-level="4.1.8" data-path="eda3.html"><a href="eda3.html#example-i"><i class="fa fa-check"></i><b>4.1.8</b> Example I</a></li>
+<li class="chapter" data-level="4.1.9" data-path="eda3.html"><a href="eda3.html#open-and-public-data-world-bank"><i class="fa fa-check"></i><b>4.1.9</b> Open and Public Data, World Bank</a></li>
+<li class="chapter" data-level="4.1.10" data-path="eda3.html"><a href="eda3.html#world-bank-wdi---world-development-indicaters"><i class="fa fa-check"></i><b>4.1.10</b> World Bank: WDI - World Development Indicaters</a></li>
+<li class="chapter" data-level="4.1.11" data-path="eda3.html"><a href="eda3.html#r-package-wdi"><i class="fa fa-check"></i><b>4.1.11</b> R Package <span>WDI</span></a></li>
+<li class="chapter" data-level="4.1.12" data-path="eda3.html"><a href="eda3.html#function-wdi"><i class="fa fa-check"></i><b>4.1.12</b> Function WDI</a></li>
+<li class="chapter" data-level="4.1.13" data-path="eda3.html"><a href="eda3.html#function-wdisearch"><i class="fa fa-check"></i><b>4.1.13</b> Function WDIsearch</a></li>
+<li class="chapter" data-level="4.1.14" data-path="eda3.html"><a href="eda3.html#example-ii"><i class="fa fa-check"></i><b>4.1.14</b> Example II</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="eda3.html"><a href="eda3.html#part-ii-data-transforamtion-with-dplyr"><i class="fa fa-check"></i><b>4.2</b> Part II: Data Transforamtion with <code>dplyr</code></a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="eda3.html"><a href="eda3.html#dplyr-overview"><i class="fa fa-check"></i><b>4.2.1</b> <code>dplyr</code> <span>Overview</span></a></li>
+<li class="chapter" data-level="4.2.2" data-path="eda3.html"><a href="eda3.html#select-subset-columns-using-their-names-and-types"><i class="fa fa-check"></i><b>4.2.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="4.2.3" data-path="eda3.html"><a href="eda3.html#filter-subset-rows-using-column-values"><i class="fa fa-check"></i><b>4.2.3</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="4.2.4" data-path="eda3.html"><a href="eda3.html#arrange-and-pipe"><i class="fa fa-check"></i><b>4.2.4</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="4.2.5" data-path="eda3.html"><a href="eda3.html#example-iii-and-practicum"><i class="fa fa-check"></i><b>4.2.5</b> Example III and Practicum</a></li>
+<li class="chapter" data-level="4.2.6" data-path="eda3.html"><a href="eda3.html#learning-resources-iii"><i class="fa fa-check"></i><b>4.2.6</b> Learning Resources, III</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="eda3.html"><a href="eda3.html#the-fourth-assignment-in-moodle"><i class="fa fa-check"></i><b>4.3</b> The Fourth Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="eda3.html"><a href="eda3.html#setup-and-yaml"><i class="fa fa-check"></i><b>4.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="4.3.2" data-path="eda3.html"><a href="eda3.html#examples-and-comments"><i class="fa fa-check"></i><b>4.3.2</b> Examples and Comments</a></li>
+<li class="chapter" data-level="4.3.3" data-path="eda3.html"><a href="eda3.html#theme-for-ggplot2"><i class="fa fa-check"></i><b>4.3.3</b> <code>theme()</code> for <code>ggplot2()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ed4.html"><a href="ed4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
+<ul>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
+<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
+<li class="chapter" data-level="5.1" data-path="ed4.html"><a href="ed4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ed4.html"><a href="ed4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ed4.html"><a href="ed4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="5.1.3" data-path="ed4.html"><a href="ed4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ed4.html"><a href="ed4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
+<li class="chapter" data-level="5.1.5" data-path="ed4.html"><a href="ed4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="5.1.6" data-path="ed4.html"><a href="ed4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
+<li class="chapter" data-level="5.1.7" data-path="ed4.html"><a href="ed4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="5.1.8" data-path="ed4.html"><a href="ed4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
+<li class="chapter" data-level="5.1.9" data-path="ed4.html"><a href="ed4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
+<li class="chapter" data-level="5.1.10" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
+<li class="chapter" data-level="5.1.11" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
+<li class="chapter" data-level="5.1.12" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
+<li class="chapter" data-level="5.1.13" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
+<li class="chapter" data-level="5.1.14" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
+<li class="chapter" data-level="5.1.15" data-path="ed4.html"><a href="ed4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.16" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.17" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.18" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.19" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.20" data-path="ed4.html"><a href="ed4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.21" data-path="ed4.html"><a href="ed4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.22" data-path="ed4.html"><a href="ed4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.23" data-path="ed4.html"><a href="ed4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.24" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.25" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
+<li class="chapter" data-level="5.1.26" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.27" data-path="ed4.html"><a href="ed4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ed4.html"><a href="ed4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="ed4.html"><a href="ed4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ed4.html"><a href="ed4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ed4.html"><a href="ed4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
+<li class="chapter" data-level="5.2.6" data-path="ed4.html"><a href="ed4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="ed4.html"><a href="ed4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
+<li class="chapter" data-level="5.2.8" data-path="ed4.html"><a href="ed4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
+<li class="chapter" data-level="5.2.9" data-path="ed4.html"><a href="ed4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
+<li class="chapter" data-level="5.2.10" data-path="ed4.html"><a href="ed4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
+<li class="chapter" data-level="5.2.11" data-path="ed4.html"><a href="ed4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="ed4.html"><a href="ed4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="ed4.html"><a href="ed4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="ed4.html"><a href="ed4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ed4.html"><a href="ed4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html"><i class="fa fa-check"></i><b>6</b> Examples and Comments</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#information-obtained-by-extra-true"><i class="fa fa-check"></i><b>6.1</b> Information Obtained by <code>extra = TRUE</code></a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#population-of-zimbabwe-and-similar-countries"><i class="fa fa-check"></i><b>6.1.1</b> Population of Zimbabwe and Similar Countries</a></li>
+<li class="chapter" data-level="6.1.2" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#fertility-rate-of-japan-and-similar-countries"><i class="fa fa-check"></i><b>6.1.2</b> Fertility Rate of Japan and Similar Countries</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#other-groups"><i class="fa fa-check"></i><b>6.2</b> Other Groups</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#iso3c-vector-wb_arb_vec"><i class="fa fa-check"></i><b>6.2.1</b> iso3c vector: <code>wb_arb_vec</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#wangling-transform-and-tidy-data"><i class="fa fa-check"></i><b>6.3</b> Wangling: Transform and Tidy Data</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#tidying-data"><i class="fa fa-check"></i><b>6.3.1</b> Tidying data</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#population-analysis"><i class="fa fa-check"></i><b>6.4</b> Population Analysis</a></li>
+<li class="chapter" data-level="6.5" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#literacy-rate-youth-total-of-people-ages-15-24"><i class="fa fa-check"></i><b>6.5</b> Literacy rate, youth total (% of people ages 15-24)</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#filtering-joins-1"><i class="fa fa-check"></i><b>6.5.1</b> Filtering joins</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#visualization-of-the-data"><i class="fa fa-check"></i><b>6.6</b> Visualization of the data</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#gender-ratio-of-girls-to-boys-in-primary-secondary-and-tertiary-levels"><i class="fa fa-check"></i><b>6.6.1</b> Gender: Ratio of girls to boys in primary, secondary and tertiary levels</a></li>
+<li class="chapter" data-level="6.6.2" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html#proportion-of-seats-held-by-women-in-national-parliament."><i class="fa fa-check"></i><b>6.6.2</b> Proportion of seats held by women in national parliament.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="eda5.html"><a href="eda5.html"><i class="fa fa-check"></i><b>7</b> Exploratory Data Analysis (EDA) 5</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#course-contents-4"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#data-modeling-and-eda"><i class="fa fa-check"></i>Data Modeling and EDA</a></li>
+<li class="chapter" data-level="" data-path="eda5.html"><a href="eda5.html#contents-of-eda5"><i class="fa fa-check"></i>Contents of EDA5</a></li>
+<li class="chapter" data-level="7.1" data-path="eda5.html"><a href="eda5.html#part-i-exploratory-data-analysis-and-data-modeling"><i class="fa fa-check"></i><b>7.1</b> Part I: Exploratory Data Analysis and Data Modeling</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-i-r4dseda"><i class="fa fa-check"></i><b>7.1.1</b> Exploration in Visualization, I – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="7.1.2" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-ii-r4dseda"><i class="fa fa-check"></i><b>7.1.2</b> Exploration in Visualization, II – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="7.1.3" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-iii-r4dseda"><i class="fa fa-check"></i><b>7.1.3</b> Exploration in Visualization, III – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="7.1.4" data-path="eda5.html"><a href="eda5.html#exploration-in-visualization-iv-r4dseda"><i class="fa fa-check"></i><b>7.1.4</b> Exploration in Visualization, IV – <span>r4ds:EDA</span></a></li>
+<li class="chapter" data-level="7.1.5" data-path="eda5.html"><a href="eda5.html#eda-and-data-modeling-simple-summary-of-data"><i class="fa fa-check"></i><b>7.1.5</b> EDA and Data Modeling: Simple Summary of Data</a></li>
+<li class="chapter" data-level="7.1.6" data-path="eda5.html"><a href="eda5.html#hypothesis-generation-vs.-hypothesis-confirmation"><i class="fa fa-check"></i><b>7.1.6</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="7.1.7" data-path="eda5.html"><a href="eda5.html#r4ds-model-basics"><i class="fa fa-check"></i><b>7.1.7</b> <span>R4DS: Model Basics</span></a></li>
+<li class="chapter" data-level="7.1.8" data-path="eda5.html"><a href="eda5.html#all-models-are-wrong-but-some-are-useful.---george-e.p.-box-1919-2013"><i class="fa fa-check"></i><b>7.1.8</b> All models are wrong, but some are useful. - George E.P. Box (1919-2013)</a></li>
+<li class="chapter" data-level="7.1.9" data-path="eda5.html"><a href="eda5.html#regression-analysis-wikipedia"><i class="fa fa-check"></i><b>7.1.9</b> Regression Analysis (<span>wikipedia</span>)</a></li>
+<li class="chapter" data-level="7.1.10" data-path="eda5.html"><a href="eda5.html#history-of-regression-analysis-wikipedia"><i class="fa fa-check"></i><b>7.1.10</b> History of Regression Analysis (<span>wikipedia</span>)</a></li>
+<li class="chapter" data-level="7.1.11" data-path="eda5.html"><a href="eda5.html#the-first-example-1"><i class="fa fa-check"></i><b>7.1.11</b> The First Example</a></li>
+<li class="chapter" data-level="7.1.12" data-path="eda5.html"><a href="eda5.html#model-analysis-with-tidyverse-modelr"><i class="fa fa-check"></i><b>7.1.12</b> Model Analysis with <code>tidyverse</code>: <code>modelr</code></a></li>
+<li class="chapter" data-level="7.1.13" data-path="eda5.html"><a href="eda5.html#predictions-haty-a_1-a_2x-and-residuals-y---haty"><i class="fa fa-check"></i><b>7.1.13</b> Predictions <span class="math inline">\(\hat{y} = a_1 + a_2x\)</span> and Residuals <span class="math inline">\(y - \hat{y}\)</span></a></li>
+<li class="chapter" data-level="7.1.14" data-path="eda5.html"><a href="eda5.html#geom_jitter"><i class="fa fa-check"></i><b>7.1.14</b> geom_jitter()</a></li>
+<li class="chapter" data-level="7.1.15" data-path="eda5.html"><a href="eda5.html#iris-1"><i class="fa fa-check"></i><b>7.1.15</b> iris</a></li>
+<li class="chapter" data-level="7.1.16" data-path="eda5.html"><a href="eda5.html#linear-model-sepal.w-sepal.l"><i class="fa fa-check"></i><b>7.1.16</b> Linear Model: Sepal.W ~ Sepal.L</a></li>
+<li class="chapter" data-level="7.1.17" data-path="eda5.html"><a href="eda5.html#linear-model-petal.w-petal.l"><i class="fa fa-check"></i><b>7.1.17</b> Linear Model: Petal.W ~ Petal.L</a></li>
+<li class="chapter" data-level="7.1.18" data-path="eda5.html"><a href="eda5.html#correlation"><i class="fa fa-check"></i><b>7.1.18</b> Correlation</a></li>
+<li class="chapter" data-level="7.1.19" data-path="eda5.html"><a href="eda5.html#filterspecies-setosa"><i class="fa fa-check"></i><b>7.1.19</b> <code>filter(Species == "setosa")</code></a></li>
+<li class="chapter" data-level="7.1.20" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>7.1.20</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="7.1.21" data-path="eda5.html"><a href="eda5.html#linear-regression-quick-reference"><i class="fa fa-check"></i><b>7.1.21</b> Linear Regression Quick Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="eda5.html"><a href="eda5.html#part-ii-practicum---model-analysis-warnings"><i class="fa fa-check"></i><b>7.2</b> Part II: Practicum - Model Analysis Warnings</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="eda5.html"><a href="eda5.html#linear-regression-aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>7.2.1</b> Linear Regression: <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="7.2.2" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species-1"><i class="fa fa-check"></i><b>7.2.2</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="7.2.3" data-path="eda5.html"><a href="eda5.html#correlation-and-covariance"><i class="fa fa-check"></i><b>7.2.3</b> Correlation and Covariance</a></li>
+<li class="chapter" data-level="7.2.4" data-path="eda5.html"><a href="eda5.html#useful-mathematical-formula"><i class="fa fa-check"></i><b>7.2.4</b> Useful Mathematical Formula</a></li>
+<li class="chapter" data-level="7.2.5" data-path="eda5.html"><a href="eda5.html#p-value"><i class="fa fa-check"></i><b>7.2.5</b> p-value</a></li>
+<li class="chapter" data-level="7.2.6" data-path="eda5.html"><a href="eda5.html#t-statistic"><i class="fa fa-check"></i><b>7.2.6</b> t-statistic</a></li>
+<li class="chapter" data-level="7.2.7" data-path="eda5.html"><a href="eda5.html#mathematical-formulas-i"><i class="fa fa-check"></i><b>7.2.7</b> Mathematical Formulas, I</a></li>
+<li class="chapter" data-level="7.2.8" data-path="eda5.html"><a href="eda5.html#mathematical-formulas-ii"><i class="fa fa-check"></i><b>7.2.8</b> Mathematical Formulas, II</a></li>
+<li class="chapter" data-level="7.2.9" data-path="eda5.html"><a href="eda5.html#regression-analyais-summary"><i class="fa fa-check"></i><b>7.2.9</b> Regression Analyais: Summary</a></li>
+<li class="chapter" data-level="7.2.10" data-path="eda5.html"><a href="eda5.html#the-asa-statement-on-p-values-context-process-and-purpose"><i class="fa fa-check"></i><b>7.2.10</b> <span>The ASA Statement on p-Values: Context, Process, and Purpose</span></a></li>
+<li class="chapter" data-level="7.2.11" data-path="eda5.html"><a href="eda5.html#public-data-un-data-and-us-census"><i class="fa fa-check"></i><b>7.2.11</b> Public Data: UN Data and US Census</a></li>
+<li class="chapter" data-level="7.2.12" data-path="eda5.html"><a href="eda5.html#an-example-us-census-bureau"><i class="fa fa-check"></i><b>7.2.12</b> An Example: US Census Bureau</a></li>
+<li class="chapter" data-level="7.2.13" data-path="eda5.html"><a href="eda5.html#oecd-about-who-we-are"><i class="fa fa-check"></i><b>7.2.13</b> <span>OECD: About Who we are</span></a></li>
+<li class="chapter" data-level="7.2.14" data-path="eda5.html"><a href="eda5.html#learning-resources-v"><i class="fa fa-check"></i><b>7.2.14</b> Learning Resources, V</a></li>
+<li class="chapter" data-level="7.2.15" data-path="eda5.html"><a href="eda5.html#learning-resources-summary"><i class="fa fa-check"></i><b>7.2.15</b> Learning Resources – Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="eda5.html"><a href="eda5.html#the-sixth-assignment-in-moodle"><i class="fa fa-check"></i><b>7.3</b> The Sixth Assignment (in Moodle)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="eda5.html"><a href="eda5.html#setup-and-yaml-2"><i class="fa fa-check"></i><b>7.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="7.3.2" data-path="eda5.html"><a href="eda5.html#packages-to-load"><i class="fa fa-check"></i><b>7.3.2</b> Packages to load</a></li>
+<li class="chapter" data-level="7.3.3" data-path="eda5.html"><a href="eda5.html#modeling-and-eda-summary"><i class="fa fa-check"></i><b>7.3.3</b> Modeling and EDA Summary</a></li>
+<li class="chapter" data-level="7.3.4" data-path="eda5.html"><a href="eda5.html#examples-and-comments-2"><i class="fa fa-check"></i><b>7.3.4</b> Examples and Comments</a></li>
+<li class="chapter" data-level="7.3.5" data-path="eda5.html"><a href="eda5.html#class.xlsx"><i class="fa fa-check"></i><b>7.3.5</b> CLASS.xlsx</a></li>
+<li class="chapter" data-level="7.3.6" data-path="eda5.html"><a href="eda5.html#population-and-gdp-per-capita"><i class="fa fa-check"></i><b>7.3.6</b> Population and GDP per Capita</a></li>
+<li class="chapter" data-level="7.3.7" data-path="eda5.html"><a href="eda5.html#internet"><i class="fa fa-check"></i><b>7.3.7</b> Internet</a></li>
+<li class="chapter" data-level="7.3.8" data-path="eda5.html"><a href="eda5.html#bond-yields"><i class="fa fa-check"></i><b>7.3.8</b> Bond Yields</a></li>
+<li class="chapter" data-level="7.3.9" data-path="eda5.html"><a href="eda5.html#elderly-population"><i class="fa fa-check"></i><b>7.3.9</b> Elderly Population</a></li>
+<li class="chapter" data-level="7.3.10" data-path="eda5.html"><a href="eda5.html#education"><i class="fa fa-check"></i><b>7.3.10</b> Education</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ed4" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Exploratory Data Analysis (EDA) 4<a href="ed4.html#ed4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="course-contents-3" class="section level3 unnumbered hasAnchor">
+<h3>Course Contents<a href="ed4.html#course-contents-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>2021-12-08: Introduction: About the course<br />
+- An introduction to open and public data, and data science</li>
+<li>2021-12-15: Exploratory Data Analysis (EDA) 1 [lead by hs]<br />
+- R Basics with RStudio and/or RStudio.cloud; R Script, swirl</li>
+<li>2021-12-22: Exploratory Data Analysis (EDA) 2 [lead by hs]<br />
+- R Markdown; Introduction to <code>tidyverse</code>; RStudio Primers</li>
+<li>2022-01-12: Exploratory Data Analysis (EDA) 3 [lead by hs]<br />
+- Introduction to <code>tidyverse</code>; Public Data, WDI, etc</li>
+<li><strong>2022-01-19: Exploratory Data Analysis (EDA) 4</strong> [lead by hs]<br />
+- <strong>Introduction to <code>tidyverse</code>; WDI, UN, , etc</strong></li>
+<li>2022-01-26: Exploratory Data Analysis (EDA) 5 [lead by hs]<br />
+- Introduction to <code>tidyverse</code>; WDI, WHO, OECD, US gov, etc</li>
+<li>2022-02-02: Inference Statistics 1</li>
+<li>2022-02-09: Inference Statistics 2</li>
+<li>2022-02-16: Inference Statistics 3</li>
+<li>2022-02-23: Project Presentation</li>
+</ol>
+</div>
+<div id="transforming-and-tidying-data" class="section level3 unnumbered hasAnchor">
+<h3>Transforming and Tidying Data<a href="ed4.html#transforming-and-tidying-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Transforming Data by <code>dplyr</code> for EDA</li>
+<li>Tidying Data by <code>tidyr</code></li>
+</ul>
+<div id="eda-a-diagram-from-r4ds-by-h.w.-and-g.g.-3" class="section level4 unnumbered hasAnchor">
+<h4>EDA (A diagram from R4DS by H.W. and G.G.)<a href="ed4.html#eda-a-diagram-from-r4ds-by-h.w.-and-g.g.-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="figure">
+<img src="data/data-science.png" alt="" />
+<p class="caption">EDA from r4ds</p>
+</div>
+</div>
+</div>
+<div id="contents-of-eda4" class="section level3 unnumbered hasAnchor">
+<h3>Contents of EDA4<a href="ed4.html#contents-of-eda4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p></p></li>
+<li><p>More on Transforming Data by <code>dplyr</code></p>
+<ul>
+<li><code>select</code>, <code>filter</code>, <code>mutate</code>, <strong><code>arrange</code>, <code>group_by</code>, <code>summarize</code>, etc.</strong></li>
+</ul></li>
+<li><p>Tidying Data by <code>tidyr</code></p>
+<ul>
+<li><code>pivot_longer</code>, <code>pivot_wider</code>, <code>drop_na</code>, etc</li>
+</ul></li>
+<li><p>Example: A Study of Cases of Coronavirus Pandemic, III</p></li>
+</ul>
+<!-- * Exploratory Data Analysis (EDA) -->
+<!--   - Variables -->
+<ul>
+<li>Importing Various Public Data and Examples
+<ul>
+<li>WDI, World Bank, read_xl, i.e., read_excel, etc., for WDI Class Data</li>
+<li>UN data</li>
+<li>etc.</li>
+</ul></li>
+</ul>
+<!-- ### Contents of EDA4 -->
+<!-- * Exploratory Data Analysis (EDA) -->
+<!-- * Data Transformation (Wrangling, Reshaping) with `tidyverse` Packages -->
+<!--   - dplyr: select, filter, mutate, arrange, group_by, summarize, etc. -->
+<!--   - tidyr: pivot_longer (gather, spread), drop_na, etc. -->
+<!-- * Data Import: readr -->
+<!-- * Data Visualization: ggplot2   -->
+<!-- * Importing Data with API (Application Programming Interface) -->
+<!--   - WDI of World Bank, OECD -->
+</div>
+<div id="part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code><a href="ed4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-transforamtion-by-dplyr-overview-r4ds." class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Data Transforamtion by <code>dplyr</code> <a href="https://dplyr.tidyverse.org">Overview</a> – <a href="http://r4ds.had.co.nz/transform.html">r4ds</a>.<a href="ed4.html#data-transforamtion-by-dplyr-overview-r4ds." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>dplyr</code> is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges:</p>
+<ul>
+<li><code>select</code>() picks variables based on their names.</li>
+<li><code>filter</code>() picks cases based on their values.</li>
+<li><code>mutate</code>() adds new variables that are functions of existing variables</li>
+<li><code>arrange</code>() changes the ordering of the rows.</li>
+<li><code>summarise</code>() reduces multiple values down to a single summary.
+<ul>
+<li><code>summarise</code>() and <code>summarize</code>() are synonyms.</li>
+</ul></li>
+<li><code>group_by</code>() converts into a grouped tbl where operations are performed “by group”. ungroup() removes grouping.</li>
+<li><code>slice</code>() lets you index rows by their (integer) locations. It allows you to select, remove, and duplicate rows.</li>
+</ul>
+</div>
+<div id="select-subset-columns-using-their-names-and-types-1" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> <a href="https://dplyr.tidyverse.org/reference/select.html"><code>select</code></a>: Subset columns using their names and types<a href="ed4.html#select-subset-columns-using-their-names-and-types-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="38%" />
+<col width="44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Helper</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-</td>
+<td>Columns except</td>
+<td>select(babynames, -prop)</td>
+</tr>
+<tr class="even">
+<td>:</td>
+<td>Columns between</td>
+<td>select(babynames, year:n)</td>
+</tr>
+<tr class="odd">
+<td>contains()</td>
+<td>Columns that contains a string</td>
+<td>select(babynames, contains(“n”))</td>
+</tr>
+<tr class="even">
+<td>ends_with()</td>
+<td>Columns that ends with a string</td>
+<td>select(babynames, ends_with(“n”))</td>
+</tr>
+<tr class="odd">
+<td>matches()</td>
+<td>Columns that matches a regex</td>
+<td>select(babynames, matches(“n”))</td>
+</tr>
+<tr class="even">
+<td>num_range()</td>
+<td>Columns with a numerical suffix in the range</td>
+<td>Not applicable with babynames</td>
+</tr>
+<tr class="odd">
+<td>one_of()</td>
+<td>Columns whose name appear in the given set</td>
+<td>select(babynames, one_of(c(“sex”, “gender”)))</td>
+</tr>
+<tr class="even">
+<td>starts_with()</td>
+<td>Columns that starts with a string</td>
+<td>select(babynames, starts_with(“n”))</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="iris" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> <code>iris</code><a href="ed4.html#iris" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="ed4.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(iris) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Sepal.L&quot;</span>, <span class="st">&quot;Sepal.W&quot;</span>, <span class="st">&quot;Petal.L&quot;</span>, <span class="st">&quot;Petal.W&quot;</span>, <span class="st">&quot;Species&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="ed4.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(iris, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##    Sepal.L Sepal.W Petal.L Petal.W Species
+## 1      5.1     3.5     1.4     0.2  setosa
+## 2      4.9     3.0     1.4     0.2  setosa
+## 3      4.7     3.2     1.3     0.2  setosa
+## 4      4.6     3.1     1.5     0.2  setosa
+## 5      5.0     3.6     1.4     0.2  setosa
+## 6      5.4     3.9     1.7     0.4  setosa
+## 7      4.6     3.4     1.4     0.3  setosa
+## 8      5.0     3.4     1.5     0.2  setosa
+## 9      4.4     2.9     1.4     0.2  setosa
+## 10     4.9     3.1     1.5     0.1  setosa</code></pre>
+</div>
+<div id="select-example" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> <code>select</code>: Example<a href="ed4.html#select-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="ed4.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(<span class="fu">select</span>(iris, <span class="at">sl =</span> Sepal.L, <span class="at">sw =</span> Sepal.W, </span>
+<span id="cb5-2"><a href="ed4.html#cb5-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">species =</span> Species), <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##    sl  sw species
+## 1 5.1 3.5  setosa
+## 2 4.9 3.0  setosa</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="ed4.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(<span class="fu">select</span>(iris, Petal.L<span class="sc">:</span>Species),<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##   Petal.L Petal.W Species
+## 1     1.4     0.2  setosa
+## 2     1.4     0.2  setosa</code></pre>
+</div>
+<div id="filter-subset-rows-using-column-values-1" class="section level3 hasAnchor" number="5.1.5">
+<h3><span class="header-section-number">5.1.5</span> <a href="https://dplyr.tidyverse.org/reference/filter.html"><code>filter</code></a>: Subset rows using column values<a href="ed4.html#filter-subset-rows-using-column-values-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Logical operator</th>
+<th>tests</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&gt;</td>
+<td>Is x greater than y?</td>
+<td>x &gt; y</td>
+</tr>
+<tr class="even">
+<td>&gt;=</td>
+<td>Is x greater than or equal to y?</td>
+<td>x &gt;= y</td>
+</tr>
+<tr class="odd">
+<td>&lt;</td>
+<td>Is x less than y?</td>
+<td>x &lt; y</td>
+</tr>
+<tr class="even">
+<td>&lt;=</td>
+<td>Is x less than or equal to y?</td>
+<td>x &lt;= y</td>
+</tr>
+<tr class="odd">
+<td>==</td>
+<td>Is x equal to y?</td>
+<td>x == y</td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>Is x not equal to y?</td>
+<td>x != y</td>
+</tr>
+<tr class="odd">
+<td>is.na()</td>
+<td>Is x an NA?</td>
+<td>is.na(x)</td>
+</tr>
+<tr class="even">
+<td>!is.na()</td>
+<td>Is x not an NA?</td>
+<td>!is.na(x)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="ed4.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(iris, (Species <span class="sc">==</span> <span class="st">&quot;versicolor&quot;</span>) <span class="sc">&amp;</span> </span>
+<span id="cb9-2"><a href="ed4.html#cb9-2" aria-hidden="true" tabindex="-1"></a>         Sepal.L <span class="sc">%in%</span> <span class="fu">c</span>(<span class="fl">6.7</span>, <span class="fl">7.0</span>))</span></code></pre></div>
+<pre><code>##   Sepal.L Sepal.W Petal.L Petal.W    Species
+## 1     7.0     3.2     4.7     1.4 versicolor
+## 2     6.7     3.1     4.4     1.4 versicolor
+## 3     6.7     3.0     5.0     1.7 versicolor
+## 4     6.7     3.1     4.7     1.5 versicolor</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="ed4.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(iris, (Species <span class="sc">==</span> <span class="st">&quot;versicolor&quot;</span>) <span class="sc">&amp;</span> </span>
+<span id="cb11-2"><a href="ed4.html#cb11-2" aria-hidden="true" tabindex="-1"></a>         (Sepal.L <span class="sc">&gt;=</span> <span class="fl">6.7</span> <span class="sc">&amp;</span> Sepal.L <span class="sc">&lt;=</span> <span class="fl">7.0</span>))</span></code></pre></div>
+<pre><code>##   Sepal.L Sepal.W Petal.L Petal.W    Species
+## 1     7.0     3.2     4.7     1.4 versicolor
+## 2     6.9     3.1     4.9     1.5 versicolor
+## 3     6.7     3.1     4.4     1.4 versicolor
+## 4     6.8     2.8     4.8     1.4 versicolor
+## 5     6.7     3.0     5.0     1.7 versicolor
+## 6     6.7     3.1     4.7     1.5 versicolor</code></pre>
+</div>
+<div id="mutate" class="section level3 hasAnchor" number="5.1.6">
+<h3><span class="header-section-number">5.1.6</span> <a href="https://dplyr.tidyverse.org/reference/mutate.html"><code>mutate</code></a><a href="ed4.html#mutate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Create, modify, and delete columns</p></li>
+<li><p>Useful mutate functions</p>
+<ul>
+<li><p>+, -, log(), etc., for their usual mathematical meanings</p></li>
+<li><p>lead(), lag()</p></li>
+<li><p>dense_rank(), min_rank(), percent_rank(), row_number(), cume_dist(), ntile()</p></li>
+<li><p>cumsum(), cummean(), cummin(), cummax(), cumany(), cumall()</p></li>
+<li><p>na_if(), coalesce()</p></li>
+<li><p>if_else(), recode(), case_when()</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="arrange-and-pipe-1" class="section level3 hasAnchor" number="5.1.7">
+<h3><span class="header-section-number">5.1.7</span> <a href="https://dplyr.tidyverse.org/reference/arrange.html"><code>arrange</code></a> and <code>Pipe %&gt;%</code><a href="ed4.html#arrange-and-pipe-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><code>arrange()</code> orders the rows of a data frame by the values of selected columns.</li>
+</ul>
+<p>Unlike other <code>dplyr</code> verbs, <code>arrange()</code> largely ignores grouping; you need to explicitly mention grouping variables (`or use .by_group = TRUE) in order to group by them, and functions of variables are evaluated once per data frame, not once per group.</p>
+<ul>
+<li><a href="https://r4ds.had.co.nz/pipes.html"><code>pipes</code></a> in R for Data Science.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<pre><code>arrange(&lt;data&gt;, &lt;varible&gt;)
+arrange(&lt;data&gt;, desc(&lt;variable&gt;))</code></pre>
+<pre><code>&lt;data&gt; %&gt;% ggplot() + geom_point(aes(x = &lt;&gt;, y = &lt;&gt;))</code></pre>
+</div>
+<div id="group_by-and-summarise" class="section level3 hasAnchor" number="5.1.8">
+<h3><span class="header-section-number">5.1.8</span> <code>group_by()</code> and <code>summarise()</code><a href="ed4.html#group_by-and-summarise" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://dplyr.tidyverse.org/reference/group_by.html"><code>group_by</code></a></li>
+<li><a href="https://dplyr.tidyverse.org/reference/summarise.html"><code>summarise</code> or <code>summarize</code></a></li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="ed4.html#cb15-1" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="ed4.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="ed4.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">sl =</span> <span class="fu">mean</span>(Sepal.L), <span class="at">sw =</span> <span class="fu">mean</span>(Sepal.W), </span>
+<span id="cb15-4"><a href="ed4.html#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">pl =</span> <span class="fu">mean</span>(Petal.L), <span class="at">pw =</span> <span class="fu">mean</span>(Petal.W))</span></code></pre></div>
+<pre><code>## # A tibble: 3 × 5
+##   Species       sl    sw    pl    pw
+##   &lt;fct&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 setosa      5.01  3.43  1.46 0.246
+## 2 versicolor  5.94  2.77  4.26 1.33 
+## 3 virginica   6.59  2.97  5.55 2.03</code></pre>
+</div>
+<div id="tidy-data" class="section level3 hasAnchor" number="5.1.9">
+<h3><span class="header-section-number">5.1.9</span> Tidy Data<a href="ed4.html#tidy-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p><a href="https://www.gutenberg.org/files/1399/1399-h/1399-h.htm#chap01">“Happy families are all alike; every unhappy family is unhappy in its own way.”</a> Leo Tolstoy</p>
+</blockquote>
+<blockquote>
+<p><a href="https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html">“Tidy datasets are all alike, but every messy dataset is messy in its own way.”</a> Hadley Wickham</p>
+</blockquote>
+<div id="three-interrelated-rules-of-a-tidy-dataset" class="section level4 hasAnchor" number="5.1.9.1">
+<h4><span class="header-section-number">5.1.9.1</span> Three interrelated rules of a tidy dataset<a href="ed4.html#three-interrelated-rules-of-a-tidy-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>Each variable must have its own column.</li>
+<li>Each observation must have its own row.</li>
+<li>Each value must have its own cell.</li>
+</ol>
+<p><img src="data/tidy-1.png" style="width:80.0%" /></p>
+</div>
+</div>
+<div id="tidy-data-and-untidy-data-i" class="section level3 hasAnchor" number="5.1.10">
+<h3><span class="header-section-number">5.1.10</span> Tidy Data and Untidy Data, I<a href="ed4.html#tidy-data-and-untidy-data-i" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The following examples are taken from <a href="https://r4ds.had.co.nz/tidy-data.html#tidy-data">r4ds, 12. Tidy data</a>.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="ed4.html#cb17-1" aria-hidden="true" tabindex="-1"></a>table1</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## 6 China        2000 213766 1280428583</code></pre>
+</div>
+<div id="tidy-data-and-untidy-data-ii" class="section level3 hasAnchor" number="5.1.11">
+<h3><span class="header-section-number">5.1.11</span> Tidy Data and Untidy Data, II<a href="ed4.html#tidy-data-and-untidy-data-ii" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="ed4.html#cb19-1" aria-hidden="true" tabindex="-1"></a>table2</span></code></pre></div>
+<pre><code>## # A tibble: 12 × 4
+##    country      year type            count
+##    &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;           &lt;int&gt;
+##  1 Afghanistan  1999 cases             745
+##  2 Afghanistan  1999 population   19987071
+##  3 Afghanistan  2000 cases            2666
+##  4 Afghanistan  2000 population   20595360
+##  5 Brazil       1999 cases           37737
+##  6 Brazil       1999 population  172006362
+##  7 Brazil       2000 cases           80488
+##  8 Brazil       2000 population  174504898
+##  9 China        1999 cases          212258
+## 10 China        1999 population 1272915272
+## 11 China        2000 cases          213766
+## 12 China        2000 population 1280428583</code></pre>
+</div>
+<div id="tidy-data-and-untidy-data-iii" class="section level3 hasAnchor" number="5.1.12">
+<h3><span class="header-section-number">5.1.12</span> Tidy Data and Untidy Data, III<a href="ed4.html#tidy-data-and-untidy-data-iii" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="ed4.html#cb21-1" aria-hidden="true" tabindex="-1"></a>table3</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   country      year rate             
+## * &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;            
+## 1 Afghanistan  1999 745/19987071     
+## 2 Afghanistan  2000 2666/20595360    
+## 3 Brazil       1999 37737/172006362  
+## 4 Brazil       2000 80488/174504898  
+## 5 China        1999 212258/1272915272
+## 6 China        2000 213766/1280428583</code></pre>
+</div>
+<div id="tidy-data-and-untidy-data-iv" class="section level3 hasAnchor" number="5.1.13">
+<h3><span class="header-section-number">5.1.13</span> Tidy Data and Untidy Data, IV<a href="ed4.html#tidy-data-and-untidy-data-iv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="ed4.html#cb23-1" aria-hidden="true" tabindex="-1"></a>table4a; table4b</span></code></pre></div>
+<pre><code>## # A tibble: 3 × 3
+##   country     `1999` `2000`
+## * &lt;chr&gt;        &lt;int&gt;  &lt;int&gt;
+## 1 Afghanistan    745   2666
+## 2 Brazil       37737  80488
+## 3 China       212258 213766</code></pre>
+<pre><code>## # A tibble: 3 × 3
+##   country         `1999`     `2000`
+## * &lt;chr&gt;            &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan   19987071   20595360
+## 2 Brazil       172006362  174504898
+## 3 China       1272915272 1280428583</code></pre>
+</div>
+<div id="tidy-data-and-untidy-data-v" class="section level3 hasAnchor" number="5.1.14">
+<h3><span class="header-section-number">5.1.14</span> Tidy Data and Untidy Data, V<a href="ed4.html#tidy-data-and-untidy-data-v" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="ed4.html#cb26-1" aria-hidden="true" tabindex="-1"></a>table5</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   country     century year  rate             
+## * &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;            
+## 1 Afghanistan 19      99    745/19987071     
+## 2 Afghanistan 20      00    2666/20595360    
+## 3 Brazil      19      99    37737/172006362  
+## 4 Brazil      20      00    80488/174504898  
+## 5 China       19      99    212258/1272915272
+## 6 China       20      00    213766/1280428583</code></pre>
+</div>
+<div id="tidying-data-with-pivot_longer-and-pivot_wider" class="section level3 hasAnchor" number="5.1.15">
+<h3><span class="header-section-number">5.1.15</span> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code><a href="ed4.html#tidying-data-with-pivot_longer-and-pivot_wider" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="tidyr-pivoting" class="section level4 hasAnchor" number="5.1.15.1">
+<h4><span class="header-section-number">5.1.15.1</span> <a href="https://tidyr.tidyverse.org"><code>tidyr</code></a>: <a href="https://tidyr.tidyverse.org/articles/pivot.html">Pivoting</a><a href="ed4.html#tidyr-pivoting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><code>pivot_longer()</code>:<a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">Pivot data from wide to long</a>, [old: <code>gather()</code>]</li>
+</ul>
+<pre><code>pivot_longer(data = &lt;data&gt;, cols = &lt;column&gt;, 
+    names_to = &lt;new column&gt;, values_to = &lt;value column&gt;)</code></pre>
+<pre><code>pivot_longer(data = table4a, cols = c(1999,2000), 
+    names_to = &quot;year&quot;, values_to = &quot;population&quot; )</code></pre>
+<ul>
+<li><code>pivot_wider()</code>:<a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">Pivot data from long to wide</a>, [old: <code>spread()</code>]</li>
+</ul>
+<pre><code>pivot_wider(data = &lt;data&gt;, names_from = &lt;specified column&gt;, 
+    values_from = &lt;value column&gt;)</code></pre>
+<pre><code>pivot_wider(data = table2, names_from = type, 
+    values_from = count)</code></pre>
+</div>
+</div>
+<div id="example-1-pivot_longer" class="section level3 hasAnchor" number="5.1.16">
+<h3><span class="header-section-number">5.1.16</span> Example 1: <code>pivot_longer</code><a href="ed4.html#example-1-pivot_longer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="ed4.html#cb32-1" aria-hidden="true" tabindex="-1"></a>table4a</span></code></pre></div>
+<pre><code>## # A tibble: 3 × 3
+##   country     `1999` `2000`
+## * &lt;chr&gt;        &lt;int&gt;  &lt;int&gt;
+## 1 Afghanistan    745   2666
+## 2 Brazil       37737  80488
+## 3 China       212258 213766</code></pre>
+<pre><code>pivot_longer(data = table4a, cols = c(&quot;1999&quot;,&quot;2000&quot;), 
+             names_to = &quot;year&quot;, values_to = &quot;cases&quot;,
+             names_transform = list(&quot;year&quot; = as.integer))</code></pre>
+</div>
+<div id="example-1-pivot_longer-1" class="section level3 hasAnchor" number="5.1.17">
+<h3><span class="header-section-number">5.1.17</span> Example 1: <code>pivot_longer</code><a href="ed4.html#example-1-pivot_longer-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="ed4.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_longer</span>(<span class="at">data =</span> table4a, <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;1999&quot;</span>,<span class="st">&quot;2000&quot;</span>), </span>
+<span id="cb35-2"><a href="ed4.html#cb35-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;cases&quot;</span>, </span>
+<span id="cb35-3"><a href="ed4.html#cb35-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">names_transform =</span> <span class="fu">list</span>(<span class="st">&quot;year&quot;</span> <span class="ot">=</span> as.integer))</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   country      year  cases
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;
+## 1 Afghanistan  1999    745
+## 2 Afghanistan  2000   2666
+## 3 Brazil       1999  37737
+## 4 Brazil       2000  80488
+## 5 China        1999 212258
+## 6 China        2000 213766</code></pre>
+</div>
+<div id="example-2-pivot_wider" class="section level3 hasAnchor" number="5.1.18">
+<h3><span class="header-section-number">5.1.18</span> Example 2: <code>pivot_wider</code><a href="ed4.html#example-2-pivot_wider" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="ed4.html#cb37-1" aria-hidden="true" tabindex="-1"></a>table2 <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 4
+##   country      year type          count
+##   &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;         &lt;int&gt;
+## 1 Afghanistan  1999 cases           745
+## 2 Afghanistan  1999 population 19987071
+## 3 Afghanistan  2000 cases          2666
+## 4 Afghanistan  2000 population 20595360</code></pre>
+<pre><code>pivot_wider(data = table2, names_from = type, 
+            values_from = count)</code></pre>
+</div>
+<div id="example-2-pivot_wider-1" class="section level3 hasAnchor" number="5.1.19">
+<h3><span class="header-section-number">5.1.19</span> Example 2: <code>pivot_wider</code><a href="ed4.html#example-2-pivot_wider-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="ed4.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_wider</span>(<span class="at">data =</span> table2, <span class="at">names_from =</span> type, </span>
+<span id="cb40-2"><a href="ed4.html#cb40-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">values_from =</span> count)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## 6 China        2000 213766 1280428583</code></pre>
+</div>
+<div id="example-3-separate" class="section level3 hasAnchor" number="5.1.20">
+<h3><span class="header-section-number">5.1.20</span> Example 3: <code>separate</code><a href="ed4.html#example-3-separate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://tidyr.tidyverse.org/reference/separate.html">Separate a character column into multiple columns with a regular expression or numeric locations</a></li>
+</ul>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="ed4.html#cb42-1" aria-hidden="true" tabindex="-1"></a>table3 <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 3
+##   country      year rate           
+##   &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;          
+## 1 Afghanistan  1999 745/19987071   
+## 2 Afghanistan  2000 2666/20595360  
+## 3 Brazil       1999 37737/172006362
+## 4 Brazil       2000 80488/174504898</code></pre>
+<pre><code>separate(table3, rate, c(&quot;cases&quot;, &quot;population&quot;), 
+         sep = &quot;/&quot;, convert = TRUE)</code></pre>
+</div>
+<div id="example-3-separate-1" class="section level3 hasAnchor" number="5.1.21">
+<h3><span class="header-section-number">5.1.21</span> Example 3: <code>separate</code><a href="ed4.html#example-3-separate-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://tidyr.tidyverse.org/reference/separate.html">Separate a character column into multiple columns with a regular expression or numeric locations</a></li>
+</ul>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="ed4.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">separate</span>(table3, rate, <span class="fu">c</span>(<span class="st">&quot;cases&quot;</span>, <span class="st">&quot;population&quot;</span>), </span>
+<span id="cb45-2"><a href="ed4.html#cb45-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>, <span class="at">convert =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## 6 China        2000 213766 1280428583</code></pre>
+</div>
+<div id="example-3-unite" class="section level3 hasAnchor" number="5.1.22">
+<h3><span class="header-section-number">5.1.22</span> Example 3: <code>unite</code><a href="ed4.html#example-3-unite" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://tidyr.tidyverse.org/reference/unite.html">Unite multiple columns into one by pasting strings together</a></li>
+</ul>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="ed4.html#cb47-1" aria-hidden="true" tabindex="-1"></a>table5 <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 4 × 4
+##   country     century year  rate           
+##   &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;          
+## 1 Afghanistan 19      99    745/19987071   
+## 2 Afghanistan 20      00    2666/20595360  
+## 3 Brazil      19      99    37737/172006362
+## 4 Brazil      20      00    80488/174504898</code></pre>
+<pre><code>table5 %&gt;% unite(col = &quot;year&quot;, century, year, sep = &quot;&quot;) %&gt;%
+  separate(rate, c(&quot;cases&quot;, &quot;population&quot;), sep = &quot;/&quot;, 
+           convert = TRUE) %&gt;%
+  mutate(year = as.integer(year), rate = cases / population)</code></pre>
+</div>
+<div id="example-3-unite-1" class="section level3 hasAnchor" number="5.1.23">
+<h3><span class="header-section-number">5.1.23</span> Example 3: <code>unite</code><a href="ed4.html#example-3-unite-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://tidyr.tidyverse.org/reference/unite.html">Unite multiple columns into one by pasting strings together</a></li>
+</ul>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="ed4.html#cb50-1" aria-hidden="true" tabindex="-1"></a>table5 <span class="sc">%&gt;%</span> <span class="fu">unite</span>(<span class="at">col =</span> <span class="st">&quot;year&quot;</span>, century, year, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb50-2"><a href="ed4.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(rate, <span class="fu">c</span>(<span class="st">&quot;cases&quot;</span>, <span class="st">&quot;population&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;/&quot;</span>, </span>
+<span id="cb50-3"><a href="ed4.html#cb50-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">convert =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb50-4"><a href="ed4.html#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year), <span class="at">rate =</span> cases <span class="sc">/</span> population)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 5
+##   country      year  cases population      rate
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;     &lt;dbl&gt;
+## 1 Afghanistan  1999    745   19987071 0.0000373
+## 2 Afghanistan  2000   2666   20595360 0.000129 
+## 3 Brazil       1999  37737  172006362 0.000219 
+## 4 Brazil       2000  80488  174504898 0.000461 
+## 5 China        1999 212258 1272915272 0.000167 
+## 6 China        2000 213766 1280428583 0.000167</code></pre>
+</div>
+<div id="example-5-bind_rows" class="section level3 hasAnchor" number="5.1.24">
+<h3><span class="header-section-number">5.1.24</span> Example 5: <a href="https://dplyr.tidyverse.org/reference/bind.html"><code>bind_rows</code></a><a href="ed4.html#example-5-bind_rows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="ed4.html#cb52-1" aria-hidden="true" tabindex="-1"></a>table4a; table4b</span></code></pre></div>
+<pre><code>## # A tibble: 3 × 3
+##   country     `1999` `2000`
+## * &lt;chr&gt;        &lt;int&gt;  &lt;int&gt;
+## 1 Afghanistan    745   2666
+## 2 Brazil       37737  80488
+## 3 China       212258 213766</code></pre>
+<pre><code>## # A tibble: 3 × 3
+##   country         `1999`     `2000`
+## * &lt;chr&gt;            &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan   19987071   20595360
+## 2 Brazil       172006362  174504898
+## 3 China       1272915272 1280428583</code></pre>
+</div>
+<div id="example-5-bind_rows---1st-step" class="section level3 hasAnchor" number="5.1.25">
+<h3><span class="header-section-number">5.1.25</span> Example 5: <a href="https://dplyr.tidyverse.org/reference/bind.html"><code>bind_rows</code></a> - 1st Step<a href="ed4.html#example-5-bind_rows---1st-step" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="ed4.html#cb55-1" aria-hidden="true" tabindex="-1"></a>tables <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">cases =</span> table4a, <span class="at">population =</span> table4b)</span>
+<span id="cb55-2"><a href="ed4.html#cb55-2" aria-hidden="true" tabindex="-1"></a>tables <span class="sc">%&gt;%</span> <span class="fu">bind_rows</span>(<span class="at">.id =</span> <span class="st">&quot;type&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   type       country         `1999`     `2000`
+##   &lt;chr&gt;      &lt;chr&gt;            &lt;int&gt;      &lt;int&gt;
+## 1 cases      Afghanistan        745       2666
+## 2 cases      Brazil           37737      80488
+## 3 cases      China           212258     213766
+## 4 population Afghanistan   19987071   20595360
+## 5 population Brazil       172006362  174504898
+## 6 population China       1272915272 1280428583</code></pre>
+</div>
+<div id="example-5-bind_rows-1" class="section level3 hasAnchor" number="5.1.26">
+<h3><span class="header-section-number">5.1.26</span> Example 5: <a href="https://dplyr.tidyverse.org/reference/bind.html"><code>bind_rows</code></a><a href="ed4.html#example-5-bind_rows-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="ed4.html#cb57-1" aria-hidden="true" tabindex="-1"></a>tables <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">cases =</span> table4a, <span class="at">population =</span> table4b)</span>
+<span id="cb57-2"><a href="ed4.html#cb57-2" aria-hidden="true" tabindex="-1"></a>tables <span class="sc">%&gt;%</span> <span class="fu">bind_rows</span>(<span class="at">.id =</span> <span class="st">&quot;type&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb57-3"><a href="ed4.html#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">&quot;1999&quot;</span>, <span class="st">&quot;2000&quot;</span>), <span class="at">names_to =</span> <span class="st">&quot;year&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb57-4"><a href="ed4.html#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&quot;type&quot;</span>, <span class="at">values_from =</span> <span class="st">&quot;value&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb57-5"><a href="ed4.html#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year)) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(country)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## 6 China        2000 213766 1280428583</code></pre>
+</div>
+<div id="example-i-1" class="section level3 hasAnchor" number="5.1.27">
+<h3><span class="header-section-number">5.1.27</span> Example I<a href="ed4.html#example-i-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>A Study of Cases of Coronavirus Pandemic, III</strong></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Data of Johns Hopkins Universiy and World Bank</li>
+</ol>
+<ul>
+<li>5.1 Importing Raw Data</li>
+<li>5.2 Tidying and Combining: To create country level and global combined data</li>
+<li>5.3 Aggregated by Countries</li>
+<li>5.4 Population of 2019</li>
+<li>5.5 Analysis Suggested by Rami Krispin</li>
+</ul>
+</div>
+</div>
+<div id="part-ii-various-databases" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Part II: Various Databases<a href="ed4.html#part-ii-various-databases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-ii-1" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Example II<a href="ed4.html#example-ii-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Introduction to Public Data</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>World Bank</li>
+</ol>
+<ul>
+<li>2.6 World Bank Country and Lending Groups and an Option extra = TRUE
+<ul>
+<li>2.6.1 Review Basics: World Development Indicators: ?WDI</li>
+<li>2.6.2 World Bank Country and Lending Groups</li>
+<li>2.6.3 Importing Excel Files</li>
+<li>2.6.4 Filtering Join</li>
+<li>2.6.5 Join Tables</li>
+<li>2.6.6 Join Tables: Quick References</li>
+</ul></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>United Nations</li>
+</ol>
+<ul>
+<li>3.1 Importing Data</li>
+<li>3.2 Example</li>
+</ul>
+</div>
+<div id="world-development-indicators-wdi" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> World Development Indicators: ?WDI<a href="ed4.html#world-development-indicators-wdi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Basic Usage</li>
+</ol>
+<pre><code>WDI(country = &quot;all&quot;, indicator = &quot;NY.GDP.PCAP.KD&quot;)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Vector Notation</li>
+</ol>
+<pre><code>WDI(country = c(&quot;US&quot;, &quot;CN&quot;, JP&quot;), # ISO-2 codes
+   indicator = c(&quot;gdp_pcap&quot; = &quot;NY.GDP.PCAP.KD&quot;, 
+                &quot;life_exp&quot; = &quot;SP.DYN.LE00.IN&quot;))</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Use Extra</li>
+</ol>
+<pre><code>WDI(country = &quot;all&quot;, 
+   indicator = c(&quot;gdp_pcap&quot; = NY.GDP.PCAP.KD&quot;, 
+                &quot;life_exp&quot; = &quot;SP.DYN.LE00.IN&quot;), extra = TRUE)</code></pre>
+<p>extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel</p>
+</div>
+<div id="world-bank-country-and-lending-groups" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> World Bank Country and Lending Groups<a href="ed4.html#world-bank-country-and-lending-groups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>URL <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups">World Bank Country and Lending Groups</a></li>
+<li><a href="http://databank.worldbank.org/data/download/site-content/CLASS.xls">The current classification by income in XLS format</a></li>
+</ul>
+<div id="about-class.xls" class="section level4 hasAnchor" number="5.2.3.1">
+<h4><span class="header-section-number">5.2.3.1</span> About CLASS.xls<a href="ed4.html#about-class.xls" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are:</p>
+<ul>
+<li>low income, $1,035 or less;</li>
+<li>lower middle income, $1,036 - 4,045;</li>
+<li>upper middle income, $4,046 - 12,535;</li>
+<li>and high income, $12,536 or more.</li>
+</ul>
+<p>The effective operational cutoff for IDA eligibility is $1,185 or less.</p>
+<hr />
+</div>
+<div id="geographic-classifications" class="section level4 hasAnchor" number="5.2.3.2">
+<h4><span class="header-section-number">5.2.3.2</span> Geographic classifications<a href="ed4.html#geographic-classifications" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>IDA countries are those that lack the financial ability to borrow from IBRD.</p></li>
+<li><p>IDA credits are deeply concessional—interest-free loans and grants for programs aimed at boosting economic growth and improving living conditions.</p></li>
+<li><p>IBRD loans are noncessional.</p></li>
+<li><p>Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.</p></li>
+</ul>
+<hr />
+</div>
+<div id="note" class="section level4 hasAnchor" number="5.2.3.3">
+<h4><span class="header-section-number">5.2.3.3</span> Note<a href="ed4.html#note" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>The term country, used interchangeably with economy, does not imply political independence but refers to any territory for which authorities report separate social or economic statistics.</p></li>
+<li><p>Income classifications set on 1 July 2020 remain in effect until 1 July 2021.</p></li>
+<li><p>Argentina, which was temporarily unclassified in July 2016 pending release of revised national accounts statistics, was classified as upper middle income for FY17 as of 29 September 2016 based on alternative conversion factors. Also effective 29 September 2016, Syrian Arab Republic is reclassified from IBRD lending category to IDA-only.</p></li>
+<li><p>On 29 March 2017, new country codes were introduced to align World Bank 3-letter codes with ISO 3-letter codes: Andorra (AND), Dem. Rep. Congo (COD), Isle of Man (IMN), Kosovo (XKX), Romania (ROU), Timor-Leste (TLS), and West Bank and Gaza (PSE).</p></li>
+</ul>
+</div>
+</div>
+<div id="importing-excel-files-part-i" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Importing Excel Files, Part I<a href="ed4.html#importing-excel-files-part-i" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>CLASS.xls: - <em>copy the following link</em>
+<ul>
+<li><a href="http://databank.worldbank.org/data/download/site-content/CLASS.xls">The current classification by income in XLS format</a></li>
+</ul></li>
+<li>readxl: <a href="https://readxl.tidyverse.org" class="uri">https://readxl.tidyverse.org</a></li>
+<li>Help: <code>read_excel</code>, <code>read_xls</code>, <code>read_xlsx</code></li>
+</ul>
+<pre><code>url_class &lt;- &quot;http://databank.worldbank.org/ 
+  data/download/site-content/CLASS.xls&quot;
+download.file(url = url_class, destfile = &quot;data/CLASS.xls&quot;)</code></pre>
+<pre><code>library(readxl)
+wb_countries_tmp &lt;- read_excel(&quot;data/CLASS.xls&quot;, 
+  sheet = 1, skip = 4, n_max =219) %&gt;% slice(-1)
+wb_countries &lt;- wb_countries_tmp %&gt;% 
+  select(Economy, Code, Region, `Income group`, 
+        Code, Region:Other)
+wb_countries</code></pre>
+</div>
+<div id="importing-excel-files-part-ii" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Importing Excel Files, Part II<a href="ed4.html#importing-excel-files-part-ii" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>readxl: <a href="https://readxl.tidyverse.org" class="uri">https://readxl.tidyverse.org</a></li>
+<li>Help: <code>read_excel</code>, <code>read_xls</code>, <code>read_xlsx</code></li>
+</ul>
+<pre><code>wb_regions_tmp &lt;- read_excel(&quot;data/CLASS.xls&quot;, 
+  sheet = 1, skip = 4, n_max =272) %&gt;% 
+  slice(-(1:221))
+wb_regions &lt;- wb_regions_tmp %&gt;% 
+  select(Economy:Code) %&gt;% drop_na()
+wb_regions</code></pre>
+<pre><code>wb_groups_tmp &lt;- read_excel(&quot;data/CLASS.xls&quot;, 
+  sheet = &quot;Groups&quot;) # sheet = 3
+wb_groups_tmp</code></pre>
+<ul>
+<li>Please study ‘About Assignment Five’ in Moodle</li>
+</ul>
+</div>
+<div id="filtering-joins" class="section level3 hasAnchor" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> <a href="https://dplyr.tidyverse.org/reference/filter-joins.html">Filtering Joins</a><a href="ed4.html#filtering-joins" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>gdp_pcap &lt;- WDI(country = &quot;all&quot;, 
+    indicator = &quot;NY.GDP.PCAP.KD&quot;)
+gdp_pcap_extra &lt;- WDI(country = &quot;all&quot;, 
+    indicator = &quot;NY.GDP.PCAP.KD&quot;, extra = TRUE)</code></pre>
+<ul>
+<li>Compare the following:</li>
+</ul>
+<pre><code>gdp_pcap %&gt;% semi_join(country_list)</code></pre>
+<pre><code>gdp_pcap %&gt;% filter(region != &quot;Aggregates&quot;)</code></pre>
+<pre><code>gdp_pcap %&gt;% anti_join(country_list)</code></pre>
+<ul>
+<li>Please study ‘About Assignment Five’ in Moodle</li>
+</ul>
+</div>
+<div id="join-tables" class="section level3 hasAnchor" number="5.2.7">
+<h3><span class="header-section-number">5.2.7</span> Join Tables<a href="ed4.html#join-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are three types of joining tables. Commands are from tidyverse packages though there is a way to do the same by Base R with appropriate arguments.</p>
+<ol style="list-style-type: decimal">
+<li>Bind rows: bind_rows(), intersect(), setdiff(), union()</li>
+<li>Bind columns: bind_cols(), left_join(), right_join(), inner_join(), full_join()</li>
+<li>Filtering join: semi_join(), anti_join()</li>
+</ol>
+</div>
+<div id="join-tables-quick-references" class="section level3 hasAnchor" number="5.2.8">
+<h3><span class="header-section-number">5.2.8</span> Join Tables: Quick References<a href="ed4.html#join-tables-quick-references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://r4ds.had.co.nz/relational-data.html#relational-data" class="uri">https://r4ds.had.co.nz/relational-data.html#relational-data</a></p></li>
+<li><p>Cheatsheet: Data Transformation, pages 2 and 3. You can download it from RStudio &gt; Help.</p></li>
+<li><p>Tidyverse Homepage:</p>
+<ol style="list-style-type: lower-alpha">
+<li><a href="https://dplyr.tidyverse.org/reference/bind.html">Efficiently bind multiple data frames by row and column</a>: bind_rows(), bind_cols()</li>
+<li><a href="https://dplyr.tidyverse.org/reference/setops.html">Set operations</a>: intersect(), setdiff(), union()</li>
+<li><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">Mutating joins</a>: left_join(), right_join(), inner_join(), full_join()</li>
+<li><a href="https://dplyr.tidyverse.org/reference/filter-joins.html">Filtering joins</a>: semi_join(), anti_join()</li>
+</ol></li>
+<li><p>R Studio Primers: Tidy Your Data – <a href="https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro">r4ds: Wrangle, II</a></p>
+<ul>
+<li>Reshape Data, Separate and Unite Columns, <strong>Join Data Sets</strong></li>
+</ul></li>
+</ol>
+<!-- ### Tidying Data -->
+<!-- * Importing and Transforming Data by `readr`and `dplyr` -->
+<!-- * Tidying Data by `tidyr` in `tidyverse` -->
+<!-- #### EDA (A diagram from R4DS by H.W. and G.G.) -->
+<!-- ![EDA from r4ds](./data/data-science.png) -->
+<!-- ## Part I: Data Transforamtion with Tidyverse Package -->
+<!-- ### Contents -->
+<!-- * Data Visualization in EDA -->
+<!-- * Examples -->
+<!--   - Florence Nightingale  -->
+<!--   - Has Rosling: Factfulness and Gapminder -->
+<!-- * What is tidyverse and why tidyverse? -->
+<!--   - readr -->
+<!--   - ggplot2 -->
+<!--   - dplyr [select, filter, mutate, group_by, summarize] -->
+<!--   - tidyr -->
+<!-- * Public Data -->
+<!--   - UN Data: https://data.un.org -->
+<!--   - United States Census Bureau: https://www.census.gov -->
+</div>
+<div id="public-data-un-data" class="section level3 hasAnchor" number="5.2.9">
+<h3><span class="header-section-number">5.2.9</span> Public Data: UN Data<a href="ed4.html#public-data-un-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>UN Data: <a href="https://data.un.org" class="uri">https://data.un.org</a></li>
+</ul>
+<div id="importing-data" class="section level4 hasAnchor" number="5.2.9.1">
+<h4><span class="header-section-number">5.2.9.1</span> Importing Data<a href="ed4.html#importing-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>Get the URL (uniform resource locator) - copy the link</li>
+</ol>
+<ul>
+<li><code>url_of_data &lt;- "https://data.un.org/--long url--.csv"</code></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Download the file into the <code>destfile</code> in data folder:</li>
+</ol>
+<ul>
+<li><code>download.file(url = url_of_data, destfile = "data/un_pop.csv")</code></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Read the file:</li>
+</ol>
+<ul>
+<li><code>df_un_pop &lt;- read_csv("data/un_pop.csv")</code></li>
+</ul>
+<!-- ### An Example: US Census Bureau -->
+<!-- * [International Data Base (IDB)](https://www.census.gov/data-tools/demo/idb/#/country?YR_ANIM=2021) -->
+<!-- * `idbzip.zip` is a large archive with three files; idb5yr.all, idbsingleyear.all and Readme.txt. The data of idbsingleyear.all is separated by | and contains over 3 million rows. -->
+<!-- * Execute the following code only once. Then commnet these lines out with #. -->
+<!-- #### Importance of Population Data of Each Country -->
+<!-- * Population: Special meaning in statistics -->
+<!--   - In statistics, a population is a set of similar items or events which is of interest for some question or experiment. -->
+<!-- * Basis of analysis -->
+<!-- * Public Opinion Poll -->
+<!-- ### [OECD: About Who we are](https://www.oecd.org/about/) -->
+<!-- **The Organisation for Economic Co-operation and Development** (OECD) is an international organisation that works to build better policies for better lives. Our goal is to shape policies that foster prosperity, equality, opportunity and well-being for all.  -->
+<!-- #### Data -->
+<!-- * http://www.oecd.org -->
+<!-- * Data: https://data.oecd.org -->
+<!-- * OECD.Stat: https://stats.oecd.org -->
+<!--   -  [OECD.Stat Web Browser User Guide, May 2013](https://stats.oecd.org/Content/themes/OECD/static/help/WBOS%20User%20Guide%20(EN).PDF) -->
+<!--     1. Search Box > Filter by type, Filter by topic, Sort results  -->
+<!--     2. Browse by Topic: Agriculture, Development, Economy, Education, Energy, Finance, Govetnment, Health, Innovation and Technology, Job, Society -->
+<!--     3. Browse by Country: choose from 43 countries -->
+<!--     4. Catalogue of OECD databases -->
+<!--     5. Featured Charts, Latest News, Statistical Resources  -->
+<!-- ### World Bank: WDI - World Development Indicaters -->
+<!-- * World Bank: https://www.worldbank.org -->
+<!-- * [Who we are](https://www.worldbank.org/en/who-we-are): -->
+<!--   - To end extreme poverty: By reducing the share of the global population that lives in extreme poverty to 3 percent by 2030. -->
+<!--   - To promote shared prosperity: By increasing the incomes of the poorest 40 percent of people in every country.  -->
+<!-- * World Bank Open Data: https://data.worldbank.org -->
+<!-- * World Development Indicators (WDI) : the World Bank’s premier compilation of cross-country comparable data on development. -->
+<!--   - Poverty and Inequality -->
+<!--   - People -->
+<!--   - Environment -->
+<!--   - Economy -->
+<!--   - States and Markets -->
+<!--   - Global Links -->
+<!-- ### R Package WDI -->
+<!-- * [WDI](https://cran.r-project.org/web/packages/WDI/index.html): World Development Indicators and Other World Bank Data -->
+<!-- * Search and download data from over 40 databases hosted by the World Bank, including the World Development Indicators ('WDI'), International Debt Statistics, Doing Business, Human Capital Index, and Sub-national Poverty indicators. -->
+<!-- * Version: 2.7.1 -->
+<!-- * Materials:   [README](https://cran.r-project.org/web/packages/WDI/readme/README.html)   - _usage_ -->
+<!--   - [NEWS](https://cran.r-project.org/web/packages/WDI/news/news.html) - _version history_ -->
+<!-- * Published: 2020-07-05 -->
+<!-- * README: https://cran.r-project.org/web/packages/WDI/readme/README.html -->
+<!-- * Reference manual:    [WDI.pdf](https://cran.r-project.org/web/packages/WDI/WDI.pdf) -->
+<!-- ### Function WDI Usage -->
+<!-- ``` -->
+<!-- WDI( -->
+<!--       country = "all", -->
+<!--       indicator = "NY.GDP.PCAP.KD", -->
+<!--       start = 1960, -->
+<!--       end = 2020, -->
+<!--       extra = FALSE, -->
+<!--       cache = NULL -->
+<!-- ) -->
+<!-- ``` -->
+<!-- * **Arguments** -->
+<!--   - country: Vector of countries (ISO-2 character codes, e.g. "BR", "US", "CA", or "all")  -->
+<!--   - indicator: See the WDIsearch() function. If you supply a named vector, the indicators will be automatically renamed: ‘c(’women_private_sector' = 'BI.PWK.PRVS.FE.ZS')' -->
+<!-- ### Learning Resources, V -->
+<!-- * Textbook: [R for Data Science, Part II Explore](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!-- ::: {.block} -->
+<!-- #### RStudio Primers: See References in Moodle at the bottom -->
+<!-- 1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!--   - [Visualization Basics](https://rstudio.cloud/learn/primers/1.1) -->
+<!--   - [Programming Basics](https://rstudio.cloud/learn/primers/1.2) -->
+<!-- 2. **Work with Data** -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!--   - **Working with Tibbles** -->
+<!--   - **Isolating Data with dplyr** -->
+<!--   - **Deriving Information with dplyr** -->
+<!-- 3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!-- 4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!-- 5. Iterate -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- 6. Write Functions -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- :::  -->
+<!-- ### The Fifth Assignment (in Moodle) -->
+<!-- * Choose one or more World Development Indicater(s), WDI -->
+<!-- * Use the WDI function and analyse the (combined) data. -->
+<!-- * Create an R Notebook (_file name_.nb.html) of an EDA containing: -->
+<!--   1. title, date, and author, i.e., Your Name -->
+<!--   2. your motivation and/or objectives to analyse the data, and your questions -->
+<!--   3. an explanation of the data and the varibles -->
+<!--   4. chunks containing the following: -->
+<!--       - `library(tidyverse)`, -->
+<!--       - `WDI(country = , indicateor = , ...) -->
+<!--       - visualize the data with `ggplot()`  -->
+<!--   5. your findings and/or questions -->
+<!-- * Submit your R Notebook file to Moodle (The Fifth Assignment) by 2021-01-26 23:59:00 -->
+</div>
+</div>
+<div id="learning-resources-iv" class="section level3 hasAnchor" number="5.2.10">
+<h3><span class="header-section-number">5.2.10</span> Learning Resources, IV<a href="ed4.html#learning-resources-iv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro">R for Data Science, Part III Wrangle</a></li>
+<li><a href="https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro">R for Data Science, Part III Wrangle</a> - Tidy and Relational</li>
+<li>Tidy Data: <a href="https://vita.had.co.nz/papers/tidy-data.pdf" class="uri">https://vita.had.co.nz/papers/tidy-data.pdf</a>
+<ul>
+<li><a href="https://github.com/hadley/tidy-data" class="uri">https://github.com/hadley/tidy-data</a></li>
+</ul></li>
+</ul>
+<div id="rstudio-primers-see-references-in-moodle-at-the-bottom-1" class="section level4 hasAnchor block" number="5.2.10.1">
+<h4><span class="header-section-number">5.2.10.1</span> RStudio Primers: See References in Moodle at the bottom<a href="ed4.html#rstudio-primers-see-references-in-moodle-at-the-bottom-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>The Basics – <a href="https://r4ds.had.co.nz/explore-intro.html#explore-intro">r4ds: Explore, I</a></li>
+<li>Work with Data – <a href="https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro">r4ds: Wrangle, I</a></li>
+<li>Visualize Data – <a href="https://r4ds.had.co.nz/explore-intro.html#explore-intro">r4ds: Explore, II</a></li>
+</ol>
+<ul>
+<li><strong>Exploratory Data Analysis, Bar Charts, Histograms</strong></li>
+<li><strong>Boxplots and Counts, Scatterplots, Line Plots</strong></li>
+<li><strong>Overplotting and Big Data, Customize Your Plots</strong></li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Tidy Your Data – <a href="https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro">r4ds: Wrangle, II</a></li>
+</ol>
+<ul>
+<li>Reshape Data, Separate and Unite Columns, Join Data Sets</li>
+</ul>
+</div>
+<!-- ### The Fifth Assignment (in Moodle) -->
+<!-- * Choose a World Bank or UN data. Clearly state how to obtain the data. Even if you are able to give the URL to download the data, explain the steps you reached and obtained the data.  -->
+<!-- * If you choose WDI, use CLASS.xls, World Bank Country and Lending Groups information. -->
+<!-- * Create an R Notebook (_file name_.nb.html) of an EDA containing: -->
+<!--   1. title, date, and author, i.e., Your Name -->
+<!--   2. your motivation and/or objectives to analyse the data, and your questions -->
+<!--   3. an explanation of the data and the variables  -->
+<!--   4. chunks containing the following: -->
+<!--       - visualize the data with `ggplot()`  -->
+<!--   5. your findings and/or questions -->
+<!--   6. file name: a5_ID.nb.html, e.g. a5_123456.nb.html -->
+<!-- * Submit your R Notebook file to Moodle (The Fourth Assignment) by 2022-01-25 23:59:00 -->
+</div>
+<div id="the-fifth-assignment-in-moodle" class="section level3 hasAnchor" number="5.2.11">
+<h3><span class="header-section-number">5.2.11</span> The Fifth Assignment (in Moodle)<a href="ed4.html#the-fifth-assignment-in-moodle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Choose a World Bank or UN data. Clearly state how to obtain the data. Even if you are able to give the URL to download the data, explain the steps you reached and obtained the data.</p></li>
+<li><p>If you choose WDI, use <code>CLASS.xls</code>, World Bank Country and Lending Groups information.</p></li>
+<li><p>Create an R Notebook (<em>file name</em>.nb.html) of an EDA containing:</p>
+<ol style="list-style-type: decimal">
+<li>title, date, and author, i.e., Your Name</li>
+<li>your motivation and/or objectives to analyse the data, and your questions</li>
+<li>an explanation of the data and the variables</li>
+<li>chunks containing the following:
+<ul>
+<li>visualize the data with <code>ggplot()</code></li>
+</ul></li>
+<li>your findings and/or questions</li>
+<li>file name: a5_ID.nb.html, e.g. a5_123456.nb.html</li>
+</ol></li>
+<li><p>Submit your R Notebook file to Moodle (The Fifth Assignment) by 2022-01-25 23:59:00</p></li>
+</ul>
+</div>
+</div>
+<div id="responses-to-the-fifth-assignment" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Responses to the Fifth Assignment<a href="ed4.html#responses-to-the-fifth-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="setup-and-yaml-1" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Setup and YAML<a href="ed4.html#setup-and-yaml-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="ed4.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb70-2"><a href="ed4.html#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI)</span></code></pre></div>
+</div>
+</div>
+<div id="class.xls" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> <code>CLASS.xls</code><a href="ed4.html#class.xls" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Introduction<a href="ed4.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are several reasons we study <code>CLASS.xlsx</code></p>
+<p>WDI data contains not only the data of each country but the aggregated data of regions, income level, etc. We need to know the definitions of these groups and countries in them. <code>CLASS.xlsx</code> provides the information.</p>
+<p>Why are groups important? When we study a trend of data of a country, we need to look at the following.</p>
+<ol style="list-style-type: decimal">
+<li>The trends of the aggregated data of the World.</li>
+<li>The comparison of the trends of the aggregated data of groups.</li>
+<li>The comparison of the trends of the data of the countries within the group the country of your interest belongs to.</li>
+</ol>
+<p>We first download <code>CLASS.xlsx</code> from world bank and obtain the data so that we can use it with other data.</p>
+<p>See Introduction to Public Data in Moodle, Week 5.</p>
+<div id="importing-excel-files" class="section level4 hasAnchor" number="5.4.1.1">
+<h4><span class="header-section-number">5.4.1.1</span> Importing Excel Files<a href="ed4.html#importing-excel-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>CLASS.xlsx: - <em>copy the following link</em>
+<ul>
+<li><a href="https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx">The current classification by income in XLS format</a></li>
+</ul></li>
+<li>readxl: <a href="https://readxl.tidyverse.org" class="uri">https://readxl.tidyverse.org</a></li>
+<li>Help: <code>read_excel</code>, <code>read_xls</code>, <code>read_xlsx</code></li>
+</ul>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="ed4.html#cb71-1" aria-hidden="true" tabindex="-1"></a>url_class <span class="ot">&lt;-</span> <span class="st">&quot;https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx&quot;</span></span>
+<span id="cb71-2"><a href="ed4.html#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_class, <span class="at">destfile =</span> <span class="st">&quot;data/CLASS.xlsx&quot;</span>)</span></code></pre></div>
+<div id="countries" class="section level5 hasAnchor" number="5.4.1.1.1">
+<h5><span class="header-section-number">5.4.1.1.1</span> Countries<a href="ed4.html#countries" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Let us look at the first sheet.</p>
+<ol style="list-style-type: decimal">
+<li>The column names are in the 5th row.</li>
+<li>The country data starts from the 7th row.</li>
+<li>Zimbabue is at the last row.</li>
+</ol>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="ed4.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb72-2"><a href="ed4.html#cb72-2" aria-hidden="true" tabindex="-1"></a>wb_countries_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">219</span>) </span>
+<span id="cb72-3"><a href="ed4.html#cb72-3" aria-hidden="true" tabindex="-1"></a>wb_countries <span class="ot">&lt;-</span> wb_countries_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb72-4"><a href="ed4.html#cb72-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> Economy, <span class="at">iso3c =</span> Code, <span class="at">region =</span> Region, <span class="at">income =</span> <span class="st">`</span><span class="at">Income group</span><span class="st">`</span>, <span class="at">lending =</span> <span class="st">&quot;Lending category&quot;</span>, <span class="at">other =</span> <span class="st">&quot;Other (EMU or HIPC)&quot;</span>)</span>
+<span id="cb72-5"><a href="ed4.html#cb72-5" aria-hidden="true" tabindex="-1"></a>wb_countries</span></code></pre></div>
+<pre><code>## # A tibble: 218 × 6
+##    country              iso3c region                     income    lending other
+##    &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt;                      &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;
+##  1 Aruba                ABW   Latin America &amp; Caribbean  High inc… &lt;NA&gt;    &lt;NA&gt; 
+##  2 Afghanistan          AFG   South Asia                 Low inco… IDA     HIPC 
+##  3 Angola               AGO   Sub-Saharan Africa         Lower mi… IBRD    &lt;NA&gt; 
+##  4 Albania              ALB   Europe &amp; Central Asia      Upper mi… IBRD    &lt;NA&gt; 
+##  5 Andorra              AND   Europe &amp; Central Asia      High inc… &lt;NA&gt;    &lt;NA&gt; 
+##  6 United Arab Emirates ARE   Middle East &amp; North Africa High inc… &lt;NA&gt;    &lt;NA&gt; 
+##  7 Argentina            ARG   Latin America &amp; Caribbean  Upper mi… IBRD    &lt;NA&gt; 
+##  8 Armenia              ARM   Europe &amp; Central Asia      Upper mi… IBRD    &lt;NA&gt; 
+##  9 American Samoa       ASM   East Asia &amp; Pacific        Upper mi… &lt;NA&gt;    &lt;NA&gt; 
+## 10 Antigua and Barbuda  ATG   Latin America &amp; Caribbean  High inc… IBRD    &lt;NA&gt; 
+## # … with 208 more rows</code></pre>
+</div>
+<div id="regions" class="section level5 hasAnchor" number="5.4.1.1.2">
+<h5><span class="header-section-number">5.4.1.1.2</span> Regions<a href="ed4.html#regions" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ul>
+<li>readxl: <a href="https://readxl.tidyverse.org" class="uri">https://readxl.tidyverse.org</a></li>
+<li>Help: <code>read_excel</code>, <code>read_xls</code>, <code>read_xlsx</code></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Regions start from the 221th row.</li>
+<li>Regions end at the 266th row.</li>
+</ol>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="ed4.html#cb74-1" aria-hidden="true" tabindex="-1"></a>wb_regions_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">266</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb74-2"><a href="ed4.html#cb74-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">220</span>))</span>
+<span id="cb74-3"><a href="ed4.html#cb74-3" aria-hidden="true" tabindex="-1"></a>wb_regions <span class="ot">&lt;-</span> wb_regions_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb74-4"><a href="ed4.html#cb74-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">region =</span> Economy, <span class="at">iso3c =</span> Code) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>()</span>
+<span id="cb74-5"><a href="ed4.html#cb74-5" aria-hidden="true" tabindex="-1"></a>wb_regions</span></code></pre></div>
+<pre><code>## # A tibble: 45 × 2
+##    region                                        iso3c
+##    &lt;chr&gt;                                         &lt;chr&gt;
+##  1 Caribbean small states                        CSS  
+##  2 Central Europe and the Baltics                CEB  
+##  3 Early-demographic dividend                    EAR  
+##  4 East Asia &amp; Pacific                           EAS  
+##  5 East Asia &amp; Pacific (excluding high income)   EAP  
+##  6 East Asia &amp; Pacific (IDA &amp; IBRD)              TEA  
+##  7 Euro area                                     EMU  
+##  8 Europe &amp; Central Asia                         ECS  
+##  9 Europe &amp; Central Asia (excluding high income) ECA  
+## 10 Europe &amp; Central Asia (IDA &amp; IBRD)            TEC  
+## # … with 35 more rows</code></pre>
+<p>Let us look at the second sheet.</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="ed4.html#cb76-1" aria-hidden="true" tabindex="-1"></a>wb_groups_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;Groups&quot;</span>) <span class="co"># sheet = 3</span></span>
+<span id="cb76-2"><a href="ed4.html#cb76-2" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="ot">&lt;-</span> wb_groups_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb76-3"><a href="ed4.html#cb76-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">gcode =</span> GroupCode, <span class="at">group =</span> GroupName, <span class="at">iso3c =</span> CountryCode, <span class="at">country =</span> CountryName)</span></code></pre></div>
+<p>Let us find out how many countries are in each group.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="ed4.html#cb77-1" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(group) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_countries =</span> <span class="fu">n_distinct</span>(country))</span></code></pre></div>
+<pre><code>## # A tibble: 48 × 2
+##    group                                       number_of_countries
+##    &lt;chr&gt;                                                     &lt;int&gt;
+##  1 Africa Eastern and Southern                                  26
+##  2 Africa Western and Central                                   22
+##  3 Arab World                                                   22
+##  4 Caribbean small states                                       13
+##  5 Central Europe and the Baltics                               11
+##  6 Early-demographic dividend                                   62
+##  7 East Asia &amp; Pacific                                          38
+##  8 East Asia &amp; Pacific (excluding high income)                  24
+##  9 East Asia &amp; Pacific (IDA &amp; IBRD)                             23
+## 10 Euro area                                                    19
+## # … with 38 more rows</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="ed4.html#cb79-1" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(group) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_countries =</span> <span class="fu">n_distinct</span>(country)) <span class="sc">%&gt;%</span></span>
+<span id="cb79-2"><a href="ed4.html#cb79-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> group, <span class="at">x =</span> number_of_countries)) <span class="sc">+</span></span>
+<span id="cb79-3"><a href="ed4.html#cb79-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>Let us find out how many groups each country belongs to.</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="ed4.html#cb80-1" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_groups =</span> <span class="fu">n_distinct</span>(group)) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(number_of_groups))</span></code></pre></div>
+<pre><code>## # A tibble: 223 × 2
+##    country         number_of_groups
+##    &lt;chr&gt;                      &lt;int&gt;
+##  1 Comoros                       18
+##  2 Guinea-Bissau                 16
+##  3 Djibouti                      15
+##  4 Gambia, The                   15
+##  5 Lesotho                       15
+##  6 Mauritania                    15
+##  7 Solomon Islands               15
+##  8 Somalia                       15
+##  9 Sudan                         15
+## 10 Timor-Leste                   15
+## # … with 213 more rows</code></pre>
+<p>From this we find that each country is classified into several groups.</p>
+</div>
+</div>
+<div id="just-for-fun" class="section level4 hasAnchor" number="5.4.1.2">
+<h4><span class="header-section-number">5.4.1.2</span> Just for Fun<a href="ed4.html#just-for-fun" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We use an intermediate level skill of defining a function in this subsection.</p>
+<p>Let us make a list of iso3c codes each country belongs to. As we have seen above, Comoros belongs to 17 groups.</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="ed4.html#cb82-1" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Comoros&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(gcode, group)</span></code></pre></div>
+<pre><code>## # A tibble: 18 × 2
+##    gcode group                                       
+##    &lt;chr&gt; &lt;chr&gt;                                       
+##  1 ARB   Arab World                                  
+##  2 HPC   Heavily indebted poor countries (HIPC)      
+##  3 IBT   IDA &amp; IBRD total                            
+##  4 IDA   IDA total                                   
+##  5 IDX   IDA only                                    
+##  6 LDC   Least developed countries: UN classification
+##  7 OSS   Other small states                          
+##  8 PRE   Pre-demographic dividend                    
+##  9 SSF   Sub-Saharan Africa                          
+## 10 SST   Small states                                
+## 11 TSS   Sub-Saharan Africa (IDA &amp; IBRD)             
+## 12 WLD   World                                       
+## 13 AFE   Africa Eastern and Southern                 
+## 14 FCS   Fragile and conflict affected situations    
+## 15 LMC   Lower middle income                         
+## 16 LMY   Low &amp; middle income                         
+## 17 MIC   Middle income                               
+## 18 SSA   Sub-Saharan Africa (excluding high income)</code></pre>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="ed4.html#cb84-1" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Comoros&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(gcode) <span class="sc">%&gt;%</span> <span class="fu">paste</span>(<span class="at">collapse =</span> <span class="st">&quot;, &quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;ARB, HPC, IBT, IDA, IDX, LDC, OSS, PRE, SSF, SST, TSS, WLD, AFE, FCS, LMC, LMY, MIC, SSA&quot;</code></pre>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="ed4.html#cb86-1" aria-hidden="true" tabindex="-1"></a>cd <span class="ot">&lt;-</span> <span class="cf">function</span>(x){wb_groups <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> x) <span class="sc">%&gt;%</span>  <span class="fu">pull</span>(gcode) <span class="sc">%&gt;%</span> <span class="fu">paste</span>(<span class="at">collapse =</span> <span class="st">&quot;, &quot;</span>)}</span>
+<span id="cb86-2"><a href="ed4.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span>(<span class="st">&quot;Japan&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;EAS, OED, PST, WLD, OED, HIC&quot;</code></pre>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="ed4.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span>(<span class="st">&quot;Comoros&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;ARB, HPC, IBT, IDA, IDX, LDC, OSS, PRE, SSF, SST, TSS, WLD, AFE, FCS, LMC, LMY, MIC, SSA&quot;</code></pre>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="ed4.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span>(<span class="st">&quot;Zimbabwe&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;EAR, IBT, IDA, IDB, SSF, TSS, WLD, AFE, FCS, LMC, LMY, MIC, SSA&quot;</code></pre>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="ed4.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cd</span>(<span class="st">&quot;Pakistan&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;EAR, IBT, IDA, IDB, SAS, TSA, WLD, LMC, LMY, MIC&quot;</code></pre>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="ed4.html#cb94-1" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">group_codes =</span> <span class="fu">cd</span>(country))</span></code></pre></div>
+<pre><code>## # A tibble: 223 × 2
+##    country             group_codes                                              
+##    &lt;chr&gt;               &lt;chr&gt;                                                    
+##  1 Afghanistan         HPC, IBT, IDA, IDX, LDC, PRE, SAS, TSA, WLD, FCS, LIC, L…
+##  2 Albania             ECS, IBD, IBT, LTE, TEC, WLD, UMC, LMY, MIC, ECA         
+##  3 Algeria             ARB, EAR, IBD, IBT, MEA, TMN, WLD, LMC, LMY, MIC, MNA    
+##  4 American Samoa      EAS, WLD, UMC, LMY, MIC, EAP                             
+##  5 Andorra             ECS, WLD, HIC                                            
+##  6 Angola              IBD, IBT, LDC, PRE, SSF, TSS, WLD, AFE, LMC, LMY, MIC, S…
+##  7 Antigua and Barbuda CSS, IBD, IBT, LCN, PST, SST, TLA, WLD, HIC              
+##  8 Argentina           EAR, IBD, IBT, LCN, TLA, WLD, UMC, LMY, MIC, LAC         
+##  9 Armenia             ECS, IBD, IBT, LTE, TEC, WLD, UMC, LMY, MIC, ECA         
+## 10 Aruba               LCN, LTE, WLD, HIC                                       
+## # … with 213 more rows</code></pre>
+<p>On the right of the table, you can find a list of group codes of each country.</p>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="eda3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="examples-and-comments-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ds-sl/da4r/edit/master/05-eda4.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ds-sl/da4r/blob/master/05-eda4.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

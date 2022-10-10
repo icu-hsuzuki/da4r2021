@@ -1,0 +1,1456 @@
+# Exploratory Data Analysis (EDA) 4 {#ed4}
+
+### Course Contents {-}
+
+  1. 2021-12-08: Introduction: About the course  
+    - An introduction to open and public data, and data science
+  2. 2021-12-15: Exploratory Data Analysis (EDA) 1 [lead by hs]  
+    - R Basics with RStudio and/or RStudio.cloud; R Script, swirl
+  3. 2021-12-22: Exploratory Data Analysis (EDA) 2 [lead by hs]   
+    - R Markdown; Introduction to `tidyverse`; RStudio Primers
+  4. 2022-01-12: Exploratory Data Analysis (EDA) 3 [lead by hs]  
+    - Introduction to `tidyverse`; Public Data, WDI, etc
+  5. **2022-01-19: Exploratory Data Analysis (EDA) 4** [lead by hs]  
+    - **Introduction to `tidyverse`; WDI, UN, \textcolor{red}{JHU}, etc**
+  6. 2022-01-26: Exploratory Data Analysis (EDA) 5 [lead by hs]  
+    - Introduction to `tidyverse`; WDI, WHO, OECD, US gov, etc
+  7. 2022-02-02: Inference Statistics 1
+  8. 2022-02-09: Inference Statistics 2
+  9. 2022-02-16: Inference Statistics 3
+  10. 2022-02-23: Project Presentation
+
+### Transforming and Tidying Data {-}
+
+* Transforming Data by `dplyr` for EDA
+* Tidying Data by `tidyr`
+
+#### EDA (A diagram from R4DS by H.W. and G.G.) {-}
+
+![EDA from r4ds](./data/data-science.png)
+
+### Contents of EDA4 {-}
+
+* \textcolor{red}{On Assignments Three and Four}
+
+* More on Transforming Data by `dplyr`
+  - `select`, `filter`, `mutate`, **`arrange`, `group_by`, `summarize`, etc.**
+  
+* Tidying Data by `tidyr`
+  - `pivot_longer`, `pivot_wider`, `drop_na`, etc
+  
+* Example: A Study of Cases of Coronavirus Pandemic, III
+  
+<!-- * Exploratory Data Analysis (EDA) -->
+<!--   - Variables -->
+  
+* Importing Various Public Data and Examples
+  - WDI, World Bank, read_xl, i.e., read_excel, etc., for WDI Class Data
+  - UN data
+  - etc.
+  
+<!-- ### Contents of EDA4 -->
+
+<!-- * Exploratory Data Analysis (EDA) -->
+
+<!-- * Data Transformation (Wrangling, Reshaping) with `tidyverse` Packages -->
+<!--   - dplyr: select, filter, mutate, arrange, group_by, summarize, etc. -->
+<!--   - tidyr: pivot_longer (gather, spread), drop_na, etc. -->
+<!-- * Data Import: readr -->
+<!-- * Data Visualization: ggplot2   -->
+
+<!-- * Importing Data with API (Application Programming Interface) -->
+<!--   - WDI of World Bank, OECD -->
+
+## Part I: More on Transforming by `dplyr` and Tidying by `tidyr`
+
+### Data Transforamtion by `dplyr` [Overview](https://dplyr.tidyverse.org) -- [r4ds](http://r4ds.had.co.nz/transform.html).
+
+`dplyr` is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges:
+
+* `select`() picks variables based on their names.
+* `filter`() picks cases based on their values.
+* `mutate`() adds new variables that are functions of existing variables
+* `arrange`() changes the ordering of the rows.
+* `summarise`() reduces multiple values down to a single summary.  
+  - `summarise`() and `summarize`() are synonyms.
+
+* `group_by`() converts into a grouped tbl where operations are performed "by group". ungroup() removes grouping.
+* `slice`() lets you index rows by their (integer) locations. It allows you to select, remove, and duplicate rows.
+
+
+
+### [`select`](https://dplyr.tidyverse.org/reference/select.html): Subset columns using their names and types
+
+Helper	| Use	| Example
+---|-------|--------
+-	| Columns except	| select(babynames, -prop)
+:	| Columns between	| select(babynames, year:n)
+contains() |	Columns that contains a string |	select(babynames, contains("n"))
+ends_with()	| Columns that ends with a string	| select(babynames, ends_with("n"))
+matches()	| Columns that matches a regex |	select(babynames, matches("n"))
+num_range()	| Columns with a numerical suffix in the range | Not applicable with babynames
+one_of() |	Columns whose name appear in the given set |	select(babynames, one_of(c("sex", "gender")))
+starts_with()	| Columns that starts with a string	| select(babynames, starts_with("n"))
+
+
+### `iris`
+
+```{r, echo = FALSE, message = FALSE}
+iris<-datasets::iris # as default it is attached
+library(tidyverse)
+head(iris)
+```
+
+```{r}
+colnames(iris) <- c("Sepal.L", "Sepal.W", "Petal.L", "Petal.W", "Species")
+```
+
+
+```{r}
+slice(iris, 1:10)
+```
+
+
+### `select`: Example
+
+```{r}
+slice(select(iris, sl = Sepal.L, sw = Sepal.W, 
+             species = Species), 1:2)
+```
+
+```{r}
+slice(select(iris, Petal.L:Species),1:2)
+```
+
+### [`filter`](https://dplyr.tidyverse.org/reference/filter.html): Subset rows using column values
+
+Logical operator	| tests	| Example
+--|-----|---
+>	| Is x greater than y? |	x > y
+>=	| Is x greater than or equal to y? |	x >= y
+<	| Is x less than y?	| x < y
+<=	| Is x less than or equal to y? | 	x <= y
+==	| Is x equal to y? |	x == y
+!=	| Is x not equal to y? |	x != y
+is.na()	| Is x an NA?	| is.na(x)
+!is.na() |	Is x not an NA? |	!is.na(x)
+
+
+---
+
+```{r}
+filter(iris, (Species == "versicolor") & 
+         Sepal.L %in% c(6.7, 7.0))
+```
+
+```{r}
+filter(iris, (Species == "versicolor") & 
+         (Sepal.L >= 6.7 & Sepal.L <= 7.0))
+```
+
+### [`mutate`](https://dplyr.tidyverse.org/reference/mutate.html) 
+
+* Create, modify, and delete columns
+
+* Useful mutate functions
+
+  - +, -, log(), etc., for their usual mathematical meanings
+
+  - lead(), lag()
+
+  - dense_rank(), min_rank(), percent_rank(), row_number(), cume_dist(), ntile()
+
+  - cumsum(), cummean(), cummin(), cummax(), cumany(), cumall()
+
+  - na_if(), coalesce()
+
+  - if_else(), recode(), case_when()
+
+
+
+### [`arrange`](https://dplyr.tidyverse.org/reference/arrange.html) and `Pipe %>%`
+
+* `arrange()` orders the rows of a data frame by the values of selected columns.
+
+Unlike other `dplyr` verbs, `arrange()` largely ignores grouping; you need to explicitly mention grouping variables (`or use .by_group = TRUE) in order to group by them, and functions of variables are evaluated once per data frame, not once per group.
+
+* [`pipes`](https://r4ds.had.co.nz/pipes.html) in R for Data Science.
+
+**Examples**
+
+```
+arrange(<data>, <varible>)
+arrange(<data>, desc(<variable>))
+```
+
+```
+<data> %>% ggplot() + geom_point(aes(x = <>, y = <>))
+```
+### `group_by()` and `summarise()`
+
+* [`group_by`](https://dplyr.tidyverse.org/reference/group_by.html)
+* [`summarise` or `summarize`](https://dplyr.tidyverse.org/reference/summarise.html)
+
+```{r}
+iris %>% 
+  group_by(Species) %>% 
+  summarize(sl = mean(Sepal.L), sw = mean(Sepal.W), 
+  pl = mean(Petal.L), pw = mean(Petal.W))
+```
+
+### Tidy Data
+
+\bigskip
+> [“Happy families are all alike; every unhappy family is unhappy in its own way.”](https://www.gutenberg.org/files/1399/1399-h/1399-h.htm#chap01) \hfill Leo Tolstoy  
+
+> [“Tidy datasets are all alike, but every messy dataset is messy in its own way.”](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) \hfill Hadley Wickham
+
+#### Three interrelated rules of a tidy dataset
+
+1. Each variable must have its own column.
+2. Each observation must have its own row.
+3. Each value must have its own cell.  
+
+![](./data/tidy-1.png){width=80%}
+
+### Tidy Data and Untidy Data, I
+
+The following examples are taken from [r4ds, 12. Tidy data](https://r4ds.had.co.nz/tidy-data.html#tidy-data).
+
+```{r echo = FALSE}
+table1 <- structure(list(country = c("Afghanistan", "Afghanistan", "Brazil", 
+"Brazil", "China", "China"), year = c(1999L, 2000L, 1999L, 2000L, 
+1999L, 2000L), cases = c(745L, 2666L, 37737L, 80488L, 212258L, 
+213766L), population = c(19987071L, 20595360L, 172006362L, 174504898L, 
+1272915272L, 1280428583L)), class = c("tbl_df", "tbl", "data.frame"
+), row.names = c(NA, -6L))
+```
+
+```{r}
+table1
+```
+
+### Tidy Data and Untidy Data, II
+
+```{r echo = FALSE}
+table2 <- structure(list(country = c("Afghanistan", "Afghanistan", "Afghanistan", 
+"Afghanistan", "Brazil", "Brazil", "Brazil", "Brazil", "China", 
+"China", "China", "China"), year = c(1999L, 1999L, 2000L, 2000L, 
+1999L, 1999L, 2000L, 2000L, 1999L, 1999L, 2000L, 2000L), type = c("cases", 
+"population", "cases", "population", "cases", "population", "cases", 
+"population", "cases", "population", "cases", "population"), 
+    count = c(745L, 19987071L, 2666L, 20595360L, 37737L, 172006362L, 
+    80488L, 174504898L, 212258L, 1272915272L, 213766L, 1280428583L
+    )), class = c("tbl_df", "tbl", "data.frame"), row.names = c(NA, 
+-12L))
+```
+
+```{r}
+table2
+```
+
+### Tidy Data and Untidy Data, III
+
+```{r echo = FALSE}
+table3 <- structure(list(country = c("Afghanistan", "Afghanistan", "Brazil", 
+"Brazil", "China", "China"), year = c(1999L, 2000L, 1999L, 2000L, 
+1999L, 2000L), rate = c("745/19987071", "2666/20595360", "37737/172006362", 
+"80488/174504898", "212258/1272915272", "213766/1280428583")), class = c("tbl_df", 
+"tbl", "data.frame"), row.names = c(NA, 6L))
+```
+
+```{r}
+table3
+```
+
+### Tidy Data and Untidy Data, IV
+
+```{r echo=FALSE}
+table4a <- structure(list(country = c("Afghanistan", "Brazil", "China"), 
+    `1999` = c(745L, 37737L, 212258L), `2000` = c(2666L, 80488L, 
+    213766L)), class = c("tbl_df", "tbl", "data.frame"), row.names = c(NA, 
+3L))
+
+table4b <- structure(list(country = c("Afghanistan", "Brazil", "China"), 
+    `1999` = c(19987071L, 172006362L, 1272915272L), `2000` = c(20595360L, 
+    174504898L, 1280428583L)), class = c("tbl_df", "tbl", "data.frame"
+), row.names = c(NA, 3L))
+```
+
+```{r}
+table4a; table4b
+```
+
+### Tidy Data and Untidy Data, V
+
+```{r echo = FALSE}
+table5 <- structure(list(country = c("Afghanistan", "Afghanistan", "Brazil", 
+"Brazil", "China", "China"), century = c("19", "20", "19", "20", 
+"19", "20"), year = c("99", "00", "99", "00", "99", "00"), rate = c("745/19987071", 
+"2666/20595360", "37737/172006362", "80488/174504898", "212258/1272915272", 
+"213766/1280428583")), row.names = c(NA, 6L), class = c("tbl_df", 
+"tbl", "data.frame"))
+```
+
+```{r}
+table5
+```
+
+### Tidying Data with `pivot_longer`, and `pivot_wider`
+
+#### [`tidyr`](https://tidyr.tidyverse.org): [Pivoting](https://tidyr.tidyverse.org/articles/pivot.html)
+
+* `pivot_longer()`:[Pivot data from wide to long](https://tidyr.tidyverse.org/reference/pivot_longer.html), [old: `gather()`]
+```
+pivot_longer(data = <data>, cols = <column>, 
+    names_to = <new column>, values_to = <value column>)
+```
+```
+pivot_longer(data = table4a, cols = c(1999,2000), 
+    names_to = "year", values_to = "population" )
+```
+
+* `pivot_wider()`:[Pivot data from long to wide](https://tidyr.tidyverse.org/reference/pivot_wider.html), [old: `spread()`]
+
+```
+pivot_wider(data = <data>, names_from = <specified column>, 
+    values_from = <value column>)
+```
+```
+pivot_wider(data = table2, names_from = type, 
+    values_from = count)
+```
+
+### Example 1: `pivot_longer`
+
+```{r}
+table4a
+```
+
+
+```
+pivot_longer(data = table4a, cols = c("1999","2000"), 
+             names_to = "year", values_to = "cases",
+             names_transform = list("year" = as.integer))
+```
+
+
+### Example 1: `pivot_longer`
+
+```{r}
+pivot_longer(data = table4a, cols = c("1999","2000"), 
+             names_to = "year", values_to = "cases", 
+             names_transform = list("year" = as.integer))
+```
+
+### Example 2: `pivot_wider`
+
+```{r}
+table2 %>% slice(1:4)
+```
+
+
+```
+pivot_wider(data = table2, names_from = type, 
+            values_from = count)
+```
+
+
+### Example 2: `pivot_wider`
+
+```{r}
+pivot_wider(data = table2, names_from = type, 
+            values_from = count)
+```
+
+### Example 3: `separate`
+
+* [Separate a character column into multiple columns with a regular expression or numeric locations](https://tidyr.tidyverse.org/reference/separate.html)
+
+```{r}
+table3 %>% slice(1:4)
+```
+
+```
+separate(table3, rate, c("cases", "population"), 
+         sep = "/", convert = TRUE)
+```
+
+
+
+### Example 3: `separate`
+
+* [Separate a character column into multiple columns with a regular expression or numeric locations](https://tidyr.tidyverse.org/reference/separate.html)
+
+```{r}
+separate(table3, rate, c("cases", "population"), 
+         sep = "/", convert = TRUE)
+```
+
+### Example 3: `unite`
+
+* [Unite multiple columns into one by pasting strings together](https://tidyr.tidyverse.org/reference/unite.html)
+
+```{r}
+table5 %>% slice(1:4)
+```
+
+```
+table5 %>% unite(col = "year", century, year, sep = "") %>%
+  separate(rate, c("cases", "population"), sep = "/", 
+           convert = TRUE) %>%
+  mutate(year = as.integer(year), rate = cases / population)
+```
+
+### Example 3: `unite`
+
+* [Unite multiple columns into one by pasting strings together](https://tidyr.tidyverse.org/reference/unite.html)
+
+```{r}
+table5 %>% unite(col = "year", century, year, sep = "") %>%
+  separate(rate, c("cases", "population"), sep = "/", 
+           convert = TRUE) %>%
+  mutate(year = as.integer(year), rate = cases / population)
+```
+### Example 5: [`bind_rows`](https://dplyr.tidyverse.org/reference/bind.html)
+
+```{r}
+table4a; table4b
+```
+### Example 5: [`bind_rows`](https://dplyr.tidyverse.org/reference/bind.html) - 1st Step
+
+```{r}
+tables <- list(cases = table4a, population = table4b)
+tables %>% bind_rows(.id = "type")
+```
+
+### Example 5: [`bind_rows`](https://dplyr.tidyverse.org/reference/bind.html)
+
+```{r}
+tables <- list(cases = table4a, population = table4b)
+tables %>% bind_rows(.id = "type") %>%
+  pivot_longer(cols = c("1999", "2000"), names_to = "year") %>%
+  pivot_wider(names_from = "type", values_from = "value") %>%
+  mutate(year = as.integer(year)) %>% arrange(country)
+```
+
+
+### Example I
+
+**A Study of Cases of Coronavirus Pandemic, III**
+
+5. Data of Johns Hopkins Universiy and World Bank
+  - 5.1 Importing Raw Data
+  - 5.2 Tidying and Combining: To create country level and global combined data
+  - 5.3 Aggregated by Countries
+  - 5.4 Population of 2019
+  - 5.5 Analysis Suggested by Rami Krispin
+
+
+## Part II: Various Databases
+
+### Example II
+
+**Introduction to Public Data**
+
+2. World Bank
+  - 2.6 World Bank Country and Lending Groups and an Option extra = TRUE
+    + 2.6.1 Review Basics: World Development Indicators: ?WDI
+    + 2.6.2 World Bank Country and Lending Groups
+    + 2.6.3 Importing Excel Files
+    + 2.6.4 Filtering Join
+    + 2.6.5 Join Tables
+    + 2.6.6 Join Tables: Quick References
+    
+3. United Nations
+  - 3.1 Importing Data
+  - 3.2 Example
+
+### World Development Indicators: ?WDI
+
+1. Basic Usage
+```
+WDI(country = "all", indicator = "NY.GDP.PCAP.KD")
+```
+2. Vector Notation
+```
+WDI(country = c("US", "CN", JP"), # ISO-2 codes
+   indicator = c("gdp_pcap" = "NY.GDP.PCAP.KD", 
+                "life_exp" = "SP.DYN.LE00.IN"))
+```
+3. Use Extra
+```
+WDI(country = "all", 
+   indicator = c("gdp_pcap" = NY.GDP.PCAP.KD", 
+                "life_exp" = "SP.DYN.LE00.IN"), extra = TRUE)
+```
+extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel
+
+### World Bank Country and Lending Groups
+
+* URL [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
+* [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls) 
+
+#### About CLASS.xls
+
+This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are: 
+
+* low income, $1,035 or less; 
+* lower middle income, $1,036 - 4,045; 
+* upper middle income, $4,046 - 12,535; 
+* and high income, $12,536 or more. 
+  
+The effective operational cutoff for IDA eligibility is $1,185 or less.								
+	
+---
+
+#### Geographic classifications							
+								
+* IDA countries are those that lack the financial ability to borrow from IBRD. 
+
+* IDA credits are deeply concessional—interest-free loans and grants for programs aimed at boosting economic growth and improving living conditions. 
+
+* IBRD loans are noncessional. 
+
+* Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.								
+
+---
+
+#### Note
+
+* The term country, used interchangeably with economy, does not imply political independence but refers to any territory for which authorities report separate social or economic statistics. 
+
+* Income classifications set on 1 July 2020 remain in effect until 1 July 2021. 
+
+* Argentina, which was temporarily unclassified in July 2016 pending release of revised national accounts statistics, was classified as upper middle income for FY17 as of 29 September 2016 based on alternative conversion factors. Also effective 29 September 2016, Syrian Arab Republic is reclassified from IBRD lending category to IDA-only. 
+
+* On 29 March 2017, new country codes were introduced to align World Bank 3-letter codes with ISO 3-letter codes: Andorra (AND), Dem. Rep. Congo (COD), Isle of Man (IMN), Kosovo (XKX), Romania (ROU), Timor-Leste (TLS), and West Bank and Gaza (PSE).								
+
+### Importing Excel Files, Part I
+
+* CLASS.xls: - _copy the following link_
+  - [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls) 
+* readxl: https://readxl.tidyverse.org
+* Help: `read_excel`, `read_xls`, `read_xlsx`
+
+```
+url_class <- "http://databank.worldbank.org/ 
+  data/download/site-content/CLASS.xls"
+download.file(url = url_class, destfile = "data/CLASS.xls")
+```
+```
+library(readxl)
+wb_countries_tmp <- read_excel("data/CLASS.xls", 
+  sheet = 1, skip = 4, n_max =219) %>% slice(-1)
+wb_countries <- wb_countries_tmp %>% 
+  select(Economy, Code, Region, `Income group`, 
+        Code, Region:Other)
+wb_countries
+```
+
+### Importing Excel Files, Part II
+
+* readxl: https://readxl.tidyverse.org
+* Help: `read_excel`, `read_xls`, `read_xlsx`
+
+```
+wb_regions_tmp <- read_excel("data/CLASS.xls", 
+  sheet = 1, skip = 4, n_max =272) %>% 
+  slice(-(1:221))
+wb_regions <- wb_regions_tmp %>% 
+  select(Economy:Code) %>% drop_na()
+wb_regions
+```
+```
+wb_groups_tmp <- read_excel("data/CLASS.xls", 
+  sheet = "Groups") # sheet = 3
+wb_groups_tmp
+```
+
+* Please study 'About Assignment Five' in Moodle
+
+### [Filtering Joins](https://dplyr.tidyverse.org/reference/filter-joins.html) 
+
+```
+gdp_pcap <- WDI(country = "all", 
+    indicator = "NY.GDP.PCAP.KD")
+gdp_pcap_extra <- WDI(country = "all", 
+    indicator = "NY.GDP.PCAP.KD", extra = TRUE)
+```
+
+* Compare the following:
+```
+gdp_pcap %>% semi_join(country_list)
+```
+```
+gdp_pcap %>% filter(region != "Aggregates")
+```
+```
+gdp_pcap %>% anti_join(country_list)
+```
+
+* Please study 'About Assignment Five' in Moodle
+
+
+### Join Tables
+
+There are three types of joining tables. Commands are from tidyverse packages though there is a way to do the same by Base R with appropriate arguments.
+
+1. Bind rows: bind_rows(), intersect(), setdiff(), union()
+2. Bind columns: bind_cols(), left_join(), right_join(), inner_join(), full_join()
+3. Filtering join: semi_join(), anti_join()
+
+### Join Tables: Quick References
+
+1. https://r4ds.had.co.nz/relational-data.html#relational-data
+
+2. Cheatsheet: Data Transformation, pages 2 and 3. You can download it from RStudio > Help.
+
+3. Tidyverse Homepage:
+    a. [Efficiently bind multiple data frames by row and column](https://dplyr.tidyverse.org/reference/bind.html): bind_rows(), bind_cols()
+    b. [Set operations](https://dplyr.tidyverse.org/reference/setops.html): intersect(), setdiff(), union()
+    c. [Mutating joins](https://dplyr.tidyverse.org/reference/mutate-joins.html): left_join(), right_join(), inner_join(), full_join()
+    d. [Filtering joins](https://dplyr.tidyverse.org/reference/filter-joins.html): semi_join(), anti_join()
+
+4. R Studio Primers: Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+    - Reshape Data, Separate and Unite Columns, **Join Data Sets**
+
+<!-- ### Tidying Data -->
+
+<!-- * Importing and Transforming Data by `readr`and `dplyr` -->
+<!-- * Tidying Data by `tidyr` in `tidyverse` -->
+
+<!-- #### EDA (A diagram from R4DS by H.W. and G.G.) -->
+
+<!-- ![EDA from r4ds](./data/data-science.png) -->
+
+
+
+<!-- ## Part I: Data Transforamtion with Tidyverse Package -->
+
+<!-- ### Contents -->
+
+<!-- * Data Visualization in EDA -->
+<!-- * Examples -->
+<!--   - Florence Nightingale  -->
+<!--   - Has Rosling: Factfulness and Gapminder -->
+<!-- * What is tidyverse and why tidyverse? -->
+<!--   - readr -->
+<!--   - ggplot2 -->
+<!--   - dplyr [select, filter, mutate, group_by, summarize] -->
+<!--   - tidyr -->
+
+<!-- * Public Data -->
+<!--   - UN Data: https://data.un.org -->
+<!--   - United States Census Bureau: https://www.census.gov -->
+
+
+  
+### Public Data: UN Data
+
+* UN Data: https://data.un.org
+
+#### Importing Data
+
+1. Get the URL (uniform resource locator) - copy the link
+  * `url_of_data <- "https://data.un.org/--long url--.csv"`
+2. Download the file into the `destfile` in data folder:
+  * `download.file(url = url_of_data, destfile = "data/un_pop.csv")`
+3. Read the file:
+  * `df_un_pop <- read_csv("data/un_pop.csv")`
+  
+<!-- ### An Example: US Census Bureau -->
+
+<!-- * [International Data Base (IDB)](https://www.census.gov/data-tools/demo/idb/#/country?YR_ANIM=2021) -->
+<!-- * `idbzip.zip` is a large archive with three files; idb5yr.all, idbsingleyear.all and Readme.txt. The data of idbsingleyear.all is separated by | and contains over 3 million rows. -->
+<!-- * Execute the following code only once. Then commnet these lines out with #. -->
+
+<!-- #### Importance of Population Data of Each Country -->
+
+<!-- * Population: Special meaning in statistics -->
+<!--   - In statistics, a population is a set of similar items or events which is of interest for some question or experiment. -->
+<!-- * Basis of analysis -->
+<!-- * Public Opinion Poll -->
+
+
+
+<!-- ### [OECD: About Who we are](https://www.oecd.org/about/) -->
+
+<!-- **The Organisation for Economic Co-operation and Development** (OECD) is an international organisation that works to build better policies for better lives. Our goal is to shape policies that foster prosperity, equality, opportunity and well-being for all.  -->
+
+<!-- #### Data -->
+
+<!-- * http://www.oecd.org -->
+<!-- * Data: https://data.oecd.org -->
+<!-- * OECD.Stat: https://stats.oecd.org -->
+<!--   -  [OECD.Stat Web Browser User Guide, May 2013](https://stats.oecd.org/Content/themes/OECD/static/help/WBOS%20User%20Guide%20(EN).PDF) -->
+<!--     1. Search Box > Filter by type, Filter by topic, Sort results  -->
+<!--     2. Browse by Topic: Agriculture, Development, Economy, Education, Energy, Finance, Govetnment, Health, Innovation and Technology, Job, Society -->
+<!--     3. Browse by Country: choose from 43 countries -->
+<!--     4. Catalogue of OECD databases -->
+<!--     5. Featured Charts, Latest News, Statistical Resources  -->
+
+<!-- ### World Bank: WDI - World Development Indicaters -->
+
+<!-- * World Bank: https://www.worldbank.org -->
+<!-- * [Who we are](https://www.worldbank.org/en/who-we-are): -->
+<!--   - To end extreme poverty: By reducing the share of the global population that lives in extreme poverty to 3 percent by 2030. -->
+<!--   - To promote shared prosperity: By increasing the incomes of the poorest 40 percent of people in every country.  -->
+<!-- * World Bank Open Data: https://data.worldbank.org -->
+<!-- * World Development Indicators (WDI) : the World Bank’s premier compilation of cross-country comparable data on development. -->
+<!--   - Poverty and Inequality -->
+<!--   - People -->
+<!--   - Environment -->
+<!--   - Economy -->
+<!--   - States and Markets -->
+<!--   - Global Links -->
+
+<!-- ### R Package WDI -->
+
+<!-- * [WDI](https://cran.r-project.org/web/packages/WDI/index.html): World Development Indicators and Other World Bank Data -->
+<!-- * Search and download data from over 40 databases hosted by the World Bank, including the World Development Indicators ('WDI'), International Debt Statistics, Doing Business, Human Capital Index, and Sub-national Poverty indicators. -->
+<!-- * Version: 2.7.1 -->
+<!-- * Materials:	[README](https://cran.r-project.org/web/packages/WDI/readme/README.html)   - _usage_ -->
+<!--   - [NEWS](https://cran.r-project.org/web/packages/WDI/news/news.html) - _version history_ -->
+<!-- * Published: 2020-07-05 -->
+<!-- * README: https://cran.r-project.org/web/packages/WDI/readme/README.html -->
+<!-- * Reference manual:	[WDI.pdf](https://cran.r-project.org/web/packages/WDI/WDI.pdf) -->
+
+<!-- ### Function WDI Usage -->
+
+<!-- ``` -->
+<!-- WDI( -->
+<!--       country = "all", -->
+<!--       indicator = "NY.GDP.PCAP.KD", -->
+<!--       start = 1960, -->
+<!--       end = 2020, -->
+<!--       extra = FALSE, -->
+<!--       cache = NULL -->
+<!-- ) -->
+<!-- ``` -->
+<!-- * **Arguments** -->
+<!--   - country: Vector of countries (ISO-2 character codes, e.g. "BR", "US", "CA", or "all")  -->
+<!--   - indicator: See the WDIsearch() function. If you supply a named vector, the indicators will be automatically renamed: ‘c(’women_private_sector' = 'BI.PWK.PRVS.FE.ZS')' -->
+
+
+<!-- ### Learning Resources, V -->
+
+<!-- * Textbook: [R for Data Science, Part II Explore](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+
+<!-- ::: {.block} -->
+<!-- #### RStudio Primers: See References in Moodle at the bottom -->
+
+<!-- 1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!--   - [Visualization Basics](https://rstudio.cloud/learn/primers/1.1) -->
+<!--   - [Programming Basics](https://rstudio.cloud/learn/primers/1.2) -->
+<!-- 2. **Work with Data** -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!--   - **Working with Tibbles** -->
+<!--   - **Isolating Data with dplyr** -->
+<!--   - **Deriving Information with dplyr** -->
+<!-- 3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
+<!-- 4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
+<!-- 5. Iterate -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- 6. Write Functions -- [r4ds: Program](https://r4ds.had.co.nz/program-intro.html#program-intro) -->
+<!-- :::  -->
+
+<!-- ### The Fifth Assignment (in Moodle) -->
+
+<!-- * Choose one or more World Development Indicater(s), WDI -->
+<!-- * Use the WDI function and analyse the (combined) data. -->
+<!-- * Create an R Notebook (_file name_.nb.html) of an EDA containing: -->
+
+<!--   1. title, date, and author, i.e., Your Name -->
+<!--   2. your motivation and/or objectives to analyse the data, and your questions -->
+<!--   3. an explanation of the data and the varibles -->
+<!--   4. chunks containing the following: -->
+<!--       - `library(tidyverse)`, -->
+<!--       - `WDI(country = , indicateor = , ...) -->
+<!--       - visualize the data with `ggplot()`  -->
+<!--   5. your findings and/or questions -->
+
+<!-- * Submit your R Notebook file to Moodle (The Fifth Assignment) by 2021-01-26 23:59:00 -->
+
+### Learning Resources, IV
+
+* [R for Data Science, Part III Wrangle](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+* [R for Data Science, Part III Wrangle](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) - Tidy and Relational
+* Tidy Data: https://vita.had.co.nz/papers/tidy-data.pdf
+  - https://github.com/hadley/tidy-data
+    
+::: {.block}
+#### RStudio Primers: See References in Moodle at the bottom
+
+1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro)
+  - **Exploratory Data Analysis, Bar Charts, Histograms**
+  - **Boxplots and Counts, Scatterplots, Line Plots**
+  - **Overplotting and Big Data, Customize Your Plots**
+4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
+  - Reshape Data, Separate and Unite Columns, Join Data Sets
+::: 
+
+<!-- ### The Fifth Assignment (in Moodle) -->
+
+
+<!-- * Choose a World Bank or UN data. Clearly state how to obtain the data. Even if you are able to give the URL to download the data, explain the steps you reached and obtained the data.  -->
+<!-- * If you choose WDI, use CLASS.xls, World Bank Country and Lending Groups information. -->
+<!-- * Create an R Notebook (_file name_.nb.html) of an EDA containing: -->
+
+<!--   1. title, date, and author, i.e., Your Name -->
+<!--   2. your motivation and/or objectives to analyse the data, and your questions -->
+<!--   3. an explanation of the data and the variables  -->
+<!--   4. chunks containing the following: -->
+<!--       - visualize the data with `ggplot()`  -->
+<!--   5. your findings and/or questions -->
+<!--   6. file name: a5_ID.nb.html, e.g. a5_123456.nb.html -->
+
+<!-- * Submit your R Notebook file to Moodle (The Fourth Assignment) by 2022-01-25 23:59:00 -->
+
+
+### The Fifth Assignment (in Moodle)
+
+* Choose a World Bank or UN data. Clearly state how to obtain the data. Even if you are able to give the URL to download the data, explain the steps you reached and obtained the data. 
+* If you choose WDI, use `CLASS.xls`, World Bank Country and Lending Groups information. 
+* Create an R Notebook (_file name_.nb.html) of an EDA containing:
+
+  1. title, date, and author, i.e., Your Name
+  2. your motivation and/or objectives to analyse the data, and your questions
+  3. an explanation of the data and the variables 
+  4. chunks containing the following:
+      + visualize the data with `ggplot()` 
+  5. your findings and/or questions
+  6. file name: a5_ID.nb.html, e.g. a5_123456.nb.html
+
+* Submit your R Notebook file to Moodle (The Fifth Assignment) by 2022-01-25 23:59:00
+
+## Responses to the Fifth Assignment
+### Setup and YAML
+
+
+```{r}
+library(tidyverse)
+library(WDI)
+```
+
+## `CLASS.xls`
+
+### Introduction
+
+There are several reasons we study  `CLASS.xlsx`
+
+WDI data contains not only the data of each country but the aggregated data of regions, income level, etc. We need to know the definitions of these groups and countries in them. `CLASS.xlsx` provides the information.
+
+Why are groups important? When we study a trend of data of a country, we need to look at the following.
+
+1. The trends of the aggregated data of the World.
+2. The comparison of the trends of the aggregated data of groups. 
+3. The comparison of the trends of the data of the countries within the group the country of your interest belongs to.
+
+We first download `CLASS.xlsx` from world bank and obtain the data so that we can use it with other data.
+
+
+See Introduction to Public Data in Moodle, Week 5.
+
+#### Importing Excel Files
+
+* CLASS.xlsx: - _copy the following link_
+  - [The current classification by income in XLS format](https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx) 
+* readxl: https://readxl.tidyverse.org
+* Help: `read_excel`, `read_xls`, `read_xlsx`
+
+```{r cash = TRUE}
+url_class <- "https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx"
+download.file(url = url_class, destfile = "data/CLASS.xlsx")
+```
+##### Countries
+
+Let us look at the first sheet.
+
+1. The column names are in the 5th row.
+2. The country data starts from the 7th row.
+3. Zimbabue is at the last row.
+
+```{r}
+library(readxl)
+wb_countries_tmp <- read_excel("data/CLASS.xlsx", sheet = 1, skip = 0, n_max =219) 
+wb_countries <- wb_countries_tmp %>% 
+  select(country = Economy, iso3c = Code, region = Region, income = `Income group`, lending = "Lending category", other = "Other (EMU or HIPC)")
+wb_countries
+```
+
+##### Regions
+
+* readxl: https://readxl.tidyverse.org
+* Help: `read_excel`, `read_xls`, `read_xlsx`
+
+1. Regions start from the 221th row.
+2. Regions end at the 266th row.
+
+```{r}
+wb_regions_tmp <- read_excel("data/CLASS.xlsx", sheet = 1, skip = 0, n_max =266) %>% 
+  slice(-(1:220))
+wb_regions <- wb_regions_tmp %>% 
+  select(region = Economy, iso3c = Code) %>% drop_na()
+wb_regions
+```
+
+Let us look at the second sheet.
+
+```{r}
+wb_groups_tmp <- read_excel("data/CLASS.xlsx", sheet = "Groups") # sheet = 3
+wb_groups <- wb_groups_tmp %>% 
+  select(gcode = GroupCode, group = GroupName, iso3c = CountryCode, country = CountryName)
+```
+
+
+
+Let us find out how many countries are in each group.
+
+```{r}
+wb_groups %>% group_by(group) %>% summarize(number_of_countries = n_distinct(country))
+```
+
+```{r}
+wb_groups %>% group_by(group) %>% summarize(number_of_countries = n_distinct(country)) %>%
+  ggplot(aes(y = group, x = number_of_countries)) +
+  geom_col()
+```
+
+Let us find out how many groups each country belongs to.
+
+```{r}
+wb_groups %>% group_by(country) %>% summarize(number_of_groups = n_distinct(group)) %>% arrange(desc(number_of_groups))
+```
+
+From this we find that each country is classified into several groups.
+
+#### Just for Fun
+
+We use an intermediate level skill of defining a function in this subsection.
+
+Let us make a list of iso3c codes each country belongs to. As we have seen above, Comoros belongs to 17 groups.
+
+```{r}
+wb_groups %>% filter(country == "Comoros") %>% select(gcode, group)
+```
+
+```{r}
+wb_groups %>% filter(country == "Comoros") %>% pull(gcode) %>% paste(collapse = ", ")
+```
+
+
+```{r}
+cd <- function(x){wb_groups %>% filter(country == x) %>%  pull(gcode) %>% paste(collapse = ", ")}
+cd("Japan")
+cd("Comoros")
+cd("Zimbabwe")
+cd("Pakistan")
+```
+```{r, warning = FALSE}
+wb_groups %>% group_by(country) %>% summarize(group_codes = cd(country))
+```
+
+On the right of the table, you can find a list of group codes of each country.
+
+# Examples and Comments
+
+In the following I include my feedback keeping anonymity.
+
+## Information Obtained by `extra = TRUE`
+
+The first way is to use the option `extra = TRUE` when you import the data using `WDI`.
+
+### Population of Zimbabwe and Similar Countries
+
+
+```{r cash = TRUE}
+df_population <- as_tibble(WDI(
+  country = "all",
+  indicator = c(population = "SP.POP.TOTL"),
+  start = 1960,
+  end = 2020,
+  extra = TRUE
+))
+df_population
+```
+
+Find out extra information on Zimbabwe, i.e., which group Zimbabwe is in for region, income and lending.
+
+```{r}
+df_population %>%
+  filter(country == "Zimbabwe") %>% select(region, income, lending) %>% distinct()
+```
+
+Find out all countries in the same groups as Zimbabwe.
+
+```{r}
+df_population %>% 
+  filter(region == "Sub-Saharan Africa", income == "Lower middle income", lending == "Blend") %>% distinct(country)
+```
+Since there are only 6 countries belonging to the same group as Zimbabwe, let us widen our search.
+
+```{r}
+df_population %>% 
+  filter(region == "Sub-Saharan Africa", income == "Lower middle income") %>% distinct(country)
+```
+
+The following is the first chart.
+
+```{r}
+df_population %>% 
+  filter(region == "Sub-Saharan Africa", income == "Lower middle income", lending == "Blend") %>%
+  ggplot() +
+  geom_line(aes(x = year, y = population, color = country)) +
+  scale_y_log10()
+```
+The second chart.
+
+```{r}
+df_population %>% 
+  filter(region == "Sub-Saharan Africa", income == "Lower middle income") %>%
+  ggplot() +
+  geom_line(aes(x = year, y = population, color = country)) +
+  scale_y_log10()
+```
+Fixing the income level and compare the regions.
+
+```{r}
+df_population %>% filter(income == "Lower middle income")  %>%
+  group_by(region, year) %>% 
+  summarize(average_in_region = mean(population, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_line(aes(x = year, y = average_in_region, color = region))
+```
+A chart in log 10 scale.
+
+```{r}
+df_population %>% filter(income == "Lower middle income")  %>%
+  group_by(region, year) %>% 
+  summarize(average_in_region = mean(population, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_line(aes(x = year, y = average_in_region, color = region)) +
+  scale_y_log10()
+```
+
+
+### Fertility Rate of Japan and Similar Countries
+
+```{r}
+df_fertility <- as_tibble(WDI(
+  country = "all",
+  indicator = c(fertility = "SP.DYN.TFRT.IN"), 
+  start = 1960,
+  end = 2020,
+  extra = TRUE))
+df_fertility
+```
+
+```{r}
+df_fertility %>% filter(country == "Japan") %>%
+  select(region, income, lending) %>% distinct()
+```
+
+Let us compare Japan's fertility rate with similar countries, i.e., high income countries in East Asia & Pacific
+
+```{r}
+df_fertility %>% filter(region == "East Asia & Pacific", income == "High income") %>% distinct(country)
+```
+
+
+
+```{r}
+df_fertility %>% filter(region == "East Asia & Pacific", income == "High income")  %>%
+  ggplot() + 
+  geom_line(aes(x = year, y = fertility, color = country)) +
+  labs(title = "Fertility Rate of High Income Countries in East Asia & Pacific")
+```
+Let us check the number of countries in each region.
+
+```{r}
+df_fertility %>% filter(income == "High income")  %>%
+  select(country, region) %>% distinct() %>%
+  group_by(region) %>% summarize(number_of_countries = n_distinct(country))
+```
+
+```{r}
+df_fertility %>% filter(income == "High income")  %>%
+  group_by(region, year) %>% 
+  summarize(average_in_region = mean(fertility, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_line(aes(x = year, y = average_in_region, color = region))
+```
+
+## Other Groups
+
+So far we used only three classifications of groups, region, income and lending. However, `CLASS.xls` contains more information. 
+
+For example if we compare data within a group, say Arab World (ARB), we need the information taken from `CLASS.xls`. If you need the information of the aggregated data of the group, it is included. We know that there are 22 countries.
+
+```{r}
+wb_arb <- wb_groups %>% filter(gcode == "ARB") %>% select(iso3c, country)
+wb_arb_vec <- wb_arb %>% pull(iso3c)
+wb_arb
+wb_arb_vec
+```
+I created the data frame containing Arab World countries and their iso3c codes together with a vector containing iso3c only.
+
+### iso3c vector: `wb_arb_vec`
+
+```{r}
+df_fertility %>% filter(iso3c %in% wb_arb_vec) %>%
+  ggplot(aes(x = year, y = fertility, color = country)) +
+  geom_line()
+```
+### Data Frame: `wb_arb`
+
+For example, if the original data does not have an iso3c code, you can obtain a part of data refering to the column they share in common. In the following I used `by = "country"` in the second code chunk.
+
+```{r}
+df_fertility %>% right_join(wb_arb) %>%
+  ggplot(aes(x = year, y = fertility, color = country)) +
+  geom_line() + 
+  labs(title = "right_join without using by")
+```
+
+```{r}
+df_fertility %>% right_join(wb_arb, by = "country") %>%
+  ggplot(aes(x = year, y = fertility, color = country)) +
+  geom_line()  + 
+  labs(title = "`right_join` with `by`")
+```
+
+
+
+
+## Wangling: Transform and Tidy Data
+
+```{r}
+url_class <- "https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=excel"
+download.file(url = url_class, mode = "wb", destfile = "data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls")
+```
+
+### Tidying data
+
+```{r}
+country_tmp <- read_excel("data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls", sheet = 1, skip = 3, n_max =271) %>% slice(-1)
+```
+
+```{r}
+country_tmp
+```
+
+The following is an original code chunk.
+
+```{r}
+Co2_country <- country_tmp %>%
+  select(`Country Name`, `Country Code`, `Indicator Name`, `Indicator Code`,`1960`:`2018`)
+Co2_country <- pivot_longer(Co2_country,cols = 5:63, names_to = "year", values_to = "Co2", values_drop_na = TRUE) %>%
+  select(ID = `Country Code`, Country = `Country Name`, year, Co2)
+Co2_country
+```
+
+```{r}
+Co2_country %>% filter(ID == "WLD") %>% 
+  ggplot(aes(x = year, y = Co2)) +
+  geom_line()
+```
+
+Empty chart. The following is much better but we cannot see year and a line graph may be preferable to see changes.
+Please notice that year is in character not in integer.
+
+```{r}
+Co2_country %>% filter(ID == "WLD") %>% 
+  ggplot(aes(x = year, y = Co2)) +
+  geom_point()
+```
+In the following I used Base R command. Co2_country_rev$year denotes the column year of the data frame Co2_country_rev.
+
+```{r}
+Co2_country_rev <- Co2_country
+Co2_country_rev$year <- as.integer(Co2_country_rev$year) 
+Co2_country_rev %>% filter(ID == "WLD") %>% 
+  ggplot(aes(x = year, y = Co2)) +
+  geom_line()
+```
+Using `dplyr`, the following is an alternative.
+
+```{r}
+Co2_country_rev2 <- Co2_country %>% mutate(year = as.integer(year))
+Co2_country_rev2 %>% filter(ID == "WLD") %>% 
+  ggplot(aes(x = year, y= Co2)) +
+  geom_line()
+```
+
+It is possible to set year to be an integer variable when pivot_longer is applied by adding `names_transform = list(year = as.integer)`.
+
+```{r}
+co2_country <- country_tmp %>%
+  select('Country Name', 'Country Code', 'Indicator Name', 'Indicator Code','1960':'2018')
+co2_country <- pivot_longer(co2_country,cols = 5:63, names_to = "year", names_transform = list(year = as.integer), values_to = "Co2", values_drop_na = TRUE) %>%
+  select(ID = 'Country Code', Country = 'Country Name', year, Co2)
+co2_country
+```
+
+```{r}
+co2_country <- country_tmp %>% 
+  pivot_longer(cols = 5:63, names_to = "year", names_transform = list(year = as.integer), 
+               values_to = "co2", values_drop_na = TRUE) %>%
+  select(id = 'Country Code', country = 'Country Name', year, co2)
+co2_country
+```
+
+```{r}
+co2_country %>% filter(id %in% c("WLD", "USA", "CHN", "JPN")) %>% 
+  ggplot(aes(x = year, y= co2, color = id)) +
+  geom_line()
+```
+```{r}
+COUNTRIES <- c("China","Japan","United States","Great Britain","India","South Africa","Malaysia","Russia","Australia", "Canada", "Vietnam")
+co2_country %>% filter(country %in% COUNTRIES) %>% 
+  ggplot(aes(x = year, y= co2, color = country)) +
+  geom_line() +
+  geom_point()
+```
+Compare the data above and the those in WDI.
+
+* WID Data
+ - URL: https://data.worldbank.org/indicator/EN.ATM.CO2E.KT
+ - Description:
+ 
+```{r}
+WDIsearch(string = "co2", field = "name") %>% as_tibble()
+```
+ 
+
+
+## Population Analysis
+
+The original analysis uses Base R commands a lot, I do a similar analysis using `tidyverse` as an example.
+
+The following population data has seven variables.
+
+```{r cash = TRUE}
+url <- "https://data.un.org/_Docs/SYB/CSV/SYB64_246_202110_Population%20Growth,%20Fertility%20and%20Mortality%20Indicators.csv"
+df_un_pop <- read_csv(url, skip = 1)
+df_un_pop
+```
+
+Check the regions of interst.
+
+```{r}
+df_un_pop %>% filter(`Region/Country/Area` %in% c(2,9,21,419,142,150)) %>% distinct(`...2`)
+```
+
+```{r}
+df_un_pop_rev <- df_un_pop %>% 
+  select(rn = `Region/Country/Area`, region = `...2`, year = Year, series = Series, value = Value) %>%
+  filter(rn %in% c(2,9,21,419,142,150))
+df_un_pop_rev
+```
+
+```{r}
+df_un_pop_rev %>% distinct(series)
+```
+
+```{r}
+df_un_pop_rev %>% filter(series == "Population annual rate of increase (percent)") %>%
+  ggplot(aes(x = year, y = value, color = region)) + 
+  geom_line() +
+  labs(title = "Population annual rate of increase (percent)")
+```
+```{r}
+df_un_pop_rev %>% filter(series == "Total fertility rate (children per women)") %>%
+  ggplot(aes(x = year, y = value, color = region)) + 
+  geom_line() +
+  labs(title = "Total fertility rate (children per women)")
+```
+```{r}
+df_un_pop_rev %>% filter(series == "Infant mortality for both sexes (per 1,000 live births)") %>%
+  ggplot(aes(x = year, y = value, color = region)) + 
+  geom_line() +
+  labs(title = "Infant mortality for both sexes (per 1,000 live births)")
+```
+
+
+## Literacy rate, youth total (% of people ages 15-24)
+
+I will introduce this because it uses `semi_join` to choose countries' data deleting aggrigated data.
+
+
+```{r}
+WDIsearch(string = "SE.ADT.1524.LT.ZS", field = "indicator", cache = NULL)
+```
+```{r cash = TRUE}
+literacy_rate_youth <- WDI(country = "all", indicator = "SE.ADT.1524.LT.ZS")
+literacy_rate_youth
+```
+
+
+### Filtering joins
+
+**Description**
+
+Filtering joins filter rows from x based on the presence or absence of matches in y:
+
+* semi_join() return all rows from x with a match in y.
+* anti_join() return all rows from x without a match in y.
+
+  
+
+* Combine the literacy rate data with the country data
+  - semi_joint: list contains countries only listed in wb_countries
+  - deleted some of the aggregated data
+
+
+```{r}
+literacy_rate_youth_country <- literacy_rate_youth %>% semi_join(wb_countries, by = "country")
+literacy_rate_youth_country
+```
+
+Compare with the following.
+
+```{r}
+literacy_rate_youth_aggregated <- literacy_rate_youth %>% anti_join(wb_countries, by = "country")
+literacy_rate_youth_aggregated
+```
+
+
+## Visualization of the data
+
+### Gender: Ratio of girls to boys in primary, secondary and tertiary levels
+
+-   Went to <http://data.un.org/> (UNdata website)
+-   Scrolled down to "Gender" within "Popular statistical tables, country (area) and regional profiles"
+-   Copied CSV download link for "Ratio of girls to boys in primary, secondary and tertiary levels"
+-   Pasted the link below⇩
+
+```{r}
+url_of_data <- "http://data.un.org/_Docs/SYB/CSV/SYB64_319_202110_Ratio%20of%20girls%20to%20boys%20in%20education.csv"
+```
+
+```{r cash = TRUE}
+gender_education <- read_csv("http://data.un.org/_Docs/SYB/CSV/SYB64_319_202110_Ratio%20of%20girls%20to%20boys%20in%20education.csv", skip = 1)
+```
+```{r}
+gender_education
+```
+
+```{r}
+colnames(gender_education)
+```
+It is a good try to use `pivot_wider`, and it is easy to see the data. However for visualization using tidyverse it is not necessary if you use filter and/or grouping.
+
+```{r}
+gender_education_tbl <- gender_education %>% select(num = "Region/Country/Area", region = "...2", year = "Year", series = "Series", value = "Value") %>% 
+  pivot_wider(names_from = series, values_from = value) 
+gender_education_tbl
+```
+
+#### Visualization
+
+The student asks:  I do not know how to visualize this data using ggplot...
+
+1. First select one region and make a scatter plot and see the data.
+
+```{r}
+gender_education %>% filter(`Region/Country/Area` == 1) %>%  
+  ggplot() +
+  geom_point(aes(x = Year, y = Value))
+```
+2. Since there are a few data in each year, use color and geom_line as well.
+
+```{r}
+gender_education %>% filter(`Region/Country/Area` == 1) %>%  
+  ggplot(aes(x = Year, y = Value, color = Series)) +
+  geom_point() +
+  geom_line()
+```
+3. Now we choose several countries and start analyzing what you want.
+Probably it is easier to see in separate charts. I wanted to introduce `facet-grid`.
+
+```{r}
+gender_education %>% 
+  select(`Region/Country/Area`, region = `...2`, year = Year, value = Value, series = Series) %>%
+  mutate(year = as.integer(year)) %>%
+  filter(`Region/Country/Area` %in% c(1, 15, 202, 21, 419, 143, 30, 35, 34, 145, 150, 9)) %>%  
+  ggplot(aes(x = year, y = value, color = region)) +
+  geom_point() +
+  geom_line() +
+  facet_grid(cols = vars(series))
+```
+
+### Proportion of seats held by women in national parliament.
+
+```{r cash = TRUE}
+url_of_df <- "http://data.un.org/_Docs/SYB/CSV/SYB64_317_202110_Seats%20held%20by%20women%20in%20Parliament.csv"
+download.file(url = url_of_df, destfile = "data/UN_WO.csv")
+```
+
+
+
+```{r}
+df_UN_WO <- read_csv("data/UN_WO.csv", skip = 1)
+df_UN_WO
+```
+
+```{r}
+colnames(df_UN_WO)
+```
+
+```{r}
+UN_WO_tbl <- df_UN_WO %>% select(num = "Region/Country/Area", region = "...2", year = "Year", series = "Series", LED = "Last Election Date", value = "Value")%>%
+pivot_wider (names_from = series, values_from = value) 
+UN_WO_tbl
+```
+
+```{r}
+colnames(UN_WO_tbl) <- c("num", "region", "year", "LED", "seats")
+UN_WO_tbl
+```
+
+```{r}
+UN_WO_tbl_short <- UN_WO_tbl %>% select(region, year, seats)
+UN_WO_tbl_short
+```
+```{r}
+UN_WO_tbl_short$year <- as.integer(UN_WO_tbl_short$year)
+UN_WO_tbl_short
+```
+
+
+#### Visualization
+
+
+```{r}
+UN_WO_tbl_short %>% filter(year %in% c(2000, 2005, 2010, 2015, 2020)) %>% 
+  mutate(year = as.factor(year)) %>%
+  ggplot() +
+  geom_freqpoly(aes(x = seats, color = year))
+```
+```{r}
+UN_WO_tbl_short %>% filter(year %in% c(2000, 2005, 2010, 2015, 2020)) %>% 
+  mutate(year = as.factor(year)) %>%
+  group_by(year) %>% count(cut_width(seats, 5))
+```
+
+```{r}
+UN_WO_tbl_short
+```
+
+
+```{r}
+wb_regions
+```
+
+
+```{r}
+UN_WO_tbl_short %>% filter(region %in% c("Total, all countries or areas", "Northern Africa", "Sub-Saharan Africa", "Eastern Africa", "Middle Africa", "Southern Africa", "Western Africa")) %>%
+  ggplot() + geom_line(aes(x= year, y= seats, color= region)) + labs(title = "Seats of Women in Parliament")
+```
+
+Good Luck!
+
+If you need help, please drop me a line. I would set up a Zoom Office Hour.
+
+HS
