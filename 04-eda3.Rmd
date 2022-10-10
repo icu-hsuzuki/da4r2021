@@ -559,6 +559,7 @@ We load two packages; `tidyverse` and `WDI`. You need to load these once in the 
 ```{r}
 library(tidyverse)
 library(WDI)
+library(DT)
 ```
 
 Run all or run code chunks you want to include in the output file `filename.nb.html` before you preview. It is safer to check `Preview on Save` on the top of the editor.
@@ -588,7 +589,7 @@ WDIsearch(string = c("female", "gdp"), field = "name")
 It is OK to get a very long search result, but to include it in R Notebook, it is better to use `as_tibble()`.
 
 ```{r}
-as_tibble(WDIsearch(string = "savings", field = "name", cache = NULL))
+WDIsearch(string = "savings", field = "name", cache = NULL) %>% datatable()
 ```
 
 
@@ -599,12 +600,12 @@ WDIsearch(string = "SE.XPD.TOTL.GD.ZS", field = "indicator", cache = NULL)
 ```
 
 ```{r cash = TRUE}
-df_e <- as_tibble(WDI(
+df_e <- WDI(
   country = c("CN", "IN", "US", "ID","PK", "BR", "NG", "BD", "RU", "MX", "JP","LKA" ), 
   indicator = c(education = "SE.XPD.TOTL.GD.ZS"),
   start = 2000,
-  end = 2020))
-df_e
+  end = 2020)
+df_e %>% datatable()
 ```
 ```{r}
 ggplot(df_e) + 
@@ -613,7 +614,7 @@ ggplot(df_e) +
 ```
 
 ```{r}
-summary(df_e)
+summary(df_e)%>% datatable()
 ```
 A summary of the government expenditure on education by country.
 
@@ -624,8 +625,7 @@ df_e %>% group_by(country) %>%
     median = median(education, na.rm = TRUE), 
     max = max(education, na.rm = TRUE),  
     mean = mean(education, na.rm = TRUE)) %>%
-  arrange(desc(mean))
-  
+  arrange(desc(mean)) %>% datatable()
 ```
 
 
@@ -637,14 +637,13 @@ WDIsearch(string = "NY.GDS.TOTL.CD", field = "indicator")
 ```
 
 ```{r cash = TRUE}
-df_pk <- as_tibble(
+df_pk <- 
   WDI(
   country = "PK",
   indicator = c(gdpcap = "NY.GDP.MKTP.CD", saving = "NY.GDS.TOTL.CD"), 
   start = 1976,
   end = 2020)
-  )
-df_pk
+df_pk %>% datatable()
 ```
 
 ```{r}
@@ -672,13 +671,13 @@ WDIsearch(string = "NE.CON.TOTL.KD.ZG", field = "indicator")
 
 
 ```{r cash = TRUE}
-df_cp_con <- as_tibble(WDI(
+df_cp_con <- WDI(
   country = c("CN", "VN", "US", "TH", "GB", "FR", "RU", "DE", "JP"),
   indicator = c(cp = "FP.CPI.TOTL", con ="NE.CON.TOTL.KD.ZG"),
   start = 1990,
   end = 2020
-))
-df_cp_con
+)
+df_cp_con %>% datatable()
 ```
 Let us have a try.
 
@@ -711,12 +710,12 @@ WDIsearch(string = "SP.DYN.TFRT.IN", field = "indicator", short = FALSE)
 
 
 ```{r cash = TRUE}
-df_jp <- as_tibble(WDI(
+df_jp <- WDI(
   country = "JP",
   indicator = c(total = "SP.POP.TOTL", fertility = "SP.DYN.TFRT.IN"), 
   start = 1960,
-  end = 2020))
-df_jp
+  end = 2020)
+df_jp %>% datatable()
 ```
 
 ```{r}
@@ -734,13 +733,13 @@ df_jp %>% ggplot() +
 WDIsearch(string = "NY.GNP.PCAP.PP.CD", field = "indicator", cache = NULL)
 ```
 ```{r cash = TRUE}
-df_gni <- as_tibble(WDI(
+df_gni <- WDI(
   country = c("CN", "IN", "US", "ID","PK", "BR", "NG", "BD", "VN", "MX", "JP"), 
   indicator = c(gni ="NY.GNP.PCAP.PP.CD"),
   start = 1960,
   end = 2020,
-))
-df_gni
+)
+df_gni %>% datatable()
 ```
 ```{r}
 ggplot(df_gni) + 
@@ -751,7 +750,7 @@ The following code is counting the year there is at least one value, i.e., non N
 
 ```{r}
 df_gni %>% group_by(year) %>%
-  summarize(noNA = sum(!is.na(gni)))
+  summarize(noNA = sum(!is.na(gni)))  %>% datatable()
 ```
 ```{r}
 df_recent <- filter(df_gni, (year >= 1990))
@@ -775,13 +774,13 @@ WDIsearch(string ="SE.SEC.ENRR", field = "indicator")
 The school enrollment of male and female for the lower secondary in ASIAN countries.
 
 ```{r cash = TRUE}
-df_enrr <- as_tibble(WDI(
+df_enrr <- WDI(
   country = c("BN", "KH", "TL", "ID","LA", "MY", "MM", "PH", "SG", "TH", "VN"),
   indicator = c(all = "SE.SEC.ENRR", female = "SE.SEC.ENRR.LO.FE", male = "SE.SEC.ENRR.LO.MA"),
   start = 2016,
   end = 2018
- ))
-df_enrr
+ )
+df_enrr %>% datatable()
 ```
 
 The first solution.
