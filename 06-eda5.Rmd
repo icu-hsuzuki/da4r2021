@@ -207,18 +207,16 @@ library(modelr)
 t_cars <- as_tibble(cars)
 (mod <- lm(dist ~ speed, data = t_cars))
 ```
----
+
 ```{r echo = FALSE}
 summary(mod)
 ```
 
----
 ```{r}
 ggplot(t_cars, aes(speed, dist)) + geom_point() +
   geom_abline(slope = coef(mod)[[2]], intercept = coef(mod)[[1]])
 ```
 
----
 ```{r message = FALSE}
 ggplot(t_cars, aes(speed, dist)) + geom_jitter() +
   geom_smooth(method = "lm", se = FALSE)
@@ -230,7 +228,6 @@ ggplot(t_cars, aes(speed, dist)) + geom_jitter() +
 (mod_table <- t_cars %>% add_predictions(mod) %>% add_residuals(mod, var = "resid"))
 ```
 
----
 ```{r}
 mod_table %>% ggplot() + geom_jitter(aes(speed, resid)) + geom_hline(yintercept = 0)
 ```
@@ -245,7 +242,7 @@ t_cars %>% group_by(speed, dist) %>%
 ### iris
 
 ```{r}
-(t_iris <- as_tibble(iris))
+(t_iris <- as_tibble(datasets::iris))
 ```
 
 ### Linear Model: Sepal.W ~ Sepal.L
@@ -609,7 +606,6 @@ $$
   - [Cheat Sheet](https://www.rstudio.com/resources/cheatsheets/)
 
 
-\vfill
 > Data Science is an empirical study! Develop your skills and knowledge by experiences.
   
   
