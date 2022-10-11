@@ -631,6 +631,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="D.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>D.5.4</b> Population of 2019</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="E" data-path="pop.html"><a href="pop.html"><i class="fa fa-check"></i><b>E</b> Appendix E Population</a>
+<ul>
+<li class="chapter" data-level="E.1" data-path="pop.html"><a href="pop.html#about-united-states-census-bureau"><i class="fa fa-check"></i><b>E.1</b> About: United States Census Bureau</a></li>
+<li class="chapter" data-level="E.2" data-path="pop.html"><a href="pop.html#international-data-base-idb-december-2020-release-now-in-2021"><i class="fa fa-check"></i><b>E.2</b> International Data Base (IDB) December 2020 Release (Now in 2021)</a></li>
+<li class="chapter" data-level="E.3" data-path="pop.html"><a href="pop.html#analysis-using-idbzip"><i class="fa fa-check"></i><b>E.3</b> Analysis using <code>idbzip</code></a>
+<ul>
+<li class="chapter" data-level="E.3.1" data-path="pop.html"><a href="pop.html#popultion-of-the-world"><i class="fa fa-check"></i><b>E.3.1</b> Popultion of the World</a></li>
+<li class="chapter" data-level="E.3.2" data-path="pop.html"><a href="pop.html#population-of-a-country-japan"><i class="fa fa-check"></i><b>E.3.2</b> Population of a Country, JAPAN</a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="pop.html"><a href="pop.html#population-pyramid"><i class="fa fa-check"></i><b>E.4</b> Population Pyramid</a>
+<ul>
+<li class="chapter" data-level="E.4.1" data-path="pop.html"><a href="pop.html#population-pyramid-of-japan-or-other-countries"><i class="fa fa-check"></i><b>E.4.1</b> Population Pyramid of Japan or Other Countries</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -1568,7 +1582,7 @@ RMSE
 <span id="cb1065-2"><a href="topics2.html#cb1065-2" aria-hidden="true" tabindex="-1"></a>iris_mod124 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
 <span id="cb1065-3"><a href="topics2.html#cb1065-3" aria-hidden="true" tabindex="-1"></a>iris_mod134 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
 <span id="cb1065-4"><a href="topics2.html#cb1065-4" aria-hidden="true" tabindex="-1"></a>iris_mod234 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
-<pre><code>## Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
+<pre><code>## Warning: glm.fit: 数値的に 0 か 1 である確率が生じました</code></pre>
 <div class="sourceCode" id="cb1067"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1067-1"><a href="topics2.html#cb1067-1" aria-hidden="true" tabindex="-1"></a>iris_mod1234 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
 <div class="sourceCode" id="cb1068"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1068-1"><a href="topics2.html#cb1068-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="ot">&lt;-</span> iris_tbl2ext_two <span class="sc">%&gt;%</span> </span>
 <span id="cb1068-2"><a href="topics2.html#cb1068-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod123, <span class="at">var =</span> <span class="st">&quot;pred_123&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>

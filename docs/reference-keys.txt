@@ -568,14 +568,6 @@ region
 income
 summary-of-the-total-confrimed-cases-by-country
 summary-of-new-cases-during-the-past-24-hours-by-country-and-type
-r-and-r-studio
-data-frame-wb_arb
-geom_jitter
-modeling-3
-more-examples-1
-r-commands-on-statistical-measurements
-library-loadingattaching-packages
-analysis-suggested-by-rami-krispin
 pop
 about-united-states-census-bureau
 international-data-base-idb-december-2020-release-now-in-2021
@@ -593,10 +585,10 @@ united-kingdom
 indonesia
 india
 korea-south
+sri-lanka
 malaysia
 philippines
 thailand
 united-states
 vietnam
 project-2
-sri-lanka

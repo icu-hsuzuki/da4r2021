@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="model.html"/>
-
+<link rel="next" href="pop.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -631,6 +631,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="D.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>D.5.4</b> Population of 2019</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="E" data-path="pop.html"><a href="pop.html"><i class="fa fa-check"></i><b>E</b> Appendix E Population</a>
+<ul>
+<li class="chapter" data-level="E.1" data-path="pop.html"><a href="pop.html#about-united-states-census-bureau"><i class="fa fa-check"></i><b>E.1</b> About: United States Census Bureau</a></li>
+<li class="chapter" data-level="E.2" data-path="pop.html"><a href="pop.html#international-data-base-idb-december-2020-release-now-in-2021"><i class="fa fa-check"></i><b>E.2</b> International Data Base (IDB) December 2020 Release (Now in 2021)</a></li>
+<li class="chapter" data-level="E.3" data-path="pop.html"><a href="pop.html#analysis-using-idbzip"><i class="fa fa-check"></i><b>E.3</b> Analysis using <code>idbzip</code></a>
+<ul>
+<li class="chapter" data-level="E.3.1" data-path="pop.html"><a href="pop.html#popultion-of-the-world"><i class="fa fa-check"></i><b>E.3.1</b> Popultion of the World</a></li>
+<li class="chapter" data-level="E.3.2" data-path="pop.html"><a href="pop.html#population-of-a-country-japan"><i class="fa fa-check"></i><b>E.3.2</b> Population of a Country, JAPAN</a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="pop.html"><a href="pop.html#population-pyramid"><i class="fa fa-check"></i><b>E.4</b> Population Pyramid</a>
+<ul>
+<li class="chapter" data-level="E.4.1" data-path="pop.html"><a href="pop.html#population-pyramid-of-japan-or-other-countries"><i class="fa fa-check"></i><b>E.4.1</b> Population Pyramid of Japan or Other Countries</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -653,7 +667,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="coronavirus" class="section level1 hasAnchor" number="18">
 <h1><span class="header-section-number">D</span> Appendix D Coronavirus<a href="coronavirus.html#coronavirus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
-<p>An example of an R Notebook, rendered at 2022-10-11 14:13:51 JST</p>
+<p>An example of an R Notebook, rendered at 2022-10-11 21:23:26 JST</p>
 </blockquote>
 <blockquote>
 <p>This version uses <code>tidyverse</code> packages for importing and transforming data.</p>
@@ -707,7 +721,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5   124 Alberta, Canada    4413146  North America           &lt;NA&gt;
 ## 6   124 Alberta, Canada    4413146  North America           &lt;NA&gt;</code></pre>
 <div class="sourceCode" id="cb1345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1345-1"><a href="coronavirus.html#cb1345-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(coronavirus)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    845184 obs. of  15 variables:
+<pre><code>## &#39;data.frame&#39;:    846036 obs. of  15 variables:
 ##  $ date          : chr  &quot;2020-01-22&quot; &quot;2020-01-23&quot; &quot;2020-01-24&quot; &quot;2020-01-25&quot; ...
 ##  $ province      : chr  &quot;Alberta&quot; &quot;Alberta&quot; &quot;Alberta&quot; &quot;Alberta&quot; ...
 ##  $ country       : chr  &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; ...
@@ -726,7 +740,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Since the first column consists of date in character format, we change it to Date.</p>
 <div class="sourceCode" id="cb1347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1347-1"><a href="coronavirus.html#cb1347-1" aria-hidden="true" tabindex="-1"></a>coronavirus<span class="sc">$</span>date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(coronavirus<span class="sc">$</span>date)</span>
 <span id="cb1347-2"><a href="coronavirus.html#cb1347-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(coronavirus)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    845184 obs. of  15 variables:
+<pre><code>## &#39;data.frame&#39;:    846036 obs. of  15 variables:
 ##  $ date          : Date, format: &quot;2020-01-22&quot; &quot;2020-01-23&quot; ...
 ##  $ province      : chr  &quot;Alberta&quot; &quot;Alberta&quot; &quot;Alberta&quot; &quot;Alberta&quot; ...
 ##  $ country       : chr  &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; ...
@@ -744,7 +758,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  $ continent_code: chr  NA NA NA NA ...</code></pre>
 <p>Now the first column is recognized as date. The range of dates covered can be seen by the following.</p>
 <div class="sourceCode" id="cb1349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1349-1"><a href="coronavirus.html#cb1349-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(coronavirus<span class="sc">$</span>date)</span></code></pre></div>
-<pre><code>## [1] &quot;2020-01-22&quot; &quot;2022-10-09&quot;</code></pre>
+<pre><code>## [1] &quot;2020-01-22&quot; &quot;2022-10-10&quot;</code></pre>
 <p>Let us check the countries by <code>unique</code> function. We choose a country from this list later.</p>
 <div class="sourceCode" id="cb1351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1351-1"><a href="coronavirus.html#cb1351-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">unique</span>(coronavirus<span class="sc">$</span>country), <span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##  [1] &quot;Canada&quot;         &quot;United Kingdom&quot; &quot;China&quot;          &quot;Netherlands&quot;   
@@ -763,62 +777,62 @@ We apply a filter <code>country == COUNTRY</code> to the <code>country</code> co
 <p>Let us check the subset of our data and see if the population column changes over time.</p>
 <div class="sourceCode" id="cb1356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1356-1"><a href="coronavirus.html#cb1356-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df0)</span></code></pre></div>
 <pre><code>##              date province country      lat     long      type cases uid iso2
-## 174593 2020-01-22     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     2 392   JP
-## 174594 2020-01-23     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
-## 174595 2020-01-24     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
-## 174596 2020-01-25     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
-## 174597 2020-01-26     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     2 392   JP
-## 174598 2020-01-27     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
+## 174769 2020-01-22     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     2 392   JP
+## 174770 2020-01-23     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
+## 174771 2020-01-24     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
+## 174772 2020-01-25     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
+## 174773 2020-01-26     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     2 392   JP
+## 174774 2020-01-27     &lt;NA&gt;   Japan 36.20482 138.2529 confirmed     0 392   JP
 ##        iso3 code3 combined_key population continent_name continent_code
-## 174593  JPN   392        Japan  126476458           Asia             AS
-## 174594  JPN   392        Japan  126476458           Asia             AS
-## 174595  JPN   392        Japan  126476458           Asia             AS
-## 174596  JPN   392        Japan  126476458           Asia             AS
-## 174597  JPN   392        Japan  126476458           Asia             AS
-## 174598  JPN   392        Japan  126476458           Asia             AS</code></pre>
+## 174769  JPN   392        Japan  126476458           Asia             AS
+## 174770  JPN   392        Japan  126476458           Asia             AS
+## 174771  JPN   392        Japan  126476458           Asia             AS
+## 174772  JPN   392        Japan  126476458           Asia             AS
+## 174773  JPN   392        Japan  126476458           Asia             AS
+## 174774  JPN   392        Japan  126476458           Asia             AS</code></pre>
 <div class="sourceCode" id="cb1358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1358-1"><a href="coronavirus.html#cb1358-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(df0)</span></code></pre></div>
 <pre><code>##              date province country      lat     long     type cases uid iso2
-## 734075 2022-10-04     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
-## 734076 2022-10-05     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
-## 734077 2022-10-06     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
-## 734078 2022-10-07     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
-## 734079 2022-10-08     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
-## 734080 2022-10-09     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
+## 734815 2022-10-05     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
+## 734816 2022-10-06     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
+## 734817 2022-10-07     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
+## 734818 2022-10-08     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
+## 734819 2022-10-09     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
+## 734820 2022-10-10     &lt;NA&gt;   Japan 36.20482 138.2529 recovery     0 392   JP
 ##        iso3 code3 combined_key population continent_name continent_code
-## 734075  JPN   392        Japan  126476458           Asia             AS
-## 734076  JPN   392        Japan  126476458           Asia             AS
-## 734077  JPN   392        Japan  126476458           Asia             AS
-## 734078  JPN   392        Japan  126476458           Asia             AS
-## 734079  JPN   392        Japan  126476458           Asia             AS
-## 734080  JPN   392        Japan  126476458           Asia             AS</code></pre>
+## 734815  JPN   392        Japan  126476458           Asia             AS
+## 734816  JPN   392        Japan  126476458           Asia             AS
+## 734817  JPN   392        Japan  126476458           Asia             AS
+## 734818  JPN   392        Japan  126476458           Asia             AS
+## 734819  JPN   392        Japan  126476458           Asia             AS
+## 734820  JPN   392        Japan  126476458           Asia             AS</code></pre>
 <p>Since the population on the first day and the last day are equal, you can set one as the population of the country.</p>
 <div class="sourceCode" id="cb1360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1360-1"><a href="coronavirus.html#cb1360-1" aria-hidden="true" tabindex="-1"></a>(pop <span class="ot">&lt;-</span> df0<span class="sc">$</span>population[<span class="dv">1</span>])</span></code></pre></div>
 <pre><code>## [1] 126476458</code></pre>
 <p>We need only the first, the sixth, the seventh and the thirteenth column, namely, “date”, “type”, “cases”, “population”, we create a new data frame called <code>df</code> by the following.</p>
 <div class="sourceCode" id="cb1362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1362-1"><a href="coronavirus.html#cb1362-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df0[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">13</span>)]</span>
 <span id="cb1362-2"><a href="coronavirus.html#cb1362-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    2976 obs. of  4 variables:
+<pre><code>## &#39;data.frame&#39;:    2979 obs. of  4 variables:
 ##  $ date      : Date, format: &quot;2020-01-22&quot; &quot;2020-01-23&quot; ...
 ##  $ type      : chr  &quot;confirmed&quot; &quot;confirmed&quot; &quot;confirmed&quot; &quot;confirmed&quot; ...
 ##  $ cases     : int  2 0 0 0 2 0 3 0 4 4 ...
 ##  $ population: num  1.26e+08 1.26e+08 1.26e+08 1.26e+08 1.26e+08 ...</code></pre>
 <div class="sourceCode" id="cb1364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1364-1"><a href="coronavirus.html#cb1364-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
 <pre><code>##              date      type cases population
-## 174593 2020-01-22 confirmed     2  126476458
-## 174594 2020-01-23 confirmed     0  126476458
-## 174595 2020-01-24 confirmed     0  126476458
-## 174596 2020-01-25 confirmed     0  126476458
-## 174597 2020-01-26 confirmed     2  126476458
-## 174598 2020-01-27 confirmed     0  126476458</code></pre>
+## 174769 2020-01-22 confirmed     2  126476458
+## 174770 2020-01-23 confirmed     0  126476458
+## 174771 2020-01-24 confirmed     0  126476458
+## 174772 2020-01-25 confirmed     0  126476458
+## 174773 2020-01-26 confirmed     2  126476458
+## 174774 2020-01-27 confirmed     0  126476458</code></pre>
 <p>Alternatively, <code>df0[c(1,6,7,13)]</code> can be replaced by <code>df0[c("date", "type", "cases", "population")]</code>.</p>
 <div class="sourceCode" id="cb1366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1366-1"><a href="coronavirus.html#cb1366-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df0[<span class="fu">c</span>(<span class="st">&quot;date&quot;</span>, <span class="st">&quot;type&quot;</span>, <span class="st">&quot;cases&quot;</span>, <span class="st">&quot;population&quot;</span>)])</span></code></pre></div>
 <pre><code>##              date      type cases population
-## 174593 2020-01-22 confirmed     2  126476458
-## 174594 2020-01-23 confirmed     0  126476458
-## 174595 2020-01-24 confirmed     0  126476458
-## 174596 2020-01-25 confirmed     0  126476458
-## 174597 2020-01-26 confirmed     2  126476458
-## 174598 2020-01-27 confirmed     0  126476458</code></pre>
+## 174769 2020-01-22 confirmed     2  126476458
+## 174770 2020-01-23 confirmed     0  126476458
+## 174771 2020-01-24 confirmed     0  126476458
+## 174772 2020-01-25 confirmed     0  126476458
+## 174773 2020-01-26 confirmed     2  126476458
+## 174774 2020-01-27 confirmed     0  126476458</code></pre>
 </div>
 <div id="types-confirmed-death-and-recovery" class="section level3 hasAnchor" number="18.2.4">
 <h3><span class="header-section-number">D.2.4</span> Types: “confirmed” “death” and “recovery”<a href="coronavirus.html#types-confirmed-death-and-recovery" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -828,23 +842,23 @@ We apply a filter <code>country == COUNTRY</code> to the <code>country</code> co
 <span id="cb1368-3"><a href="coronavirus.html#cb1368-3" aria-hidden="true" tabindex="-1"></a>df_recovery <span class="ot">&lt;-</span> df[df<span class="sc">$</span>data_type <span class="sc">==</span> <span class="st">&quot;recovery&quot;</span>,]</span>
 <span id="cb1368-4"><a href="coronavirus.html#cb1368-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_confirmed)</span></code></pre></div>
 <pre><code>##              date      type cases population
-## 174593 2020-01-22 confirmed     2  126476458
-## 174594 2020-01-23 confirmed     0  126476458
-## 174595 2020-01-24 confirmed     0  126476458
-## 174596 2020-01-25 confirmed     0  126476458
-## 174597 2020-01-26 confirmed     2  126476458
-## 174598 2020-01-27 confirmed     0  126476458</code></pre>
+## 174769 2020-01-22 confirmed     2  126476458
+## 174770 2020-01-23 confirmed     0  126476458
+## 174771 2020-01-24 confirmed     0  126476458
+## 174772 2020-01-25 confirmed     0  126476458
+## 174773 2020-01-26 confirmed     2  126476458
+## 174774 2020-01-27 confirmed     0  126476458</code></pre>
 <div class="sourceCode" id="cb1370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1370-1"><a href="coronavirus.html#cb1370-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_death)</span></code></pre></div>
 <pre><code>##              date  type cases population
-## 461281 2020-01-22 death     0  126476458
-## 461282 2020-01-23 death     0  126476458
-## 461283 2020-01-24 death     0  126476458
-## 461284 2020-01-25 death     0  126476458
-## 461285 2020-01-26 death     0  126476458
-## 461286 2020-01-27 death     0  126476458</code></pre>
+## 461746 2020-01-22 death     0  126476458
+## 461747 2020-01-23 death     0  126476458
+## 461748 2020-01-24 death     0  126476458
+## 461749 2020-01-25 death     0  126476458
+## 461750 2020-01-26 death     0  126476458
+## 461751 2020-01-27 death     0  126476458</code></pre>
 <div class="sourceCode" id="cb1372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1372-1"><a href="coronavirus.html#cb1372-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_recovery)</span></code></pre></div>
 <pre><code>## [1] date       type       cases      population
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+##  &lt;0 行&gt; (または長さ 0 の row.names)</code></pre>
 <p>Notice that “recovery” data is empty.</p>
 </div>
 <div id="data-visualization" class="section level3 hasAnchor" number="18.2.5">
@@ -863,7 +877,7 @@ We apply a filter <code>country == COUNTRY</code> to the <code>country</code> co
 <div class="sourceCode" id="cb1377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1377-1"><a href="coronavirus.html#cb1377-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df_confirmed<span class="sc">$</span>cases, df_death<span class="sc">$</span>cases, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-620-1.png" width="672" /></p>
 <div class="sourceCode" id="cb1378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1378-1"><a href="coronavirus.html#cb1378-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df_confirmed<span class="sc">$</span>cases, df_death<span class="sc">$</span>cases)</span></code></pre></div>
-<pre><code>## [1] 0.7128397</code></pre>
+<pre><code>## [1] 0.7128125</code></pre>
 <div id="extra" class="section level4 hasAnchor" number="18.2.6.1">
 <h4><span class="header-section-number">D.2.6.1</span> Extra<a href="coronavirus.html#extra" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>It is better to add the title of the graph and the labels of x-axis and y-axis.
@@ -887,23 +901,23 @@ Here we used <code>paste("Comfirmed Cases in",COUNTRY)</code> to automatically p
 <span id="cb1382-3"><a href="coronavirus.html#cb1382-3" aria-hidden="true" tabindex="-1"></a>df_date_recovery <span class="ot">&lt;-</span> df_date[df_date<span class="sc">$</span>data_type <span class="sc">==</span> <span class="st">&quot;recovery&quot;</span>,]</span>
 <span id="cb1382-4"><a href="coronavirus.html#cb1382-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_date_confirmed)</span></code></pre></div>
 <pre><code>##              date      type cases population
-## 175119 2021-07-01 confirmed  1754  126476458
-## 175120 2021-07-02 confirmed  1775  126476458
-## 175121 2021-07-03 confirmed  1878  126476458
-## 175122 2021-07-04 confirmed  1485  126476458
-## 175123 2021-07-05 confirmed  1029  126476458
-## 175124 2021-07-06 confirmed  1668  126476458</code></pre>
+## 175295 2021-07-01 confirmed  1754  126476458
+## 175296 2021-07-02 confirmed  1775  126476458
+## 175297 2021-07-03 confirmed  1878  126476458
+## 175298 2021-07-04 confirmed  1485  126476458
+## 175299 2021-07-05 confirmed  1029  126476458
+## 175300 2021-07-06 confirmed  1668  126476458</code></pre>
 <div class="sourceCode" id="cb1384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1384-1"><a href="coronavirus.html#cb1384-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_date_death)</span></code></pre></div>
 <pre><code>##              date  type cases population
-## 461807 2021-07-01 death    24  126476458
-## 461808 2021-07-02 death    25  126476458
-## 461809 2021-07-03 death     9  126476458
-## 461810 2021-07-04 death     6  126476458
-## 461811 2021-07-05 death    19  126476458
-## 461812 2021-07-06 death    22  126476458</code></pre>
+## 462272 2021-07-01 death    24  126476458
+## 462273 2021-07-02 death    25  126476458
+## 462274 2021-07-03 death     9  126476458
+## 462275 2021-07-04 death     6  126476458
+## 462276 2021-07-05 death    19  126476458
+## 462277 2021-07-06 death    22  126476458</code></pre>
 <div class="sourceCode" id="cb1386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1386-1"><a href="coronavirus.html#cb1386-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_date_recovery)</span></code></pre></div>
 <pre><code>## [1] date       type       cases      population
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+##  &lt;0 行&gt; (または長さ 0 の row.names)</code></pre>
 </div>
 </div>
 <div id="histograms" class="section level3 hasAnchor" number="18.2.8">
@@ -918,7 +932,7 @@ Here we used <code>paste("Comfirmed Cases in",COUNTRY)</code> to automatically p
 <div class="sourceCode" id="cb1391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1391-1"><a href="coronavirus.html#cb1391-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df_date_confirmed<span class="sc">$</span>cases, df_date_death<span class="sc">$</span>cases, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-625-1.png" width="672" /></p>
 <div class="sourceCode" id="cb1392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1392-1"><a href="coronavirus.html#cb1392-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df_date_confirmed<span class="sc">$</span>cases, df_date_death<span class="sc">$</span>cases)</span></code></pre></div>
-<pre><code>## [1] 0.7288534</code></pre>
+<pre><code>## [1] 0.7288247</code></pre>
 </div>
 </div>
 <div id="list-observations-and-questions-for-further-exploration" class="section level3 hasAnchor" number="18.2.9">
@@ -941,7 +955,7 @@ Check whether <code>province</code> part is valid in these countries.</p>
 <p>We keep the country name.</p>
 <div class="sourceCode" id="cb1396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1396-1"><a href="coronavirus.html#cb1396-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df0[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">13</span>)]</span>
 <span id="cb1396-2"><a href="coronavirus.html#cb1396-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    17856 obs. of  5 variables:
+<pre><code>## &#39;data.frame&#39;:    17874 obs. of  5 variables:
 ##  $ date      : Date, format: &quot;2020-01-22&quot; &quot;2020-01-23&quot; ...
 ##  $ country   : chr  &quot;Germany&quot; &quot;Germany&quot; &quot;Germany&quot; &quot;Germany&quot; ...
 ##  $ type      : chr  &quot;confirmed&quot; &quot;confirmed&quot; &quot;confirmed&quot; &quot;confirmed&quot; ...
@@ -949,12 +963,12 @@ Check whether <code>province</code> part is valid in these countries.</p>
 ##  $ population: num  83783945 83783945 83783945 83783945 83783945 ...</code></pre>
 <div class="sourceCode" id="cb1398"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1398-1"><a href="coronavirus.html#cb1398-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
 <pre><code>##              date country      type cases population
-## 153761 2020-01-22 Germany confirmed     0   83783945
-## 153762 2020-01-23 Germany confirmed     0   83783945
-## 153763 2020-01-24 Germany confirmed     0   83783945
-## 153764 2020-01-25 Germany confirmed     0   83783945
-## 153765 2020-01-26 Germany confirmed     0   83783945
-## 153766 2020-01-27 Germany confirmed     1   83783945</code></pre>
+## 153916 2020-01-22 Germany confirmed     0   83783945
+## 153917 2020-01-23 Germany confirmed     0   83783945
+## 153918 2020-01-24 Germany confirmed     0   83783945
+## 153919 2020-01-25 Germany confirmed     0   83783945
+## 153920 2020-01-26 Germany confirmed     0   83783945
+## 153921 2020-01-27 Germany confirmed     1   83783945</code></pre>
 <div id="set-types" class="section level3 hasAnchor" number="18.3.1">
 <h3><span class="header-section-number">D.3.1</span> Set types<a href="coronavirus.html#set-types" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb1400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1400-1"><a href="coronavirus.html#cb1400-1" aria-hidden="true" tabindex="-1"></a>df_confirmed <span class="ot">&lt;-</span> df[df<span class="sc">$</span>type <span class="sc">==</span> <span class="st">&quot;confirmed&quot;</span>,]</span>
@@ -962,23 +976,23 @@ Check whether <code>province</code> part is valid in these countries.</p>
 <span id="cb1400-3"><a href="coronavirus.html#cb1400-3" aria-hidden="true" tabindex="-1"></a>df_recovery <span class="ot">&lt;-</span> df[df<span class="sc">$</span>data_type <span class="sc">==</span> <span class="st">&quot;recovery&quot;</span>,]</span>
 <span id="cb1400-4"><a href="coronavirus.html#cb1400-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_confirmed)</span></code></pre></div>
 <pre><code>##              date country      type cases population
-## 153761 2020-01-22 Germany confirmed     0   83783945
-## 153762 2020-01-23 Germany confirmed     0   83783945
-## 153763 2020-01-24 Germany confirmed     0   83783945
-## 153764 2020-01-25 Germany confirmed     0   83783945
-## 153765 2020-01-26 Germany confirmed     0   83783945
-## 153766 2020-01-27 Germany confirmed     1   83783945</code></pre>
+## 153916 2020-01-22 Germany confirmed     0   83783945
+## 153917 2020-01-23 Germany confirmed     0   83783945
+## 153918 2020-01-24 Germany confirmed     0   83783945
+## 153919 2020-01-25 Germany confirmed     0   83783945
+## 153920 2020-01-26 Germany confirmed     0   83783945
+## 153921 2020-01-27 Germany confirmed     1   83783945</code></pre>
 <div class="sourceCode" id="cb1402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1402-1"><a href="coronavirus.html#cb1402-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_death)</span></code></pre></div>
 <pre><code>##              date country  type cases population
-## 440449 2020-01-22 Germany death     0   83783945
-## 440450 2020-01-23 Germany death     0   83783945
-## 440451 2020-01-24 Germany death     0   83783945
-## 440452 2020-01-25 Germany death     0   83783945
-## 440453 2020-01-26 Germany death     0   83783945
-## 440454 2020-01-27 Germany death     0   83783945</code></pre>
+## 440893 2020-01-22 Germany death     0   83783945
+## 440894 2020-01-23 Germany death     0   83783945
+## 440895 2020-01-24 Germany death     0   83783945
+## 440896 2020-01-25 Germany death     0   83783945
+## 440897 2020-01-26 Germany death     0   83783945
+## 440898 2020-01-27 Germany death     0   83783945</code></pre>
 <div class="sourceCode" id="cb1404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1404-1"><a href="coronavirus.html#cb1404-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_recovery)</span></code></pre></div>
 <pre><code>## [1] date       country    type       cases      population
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+##  &lt;0 行&gt; (または長さ 0 の row.names)</code></pre>
 <div class="sourceCode" id="cb1406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1406-1"><a href="coronavirus.html#cb1406-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df_confirmed<span class="sc">$</span>population)</span></code></pre></div>
 <pre><code>## [1]   83783945 1380004385  126476458   51269183   59308690  329466283</code></pre>
 </div>
@@ -1015,7 +1029,7 @@ Check whether <code>province</code> part is valid in these countries.</p>
 <span id="cb1415-2"><a href="coronavirus.html#cb1415-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> country, <span class="at">y =</span> (cases<span class="sc">*</span><span class="dv">100000</span>)<span class="sc">/</span>population)) <span class="sc">+</span></span>
 <span id="cb1415-3"><a href="coronavirus.html#cb1415-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span> </span>
 <span id="cb1415-4"><a href="coronavirus.html#cb1415-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Date&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Number of Confirmed Cases in log10 per 100,000&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Number of Confirmed Cases in log10 Scale per 100,000&quot;</span>)</span></code></pre></div>
-<pre><code>## Warning in self$trans$transform(x): NaNs produced</code></pre>
+<pre><code>## Warning in self$trans$transform(x): 計算結果が NaN になりました</code></pre>
 <pre><code>## Warning: Transformation introduced infinite values in continuous y-axis</code></pre>
 <pre><code>## Warning: Removed 243 rows containing non-finite values (stat_boxplot).</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-637-1.png" width="672" /></p>
@@ -1036,9 +1050,9 @@ Check whether <code>province</code> part is valid in these countries.</p>
 <span id="cb1422-2"><a href="coronavirus.html#cb1422-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> country, <span class="at">y =</span> (cases<span class="sc">*</span><span class="dv">100000</span>)<span class="sc">/</span>population)) <span class="sc">+</span></span>
 <span id="cb1422-3"><a href="coronavirus.html#cb1422-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span> </span>
 <span id="cb1422-4"><a href="coronavirus.html#cb1422-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Date&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Number of Deaths in log10 per 100,000&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Number of Deaths in log10 Scale per 100,000&quot;</span>)</span></code></pre></div>
-<pre><code>## Warning in self$trans$transform(x): NaNs produced</code></pre>
+<pre><code>## Warning in self$trans$transform(x): 計算結果が NaN になりました</code></pre>
 <pre><code>## Warning: Transformation introduced infinite values in continuous y-axis</code></pre>
-<pre><code>## Warning: Removed 571 rows containing non-finite values (stat_boxplot).</code></pre>
+<pre><code>## Warning: Removed 572 rows containing non-finite values (stat_boxplot).</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-641-1.png" width="672" /></p>
 </div>
 <div id="setting-a-period" class="section level3 hasAnchor" number="18.3.3">
@@ -1134,7 +1148,7 @@ The number of deaths in 100,000.</p>
 <li>read_log(): web log files</li>
 </ul>
 <div class="sourceCode" id="cb1434"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1434-1"><a href="coronavirus.html#cb1434-1" aria-hidden="true" tabindex="-1"></a>coronavirus_tv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Rows: 845184 Columns: 15
+<pre><code>## Rows: 846036 Columns: 15
 ## ── Column specification ────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (8): province, country, type, iso2, iso3, combined_key, continent_name,...
@@ -1144,7 +1158,7 @@ The number of deaths in 100,000.</p>
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <div class="sourceCode" id="cb1436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1436-1"><a href="coronavirus.html#cb1436-1" aria-hidden="true" tabindex="-1"></a>coronavirus_tv</span></code></pre></div>
-<pre><code>## # A tibble: 845,184 × 15
+<pre><code>## # A tibble: 846,036 × 15
 ##    date       province country   lat  long type    cases   uid iso2  iso3  code3
 ##    &lt;date&gt;     &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;
 ##  1 2020-01-22 Alberta  Canada   53.9 -117. confir…     0 12401 CA    CAN     124
@@ -1157,7 +1171,7 @@ The number of deaths in 100,000.</p>
 ##  8 2020-01-29 Alberta  Canada   53.9 -117. confir…     0 12401 CA    CAN     124
 ##  9 2020-01-30 Alberta  Canada   53.9 -117. confir…     0 12401 CA    CAN     124
 ## 10 2020-01-31 Alberta  Canada   53.9 -117. confir…     0 12401 CA    CAN     124
-## # … with 845,174 more rows, and 4 more variables: combined_key &lt;chr&gt;,
+## # … with 846,026 more rows, and 4 more variables: combined_key &lt;chr&gt;,
 ## #   population &lt;dbl&gt;, continent_name &lt;chr&gt;, continent_code &lt;chr&gt;</code></pre>
 <div class="sourceCode" id="cb1438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1438-1"><a href="coronavirus.html#cb1438-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print(coronavirus_tv) # same as above</span></span></code></pre></div>
 <ul>
@@ -1166,7 +1180,7 @@ The number of deaths in 100,000.</p>
 <li><code>glimpse</code> is similar to <code>str</code> and is like a transposed version of <code>print()</code></li>
 </ul>
 <div class="sourceCode" id="cb1439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1439-1"><a href="coronavirus.html#cb1439-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(coronavirus_tv)</span></code></pre></div>
-<pre><code>## Rows: 845,184
+<pre><code>## Rows: 846,036
 ## Columns: 15
 ## $ date           &lt;date&gt; 2020-01-22, 2020-01-23, 2020-01-24, 2020-01-25, 2020-0…
 ## $ province       &lt;chr&gt; &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, …
@@ -1299,7 +1313,7 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
 </table>
 <div class="sourceCode" id="cb1445"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1445-1"><a href="coronavirus.html#cb1445-1" aria-hidden="true" tabindex="-1"></a>df_tv <span class="ot">&lt;-</span> <span class="fu">select</span>(coronavirus_tv, <span class="fu">c</span>(date, country, type, cases, population))</span>
 <span id="cb1445-2"><a href="coronavirus.html#cb1445-2" aria-hidden="true" tabindex="-1"></a>df_tv</span></code></pre></div>
-<pre><code>## # A tibble: 845,184 × 5
+<pre><code>## # A tibble: 846,036 × 5
 ##    date       country type      cases population
 ##    &lt;date&gt;     &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;      &lt;dbl&gt;
 ##  1 2020-01-22 Canada  confirmed     0    4413146
@@ -1312,7 +1326,7 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
 ##  8 2020-01-29 Canada  confirmed     0    4413146
 ##  9 2020-01-30 Canada  confirmed     0    4413146
 ## 10 2020-01-31 Canada  confirmed     0    4413146
-## # … with 845,174 more rows</code></pre>
+## # … with 846,026 more rows</code></pre>
 <div class="sourceCode" id="cb1447"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1447-1"><a href="coronavirus.html#cb1447-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(df_tv, <span class="fu">select</span>(coronavirus_tv, date, country, type, cases, population))</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <div class="sourceCode" id="cb1449"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1449-1"><a href="coronavirus.html#cb1449-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(df_tv, <span class="fu">select</span>(coronavirus_tv, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">13</span>))</span></code></pre></div>
@@ -1428,7 +1442,7 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
 <div class="sourceCode" id="cb1461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1461-1"><a href="coronavirus.html#cb1461-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1461-2"><a href="coronavirus.html#cb1461-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1461-3"><a href="coronavirus.html#cb1461-3" aria-hidden="true" tabindex="-1"></a>coronavirus_tv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Rows: 845184 Columns: 15
+<pre><code>## Rows: 846036 Columns: 15
 ## ── Column specification ────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (8): province, country, type, iso2, iso3, combined_key, continent_name,...
@@ -3299,7 +3313,7 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
 ## [11] &quot;Holy See&quot;                         &quot;Iran&quot;                            
 ## [13] &quot;Korea, North&quot;                     &quot;Korea, South&quot;                    
 ## [15] &quot;Kyrgyzstan&quot;                       &quot;Laos&quot;                            
-## [17] &quot;MS Zaandam&quot;                       &quot;Micronesia&quot;                      
+## [17] &quot;Micronesia&quot;                       &quot;MS Zaandam&quot;                      
 ## [19] &quot;Russia&quot;                           &quot;Saint Kitts and Nevis&quot;           
 ## [21] &quot;Saint Lucia&quot;                      &quot;Saint Vincent and the Grenadines&quot;
 ## [23] &quot;Slovakia&quot;                         &quot;Summer Olympics 2020&quot;            
@@ -3351,7 +3365,7 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
 ## [11] &quot;Holy See&quot;                         &quot;Iran&quot;                            
 ## [13] &quot;Korea, North&quot;                     &quot;Korea, South&quot;                    
 ## [15] &quot;Kyrgyzstan&quot;                       &quot;Laos&quot;                            
-## [17] &quot;MS Zaandam&quot;                       &quot;Micronesia&quot;                      
+## [17] &quot;Micronesia&quot;                       &quot;MS Zaandam&quot;                      
 ## [19] &quot;Russia&quot;                           &quot;Saint Kitts and Nevis&quot;           
 ## [21] &quot;Saint Lucia&quot;                      &quot;Saint Vincent and the Grenadines&quot;
 ## [23] &quot;Slovakia&quot;                         &quot;Summer Olympics 2020&quot;            
@@ -3448,8 +3462,8 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
           </div>
         </div>
       </div>
-<a href="model.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="model.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pop.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

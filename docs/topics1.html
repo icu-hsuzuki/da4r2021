@@ -631,6 +631,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="D.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>D.5.4</b> Population of 2019</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="E" data-path="pop.html"><a href="pop.html"><i class="fa fa-check"></i><b>E</b> Appendix E Population</a>
+<ul>
+<li class="chapter" data-level="E.1" data-path="pop.html"><a href="pop.html#about-united-states-census-bureau"><i class="fa fa-check"></i><b>E.1</b> About: United States Census Bureau</a></li>
+<li class="chapter" data-level="E.2" data-path="pop.html"><a href="pop.html#international-data-base-idb-december-2020-release-now-in-2021"><i class="fa fa-check"></i><b>E.2</b> International Data Base (IDB) December 2020 Release (Now in 2021)</a></li>
+<li class="chapter" data-level="E.3" data-path="pop.html"><a href="pop.html#analysis-using-idbzip"><i class="fa fa-check"></i><b>E.3</b> Analysis using <code>idbzip</code></a>
+<ul>
+<li class="chapter" data-level="E.3.1" data-path="pop.html"><a href="pop.html#popultion-of-the-world"><i class="fa fa-check"></i><b>E.3.1</b> Popultion of the World</a></li>
+<li class="chapter" data-level="E.3.2" data-path="pop.html"><a href="pop.html#population-of-a-country-japan"><i class="fa fa-check"></i><b>E.3.2</b> Population of a Country, JAPAN</a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="pop.html"><a href="pop.html#population-pyramid"><i class="fa fa-check"></i><b>E.4</b> Population Pyramid</a>
+<ul>
+<li class="chapter" data-level="E.4.1" data-path="pop.html"><a href="pop.html#population-pyramid-of-japan-or-other-countries"><i class="fa fa-check"></i><b>E.4.1</b> Population Pyramid of Japan or Other Countries</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -690,13 +704,13 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 <div class="sourceCode" id="cb803"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb803-1"><a href="topics1.html#cb803-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># tidyverse Package, a collection of packages for data science</span></span>
 <span id="cb803-2"><a href="topics1.html#cb803-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI) <span class="co"># WDI Package for World Development Indicators</span></span>
 <span id="cb803-3"><a href="topics1.html#cb803-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car) <span class="co">#VIF Tool for checking multi-collinearity</span></span></code></pre></div>
-<pre><code>## Loading required package: carData</code></pre>
+<pre><code>##  要求されたパッケージ carData をロード中です</code></pre>
 <pre><code>## 
-## Attaching package: &#39;car&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+##  次のパッケージを付け加えます: &#39;car&#39;</code></pre>
+<pre><code>##  以下のオブジェクトは &#39;package:dplyr&#39; からマスクされています:
 ## 
 ##     recode</code></pre>
-<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+<pre><code>##  以下のオブジェクトは &#39;package:purrr&#39; からマスクされています:
 ## 
 ##     some</code></pre>
 <div class="sourceCode" id="cb808"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb808-1"><a href="topics1.html#cb808-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co"># Tool for writting tables of the regression results</span></span></code></pre></div>
@@ -780,7 +794,7 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.418e+13 on 44 degrees of freedom
-##   (1 observation deleted due to missingness)
+##   ( 1 個の観測値が欠損のため削除されました )
 ## Multiple R-squared:  0.4127, Adjusted R-squared:  0.3993 
 ## F-statistic: 30.91 on 1 and 44 DF,  p-value: 1.489e-06</code></pre>
 <div class="sourceCode" id="cb819"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb819-1"><a href="topics1.html#cb819-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(land, gdp)) <span class="sc">+</span></span>
@@ -810,7 +824,7 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.236e+13 on 44 degrees of freedom
-##   (1 observation deleted due to missingness)
+##   ( 1 個の観測値が欠損のため削除されました )
 ## Multiple R-squared:  0.5537, Adjusted R-squared:  0.5436 
 ## F-statistic: 54.59 on 1 and 44 DF,  p-value: 3.093e-09</code></pre>
 <div class="sourceCode" id="cb825"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb825-1"><a href="topics1.html#cb825-1" aria-hidden="true" tabindex="-1"></a>gdp_pop_and_land <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> pop <span class="sc">+</span> land, .)</span>
@@ -832,7 +846,7 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.231e+13 on 43 degrees of freedom
-##   (1 observation deleted due to missingness)
+##   ( 1 個の観測値が欠損のため削除されました )
 ## Multiple R-squared:  0.568,  Adjusted R-squared:  0.5479 
 ## F-statistic: 28.27 on 2 and 43 DF,  p-value: 1.457e-08</code></pre>
 <div class="sourceCode" id="cb827"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb827-1"><a href="topics1.html#cb827-1" aria-hidden="true" tabindex="-1"></a>gpa_models <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">gdp_pop =</span> gdp_pop, <span class="at">gdp_land =</span> gdp_land, <span class="at">gdp_pop_and_land =</span> gdp_pop_and_land)</span>
@@ -1259,7 +1273,7 @@ RMSE
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 721600000 on 44 degrees of freedom
-##   (1 observation deleted due to missingness)
+##   ( 1 個の観測値が欠損のため削除されました )
 ## Multiple R-squared:  0.8547, Adjusted R-squared:  0.8514 
 ## F-statistic: 258.8 on 1 and 44 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
@@ -1382,7 +1396,7 @@ RMSE
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 2.114e+12 on 58 degrees of freedom
-##   (1 observation deleted due to missingness)
+##   ( 1 個の観測値が欠損のため削除されました )
 ## Multiple R-squared:  0.05925,    Adjusted R-squared:  0.04303 
 ## F-statistic: 3.653 on 1 and 58 DF,  p-value: 0.06092</code></pre>
 </div>
