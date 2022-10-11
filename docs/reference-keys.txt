@@ -179,7 +179,7 @@ comparison-of-two-variables-in-different-scales
 the-data-with-many-missing-data.
 the-data-in-two-columns-in-one-chart.
 theme-for-ggplot2
-ed4
+eda4
 part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr
 data-transforamtion-by-dplyr-overview-r4ds.
 select-subset-columns-using-their-names-and-types-1
@@ -529,13 +529,6 @@ correlation-and-covariance-1
 regression-analyais-summary-1
 the-asa-statement-on-p-values-context-process-and-purpose-1
 linear-regression-quick-reference-1
-r-and-r-studio
-data-frame-wb_arb
-geom_jitter
-modeling-3
-r-commands-on-statistical-measurements
-more-examples-1
-eda4
 coronavirus
 introduction-2
 exploration-of-data-with-base-r
@@ -578,5 +571,3 @@ region
 income
 summary-of-the-total-confrimed-cases-by-country
 summary-of-new-cases-during-the-past-24-hours-by-country-and-type
-library-loadingattaching-packages
-analysis-suggested-by-rami-krispin

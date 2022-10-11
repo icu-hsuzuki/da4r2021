@@ -23,7 +23,7 @@
 <meta name="author" content="DS SL" />
 
 
-<meta name="date" content="2022-10-10" />
+<meta name="date" content="2022-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,14 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.25/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -281,62 +289,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.3" data-path="eda3.html"><a href="eda3.html#theme-for-ggplot2"><i class="fa fa-check"></i><b>4.3.3</b> <code>theme()</code> for <code>ggplot2()</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ed4.html"><a href="ed4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
+<li class="chapter" data-level="5" data-path="eda4.html"><a href="eda4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
 <ul>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
-<li class="chapter" data-level="5.1" data-path="ed4.html"><a href="ed4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
+<li class="chapter" data-level="5.1" data-path="eda4.html"><a href="eda4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="ed4.html"><a href="ed4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
-<li class="chapter" data-level="5.1.2" data-path="ed4.html"><a href="ed4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
-<li class="chapter" data-level="5.1.3" data-path="ed4.html"><a href="ed4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
-<li class="chapter" data-level="5.1.4" data-path="ed4.html"><a href="ed4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
-<li class="chapter" data-level="5.1.5" data-path="ed4.html"><a href="ed4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
-<li class="chapter" data-level="5.1.6" data-path="ed4.html"><a href="ed4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
-<li class="chapter" data-level="5.1.7" data-path="ed4.html"><a href="ed4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
-<li class="chapter" data-level="5.1.8" data-path="ed4.html"><a href="ed4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
-<li class="chapter" data-level="5.1.9" data-path="ed4.html"><a href="ed4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
-<li class="chapter" data-level="5.1.10" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
-<li class="chapter" data-level="5.1.11" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
-<li class="chapter" data-level="5.1.12" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
-<li class="chapter" data-level="5.1.13" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
-<li class="chapter" data-level="5.1.14" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
-<li class="chapter" data-level="5.1.15" data-path="ed4.html"><a href="ed4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.16" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
-<li class="chapter" data-level="5.1.17" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
-<li class="chapter" data-level="5.1.18" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.19" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.20" data-path="ed4.html"><a href="ed4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
-<li class="chapter" data-level="5.1.21" data-path="ed4.html"><a href="ed4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
-<li class="chapter" data-level="5.1.22" data-path="ed4.html"><a href="ed4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
-<li class="chapter" data-level="5.1.23" data-path="ed4.html"><a href="ed4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
-<li class="chapter" data-level="5.1.24" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
-<li class="chapter" data-level="5.1.25" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
-<li class="chapter" data-level="5.1.26" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
-<li class="chapter" data-level="5.1.27" data-path="ed4.html"><a href="ed4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
+<li class="chapter" data-level="5.1.1" data-path="eda4.html"><a href="eda4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
+<li class="chapter" data-level="5.1.2" data-path="eda4.html"><a href="eda4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="5.1.3" data-path="eda4.html"><a href="eda4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="eda4.html"><a href="eda4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
+<li class="chapter" data-level="5.1.5" data-path="eda4.html"><a href="eda4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="5.1.6" data-path="eda4.html"><a href="eda4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
+<li class="chapter" data-level="5.1.7" data-path="eda4.html"><a href="eda4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="5.1.8" data-path="eda4.html"><a href="eda4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
+<li class="chapter" data-level="5.1.9" data-path="eda4.html"><a href="eda4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
+<li class="chapter" data-level="5.1.10" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
+<li class="chapter" data-level="5.1.11" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
+<li class="chapter" data-level="5.1.12" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
+<li class="chapter" data-level="5.1.13" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
+<li class="chapter" data-level="5.1.14" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
+<li class="chapter" data-level="5.1.15" data-path="eda4.html"><a href="eda4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.16" data-path="eda4.html"><a href="eda4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.17" data-path="eda4.html"><a href="eda4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.18" data-path="eda4.html"><a href="eda4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.19" data-path="eda4.html"><a href="eda4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.20" data-path="eda4.html"><a href="eda4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.21" data-path="eda4.html"><a href="eda4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.22" data-path="eda4.html"><a href="eda4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.23" data-path="eda4.html"><a href="eda4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.24" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.25" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
+<li class="chapter" data-level="5.1.26" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.27" data-path="eda4.html"><a href="eda4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="ed4.html"><a href="ed4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
+<li class="chapter" data-level="5.2" data-path="eda4.html"><a href="eda4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="ed4.html"><a href="ed4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ed4.html"><a href="ed4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ed4.html"><a href="ed4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
-<li class="chapter" data-level="5.2.6" data-path="ed4.html"><a href="ed4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
-<li class="chapter" data-level="5.2.7" data-path="ed4.html"><a href="ed4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
-<li class="chapter" data-level="5.2.8" data-path="ed4.html"><a href="ed4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
-<li class="chapter" data-level="5.2.9" data-path="ed4.html"><a href="ed4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
-<li class="chapter" data-level="5.2.10" data-path="ed4.html"><a href="ed4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
-<li class="chapter" data-level="5.2.11" data-path="ed4.html"><a href="ed4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="5.2.1" data-path="eda4.html"><a href="eda4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
+<li class="chapter" data-level="5.2.2" data-path="eda4.html"><a href="eda4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
+<li class="chapter" data-level="5.2.3" data-path="eda4.html"><a href="eda4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
+<li class="chapter" data-level="5.2.4" data-path="eda4.html"><a href="eda4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
+<li class="chapter" data-level="5.2.5" data-path="eda4.html"><a href="eda4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
+<li class="chapter" data-level="5.2.6" data-path="eda4.html"><a href="eda4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="eda4.html"><a href="eda4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
+<li class="chapter" data-level="5.2.8" data-path="eda4.html"><a href="eda4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
+<li class="chapter" data-level="5.2.9" data-path="eda4.html"><a href="eda4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
+<li class="chapter" data-level="5.2.10" data-path="eda4.html"><a href="eda4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
+<li class="chapter" data-level="5.2.11" data-path="eda4.html"><a href="eda4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="ed4.html"><a href="ed4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
+<li class="chapter" data-level="5.3" data-path="eda4.html"><a href="eda4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="ed4.html"><a href="ed4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="5.3.1" data-path="eda4.html"><a href="eda4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="ed4.html"><a href="ed4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
+<li class="chapter" data-level="5.4" data-path="eda4.html"><a href="eda4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="ed4.html"><a href="ed4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.4.1" data-path="eda4.html"><a href="eda4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html"><i class="fa fa-check"></i><b>6</b> Examples and Comments</a>
@@ -608,6 +616,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C.4.4" data-path="model.html"><a href="model.html#regression-analyais-summary-1"><i class="fa fa-check"></i><b>C.4.4</b> Regression Analyais: Summary</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="D" data-path="coronavirus.html"><a href="coronavirus.html"><i class="fa fa-check"></i><b>D</b> Appendix D Coronavirus</a>
+<ul>
+<li class="chapter" data-level="D.1" data-path="coronavirus.html"><a href="coronavirus.html#introduction-2"><i class="fa fa-check"></i><b>D.1</b> Introduction</a></li>
+<li class="chapter" data-level="D.2" data-path="coronavirus.html"><a href="coronavirus.html#exploration-of-data-with-base-r"><i class="fa fa-check"></i><b>D.2</b> Exploration of Data with Base R</a>
+<ul>
+<li class="chapter" data-level="D.2.1" data-path="coronavirus.html"><a href="coronavirus.html#download-and-read-csv-comma-separated-value-file"><i class="fa fa-check"></i><b>D.2.1</b> Download and read csv (comma separated value) file</a></li>
+<li class="chapter" data-level="D.2.2" data-path="coronavirus.html"><a href="coronavirus.html#summaries-and-structures-of-the-data"><i class="fa fa-check"></i><b>D.2.2</b> Summaries and structures of the data</a></li>
+<li class="chapter" data-level="D.2.3" data-path="coronavirus.html"><a href="coronavirus.html#set-a-country"><i class="fa fa-check"></i><b>D.2.3</b> Set a Country</a></li>
+<li class="chapter" data-level="D.2.4" data-path="coronavirus.html"><a href="coronavirus.html#types-confirmed-death-and-recovery"><i class="fa fa-check"></i><b>D.2.4</b> Types: “confirmed” “death” and “recovery”</a></li>
+<li class="chapter" data-level="D.2.5" data-path="coronavirus.html"><a href="coronavirus.html#data-visualization"><i class="fa fa-check"></i><b>D.2.5</b> Data Visualization</a></li>
+<li class="chapter" data-level="D.2.6" data-path="coronavirus.html"><a href="coronavirus.html#scatter-plot-and-correlation-for-two-numerial-data"><i class="fa fa-check"></i><b>D.2.6</b> Scatter Plot and Correlation for Two Numerial Data</a></li>
+<li class="chapter" data-level="D.2.7" data-path="coronavirus.html"><a href="coronavirus.html#in-addition-set-a-period"><i class="fa fa-check"></i><b>D.2.7</b> In Addition Set a Period</a></li>
+<li class="chapter" data-level="D.2.8" data-path="coronavirus.html"><a href="coronavirus.html#histograms"><i class="fa fa-check"></i><b>D.2.8</b> Histograms</a></li>
+<li class="chapter" data-level="D.2.9" data-path="coronavirus.html"><a href="coronavirus.html#list-observations-and-questions-for-further-exploration"><i class="fa fa-check"></i><b>D.2.9</b> List Observations and Questions for Further Exploration</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="coronavirus.html"><a href="coronavirus.html#selection-of-several-countries-with-ggplot2"><i class="fa fa-check"></i><b>D.3</b> Selection of Several Countries with <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="D.3.1" data-path="coronavirus.html"><a href="coronavirus.html#set-types"><i class="fa fa-check"></i><b>D.3.1</b> Set types</a></li>
+<li class="chapter" data-level="D.3.2" data-path="coronavirus.html"><a href="coronavirus.html#visualization-using-ggplot2-package"><i class="fa fa-check"></i><b>D.3.2</b> Visualization using <code>ggplot2</code> package</a></li>
+<li class="chapter" data-level="D.3.3" data-path="coronavirus.html"><a href="coronavirus.html#setting-a-period"><i class="fa fa-check"></i><b>D.3.3</b> Setting a Period</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="coronavirus.html"><a href="coronavirus.html#importing-and-transforming-data-with-readr-and-dplyr-in-tidyverse-packages"><i class="fa fa-check"></i><b>D.4</b> Importing and Transforming Data with <code>readr</code> and <code>dplyr</code> in <code>tidyverse</code> Packages</a>
+<ul>
+<li class="chapter" data-level="D.4.1" data-path="coronavirus.html"><a href="coronavirus.html#review"><i class="fa fa-check"></i><b>D.4.1</b> Review</a></li>
+<li class="chapter" data-level="D.4.2" data-path="coronavirus.html"><a href="coronavirus.html#importing-data-by-readr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.2</b> Importing data by <code>readr</code> in <code>tidyverse</code></a></li>
+<li class="chapter" data-level="D.4.3" data-path="coronavirus.html"><a href="coronavirus.html#transforming-data-by-dplyr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.3</b> Transforming data by <code>dplyr</code> in <code>tidyverse</code></a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="coronavirus.html"><a href="coronavirus.html#data-of-johns-hopkins-universiy-and-world-bank"><i class="fa fa-check"></i><b>D.5</b> Data of Johns Hopkins Universiy and World Bank</a>
+<ul>
+<li class="chapter" data-level="D.5.1" data-path="coronavirus.html"><a href="coronavirus.html#importing-raw-data"><i class="fa fa-check"></i><b>D.5.1</b> Importing Raw Data</a></li>
+<li class="chapter" data-level="D.5.2" data-path="coronavirus.html"><a href="coronavirus.html#tidying-and-combining-to-create-country-level-and-global-combined-data"><i class="fa fa-check"></i><b>D.5.2</b> Tidying and Combining: To create country level and global combined data</a></li>
+<li class="chapter" data-level="D.5.3" data-path="coronavirus.html"><a href="coronavirus.html#aggregated-by-countries"><i class="fa fa-check"></i><b>D.5.3</b> Aggregated by Countries</a></li>
+<li class="chapter" data-level="D.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>D.5.4</b> Population of 2019</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -634,7 +677,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>He starts with a WDI data in 2016 and use the aggregated part. There may be arguments on the set of data, let us use the same one.</li>
 <li>He defines variance in his slides, and the codes below uses unbiased variance. The difference is minor.</li>
 </ul>
-<div class="sourceCode" id="cb883"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb883-1"><a href="regression-3-co2-emission-standardization.html#cb883-1" aria-hidden="true" tabindex="-1"></a> wb_co2</span></code></pre></div>
+<div class="sourceCode" id="cb907"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb907-1"><a href="regression-3-co2-emission-standardization.html#cb907-1" aria-hidden="true" tabindex="-1"></a> wb_co2</span></code></pre></div>
 <pre><code>## # A tibble: 16,226 × 16
 ##    iso2c country  year status lastu…¹   co2      gdp    pop  cereal iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -651,9 +694,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## # … with 16,216 more rows, 5 more variables: capital &lt;chr&gt;, longitude &lt;chr&gt;,
 ## #   latitude &lt;chr&gt;, income &lt;chr&gt;, lending &lt;chr&gt;, and abbreviated variable name
 ## #   ¹​lastupdated</code></pre>
-<div class="sourceCode" id="cb885"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb885-1"><a href="regression-3-co2-emission-standardization.html#cb885-1" aria-hidden="true" tabindex="-1"></a>co2_ag16 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2016</span>, region<span class="sc">==</span><span class="st">&quot;Aggregates&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb885-2"><a href="regression-3-co2-emission-standardization.html#cb885-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(iso2c, co2, gdp, pop, cereal) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>()</span>
-<span id="cb885-3"><a href="regression-3-co2-emission-standardization.html#cb885-3" aria-hidden="true" tabindex="-1"></a>co2_ag16</span></code></pre></div>
+<div class="sourceCode" id="cb909"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb909-1"><a href="regression-3-co2-emission-standardization.html#cb909-1" aria-hidden="true" tabindex="-1"></a>co2_ag16 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2016</span>, region<span class="sc">==</span><span class="st">&quot;Aggregates&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb909-2"><a href="regression-3-co2-emission-standardization.html#cb909-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(iso2c, co2, gdp, pop, cereal) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>()</span>
+<span id="cb909-3"><a href="regression-3-co2-emission-standardization.html#cb909-3" aria-hidden="true" tabindex="-1"></a>co2_ag16</span></code></pre></div>
 <pre><code>## # A tibble: 46 × 5
 ##    iso2c       co2     gdp        pop    cereal
 ##    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;
@@ -668,11 +711,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  9 OE    11968660. 4.84e13 1341783391 165276397
 ## 10 S1      229110. 4.45e11   39198032   1700592
 ## # … with 36 more rows</code></pre>
-<div class="sourceCode" id="cb887"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb887-1"><a href="regression-3-co2-emission-standardization.html#cb887-1" aria-hidden="true" tabindex="-1"></a>co2_al16_std <span class="ot">&lt;-</span> co2_ag16 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">st_co2 =</span> (co2 <span class="sc">-</span> <span class="fu">mean</span>(co2))<span class="sc">/</span><span class="fu">sd</span>(co2),</span>
-<span id="cb887-2"><a href="regression-3-co2-emission-standardization.html#cb887-2" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_gdp =</span> (gdp <span class="sc">-</span> <span class="fu">mean</span>(gdp))<span class="sc">/</span><span class="fu">sd</span>(gdp),</span>
-<span id="cb887-3"><a href="regression-3-co2-emission-standardization.html#cb887-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_pop =</span> (pop <span class="sc">-</span> <span class="fu">mean</span>(pop))<span class="sc">/</span><span class="fu">sd</span>(pop),</span>
-<span id="cb887-4"><a href="regression-3-co2-emission-standardization.html#cb887-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_cereal =</span> (cereal <span class="sc">-</span> <span class="fu">mean</span>(cereal))<span class="sc">/</span><span class="fu">sd</span>(cereal))</span>
-<span id="cb887-5"><a href="regression-3-co2-emission-standardization.html#cb887-5" aria-hidden="true" tabindex="-1"></a>co2_al16_std</span></code></pre></div>
+<div class="sourceCode" id="cb911"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb911-1"><a href="regression-3-co2-emission-standardization.html#cb911-1" aria-hidden="true" tabindex="-1"></a>co2_al16_std <span class="ot">&lt;-</span> co2_ag16 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">st_co2 =</span> (co2 <span class="sc">-</span> <span class="fu">mean</span>(co2))<span class="sc">/</span><span class="fu">sd</span>(co2),</span>
+<span id="cb911-2"><a href="regression-3-co2-emission-standardization.html#cb911-2" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_gdp =</span> (gdp <span class="sc">-</span> <span class="fu">mean</span>(gdp))<span class="sc">/</span><span class="fu">sd</span>(gdp),</span>
+<span id="cb911-3"><a href="regression-3-co2-emission-standardization.html#cb911-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_pop =</span> (pop <span class="sc">-</span> <span class="fu">mean</span>(pop))<span class="sc">/</span><span class="fu">sd</span>(pop),</span>
+<span id="cb911-4"><a href="regression-3-co2-emission-standardization.html#cb911-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_cereal =</span> (cereal <span class="sc">-</span> <span class="fu">mean</span>(cereal))<span class="sc">/</span><span class="fu">sd</span>(cereal))</span>
+<span id="cb911-5"><a href="regression-3-co2-emission-standardization.html#cb911-5" aria-hidden="true" tabindex="-1"></a>co2_al16_std</span></code></pre></div>
 <pre><code>## # A tibble: 46 × 9
 ##    iso2c       co2     gdp        pop    cereal st_co2 st_gdp st_pop st_cereal
 ##    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;
@@ -687,11 +730,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  9 OE    11968660. 4.84e13 1341783391 165276397  0.792  2.22  -0.111    0.0882
 ## 10 S1      229110. 4.45e11   39198032   1700592 -0.744 -0.694 -0.837   -0.903 
 ## # … with 36 more rows</code></pre>
-<div class="sourceCode" id="cb889"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb889-1"><a href="regression-3-co2-emission-standardization.html#cb889-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled <span class="ot">&lt;-</span> co2_ag16 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">st_co2 =</span> <span class="fu">scale</span>(co2),</span>
-<span id="cb889-2"><a href="regression-3-co2-emission-standardization.html#cb889-2" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_gdp =</span> <span class="fu">scale</span>(gdp),</span>
-<span id="cb889-3"><a href="regression-3-co2-emission-standardization.html#cb889-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_pop =</span> <span class="fu">scale</span>(pop),</span>
-<span id="cb889-4"><a href="regression-3-co2-emission-standardization.html#cb889-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_cereal =</span> <span class="fu">scale</span>(cereal))</span>
-<span id="cb889-5"><a href="regression-3-co2-emission-standardization.html#cb889-5" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled </span></code></pre></div>
+<div class="sourceCode" id="cb913"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb913-1"><a href="regression-3-co2-emission-standardization.html#cb913-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled <span class="ot">&lt;-</span> co2_ag16 <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">st_co2 =</span> <span class="fu">scale</span>(co2),</span>
+<span id="cb913-2"><a href="regression-3-co2-emission-standardization.html#cb913-2" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_gdp =</span> <span class="fu">scale</span>(gdp),</span>
+<span id="cb913-3"><a href="regression-3-co2-emission-standardization.html#cb913-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_pop =</span> <span class="fu">scale</span>(pop),</span>
+<span id="cb913-4"><a href="regression-3-co2-emission-standardization.html#cb913-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">st_cereal =</span> <span class="fu">scale</span>(cereal))</span>
+<span id="cb913-5"><a href="regression-3-co2-emission-standardization.html#cb913-5" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled </span></code></pre></div>
 <pre><code>## # A tibble: 46 × 9
 ##    iso2c       co2     gdp        pop    cereal st_co2…¹ st_gd…² st_po…³ st_ce…⁴
 ##    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -707,7 +750,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 10 S1      229110. 4.45e11   39198032   1700592   -0.744  -0.694  -0.837 -0.903 
 ## # … with 36 more rows, and abbreviated variable names ¹​st_co2[,1], ²​st_gdp[,1],
 ## #   ³​st_pop[,1], ⁴​st_cereal[,1]</code></pre>
-<div class="sourceCode" id="cb891"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb891-1"><a href="regression-3-co2-emission-standardization.html#cb891-1" aria-hidden="true" tabindex="-1"></a>co2_ag16 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">scale</span>() <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb915"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb915-1"><a href="regression-3-co2-emission-standardization.html#cb915-1" aria-hidden="true" tabindex="-1"></a>co2_ag16 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">scale</span>() <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code></pre></div>
 <pre><code>## # A tibble: 46 × 4
 ##       co2    gdp    pop  cereal
 ##     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
@@ -722,7 +765,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  9  0.792  2.22  -0.111  0.0882
 ## 10 -0.744 -0.694 -0.837 -0.903 
 ## # … with 36 more rows</code></pre>
-<div class="sourceCode" id="cb893"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb893-1"><a href="regression-3-co2-emission-standardization.html#cb893-1" aria-hidden="true" tabindex="-1"></a>co2_ag16_rv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/AGCO2rv.csv&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb917"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb917-1"><a href="regression-3-co2-emission-standardization.html#cb917-1" aria-hidden="true" tabindex="-1"></a>co2_ag16_rv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/AGCO2rv.csv&quot;</span>) </span></code></pre></div>
 <pre><code>## Rows: 44 Columns: 4
 ## ── Column specification ────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
@@ -730,7 +773,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb895"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb895-1"><a href="regression-3-co2-emission-standardization.html#cb895-1" aria-hidden="true" tabindex="-1"></a>co2_ag16_rv</span></code></pre></div>
+<div class="sourceCode" id="cb919"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb919-1"><a href="regression-3-co2-emission-standardization.html#cb919-1" aria-hidden="true" tabindex="-1"></a>co2_ag16_rv</span></code></pre></div>
 <pre><code>## # A tibble: 44 × 4
 ##    EN.ATM.CO2E.KT NY.GDP.MKTP.CD SP.POP.TOTL AG.LND.CREL.HA
 ##             &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt;          &lt;dbl&gt;
@@ -745,8 +788,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  9      11961830         4.84e13  1341701902      165097397
 ## 10        228009.        4.45e11    39198032        1809678
 ## # … with 34 more rows</code></pre>
-<div class="sourceCode" id="cb897"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb897-1"><a href="regression-3-co2-emission-standardization.html#cb897-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(co2_ag16_rv) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;st_co2&quot;</span>, <span class="st">&quot;st_gdp&quot;</span>, <span class="st">&quot;st_pop&quot;</span>, <span class="st">&quot;st_cereal&quot;</span>)</span>
-<span id="cb897-2"><a href="regression-3-co2-emission-standardization.html#cb897-2" aria-hidden="true" tabindex="-1"></a>co2_ag16_rv</span></code></pre></div>
+<div class="sourceCode" id="cb921"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb921-1"><a href="regression-3-co2-emission-standardization.html#cb921-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(co2_ag16_rv) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;st_co2&quot;</span>, <span class="st">&quot;st_gdp&quot;</span>, <span class="st">&quot;st_pop&quot;</span>, <span class="st">&quot;st_cereal&quot;</span>)</span>
+<span id="cb921-2"><a href="regression-3-co2-emission-standardization.html#cb921-2" aria-hidden="true" tabindex="-1"></a>co2_ag16_rv</span></code></pre></div>
 <pre><code>## # A tibble: 44 × 4
 ##       st_co2  st_gdp     st_pop st_cereal
 ##        &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;
@@ -763,29 +806,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## # … with 34 more rows</code></pre>
 <div id="regression-2" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Regression<a href="regression-3-co2-emission-standardization.html#regression-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb899"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb899-1"><a href="regression-3-co2-emission-standardization.html#cb899-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(st_gdp, st_co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb899-2"><a href="regression-3-co2-emission-standardization.html#cb899-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb899-3"><a href="regression-3-co2-emission-standardization.html#cb899-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP: Standardized&quot;</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-388-1.png" width="672" /></p>
-<div class="sourceCode" id="cb901"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb901-1"><a href="regression-3-co2-emission-standardization.html#cb901-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(st_pop, st_co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb901-2"><a href="regression-3-co2-emission-standardization.html#cb901-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb901-3"><a href="regression-3-co2-emission-standardization.html#cb901-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Population: Standardized&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb923"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb923-1"><a href="regression-3-co2-emission-standardization.html#cb923-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(st_gdp, st_co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb923-2"><a href="regression-3-co2-emission-standardization.html#cb923-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb923-3"><a href="regression-3-co2-emission-standardization.html#cb923-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP: Standardized&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-389-1.png" width="672" /></p>
-<div class="sourceCode" id="cb903"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb903-1"><a href="regression-3-co2-emission-standardization.html#cb903-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(st_cereal, st_co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb903-2"><a href="regression-3-co2-emission-standardization.html#cb903-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb903-3"><a href="regression-3-co2-emission-standardization.html#cb903-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Land under cereal production: Standardized&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb925"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb925-1"><a href="regression-3-co2-emission-standardization.html#cb925-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(st_pop, st_co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb925-2"><a href="regression-3-co2-emission-standardization.html#cb925-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb925-3"><a href="regression-3-co2-emission-standardization.html#cb925-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Population: Standardized&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-390-1.png" width="672" /></p>
-<div class="sourceCode" id="cb905"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb905-1"><a href="regression-3-co2-emission-standardization.html#cb905-1" aria-hidden="true" tabindex="-1"></a>st_co2_gdp <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp, .)</span>
-<span id="cb905-2"><a href="regression-3-co2-emission-standardization.html#cb905-2" aria-hidden="true" tabindex="-1"></a>st_co2_pop <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_pop, .)</span>
-<span id="cb905-3"><a href="regression-3-co2-emission-standardization.html#cb905-3" aria-hidden="true" tabindex="-1"></a>st_co2_cereal <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_cereal, .)</span>
-<span id="cb905-4"><a href="regression-3-co2-emission-standardization.html#cb905-4" aria-hidden="true" tabindex="-1"></a>st_co2_gdp_pop <span class="ot">&lt;-</span> co2_al16_scaled <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp <span class="sc">+</span> st_pop, .)</span>
-<span id="cb905-5"><a href="regression-3-co2-emission-standardization.html#cb905-5" aria-hidden="true" tabindex="-1"></a>st_co2_gdp_cereal <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp <span class="sc">+</span> st_cereal, .)</span>
-<span id="cb905-6"><a href="regression-3-co2-emission-standardization.html#cb905-6" aria-hidden="true" tabindex="-1"></a>st_co2_pop_cereal <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_pop <span class="sc">+</span> st_cereal, .)</span>
-<span id="cb905-7"><a href="regression-3-co2-emission-standardization.html#cb905-7" aria-hidden="true" tabindex="-1"></a>st_co2_all <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp <span class="sc">+</span> st_pop <span class="sc">+</span> st_cereal, .)</span></code></pre></div>
-<div class="sourceCode" id="cb906"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb906-1"><a href="regression-3-co2-emission-standardization.html#cb906-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">st_gdp =</span> st_co2_gdp, <span class="at">st_pop =</span> st_co2_pop, <span class="at">st_cereal =</span> st_co2_cereal, <span class="at">st_gdp_pop =</span> st_co2_gdp_pop, <span class="at">st_gdp_cereal =</span> st_co2_gdp_cereal, <span class="at">st_pop_cereal =</span> st_co2_pop_cereal, <span class="at">st_all =</span> st_co2_all))</span></code></pre></div>
+<div class="sourceCode" id="cb927"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb927-1"><a href="regression-3-co2-emission-standardization.html#cb927-1" aria-hidden="true" tabindex="-1"></a>co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(st_cereal, st_co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb927-2"><a href="regression-3-co2-emission-standardization.html#cb927-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb927-3"><a href="regression-3-co2-emission-standardization.html#cb927-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Land under cereal production: Standardized&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-391-1.png" width="672" /></p>
+<div class="sourceCode" id="cb929"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb929-1"><a href="regression-3-co2-emission-standardization.html#cb929-1" aria-hidden="true" tabindex="-1"></a>st_co2_gdp <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp, .)</span>
+<span id="cb929-2"><a href="regression-3-co2-emission-standardization.html#cb929-2" aria-hidden="true" tabindex="-1"></a>st_co2_pop <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_pop, .)</span>
+<span id="cb929-3"><a href="regression-3-co2-emission-standardization.html#cb929-3" aria-hidden="true" tabindex="-1"></a>st_co2_cereal <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_cereal, .)</span>
+<span id="cb929-4"><a href="regression-3-co2-emission-standardization.html#cb929-4" aria-hidden="true" tabindex="-1"></a>st_co2_gdp_pop <span class="ot">&lt;-</span> co2_al16_scaled <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp <span class="sc">+</span> st_pop, .)</span>
+<span id="cb929-5"><a href="regression-3-co2-emission-standardization.html#cb929-5" aria-hidden="true" tabindex="-1"></a>st_co2_gdp_cereal <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp <span class="sc">+</span> st_cereal, .)</span>
+<span id="cb929-6"><a href="regression-3-co2-emission-standardization.html#cb929-6" aria-hidden="true" tabindex="-1"></a>st_co2_pop_cereal <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_pop <span class="sc">+</span> st_cereal, .)</span>
+<span id="cb929-7"><a href="regression-3-co2-emission-standardization.html#cb929-7" aria-hidden="true" tabindex="-1"></a>st_co2_all <span class="ot">&lt;-</span> co2_al16_scaled  <span class="sc">%&gt;%</span> <span class="fu">lm</span>(st_co2 <span class="sc">~</span> st_gdp <span class="sc">+</span> st_pop <span class="sc">+</span> st_cereal, .)</span></code></pre></div>
+<div class="sourceCode" id="cb930"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb930-1"><a href="regression-3-co2-emission-standardization.html#cb930-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">st_gdp =</span> st_co2_gdp, <span class="at">st_pop =</span> st_co2_pop, <span class="at">st_cereal =</span> st_co2_cereal, <span class="at">st_gdp_pop =</span> st_co2_gdp_pop, <span class="at">st_gdp_cereal =</span> st_co2_gdp_cereal, <span class="at">st_pop_cereal =</span> st_co2_pop_cereal, <span class="at">st_all =</span> st_co2_all))</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1185,23 +1228,23 @@ RMSE
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb907"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb907-1"><a href="regression-3-co2-emission-standardization.html#cb907-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_pop)</span></code></pre></div>
+<div class="sourceCode" id="cb931"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb931-1"><a href="regression-3-co2-emission-standardization.html#cb931-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_pop)</span></code></pre></div>
 <pre><code>##   st_gdp   st_pop 
 ## 1.666151 1.666151</code></pre>
-<div class="sourceCode" id="cb909"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb909-1"><a href="regression-3-co2-emission-standardization.html#cb909-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb933"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb933-1"><a href="regression-3-co2-emission-standardization.html#cb933-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_cereal)</span></code></pre></div>
 <pre><code>##    st_gdp st_cereal 
 ##  1.894477  1.894477</code></pre>
-<div class="sourceCode" id="cb911"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb911-1"><a href="regression-3-co2-emission-standardization.html#cb911-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_pop_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb935"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb935-1"><a href="regression-3-co2-emission-standardization.html#cb935-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_pop_cereal)</span></code></pre></div>
 <pre><code>##    st_pop st_cereal 
 ##   36.8198   36.8198</code></pre>
-<div class="sourceCode" id="cb913"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb913-1"><a href="regression-3-co2-emission-standardization.html#cb913-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_all)</span></code></pre></div>
+<div class="sourceCode" id="cb937"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb937-1"><a href="regression-3-co2-emission-standardization.html#cb937-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_all)</span></code></pre></div>
 <pre><code>##    st_gdp    st_pop st_cereal 
 ##  2.213042 43.011208 48.905360</code></pre>
 </div>
 <div id="not-standardized" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> Not Standardized<a href="regression-3-co2-emission-standardization.html#not-standardized" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb915"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb915-1"><a href="regression-3-co2-emission-standardization.html#cb915-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>, year <span class="sc">==</span> <span class="dv">2016</span>)</span>
-<span id="cb915-2"><a href="regression-3-co2-emission-standardization.html#cb915-2" aria-hidden="true" tabindex="-1"></a>co2_al16</span></code></pre></div>
+<div class="sourceCode" id="cb939"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb939-1"><a href="regression-3-co2-emission-standardization.html#cb939-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>, year <span class="sc">==</span> <span class="dv">2016</span>)</span>
+<span id="cb939-2"><a href="regression-3-co2-emission-standardization.html#cb939-2" aria-hidden="true" tabindex="-1"></a>co2_al16</span></code></pre></div>
 <pre><code>## # A tibble: 216 × 16
 ##    iso2c country        year status lastu…¹     co2     gdp    pop  cereal iso3c
 ##    &lt;chr&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;
@@ -1221,35 +1264,35 @@ RMSE
 </div>
 <div id="regression-3" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> Regression<a href="regression-3-co2-emission-standardization.html#regression-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb917"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb917-1"><a href="regression-3-co2-emission-standardization.html#cb917-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(gdp, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb917-2"><a href="regression-3-co2-emission-standardization.html#cb917-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb917-3"><a href="regression-3-co2-emission-standardization.html#cb917-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb941"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb941-1"><a href="regression-3-co2-emission-standardization.html#cb941-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(gdp, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb941-2"><a href="regression-3-co2-emission-standardization.html#cb941-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb941-3"><a href="regression-3-co2-emission-standardization.html#cb941-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 30 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 30 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-395-1.png" width="672" /></p>
-<div class="sourceCode" id="cb921"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb921-1"><a href="regression-3-co2-emission-standardization.html#cb921-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb921-2"><a href="regression-3-co2-emission-standardization.html#cb921-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb921-3"><a href="regression-3-co2-emission-standardization.html#cb921-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Population&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-396-1.png" width="672" /></p>
+<div class="sourceCode" id="cb945"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb945-1"><a href="regression-3-co2-emission-standardization.html#cb945-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb945-2"><a href="regression-3-co2-emission-standardization.html#cb945-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb945-3"><a href="regression-3-co2-emission-standardization.html#cb945-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Population&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 27 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 27 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-396-1.png" width="672" /></p>
-<div class="sourceCode" id="cb925"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb925-1"><a href="regression-3-co2-emission-standardization.html#cb925-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(cereal, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb925-2"><a href="regression-3-co2-emission-standardization.html#cb925-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb925-3"><a href="regression-3-co2-emission-standardization.html#cb925-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Land under cereal production&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-397-1.png" width="672" /></p>
+<div class="sourceCode" id="cb949"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb949-1"><a href="regression-3-co2-emission-standardization.html#cb949-1" aria-hidden="true" tabindex="-1"></a>co2_al16 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(cereal, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb949-2"><a href="regression-3-co2-emission-standardization.html#cb949-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb949-3"><a href="regression-3-co2-emission-standardization.html#cb949-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Land under cereal production&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 41 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 41 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-397-1.png" width="672" /></p>
-<div class="sourceCode" id="cb929"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb929-1"><a href="regression-3-co2-emission-standardization.html#cb929-1" aria-hidden="true" tabindex="-1"></a>orig_co2_gdp <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp, .)</span>
-<span id="cb929-2"><a href="regression-3-co2-emission-standardization.html#cb929-2" aria-hidden="true" tabindex="-1"></a>orig_co2_pop <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> pop, .)</span>
-<span id="cb929-3"><a href="regression-3-co2-emission-standardization.html#cb929-3" aria-hidden="true" tabindex="-1"></a>orig_co2_cereal <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> cereal, .)</span>
-<span id="cb929-4"><a href="regression-3-co2-emission-standardization.html#cb929-4" aria-hidden="true" tabindex="-1"></a>orig_co2_gdp_pop <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp <span class="sc">+</span> pop, .)</span>
-<span id="cb929-5"><a href="regression-3-co2-emission-standardization.html#cb929-5" aria-hidden="true" tabindex="-1"></a>orig_co2_gdp_cereal <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp <span class="sc">+</span> cereal, .)</span>
-<span id="cb929-6"><a href="regression-3-co2-emission-standardization.html#cb929-6" aria-hidden="true" tabindex="-1"></a>orig_co2_pop_cereal <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> pop <span class="sc">+</span> cereal, .)</span>
-<span id="cb929-7"><a href="regression-3-co2-emission-standardization.html#cb929-7" aria-hidden="true" tabindex="-1"></a>orig_co2_all <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp <span class="sc">+</span> pop <span class="sc">+</span> cereal, .)</span></code></pre></div>
-<div class="sourceCode" id="cb930"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb930-1"><a href="regression-3-co2-emission-standardization.html#cb930-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">orog_gdp =</span> orig_co2_gdp, <span class="at">orig_pop =</span> orig_co2_pop, <span class="at">orig_cereal =</span> orig_co2_cereal, <span class="at">orig_gdp_pop =</span> orig_co2_gdp_pop, <span class="at">orig_gdp_cereal =</span> orig_co2_gdp_cereal, <span class="at">orig_pop_cereal =</span> orig_co2_pop_cereal, <span class="at">orig_all =</span> orig_co2_all))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-398-1.png" width="672" /></p>
+<div class="sourceCode" id="cb953"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb953-1"><a href="regression-3-co2-emission-standardization.html#cb953-1" aria-hidden="true" tabindex="-1"></a>orig_co2_gdp <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp, .)</span>
+<span id="cb953-2"><a href="regression-3-co2-emission-standardization.html#cb953-2" aria-hidden="true" tabindex="-1"></a>orig_co2_pop <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> pop, .)</span>
+<span id="cb953-3"><a href="regression-3-co2-emission-standardization.html#cb953-3" aria-hidden="true" tabindex="-1"></a>orig_co2_cereal <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> cereal, .)</span>
+<span id="cb953-4"><a href="regression-3-co2-emission-standardization.html#cb953-4" aria-hidden="true" tabindex="-1"></a>orig_co2_gdp_pop <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp <span class="sc">+</span> pop, .)</span>
+<span id="cb953-5"><a href="regression-3-co2-emission-standardization.html#cb953-5" aria-hidden="true" tabindex="-1"></a>orig_co2_gdp_cereal <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp <span class="sc">+</span> cereal, .)</span>
+<span id="cb953-6"><a href="regression-3-co2-emission-standardization.html#cb953-6" aria-hidden="true" tabindex="-1"></a>orig_co2_pop_cereal <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> pop <span class="sc">+</span> cereal, .)</span>
+<span id="cb953-7"><a href="regression-3-co2-emission-standardization.html#cb953-7" aria-hidden="true" tabindex="-1"></a>orig_co2_all <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(co2 <span class="sc">~</span> gdp <span class="sc">+</span> pop <span class="sc">+</span> cereal, .)</span></code></pre></div>
+<div class="sourceCode" id="cb954"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb954-1"><a href="regression-3-co2-emission-standardization.html#cb954-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">orog_gdp =</span> orig_co2_gdp, <span class="at">orig_pop =</span> orig_co2_pop, <span class="at">orig_cereal =</span> orig_co2_cereal, <span class="at">orig_gdp_pop =</span> orig_co2_gdp_pop, <span class="at">orig_gdp_cereal =</span> orig_co2_gdp_cereal, <span class="at">orig_pop_cereal =</span> orig_co2_pop_cereal, <span class="at">orig_all =</span> orig_co2_all))</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1649,21 +1692,21 @@ RMSE
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb931"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb931-1"><a href="regression-3-co2-emission-standardization.html#cb931-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_gdp_pop)</span></code></pre></div>
+<div class="sourceCode" id="cb955"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb955-1"><a href="regression-3-co2-emission-standardization.html#cb955-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_gdp_pop)</span></code></pre></div>
 <pre><code>##      gdp      pop 
 ## 1.498289 1.498289</code></pre>
-<div class="sourceCode" id="cb933"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb933-1"><a href="regression-3-co2-emission-standardization.html#cb933-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_gdp_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb957"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb957-1"><a href="regression-3-co2-emission-standardization.html#cb957-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_gdp_cereal)</span></code></pre></div>
 <pre><code>##      gdp   cereal 
 ## 1.795285 1.795285</code></pre>
-<div class="sourceCode" id="cb935"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb935-1"><a href="regression-3-co2-emission-standardization.html#cb935-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_pop_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb959"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb959-1"><a href="regression-3-co2-emission-standardization.html#cb959-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_pop_cereal)</span></code></pre></div>
 <pre><code>##      pop   cereal 
 ## 8.098126 8.098126</code></pre>
-<div class="sourceCode" id="cb937"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb937-1"><a href="regression-3-co2-emission-standardization.html#cb937-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_all)</span></code></pre></div>
+<div class="sourceCode" id="cb961"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb961-1"><a href="regression-3-co2-emission-standardization.html#cb961-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(orig_co2_all)</span></code></pre></div>
 <pre><code>##       gdp       pop    cereal 
 ##  1.859018  8.401085 10.101136</code></pre>
 <div id="standadized-again" class="section level3 hasAnchor" number="10.3.1">
 <h3><span class="header-section-number">10.3.1</span> Standadized (Again)<a href="regression-3-co2-emission-standardization.html#standadized-again" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb939"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb939-1"><a href="regression-3-co2-emission-standardization.html#cb939-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">st_gdp =</span> st_co2_gdp, <span class="at">st_pop =</span> st_co2_pop, <span class="at">st_cereal =</span> st_co2_cereal, <span class="at">st_gdp_pop =</span> st_co2_gdp_pop, <span class="at">st_gdp_cereal =</span> st_co2_gdp_cereal, <span class="at">st_pop_cereal =</span> st_co2_pop_cereal, <span class="at">st_all =</span> st_co2_all))</span></code></pre></div>
+<div class="sourceCode" id="cb963"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb963-1"><a href="regression-3-co2-emission-standardization.html#cb963-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">st_gdp =</span> st_co2_gdp, <span class="at">st_pop =</span> st_co2_pop, <span class="at">st_cereal =</span> st_co2_cereal, <span class="at">st_gdp_pop =</span> st_co2_gdp_pop, <span class="at">st_gdp_cereal =</span> st_co2_gdp_cereal, <span class="at">st_pop_cereal =</span> st_co2_pop_cereal, <span class="at">st_all =</span> st_co2_all))</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -2063,16 +2106,16 @@ RMSE
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb940"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb940-1"><a href="regression-3-co2-emission-standardization.html#cb940-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_pop)</span></code></pre></div>
+<div class="sourceCode" id="cb964"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb964-1"><a href="regression-3-co2-emission-standardization.html#cb964-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_pop)</span></code></pre></div>
 <pre><code>##   st_gdp   st_pop 
 ## 1.666151 1.666151</code></pre>
-<div class="sourceCode" id="cb942"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb942-1"><a href="regression-3-co2-emission-standardization.html#cb942-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb966"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb966-1"><a href="regression-3-co2-emission-standardization.html#cb966-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_gdp_cereal)</span></code></pre></div>
 <pre><code>##    st_gdp st_cereal 
 ##  1.894477  1.894477</code></pre>
-<div class="sourceCode" id="cb944"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb944-1"><a href="regression-3-co2-emission-standardization.html#cb944-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_pop_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb968"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb968-1"><a href="regression-3-co2-emission-standardization.html#cb968-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_pop_cereal)</span></code></pre></div>
 <pre><code>##    st_pop st_cereal 
 ##   36.8198   36.8198</code></pre>
-<div class="sourceCode" id="cb946"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb946-1"><a href="regression-3-co2-emission-standardization.html#cb946-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_all)</span></code></pre></div>
+<div class="sourceCode" id="cb970"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb970-1"><a href="regression-3-co2-emission-standardization.html#cb970-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(st_co2_all)</span></code></pre></div>
 <pre><code>##    st_gdp    st_pop st_cereal 
 ##  2.213042 43.011208 48.905360</code></pre>
 </div>

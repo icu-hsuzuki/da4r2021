@@ -23,7 +23,7 @@
 <meta name="author" content="DS SL" />
 
 
-<meta name="date" content="2022-10-10" />
+<meta name="date" content="2022-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,14 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.25/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -281,62 +289,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.3" data-path="eda3.html"><a href="eda3.html#theme-for-ggplot2"><i class="fa fa-check"></i><b>4.3.3</b> <code>theme()</code> for <code>ggplot2()</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ed4.html"><a href="ed4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
+<li class="chapter" data-level="5" data-path="eda4.html"><a href="eda4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
 <ul>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
-<li class="chapter" data-level="5.1" data-path="ed4.html"><a href="ed4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
+<li class="chapter" data-level="5.1" data-path="eda4.html"><a href="eda4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="ed4.html"><a href="ed4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
-<li class="chapter" data-level="5.1.2" data-path="ed4.html"><a href="ed4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
-<li class="chapter" data-level="5.1.3" data-path="ed4.html"><a href="ed4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
-<li class="chapter" data-level="5.1.4" data-path="ed4.html"><a href="ed4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
-<li class="chapter" data-level="5.1.5" data-path="ed4.html"><a href="ed4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
-<li class="chapter" data-level="5.1.6" data-path="ed4.html"><a href="ed4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
-<li class="chapter" data-level="5.1.7" data-path="ed4.html"><a href="ed4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
-<li class="chapter" data-level="5.1.8" data-path="ed4.html"><a href="ed4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
-<li class="chapter" data-level="5.1.9" data-path="ed4.html"><a href="ed4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
-<li class="chapter" data-level="5.1.10" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
-<li class="chapter" data-level="5.1.11" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
-<li class="chapter" data-level="5.1.12" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
-<li class="chapter" data-level="5.1.13" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
-<li class="chapter" data-level="5.1.14" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
-<li class="chapter" data-level="5.1.15" data-path="ed4.html"><a href="ed4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.16" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
-<li class="chapter" data-level="5.1.17" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
-<li class="chapter" data-level="5.1.18" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.19" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.20" data-path="ed4.html"><a href="ed4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
-<li class="chapter" data-level="5.1.21" data-path="ed4.html"><a href="ed4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
-<li class="chapter" data-level="5.1.22" data-path="ed4.html"><a href="ed4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
-<li class="chapter" data-level="5.1.23" data-path="ed4.html"><a href="ed4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
-<li class="chapter" data-level="5.1.24" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
-<li class="chapter" data-level="5.1.25" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
-<li class="chapter" data-level="5.1.26" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
-<li class="chapter" data-level="5.1.27" data-path="ed4.html"><a href="ed4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
+<li class="chapter" data-level="5.1.1" data-path="eda4.html"><a href="eda4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
+<li class="chapter" data-level="5.1.2" data-path="eda4.html"><a href="eda4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="5.1.3" data-path="eda4.html"><a href="eda4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="eda4.html"><a href="eda4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
+<li class="chapter" data-level="5.1.5" data-path="eda4.html"><a href="eda4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="5.1.6" data-path="eda4.html"><a href="eda4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
+<li class="chapter" data-level="5.1.7" data-path="eda4.html"><a href="eda4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="5.1.8" data-path="eda4.html"><a href="eda4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
+<li class="chapter" data-level="5.1.9" data-path="eda4.html"><a href="eda4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
+<li class="chapter" data-level="5.1.10" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
+<li class="chapter" data-level="5.1.11" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
+<li class="chapter" data-level="5.1.12" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
+<li class="chapter" data-level="5.1.13" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
+<li class="chapter" data-level="5.1.14" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
+<li class="chapter" data-level="5.1.15" data-path="eda4.html"><a href="eda4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.16" data-path="eda4.html"><a href="eda4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.17" data-path="eda4.html"><a href="eda4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.18" data-path="eda4.html"><a href="eda4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.19" data-path="eda4.html"><a href="eda4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.20" data-path="eda4.html"><a href="eda4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.21" data-path="eda4.html"><a href="eda4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.22" data-path="eda4.html"><a href="eda4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.23" data-path="eda4.html"><a href="eda4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.24" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.25" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
+<li class="chapter" data-level="5.1.26" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.27" data-path="eda4.html"><a href="eda4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="ed4.html"><a href="ed4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
+<li class="chapter" data-level="5.2" data-path="eda4.html"><a href="eda4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="ed4.html"><a href="ed4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ed4.html"><a href="ed4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ed4.html"><a href="ed4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
-<li class="chapter" data-level="5.2.6" data-path="ed4.html"><a href="ed4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
-<li class="chapter" data-level="5.2.7" data-path="ed4.html"><a href="ed4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
-<li class="chapter" data-level="5.2.8" data-path="ed4.html"><a href="ed4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
-<li class="chapter" data-level="5.2.9" data-path="ed4.html"><a href="ed4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
-<li class="chapter" data-level="5.2.10" data-path="ed4.html"><a href="ed4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
-<li class="chapter" data-level="5.2.11" data-path="ed4.html"><a href="ed4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="5.2.1" data-path="eda4.html"><a href="eda4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
+<li class="chapter" data-level="5.2.2" data-path="eda4.html"><a href="eda4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
+<li class="chapter" data-level="5.2.3" data-path="eda4.html"><a href="eda4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
+<li class="chapter" data-level="5.2.4" data-path="eda4.html"><a href="eda4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
+<li class="chapter" data-level="5.2.5" data-path="eda4.html"><a href="eda4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
+<li class="chapter" data-level="5.2.6" data-path="eda4.html"><a href="eda4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="eda4.html"><a href="eda4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
+<li class="chapter" data-level="5.2.8" data-path="eda4.html"><a href="eda4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
+<li class="chapter" data-level="5.2.9" data-path="eda4.html"><a href="eda4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
+<li class="chapter" data-level="5.2.10" data-path="eda4.html"><a href="eda4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
+<li class="chapter" data-level="5.2.11" data-path="eda4.html"><a href="eda4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="ed4.html"><a href="ed4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
+<li class="chapter" data-level="5.3" data-path="eda4.html"><a href="eda4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="ed4.html"><a href="ed4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="5.3.1" data-path="eda4.html"><a href="eda4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="ed4.html"><a href="ed4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
+<li class="chapter" data-level="5.4" data-path="eda4.html"><a href="eda4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="ed4.html"><a href="ed4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.4.1" data-path="eda4.html"><a href="eda4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html"><i class="fa fa-check"></i><b>6</b> Examples and Comments</a>
@@ -608,6 +616,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C.4.4" data-path="model.html"><a href="model.html#regression-analyais-summary-1"><i class="fa fa-check"></i><b>C.4.4</b> Regression Analyais: Summary</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="D" data-path="coronavirus.html"><a href="coronavirus.html"><i class="fa fa-check"></i><b>D</b> Appendix D Coronavirus</a>
+<ul>
+<li class="chapter" data-level="D.1" data-path="coronavirus.html"><a href="coronavirus.html#introduction-2"><i class="fa fa-check"></i><b>D.1</b> Introduction</a></li>
+<li class="chapter" data-level="D.2" data-path="coronavirus.html"><a href="coronavirus.html#exploration-of-data-with-base-r"><i class="fa fa-check"></i><b>D.2</b> Exploration of Data with Base R</a>
+<ul>
+<li class="chapter" data-level="D.2.1" data-path="coronavirus.html"><a href="coronavirus.html#download-and-read-csv-comma-separated-value-file"><i class="fa fa-check"></i><b>D.2.1</b> Download and read csv (comma separated value) file</a></li>
+<li class="chapter" data-level="D.2.2" data-path="coronavirus.html"><a href="coronavirus.html#summaries-and-structures-of-the-data"><i class="fa fa-check"></i><b>D.2.2</b> Summaries and structures of the data</a></li>
+<li class="chapter" data-level="D.2.3" data-path="coronavirus.html"><a href="coronavirus.html#set-a-country"><i class="fa fa-check"></i><b>D.2.3</b> Set a Country</a></li>
+<li class="chapter" data-level="D.2.4" data-path="coronavirus.html"><a href="coronavirus.html#types-confirmed-death-and-recovery"><i class="fa fa-check"></i><b>D.2.4</b> Types: “confirmed” “death” and “recovery”</a></li>
+<li class="chapter" data-level="D.2.5" data-path="coronavirus.html"><a href="coronavirus.html#data-visualization"><i class="fa fa-check"></i><b>D.2.5</b> Data Visualization</a></li>
+<li class="chapter" data-level="D.2.6" data-path="coronavirus.html"><a href="coronavirus.html#scatter-plot-and-correlation-for-two-numerial-data"><i class="fa fa-check"></i><b>D.2.6</b> Scatter Plot and Correlation for Two Numerial Data</a></li>
+<li class="chapter" data-level="D.2.7" data-path="coronavirus.html"><a href="coronavirus.html#in-addition-set-a-period"><i class="fa fa-check"></i><b>D.2.7</b> In Addition Set a Period</a></li>
+<li class="chapter" data-level="D.2.8" data-path="coronavirus.html"><a href="coronavirus.html#histograms"><i class="fa fa-check"></i><b>D.2.8</b> Histograms</a></li>
+<li class="chapter" data-level="D.2.9" data-path="coronavirus.html"><a href="coronavirus.html#list-observations-and-questions-for-further-exploration"><i class="fa fa-check"></i><b>D.2.9</b> List Observations and Questions for Further Exploration</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="coronavirus.html"><a href="coronavirus.html#selection-of-several-countries-with-ggplot2"><i class="fa fa-check"></i><b>D.3</b> Selection of Several Countries with <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="D.3.1" data-path="coronavirus.html"><a href="coronavirus.html#set-types"><i class="fa fa-check"></i><b>D.3.1</b> Set types</a></li>
+<li class="chapter" data-level="D.3.2" data-path="coronavirus.html"><a href="coronavirus.html#visualization-using-ggplot2-package"><i class="fa fa-check"></i><b>D.3.2</b> Visualization using <code>ggplot2</code> package</a></li>
+<li class="chapter" data-level="D.3.3" data-path="coronavirus.html"><a href="coronavirus.html#setting-a-period"><i class="fa fa-check"></i><b>D.3.3</b> Setting a Period</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="coronavirus.html"><a href="coronavirus.html#importing-and-transforming-data-with-readr-and-dplyr-in-tidyverse-packages"><i class="fa fa-check"></i><b>D.4</b> Importing and Transforming Data with <code>readr</code> and <code>dplyr</code> in <code>tidyverse</code> Packages</a>
+<ul>
+<li class="chapter" data-level="D.4.1" data-path="coronavirus.html"><a href="coronavirus.html#review"><i class="fa fa-check"></i><b>D.4.1</b> Review</a></li>
+<li class="chapter" data-level="D.4.2" data-path="coronavirus.html"><a href="coronavirus.html#importing-data-by-readr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.2</b> Importing data by <code>readr</code> in <code>tidyverse</code></a></li>
+<li class="chapter" data-level="D.4.3" data-path="coronavirus.html"><a href="coronavirus.html#transforming-data-by-dplyr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.3</b> Transforming data by <code>dplyr</code> in <code>tidyverse</code></a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="coronavirus.html"><a href="coronavirus.html#data-of-johns-hopkins-universiy-and-world-bank"><i class="fa fa-check"></i><b>D.5</b> Data of Johns Hopkins Universiy and World Bank</a>
+<ul>
+<li class="chapter" data-level="D.5.1" data-path="coronavirus.html"><a href="coronavirus.html#importing-raw-data"><i class="fa fa-check"></i><b>D.5.1</b> Importing Raw Data</a></li>
+<li class="chapter" data-level="D.5.2" data-path="coronavirus.html"><a href="coronavirus.html#tidying-and-combining-to-create-country-level-and-global-combined-data"><i class="fa fa-check"></i><b>D.5.2</b> Tidying and Combining: To create country level and global combined data</a></li>
+<li class="chapter" data-level="D.5.3" data-path="coronavirus.html"><a href="coronavirus.html#aggregated-by-countries"><i class="fa fa-check"></i><b>D.5.3</b> Aggregated by Countries</a></li>
+<li class="chapter" data-level="D.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>D.5.4</b> Population of 2019</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -662,17 +705,17 @@ independent variable</li>
 <li>pop = SP.POP.TOTL: Total Population</li>
 <li>cereal = AG.LND.CREL.HA: Land under cereal production (hectares)</li>
 </ul>
-<div class="sourceCode" id="cb832"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb832-1"><a href="regression-2-co2-emission.html#cb832-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;EN.ATM.CO2E.KT&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">short =</span> <span class="cn">FALSE</span>)[[<span class="dv">3</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb856"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb856-1"><a href="regression-2-co2-emission.html#cb856-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;EN.ATM.CO2E.KT&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">short =</span> <span class="cn">FALSE</span>)[[<span class="dv">3</span>]]</span></code></pre></div>
 <pre><code>## [1] &quot;Carbon dioxide emissions are those stemming from the burning of fossil fuels and the manufacture of cement. They include carbon dioxide produced during consumption of solid, liquid, and gas fuels and gas flaring.&quot;</code></pre>
-<div class="sourceCode" id="cb834"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb834-1"><a href="regression-2-co2-emission.html#cb834-1" aria-hidden="true" tabindex="-1"></a>wb_co2<span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(<span class="at">country=</span><span class="st">&quot;all&quot;</span>, </span>
-<span id="cb834-2"><a href="regression-2-co2-emission.html#cb834-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">indicator=</span><span class="fu">c</span>(<span class="at">co2 =</span> <span class="st">&quot;EN.ATM.CO2E.KT&quot;</span>,</span>
-<span id="cb834-3"><a href="regression-2-co2-emission.html#cb834-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">gdp =</span> <span class="st">&quot;NY.GDP.MKTP.CD&quot;</span>,</span>
-<span id="cb834-4"><a href="regression-2-co2-emission.html#cb834-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">pop =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>,</span>
-<span id="cb834-5"><a href="regression-2-co2-emission.html#cb834-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">cereal =</span> <span class="st">&quot;AG.LND.CREL.HA&quot;</span>),</span>
-<span id="cb834-6"><a href="regression-2-co2-emission.html#cb834-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">start=</span><span class="dv">1960</span>,</span>
-<span id="cb834-7"><a href="regression-2-co2-emission.html#cb834-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">end=</span><span class="dv">2020</span>,</span>
-<span id="cb834-8"><a href="regression-2-co2-emission.html#cb834-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">extra=</span><span class="cn">TRUE</span>))</span>
-<span id="cb834-9"><a href="regression-2-co2-emission.html#cb834-9" aria-hidden="true" tabindex="-1"></a>wb_co2</span></code></pre></div>
+<div class="sourceCode" id="cb858"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb858-1"><a href="regression-2-co2-emission.html#cb858-1" aria-hidden="true" tabindex="-1"></a>wb_co2<span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(<span class="at">country=</span><span class="st">&quot;all&quot;</span>, </span>
+<span id="cb858-2"><a href="regression-2-co2-emission.html#cb858-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">indicator=</span><span class="fu">c</span>(<span class="at">co2 =</span> <span class="st">&quot;EN.ATM.CO2E.KT&quot;</span>,</span>
+<span id="cb858-3"><a href="regression-2-co2-emission.html#cb858-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">gdp =</span> <span class="st">&quot;NY.GDP.MKTP.CD&quot;</span>,</span>
+<span id="cb858-4"><a href="regression-2-co2-emission.html#cb858-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">pop =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>,</span>
+<span id="cb858-5"><a href="regression-2-co2-emission.html#cb858-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">cereal =</span> <span class="st">&quot;AG.LND.CREL.HA&quot;</span>),</span>
+<span id="cb858-6"><a href="regression-2-co2-emission.html#cb858-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">start=</span><span class="dv">1960</span>,</span>
+<span id="cb858-7"><a href="regression-2-co2-emission.html#cb858-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">end=</span><span class="dv">2020</span>,</span>
+<span id="cb858-8"><a href="regression-2-co2-emission.html#cb858-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">extra=</span><span class="cn">TRUE</span>))</span>
+<span id="cb858-9"><a href="regression-2-co2-emission.html#cb858-9" aria-hidden="true" tabindex="-1"></a>wb_co2</span></code></pre></div>
 <pre><code>## # A tibble: 16,226 × 16
 ##    iso2c country  year status lastu…¹   co2      gdp    pop  cereal iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -694,8 +737,8 @@ independent variable</li>
 <!-- write_csv(wb_co2, file="wb_co2.csv") -->
 <!-- ``` -->
 <p>In the lecture the folloiwng is used. However, regions are overlapping and it seems to be better to chooose non-aggregated data.</p>
-<div class="sourceCode" id="cb836"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb836-1"><a href="regression-2-co2-emission.html#cb836-1" aria-hidden="true" tabindex="-1"></a>wb_co2_16 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2016</span> <span class="sc">&amp;</span> region<span class="sc">==</span><span class="st">&quot;Aggregates&quot;</span>)</span>
-<span id="cb836-2"><a href="regression-2-co2-emission.html#cb836-2" aria-hidden="true" tabindex="-1"></a>wb_co2_16</span></code></pre></div>
+<div class="sourceCode" id="cb860"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb860-1"><a href="regression-2-co2-emission.html#cb860-1" aria-hidden="true" tabindex="-1"></a>wb_co2_16 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2016</span> <span class="sc">&amp;</span> region<span class="sc">==</span><span class="st">&quot;Aggregates&quot;</span>)</span>
+<span id="cb860-2"><a href="regression-2-co2-emission.html#cb860-2" aria-hidden="true" tabindex="-1"></a>wb_co2_16</span></code></pre></div>
 <pre><code>## # A tibble: 47 × 16
 ##    iso2c country   year status lastu…¹    co2     gdp    pop cereal iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -712,8 +755,8 @@ independent variable</li>
 ## # … with 37 more rows, 5 more variables: capital &lt;chr&gt;, longitude &lt;chr&gt;,
 ## #   latitude &lt;chr&gt;, income &lt;chr&gt;, lending &lt;chr&gt;, and abbreviated variable name
 ## #   ¹​lastupdated</code></pre>
-<div class="sourceCode" id="cb838"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb838-1"><a href="regression-2-co2-emission.html#cb838-1" aria-hidden="true" tabindex="-1"></a>wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>, <span class="sc">!</span><span class="fu">is.na</span>(co2)) <span class="sc">%&gt;%</span> </span>
-<span id="cb838-2"><a href="regression-2-co2-emission.html#cb838-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n_distinct</span>(country)) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(n), <span class="fu">desc</span>(year))</span></code></pre></div>
+<div class="sourceCode" id="cb862"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb862-1"><a href="regression-2-co2-emission.html#cb862-1" aria-hidden="true" tabindex="-1"></a>wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>, <span class="sc">!</span><span class="fu">is.na</span>(co2)) <span class="sc">%&gt;%</span> </span>
+<span id="cb862-2"><a href="regression-2-co2-emission.html#cb862-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n_distinct</span>(country)) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(n), <span class="fu">desc</span>(year))</span></code></pre></div>
 <pre><code>## # A tibble: 30 × 2
 ##     year     n
 ##    &lt;int&gt; &lt;int&gt;
@@ -729,8 +772,8 @@ independent variable</li>
 ## 10  2010   190
 ## # … with 20 more rows</code></pre>
 <p>Let us choose non-aggregated data in 2018.</p>
-<div class="sourceCode" id="cb840"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb840-1"><a href="regression-2-co2-emission.html#cb840-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>, <span class="sc">!</span><span class="fu">is.na</span>(co2), year <span class="sc">==</span> <span class="dv">2018</span>) </span>
-<span id="cb840-2"><a href="regression-2-co2-emission.html#cb840-2" aria-hidden="true" tabindex="-1"></a>wb_co2_18</span></code></pre></div>
+<div class="sourceCode" id="cb864"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb864-1"><a href="regression-2-co2-emission.html#cb864-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>, <span class="sc">!</span><span class="fu">is.na</span>(co2), year <span class="sc">==</span> <span class="dv">2018</span>) </span>
+<span id="cb864-2"><a href="regression-2-co2-emission.html#cb864-2" aria-hidden="true" tabindex="-1"></a>wb_co2_18</span></code></pre></div>
 <pre><code>## # A tibble: 190 × 16
 ##    iso2c country  year status lastu…¹    co2     gdp    pop  cereal iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -751,49 +794,49 @@ independent variable</li>
 </div>
 <div id="regression-1" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> Regression<a href="regression-2-co2-emission.html#regression-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb842"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb842-1"><a href="regression-2-co2-emission.html#cb842-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(gdp, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb842-2"><a href="regression-2-co2-emission.html#cb842-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb842-3"><a href="regression-2-co2-emission.html#cb842-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb866"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb866-1"><a href="regression-2-co2-emission.html#cb866-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(gdp, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb866-2"><a href="regression-2-co2-emission.html#cb866-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb866-3"><a href="regression-2-co2-emission.html#cb866-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 4 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 4 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-366-1.png" width="672" /></p>
-<div class="sourceCode" id="cb846"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb846-1"><a href="regression-2-co2-emission.html#cb846-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(gdp, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb846-2"><a href="regression-2-co2-emission.html#cb846-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb846-3"><a href="regression-2-co2-emission.html#cb846-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span> <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb846-4"><a href="regression-2-co2-emission.html#cb846-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP in Log-Log scale&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-367-1.png" width="672" /></p>
+<div class="sourceCode" id="cb870"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb870-1"><a href="regression-2-co2-emission.html#cb870-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(gdp, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb870-2"><a href="regression-2-co2-emission.html#cb870-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb870-3"><a href="regression-2-co2-emission.html#cb870-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span> <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb870-4"><a href="regression-2-co2-emission.html#cb870-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and GDP in Log-Log scale&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 4 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 4 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-367-1.png" width="672" />
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-368-1.png" width="672" />
 Let us take log-log plot</p>
-<div class="sourceCode" id="cb850"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb850-1"><a href="regression-2-co2-emission.html#cb850-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb850-2"><a href="regression-2-co2-emission.html#cb850-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb850-3"><a href="regression-2-co2-emission.html#cb850-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span> <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb850-4"><a href="regression-2-co2-emission.html#cb850-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Population in Log-Log scale&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb874"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb874-1"><a href="regression-2-co2-emission.html#cb874-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb874-2"><a href="regression-2-co2-emission.html#cb874-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb874-3"><a href="regression-2-co2-emission.html#cb874-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span> <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb874-4"><a href="regression-2-co2-emission.html#cb874-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Population in Log-Log scale&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 1 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-368-1.png" width="672" /></p>
-<div class="sourceCode" id="cb854"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb854-1"><a href="regression-2-co2-emission.html#cb854-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(cereal, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb854-2"><a href="regression-2-co2-emission.html#cb854-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb854-3"><a href="regression-2-co2-emission.html#cb854-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span> <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb854-4"><a href="regression-2-co2-emission.html#cb854-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Land under cereal production in Log-Log scale&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-369-1.png" width="672" /></p>
+<div class="sourceCode" id="cb878"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb878-1"><a href="regression-2-co2-emission.html#cb878-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(cereal, co2)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb878-2"><a href="regression-2-co2-emission.html#cb878-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb878-3"><a href="regression-2-co2-emission.html#cb878-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span> <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb878-4"><a href="regression-2-co2-emission.html#cb878-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;CO2 emission and Land under cereal production in Log-Log scale&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Transformation introduced infinite values in continuous x-axis
 ## Transformation introduced infinite values in continuous x-axis</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 16 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 14 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-369-1.png" width="672" /></p>
-<div class="sourceCode" id="cb859"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb859-1"><a href="regression-2-co2-emission.html#cb859-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18m <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(co2), <span class="sc">!</span><span class="fu">is.na</span>(gdp), <span class="sc">!</span><span class="fu">is.na</span>(pop), <span class="sc">!</span><span class="fu">is.na</span>(cereal), cereal <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
-<span id="cb859-2"><a href="regression-2-co2-emission.html#cb859-2" aria-hidden="true" tabindex="-1"></a>co2_gdp <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp), .)</span>
-<span id="cb859-3"><a href="regression-2-co2-emission.html#cb859-3" aria-hidden="true" tabindex="-1"></a>co2_pop <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(pop), .)</span>
-<span id="cb859-4"><a href="regression-2-co2-emission.html#cb859-4" aria-hidden="true" tabindex="-1"></a>co2_cereal <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(cereal), .)</span>
-<span id="cb859-5"><a href="regression-2-co2-emission.html#cb859-5" aria-hidden="true" tabindex="-1"></a>co2_gdp_pop <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp) <span class="sc">+</span> <span class="fu">log10</span>(pop), .)</span>
-<span id="cb859-6"><a href="regression-2-co2-emission.html#cb859-6" aria-hidden="true" tabindex="-1"></a>co2_gdp_cereal <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp) <span class="sc">+</span> <span class="fu">log10</span>(cereal), .)</span>
-<span id="cb859-7"><a href="regression-2-co2-emission.html#cb859-7" aria-hidden="true" tabindex="-1"></a>co2_pop_cereal <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(pop) <span class="sc">+</span> <span class="fu">log10</span>(cereal), .)</span>
-<span id="cb859-8"><a href="regression-2-co2-emission.html#cb859-8" aria-hidden="true" tabindex="-1"></a>co2_all <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp) <span class="sc">+</span> <span class="fu">log10</span>(pop) <span class="sc">+</span> <span class="fu">log10</span>(cereal), .)</span></code></pre></div>
-<div class="sourceCode" id="cb860"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb860-1"><a href="regression-2-co2-emission.html#cb860-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">gdp =</span> co2_gdp, <span class="at">pop =</span> co2_pop, <span class="at">cereal =</span> co2_cereal, <span class="at">gdp_pop =</span> co2_gdp_pop, <span class="at">gdp_cereal =</span> co2_gdp_cereal, <span class="at">pop_cereal =</span> co2_pop_cereal, <span class="at">all =</span> co2_all))</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-370-1.png" width="672" /></p>
+<div class="sourceCode" id="cb883"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb883-1"><a href="regression-2-co2-emission.html#cb883-1" aria-hidden="true" tabindex="-1"></a>wb_co2_18m <span class="ot">&lt;-</span> wb_co2_18 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(co2), <span class="sc">!</span><span class="fu">is.na</span>(gdp), <span class="sc">!</span><span class="fu">is.na</span>(pop), <span class="sc">!</span><span class="fu">is.na</span>(cereal), cereal <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb883-2"><a href="regression-2-co2-emission.html#cb883-2" aria-hidden="true" tabindex="-1"></a>co2_gdp <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp), .)</span>
+<span id="cb883-3"><a href="regression-2-co2-emission.html#cb883-3" aria-hidden="true" tabindex="-1"></a>co2_pop <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(pop), .)</span>
+<span id="cb883-4"><a href="regression-2-co2-emission.html#cb883-4" aria-hidden="true" tabindex="-1"></a>co2_cereal <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(cereal), .)</span>
+<span id="cb883-5"><a href="regression-2-co2-emission.html#cb883-5" aria-hidden="true" tabindex="-1"></a>co2_gdp_pop <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp) <span class="sc">+</span> <span class="fu">log10</span>(pop), .)</span>
+<span id="cb883-6"><a href="regression-2-co2-emission.html#cb883-6" aria-hidden="true" tabindex="-1"></a>co2_gdp_cereal <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp) <span class="sc">+</span> <span class="fu">log10</span>(cereal), .)</span>
+<span id="cb883-7"><a href="regression-2-co2-emission.html#cb883-7" aria-hidden="true" tabindex="-1"></a>co2_pop_cereal <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(pop) <span class="sc">+</span> <span class="fu">log10</span>(cereal), .)</span>
+<span id="cb883-8"><a href="regression-2-co2-emission.html#cb883-8" aria-hidden="true" tabindex="-1"></a>co2_all <span class="ot">&lt;-</span> wb_co2_18m <span class="sc">%&gt;%</span> <span class="fu">lm</span>(<span class="fu">log10</span>(co2) <span class="sc">~</span> <span class="fu">log10</span>(gdp) <span class="sc">+</span> <span class="fu">log10</span>(pop) <span class="sc">+</span> <span class="fu">log10</span>(cereal), .)</span></code></pre></div>
+<div class="sourceCode" id="cb884"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb884-1"><a href="regression-2-co2-emission.html#cb884-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">gdp =</span> co2_gdp, <span class="at">pop =</span> co2_pop, <span class="at">cereal =</span> co2_cereal, <span class="at">gdp_pop =</span> co2_gdp_pop, <span class="at">gdp_cereal =</span> co2_gdp_cereal, <span class="at">pop_cereal =</span> co2_pop_cereal, <span class="at">all =</span> co2_all))</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1193,19 +1236,19 @@ RMSE
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb861"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb861-1"><a href="regression-2-co2-emission.html#cb861-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_gdp_pop)</span></code></pre></div>
+<div class="sourceCode" id="cb885"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb885-1"><a href="regression-2-co2-emission.html#cb885-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_gdp_pop)</span></code></pre></div>
 <pre><code>## log10(gdp) log10(pop) 
 ##   2.374532   2.374532</code></pre>
-<div class="sourceCode" id="cb863"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb863-1"><a href="regression-2-co2-emission.html#cb863-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_gdp_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb887"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb887-1"><a href="regression-2-co2-emission.html#cb887-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_gdp_cereal)</span></code></pre></div>
 <pre><code>##    log10(gdp) log10(cereal) 
 ##        1.5193        1.5193</code></pre>
-<div class="sourceCode" id="cb865"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb865-1"><a href="regression-2-co2-emission.html#cb865-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_pop_cereal)</span></code></pre></div>
+<div class="sourceCode" id="cb889"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb889-1"><a href="regression-2-co2-emission.html#cb889-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_pop_cereal)</span></code></pre></div>
 <pre><code>##    log10(pop) log10(cereal) 
 ##      3.447368      3.447368</code></pre>
-<div class="sourceCode" id="cb867"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb867-1"><a href="regression-2-co2-emission.html#cb867-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_all)</span></code></pre></div>
+<div class="sourceCode" id="cb891"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb891-1"><a href="regression-2-co2-emission.html#cb891-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(co2_all)</span></code></pre></div>
 <pre><code>##    log10(gdp)    log10(pop) log10(cereal) 
 ##      2.438050      5.532058      3.539584</code></pre>
-<div class="sourceCode" id="cb869"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb869-1"><a href="regression-2-co2-emission.html#cb869-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="at">gdp_pop =</span> <span class="fu">vif</span>(co2_gdp_pop), <span class="at">gdp_cereal =</span> <span class="fu">vif</span>(co2_gdp_cereal), <span class="at">pop_cereal =</span> <span class="fu">vif</span>(co2_pop_cereal), <span class="at">all =</span> <span class="fu">vif</span>(co2_all))</span></code></pre></div>
+<div class="sourceCode" id="cb893"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb893-1"><a href="regression-2-co2-emission.html#cb893-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="at">gdp_pop =</span> <span class="fu">vif</span>(co2_gdp_pop), <span class="at">gdp_cereal =</span> <span class="fu">vif</span>(co2_gdp_cereal), <span class="at">pop_cereal =</span> <span class="fu">vif</span>(co2_pop_cereal), <span class="at">all =</span> <span class="fu">vif</span>(co2_all))</span></code></pre></div>
 <pre><code>## $gdp_pop
 ## log10(gdp) log10(pop) 
 ##   2.374532   2.374532 
@@ -1229,8 +1272,8 @@ RMSE
 </div>
 <div id="a-time-series-data-of-world-from-1960-to-2020-1" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> A time series data of World from 1960 to 2020<a href="regression-2-co2-emission.html#a-time-series-data-of-world-from-1960-to-2020-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb871"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb871-1"><a href="regression-2-co2-emission.html#cb871-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">&quot;World&quot;</span>)</span>
-<span id="cb871-2"><a href="regression-2-co2-emission.html#cb871-2" aria-hidden="true" tabindex="-1"></a>wb_co2_world </span></code></pre></div>
+<div class="sourceCode" id="cb895"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb895-1"><a href="regression-2-co2-emission.html#cb895-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world <span class="ot">&lt;-</span> wb_co2 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">&quot;World&quot;</span>)</span>
+<span id="cb895-2"><a href="regression-2-co2-emission.html#cb895-2" aria-hidden="true" tabindex="-1"></a>wb_co2_world </span></code></pre></div>
 <pre><code>## # A tibble: 61 × 16
 ##    iso2c country  year status lastu…¹     co2     gdp    pop cereal iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -1247,18 +1290,18 @@ RMSE
 ## # … with 51 more rows, 5 more variables: capital &lt;chr&gt;, longitude &lt;chr&gt;,
 ## #   latitude &lt;chr&gt;, income &lt;chr&gt;, lending &lt;chr&gt;, and abbreviated variable name
 ## #   ¹​lastupdated</code></pre>
-<div class="sourceCode" id="cb873"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb873-1"><a href="regression-2-co2-emission.html#cb873-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb873-2"><a href="regression-2-co2-emission.html#cb873-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> co2)) <span class="sc">+</span></span>
-<span id="cb873-3"><a href="regression-2-co2-emission.html#cb873-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Co2 Emmision of the World&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb897"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb897-1"><a href="regression-2-co2-emission.html#cb897-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb897-2"><a href="regression-2-co2-emission.html#cb897-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> co2)) <span class="sc">+</span></span>
+<span id="cb897-3"><a href="regression-2-co2-emission.html#cb897-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Co2 Emmision of the World&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 31 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-375-1.png" width="672" /></p>
-<div class="sourceCode" id="cb875"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb875-1"><a href="regression-2-co2-emission.html#cb875-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb875-2"><a href="regression-2-co2-emission.html#cb875-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> gdp)) <span class="sc">+</span></span>
-<span id="cb875-3"><a href="regression-2-co2-emission.html#cb875-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP (current US$)&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-376-1.png" width="672" /></p>
-<div class="sourceCode" id="cb876"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb876-1"><a href="regression-2-co2-emission.html#cb876-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="ot">&lt;-</span> wb_co2_world <span class="sc">%&gt;%</span> </span>
-<span id="cb876-2"><a href="regression-2-co2-emission.html#cb876-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff_co2 =</span> co2 <span class="sc">-</span> <span class="fu">lag</span>(co2), <span class="at">diff_gdp =</span> gdp <span class="sc">-</span> <span class="fu">lag</span>(gdp))</span>
-<span id="cb876-3"><a href="regression-2-co2-emission.html#cb876-3" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra</span></code></pre></div>
+<div class="sourceCode" id="cb899"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb899-1"><a href="regression-2-co2-emission.html#cb899-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb899-2"><a href="regression-2-co2-emission.html#cb899-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> gdp)) <span class="sc">+</span></span>
+<span id="cb899-3"><a href="regression-2-co2-emission.html#cb899-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP (current US$)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-377-1.png" width="672" /></p>
+<div class="sourceCode" id="cb900"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb900-1"><a href="regression-2-co2-emission.html#cb900-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="ot">&lt;-</span> wb_co2_world <span class="sc">%&gt;%</span> </span>
+<span id="cb900-2"><a href="regression-2-co2-emission.html#cb900-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff_co2 =</span> co2 <span class="sc">-</span> <span class="fu">lag</span>(co2), <span class="at">diff_gdp =</span> gdp <span class="sc">-</span> <span class="fu">lag</span>(gdp))</span>
+<span id="cb900-3"><a href="regression-2-co2-emission.html#cb900-3" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra</span></code></pre></div>
 <pre><code>## # A tibble: 61 × 18
 ##    iso2c country  year status lastu…¹     co2     gdp    pop cereal iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -1275,14 +1318,14 @@ RMSE
 ## # … with 51 more rows, 7 more variables: capital &lt;chr&gt;, longitude &lt;chr&gt;,
 ## #   latitude &lt;chr&gt;, income &lt;chr&gt;, lending &lt;chr&gt;, diff_co2 &lt;dbl&gt;,
 ## #   diff_gdp &lt;dbl&gt;, and abbreviated variable name ¹​lastupdated</code></pre>
-<div class="sourceCode" id="cb878"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb878-1"><a href="regression-2-co2-emission.html#cb878-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_co2)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb878-2"><a href="regression-2-co2-emission.html#cb878-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Changes of World CO2 emission&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb902"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb902-1"><a href="regression-2-co2-emission.html#cb902-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_co2)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb902-2"><a href="regression-2-co2-emission.html#cb902-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Changes of World CO2 emission&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 32 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-378-1.png" width="672" /></p>
-<div class="sourceCode" id="cb880"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb880-1"><a href="regression-2-co2-emission.html#cb880-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_gdp)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb880-2"><a href="regression-2-co2-emission.html#cb880-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Changes of World GDP&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-379-1.png" width="672" /></p>
-<div class="sourceCode" id="cb881"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb881-1"><a href="regression-2-co2-emission.html#cb881-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="sc">%&gt;%</span> <span class="fu">lm</span>(diff_co2 <span class="sc">~</span> diff_gdp, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb904"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb904-1"><a href="regression-2-co2-emission.html#cb904-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_gdp)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb904-2"><a href="regression-2-co2-emission.html#cb904-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Changes of World GDP&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-380-1.png" width="672" /></p>
+<div class="sourceCode" id="cb905"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb905-1"><a href="regression-2-co2-emission.html#cb905-1" aria-hidden="true" tabindex="-1"></a>wb_co2_world_extra <span class="sc">%&gt;%</span> <span class="fu">lm</span>(diff_co2 <span class="sc">~</span> diff_gdp, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = diff_co2 ~ diff_gdp, data = .)
@@ -1299,7 +1342,7 @@ RMSE
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 578100 on 20 degrees of freedom
-##   ( 39 個の観測値が欠損のため削除されました )
+##   (39 observations deleted due to missingness)
 ## Multiple R-squared:  0.9827, Adjusted R-squared:  0.9818 
 ## F-statistic:  1136 on 1 and 20 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>

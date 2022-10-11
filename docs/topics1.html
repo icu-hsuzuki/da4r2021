@@ -23,7 +23,7 @@
 <meta name="author" content="DS SL" />
 
 
-<meta name="date" content="2022-10-10" />
+<meta name="date" content="2022-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,14 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.25/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -281,62 +289,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.3" data-path="eda3.html"><a href="eda3.html#theme-for-ggplot2"><i class="fa fa-check"></i><b>4.3.3</b> <code>theme()</code> for <code>ggplot2()</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ed4.html"><a href="ed4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
+<li class="chapter" data-level="5" data-path="eda4.html"><a href="eda4.html"><i class="fa fa-check"></i><b>5</b> Exploratory Data Analysis (EDA) 4</a>
 <ul>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
-<li class="chapter" data-level="" data-path="ed4.html"><a href="ed4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
-<li class="chapter" data-level="5.1" data-path="ed4.html"><a href="ed4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#course-contents-3"><i class="fa fa-check"></i>Course Contents</a></li>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#transforming-and-tidying-data"><i class="fa fa-check"></i>Transforming and Tidying Data</a></li>
+<li class="chapter" data-level="" data-path="eda4.html"><a href="eda4.html#contents-of-eda4"><i class="fa fa-check"></i>Contents of EDA4</a></li>
+<li class="chapter" data-level="5.1" data-path="eda4.html"><a href="eda4.html#part-i-more-on-transforming-by-dplyr-and-tidying-by-tidyr"><i class="fa fa-check"></i><b>5.1</b> Part I: More on Transforming by <code>dplyr</code> and Tidying by <code>tidyr</code></a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="ed4.html"><a href="ed4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
-<li class="chapter" data-level="5.1.2" data-path="ed4.html"><a href="ed4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
-<li class="chapter" data-level="5.1.3" data-path="ed4.html"><a href="ed4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
-<li class="chapter" data-level="5.1.4" data-path="ed4.html"><a href="ed4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
-<li class="chapter" data-level="5.1.5" data-path="ed4.html"><a href="ed4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
-<li class="chapter" data-level="5.1.6" data-path="ed4.html"><a href="ed4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
-<li class="chapter" data-level="5.1.7" data-path="ed4.html"><a href="ed4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
-<li class="chapter" data-level="5.1.8" data-path="ed4.html"><a href="ed4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
-<li class="chapter" data-level="5.1.9" data-path="ed4.html"><a href="ed4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
-<li class="chapter" data-level="5.1.10" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
-<li class="chapter" data-level="5.1.11" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
-<li class="chapter" data-level="5.1.12" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
-<li class="chapter" data-level="5.1.13" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
-<li class="chapter" data-level="5.1.14" data-path="ed4.html"><a href="ed4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
-<li class="chapter" data-level="5.1.15" data-path="ed4.html"><a href="ed4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.16" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
-<li class="chapter" data-level="5.1.17" data-path="ed4.html"><a href="ed4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
-<li class="chapter" data-level="5.1.18" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.19" data-path="ed4.html"><a href="ed4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
-<li class="chapter" data-level="5.1.20" data-path="ed4.html"><a href="ed4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
-<li class="chapter" data-level="5.1.21" data-path="ed4.html"><a href="ed4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
-<li class="chapter" data-level="5.1.22" data-path="ed4.html"><a href="ed4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
-<li class="chapter" data-level="5.1.23" data-path="ed4.html"><a href="ed4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
-<li class="chapter" data-level="5.1.24" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
-<li class="chapter" data-level="5.1.25" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
-<li class="chapter" data-level="5.1.26" data-path="ed4.html"><a href="ed4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
-<li class="chapter" data-level="5.1.27" data-path="ed4.html"><a href="ed4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
+<li class="chapter" data-level="5.1.1" data-path="eda4.html"><a href="eda4.html#data-transforamtion-by-dplyr-overview-r4ds."><i class="fa fa-check"></i><b>5.1.1</b> Data Transforamtion by <code>dplyr</code> <span>Overview</span> – <span>r4ds</span>.</a></li>
+<li class="chapter" data-level="5.1.2" data-path="eda4.html"><a href="eda4.html#select-subset-columns-using-their-names-and-types-1"><i class="fa fa-check"></i><b>5.1.2</b> <span><code>select</code></span>: Subset columns using their names and types</a></li>
+<li class="chapter" data-level="5.1.3" data-path="eda4.html"><a href="eda4.html#iris"><i class="fa fa-check"></i><b>5.1.3</b> <code>iris</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="eda4.html"><a href="eda4.html#select-example"><i class="fa fa-check"></i><b>5.1.4</b> <code>select</code>: Example</a></li>
+<li class="chapter" data-level="5.1.5" data-path="eda4.html"><a href="eda4.html#filter-subset-rows-using-column-values-1"><i class="fa fa-check"></i><b>5.1.5</b> <span><code>filter</code></span>: Subset rows using column values</a></li>
+<li class="chapter" data-level="5.1.6" data-path="eda4.html"><a href="eda4.html#mutate"><i class="fa fa-check"></i><b>5.1.6</b> <span><code>mutate</code></span></a></li>
+<li class="chapter" data-level="5.1.7" data-path="eda4.html"><a href="eda4.html#arrange-and-pipe-1"><i class="fa fa-check"></i><b>5.1.7</b> <span><code>arrange</code></span> and <code>Pipe %&gt;%</code></a></li>
+<li class="chapter" data-level="5.1.8" data-path="eda4.html"><a href="eda4.html#group_by-and-summarise"><i class="fa fa-check"></i><b>5.1.8</b> <code>group_by()</code> and <code>summarise()</code></a></li>
+<li class="chapter" data-level="5.1.9" data-path="eda4.html"><a href="eda4.html#tidy-data"><i class="fa fa-check"></i><b>5.1.9</b> Tidy Data</a></li>
+<li class="chapter" data-level="5.1.10" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-i"><i class="fa fa-check"></i><b>5.1.10</b> Tidy Data and Untidy Data, I</a></li>
+<li class="chapter" data-level="5.1.11" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-ii"><i class="fa fa-check"></i><b>5.1.11</b> Tidy Data and Untidy Data, II</a></li>
+<li class="chapter" data-level="5.1.12" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-iii"><i class="fa fa-check"></i><b>5.1.12</b> Tidy Data and Untidy Data, III</a></li>
+<li class="chapter" data-level="5.1.13" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-iv"><i class="fa fa-check"></i><b>5.1.13</b> Tidy Data and Untidy Data, IV</a></li>
+<li class="chapter" data-level="5.1.14" data-path="eda4.html"><a href="eda4.html#tidy-data-and-untidy-data-v"><i class="fa fa-check"></i><b>5.1.14</b> Tidy Data and Untidy Data, V</a></li>
+<li class="chapter" data-level="5.1.15" data-path="eda4.html"><a href="eda4.html#tidying-data-with-pivot_longer-and-pivot_wider"><i class="fa fa-check"></i><b>5.1.15</b> Tidying Data with <code>pivot_longer</code>, and <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.16" data-path="eda4.html"><a href="eda4.html#example-1-pivot_longer"><i class="fa fa-check"></i><b>5.1.16</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.17" data-path="eda4.html"><a href="eda4.html#example-1-pivot_longer-1"><i class="fa fa-check"></i><b>5.1.17</b> Example 1: <code>pivot_longer</code></a></li>
+<li class="chapter" data-level="5.1.18" data-path="eda4.html"><a href="eda4.html#example-2-pivot_wider"><i class="fa fa-check"></i><b>5.1.18</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.19" data-path="eda4.html"><a href="eda4.html#example-2-pivot_wider-1"><i class="fa fa-check"></i><b>5.1.19</b> Example 2: <code>pivot_wider</code></a></li>
+<li class="chapter" data-level="5.1.20" data-path="eda4.html"><a href="eda4.html#example-3-separate"><i class="fa fa-check"></i><b>5.1.20</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.21" data-path="eda4.html"><a href="eda4.html#example-3-separate-1"><i class="fa fa-check"></i><b>5.1.21</b> Example 3: <code>separate</code></a></li>
+<li class="chapter" data-level="5.1.22" data-path="eda4.html"><a href="eda4.html#example-3-unite"><i class="fa fa-check"></i><b>5.1.22</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.23" data-path="eda4.html"><a href="eda4.html#example-3-unite-1"><i class="fa fa-check"></i><b>5.1.23</b> Example 3: <code>unite</code></a></li>
+<li class="chapter" data-level="5.1.24" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows"><i class="fa fa-check"></i><b>5.1.24</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.25" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows---1st-step"><i class="fa fa-check"></i><b>5.1.25</b> Example 5: <span><code>bind_rows</code></span> - 1st Step</a></li>
+<li class="chapter" data-level="5.1.26" data-path="eda4.html"><a href="eda4.html#example-5-bind_rows-1"><i class="fa fa-check"></i><b>5.1.26</b> Example 5: <span><code>bind_rows</code></span></a></li>
+<li class="chapter" data-level="5.1.27" data-path="eda4.html"><a href="eda4.html#example-i-1"><i class="fa fa-check"></i><b>5.1.27</b> Example I</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="ed4.html"><a href="ed4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
+<li class="chapter" data-level="5.2" data-path="eda4.html"><a href="eda4.html#part-ii-various-databases"><i class="fa fa-check"></i><b>5.2</b> Part II: Various Databases</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="ed4.html"><a href="ed4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ed4.html"><a href="ed4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ed4.html"><a href="ed4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ed4.html"><a href="ed4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
-<li class="chapter" data-level="5.2.6" data-path="ed4.html"><a href="ed4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
-<li class="chapter" data-level="5.2.7" data-path="ed4.html"><a href="ed4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
-<li class="chapter" data-level="5.2.8" data-path="ed4.html"><a href="ed4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
-<li class="chapter" data-level="5.2.9" data-path="ed4.html"><a href="ed4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
-<li class="chapter" data-level="5.2.10" data-path="ed4.html"><a href="ed4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
-<li class="chapter" data-level="5.2.11" data-path="ed4.html"><a href="ed4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
+<li class="chapter" data-level="5.2.1" data-path="eda4.html"><a href="eda4.html#example-ii-1"><i class="fa fa-check"></i><b>5.2.1</b> Example II</a></li>
+<li class="chapter" data-level="5.2.2" data-path="eda4.html"><a href="eda4.html#world-development-indicators-wdi"><i class="fa fa-check"></i><b>5.2.2</b> World Development Indicators: ?WDI</a></li>
+<li class="chapter" data-level="5.2.3" data-path="eda4.html"><a href="eda4.html#world-bank-country-and-lending-groups"><i class="fa fa-check"></i><b>5.2.3</b> World Bank Country and Lending Groups</a></li>
+<li class="chapter" data-level="5.2.4" data-path="eda4.html"><a href="eda4.html#importing-excel-files-part-i"><i class="fa fa-check"></i><b>5.2.4</b> Importing Excel Files, Part I</a></li>
+<li class="chapter" data-level="5.2.5" data-path="eda4.html"><a href="eda4.html#importing-excel-files-part-ii"><i class="fa fa-check"></i><b>5.2.5</b> Importing Excel Files, Part II</a></li>
+<li class="chapter" data-level="5.2.6" data-path="eda4.html"><a href="eda4.html#filtering-joins"><i class="fa fa-check"></i><b>5.2.6</b> <span>Filtering Joins</span></a></li>
+<li class="chapter" data-level="5.2.7" data-path="eda4.html"><a href="eda4.html#join-tables"><i class="fa fa-check"></i><b>5.2.7</b> Join Tables</a></li>
+<li class="chapter" data-level="5.2.8" data-path="eda4.html"><a href="eda4.html#join-tables-quick-references"><i class="fa fa-check"></i><b>5.2.8</b> Join Tables: Quick References</a></li>
+<li class="chapter" data-level="5.2.9" data-path="eda4.html"><a href="eda4.html#public-data-un-data"><i class="fa fa-check"></i><b>5.2.9</b> Public Data: UN Data</a></li>
+<li class="chapter" data-level="5.2.10" data-path="eda4.html"><a href="eda4.html#learning-resources-iv"><i class="fa fa-check"></i><b>5.2.10</b> Learning Resources, IV</a></li>
+<li class="chapter" data-level="5.2.11" data-path="eda4.html"><a href="eda4.html#the-fifth-assignment-in-moodle"><i class="fa fa-check"></i><b>5.2.11</b> The Fifth Assignment (in Moodle)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="ed4.html"><a href="ed4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
+<li class="chapter" data-level="5.3" data-path="eda4.html"><a href="eda4.html#responses-to-the-fifth-assignment"><i class="fa fa-check"></i><b>5.3</b> Responses to the Fifth Assignment</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="ed4.html"><a href="ed4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
+<li class="chapter" data-level="5.3.1" data-path="eda4.html"><a href="eda4.html#setup-and-yaml-1"><i class="fa fa-check"></i><b>5.3.1</b> Setup and YAML</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="ed4.html"><a href="ed4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
+<li class="chapter" data-level="5.4" data-path="eda4.html"><a href="eda4.html#class.xls"><i class="fa fa-check"></i><b>5.4</b> <code>CLASS.xls</code></a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="ed4.html"><a href="ed4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.4.1" data-path="eda4.html"><a href="eda4.html#introduction"><i class="fa fa-check"></i><b>5.4.1</b> Introduction</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="examples-and-comments-1.html"><a href="examples-and-comments-1.html"><i class="fa fa-check"></i><b>6</b> Examples and Comments</a>
@@ -608,6 +616,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C.4.4" data-path="model.html"><a href="model.html#regression-analyais-summary-1"><i class="fa fa-check"></i><b>C.4.4</b> Regression Analyais: Summary</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="D" data-path="coronavirus.html"><a href="coronavirus.html"><i class="fa fa-check"></i><b>D</b> Appendix D Coronavirus</a>
+<ul>
+<li class="chapter" data-level="D.1" data-path="coronavirus.html"><a href="coronavirus.html#introduction-2"><i class="fa fa-check"></i><b>D.1</b> Introduction</a></li>
+<li class="chapter" data-level="D.2" data-path="coronavirus.html"><a href="coronavirus.html#exploration-of-data-with-base-r"><i class="fa fa-check"></i><b>D.2</b> Exploration of Data with Base R</a>
+<ul>
+<li class="chapter" data-level="D.2.1" data-path="coronavirus.html"><a href="coronavirus.html#download-and-read-csv-comma-separated-value-file"><i class="fa fa-check"></i><b>D.2.1</b> Download and read csv (comma separated value) file</a></li>
+<li class="chapter" data-level="D.2.2" data-path="coronavirus.html"><a href="coronavirus.html#summaries-and-structures-of-the-data"><i class="fa fa-check"></i><b>D.2.2</b> Summaries and structures of the data</a></li>
+<li class="chapter" data-level="D.2.3" data-path="coronavirus.html"><a href="coronavirus.html#set-a-country"><i class="fa fa-check"></i><b>D.2.3</b> Set a Country</a></li>
+<li class="chapter" data-level="D.2.4" data-path="coronavirus.html"><a href="coronavirus.html#types-confirmed-death-and-recovery"><i class="fa fa-check"></i><b>D.2.4</b> Types: “confirmed” “death” and “recovery”</a></li>
+<li class="chapter" data-level="D.2.5" data-path="coronavirus.html"><a href="coronavirus.html#data-visualization"><i class="fa fa-check"></i><b>D.2.5</b> Data Visualization</a></li>
+<li class="chapter" data-level="D.2.6" data-path="coronavirus.html"><a href="coronavirus.html#scatter-plot-and-correlation-for-two-numerial-data"><i class="fa fa-check"></i><b>D.2.6</b> Scatter Plot and Correlation for Two Numerial Data</a></li>
+<li class="chapter" data-level="D.2.7" data-path="coronavirus.html"><a href="coronavirus.html#in-addition-set-a-period"><i class="fa fa-check"></i><b>D.2.7</b> In Addition Set a Period</a></li>
+<li class="chapter" data-level="D.2.8" data-path="coronavirus.html"><a href="coronavirus.html#histograms"><i class="fa fa-check"></i><b>D.2.8</b> Histograms</a></li>
+<li class="chapter" data-level="D.2.9" data-path="coronavirus.html"><a href="coronavirus.html#list-observations-and-questions-for-further-exploration"><i class="fa fa-check"></i><b>D.2.9</b> List Observations and Questions for Further Exploration</a></li>
+</ul></li>
+<li class="chapter" data-level="D.3" data-path="coronavirus.html"><a href="coronavirus.html#selection-of-several-countries-with-ggplot2"><i class="fa fa-check"></i><b>D.3</b> Selection of Several Countries with <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="D.3.1" data-path="coronavirus.html"><a href="coronavirus.html#set-types"><i class="fa fa-check"></i><b>D.3.1</b> Set types</a></li>
+<li class="chapter" data-level="D.3.2" data-path="coronavirus.html"><a href="coronavirus.html#visualization-using-ggplot2-package"><i class="fa fa-check"></i><b>D.3.2</b> Visualization using <code>ggplot2</code> package</a></li>
+<li class="chapter" data-level="D.3.3" data-path="coronavirus.html"><a href="coronavirus.html#setting-a-period"><i class="fa fa-check"></i><b>D.3.3</b> Setting a Period</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="coronavirus.html"><a href="coronavirus.html#importing-and-transforming-data-with-readr-and-dplyr-in-tidyverse-packages"><i class="fa fa-check"></i><b>D.4</b> Importing and Transforming Data with <code>readr</code> and <code>dplyr</code> in <code>tidyverse</code> Packages</a>
+<ul>
+<li class="chapter" data-level="D.4.1" data-path="coronavirus.html"><a href="coronavirus.html#review"><i class="fa fa-check"></i><b>D.4.1</b> Review</a></li>
+<li class="chapter" data-level="D.4.2" data-path="coronavirus.html"><a href="coronavirus.html#importing-data-by-readr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.2</b> Importing data by <code>readr</code> in <code>tidyverse</code></a></li>
+<li class="chapter" data-level="D.4.3" data-path="coronavirus.html"><a href="coronavirus.html#transforming-data-by-dplyr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.3</b> Transforming data by <code>dplyr</code> in <code>tidyverse</code></a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="coronavirus.html"><a href="coronavirus.html#data-of-johns-hopkins-universiy-and-world-bank"><i class="fa fa-check"></i><b>D.5</b> Data of Johns Hopkins Universiy and World Bank</a>
+<ul>
+<li class="chapter" data-level="D.5.1" data-path="coronavirus.html"><a href="coronavirus.html#importing-raw-data"><i class="fa fa-check"></i><b>D.5.1</b> Importing Raw Data</a></li>
+<li class="chapter" data-level="D.5.2" data-path="coronavirus.html"><a href="coronavirus.html#tidying-and-combining-to-create-country-level-and-global-combined-data"><i class="fa fa-check"></i><b>D.5.2</b> Tidying and Combining: To create country level and global combined data</a></li>
+<li class="chapter" data-level="D.5.3" data-path="coronavirus.html"><a href="coronavirus.html#aggregated-by-countries"><i class="fa fa-check"></i><b>D.5.3</b> Aggregated by Countries</a></li>
+<li class="chapter" data-level="D.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>D.5.4</b> Population of 2019</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -664,19 +707,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 install.packages(&quot;modelsummary&quot;)</code></pre>
 <div id="why-does-gdp-vary-from-country-to-country" class="section level3 hasAnchor" number="8.1.1">
 <h3><span class="header-section-number">8.1.1</span> Why does GDP vary from country to country?<a href="topics1.html#why-does-gdp-vary-from-country-to-country" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb779"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb779-1"><a href="topics1.html#cb779-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># tidyverse Package, a collection of packages for data science</span></span>
-<span id="cb779-2"><a href="topics1.html#cb779-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI) <span class="co"># WDI Package for World Development Indicators</span></span>
-<span id="cb779-3"><a href="topics1.html#cb779-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car) <span class="co">#VIF Tool for checking multi-collinearity</span></span></code></pre></div>
-<pre><code>##  要求されたパッケージ carData をロード中です</code></pre>
+<div class="sourceCode" id="cb803"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb803-1"><a href="topics1.html#cb803-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># tidyverse Package, a collection of packages for data science</span></span>
+<span id="cb803-2"><a href="topics1.html#cb803-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI) <span class="co"># WDI Package for World Development Indicators</span></span>
+<span id="cb803-3"><a href="topics1.html#cb803-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car) <span class="co">#VIF Tool for checking multi-collinearity</span></span></code></pre></div>
+<pre><code>## Loading required package: carData</code></pre>
 <pre><code>## 
-##  次のパッケージを付け加えます: &#39;car&#39;</code></pre>
-<pre><code>##  以下のオブジェクトは &#39;package:dplyr&#39; からマスクされています:
+## Attaching package: &#39;car&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
 ## 
 ##     recode</code></pre>
-<pre><code>##  以下のオブジェクトは &#39;package:purrr&#39; からマスクされています:
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
 ## 
 ##     some</code></pre>
-<div class="sourceCode" id="cb784"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb784-1"><a href="topics1.html#cb784-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co"># Tool for writting tables of the regression results</span></span></code></pre></div>
+<div class="sourceCode" id="cb808"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb808-1"><a href="topics1.html#cb808-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co"># Tool for writting tables of the regression results</span></span></code></pre></div>
 <ul>
 <li>WDI Indicators
 <ul>
@@ -685,11 +728,11 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 <li>AG.LND.TOTL.K2: Land area (sq. km)</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb785"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb785-1"><a href="topics1.html#cb785-1" aria-hidden="true" tabindex="-1"></a>wb <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(<span class="at">country=</span><span class="st">&quot;all&quot;</span>, </span>
-<span id="cb785-2"><a href="topics1.html#cb785-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">indicator=</span><span class="fu">c</span>(<span class="at">gdp =</span> <span class="st">&quot;NY.GDP.MKTP.CD&quot;</span>, <span class="at">pop =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">land =</span> <span class="st">&quot;AG.LND.TOTL.K2&quot;</span>),</span>
-<span id="cb785-3"><a href="topics1.html#cb785-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">start=</span><span class="dv">1960</span>, <span class="at">end=</span><span class="dv">2020</span>,</span>
-<span id="cb785-4"><a href="topics1.html#cb785-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">extra=</span><span class="cn">TRUE</span>))</span>
-<span id="cb785-5"><a href="topics1.html#cb785-5" aria-hidden="true" tabindex="-1"></a>wb</span></code></pre></div>
+<div class="sourceCode" id="cb809"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb809-1"><a href="topics1.html#cb809-1" aria-hidden="true" tabindex="-1"></a>wb <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(<span class="at">country=</span><span class="st">&quot;all&quot;</span>, </span>
+<span id="cb809-2"><a href="topics1.html#cb809-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">indicator=</span><span class="fu">c</span>(<span class="at">gdp =</span> <span class="st">&quot;NY.GDP.MKTP.CD&quot;</span>, <span class="at">pop =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">land =</span> <span class="st">&quot;AG.LND.TOTL.K2&quot;</span>),</span>
+<span id="cb809-3"><a href="topics1.html#cb809-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">start=</span><span class="dv">1960</span>, <span class="at">end=</span><span class="dv">2020</span>,</span>
+<span id="cb809-4"><a href="topics1.html#cb809-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">extra=</span><span class="cn">TRUE</span>))</span>
+<span id="cb809-5"><a href="topics1.html#cb809-5" aria-hidden="true" tabindex="-1"></a>wb</span></code></pre></div>
 <pre><code>## # A tibble: 16,226 × 15
 ##    iso2c country     year status lastupda…¹      gdp    pop    land iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -710,8 +753,8 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 <!-- ```{r} -->
 <!-- write_csv(wb, file="wb_gdp_pop_land.csv") -->
 <!-- ``` -->
-<div class="sourceCode" id="cb787"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb787-1"><a href="topics1.html#cb787-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="ot">&lt;-</span> wb <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span> <span class="sc">&amp;</span> region<span class="sc">==</span><span class="st">&quot;Aggregates&quot;</span>)</span>
-<span id="cb787-2"><a href="topics1.html#cb787-2" aria-hidden="true" tabindex="-1"></a>wb_ag20</span></code></pre></div>
+<div class="sourceCode" id="cb811"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb811-1"><a href="topics1.html#cb811-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="ot">&lt;-</span> wb <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span> <span class="sc">&amp;</span> region<span class="sc">==</span><span class="st">&quot;Aggregates&quot;</span>)</span>
+<span id="cb811-2"><a href="topics1.html#cb811-2" aria-hidden="true" tabindex="-1"></a>wb_ag20</span></code></pre></div>
 <pre><code>## # A tibble: 47 × 15
 ##    iso2c country  year status lastu…¹     gdp    pop   land iso3c region capital
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
@@ -730,17 +773,17 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 </div>
 <div id="regression" class="section level3 hasAnchor" number="8.1.2">
 <h3><span class="header-section-number">8.1.2</span> Regression<a href="topics1.html#regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb789"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb789-1"><a href="topics1.html#cb789-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, gdp)) <span class="sc">+</span></span>
-<span id="cb789-2"><a href="topics1.html#cb789-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb789-3"><a href="topics1.html#cb789-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb789-4"><a href="topics1.html#cb789-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP and Population&quot;</span>, </span>
-<span id="cb789-5"><a href="topics1.html#cb789-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;total population&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb813"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb813-1"><a href="topics1.html#cb813-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, gdp)) <span class="sc">+</span></span>
+<span id="cb813-2"><a href="topics1.html#cb813-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb813-3"><a href="topics1.html#cb813-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb813-4"><a href="topics1.html#cb813-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP and Population&quot;</span>, </span>
+<span id="cb813-5"><a href="topics1.html#cb813-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;total population&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 1 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-341-1.png" width="672" /></p>
-<div class="sourceCode" id="cb793"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb793-1"><a href="topics1.html#cb793-1" aria-hidden="true" tabindex="-1"></a>gdp_pop <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> pop, .)</span>
-<span id="cb793-2"><a href="topics1.html#cb793-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gdp_pop)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-342-1.png" width="672" /></p>
+<div class="sourceCode" id="cb817"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb817-1"><a href="topics1.html#cb817-1" aria-hidden="true" tabindex="-1"></a>gdp_pop <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> pop, .)</span>
+<span id="cb817-2"><a href="topics1.html#cb817-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gdp_pop)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = gdp ~ pop, data = .)
@@ -757,20 +800,20 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.418e+13 on 44 degrees of freedom
-##   ( 1 個の観測値が欠損のため削除されました )
+##   (1 observation deleted due to missingness)
 ## Multiple R-squared:  0.4127, Adjusted R-squared:  0.3993 
 ## F-statistic: 30.91 on 1 and 44 DF,  p-value: 1.489e-06</code></pre>
-<div class="sourceCode" id="cb795"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb795-1"><a href="topics1.html#cb795-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(land, gdp)) <span class="sc">+</span></span>
-<span id="cb795-2"><a href="topics1.html#cb795-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb795-3"><a href="topics1.html#cb795-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb795-4"><a href="topics1.html#cb795-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP and Land Area&quot;</span>, </span>
-<span id="cb795-5"><a href="topics1.html#cb795-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;land area&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb819"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb819-1"><a href="topics1.html#cb819-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(land, gdp)) <span class="sc">+</span></span>
+<span id="cb819-2"><a href="topics1.html#cb819-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb819-3"><a href="topics1.html#cb819-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb819-4"><a href="topics1.html#cb819-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP and Land Area&quot;</span>, </span>
+<span id="cb819-5"><a href="topics1.html#cb819-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;land area&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 1 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-343-1.png" width="672" /></p>
-<div class="sourceCode" id="cb799"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb799-1"><a href="topics1.html#cb799-1" aria-hidden="true" tabindex="-1"></a>gdp_land <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> land, .)</span>
-<span id="cb799-2"><a href="topics1.html#cb799-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gdp_land)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-344-1.png" width="672" /></p>
+<div class="sourceCode" id="cb823"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb823-1"><a href="topics1.html#cb823-1" aria-hidden="true" tabindex="-1"></a>gdp_land <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> land, .)</span>
+<span id="cb823-2"><a href="topics1.html#cb823-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gdp_land)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = gdp ~ land, data = .)
@@ -787,11 +830,11 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.236e+13 on 44 degrees of freedom
-##   ( 1 個の観測値が欠損のため削除されました )
+##   (1 observation deleted due to missingness)
 ## Multiple R-squared:  0.5537, Adjusted R-squared:  0.5436 
 ## F-statistic: 54.59 on 1 and 44 DF,  p-value: 3.093e-09</code></pre>
-<div class="sourceCode" id="cb801"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb801-1"><a href="topics1.html#cb801-1" aria-hidden="true" tabindex="-1"></a>gdp_pop_and_land <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> pop <span class="sc">+</span> land, .)</span>
-<span id="cb801-2"><a href="topics1.html#cb801-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gdp_pop_and_land)</span></code></pre></div>
+<div class="sourceCode" id="cb825"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb825-1"><a href="topics1.html#cb825-1" aria-hidden="true" tabindex="-1"></a>gdp_pop_and_land <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> pop <span class="sc">+</span> land, .)</span>
+<span id="cb825-2"><a href="topics1.html#cb825-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gdp_pop_and_land)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = gdp ~ pop + land, data = .)
@@ -809,11 +852,11 @@ install.packages(&quot;modelsummary&quot;)</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.231e+13 on 43 degrees of freedom
-##   ( 1 個の観測値が欠損のため削除されました )
+##   (1 observation deleted due to missingness)
 ## Multiple R-squared:  0.568,  Adjusted R-squared:  0.5479 
 ## F-statistic: 28.27 on 2 and 43 DF,  p-value: 1.457e-08</code></pre>
-<div class="sourceCode" id="cb803"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb803-1"><a href="topics1.html#cb803-1" aria-hidden="true" tabindex="-1"></a>gpa_models <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">gdp_pop =</span> gdp_pop, <span class="at">gdp_land =</span> gdp_land, <span class="at">gdp_pop_and_land =</span> gdp_pop_and_land)</span>
-<span id="cb803-2"><a href="topics1.html#cb803-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(gpa_models, <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb827"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb827-1"><a href="topics1.html#cb827-1" aria-hidden="true" tabindex="-1"></a>gpa_models <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">gdp_pop =</span> gdp_pop, <span class="at">gdp_land =</span> gdp_land, <span class="at">gdp_pop_and_land =</span> gdp_pop_and_land)</span>
+<span id="cb827-2"><a href="topics1.html#cb827-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(gpa_models, <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1011,7 +1054,7 @@ RMSE
 <ul>
 <li>The default is: <code>msummary(gpa_models)</code>. <code>msummary(gpa_models, statistic = 'p.value')</code> replaces the standard error by p-value. Compare the following with the one above and the <code>Std.Error</code> of the summaries of each model.</li>
 </ul>
-<div class="sourceCode" id="cb804"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb804-1"><a href="topics1.html#cb804-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(gpa_models)</span></code></pre></div>
+<div class="sourceCode" id="cb828"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb828-1"><a href="topics1.html#cb828-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(gpa_models)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1206,20 +1249,20 @@ RMSE
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb805"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb805-1"><a href="topics1.html#cb805-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, land)) <span class="sc">+</span></span>
-<span id="cb805-2"><a href="topics1.html#cb805-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb805-3"><a href="topics1.html#cb805-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb805-4"><a href="topics1.html#cb805-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;population and Land&quot;</span>, </span>
-<span id="cb805-5"><a href="topics1.html#cb805-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;population&quot;</span>, <span class="at">y =</span> <span class="st">&quot;land&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb829"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb829-1"><a href="topics1.html#cb829-1" aria-hidden="true" tabindex="-1"></a>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pop, land)) <span class="sc">+</span></span>
+<span id="cb829-2"><a href="topics1.html#cb829-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb829-3"><a href="topics1.html#cb829-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb829-4"><a href="topics1.html#cb829-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;population and Land&quot;</span>, </span>
+<span id="cb829-5"><a href="topics1.html#cb829-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;population&quot;</span>, <span class="at">y =</span> <span class="st">&quot;land&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 1 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-348-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-349-1.png" width="672" /></p>
 </div>
 <div id="checking-for-multicollinearity" class="section level3 hasAnchor" number="8.1.3">
 <h3><span class="header-section-number">8.1.3</span> Checking for multicollinearity<a href="topics1.html#checking-for-multicollinearity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb809"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb809-1"><a href="topics1.html#cb809-1" aria-hidden="true" tabindex="-1"></a>pop_land <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(pop <span class="sc">~</span> land, .)</span>
-<span id="cb809-2"><a href="topics1.html#cb809-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pop_land)</span></code></pre></div>
+<div class="sourceCode" id="cb833"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb833-1"><a href="topics1.html#cb833-1" aria-hidden="true" tabindex="-1"></a>pop_land <span class="ot">&lt;-</span>wb_ag20 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(pop <span class="sc">~</span> land, .)</span>
+<span id="cb833-2"><a href="topics1.html#cb833-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pop_land)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = pop ~ land, data = .)
@@ -1236,7 +1279,7 @@ RMSE
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 721600000 on 44 degrees of freedom
-##   ( 1 個の観測値が欠損のため削除されました )
+##   (1 observation deleted due to missingness)
 ## Multiple R-squared:  0.8547, Adjusted R-squared:  0.8514 
 ## F-statistic: 258.8 on 1 and 44 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
@@ -1245,7 +1288,7 @@ RMSE
 <p>VIF = 1/(1-{R<sub>i</sub>}<sup>2</sup>)</p>
 <div id="vif-variance-inflation-factor" class="section level4 hasAnchor" number="8.1.4.1">
 <h4><span class="header-section-number">8.1.4.1</span> VIF (Variance Inflation Factor)<a href="topics1.html#vif-variance-inflation-factor" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb811"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb811-1"><a href="topics1.html#cb811-1" aria-hidden="true" tabindex="-1"></a>gdp_pop_and_land <span class="sc">%&gt;%</span> <span class="fu">vif</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb835"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb835-1"><a href="topics1.html#cb835-1" aria-hidden="true" tabindex="-1"></a>gdp_pop_and_land <span class="sc">%&gt;%</span> <span class="fu">vif</span>()</span></code></pre></div>
 <pre><code>##      pop     land 
 ## 6.881118 6.881118</code></pre>
 </div>
@@ -1261,8 +1304,8 @@ RMSE
 </div>
 <div id="a-time-series-data-of-world-from-1960-to-2020" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> A time series data of World from 1960 to 2020<a href="topics1.html#a-time-series-data-of-world-from-1960-to-2020" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb813"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb813-1"><a href="topics1.html#cb813-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="ot">&lt;-</span> wb <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">&quot;World&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(year)</span>
-<span id="cb813-2"><a href="topics1.html#cb813-2" aria-hidden="true" tabindex="-1"></a>wb_world</span></code></pre></div>
+<div class="sourceCode" id="cb837"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb837-1"><a href="topics1.html#cb837-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="ot">&lt;-</span> wb <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">&quot;World&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(year)</span>
+<span id="cb837-2"><a href="topics1.html#cb837-2" aria-hidden="true" tabindex="-1"></a>wb_world</span></code></pre></div>
 <pre><code>## # A tibble: 61 × 15
 ##    iso2c country  year status lastupdated     gdp       pop    land iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -1278,15 +1321,15 @@ RMSE
 ## 10 1W    World    1969 &quot;&quot;     2022-09-16  2.74e12    3.61e9  1.30e8 WLD   Aggre…
 ## # … with 51 more rows, and 5 more variables: capital &lt;chr&gt;, longitude &lt;chr&gt;,
 ## #   latitude &lt;chr&gt;, income &lt;chr&gt;, lending &lt;chr&gt;</code></pre>
-<div class="sourceCode" id="cb815"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb815-1"><a href="topics1.html#cb815-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb815-2"><a href="topics1.html#cb815-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> gdp)) <span class="sc">+</span></span>
-<span id="cb815-3"><a href="topics1.html#cb815-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP (current US$)&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-352-1.png" width="672" /></p>
-<div class="sourceCode" id="cb816"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb816-1"><a href="topics1.html#cb816-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb816-2"><a href="topics1.html#cb816-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> pop)) <span class="sc">+</span></span>
-<span id="cb816-3"><a href="topics1.html#cb816-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Total population)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb839"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb839-1"><a href="topics1.html#cb839-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb839-2"><a href="topics1.html#cb839-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> gdp)) <span class="sc">+</span></span>
+<span id="cb839-3"><a href="topics1.html#cb839-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP (current US$)&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-353-1.png" width="672" /></p>
-<div class="sourceCode" id="cb817"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb817-1"><a href="topics1.html#cb817-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> pop, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb840"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb840-1"><a href="topics1.html#cb840-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb840-2"><a href="topics1.html#cb840-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> pop)) <span class="sc">+</span></span>
+<span id="cb840-3"><a href="topics1.html#cb840-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Total population)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-354-1.png" width="672" /></p>
+<div class="sourceCode" id="cb841"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb841-1"><a href="topics1.html#cb841-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdp <span class="sc">~</span> pop, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = gdp ~ pop, data = .)
@@ -1305,13 +1348,13 @@ RMSE
 ## Residual standard error: 8.396e+12 on 59 degrees of freedom
 ## Multiple R-squared:  0.9113, Adjusted R-squared:  0.9098 
 ## F-statistic: 606.4 on 1 and 59 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb819"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb819-1"><a href="topics1.html#cb819-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb819-2"><a href="topics1.html#cb819-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(pop, gdp)) <span class="sc">+</span></span>
-<span id="cb819-3"><a href="topics1.html#cb819-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World GDP and World population&quot;</span>, </span>
-<span id="cb819-4"><a href="topics1.html#cb819-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Total population&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP (current US$)&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-355-1.png" width="672" /></p>
-<div class="sourceCode" id="cb820"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb820-1"><a href="topics1.html#cb820-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="ot">&lt;-</span> wb_world <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">diff_gdp =</span> gdp <span class="sc">-</span> <span class="fu">lag</span>(gdp), <span class="at">diff_pop =</span> pop <span class="sc">-</span> <span class="fu">lag</span>(pop)) </span>
-<span id="cb820-2"><a href="topics1.html#cb820-2" aria-hidden="true" tabindex="-1"></a>wb_world_extra</span></code></pre></div>
+<div class="sourceCode" id="cb843"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb843-1"><a href="topics1.html#cb843-1" aria-hidden="true" tabindex="-1"></a>wb_world <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb843-2"><a href="topics1.html#cb843-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(pop, gdp)) <span class="sc">+</span></span>
+<span id="cb843-3"><a href="topics1.html#cb843-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World GDP and World population&quot;</span>, </span>
+<span id="cb843-4"><a href="topics1.html#cb843-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Total population&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP (current US$)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-356-1.png" width="672" /></p>
+<div class="sourceCode" id="cb844"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb844-1"><a href="topics1.html#cb844-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="ot">&lt;-</span> wb_world <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">diff_gdp =</span> gdp <span class="sc">-</span> <span class="fu">lag</span>(gdp), <span class="at">diff_pop =</span> pop <span class="sc">-</span> <span class="fu">lag</span>(pop)) </span>
+<span id="cb844-2"><a href="topics1.html#cb844-2" aria-hidden="true" tabindex="-1"></a>wb_world_extra</span></code></pre></div>
 <pre><code>## # A tibble: 61 × 17
 ##    iso2c country  year status lastupdated     gdp       pop    land iso3c region
 ##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
@@ -1327,22 +1370,22 @@ RMSE
 ## 10 1W    World    1969 &quot;&quot;     2022-09-16  2.74e12    3.61e9  1.30e8 WLD   Aggre…
 ## # … with 51 more rows, and 7 more variables: capital &lt;chr&gt;, longitude &lt;chr&gt;,
 ## #   latitude &lt;chr&gt;, income &lt;chr&gt;, lending &lt;chr&gt;, diff_gdp &lt;dbl&gt;, diff_pop &lt;dbl&gt;</code></pre>
-<div class="sourceCode" id="cb822"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb822-1"><a href="topics1.html#cb822-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_gdp)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb822-2"><a href="topics1.html#cb822-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World GDP changes&quot;</span>, <span class="at">y =</span> <span class="st">&quot;gdp changes&quot;</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 1 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-357-1.png" width="672" /></p>
-<div class="sourceCode" id="cb824"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb824-1"><a href="topics1.html#cb824-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_pop)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb824-2"><a href="topics1.html#cb824-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World population changes&quot;</span>, <span class="at">y =</span> <span class="st">&quot;population changes&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb846"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb846-1"><a href="topics1.html#cb846-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_gdp)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb846-2"><a href="topics1.html#cb846-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World GDP changes&quot;</span>, <span class="at">y =</span> <span class="st">&quot;gdp changes&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 1 row(s) containing missing values (geom_path).</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-358-1.png" width="672" /></p>
-<div class="sourceCode" id="cb826"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb826-1"><a href="topics1.html#cb826-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> diff_pop, <span class="at">y =</span> diff_gdp)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb826-2"><a href="topics1.html#cb826-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb826-3"><a href="topics1.html#cb826-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World GDP changes and World GDP changes&quot;</span>, <span class="at">x =</span> <span class="st">&quot;population changes&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP changes&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb848"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb848-1"><a href="topics1.html#cb848-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff_pop)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb848-2"><a href="topics1.html#cb848-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World population changes&quot;</span>, <span class="at">y =</span> <span class="st">&quot;population changes&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 1 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-359-1.png" width="672" /></p>
+<div class="sourceCode" id="cb850"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb850-1"><a href="topics1.html#cb850-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> diff_pop, <span class="at">y =</span> diff_gdp)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb850-2"><a href="topics1.html#cb850-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb850-3"><a href="topics1.html#cb850-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;World GDP changes and World GDP changes&quot;</span>, <span class="at">x =</span> <span class="st">&quot;population changes&quot;</span>, <span class="at">y =</span> <span class="st">&quot;GDP changes&quot;</span>) </span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 1 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-359-1.png" width="672" /></p>
-<div class="sourceCode" id="cb830"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb830-1"><a href="topics1.html#cb830-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">lm</span>(diff_gdp <span class="sc">~</span> diff_pop, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-360-1.png" width="672" /></p>
+<div class="sourceCode" id="cb854"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb854-1"><a href="topics1.html#cb854-1" aria-hidden="true" tabindex="-1"></a>wb_world_extra <span class="sc">%&gt;%</span> <span class="fu">lm</span>(diff_gdp <span class="sc">~</span> diff_pop, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = diff_gdp ~ diff_pop, data = .)
@@ -1359,7 +1402,7 @@ RMSE
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 2.114e+12 on 58 degrees of freedom
-##   ( 1 個の観測値が欠損のため削除されました )
+##   (1 observation deleted due to missingness)
 ## Multiple R-squared:  0.05925,    Adjusted R-squared:  0.04303 
 ## F-statistic: 3.653 on 1 and 58 DF,  p-value: 0.06092</code></pre>
 </div>
