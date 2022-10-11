@@ -1,0 +1,865 @@
+# Appendix D Coronavirus  {#coronavirus}
+
+> An example of an R Notebook, rendered at `r format(as.POSIXct(Sys.time()), tz="Asia/Tokyo",usetz=TRUE)`  
+
+> This version uses `tidyverse` packages for importing and transforming data.
+
+```{r}
+library(tidyverse)
+library(DT)
+```
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+## Introduction
+
+The following site of Johns Hopkins University is famous:
+
+* https://coronavirus.jhu.edu/map.html
+
+In this article, we study a coronavirus data collected by Johns Hopkins University called "JHU Covid-19 global time series data". Since the original data requires reshaping, we use a data provided by RamiKrispin in the following site.
+
+* https://github.com/RamiKrispin/coronavirus/tree/master/csv
+
+See also the R package `coronavirus` at
+
+* https://CRAN.R-project.org/package=coronavirus
+* For installation: `install.packages("coronavirus")
+* To attach: `library(coronavirus)`
+
+We can directly download and read the data from:
+
+* https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv
+
+It is updated daily.
+
+In this note, we use the original JHU data and transform it using `dplyr` in the form similar to the  Krispin's.
+
+
+## Exploration of Data with Base R
+
+### Download and read csv (comma separated value) file
+
+```{r cash = TRUE}
+coronavirus <- read.csv("https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv")
+```
+
+### Summaries and structures of the data
+
+```{r cash = TRUE}
+head(coronavirus)
+str(coronavirus)
+```
+
+Since the first column consists of date in character format, we change it to Date.
+
+```{r cash = TRUE}
+coronavirus$date <- as.Date(coronavirus$date)
+str(coronavirus)
+```
+
+Now the first column is recognized as date. The range of dates covered can be seen by the following.
+
+```{r cash = TRUE}
+range(coronavirus$date)
+```
+
+Let us check the countries by `unique` function. We choose a country from this list later.
+
+```{r cash = TRUE}
+head(unique(coronavirus$country), 10)
+```
+
+Now check the type column similarly.
+
+```{r cash = TRUE}
+unique(coronavirus$type)
+```
+
+### Set a Country
+
+As a test we choose "Japan" as a country. Please check the country list above.
+We apply a filter `country == COUNTRY` to the `country` column. 
+
+```{r cash = TRUE}
+COUNTRY <- "Japan"
+df0 <- coronavirus[coronavirus$country == COUNTRY,]
+```
+
+Let us check the subset of our data and see if the population column changes over time.
+
+```{r cash = TRUE}
+head(df0)
+tail(df0)
+```
+
+Since the population on the first day and the last day are equal, you can set one as the population of the country.
+
+```{r cash = TRUE}
+(pop <- df0$population[1])
+```
+
+We need only the first, the sixth, the seventh and the thirteenth column, namely, "date", "type", "cases", "population", we create a new data frame called `df` by the following.
+
+```{r cash = TRUE}
+df <- df0[c(1,6,7,13)]
+str(df)
+head(df)
+```
+
+Alternatively, `df0[c(1,6,7,13)]` can be replaced by `df0[c("date", "type", "cases", "population")]`.
+
+```{r cash = TRUE}
+head(df0[c("date", "type", "cases", "population")])
+```
+
+### Types: "confirmed" "death" and "recovery" 
+
+Let us check each type as follows.
+
+```{r cash = TRUE}
+df_confirmed <- df[df$type == "confirmed",]
+df_death <- df[df$type == "death",]
+df_recovery <- df[df$data_type == "recovery",]
+head(df_confirmed)
+head(df_death)
+head(df_recovery)
+```
+
+Notice that "recovery" data is empty. 
+
+### Data Visualization
+
+#### Histogram for One Numerical Data
+
+```{r cash = TRUE}
+plot(df_confirmed$date, df_confirmed$cases, type = "h")
+plot(df_death$date, df_death$cases, type = "h")
+# plot(df_recovered$date, df_recovered$cases, type = "h") # no data for recovery
+```
+
+
+### Scatter Plot and Correlation for Two Numerial Data
+
+```{r cash = TRUE}
+plot(df_confirmed$cases, df_death$cases, type = "p")
+cor(df_confirmed$cases, df_death$cases)
+```
+
+#### Extra
+
+It is better to add the title of the graph and the labels of x-axis and y-axis.
+Here we used `paste("Comfirmed Cases in",COUNTRY)` to automatically paste the chosen country name. 
+
+```{r cash = TRUE}
+plot(df_confirmed$date, df_confirmed$cases, type = "h", 
+     main = paste("Comfirmed Cases in",COUNTRY), 
+     xlab = "Date", ylab = "Number of Cases")
+```
+
+### In Addition Set a Period
+
+```{r cash = TRUE}
+start_date <- as.Date("2021-07-01")
+end_date <- Sys.Date() 
+df_date <- df[df$date >=start_date & df$date <= end_date,]
+```
+
+Apply the same operations on this subset.
+
+#### Setting types
+
+```{r cash = TRUE}
+df_date_confirmed <- df_date[df_date$type == "confirmed",]
+df_date_death <- df_date[df_date$type == "death",]
+df_date_recovery <- df_date[df_date$data_type == "recovery",]
+head(df_date_confirmed)
+head(df_date_death)
+head(df_date_recovery)
+```
+
+### Histograms
+
+```{r cash = TRUE}
+plot(df_date_confirmed$date, df_date_confirmed$cases, type = "h")
+plot(df_date_death$date, df_date_death$cases, type = "h")
+# plot(df_date_recovered$date, df_date_recovered$cases, type = "h") # no data for recovery
+```
+
+#### Scatter Plot and Correlation
+
+```{r cash = TRUE}
+plot(df_date_confirmed$cases, df_date_death$cases, type = "p")
+cor(df_date_confirmed$cases, df_date_death$cases)
+```
+
+### List Observations and Questions for Further Exploration
+
+* Q0. Change the values of the location and the period and see the outcomes.
+* Q1. What is the correlation between df_confirmed$cases and df_death$cases?
+* Q2. Do we have a larger correlation value if we shift the dates to implement the time-lag?
+* Q3. Do you have any other questions to explore?
+
+## Selection of Several Countries with `ggplot2`
+
+Let us choose "US", "Germany", "India", "South Africa", "Korea, South" and "Japan"
+Check whether `province` part is valid in these countries. 
+
+```{r cash = TRUE}
+df0 <- coronavirus[coronavirus$country %in% c("US", "Germany", "India", "South Africa","Korea, South", "Japan"),]
+unique(df0$province)
+```
+
+We keep the country name.
+
+```{r cash = TRUE}
+df <- df0[c(1,3,6,7,13)]
+str(df)
+head(df)
+```
+
+### Set types
+
+```{r cash = TRUE}
+df_confirmed <- df[df$type == "confirmed",]
+df_death <- df[df$type == "death",]
+df_recovery <- df[df$data_type == "recovery",]
+head(df_confirmed)
+head(df_death)
+head(df_recovery)
+```
+```{r cash = TRUE}
+unique(df_confirmed$population)
+```
+
+### Visualization using `ggplot2` package
+
+```{r}
+library(ggplot2)
+```
+
+
+```{r cash = TRUE}
+ggplot(df_confirmed) +
+  geom_line(aes(x = date, y = cases, color = country)) +
+  labs(x = "Date", y = "Number of Confirmed Cases", title = "Number of Confirmed Cases")
+```
+```{r cash = TRUE}
+ggplot(df_confirmed) +
+  geom_line(aes(x = date, y = cases, color = country)) +
+  facet_wrap(vars(country)) +
+  labs(x = "Date", y = "Number of Confirmed Cases", title = "Number of Confirmed Cases")
+```
+```{r cash = TRUE}
+ggplot(df_confirmed) +
+  geom_boxplot(aes(x = country, y = cases)) +
+  labs(x = "Date", y = "Number of Confirmed Cases", title = "Number of Confirmed Cases")
+```
+
+```{r cash = TRUE}
+ggplot(df_confirmed) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country)) +
+  labs(x = "Date", y = "Number of Confirmed Cases per 100,000", title = "Number of Confirmed Cases per 100,000")
+```
+
+```{r cash = TRUE}
+ggplot(df_confirmed) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country)) +
+  facet_wrap(vars(country)) + 
+  labs(x = "Date", y = "Number of Confirmed Cases per 100,000", title = "Number of Confirmed Cases per 100,000")
+```
+```{r cash = TRUE}
+ggplot(df_confirmed) +
+  geom_boxplot(aes(x = country, y = (cases*100000)/population)) +
+  labs(x = "Date", y = "Number of Confirmed Cases per 100,000", title = "Number of Confirmed Cases per 100,000")
+```
+
+```{r cash = TRUE}
+ggplot(df_confirmed) +
+  geom_boxplot(aes(x = country, y = (cases*100000)/population)) +
+  scale_y_continuous(trans='log10') + 
+  labs(x = "Date", y = "Number of Confirmed Cases in log10 per 100,000", title = "Number of Confirmed Cases in log10 Scale per 100,000")
+```
+
+```{r cash = TRUE}
+ggplot(df_death) +
+  geom_line(aes(x = date, y = cases, color = country)) +
+  labs(x = "Date", y = "Number of Deaths", title = "Number of Deaths")
+```
+
+```{r cash = TRUE}
+ggplot(df_death) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country)) +
+  labs(x = "Date", y = "Number of Deaths per 100,000", title = "Number of Deaths per 100,000")
+```
+```{r cash = TRUE}
+ggplot(df_death) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country)) +
+  facet_wrap(vars(country)) +
+  labs(x = "Date", y = "Number of Deaths per 100,000", title = "Number of Deaths per 100,000")
+```
+
+```{r cash = TRUE}
+ggplot(df_death) +
+  geom_boxplot(aes(x = country, y = (cases*100000)/population)) +
+  scale_y_continuous(trans='log10') + 
+  labs(x = "Date", y = "Number of Deaths in log10 per 100,000", title = "Number of Deaths in log10 Scale per 100,000")
+```
+
+### Setting a Period
+
+```{r cash = TRUE}
+start_date <- as.Date("2021-07-01")
+end_date <- Sys.Date() 
+df_date <- df[df$date >=start_date & df$date <= end_date,]
+df_date_confirmed <- df_date[df_date$type == "confirmed",]
+df_date_death <- df_date[df_date$type == "death",]
+```
+
+```{r cash = TRUE}
+ggplot(df_date_confirmed) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country))
+```
+
+```{r cash = TRUE}
+ggplot(df_date_confirmed) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country)) +
+  facet_wrap(vars(country))
+```
+
+
+```{r cash = TRUE}
+start_date <- as.Date("2021-11-20")
+end_date <- Sys.Date() 
+df_date <- df[df$date >=start_date & df$date <= end_date & df$country %in% c("Germany", "South Africa", "US"),]
+df_date_confirmed <- df_date[df_date$type == "confirmed",]
+df_date_death <- df_date[df_date$type == "death",]
+```
+
+```{r cash = TRUE}
+ggplot(df_date_confirmed) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country))
+```
+The number of deaths in 100,000.
+
+```{r cash = TRUE}
+ggplot(df_date_death) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country))
+```
+
+## Importing and Transforming Data with `readr` and `dplyr` in `tidyverse` Packages
+
+### Review 
+
+0. Attaching neccessary packages
+1. Importing data
+2. Glimpsing data with `head()`, `str()` and changing types of a column, i.e.,characters to date
+3. Selecting columns of data
+4. Filtering rows of data
+5. Mutating data 
+6. Visualizing data by `ggplot()`
+
+```{r cash = TRUE}
+library(ggplot2)
+
+coronavirus <- read.csv("https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv")
+
+coronavirus$date <- as.Date(coronavirus$date)
+
+df <- coronavirus[c(1,3,6,7,13)]
+
+COUNTRIES <- c("US", "Germany", "India", "South Africa","Korea, South", "Japan")
+start_date <- as.Date("2021-07-01")
+end_date <- Sys.Date() 
+
+df0 <- coronavirus[df$country %in% COUNTRIES,]
+df1 <- df0[df0$date >=start_date & df0$date <= end_date,]
+df1_confirmed <- df1[df1$type == "confirmed",]
+
+ggplot(df1_confirmed) +
+  geom_line(aes(x = date, y = (cases*100000/population), color = country)) +
+  labs(x = "Date", y = "Number of Confirmed Cases per 100,000", title = "Number of Confirmed Cases per 100,000")
+```
+### library: Loading/Attaching Packages
+
+To use packages, 
+
+1. Install packages by `install.packages()` only once, e.g., `install.packages("tidyverse")`.
+2. Load and attach packages by `library()` at each session, e.g., `library(tidyverse)`.
+
+For `library()`, see https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library.
+
+```{r}
+library(tidyverse)
+```
+
+### Importing data by `readr` in `tidyverse`
+
+* See https://readr.tidyverse.org
+
+> The goal of readr is to provide a fast and friendly way to read rectangular data (like csv, tsv, and fwf). It is designed to flexibly parse many types of data found in the wild, while still cleanly failing when data unexpectedly changes. If you are new to readr, the best place to start is [the data import chapter in R for data science](https://r4ds.had.co.nz/data-import.html).
+
+> To accurately read a rectangular dataset with readr you combine two pieces: a function that parses the overall file, and a column specification. The column specification describes how each column should be converted from a character vector to the most appropriate data type, and in most cases it’s not necessary because readr will guess it for you automatically.
+
+> readr supports seven file formats with seven read_ functions:
+
+* read_csv(): comma separated (CSV) files
+* read_tsv(): tab separated files
+* read_delim(): general delimited files
+* read_fwf(): fixed width files
+* read_table(): tabular files where columns are separated by white-space.
+* read_log(): web log files
+
+```{r cash = TRUE}
+coronavirus_tv <- read_csv("https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv")
+coronavirus_tv
+# print(coronavirus_tv) # same as above
+```
+
+* Data is in `tibble`, see https://tibble.tidyverse.org.
+* See thatthe first column is already recognized as date.
+* `glimpse` is similar to `str` and is like a transposed version of `print()`
+
+
+```{r cash = TRUE}
+glimpse(coronavirus_tv)
+```
+
+* `download.file()`  and `write_csv()`
+
+```
+# Don't run repeatedly
+DLURL <- "https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv"
+DLDATE <- paste0("coronavirus", Sys.Date(), ".csv")
+download.file(DLURL, destfile = DLDATE)
+```
+
+```
+# Don't run repeatedly
+WRITEDATE <- paste0("covid19_", Sys.Date(), ".csv")
+write_csv(coronavirus, WRITEDATE)
+```
+
+
+### Transforming data by `dplyr` in `tidyverse`
+
+* See https://dplyr.tidyverse.org.
+
+> dplyr is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges:
+
+* mutate() adds new variables that are functions of existing variables
+* select() picks variables based on their names.
+* filter() picks cases based on their values.
+* summarise() reduces multiple values down to a single summary.
+* arrange() changes the ordering of the rows.
+
+These all combine naturally with `group_by()` which allows you to perform any operation “by group”. You can learn more about them in vignette("dplyr"). As well as these single-table verbs, dplyr also provides a variety of two-table verbs, which you can learn about in `vignette("two-table")`.
+
+If you are new to `dplyr`, the best place to start is [the data transformation chapter in R for data science](https://r4ds.had.co.nz/transform.html).
+
+
+#### `slice()`: Subset rows using their positions
+
+* See https://dplyr.tidyverse.org/reference/slice.html
+
+> slice() lets you index rows by their (integer) locations. It allows you to select, remove, and duplicate rows. It is accompanied by a number of helpers for common use cases:
+
+* slice_head() and slice_tail() select the first or last rows.
+* slice_sample() randomly selects rows.
+* slice_min() and slice_max() select rows with highest or lowest values of a variable.
+
+The following is similar to `head()` but it does much more.
+
+```{r cash = TRUE}
+slice(coronavirus_tv, 6)
+```
+
+#### `select()` Subset columns using their names and types
+
+* See https://dplyr.tidyverse.org/reference/select.html
+
+> Select (and optionally rename) variables in a data frame, using a concise mini-language that makes it easy to refer to variables based on their name (e.g. a:f selects all columns from a on the left to f on the right). You can also use predicate functions like is.numeric to select variables based on their properties.
+
+
+Helper Function | Use	| Example
+----|-------|--------
+-	| Columns except	| select(babynames, -prop)
+:	| Columns between (inclusive)	| select(babynames, year:n)
+contains() |	Columns that contains a string |	select(babynames, contains("n"))
+ends_with()	| Columns that ends with a string	| select(babynames, ends_with("n"))
+matches()	| Columns that matches a regex |	select(babynames, matches("n"))
+num_range()	| Columns with a numerical suffix in the range | Not applicable with babynames
+one_of() |	Columns whose name appear in the given set |	select(babynames, one_of(c("sex", "gender")))
+starts_with()	| Columns that starts with a string	| select(babynames, starts_with("n"))
+
+```{r cash = TRUE}
+df_tv <- select(coronavirus_tv, c(date, country, type, cases, population))
+df_tv
+```
+
+```{r cash = TRUE}
+identical(df_tv, select(coronavirus_tv, date, country, type, cases, population))
+identical(df_tv, select(coronavirus_tv, 1, 3, 6, 7, 13))
+identical(df_tv, select(coronavirus_tv, "date", "country", "type", "cases", "population"))
+```
+
+#### `filter()` Subset rows using column values
+
+* See https://dplyr.tidyverse.org/reference/filter.html
+
+> The filter() function is used to subset a data frame, retaining all rows that satisfy your conditions. To be retained, the row must produce a value of TRUE for all conditions. Note that when a condition evaluates to NA the row will be dropped, unlike base subsetting with [.
+
+
+Logical operator	| tests	| Example
+--|-----|---
+>	| Is x greater than y? |	x > y
+>=	| Is x greater than or equal to y? |	x >= y
+<	| Is x less than y?	| x < y
+<=	| Is x less than or equal to y? | 	x <= y
+==	| Is x equal to y? |	x == y
+!=	| Is x not equal to y? |	x != y
+is.na()	| Is x an NA?	| is.na(x)
+!is.na() |	Is x not an NA? |	!is.na(x)
+
+
+```{r cash = TRUE}
+COUNTRIES <- c("US", "Germany", "India", "South Africa","Korea, South", "Japan")
+start_date <- as.Date("2021-07-01")
+end_date <- Sys.Date() 
+```
+
+```{r cash = TRUE}
+df_tv0 <- filter(df_tv, country %in% COUNTRIES)
+df_tv1 <- filter(df_tv0, date >=start_date & df_tv0$date <= end_date)
+df_tv1_confirmed <- filter(df_tv1, type == "confirmed")
+```
+
+```{r cash = TRUE}
+identical(df_tv1_confirmed, 
+          filter(df_tv, (country %in% COUNTRIES) & 
+                   (date >=start_date & date <= end_date) &
+                   (type == "confirmed")))
+```
+* Advanced method using piping
+
+```{r cash = TRUE}
+df_tv %>% filter(country %in% COUNTRIES) %>%
+  filter(date >=start_date & df_tv0$date <= end_date) %>%
+  filter(type == "confirmed") %>%
+  identical(df_tv1_confirmed)
+```
+
+#### `mutate()`: Create, modify, and delete columns
+
+* See https://dplyr.tidyverse.org/reference/mutate.html
+
+> mutate() adds new variables and preserves existing ones; transmute() adds new variables and drops existing ones. New variables overwrite existing variables of the same name. Variables can be removed by setting their value to NULL.
+
+```{r cash = TRUE}
+df_tv1_confirmed_pp <- mutate(df_tv1_confirmed, confirmed_pp = cases*100000/population)
+```
+
+
+#### `ggplot()`: Plotting
+
+* See https://ggplot2.tidyverse.org
+
+> ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
+
+
+```{r cash = TRUE}
+ggplot(df_tv1_confirmed_pp) +
+  geom_line(aes(x = date, y = confirmed_pp, color = country)) +
+  labs(x = "Date", y = "Number of Confirmed Cases per 100,000", 
+       title = "Number of Confirmed Cases per 100,000")
+```
+
+#### Summary
+
+```{r cash = TRUE}
+library(tidyverse)
+
+coronavirus_tv <- read_csv("https://github.com/RamiKrispin/coronavirus/raw/master/csv/coronavirus.csv")
+
+COUNTRIES <- c("US", "Germany", "India", "South Africa","Korea, South", "Japan")
+start_date <- as.Date("2021-07-01")
+end_date <- Sys.Date() 
+
+df_tv <- select(coronavirus_tv, c(date, country, type, cases, population))
+
+df_tv0 <- filter(df_tv, country %in% COUNTRIES)
+df_tv1 <- filter(df_tv0, date >=start_date & df_tv0$date <= end_date)
+df_tv1_confirmed <- filter(df_tv1, type == "confirmed")
+
+df_tv1_confirmed_pp <- mutate(df_tv1_confirmed, confirmed_pp = cases*100000/population)
+
+ggplot(df_tv1_confirmed_pp) +
+  geom_line(aes(x = date, y = confirmed_pp, color = country)) +
+  labs(x = "Date", y = "Number of Confirmed Cases per 100,000", 
+       title = "Number of Confirmed Cases per 100,000")
+```
+
+#### [Pipes](https://r4ds.had.co.nz/pipes.html)
+
+After importing data and setting parameters; COUNTRIES, start_date and end_date, we can simplify the code block as follows.
+
+
+```{r cash = TRUE}
+coronavirus_tv %>% 
+  select(date, country, type, cases, population) %>%
+  filter(country %in% COUNTRIES) %>%
+  filter(date >=start_date & df_tv0$date <= end_date) %>%
+  filter(type == "confirmed") %>%
+  mutate(confirmed_pp = cases*100000/population) %>%
+  ggplot() +
+    geom_line(aes(x = date, y = confirmed_pp, color = country)) +
+    labs(x = "Date", y = "Number of Confirmed Cases per 100,000", 
+       title = "Number of Confirmed Cases per 100,000")
+```
+
+## Data of Johns Hopkins Universiy and World Bank
+
+### Importing Raw Data
+
+We import the original Johns Hopkins Github data.
+
+* COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University: https://github.com/CSSEGISandData/COVID-19
+* We use [time series data](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
+
+```{r cash = TRUE}
+# IMPORT RAW DATA: Johns Hopkins Github data
+confirmedraw <- read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")
+glimpse(confirmedraw)
+confirmedraw # %>% datatable() # Check latest date at the end of data as tibble
+```
+
+```{r cash = TRUE}
+deathsraw <- read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv")
+deathsraw # %>% datatable()
+```
+
+```{r cash = TRUE}
+recoveredraw <- read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv")
+recoveredraw # %>% datatable()
+# Note differences in the number of rows/columns
+```
+
+### Tidying and Combining: To create country level and global combined data
+
+#### Convert each data set from wide to long
+
+```{r cash = TRUE}
+confirmed <- confirmedraw %>% 
+  dplyr::rename(province = "Province/State", country = "Country/Region", lat = "Lat", long = "Long") %>% 
+  pivot_longer(-c(province, country, lat, long), names_to = "date", values_to ="confirmed") %>% 
+  mutate(date = as.Date(date, "%m/%d/%y")) %>%
+  group_by(province, country) %>% arrange(date) %>%
+  mutate(confirmed = confirmed - lag(confirmed)) %>%
+  slice(-1) %>% ungroup() %>%
+  relocate(date, .before = province) %>%
+  group_by(country, province) %>% 
+  arrange(province, date) 
+```
+
+Check the data.
+
+```{r cash = TRUE}
+confirmed %>% filter(country == "Japan") %>%  ggplot() + geom_line(aes(x = date, y = confirmed))
+```
+
+```{r cash = TRUE}
+df_tv %>% filter(country == "Japan") %>% filter(type == "confirmed") %>%  ggplot() + geom_line(aes(x = date, y = cases))
+```
+
+_The `dplyr::rename` seems to have conflict with other `rename` function._
+
+```{r cash = TRUE}
+deaths <- deathsraw %>%  
+  dplyr::rename(province = "Province/State", country = "Country/Region", lat = Lat, long = Long) %>% 
+  pivot_longer(-c(province, country, lat, long), names_to = "date", values_to ="death") %>% 
+  mutate(date = as.Date(date, "%m/%d/%y")) %>%
+  group_by(province, country) %>% arrange(date) %>%
+  mutate(death = death - lag(death)) %>%
+  slice(-1) %>% ungroup() %>%
+  relocate(date, .before = province) %>%
+  arrange(province, date) 
+```
+
+```{r cash = TRUE}
+recovered <- recoveredraw %>%  
+  dplyr::rename(province = "Province/State", country = "Country/Region", lat = Lat, long = Long) %>% 
+  pivot_longer(-c(province, country, lat, long), names_to = "date", values_to ="recovered") %>% 
+  mutate(date = as.Date(date, "%m/%d/%y")) %>%
+  group_by(province, country) %>% arrange(date) %>%
+  mutate(recovered = recovered - lag(recovered)) %>%
+  slice(-1) %>% ungroup() %>%
+  relocate(date, .before = province) %>%
+  arrange(province, date)
+```
+
+
+#### Final data: combine all three
+
+```{r cash = TRUE}
+coronavirus_jhu <- full_join(confirmed, deaths) %>% full_join(recovered) %>%
+  pivot_longer(c(confirmed, death, recovered), names_to = "cases") %>%
+  arrange(cases, province, country, date)
+coronavirus_jhu  # %>% datatable()
+```
+### Aggregated by Countries
+
+The list of countries classified in provinces.
+
+```{r cash = TRUE}
+coronavirus_jhu %>% filter(!is.na(province)) %>% distinct(country)
+```
+
+Check the data associated with provinces.
+
+
+If we are only interested in coutries, the following is a possibility.
+
+```{r cash = TRUE}
+coronavirus_jhu_country <- coronavirus_jhu %>% 
+  group_by(date, country, cases) %>% 
+  summarize(value = sum(value)) %>% 
+  arrange(cases, country, date)
+coronavirus_jhu_country # %>% datatable()
+```
+
+### Population of 2019
+
+```{r}
+library(WDI)
+```
+
+
+```{r cash = TRUE}
+population <- WDI(
+  country = "all", 
+  indicator = "SP.POP.TOTL",
+  start = 2019,
+  end = 2019,
+  extra = TRUE,
+  cache = NULL,
+  latest = NULL,
+  language = "en"
+) %>%
+  select(country, iso2c, iso3c, region, income, population = SP.POP.TOTL)
+population # %>% datatable()
+```
+
+```{r}
+coronavirus_country <- coronavirus_jhu_country %>%
+  left_join(population)
+coronavirus_country # %>% datatable()
+```
+
+```{r cash = TRUE}
+summary(coronavirus_country)
+```
+
+#### Region
+
+
+```{r cash = TRUE}
+coronavirus_country %>% group_by(region) %>% 
+  summarize(n = n_distinct(country))
+```
+
+```{r cash = TRUE}
+coronavirus_country %>% filter(is.na(region)) %>% pull(country) %>% unique()
+```
+
+
+```{r cash = TRUE}
+coronavirus_country %>% drop_na() %>% group_by(region) %>% 
+  summarize(n = n_distinct(country)) %>%
+  arrange(n) %>%
+  ggplot() +
+    geom_col(aes(y = reorder(region, n), x = n))
+```
+
+```{r cash = TRUE}
+coronavirus_country %>% filter(cases == "confirmed") %>%
+  group_by(region, date) %>% summarize(confirmed = sum(value, na.rm = TRUE)) %>%
+  ggplot() +
+    geom_line(aes(x = date, y = confirmed, color = region)) +
+    labs(title = "Total Number of Confirmed Cases by Region")
+```
+
+```{r cash = TRUE}
+coronavirus_country %>% filter(cases == "death") %>%
+  group_by(region, date) %>% summarize(death = sum(value, na.rm = TRUE)) %>%
+  ggplot() +
+    geom_line(aes(x = date, y = death, color = region)) +
+    labs(title = "Total Number of Deaths by Region")
+```
+
+#### Income
+
+```{r cash = TRUE}
+coronavirus_country %>% group_by(income) %>% 
+  summarize(n = n_distinct(country))
+```
+
+```{r cash = TRUE}
+coronavirus_country %>% filter(is.na(income)) %>% pull(country) %>% unique()
+```
+
+
+
+```{r cash = TRUE}
+coronavirus_country %>% drop_na() %>% group_by(income) %>% 
+  summarize(n = n_distinct(country)) %>%
+  arrange(n) %>%
+  ggplot() +
+    geom_col(aes(y = reorder(income, n), x = n))
+```
+
+```{r cash = TRUE}
+coronavirus_country %>% filter(cases == "confirmed") %>%
+  group_by(income, date) %>% summarize(confirmed = sum(value, na.rm = TRUE)) %>%
+  ggplot() +
+    geom_line(aes(x = date, y = confirmed, color = income)) +
+    labs(title = "Total Number of Confirmed Cases by Income Level")
+```
+```{r cash = TRUE}
+coronavirus_country %>% filter(cases == "death") %>%
+  group_by(income, date) %>% summarize(death = sum(value, na.rm = TRUE)) %>%
+  ggplot() +
+    geom_line(aes(x = date, y = death, color = income)) +
+    labs(title = "Total Number of Deaths by Income Level")
+```
+### Analysis Suggested by Rami Krispin 
+
+See https://github.com/RamiKrispin/coronavirus/
+
+* Rami Krispin is the author of an [R package `coronavirus`](https://CRAN.R-project.org/package=coronavirus)
+
+#### Summary of the total confrimed cases by country
+
+```{r cash = TRUE}
+coronavirus_country %>% 
+  filter(cases == "confirmed") %>%
+  group_by(country) %>%
+  summarize(total_cases = sum(value)) %>%
+  arrange(desc(total_cases))
+```
+
+#### Summary of new cases during the past 24 hours by country and type
+
+Date = `r Sys.Date() -2`
+
+```{r cash = TRUE}
+coronavirus_country %>% 
+  filter(date == Sys.Date() -2) %>%
+  select(country, cases, value) %>%
+  group_by(country, cases) %>%
+  summarize(total_cases = sum(value)) %>%
+  pivot_wider(names_from = cases,
+              values_from = total_cases) %>%
+  arrange(desc(confirmed))
+```
