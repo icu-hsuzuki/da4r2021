@@ -505,7 +505,6 @@ Create an R Notebook (_file name_.nb.html) of an EDA containing:
 
 * Submit your R Notebook file to Moodle (The Fourth Assignment) by 2022-01-25 23:59:00
 
----
 
 ### Setup and YAML
 

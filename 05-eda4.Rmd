@@ -954,15 +954,15 @@ wb_groups %>% group_by(country) %>% summarize(group_codes = cd(country)) %>% DT:
 
 On the right of the table, you can find a list of group codes of each country.
 
-# Examples and Comments
+## Examples and Comments
 
 In the following I include my feedback keeping anonymity.
 
-## Information Obtained by `extra = TRUE`
+### Information Obtained by `extra = TRUE`
 
 The first way is to use the option `extra = TRUE` when you import the data using `WDI`.
 
-### Population of Zimbabwe and Similar Countries
+#### Population of Zimbabwe and Similar Countries
 
 
 ```{r cash = TRUE}
@@ -1035,7 +1035,7 @@ df_population %>% filter(income == "Lower middle income")  %>%
 ```
 
 
-### Fertility Rate of Japan and Similar Countries
+#### Fertility Rate of Japan and Similar Countries
 
 ```{r}
 df_fertility <- as_tibble(WDI(
@@ -1082,7 +1082,7 @@ df_fertility %>% filter(income == "High income")  %>%
   geom_line(aes(x = year, y = average_in_region, color = region))
 ```
 
-## Other Groups
+### Other Groups
 
 So far we used only three classifications of groups, region, income and lending. However, `CLASS.xls` contains more information. 
 
@@ -1096,14 +1096,14 @@ wb_arb_vec
 ```
 I created the data frame containing Arab World countries and their iso3c codes together with a vector containing iso3c only.
 
-### iso3c vector: `wb_arb_vec`
+#### iso3c vector: `wb_arb_vec`
 
 ```{r}
 df_fertility %>% filter(iso3c %in% wb_arb_vec) %>%
   ggplot(aes(x = year, y = fertility, color = country)) +
   geom_line()
 ```
-### Data Frame: `wb_arb`
+#### Data Frame: `wb_arb`
 
 For example, if the original data does not have an iso3c code, you can obtain a part of data refering to the column they share in common. In the following I used `by = "country"` in the second code chunk.
 
@@ -1124,14 +1124,14 @@ df_fertility %>% right_join(wb_arb, by = "country") %>%
 
 
 
-## Wangling: Transform and Tidy Data
+### Wangling: Transform and Tidy Data
 
 ```{r}
 url_class <- "https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=excel"
 download.file(url = url_class, mode = "wb", destfile = "data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls")
 ```
 
-### Tidying data
+#### Tidying data
 
 ```{r}
 country_tmp <- read_excel("data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls", sheet = 1, skip = 3, n_max =271) %>% slice(-1)
@@ -1225,7 +1225,7 @@ WDIsearch(string = "co2", field = "name") %>% DT::datatable()
  
 
 
-## Population Analysis
+### Population Analysis
 
 The original analysis uses Base R commands a lot, I do a similar analysis using `tidyverse` as an example.
 
@@ -1274,7 +1274,7 @@ df_un_pop_rev %>% filter(series == "Infant mortality for both sexes (per 1,000 l
 ```
 
 
-## Literacy rate, youth total (% of people ages 15-24)
+### Literacy rate, youth total (% of people ages 15-24)
 
 I will introduce this because it uses `semi_join` to choose countries' data deleting aggrigated data.
 
@@ -1288,7 +1288,7 @@ DT::datatable(literacy_rate_youth)
 ```
 
 
-### Filtering joins
+#### Filtering joins
 
 **Description**
 
@@ -1317,9 +1317,9 @@ DT::datatable(literacy_rate_youth_aggregated)
 ```
 
 
-## Visualization of the data
+### Visualization of the data
 
-### Gender: Ratio of girls to boys in primary, secondary and tertiary levels
+#### Gender: Ratio of girls to boys in primary, secondary and tertiary levels
 
 -   Went to <http://data.un.org/> (UNdata website)
 -   Scrolled down to "Gender" within "Popular statistical tables, country (area) and regional profiles"
@@ -1348,7 +1348,7 @@ gender_education_tbl <- gender_education %>% select(num = "Region/Country/Area",
 gender_education_tbl
 ```
 
-#### Visualization
+##### Visualization
 
 The student asks:  I do not know how to visualize this data using ggplot...
 
@@ -1381,7 +1381,7 @@ gender_education %>%
   facet_grid(cols = vars(series))
 ```
 
-### Proportion of seats held by women in national parliament.
+#### Proportion of seats held by women in national parliament.
 
 ```{r cash = TRUE}
 url_of_df <- "http://data.un.org/_Docs/SYB/CSV/SYB64_317_202110_Seats%20held%20by%20women%20in%20Parliament.csv"
@@ -1420,7 +1420,7 @@ UN_WO_tbl_short
 ```
 
 
-#### Visualization
+##### Visualization
 
 
 ```{r}

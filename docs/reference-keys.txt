@@ -398,14 +398,11 @@ presentation-1
 minutes-5-7-min.-presentation-and-3-5-min.-qa-1
 share-your-exploratory-data-analysis-experience
 the-ninth-assignment-in-moodle
-presentation-on-2021-02-17
-presentation-on-2021-02-24
 learning-resources-ix
 rstudio-primers-see-references-in-moodle-at-the-bottom-4
 presentation-learning-resources
 part-i-presentation-part-ii
 the-tenth-assignment-in-moodle
-presentation-on-2021-02-24-1
 part-ii-roundup-learning-resources
 contents-1
 focus-of-this-course-exploratory-data-analysis

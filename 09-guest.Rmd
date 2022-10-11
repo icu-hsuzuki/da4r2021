@@ -217,35 +217,6 @@ Write your feedback to each of your classmates' presentation on the Forum in Moo
 
 * Submit your response to Moodle (The Ninth Assignment) by 2021-02-23 23:59:00
 
-
-### Presentation on 2021-02-17
-
-1. SHIQI YANG:  
-
-2. YAPING TU: 
-
-3. TATSUYA ORYU:
-
-4. AYANE MARUICHI
-
-5. YURI INAO
-
-6. LAKMINI KAUSHALYA HERATH
-
-7. NIROSHA HARSHANI NAGALMULLE KANKANAMALAGE
-
-8. RYU OGURO
-
-### Presentation on 2021-02-24
-
-1. OLIVIA WELLESLEY-COLE
-
-2. CHISAKI TAKENAKA
-
-3. MEGUMI KOGA
-
-4. NOOR UL HUDA MALLICK
-
 ### Learning Resources, IX
 
 * [R for Data Science, Part III Wrangle](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro)
