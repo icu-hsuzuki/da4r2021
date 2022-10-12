@@ -4,6 +4,7 @@ about-qall401-data-analysis-for-researchers
 introduction-by-professor-kaizoji
 introduction-slide-presentation-1
 data-analytics-data-science-overview-slide-presentation-2
+r-and-r-studio
 schedule-tentative
 responses-of-students
 introduction-in-ay2020-by-suzuki
@@ -267,6 +268,7 @@ history-of-regression-analysis-wikipedia
 the-first-example-1
 model-analysis-with-tidyverse-modelr
 predictions-haty-a_1-a_2x-and-residuals-y---haty
+geom_jitter
 iris-1
 linear-model-sepal.w-sepal.l
 linear-model-petal.w-petal.l
@@ -326,10 +328,11 @@ importing-3
 glimpsing-2
 transforming-1
 visualising-2
+modeling-2
 education
 importing-4
 transforming-2
-modeling-2
+modeling-3
 topics1
 part-i-regression-1
 why-does-gdp-vary-from-country-to-country
@@ -340,20 +343,17 @@ vif-variance-inflation-factor
 conclusion
 a-time-series-data-of-world-from-1960-to-2020
 excercise
-regression-2-co2-emission
 project
 regression-analysis
 wdi-indicator-cordes
 regression-1
 we-select-regression-model
 a-time-series-data-of-world-from-1960-to-2020-1
-regression-3-co2-emission-standardization
 regression-2
 not-standardized
 regression-3
 standadized-again
 we-select-regression-model-1
-regression-of-categorical-variables-and-anova
 regression-4
 t-test
 week-7-assignment
@@ -394,7 +394,6 @@ the-eighth-assignment-in-moodle
 learning-resources-viii
 rstudio-primers-see-references-in-moodle-at-the-bottom-3
 presentation
-presentation-1
 minutes-5-7-min.-presentation-and-3-5-min.-qa-1
 share-your-exploratory-data-analysis-experience
 the-ninth-assignment-in-moodle
@@ -433,7 +432,6 @@ swirl-courses-github-1
 rstudio-primers-httpsrstudio.cloudlearnprimers-2
 learning-resources-x-books-1
 learning-resources-x-moocs-and-online-courses-1
-nightingale
 basic-references
 histdata-data-sets-from-the-history-of-statistics-and-data-visualization
 nightingale-datasets
@@ -467,6 +465,7 @@ function-wdisearch-1
 the-first-example-2
 setup-2
 gdp-per-capita
+more-examples-1
 search-indicators-related-to-gdp
 population
 more-than-one-indicator
@@ -502,6 +501,7 @@ history-of-regression-analysis-wikipedia-1
 galtons-example
 summary-of-the-data
 what-type-of-variation-occurs-within-my-variables
+r-commands-on-statistical-measurements
 what-type-of-covariation-occurs-between-my-variables
 basic-facts
 visual-illustration
@@ -548,6 +548,7 @@ visualization-using-ggplot2-package
 setting-a-period
 importing-and-transforming-data-with-readr-and-dplyr-in-tidyverse-packages
 review
+library-loadingattaching-packages
 importing-data-by-readr-in-tidyverse
 transforming-data-by-dplyr-in-tidyverse
 slice-subset-rows-using-their-positions
@@ -566,6 +567,7 @@ aggregated-by-countries
 population-of-2019
 region
 income
+analysis-suggested-by-rami-krispin
 summary-of-the-total-confrimed-cases-by-country
 summary-of-new-cases-during-the-past-24-hours-by-country-and-type
 pop
@@ -592,11 +594,8 @@ thailand
 united-states
 vietnam
 project-2
-r-and-r-studio
-data-frame-wb_arb
-geom_jitter
-modeling-3
-more-examples-1
-r-commands-on-statistical-measurements
-library-loadingattaching-packages
-analysis-suggested-by-rami-krispin
+regression-2-co2-emission
+regression-3-co2-emission-standardization
+regression-of-categorical-variables-and-anova
+presentation-1
+nightingale

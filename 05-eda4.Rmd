@@ -1126,24 +1126,24 @@ df_fertility %>% right_join(wb_arb, by = "country") %>%
 
 ### Wangling: Transform and Tidy Data
 
-```{r}
+```{r eval = TRUE}
 url_class <- "https://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=excel"
 download.file(url = url_class, mode = "wb", destfile = "data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls")
 ```
 
 #### Tidying data
 
-```{r}
+```{r eval = TRUE}
 country_tmp <- read_excel("data/API_EN.ATM.CO2E.PC_DS2_en_excel_v2_3469464.xls", sheet = 1, skip = 3, n_max =271) %>% slice(-1)
 ```
 
-```{r}
+```{r eval = TRUE}
 DT::datatable(country_tmp)
 ```
 
 The following is an original code chunk.
 
-```{r}
+```{r eval = TRUE}
 Co2_country <- country_tmp %>%
   select(`Country Name`, `Country Code`, `Indicator Name`, `Indicator Code`,`1960`:`2018`)
 Co2_country <- pivot_longer(Co2_country,cols = 5:63, names_to = "year", values_to = "Co2", values_drop_na = TRUE) %>%
@@ -1185,7 +1185,7 @@ Co2_country_rev2 %>% filter(ID == "WLD") %>%
 
 It is possible to set year to be an integer variable when pivot_longer is applied by adding `names_transform = list(year = as.integer)`.
 
-```{r}
+```{r eval = TRUE}
 co2_country <- country_tmp %>%
   select('Country Name', 'Country Code', 'Indicator Name', 'Indicator Code','1960':'2018')
 co2_country <- pivot_longer(co2_country,cols = 5:63, names_to = "year", names_transform = list(year = as.integer), values_to = "Co2", values_drop_na = TRUE) %>%
@@ -1193,7 +1193,7 @@ co2_country <- pivot_longer(co2_country,cols = 5:63, names_to = "year", names_tr
 DT::datatable(co2_country)
 ```
 
-```{r}
+```{r eval = TRUE}
 co2_country <- country_tmp %>% 
   pivot_longer(cols = 5:63, names_to = "year", names_transform = list(year = as.integer), 
                values_to = "co2", values_drop_na = TRUE) %>%
@@ -1219,7 +1219,7 @@ Compare the data above and the those in WDI.
  - URL: https://data.worldbank.org/indicator/EN.ATM.CO2E.KT
  - Description:
  
-```{r}
+```{r eval = TRUE}
 WDIsearch(string = "co2", field = "name") %>% DT::datatable()
 ```
  
@@ -1243,7 +1243,7 @@ Check the regions of interst.
 df_un_pop %>% filter(`Region/Country/Area` %in% c(2,9,21,419,142,150)) %>% distinct(`...2`)
 ```
 
-```{r}
+```{r eval = TRUE}
 df_un_pop_rev <- df_un_pop %>% 
   select(rn = `Region/Country/Area`, region = `...2`, year = Year, series = Series, value = Value) %>%
   filter(rn %in% c(2,9,21,419,142,150))
@@ -1311,7 +1311,7 @@ DT::datatable(literacy_rate_youth_country)
 
 Compare with the following.
 
-```{r}
+```{r eval = TRUE}
 literacy_rate_youth_aggregated <- literacy_rate_youth %>% anti_join(wb_countries, by = "country")
 DT::datatable(literacy_rate_youth_aggregated)
 ```

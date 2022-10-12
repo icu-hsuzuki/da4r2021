@@ -23,7 +23,7 @@
 <meta name="author" content="DS SL" />
 
 
-<meta name="date" content="2022-10-12" />
+<meta name="date" content="2022-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -670,7 +670,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="coronavirus" class="section level1 hasAnchor" number="18">
 <h1><span class="header-section-number">D</span> Appendix D Coronavirus<a href="coronavirus.html#coronavirus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
-<p>An example of an R Notebook, rendered at 2022-10-12 23:38:51 JST</p>
+<p>An example of an R Notebook, rendered at 2022-10-13 00:34:50 JST</p>
 </blockquote>
 <blockquote>
 <p>This version uses <code>tidyverse</code> packages for importing and transforming data.</p>
@@ -3429,7 +3429,7 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
 </div>
 <div id="summary-of-new-cases-during-the-past-24-hours-by-country-and-type" class="section level4 hasAnchor" number="18.5.4.4">
 <h4><span class="header-section-number">D.5.4.4</span> Summary of new cases during the past 24 hours by country and type<a href="coronavirus.html#summary-of-new-cases-during-the-past-24-hours-by-country-and-type" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Date = 2022-10-10</p>
+<p>Date = 2022-10-11</p>
 <div class="sourceCode" id="cb1524"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1524-1"><a href="coronavirus.html#cb1524-1" aria-hidden="true" tabindex="-1"></a>coronavirus_country <span class="sc">%&gt;%</span> </span>
 <span id="cb1524-2"><a href="coronavirus.html#cb1524-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">==</span> <span class="fu">Sys.Date</span>() <span class="sc">-</span><span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb1524-3"><a href="coronavirus.html#cb1524-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, cases, value) <span class="sc">%&gt;%</span></span>
@@ -3445,16 +3445,16 @@ write_csv(coronavirus, WRITEDATE)</code></pre>
 ## # Groups:   country [201]
 ##    country      confirmed death recovered
 ##    &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
-##  1 Germany         172536   185         0
-##  2 France          109269   113         0
-##  3 Taiwan*          32072    57         0
-##  4 Turkey           23116    24         0
-##  5 US               21876   117         0
-##  6 Brazil           16956   171         0
-##  7 Russia           15501    95         0
-##  8 Korea, South     15476    10         0
-##  9 Italy            15089    51         0
-## 10 Japan            13038    50         0
+##  1 Germany         136748   199         0
+##  2 France           94784    85         0
+##  3 Italy            65917    80         0
+##  4 Greece           51427   113         0
+##  5 US               51155   629         0
+##  6 Taiwan*          41408    36         0
+##  7 Switzerland      35589     1         0
+##  8 Korea, South     30503    15         0
+##  9 Russia           13817   105         0
+## 10 Japan            13123    27         0
 ## # … with 191 more rows</code></pre>
 
 </div>
