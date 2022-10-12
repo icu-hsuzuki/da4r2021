@@ -592,3 +592,12 @@ thailand
 united-states
 vietnam
 project-2
+r-and-r-studio
+course-contents-1
+data-frame-wb_arb
+geom_jitter
+modeling-3
+more-examples-1
+r-commands-on-statistical-measurements
+library-loadingattaching-packages
+analysis-suggested-by-rami-krispin

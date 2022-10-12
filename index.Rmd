@@ -10,3 +10,57 @@ site: bookdown::bookdown_site
 This is a lecture note of a course jointly taught in the Winter term AY2021.
 
 First we start with the contents of the slides and gradually include other contents into this book.
+
+## Course Contents {-}
+
+  1. Introduction:   
+    - About the Course  
+    - Data Science  
+    - Data: Big Data, Public Data, etc.  
+    - R, RStudio, [RStudio Cloud]  
+    - [A] Self-introduction, etc.
+  2. Exploratory Data Analysis (EDA) 1   
+    - R Basics with RStudio and/or RStudio.cloud; R Script  
+    - [P] `swirl`  
+    - [A] Quiz on Moodle
+  3. Exploratory Data Analysis (EDA) 2     
+    - R Markdown; R Notebook   
+    - Data Visualization  
+    - Package: `tidyverse`: Introduction to `ggplot2`, Explore, I  
+    - Data: `datasets`  
+    - [P] RStudio Primers: Programming Basics, Visualization Basics  
+    - [A] R Notebook using `datasets` package data
+  4. Exploratory Data Analysis (EDA) 3      
+    - Data Wrangling    
+    - Package: `tidyverse`, `WDI`: Introduction to `tibble`, dplyr`, `WDI`, `WDIsearch`    
+    - Data: World Bank Data    
+    - [P] RStudio Primers: Work with Data, Wrangle, I    
+    - [A] WDI: submit R Notebook file with `a4_ID.nb.html  `
+  5. Exploratory Data Analysis (EDA) 4    
+    - Tidy Data  
+    - Package: `tidyverse`, `dplyr`: pivoting  
+    - Data: WDI, UN data, `CLASS.xlsx`, JHU Covid-19 Data  
+    - [P] RStudio Primers: Visualize Data – Explore, II  
+    - [A] EDA on Public Data: submit R Notebook file with `a5_ID.nb.html`
+  6. Exploratory Data Analysis (EDA) 5     
+    - Data Modeling and EDA  
+    - Package: `modelr`, `HistData`  
+    - Data: `datasets::cars`, `datasets::iris`, `HistData::GaltonFamilies`  
+    - [P] RStudio Primers: Tidy Your Data – Wrangle, II  
+    - [A] Modeling and EDA: submit R Notebook file with `a6_ID.nb.html`
+  7. Topics 1  
+    - Inference Statistics (Regression, hypothesis testing, classification, etc.)  
+    - Standardization, PPDAC  
+    - Package: `tidyverse`, `WDI`, `car`, `modelsummary`  
+    - Data: GDP using WDI,   
+    - [A] Assignment on regression analysis and PPDAC cycle
+  8. Topics 2  
+    - Categorical Variables, Analysis of Variance (ANOVA)  
+    - Classification, Causal Inference  
+    - Data: NHEFS data, `datasets::iris`
+  9. Topics 3: Guest Lecture  
+  10. Presentation  
+    - Students' Presentations  
+    - Course Round-up  
+    
+  [P]: Practice, [A]: Assignment
