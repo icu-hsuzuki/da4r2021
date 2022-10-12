@@ -550,7 +550,6 @@ Please note the following.
 * To create a fancy document with R Notebook, see the Markdown Quick Reference under Help on top menu for the editor. If you are using Visual Editor using A bottun on top left pane, see https://rstudio.github.io/visual-markdown-editing/. 
 * R Studio introduced Visual Editor last year. It seems to be stable but it is not perfect to go back and forth from the original editor using tags. I always use the original editor and I am confident on all the functions of it but I do not have much experience on Visual Editor.  
 
-------------------------------------------------------------------------
 
 ### Set up
 
@@ -1019,7 +1018,7 @@ ggplot(df_tg) +
 
 ```{r}
 df_chickwts <- chickwts
-df_chickwts
+head(df_chickwts)
 ```
 
 ```{r}
