@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A Appendix B Public Data | Data Analysis for Researchers</title>
-  <meta name="description" content="A Appendix B Public Data | Data Analysis for Researchers" />
+  <title>B Appendix B Public Data | Data Analysis for Researchers</title>
+  <meta name="description" content="B Appendix B Public Data | Data Analysis for Researchers" />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A Appendix B Public Data | Data Analysis for Researchers" />
+  <meta property="og:title" content="B Appendix B Public Data | Data Analysis for Researchers" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A Appendix B Public Data | Data Analysis for Researchers" />
+  <meta name="twitter:title" content="B Appendix B Public Data | Data Analysis for Researchers" />
   
   
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="presentation-learning-resources.html"/>
+<link rel="prev" href="nightingale.html"/>
 <link rel="next" href="model.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -52,6 +52,16 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.25/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -370,14 +380,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.11" data-path="eda5.html"><a href="eda5.html#the-first-example-1"><i class="fa fa-check"></i><b>6.1.11</b> The First Example</a></li>
 <li class="chapter" data-level="6.1.12" data-path="eda5.html"><a href="eda5.html#model-analysis-with-tidyverse-modelr"><i class="fa fa-check"></i><b>6.1.12</b> Model Analysis with <code>tidyverse</code>: <code>modelr</code></a></li>
 <li class="chapter" data-level="6.1.13" data-path="eda5.html"><a href="eda5.html#predictions-haty-a_1-a_2x-and-residuals-y---haty"><i class="fa fa-check"></i><b>6.1.13</b> Predictions <span class="math inline">\(\hat{y} = a_1 + a_2x\)</span> and Residuals <span class="math inline">\(y - \hat{y}\)</span></a></li>
-<li class="chapter" data-level="6.1.14" data-path="eda5.html"><a href="eda5.html#geom_jitter"><i class="fa fa-check"></i><b>6.1.14</b> geom_jitter()</a></li>
-<li class="chapter" data-level="6.1.15" data-path="eda5.html"><a href="eda5.html#iris-1"><i class="fa fa-check"></i><b>6.1.15</b> iris</a></li>
-<li class="chapter" data-level="6.1.16" data-path="eda5.html"><a href="eda5.html#linear-model-sepal.w-sepal.l"><i class="fa fa-check"></i><b>6.1.16</b> Linear Model: Sepal.W ~ Sepal.L</a></li>
-<li class="chapter" data-level="6.1.17" data-path="eda5.html"><a href="eda5.html#linear-model-petal.w-petal.l"><i class="fa fa-check"></i><b>6.1.17</b> Linear Model: Petal.W ~ Petal.L</a></li>
-<li class="chapter" data-level="6.1.18" data-path="eda5.html"><a href="eda5.html#correlation"><i class="fa fa-check"></i><b>6.1.18</b> Correlation</a></li>
-<li class="chapter" data-level="6.1.19" data-path="eda5.html"><a href="eda5.html#filterspecies-setosa"><i class="fa fa-check"></i><b>6.1.19</b> <code>filter(Species == "setosa")</code></a></li>
-<li class="chapter" data-level="6.1.20" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>6.1.20</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
-<li class="chapter" data-level="6.1.21" data-path="eda5.html"><a href="eda5.html#linear-regression-quick-reference"><i class="fa fa-check"></i><b>6.1.21</b> Linear Regression Quick Reference</a></li>
+<li class="chapter" data-level="6.1.14" data-path="eda5.html"><a href="eda5.html#iris-1"><i class="fa fa-check"></i><b>6.1.14</b> iris</a></li>
+<li class="chapter" data-level="6.1.15" data-path="eda5.html"><a href="eda5.html#linear-model-sepal.w-sepal.l"><i class="fa fa-check"></i><b>6.1.15</b> Linear Model: Sepal.W ~ Sepal.L</a></li>
+<li class="chapter" data-level="6.1.16" data-path="eda5.html"><a href="eda5.html#linear-model-petal.w-petal.l"><i class="fa fa-check"></i><b>6.1.16</b> Linear Model: Petal.W ~ Petal.L</a></li>
+<li class="chapter" data-level="6.1.17" data-path="eda5.html"><a href="eda5.html#correlation"><i class="fa fa-check"></i><b>6.1.17</b> Correlation</a></li>
+<li class="chapter" data-level="6.1.18" data-path="eda5.html"><a href="eda5.html#filterspecies-setosa"><i class="fa fa-check"></i><b>6.1.18</b> <code>filter(Species == "setosa")</code></a></li>
+<li class="chapter" data-level="6.1.19" data-path="eda5.html"><a href="eda5.html#aessepal.l-sepal.w-color-species"><i class="fa fa-check"></i><b>6.1.19</b> <code>aes(Sepal.L, Sepal.W, color = Species)</code></a></li>
+<li class="chapter" data-level="6.1.20" data-path="eda5.html"><a href="eda5.html#linear-regression-quick-reference"><i class="fa fa-check"></i><b>6.1.20</b> Linear Regression Quick Reference</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="eda5.html"><a href="eda5.html#part-ii-practicum---model-analysis-warnings"><i class="fa fa-check"></i><b>6.2</b> Part II: Practicum - Model Analysis Warnings</a>
 <ul>
@@ -517,120 +526,119 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.3.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#learning-resources-x-moocs-and-online-courses-1"><i class="fa fa-check"></i><b>10.3.3</b> Learning Resources, X – Moocs and Online Courses</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path=""><a href="#appendix-appendix"><i class="fa fa-check"></i>(APPENDIX) Appendix</a>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="nightingale.html"><a href="nightingale.html"><i class="fa fa-check"></i><b>A</b> Appendix A Nightingale’s Data</a>
 <ul>
-<li class="chapter" data-level="10.4" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#basic-references"><i class="fa fa-check"></i><b>10.4</b> Basic References</a></li>
-<li class="chapter" data-level="10.5" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#histdata-data-sets-from-the-history-of-statistics-and-data-visualization"><i class="fa fa-check"></i><b>10.5</b> HistData: Data Sets from the History of Statistics and Data Visualization</a>
+<li class="chapter" data-level="A.1" data-path="nightingale.html"><a href="nightingale.html#basic-references"><i class="fa fa-check"></i><b>A.1</b> Basic References</a></li>
+<li class="chapter" data-level="A.2" data-path="nightingale.html"><a href="nightingale.html#histdata-data-sets-from-the-history-of-statistics-and-data-visualization"><i class="fa fa-check"></i><b>A.2</b> HistData: Data Sets from the History of Statistics and Data Visualization</a>
 <ul>
-<li class="chapter" data-level="10.5.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#nightingale-datasets"><i class="fa fa-check"></i><b>10.5.1</b> Nightingale Datasets</a></li>
-<li class="chapter" data-level="10.5.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#references-1"><i class="fa fa-check"></i><b>10.5.2</b> References</a></li>
+<li class="chapter" data-level="A.2.1" data-path="nightingale.html"><a href="nightingale.html#nightingale-datasets"><i class="fa fa-check"></i><b>A.2.1</b> Nightingale Datasets</a></li>
+<li class="chapter" data-level="A.2.2" data-path="nightingale.html"><a href="nightingale.html#references-1"><i class="fa fa-check"></i><b>A.2.2</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="10.6" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#exploratory-data-analysis-using-tidyverse-package"><i class="fa fa-check"></i><b>10.6</b> Exploratory Data Analysis Using <code>tidyverse</code> Package</a>
+<li class="chapter" data-level="A.3" data-path="nightingale.html"><a href="nightingale.html#exploratory-data-analysis-using-tidyverse-package"><i class="fa fa-check"></i><b>A.3</b> Exploratory Data Analysis Using <code>tidyverse</code> Package</a>
 <ul>
-<li class="chapter" data-level="10.6.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#reading-nightingale-data-and-glimpse-the-structure"><i class="fa fa-check"></i><b>10.6.1</b> Reading Nightingale Data and Glimpse the Structure</a></li>
-<li class="chapter" data-level="10.6.2" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#comparison-of-death-causes"><i class="fa fa-check"></i><b>10.6.2</b> Comparison of Death Causes</a></li>
-<li class="chapter" data-level="10.6.3" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#data-wrangling---tidying-data"><i class="fa fa-check"></i><b>10.6.3</b> Data Wrangling - Tidying Data</a></li>
+<li class="chapter" data-level="A.3.1" data-path="nightingale.html"><a href="nightingale.html#reading-nightingale-data-and-glimpse-the-structure"><i class="fa fa-check"></i><b>A.3.1</b> Reading Nightingale Data and Glimpse the Structure</a></li>
+<li class="chapter" data-level="A.3.2" data-path="nightingale.html"><a href="nightingale.html#comparison-of-death-causes"><i class="fa fa-check"></i><b>A.3.2</b> Comparison of Death Causes</a></li>
+<li class="chapter" data-level="A.3.3" data-path="nightingale.html"><a href="nightingale.html#data-wrangling---tidying-data"><i class="fa fa-check"></i><b>A.3.3</b> Data Wrangling - Tidying Data</a></li>
 </ul></li>
-<li class="chapter" data-level="10.7" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#original-code-in-nightingale-document"><i class="fa fa-check"></i><b>10.7</b> Original Code in Nightingale document</a>
+<li class="chapter" data-level="A.4" data-path="nightingale.html"><a href="nightingale.html#original-code-in-nightingale-document"><i class="fa fa-check"></i><b>A.4</b> Original Code in Nightingale document</a>
 <ul>
-<li class="chapter" data-level="10.7.1" data-path="presentation-learning-resources.html"><a href="presentation-learning-resources.html#reshape-package-flexibly-reshape-data"><i class="fa fa-check"></i><b>10.7.1</b> <code>reshape</code> Package: Flexibly Reshape Data</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i><b>11</b> Appendix B Public Data</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="public.html"><a href="public.html#introduction-1"><i class="fa fa-check"></i><b>11.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="11.1.1" data-path="public.html"><a href="public.html#open-data-defined-by-world-bank"><i class="fa fa-check"></i><b>11.1.1</b> Open Data Defined by World Bank</a></li>
-<li class="chapter" data-level="11.1.2" data-path="public.html"><a href="public.html#a-list-of-open-data-catalogue-1"><i class="fa fa-check"></i><b>11.1.2</b> A List of Open Data Catalogue</a></li>
-<li class="chapter" data-level="11.1.3" data-path="public.html"><a href="public.html#examples-1"><i class="fa fa-check"></i><b>11.1.3</b> Examples</a></li>
-</ul></li>
-<li class="chapter" data-level="11.2" data-path="public.html"><a href="public.html#world-bank"><i class="fa fa-check"></i><b>11.2</b> World Bank</a>
-<ul>
-<li class="chapter" data-level="11.2.1" data-path="public.html"><a href="public.html#about-1"><i class="fa fa-check"></i><b>11.2.1</b> About</a></li>
-<li class="chapter" data-level="11.2.2" data-path="public.html"><a href="public.html#wdi---world-development-indicaters"><i class="fa fa-check"></i><b>11.2.2</b> WDI - World Development Indicaters</a></li>
-<li class="chapter" data-level="11.2.3" data-path="public.html"><a href="public.html#r-package-wdi-1"><i class="fa fa-check"></i><b>11.2.3</b> R Package WDI</a></li>
-<li class="chapter" data-level="11.2.4" data-path="public.html"><a href="public.html#the-first-example-2"><i class="fa fa-check"></i><b>11.2.4</b> The First Example</a></li>
-<li class="chapter" data-level="11.2.5" data-path="public.html"><a href="public.html#world-bank-country-and-lending-groups-and-an-option-extra-true"><i class="fa fa-check"></i><b>11.2.5</b> World Bank Country and Lending Groups and an Option <code>extra = TRUE</code></a></li>
-</ul></li>
-<li class="chapter" data-level="11.3" data-path="public.html"><a href="public.html#united-nations"><i class="fa fa-check"></i><b>11.3</b> United Nations</a>
-<ul>
-<li class="chapter" data-level="11.3.1" data-path="public.html"><a href="public.html#importing-data-2"><i class="fa fa-check"></i><b>11.3.1</b> Importing Data</a></li>
-<li class="chapter" data-level="11.3.2" data-path="public.html"><a href="public.html#example"><i class="fa fa-check"></i><b>11.3.2</b> Example</a></li>
+<li class="chapter" data-level="A.4.1" data-path="nightingale.html"><a href="nightingale.html#reshape-package-flexibly-reshape-data"><i class="fa fa-check"></i><b>A.4.1</b> <code>reshape</code> Package: Flexibly Reshape Data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>12</b> Appendix C Modeling</a>
+<li class="chapter" data-level="B" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i><b>B</b> Appendix B Public Data</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="public.html"><a href="public.html#introduction-1"><i class="fa fa-check"></i><b>B.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="public.html"><a href="public.html#open-data-defined-by-world-bank"><i class="fa fa-check"></i><b>B.1.1</b> Open Data Defined by World Bank</a></li>
+<li class="chapter" data-level="B.1.2" data-path="public.html"><a href="public.html#a-list-of-open-data-catalogue-1"><i class="fa fa-check"></i><b>B.1.2</b> A List of Open Data Catalogue</a></li>
+<li class="chapter" data-level="B.1.3" data-path="public.html"><a href="public.html#examples-1"><i class="fa fa-check"></i><b>B.1.3</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="public.html"><a href="public.html#world-bank"><i class="fa fa-check"></i><b>B.2</b> World Bank</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="public.html"><a href="public.html#about-1"><i class="fa fa-check"></i><b>B.2.1</b> About</a></li>
+<li class="chapter" data-level="B.2.2" data-path="public.html"><a href="public.html#wdi---world-development-indicaters"><i class="fa fa-check"></i><b>B.2.2</b> WDI - World Development Indicaters</a></li>
+<li class="chapter" data-level="B.2.3" data-path="public.html"><a href="public.html#r-package-wdi-1"><i class="fa fa-check"></i><b>B.2.3</b> R Package WDI</a></li>
+<li class="chapter" data-level="B.2.4" data-path="public.html"><a href="public.html#the-first-example-2"><i class="fa fa-check"></i><b>B.2.4</b> The First Example</a></li>
+<li class="chapter" data-level="B.2.5" data-path="public.html"><a href="public.html#world-bank-country-and-lending-groups-and-an-option-extra-true"><i class="fa fa-check"></i><b>B.2.5</b> World Bank Country and Lending Groups and an Option <code>extra = TRUE</code></a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="public.html"><a href="public.html#united-nations"><i class="fa fa-check"></i><b>B.3</b> United Nations</a>
+<ul>
+<li class="chapter" data-level="B.3.1" data-path="public.html"><a href="public.html#importing-data-2"><i class="fa fa-check"></i><b>B.3.1</b> Importing Data</a></li>
+<li class="chapter" data-level="B.3.2" data-path="public.html"><a href="public.html#example"><i class="fa fa-check"></i><b>B.3.2</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>C</b> Appendix C Modeling</a>
 <ul>
 <li class="chapter" data-level="" data-path="model.html"><a href="model.html#eda-a-diagram-from-r4ds-by-h.w.-and-g.g.-6"><i class="fa fa-check"></i>EDA (A diagram from R4DS by H.W. and G.G.)</a></li>
 <li class="chapter" data-level="" data-path="model.html"><a href="model.html#contents-of-eda5-1"><i class="fa fa-check"></i>Contents of EDA5</a></li>
-<li class="chapter" data-level="12.1" data-path="model.html"><a href="model.html#exploration-in-visualization-1"><i class="fa fa-check"></i><b>12.1</b> Exploration in Visualization</a>
+<li class="chapter" data-level="C.1" data-path="model.html"><a href="model.html#exploration-in-visualization-1"><i class="fa fa-check"></i><b>C.1</b> Exploration in Visualization</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="model.html"><a href="model.html#exploration-in-visualization-i"><i class="fa fa-check"></i><b>12.1.1</b> Exploration in Visualization, I</a></li>
-<li class="chapter" data-level="12.1.2" data-path="model.html"><a href="model.html#exploration-in-visualization-ii"><i class="fa fa-check"></i><b>12.1.2</b> Exploration in Visualization, II</a></li>
-<li class="chapter" data-level="12.1.3" data-path="model.html"><a href="model.html#exploration-in-visualization-iii"><i class="fa fa-check"></i><b>12.1.3</b> Exploration in Visualization, III</a></li>
+<li class="chapter" data-level="C.1.1" data-path="model.html"><a href="model.html#exploration-in-visualization-i"><i class="fa fa-check"></i><b>C.1.1</b> Exploration in Visualization, I</a></li>
+<li class="chapter" data-level="C.1.2" data-path="model.html"><a href="model.html#exploration-in-visualization-ii"><i class="fa fa-check"></i><b>C.1.2</b> Exploration in Visualization, II</a></li>
+<li class="chapter" data-level="C.1.3" data-path="model.html"><a href="model.html#exploration-in-visualization-iii"><i class="fa fa-check"></i><b>C.1.3</b> Exploration in Visualization, III</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="model.html"><a href="model.html#exploration-in-visualization-iv"><i class="fa fa-check"></i><b>12.2</b> Exploration in Visualization, IV</a></li>
-<li class="chapter" data-level="12.3" data-path="model.html"><a href="model.html#exploration-and-data-modeling"><i class="fa fa-check"></i><b>12.3</b> Exploration and Data Modeling</a>
+<li class="chapter" data-level="C.2" data-path="model.html"><a href="model.html#exploration-in-visualization-iv"><i class="fa fa-check"></i><b>C.2</b> Exploration in Visualization, IV</a></li>
+<li class="chapter" data-level="C.3" data-path="model.html"><a href="model.html#exploration-and-data-modeling"><i class="fa fa-check"></i><b>C.3</b> Exploration and Data Modeling</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="model.html"><a href="model.html#hypothesis-generation-vs.-hypothesis-confirmation-2"><i class="fa fa-check"></i><b>12.3.1</b> Hypothesis generation vs. hypothesis confirmation</a></li>
-<li class="chapter" data-level="12.3.2" data-path="model.html"><a href="model.html#model-basics"><i class="fa fa-check"></i><b>12.3.2</b> Model Basics</a></li>
+<li class="chapter" data-level="C.3.1" data-path="model.html"><a href="model.html#hypothesis-generation-vs.-hypothesis-confirmation-2"><i class="fa fa-check"></i><b>C.3.1</b> Hypothesis generation vs. hypothesis confirmation</a></li>
+<li class="chapter" data-level="C.3.2" data-path="model.html"><a href="model.html#model-basics"><i class="fa fa-check"></i><b>C.3.2</b> Model Basics</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="model.html"><a href="model.html#examples-2"><i class="fa fa-check"></i><b>12.4</b> Examples</a>
+<li class="chapter" data-level="C.4" data-path="model.html"><a href="model.html#examples-2"><i class="fa fa-check"></i><b>C.4</b> Examples</a>
 <ul>
-<li class="chapter" data-level="12.4.1" data-path="model.html"><a href="model.html#cars"><i class="fa fa-check"></i><b>12.4.1</b> <code>cars</code></a></li>
-<li class="chapter" data-level="12.4.2" data-path="model.html"><a href="model.html#iris-2"><i class="fa fa-check"></i><b>12.4.2</b> iris</a></li>
-<li class="chapter" data-level="12.4.3" data-path="model.html"><a href="model.html#model-analysis-warnings"><i class="fa fa-check"></i><b>12.4.3</b> Model Analysis Warnings</a></li>
-<li class="chapter" data-level="12.4.4" data-path="model.html"><a href="model.html#regression-analyais-summary-1"><i class="fa fa-check"></i><b>12.4.4</b> Regression Analyais: Summary</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="coronavirus.html"><a href="coronavirus.html"><i class="fa fa-check"></i><b>13</b> Appendix D Coronavirus</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="coronavirus.html"><a href="coronavirus.html#introduction-2"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
-<li class="chapter" data-level="13.2" data-path="coronavirus.html"><a href="coronavirus.html#exploration-of-data-with-base-r"><i class="fa fa-check"></i><b>13.2</b> Exploration of Data with Base R</a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="coronavirus.html"><a href="coronavirus.html#download-and-read-csv-comma-separated-value-file"><i class="fa fa-check"></i><b>13.2.1</b> Download and read csv (comma separated value) file</a></li>
-<li class="chapter" data-level="13.2.2" data-path="coronavirus.html"><a href="coronavirus.html#summaries-and-structures-of-the-data"><i class="fa fa-check"></i><b>13.2.2</b> Summaries and structures of the data</a></li>
-<li class="chapter" data-level="13.2.3" data-path="coronavirus.html"><a href="coronavirus.html#set-a-country"><i class="fa fa-check"></i><b>13.2.3</b> Set a Country</a></li>
-<li class="chapter" data-level="13.2.4" data-path="coronavirus.html"><a href="coronavirus.html#types-confirmed-death-and-recovery"><i class="fa fa-check"></i><b>13.2.4</b> Types: “confirmed” “death” and “recovery”</a></li>
-<li class="chapter" data-level="13.2.5" data-path="coronavirus.html"><a href="coronavirus.html#data-visualization"><i class="fa fa-check"></i><b>13.2.5</b> Data Visualization</a></li>
-<li class="chapter" data-level="13.2.6" data-path="coronavirus.html"><a href="coronavirus.html#scatter-plot-and-correlation-for-two-numerial-data"><i class="fa fa-check"></i><b>13.2.6</b> Scatter Plot and Correlation for Two Numerial Data</a></li>
-<li class="chapter" data-level="13.2.7" data-path="coronavirus.html"><a href="coronavirus.html#in-addition-set-a-period"><i class="fa fa-check"></i><b>13.2.7</b> In Addition Set a Period</a></li>
-<li class="chapter" data-level="13.2.8" data-path="coronavirus.html"><a href="coronavirus.html#histograms"><i class="fa fa-check"></i><b>13.2.8</b> Histograms</a></li>
-<li class="chapter" data-level="13.2.9" data-path="coronavirus.html"><a href="coronavirus.html#list-observations-and-questions-for-further-exploration"><i class="fa fa-check"></i><b>13.2.9</b> List Observations and Questions for Further Exploration</a></li>
-</ul></li>
-<li class="chapter" data-level="13.3" data-path="coronavirus.html"><a href="coronavirus.html#selection-of-several-countries-with-ggplot2"><i class="fa fa-check"></i><b>13.3</b> Selection of Several Countries with <code>ggplot2</code></a>
-<ul>
-<li class="chapter" data-level="13.3.1" data-path="coronavirus.html"><a href="coronavirus.html#set-types"><i class="fa fa-check"></i><b>13.3.1</b> Set types</a></li>
-<li class="chapter" data-level="13.3.2" data-path="coronavirus.html"><a href="coronavirus.html#visualization-using-ggplot2-package"><i class="fa fa-check"></i><b>13.3.2</b> Visualization using <code>ggplot2</code> package</a></li>
-<li class="chapter" data-level="13.3.3" data-path="coronavirus.html"><a href="coronavirus.html#setting-a-period"><i class="fa fa-check"></i><b>13.3.3</b> Setting a Period</a></li>
-</ul></li>
-<li class="chapter" data-level="13.4" data-path="coronavirus.html"><a href="coronavirus.html#importing-and-transforming-data-with-readr-and-dplyr-in-tidyverse-packages"><i class="fa fa-check"></i><b>13.4</b> Importing and Transforming Data with <code>readr</code> and <code>dplyr</code> in <code>tidyverse</code> Packages</a>
-<ul>
-<li class="chapter" data-level="13.4.1" data-path="coronavirus.html"><a href="coronavirus.html#review"><i class="fa fa-check"></i><b>13.4.1</b> Review</a></li>
-<li class="chapter" data-level="13.4.2" data-path="coronavirus.html"><a href="coronavirus.html#library-loadingattaching-packages"><i class="fa fa-check"></i><b>13.4.2</b> library: Loading/Attaching Packages</a></li>
-<li class="chapter" data-level="13.4.3" data-path="coronavirus.html"><a href="coronavirus.html#importing-data-by-readr-in-tidyverse"><i class="fa fa-check"></i><b>13.4.3</b> Importing data by <code>readr</code> in <code>tidyverse</code></a></li>
-<li class="chapter" data-level="13.4.4" data-path="coronavirus.html"><a href="coronavirus.html#transforming-data-by-dplyr-in-tidyverse"><i class="fa fa-check"></i><b>13.4.4</b> Transforming data by <code>dplyr</code> in <code>tidyverse</code></a></li>
-</ul></li>
-<li class="chapter" data-level="13.5" data-path="coronavirus.html"><a href="coronavirus.html#data-of-johns-hopkins-universiy-and-world-bank"><i class="fa fa-check"></i><b>13.5</b> Data of Johns Hopkins Universiy and World Bank</a>
-<ul>
-<li class="chapter" data-level="13.5.1" data-path="coronavirus.html"><a href="coronavirus.html#importing-raw-data"><i class="fa fa-check"></i><b>13.5.1</b> Importing Raw Data</a></li>
-<li class="chapter" data-level="13.5.2" data-path="coronavirus.html"><a href="coronavirus.html#tidying-and-combining-to-create-country-level-and-global-combined-data"><i class="fa fa-check"></i><b>13.5.2</b> Tidying and Combining: To create country level and global combined data</a></li>
-<li class="chapter" data-level="13.5.3" data-path="coronavirus.html"><a href="coronavirus.html#aggregated-by-countries"><i class="fa fa-check"></i><b>13.5.3</b> Aggregated by Countries</a></li>
-<li class="chapter" data-level="13.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>13.5.4</b> Population of 2019</a></li>
-<li class="chapter" data-level="13.5.5" data-path="coronavirus.html"><a href="coronavirus.html#analysis-suggested-by-rami-krispin"><i class="fa fa-check"></i><b>13.5.5</b> Analysis Suggested by Rami Krispin</a></li>
+<li class="chapter" data-level="C.4.1" data-path="model.html"><a href="model.html#cars"><i class="fa fa-check"></i><b>C.4.1</b> <code>cars</code></a></li>
+<li class="chapter" data-level="C.4.2" data-path="model.html"><a href="model.html#iris-2"><i class="fa fa-check"></i><b>C.4.2</b> iris</a></li>
+<li class="chapter" data-level="C.4.3" data-path="model.html"><a href="model.html#model-analysis-warnings"><i class="fa fa-check"></i><b>C.4.3</b> Model Analysis Warnings</a></li>
+<li class="chapter" data-level="C.4.4" data-path="model.html"><a href="model.html#regression-analyais-summary-1"><i class="fa fa-check"></i><b>C.4.4</b> Regression Analyais: Summary</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="pop.html"><a href="pop.html"><i class="fa fa-check"></i><b>14</b> Appendix E Population</a>
+<li class="chapter" data-level="D" data-path="coronavirus.html"><a href="coronavirus.html"><i class="fa fa-check"></i><b>D</b> Appendix D Coronavirus</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="pop.html"><a href="pop.html#about-united-states-census-bureau"><i class="fa fa-check"></i><b>14.1</b> About: United States Census Bureau</a></li>
-<li class="chapter" data-level="14.2" data-path="pop.html"><a href="pop.html#international-data-base-idb-december-2020-release-now-in-2021"><i class="fa fa-check"></i><b>14.2</b> International Data Base (IDB) December 2020 Release (Now in 2021)</a></li>
-<li class="chapter" data-level="14.3" data-path="pop.html"><a href="pop.html#analysis-using-idbzip"><i class="fa fa-check"></i><b>14.3</b> Analysis using <code>idbzip</code></a>
+<li class="chapter" data-level="D.1" data-path="coronavirus.html"><a href="coronavirus.html#introduction-2"><i class="fa fa-check"></i><b>D.1</b> Introduction</a></li>
+<li class="chapter" data-level="D.2" data-path="coronavirus.html"><a href="coronavirus.html#exploration-of-data-with-base-r"><i class="fa fa-check"></i><b>D.2</b> Exploration of Data with Base R</a>
 <ul>
-<li class="chapter" data-level="14.3.1" data-path="pop.html"><a href="pop.html#popultion-of-the-world"><i class="fa fa-check"></i><b>14.3.1</b> Popultion of the World</a></li>
-<li class="chapter" data-level="14.3.2" data-path="pop.html"><a href="pop.html#population-of-a-country-japan"><i class="fa fa-check"></i><b>14.3.2</b> Population of a Country, JAPAN</a></li>
+<li class="chapter" data-level="D.2.1" data-path="coronavirus.html"><a href="coronavirus.html#download-and-read-csv-comma-separated-value-file"><i class="fa fa-check"></i><b>D.2.1</b> Download and read csv (comma separated value) file</a></li>
+<li class="chapter" data-level="D.2.2" data-path="coronavirus.html"><a href="coronavirus.html#summaries-and-structures-of-the-data"><i class="fa fa-check"></i><b>D.2.2</b> Summaries and structures of the data</a></li>
+<li class="chapter" data-level="D.2.3" data-path="coronavirus.html"><a href="coronavirus.html#set-a-country"><i class="fa fa-check"></i><b>D.2.3</b> Set a Country</a></li>
+<li class="chapter" data-level="D.2.4" data-path="coronavirus.html"><a href="coronavirus.html#types-confirmed-death-and-recovery"><i class="fa fa-check"></i><b>D.2.4</b> Types: “confirmed” “death” and “recovery”</a></li>
+<li class="chapter" data-level="D.2.5" data-path="coronavirus.html"><a href="coronavirus.html#data-visualization"><i class="fa fa-check"></i><b>D.2.5</b> Data Visualization</a></li>
+<li class="chapter" data-level="D.2.6" data-path="coronavirus.html"><a href="coronavirus.html#scatter-plot-and-correlation-for-two-numerial-data"><i class="fa fa-check"></i><b>D.2.6</b> Scatter Plot and Correlation for Two Numerial Data</a></li>
+<li class="chapter" data-level="D.2.7" data-path="coronavirus.html"><a href="coronavirus.html#in-addition-set-a-period"><i class="fa fa-check"></i><b>D.2.7</b> In Addition Set a Period</a></li>
+<li class="chapter" data-level="D.2.8" data-path="coronavirus.html"><a href="coronavirus.html#histograms"><i class="fa fa-check"></i><b>D.2.8</b> Histograms</a></li>
+<li class="chapter" data-level="D.2.9" data-path="coronavirus.html"><a href="coronavirus.html#list-observations-and-questions-for-further-exploration"><i class="fa fa-check"></i><b>D.2.9</b> List Observations and Questions for Further Exploration</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="pop.html"><a href="pop.html#population-pyramid"><i class="fa fa-check"></i><b>14.4</b> Population Pyramid</a>
+<li class="chapter" data-level="D.3" data-path="coronavirus.html"><a href="coronavirus.html#selection-of-several-countries-with-ggplot2"><i class="fa fa-check"></i><b>D.3</b> Selection of Several Countries with <code>ggplot2</code></a>
 <ul>
-<li class="chapter" data-level="14.4.1" data-path="pop.html"><a href="pop.html#population-pyramid-of-japan-or-other-countries"><i class="fa fa-check"></i><b>14.4.1</b> Population Pyramid of Japan or Other Countries</a></li>
+<li class="chapter" data-level="D.3.1" data-path="coronavirus.html"><a href="coronavirus.html#set-types"><i class="fa fa-check"></i><b>D.3.1</b> Set types</a></li>
+<li class="chapter" data-level="D.3.2" data-path="coronavirus.html"><a href="coronavirus.html#visualization-using-ggplot2-package"><i class="fa fa-check"></i><b>D.3.2</b> Visualization using <code>ggplot2</code> package</a></li>
+<li class="chapter" data-level="D.3.3" data-path="coronavirus.html"><a href="coronavirus.html#setting-a-period"><i class="fa fa-check"></i><b>D.3.3</b> Setting a Period</a></li>
+</ul></li>
+<li class="chapter" data-level="D.4" data-path="coronavirus.html"><a href="coronavirus.html#importing-and-transforming-data-with-readr-and-dplyr-in-tidyverse-packages"><i class="fa fa-check"></i><b>D.4</b> Importing and Transforming Data with <code>readr</code> and <code>dplyr</code> in <code>tidyverse</code> Packages</a>
+<ul>
+<li class="chapter" data-level="D.4.1" data-path="coronavirus.html"><a href="coronavirus.html#review"><i class="fa fa-check"></i><b>D.4.1</b> Review</a></li>
+<li class="chapter" data-level="D.4.2" data-path="coronavirus.html"><a href="coronavirus.html#importing-data-by-readr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.2</b> Importing data by <code>readr</code> in <code>tidyverse</code></a></li>
+<li class="chapter" data-level="D.4.3" data-path="coronavirus.html"><a href="coronavirus.html#transforming-data-by-dplyr-in-tidyverse"><i class="fa fa-check"></i><b>D.4.3</b> Transforming data by <code>dplyr</code> in <code>tidyverse</code></a></li>
+</ul></li>
+<li class="chapter" data-level="D.5" data-path="coronavirus.html"><a href="coronavirus.html#data-of-johns-hopkins-universiy-and-world-bank"><i class="fa fa-check"></i><b>D.5</b> Data of Johns Hopkins Universiy and World Bank</a>
+<ul>
+<li class="chapter" data-level="D.5.1" data-path="coronavirus.html"><a href="coronavirus.html#importing-raw-data"><i class="fa fa-check"></i><b>D.5.1</b> Importing Raw Data</a></li>
+<li class="chapter" data-level="D.5.2" data-path="coronavirus.html"><a href="coronavirus.html#tidying-and-combining-to-create-country-level-and-global-combined-data"><i class="fa fa-check"></i><b>D.5.2</b> Tidying and Combining: To create country level and global combined data</a></li>
+<li class="chapter" data-level="D.5.3" data-path="coronavirus.html"><a href="coronavirus.html#aggregated-by-countries"><i class="fa fa-check"></i><b>D.5.3</b> Aggregated by Countries</a></li>
+<li class="chapter" data-level="D.5.4" data-path="coronavirus.html"><a href="coronavirus.html#population-of-2019"><i class="fa fa-check"></i><b>D.5.4</b> Population of 2019</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="E" data-path="pop.html"><a href="pop.html"><i class="fa fa-check"></i><b>E</b> Appendix E Population</a>
+<ul>
+<li class="chapter" data-level="E.1" data-path="pop.html"><a href="pop.html#about-united-states-census-bureau"><i class="fa fa-check"></i><b>E.1</b> About: United States Census Bureau</a></li>
+<li class="chapter" data-level="E.2" data-path="pop.html"><a href="pop.html#international-data-base-idb-december-2020-release-now-in-2021"><i class="fa fa-check"></i><b>E.2</b> International Data Base (IDB) December 2020 Release (Now in 2021)</a></li>
+<li class="chapter" data-level="E.3" data-path="pop.html"><a href="pop.html#analysis-using-idbzip"><i class="fa fa-check"></i><b>E.3</b> Analysis using <code>idbzip</code></a>
+<ul>
+<li class="chapter" data-level="E.3.1" data-path="pop.html"><a href="pop.html#popultion-of-the-world"><i class="fa fa-check"></i><b>E.3.1</b> Popultion of the World</a></li>
+<li class="chapter" data-level="E.3.2" data-path="pop.html"><a href="pop.html#population-of-a-country-japan"><i class="fa fa-check"></i><b>E.3.2</b> Population of a Country, JAPAN</a></li>
+</ul></li>
+<li class="chapter" data-level="E.4" data-path="pop.html"><a href="pop.html#population-pyramid"><i class="fa fa-check"></i><b>E.4</b> Population Pyramid</a>
+<ul>
+<li class="chapter" data-level="E.4.1" data-path="pop.html"><a href="pop.html#population-pyramid-of-japan-or-other-countries"><i class="fa fa-check"></i><b>E.4.1</b> Population Pyramid of Japan or Other Countries</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -652,12 +660,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="public" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">A</span> Appendix B Public Data<a href="public.html#public" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introduction-1" class="section level2 hasAnchor" number="11.1">
-<h2><span class="header-section-number">A.1</span> Introduction<a href="public.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="open-data-defined-by-world-bank" class="section level3 hasAnchor" number="11.1.1">
-<h3><span class="header-section-number">A.1.1</span> Open Data Defined by World Bank<a href="public.html#open-data-defined-by-world-bank" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="public" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">B</span> Appendix B Public Data<a href="public.html#public" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">B.1</span> Introduction<a href="public.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="open-data-defined-by-world-bank" class="section level3 hasAnchor" number="12.1.1">
+<h3><span class="header-section-number">B.1.1</span> Open Data Defined by World Bank<a href="public.html#open-data-defined-by-world-bank" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>See the following URL: <a href="http://opendatatoolkit.worldbank.org" class="uri">http://opendatatoolkit.worldbank.org</a></li>
 </ul>
@@ -667,10 +675,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The data must be , which means they must be published in electronic formats that are machine readable and non-proprietary, so that anyone can access and use the data using common, freely available software tools. Data must also be publicly available and accessible on a public server, without password or firewall restrictions. To make Open Data easier to find, most organizations create and manage Open Data catalogs.</li>
 </ol>
 </div>
-<div id="a-list-of-open-data-catalogue-1" class="section level3 hasAnchor" number="11.1.2">
-<h3><span class="header-section-number">A.1.2</span> A List of Open Data Catalogue<a href="public.html#a-list-of-open-data-catalogue-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="international-institutions-1" class="section level4 hasAnchor" number="11.1.2.1">
-<h4><span class="header-section-number">A.1.2.1</span> International Institutions<a href="public.html#international-institutions-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="a-list-of-open-data-catalogue-1" class="section level3 hasAnchor" number="12.1.2">
+<h3><span class="header-section-number">B.1.2</span> A List of Open Data Catalogue<a href="public.html#a-list-of-open-data-catalogue-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="international-institutions-1" class="section level4 hasAnchor" number="12.1.2.1">
+<h4><span class="header-section-number">B.1.2.1</span> International Institutions<a href="public.html#international-institutions-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>World Bank: <em>New Ways of Looking at Poverty</em>
 <ul>
@@ -684,8 +692,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>African Union: <a href="https://au.int/en/ea/statistics" class="uri">https://au.int/en/ea/statistics</a></li>
 </ul>
 </div>
-<div id="goverments-1" class="section level4 hasAnchor" number="11.1.2.2">
-<h4><span class="header-section-number">A.1.2.2</span> Goverments<a href="public.html#goverments-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="goverments-1" class="section level4 hasAnchor" number="12.1.2.2">
+<h4><span class="header-section-number">B.1.2.2</span> Goverments<a href="public.html#goverments-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>United States: <a href="https://www.data.gov" class="uri">https://www.data.gov</a></li>
 <li>United Kingdom: <a href="https://data.gov.uk" class="uri">https://data.gov.uk</a></li>
@@ -693,8 +701,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Japan: <a href="https://www.data.go.jp/list-of-database/?lang=en" class="uri">https://www.data.go.jp/list-of-database/?lang=en</a></li>
 </ul>
 </div>
-<div id="other-open-public-data-1" class="section level4 hasAnchor" number="11.1.2.3">
-<h4><span class="header-section-number">A.1.2.3</span> Other Open Public Data<a href="public.html#other-open-public-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="other-open-public-data-1" class="section level4 hasAnchor" number="12.1.2.3">
+<h4><span class="header-section-number">B.1.2.3</span> Other Open Public Data<a href="public.html#other-open-public-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Google Public Data Explore: <a href="https://www.google.com/publicdata/directory?hl=en_US" class="uri">https://www.google.com/publicdata/directory?hl=en_US</a>
 <ul>
@@ -713,18 +721,18 @@ The publication’s founder is the social historian and development economist Ma
 </ul></li>
 </ul>
 </div>
-<div id="financial-data-1" class="section level4 hasAnchor" number="11.1.2.4">
-<h4><span class="header-section-number">A.1.2.4</span> Financial Data<a href="public.html#financial-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div id="quandl-1" class="section level5 hasAnchor" number="11.1.2.4.1">
-<h5><span class="header-section-number">A.1.2.4.1</span> Quandl<a href="public.html#quandl-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="financial-data-1" class="section level4 hasAnchor" number="12.1.2.4">
+<h4><span class="header-section-number">B.1.2.4</span> Financial Data<a href="public.html#financial-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="quandl-1" class="section level5 hasAnchor" number="12.1.2.4.1">
+<h5><span class="header-section-number">B.1.2.4.1</span> Quandl<a href="public.html#quandl-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li><a href="https://www.quandl.com">Quandl</a></li>
 <li>R package: <a href="https://cran.r-project.org/web/packages/Quandl/Quandl.pdf" class="uri">https://cran.r-project.org/web/packages/Quandl/Quandl.pdf</a></li>
 <li>Quandl: <a href="https://www.quandl.com/data/BCHAIN/MKPRU-Bitcoin-Market-Price-USD">Bitcoin Market Price USD</a></li>
 </ul>
 </div>
-<div id="quantmod-1" class="section level5 hasAnchor" number="11.1.2.4.2">
-<h5><span class="header-section-number">A.1.2.4.2</span> Quantmod<a href="public.html#quantmod-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="quantmod-1" class="section level5 hasAnchor" number="12.1.2.4.2">
+<h5><span class="header-section-number">B.1.2.4.2</span> Quantmod<a href="public.html#quantmod-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li><a href="http://www.quantmod.com"><code>quantmod</code></a>: Quantitative Financial Modelling &amp; Trading Framework for <code>R</code></li>
 <li><code>R</code> package `quantmod: <a href="https://cran.r-project.org/web/packages/quantmod/quantmod.pdf" class="uri">https://cran.r-project.org/web/packages/quantmod/quantmod.pdf</a></li>
@@ -735,10 +743,10 @@ The publication’s founder is the social historian and development economist Ma
 </div>
 </div>
 </div>
-<div id="examples-1" class="section level3 hasAnchor" number="11.1.3">
-<h3><span class="header-section-number">A.1.3</span> Examples<a href="public.html#examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="florence-nightingale-1820-1910-1" class="section level4 hasAnchor" number="11.1.3.1">
-<h4><span class="header-section-number">A.1.3.1</span> Florence Nightingale (1820 – 1910)<a href="public.html#florence-nightingale-1820-1910-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="examples-1" class="section level3 hasAnchor" number="12.1.3">
+<h3><span class="header-section-number">B.1.3</span> Examples<a href="public.html#examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="florence-nightingale-1820-1910-1" class="section level4 hasAnchor" number="12.1.3.1">
+<h4><span class="header-section-number">B.1.3.1</span> Florence Nightingale (1820 – 1910)<a href="public.html#florence-nightingale-1820-1910-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <blockquote>
 <p>Florence Nightingale was an English social reformer, statistician and the founder of modern nursing. (<a href="https://en.wikipedia.org/wiki/Florence_Nightingale">wikipedia</a>)</p>
 </blockquote>
@@ -761,8 +769,8 @@ The publication’s founder is the social historian and development economist Ma
 <li>Nightingale: <a href="https://medium.com/nightingale/tagged/data-science">The Journal of the Data Visualization Society, Medium</a></li>
 </ul>
 </div>
-<div id="hans-rosling-1948-2017-1" class="section level4 hasAnchor" number="11.1.3.2">
-<h4><span class="header-section-number">A.1.3.2</span> Hans Rosling (1948 – 2017)<a href="public.html#hans-rosling-1948-2017-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="hans-rosling-1948-2017-1" class="section level4 hasAnchor" number="12.1.3.2">
+<h4><span class="header-section-number">B.1.3.2</span> Hans Rosling (1948 – 2017)<a href="public.html#hans-rosling-1948-2017-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <blockquote>
 <p>Hans Rosling was a Swedish physician, academic, and public speaker. He was a professor of international health at Karolinska Institute[4] and was the co-founder and chairman of the Gapminder Foundation, which developed the Trendalyzer software system. (<a href="https://en.wikipedia.org/wiki/Hans_Rosling">wikipedia</a>)</p>
 </blockquote>
@@ -783,8 +791,8 @@ The publication’s founder is the social historian and development economist Ma
 <li>Videos: <a href="http://www.edtech.events/the-best-stats-youve-ever-seen-hans-rosling/">The best stats you’ve ever seen, Hans Rosling</a></li>
 <li><a href="https://www.google.com/publicdata/directory?hl=en_US&amp;dl=en_US#!">Google Public Data</a>: <a href="https://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&amp;ctype=b&amp;strail=false&amp;nselm=s&amp;met_x=sp_dyn_le00_in&amp;scale_x=lin&amp;ind_x=false&amp;met_y=sp_dyn_tfrt_in&amp;scale_y=lin&amp;ind_y=false&amp;met_s=sp_pop_totl&amp;scale_s=lin&amp;ind_s=false&amp;dimp_c=country:region&amp;ifdim=country&amp;hl=en_US&amp;dl=en_US&amp;iconSize=0.5&amp;uniSize=0.035">Example: World Development Indicator</a></li>
 </ul>
-<div id="factfulness-is-from-the-book-1" class="section level5 hasAnchor" number="11.1.3.2.1">
-<h5><span class="header-section-number">A.1.3.2.1</span> Factfulness is … <em>From the book</em><a href="public.html#factfulness-is-from-the-book-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="factfulness-is-from-the-book-1" class="section level5 hasAnchor" number="12.1.3.2.1">
+<h5><span class="header-section-number">B.1.3.2.1</span> Factfulness is … <em>From the book</em><a href="public.html#factfulness-is-from-the-book-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>recognizing when a decision feels urgent and remembering that it rarely is.</p>
 <p>To control the urgency instinct, take small steps.</p>
 <ul>
@@ -797,10 +805,10 @@ The publication’s founder is the social historian and development economist Ma
 </div>
 </div>
 </div>
-<div id="world-bank" class="section level2 hasAnchor" number="11.2">
-<h2><span class="header-section-number">A.2</span> World Bank<a href="public.html#world-bank" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="about-1" class="section level3 hasAnchor" number="11.2.1">
-<h3><span class="header-section-number">A.2.1</span> About<a href="public.html#about-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="world-bank" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">B.2</span> World Bank<a href="public.html#world-bank" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="about-1" class="section level3 hasAnchor" number="12.2.1">
+<h3><span class="header-section-number">B.2.1</span> About<a href="public.html#about-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>World Bank: <a href="https://www.worldbank.org" class="uri">https://www.worldbank.org</a></li>
 <li><a href="https://www.worldbank.org/en/who-we-are">Who we are</a>:
@@ -811,8 +819,8 @@ The publication’s founder is the social historian and development economist Ma
 <li>World Bank Open Data: <a href="https://data.worldbank.org" class="uri">https://data.worldbank.org</a></li>
 </ul>
 </div>
-<div id="wdi---world-development-indicaters" class="section level3 hasAnchor" number="11.2.2">
-<h3><span class="header-section-number">A.2.2</span> WDI - World Development Indicaters<a href="public.html#wdi---world-development-indicaters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="wdi---world-development-indicaters" class="section level3 hasAnchor" number="12.2.2">
+<h3><span class="header-section-number">B.2.2</span> WDI - World Development Indicaters<a href="public.html#wdi---world-development-indicaters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://datatopics.worldbank.org/world-development-indicators/">World Development Indicators (WDI)</a>: the World Bank’s premier compilation of cross-country comparable data on development.
 <ul>
@@ -825,8 +833,8 @@ The publication’s founder is the social historian and development economist Ma
 </ul></li>
 </ul>
 </div>
-<div id="r-package-wdi-1" class="section level3 hasAnchor" number="11.2.3">
-<h3><span class="header-section-number">A.2.3</span> R Package WDI<a href="public.html#r-package-wdi-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="r-package-wdi-1" class="section level3 hasAnchor" number="12.2.3">
+<h3><span class="header-section-number">B.2.3</span> R Package WDI<a href="public.html#r-package-wdi-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://CRAN.R-project.org/package=WDI">WDI</a>: World Development Indicators and Other World Bank Data</li>
 <li>Search and download data from over 40 databases hosted by the World Bank, including the World Development Indicators (‘WDI’), International Debt Statistics, Doing Business, Human Capital Index, and Sub-national Poverty indicators.</li>
@@ -838,8 +846,8 @@ The publication’s founder is the social historian and development economist Ma
 <li>Published: 2021-04-06</li>
 <li>Reference manual: <a href="https://cran.r-project.org/web/packages/WDI/WDI.pdf">WDI.pdf</a></li>
 </ul>
-<div id="function-wdi-world-development-indicators-world-bank" class="section level4 hasAnchor" number="11.2.3.1">
-<h4><span class="header-section-number">A.2.3.1</span> Function WDI: World Development Indicators (World Bank)<a href="public.html#function-wdi-world-development-indicators-world-bank" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="function-wdi-world-development-indicators-world-bank" class="section level4 hasAnchor" number="12.2.3.1">
+<h4><span class="header-section-number">B.2.3.1</span> Function WDI: World Development Indicators (World Bank)<a href="public.html#function-wdi-world-development-indicators-world-bank" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><strong>Description:</strong>
 Downloads the requested data by using the World Bank’s API, parses the resulting XML file, and formats it in long country-year format.</li>
@@ -879,8 +887,8 @@ Data frame with country-year observations. You can extract a data.frame with ind
 </ul></li>
 </ul>
 </div>
-<div id="function-wdisearch-1" class="section level4 hasAnchor" number="11.2.3.2">
-<h4><span class="header-section-number">A.2.3.2</span> Function WDIsearch<a href="public.html#function-wdisearch-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="function-wdisearch-1" class="section level4 hasAnchor" number="12.2.3.2">
+<h4><span class="header-section-number">B.2.3.2</span> Function WDIsearch<a href="public.html#function-wdisearch-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Search names and descriptions of available WDI series</strong></p>
 <ul>
 <li><p><strong>Description</strong><br />
@@ -903,44 +911,36 @@ Data frame with code, name, source, and description of all series which match th
 </ul>
 </div>
 </div>
-<div id="the-first-example-2" class="section level3 hasAnchor" number="11.2.4">
-<h3><span class="header-section-number">A.2.4</span> The First Example<a href="public.html#the-first-example-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="setup-2" class="section level4 hasAnchor" number="11.2.4.1">
-<h4><span class="header-section-number">A.2.4.1</span> Setup<a href="public.html#setup-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="the-first-example-2" class="section level3 hasAnchor" number="12.2.4">
+<h3><span class="header-section-number">B.2.4</span> The First Example<a href="public.html#the-first-example-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="setup-2" class="section level4 hasAnchor" number="12.2.4.1">
+<h4><span class="header-section-number">B.2.4.1</span> Setup<a href="public.html#setup-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In this R Notebook, we will use the following packages. Istall them before you compile this R Notebook.</p>
 <ol style="list-style-type: decimal">
 <li><code>tidyverse</code> Package, a collection of packages for data science</li>
 <li><code>WDI</code> Package for World Development Indicators</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="public.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-## ✔ ggplot2 3.3.6      ✔ purrr   0.3.4 
-## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
-## ✔ tidyr   1.2.1      ✔ stringr 1.4.1 
-## ✔ readr   2.1.2      ✔ forcats 0.5.2 
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="public.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI)</span></code></pre></div>
+<div class="sourceCode" id="cb1129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1129-1"><a href="public.html#cb1129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1129-2"><a href="public.html#cb1129-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI)</span></code></pre></div>
 </div>
-<div id="gdp-per-capita" class="section level4 hasAnchor" number="11.2.4.2">
-<h4><span class="header-section-number">A.2.4.2</span> GDP Per Capita<a href="public.html#gdp-per-capita" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="gdp-per-capita" class="section level4 hasAnchor" number="12.2.4.2">
+<h4><span class="header-section-number">B.2.4.2</span> GDP Per Capita<a href="public.html#gdp-per-capita" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The following is taken from the usage.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="public.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDI</span>(</span>
-<span id="cb5-2"><a href="public.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
-<span id="cb5-3"><a href="public.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,</span>
-<span id="cb5-4"><a href="public.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
-<span id="cb5-5"><a href="public.html#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
-<span id="cb5-6"><a href="public.html#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb5-7"><a href="public.html#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
-<span id="cb5-8"><a href="public.html#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
-<span id="cb5-9"><a href="public.html#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
-<span id="cb5-10"><a href="public.html#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="public.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1130-1"><a href="public.html#cb1130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDI</span>(</span>
+<span id="cb1130-2"><a href="public.html#cb1130-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
+<span id="cb1130-3"><a href="public.html#cb1130-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,</span>
+<span id="cb1130-4"><a href="public.html#cb1130-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
+<span id="cb1130-5"><a href="public.html#cb1130-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
+<span id="cb1130-6"><a href="public.html#cb1130-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1130-7"><a href="public.html#cb1130-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1130-8"><a href="public.html#cb1130-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1130-9"><a href="public.html#cb1130-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
+<span id="cb1130-10"><a href="public.html#cb1130-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb1131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1131-1"><a href="public.html#cb1131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <pre><code>##      indicator           name                                
 ## [1,] &quot;NY.GDP.PCAP.KD&quot;    &quot;GDP per capita (constant 2015 US$)&quot;
 ## [2,] &quot;NY.GDP.PCAP.KD.ZG&quot; &quot;GDP per capita growth (annual %)&quot;</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="public.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">short =</span> <span class="cn">FALSE</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1133-1"><a href="public.html#cb1133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">short =</span> <span class="cn">FALSE</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <pre><code>##      indicator           name                                
 ## [1,] &quot;NY.GDP.PCAP.KD&quot;    &quot;GDP per capita (constant 2015 US$)&quot;
 ## [2,] &quot;NY.GDP.PCAP.KD.ZG&quot; &quot;GDP per capita growth (annual %)&quot;  
@@ -953,17 +953,17 @@ Data frame with code, name, source, and description of all series which match th
 ##      sourceOrganization                                                         
 ## [1,] &quot;World Bank national accounts data, and OECD National Accounts data files.&quot;
 ## [2,] &quot;World Bank national accounts data, and OECD National Accounts data files.&quot;</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="public.html#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
-<span id="cb10-2"><a href="public.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="fu">c</span>(<span class="st">&quot;CN&quot;</span>, <span class="st">&quot;IN&quot;</span>, <span class="st">&quot;US&quot;</span>, <span class="st">&quot;ID&quot;</span>,<span class="st">&quot;PK&quot;</span>, <span class="st">&quot;BR&quot;</span>, <span class="st">&quot;NG&quot;</span>, <span class="st">&quot;BD&quot;</span>, <span class="st">&quot;RU&quot;</span>, <span class="st">&quot;MX&quot;</span>, <span class="st">&quot;JP&quot;</span>), </span>
-<span id="cb10-3"><a href="public.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,</span>
-<span id="cb10-4"><a href="public.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
-<span id="cb10-5"><a href="public.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
-<span id="cb10-6"><a href="public.html#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb10-7"><a href="public.html#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
-<span id="cb10-8"><a href="public.html#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
-<span id="cb10-9"><a href="public.html#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
-<span id="cb10-10"><a href="public.html#cb10-10" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb10-11"><a href="public.html#cb10-11" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div>
+<div class="sourceCode" id="cb1135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1135-1"><a href="public.html#cb1135-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
+<span id="cb1135-2"><a href="public.html#cb1135-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="fu">c</span>(<span class="st">&quot;CN&quot;</span>, <span class="st">&quot;IN&quot;</span>, <span class="st">&quot;US&quot;</span>, <span class="st">&quot;ID&quot;</span>,<span class="st">&quot;PK&quot;</span>, <span class="st">&quot;BR&quot;</span>, <span class="st">&quot;NG&quot;</span>, <span class="st">&quot;BD&quot;</span>, <span class="st">&quot;RU&quot;</span>, <span class="st">&quot;MX&quot;</span>, <span class="st">&quot;JP&quot;</span>), </span>
+<span id="cb1135-3"><a href="public.html#cb1135-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,</span>
+<span id="cb1135-4"><a href="public.html#cb1135-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
+<span id="cb1135-5"><a href="public.html#cb1135-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
+<span id="cb1135-6"><a href="public.html#cb1135-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1135-7"><a href="public.html#cb1135-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1135-8"><a href="public.html#cb1135-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1135-9"><a href="public.html#cb1135-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
+<span id="cb1135-10"><a href="public.html#cb1135-10" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb1135-11"><a href="public.html#cb1135-11" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div>
 <pre><code>## # A tibble: 671 × 4
 ##    iso2c country    NY.GDP.PCAP.KD  year
 ##    &lt;chr&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;int&gt;
@@ -978,31 +978,31 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 BD    Bangladesh          1078.  2012
 ## 10 BD    Bangladesh          1024.  2011
 ## # … with 661 more rows</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="public.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
-<span id="cb12-2"><a href="public.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> NY.GDP.PCAP.KD, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="public.html#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP per capita (constant 2010 US$)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1137-1"><a href="public.html#cb1137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
+<span id="cb1137-2"><a href="public.html#cb1137-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> NY.GDP.PCAP.KD, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb1137-3"><a href="public.html#cb1137-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP per capita (constant 2010 US$)&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 29 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="public.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
-<span id="cb14-2"><a href="public.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> NY.GDP.PCAP.KD, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb14-3"><a href="public.html#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span></span>
-<span id="cb14-4"><a href="public.html#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP per capita (constant 2010 US$)&quot;</span>, </span>
-<span id="cb14-5"><a href="public.html#cb14-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Log10 Scale&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-492-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1139-1"><a href="public.html#cb1139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
+<span id="cb1139-2"><a href="public.html#cb1139-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> NY.GDP.PCAP.KD, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb1139-3"><a href="public.html#cb1139-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span></span>
+<span id="cb1139-4"><a href="public.html#cb1139-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP per capita (constant 2010 US$)&quot;</span>, </span>
+<span id="cb1139-5"><a href="public.html#cb1139-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Log10 Scale&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 29 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="public.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
-<span id="cb16-2"><a href="public.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> NY.GDP.PCAP.KD, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb16-3"><a href="public.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span></span>
-<span id="cb16-4"><a href="public.html#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country)) <span class="sc">+</span></span>
-<span id="cb16-5"><a href="public.html#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP per capita (constant 2010 US$)&quot;</span>, </span>
-<span id="cb16-6"><a href="public.html#cb16-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">&quot;Log10 Scale&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-493-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1141-1"><a href="public.html#cb1141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span> </span>
+<span id="cb1141-2"><a href="public.html#cb1141-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> NY.GDP.PCAP.KD, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb1141-3"><a href="public.html#cb1141-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span></span>
+<span id="cb1141-4"><a href="public.html#cb1141-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country)) <span class="sc">+</span></span>
+<span id="cb1141-5"><a href="public.html#cb1141-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GDP per capita (constant 2010 US$)&quot;</span>, </span>
+<span id="cb1141-6"><a href="public.html#cb1141-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">&quot;Log10 Scale&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 29 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-494-1.png" width="672" />
 ### More Examples</p>
 </div>
-<div id="search-indicators-related-to-gdp" class="section level4 hasAnchor" number="11.2.4.3">
-<h4><span class="header-section-number">A.2.4.3</span> Search Indicators Related to “GDP”<a href="public.html#search-indicators-related-to-gdp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="public.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(<span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;gdp&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>))</span></code></pre></div>
+<div id="search-indicators-related-to-gdp" class="section level4 hasAnchor" number="12.2.4.3">
+<h4><span class="header-section-number">B.2.4.3</span> Search Indicators Related to “GDP”<a href="public.html#search-indicators-related-to-gdp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb1143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1143-1"><a href="public.html#cb1143-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(<span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;gdp&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 540 × 2
 ##    indicator            name                                                  
 ##    &lt;chr&gt;                &lt;chr&gt;                                                 
@@ -1018,13 +1018,13 @@ Data frame with code, name, source, and description of all series which match th
 ## 10 BG.KLT.DINV.GD.ZS    &quot;Gross foreign direct investment (% of GDP)&quot;          
 ## # … with 530 more rows</code></pre>
 </div>
-<div id="population" class="section level4 hasAnchor" number="11.2.4.4">
-<h4><span class="header-section-number">A.2.4.4</span> Population<a href="public.html#population" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="public.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;Population, Total&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div id="population" class="section level4 hasAnchor" number="12.2.4.4">
+<h4><span class="header-section-number">B.2.4.4</span> Population<a href="public.html#population" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb1145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1145-1"><a href="public.html#cb1145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;Population, Total&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <pre><code>##      indicator        name                                             
 ## [1,] &quot;JI.POP.URBN.ZS&quot; &quot;Urban population, total (% of total population)&quot;
 ## [2,] &quot;SP.POP.TOTL&quot;    &quot;Population, total&quot;</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="public.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1147-1"><a href="public.html#cb1147-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <pre><code>##      indicator            name                                              
 ## [1,] &quot;SP.POP.TOTL&quot;        &quot;Population, total&quot;                               
 ## [2,] &quot;SP.POP.TOTL.FE.IN&quot;  &quot;Population, female&quot;                              
@@ -1035,19 +1035,19 @@ Data frame with code, name, source, and description of all series which match th
 ## [7,] &quot;SP.POP.TOTL.MA.ZS&quot;  &quot;Population, male (% of total population)&quot;        
 ## [8,] &quot;SP.POP.TOTL.ZS&quot;     &quot;Population (% of total)&quot;</code></pre>
 </div>
-<div id="more-than-one-indicator" class="section level4 hasAnchor" number="11.2.4.5">
-<h4><span class="header-section-number">A.2.4.5</span> More Than One Indicator<a href="public.html#more-than-one-indicator" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="public.html#cb24-1" aria-hidden="true" tabindex="-1"></a>dfp <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
-<span id="cb24-2"><a href="public.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="fu">c</span>(<span class="st">&quot;CN&quot;</span>, <span class="st">&quot;IN&quot;</span>, <span class="st">&quot;US&quot;</span>, <span class="st">&quot;ID&quot;</span>,<span class="st">&quot;PK&quot;</span>, <span class="st">&quot;BR&quot;</span>, <span class="st">&quot;NG&quot;</span>, <span class="st">&quot;BD&quot;</span>, <span class="st">&quot;RU&quot;</span>, <span class="st">&quot;MX&quot;</span>, <span class="st">&quot;JP&quot;</span>), </span>
-<span id="cb24-3"><a href="public.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,<span class="st">&quot;SP.POP.TOTL&quot;</span>),</span>
-<span id="cb24-4"><a href="public.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
-<span id="cb24-5"><a href="public.html#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
-<span id="cb24-6"><a href="public.html#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb24-7"><a href="public.html#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
-<span id="cb24-8"><a href="public.html#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
-<span id="cb24-9"><a href="public.html#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
-<span id="cb24-10"><a href="public.html#cb24-10" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb24-11"><a href="public.html#cb24-11" aria-hidden="true" tabindex="-1"></a>dfp</span></code></pre></div>
+<div id="more-than-one-indicator" class="section level4 hasAnchor" number="12.2.4.5">
+<h4><span class="header-section-number">B.2.4.5</span> More Than One Indicator<a href="public.html#more-than-one-indicator" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb1149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1149-1"><a href="public.html#cb1149-1" aria-hidden="true" tabindex="-1"></a>dfp <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
+<span id="cb1149-2"><a href="public.html#cb1149-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="fu">c</span>(<span class="st">&quot;CN&quot;</span>, <span class="st">&quot;IN&quot;</span>, <span class="st">&quot;US&quot;</span>, <span class="st">&quot;ID&quot;</span>,<span class="st">&quot;PK&quot;</span>, <span class="st">&quot;BR&quot;</span>, <span class="st">&quot;NG&quot;</span>, <span class="st">&quot;BD&quot;</span>, <span class="st">&quot;RU&quot;</span>, <span class="st">&quot;MX&quot;</span>, <span class="st">&quot;JP&quot;</span>), </span>
+<span id="cb1149-3"><a href="public.html#cb1149-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,<span class="st">&quot;SP.POP.TOTL&quot;</span>),</span>
+<span id="cb1149-4"><a href="public.html#cb1149-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
+<span id="cb1149-5"><a href="public.html#cb1149-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
+<span id="cb1149-6"><a href="public.html#cb1149-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1149-7"><a href="public.html#cb1149-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1149-8"><a href="public.html#cb1149-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1149-9"><a href="public.html#cb1149-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
+<span id="cb1149-10"><a href="public.html#cb1149-10" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb1149-11"><a href="public.html#cb1149-11" aria-hidden="true" tabindex="-1"></a>dfp</span></code></pre></div>
 <pre><code>## # A tibble: 671 × 5
 ##    iso2c country     year NY.GDP.PCAP.KD SP.POP.TOTL
 ##    &lt;chr&gt; &lt;chr&gt;      &lt;int&gt;          &lt;dbl&gt;       &lt;dbl&gt;
@@ -1062,29 +1062,29 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 BD    Bangladesh  1968           505.    60918452
 ## 10 BD    Bangladesh  1969           497.    62679765
 ## # … with 661 more rows</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="public.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dfp) <span class="sc">+</span> </span>
-<span id="cb26-2"><a href="public.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> SP.POP.TOTL, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb26-3"><a href="public.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Population, total&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="public.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dfp) <span class="sc">+</span> </span>
-<span id="cb27-2"><a href="public.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> SP.POP.TOTL, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb27-3"><a href="public.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span></span>
-<span id="cb27-4"><a href="public.html#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Population, total&quot;</span>, </span>
-<span id="cb27-5"><a href="public.html#cb27-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Log10 Scale&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<div id="all-countries" class="section level5 hasAnchor" number="11.2.4.5.1">
-<h5><span class="header-section-number">A.2.4.5.1</span> All Countries<a href="public.html#all-countries" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="public.html#cb28-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
-<span id="cb28-2"><a href="public.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>, </span>
-<span id="cb28-3"><a href="public.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,<span class="st">&quot;SP.POP.TOTL&quot;</span>),</span>
-<span id="cb28-4"><a href="public.html#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
-<span id="cb28-5"><a href="public.html#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
-<span id="cb28-6"><a href="public.html#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb28-7"><a href="public.html#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
-<span id="cb28-8"><a href="public.html#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
-<span id="cb28-9"><a href="public.html#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
-<span id="cb28-10"><a href="public.html#cb28-10" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb28-11"><a href="public.html#cb28-11" aria-hidden="true" tabindex="-1"></a>df_gdp_all</span></code></pre></div>
+<div class="sourceCode" id="cb1151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1151-1"><a href="public.html#cb1151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dfp) <span class="sc">+</span> </span>
+<span id="cb1151-2"><a href="public.html#cb1151-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> SP.POP.TOTL, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb1151-3"><a href="public.html#cb1151-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Population, total&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-499-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1152-1"><a href="public.html#cb1152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dfp) <span class="sc">+</span> </span>
+<span id="cb1152-2"><a href="public.html#cb1152-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> SP.POP.TOTL, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb1152-3"><a href="public.html#cb1152-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans=</span><span class="st">&#39;log10&#39;</span>) <span class="sc">+</span></span>
+<span id="cb1152-4"><a href="public.html#cb1152-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Population, total&quot;</span>, </span>
+<span id="cb1152-5"><a href="public.html#cb1152-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Log10 Scale&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-500-1.png" width="672" /></p>
+<div id="all-countries" class="section level5 hasAnchor" number="12.2.4.5.1">
+<h5><span class="header-section-number">B.2.4.5.1</span> All Countries<a href="public.html#all-countries" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb1153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1153-1"><a href="public.html#cb1153-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(</span>
+<span id="cb1153-2"><a href="public.html#cb1153-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>, </span>
+<span id="cb1153-3"><a href="public.html#cb1153-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>,<span class="st">&quot;SP.POP.TOTL&quot;</span>),</span>
+<span id="cb1153-4"><a href="public.html#cb1153-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1960</span>,</span>
+<span id="cb1153-5"><a href="public.html#cb1153-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span>,</span>
+<span id="cb1153-6"><a href="public.html#cb1153-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">extra =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1153-7"><a href="public.html#cb1153-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1153-8"><a href="public.html#cb1153-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">latest =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1153-9"><a href="public.html#cb1153-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">language =</span> <span class="st">&quot;en&quot;</span></span>
+<span id="cb1153-10"><a href="public.html#cb1153-10" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb1153-11"><a href="public.html#cb1153-11" aria-hidden="true" tabindex="-1"></a>df_gdp_all</span></code></pre></div>
 <pre><code>## # A tibble: 16,226 × 5
 ##    iso2c country     year NY.GDP.PCAP.KD SP.POP.TOTL
 ##    &lt;chr&gt; &lt;chr&gt;      &lt;int&gt;          &lt;dbl&gt;       &lt;dbl&gt;
@@ -1099,7 +1099,7 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 1A    Arab World  1968             NA   115136161
 ## 10 1A    Arab World  1969             NA   118437193
 ## # … with 16,216 more rows</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="public.html#cb30-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(SP.POP.TOTL))</span></code></pre></div>
+<div class="sourceCode" id="cb1155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1155-1"><a href="public.html#cb1155-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(SP.POP.TOTL))</span></code></pre></div>
 <pre><code>## # A tibble: 266 × 5
 ##    iso2c country                     year NY.GDP.PCAP.KD SP.POP.TOTL
 ##    &lt;chr&gt; &lt;chr&gt;                      &lt;int&gt;          &lt;dbl&gt;       &lt;dbl&gt;
@@ -1114,7 +1114,7 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 Z4    East Asia &amp; Pacific         2020         11136.  2361517682
 ## 10 V3    Late-demographic dividend   2020          9711.  2316803603
 ## # … with 256 more rows</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="public.html#cb32-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(NY.GDP.PCAP.KD)</span></code></pre></div>
+<div class="sourceCode" id="cb1157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1157-1"><a href="public.html#cb1157-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(NY.GDP.PCAP.KD)</span></code></pre></div>
 <pre><code>## # A tibble: 266 × 5
 ##    iso2c country                   year NY.GDP.PCAP.KD SP.POP.TOTL
 ##    &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt;          &lt;dbl&gt;       &lt;dbl&gt;
@@ -1129,7 +1129,7 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 MZ    Mozambique                2020           575.    31255435
 ## 10 LR    Liberia                   2020           616.     5057677
 ## # … with 256 more rows</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="public.html#cb34-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(NY.GDP.PCAP.KD))</span></code></pre></div>
+<div class="sourceCode" id="cb1159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1159-1"><a href="public.html#cb1159-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(NY.GDP.PCAP.KD))</span></code></pre></div>
 <pre><code>## # A tibble: 266 × 5
 ##    iso2c country         year NY.GDP.PCAP.KD SP.POP.TOTL
 ##    &lt;chr&gt; &lt;chr&gt;          &lt;int&gt;          &lt;dbl&gt;       &lt;dbl&gt;
@@ -1144,7 +1144,7 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 US    United States   2020         58060.   331501080
 ## 10 AU    Australia       2020         58030.    25693267
 ## # … with 256 more rows</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="public.html#cb36-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">GDP =</span> NY.GDP.PCAP.KD <span class="sc">*</span> SP.POP.TOTL) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(GDP))</span></code></pre></div>
+<div class="sourceCode" id="cb1161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1161-1"><a href="public.html#cb1161-1" aria-hidden="true" tabindex="-1"></a>df_gdp_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">GDP =</span> NY.GDP.PCAP.KD <span class="sc">*</span> SP.POP.TOTL) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(GDP))</span></code></pre></div>
 <pre><code>## # A tibble: 266 × 6
 ##    iso2c country                    year NY.GDP.PCAP.KD SP.POP.TOTL     GDP
 ##    &lt;chr&gt; &lt;chr&gt;                     &lt;int&gt;          &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
@@ -1161,9 +1161,9 @@ Data frame with code, name, source, and description of all series which match th
 ## # … with 256 more rows</code></pre>
 </div>
 </div>
-<div id="gender" class="section level4 hasAnchor" number="11.2.4.6">
-<h4><span class="header-section-number">A.2.4.6</span> Gender<a href="public.html#gender" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="public.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(<span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;Gender&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>))</span></code></pre></div>
+<div id="gender" class="section level4 hasAnchor" number="12.2.4.6">
+<h4><span class="header-section-number">B.2.4.6</span> Gender<a href="public.html#gender" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb1163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1163-1"><a href="public.html#cb1163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(<span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;Gender&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 382 × 2
 ##    indicator            name                                                    
 ##    &lt;chr&gt;                &lt;chr&gt;                                                   
@@ -1178,7 +1178,7 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 BI.WAG.PREM.PB.FM    &quot;P-Value: Public sector wage premium, by gender (compar…
 ## 10 BI.WAG.PREM.PB.FM.ED &quot;P-Value: Gender wage premium in the public sector, by …
 ## # … with 372 more rows</code></pre>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="public.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(<span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;Females&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb1165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1165-1"><a href="public.html#cb1165-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(<span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;Females&quot;</span>, <span class="at">field =</span> <span class="st">&quot;name&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 69 × 2
 ##    indicator            name                                                    
 ##    &lt;chr&gt;                &lt;chr&gt;                                                   
@@ -1193,21 +1193,21 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 BI.PWK.PRVS.PN.FE.ZS Females, as a share of private paid employees by occupa…
 ## 10 BI.PWK.PRVS.SN.FE.ZS Females, as a share of private paid employees by occupa…
 ## # … with 59 more rows</code></pre>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="public.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;BI.PWK.PRVS.FE.ZS&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1167-1"><a href="public.html#cb1167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;BI.PWK.PRVS.FE.ZS&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <pre><code>##                                       indicator 
 ##                             &quot;BI.PWK.PRVS.FE.ZS&quot; 
 ##                                            name 
 ## &quot;Females, as a share of private paid employees&quot;</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="public.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;BI.PWK.PUBS.FE.ZS&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1169-1"><a href="public.html#cb1169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;BI.PWK.PUBS.FE.ZS&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>, <span class="at">cache =</span> <span class="cn">NULL</span>)</span></code></pre></div>
 <pre><code>##                                      indicator 
 ##                            &quot;BI.PWK.PUBS.FE.ZS&quot; 
 ##                                           name 
 ## &quot;Females, as a share of public paid employees&quot;</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="public.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename indicators on the fly</span></span>
-<span id="cb46-2"><a href="public.html#cb46-2" aria-hidden="true" tabindex="-1"></a>dfwe <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(<span class="at">country =</span> <span class="fu">c</span>(<span class="st">&quot;CN&quot;</span>, <span class="st">&quot;IN&quot;</span>, <span class="st">&quot;US&quot;</span>, <span class="st">&quot;ID&quot;</span>,<span class="st">&quot;PK&quot;</span>, <span class="st">&quot;BR&quot;</span>, <span class="st">&quot;NG&quot;</span>, <span class="st">&quot;BD&quot;</span>, <span class="st">&quot;RU&quot;</span>, <span class="st">&quot;MX&quot;</span>, <span class="st">&quot;JP&quot;</span>), </span>
-<span id="cb46-3"><a href="public.html#cb46-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">indicator =</span> <span class="fu">c</span>(<span class="st">&#39;women_private_sector&#39;</span> <span class="ot">=</span> <span class="st">&#39;BI.PWK.PRVS.FE.ZS&#39;</span>,</span>
-<span id="cb46-4"><a href="public.html#cb46-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">&#39;women_public_sector&#39;</span> <span class="ot">=</span> <span class="st">&#39;BI.PWK.PUBS.FE.ZS&#39;</span>)))</span>
-<span id="cb46-5"><a href="public.html#cb46-5" aria-hidden="true" tabindex="-1"></a>dfwe</span></code></pre></div>
+<div class="sourceCode" id="cb1171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1171-1"><a href="public.html#cb1171-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename indicators on the fly</span></span>
+<span id="cb1171-2"><a href="public.html#cb1171-2" aria-hidden="true" tabindex="-1"></a>dfwe <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">WDI</span>(<span class="at">country =</span> <span class="fu">c</span>(<span class="st">&quot;CN&quot;</span>, <span class="st">&quot;IN&quot;</span>, <span class="st">&quot;US&quot;</span>, <span class="st">&quot;ID&quot;</span>,<span class="st">&quot;PK&quot;</span>, <span class="st">&quot;BR&quot;</span>, <span class="st">&quot;NG&quot;</span>, <span class="st">&quot;BD&quot;</span>, <span class="st">&quot;RU&quot;</span>, <span class="st">&quot;MX&quot;</span>, <span class="st">&quot;JP&quot;</span>), </span>
+<span id="cb1171-3"><a href="public.html#cb1171-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">indicator =</span> <span class="fu">c</span>(<span class="st">&#39;women_private_sector&#39;</span> <span class="ot">=</span> <span class="st">&#39;BI.PWK.PRVS.FE.ZS&#39;</span>,</span>
+<span id="cb1171-4"><a href="public.html#cb1171-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">&#39;women_public_sector&#39;</span> <span class="ot">=</span> <span class="st">&#39;BI.PWK.PUBS.FE.ZS&#39;</span>)))</span>
+<span id="cb1171-5"><a href="public.html#cb1171-5" aria-hidden="true" tabindex="-1"></a>dfwe</span></code></pre></div>
 <pre><code>## # A tibble: 231 × 5
 ##    iso2c country     year women_private_sector women_public_sector
 ##    &lt;chr&gt; &lt;chr&gt;      &lt;int&gt;                &lt;dbl&gt;               &lt;dbl&gt;
@@ -1222,7 +1222,7 @@ Data frame with code, name, source, and description of all series which match th
 ##  9 BD    Bangladesh  2008               NA                  NA    
 ## 10 BD    Bangladesh  2009               NA                  NA    
 ## # … with 221 more rows</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="public.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dfwe, country)</span></code></pre></div>
+<div class="sourceCode" id="cb1173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1173-1"><a href="public.html#cb1173-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dfwe, country)</span></code></pre></div>
 <pre><code>##     iso2c             country               year      women_private_sector
 ##  Length:231         Length:231         Min.   :2000   Min.   :0.08965     
 ##  Class :character   Class :character   1st Qu.:2005   1st Qu.:0.30555     
@@ -1239,11 +1239,11 @@ Data frame with code, name, source, and description of all series which match th
 ##  3rd Qu.:0.5760     
 ##  Max.   :0.6583     
 ##  NA&#39;s   :152</code></pre>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="public.html#cb50-1" aria-hidden="true" tabindex="-1"></a>dfwe <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb50-2"><a href="public.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">private_n =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(women_private_sector)), </span>
-<span id="cb50-3"><a href="public.html#cb50-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">private =</span> <span class="fu">mean</span>(<span class="fu">is.na</span>(women_private_sector)), </span>
-<span id="cb50-4"><a href="public.html#cb50-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">public_n =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(women_public_sector)), </span>
-<span id="cb50-5"><a href="public.html#cb50-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">public =</span> <span class="fu">mean</span>(<span class="fu">is.na</span>(women_public_sector)))</span></code></pre></div>
+<div class="sourceCode" id="cb1175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1175-1"><a href="public.html#cb1175-1" aria-hidden="true" tabindex="-1"></a>dfwe <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1175-2"><a href="public.html#cb1175-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">private_n =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(women_private_sector)), </span>
+<span id="cb1175-3"><a href="public.html#cb1175-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">private =</span> <span class="fu">mean</span>(<span class="fu">is.na</span>(women_private_sector)), </span>
+<span id="cb1175-4"><a href="public.html#cb1175-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">public_n =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(women_public_sector)), </span>
+<span id="cb1175-5"><a href="public.html#cb1175-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">public =</span> <span class="fu">mean</span>(<span class="fu">is.na</span>(women_public_sector)))</span></code></pre></div>
 <pre><code>## # A tibble: 11 × 5
 ##    country       private_n private public_n public
 ##    &lt;chr&gt;             &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;  &lt;dbl&gt;
@@ -1260,10 +1260,10 @@ Data frame with code, name, source, and description of all series which match th
 ## 11 United States        12   0.571       12  0.571</code></pre>
 </div>
 </div>
-<div id="world-bank-country-and-lending-groups-and-an-option-extra-true" class="section level3 hasAnchor" number="11.2.5">
-<h3><span class="header-section-number">A.2.5</span> World Bank Country and Lending Groups and an Option <code>extra = TRUE</code><a href="public.html#world-bank-country-and-lending-groups-and-an-option-extra-true" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="review-basics-world-development-indicators-wdi" class="section level4 hasAnchor" number="11.2.5.1">
-<h4><span class="header-section-number">A.2.5.1</span> Review Basics: World Development Indicators: ?WDI<a href="public.html#review-basics-world-development-indicators-wdi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="world-bank-country-and-lending-groups-and-an-option-extra-true" class="section level3 hasAnchor" number="12.2.5">
+<h3><span class="header-section-number">B.2.5</span> World Bank Country and Lending Groups and an Option <code>extra = TRUE</code><a href="public.html#world-bank-country-and-lending-groups-and-an-option-extra-true" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="review-basics-world-development-indicators-wdi" class="section level4 hasAnchor" number="12.2.5.1">
+<h4><span class="header-section-number">B.2.5.1</span> Review Basics: World Development Indicators: ?WDI<a href="public.html#review-basics-world-development-indicators-wdi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Basic Usage</li>
 </ol>
@@ -1282,14 +1282,14 @@ Data frame with code, name, source, and description of all series which match th
                 &quot;life_exp&quot; = &quot;SP.DYN.LE00.IN&quot;), extra = TRUE)</code></pre>
 <p>extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel</p>
 </div>
-<div id="world-bank-country-and-lending-groups-1" class="section level4 hasAnchor" number="11.2.5.2">
-<h4><span class="header-section-number">A.2.5.2</span> World Bank Country and Lending Groups<a href="public.html#world-bank-country-and-lending-groups-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="world-bank-country-and-lending-groups-1" class="section level4 hasAnchor" number="12.2.5.2">
+<h4><span class="header-section-number">B.2.5.2</span> World Bank Country and Lending Groups<a href="public.html#world-bank-country-and-lending-groups-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>URL <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups">World Bank Country and Lending Groups</a></li>
 <li><a href="http://databank.worldbank.org/data/download/site-content/CLASS.xls">The current classification by income in XLS format</a></li>
 </ul>
-<div id="about-class.xls" class="section level5 hasAnchor" number="11.2.5.2.1">
-<h5><span class="header-section-number">A.2.5.2.1</span> About CLASS.xls<a href="public.html#about-class.xls" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="about-class.xls" class="section level5 hasAnchor" number="12.2.5.2.1">
+<h5><span class="header-section-number">B.2.5.2.1</span> About CLASS.xls<a href="public.html#about-class.xls" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are:</p>
 <ul>
 <li>low income, $1,035 or less;</li>
@@ -1299,8 +1299,8 @@ Data frame with code, name, source, and description of all series which match th
 </ul>
 <p>The effective operational cutoff for IDA eligibility is $1,185 or less.</p>
 </div>
-<div id="geographic-classifications-1" class="section level5 hasAnchor" number="11.2.5.2.2">
-<h5><span class="header-section-number">A.2.5.2.2</span> Geographic classifications<a href="public.html#geographic-classifications-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="geographic-classifications-1" class="section level5 hasAnchor" number="12.2.5.2.2">
+<h5><span class="header-section-number">B.2.5.2.2</span> Geographic classifications<a href="public.html#geographic-classifications-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li><strong>IBRD:</strong> International Bank for Reconstruction and Development</li>
 <li><strong>IDA:</strong> International Development Association</li>
@@ -1313,8 +1313,8 @@ Data frame with code, name, source, and description of all series which match th
 <li><p>Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.</p></li>
 </ul>
 </div>
-<div id="note-1" class="section level5 hasAnchor" number="11.2.5.2.3">
-<h5><span class="header-section-number">A.2.5.2.3</span> Note<a href="public.html#note-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="note-1" class="section level5 hasAnchor" number="12.2.5.2.3">
+<h5><span class="header-section-number">B.2.5.2.3</span> Note<a href="public.html#note-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li><p>The term country, used interchangeably with economy, does not imply political independence but refers to any territory for which authorities report separate social or economic statistics.</p></li>
 <li><p>Income classifications set on 1 July 2020 remain in effect until 1 July 2021.</p></li>
@@ -1323,8 +1323,8 @@ Data frame with code, name, source, and description of all series which match th
 </ul>
 </div>
 </div>
-<div id="importing-excel-files-2" class="section level4 hasAnchor" number="11.2.5.3">
-<h4><span class="header-section-number">A.2.5.3</span> Importing Excel Files<a href="public.html#importing-excel-files-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="importing-excel-files-2" class="section level4 hasAnchor" number="12.2.5.3">
+<h4><span class="header-section-number">B.2.5.3</span> Importing Excel Files<a href="public.html#importing-excel-files-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>CLASS.xlsx: - <em>copy the following link</em>
 <ul>
@@ -1333,21 +1333,21 @@ Data frame with code, name, source, and description of all series which match th
 <li>readxl: <a href="https://readxl.tidyverse.org" class="uri">https://readxl.tidyverse.org</a></li>
 <li>Help: <code>read_excel</code>, <code>read_xls</code>, <code>read_xlsx</code></li>
 </ul>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="public.html#cb55-1" aria-hidden="true" tabindex="-1"></a>url_class <span class="ot">&lt;-</span> <span class="st">&quot;https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx&quot;</span></span>
-<span id="cb55-2"><a href="public.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_class, <span class="at">destfile =</span> <span class="st">&quot;data/CLASS.xlsx&quot;</span>)</span></code></pre></div>
-<div id="countries-2" class="section level5 hasAnchor" number="11.2.5.3.1">
-<h5><span class="header-section-number">A.2.5.3.1</span> Countries<a href="public.html#countries-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb1180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1180-1"><a href="public.html#cb1180-1" aria-hidden="true" tabindex="-1"></a>url_class <span class="ot">&lt;-</span> <span class="st">&quot;https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx&quot;</span></span>
+<span id="cb1180-2"><a href="public.html#cb1180-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_class, <span class="at">destfile =</span> <span class="st">&quot;data/CLASS.xlsx&quot;</span>)</span></code></pre></div>
+<div id="countries-2" class="section level5 hasAnchor" number="12.2.5.3.1">
+<h5><span class="header-section-number">B.2.5.3.1</span> Countries<a href="public.html#countries-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Let us look at the first sheet.</p>
 <ol style="list-style-type: decimal">
 <li>The column names are in the 5th row.</li>
 <li>The country data starts from the 7th row.</li>
 <li>Zimbabue is at the last row.</li>
 </ol>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="public.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb56-2"><a href="public.html#cb56-2" aria-hidden="true" tabindex="-1"></a>wb_countries_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">219</span>) </span>
-<span id="cb56-3"><a href="public.html#cb56-3" aria-hidden="true" tabindex="-1"></a>wb_countries <span class="ot">&lt;-</span> wb_countries_tmp <span class="sc">%&gt;%</span> </span>
-<span id="cb56-4"><a href="public.html#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> Economy, <span class="at">iso3c =</span> Code, <span class="at">region =</span> Region, <span class="at">income =</span> <span class="st">`</span><span class="at">Income group</span><span class="st">`</span>, <span class="at">lending =</span> <span class="st">&quot;Lending category&quot;</span>, <span class="at">other =</span> <span class="st">&quot;Other (EMU or HIPC)&quot;</span>)</span>
-<span id="cb56-5"><a href="public.html#cb56-5" aria-hidden="true" tabindex="-1"></a>wb_countries</span></code></pre></div>
+<div class="sourceCode" id="cb1181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1181-1"><a href="public.html#cb1181-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1181-2"><a href="public.html#cb1181-2" aria-hidden="true" tabindex="-1"></a>wb_countries_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">219</span>) </span>
+<span id="cb1181-3"><a href="public.html#cb1181-3" aria-hidden="true" tabindex="-1"></a>wb_countries <span class="ot">&lt;-</span> wb_countries_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb1181-4"><a href="public.html#cb1181-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> Economy, <span class="at">iso3c =</span> Code, <span class="at">region =</span> Region, <span class="at">income =</span> <span class="st">`</span><span class="at">Income group</span><span class="st">`</span>, <span class="at">lending =</span> <span class="st">&quot;Lending category&quot;</span>, <span class="at">other =</span> <span class="st">&quot;Other (EMU or HIPC)&quot;</span>)</span>
+<span id="cb1181-5"><a href="public.html#cb1181-5" aria-hidden="true" tabindex="-1"></a>wb_countries</span></code></pre></div>
 <pre><code>## # A tibble: 218 × 6
 ##    country              iso3c region                     income    lending other
 ##    &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt;                      &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;
@@ -1363,8 +1363,8 @@ Data frame with code, name, source, and description of all series which match th
 ## 10 Antigua and Barbuda  ATG   Latin America &amp; Caribbean  High inc… IBRD    &lt;NA&gt; 
 ## # … with 208 more rows</code></pre>
 </div>
-<div id="regions-2" class="section level5 hasAnchor" number="11.2.5.3.2">
-<h5><span class="header-section-number">A.2.5.3.2</span> Regions<a href="public.html#regions-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="regions-2" class="section level5 hasAnchor" number="12.2.5.3.2">
+<h5><span class="header-section-number">B.2.5.3.2</span> Regions<a href="public.html#regions-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li>readxl: <a href="https://readxl.tidyverse.org" class="uri">https://readxl.tidyverse.org</a></li>
 <li>Help: <code>read_excel</code>, <code>read_xls</code>, <code>read_xlsx</code></li>
@@ -1373,11 +1373,11 @@ Data frame with code, name, source, and description of all series which match th
 <li>Regions start from the 227th row.</li>
 <li>Regions end at the 272th row.</li>
 </ol>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="public.html#cb58-1" aria-hidden="true" tabindex="-1"></a>wb_regions_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">266</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb58-2"><a href="public.html#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">220</span>))</span>
-<span id="cb58-3"><a href="public.html#cb58-3" aria-hidden="true" tabindex="-1"></a>wb_regions <span class="ot">&lt;-</span> wb_regions_tmp <span class="sc">%&gt;%</span> </span>
-<span id="cb58-4"><a href="public.html#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">region =</span> Economy, <span class="at">iso3c =</span> Code) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>()</span>
-<span id="cb58-5"><a href="public.html#cb58-5" aria-hidden="true" tabindex="-1"></a>wb_regions</span></code></pre></div>
+<div class="sourceCode" id="cb1183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1183-1"><a href="public.html#cb1183-1" aria-hidden="true" tabindex="-1"></a>wb_regions_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">266</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1183-2"><a href="public.html#cb1183-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">220</span>))</span>
+<span id="cb1183-3"><a href="public.html#cb1183-3" aria-hidden="true" tabindex="-1"></a>wb_regions <span class="ot">&lt;-</span> wb_regions_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb1183-4"><a href="public.html#cb1183-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">region =</span> Economy, <span class="at">iso3c =</span> Code) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>()</span>
+<span id="cb1183-5"><a href="public.html#cb1183-5" aria-hidden="true" tabindex="-1"></a>wb_regions</span></code></pre></div>
 <pre><code>## # A tibble: 45 × 2
 ##    region                                        iso3c
 ##    &lt;chr&gt;                                         &lt;chr&gt;
@@ -1393,13 +1393,13 @@ Data frame with code, name, source, and description of all series which match th
 ## 10 Europe &amp; Central Asia (IDA &amp; IBRD)            TEC  
 ## # … with 35 more rows</code></pre>
 <p>Let us look at the second sheet.</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="public.html#cb60-1" aria-hidden="true" tabindex="-1"></a>wb_groups_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;Groups&quot;</span>) <span class="co"># sheet = 3</span></span>
-<span id="cb60-2"><a href="public.html#cb60-2" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="ot">&lt;-</span> wb_groups_tmp <span class="sc">%&gt;%</span> </span>
-<span id="cb60-3"><a href="public.html#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">gcode =</span> GroupCode, <span class="at">group =</span> GroupName, <span class="at">iso3c =</span> CountryCode, <span class="at">country =</span> CountryName)</span></code></pre></div>
+<div class="sourceCode" id="cb1185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1185-1"><a href="public.html#cb1185-1" aria-hidden="true" tabindex="-1"></a>wb_groups_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;Groups&quot;</span>) <span class="co"># sheet = 3</span></span>
+<span id="cb1185-2"><a href="public.html#cb1185-2" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="ot">&lt;-</span> wb_groups_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb1185-3"><a href="public.html#cb1185-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">gcode =</span> GroupCode, <span class="at">group =</span> GroupName, <span class="at">iso3c =</span> CountryCode, <span class="at">country =</span> CountryName)</span></code></pre></div>
 </div>
 </div>
-<div id="filtering-join" class="section level4 hasAnchor" number="11.2.5.4">
-<h4><span class="header-section-number">A.2.5.4</span> Filtering Join<a href="public.html#filtering-join" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="filtering-join" class="section level4 hasAnchor" number="12.2.5.4">
+<h4><span class="header-section-number">B.2.5.4</span> Filtering Join<a href="public.html#filtering-join" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Description</strong></p>
 <ul>
 <li><p>Filtering joins filter rows from x based on the presence or absence of matches in y:</p>
@@ -1409,8 +1409,8 @@ Data frame with code, name, source, and description of all series which match th
 </ul></li>
 <li><p><a href="https://dplyr.tidyverse.org/reference/filter-joins.html" class="uri">https://dplyr.tidyverse.org/reference/filter-joins.html</a></p></li>
 </ul>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="public.html#cb61-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap <span class="ot">&lt;-</span> <span class="fu">WDI</span>(<span class="at">country =</span> <span class="st">&quot;all&quot;</span>, <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>) </span>
-<span id="cb61-2"><a href="public.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gdp_pcap)</span></code></pre></div>
+<div class="sourceCode" id="cb1186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1186-1"><a href="public.html#cb1186-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap <span class="ot">&lt;-</span> <span class="fu">WDI</span>(<span class="at">country =</span> <span class="st">&quot;all&quot;</span>, <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>) </span>
+<span id="cb1186-2"><a href="public.html#cb1186-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gdp_pcap)</span></code></pre></div>
 <pre><code>##   iso2c                     country NY.GDP.PCAP.KD year
 ## 1    ZH Africa Eastern and Southern       1477.249 2021
 ## 2    ZH Africa Eastern and Southern       1452.730 2020
@@ -1418,8 +1418,8 @@ Data frame with code, name, source, and description of all series which match th
 ## 4    ZH Africa Eastern and Southern       1544.078 2018
 ## 5    ZH Africa Eastern and Southern       1546.796 2017
 ## 6    ZH Africa Eastern and Southern       1548.813 2016</code></pre>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="public.html#cb63-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_extra <span class="ot">&lt;-</span> <span class="fu">WDI</span>(<span class="at">country =</span> <span class="st">&quot;all&quot;</span>, <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>, <span class="at">extra =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb63-2"><a href="public.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gdp_pcap_extra)</span></code></pre></div>
+<div class="sourceCode" id="cb1188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1188-1"><a href="public.html#cb1188-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_extra <span class="ot">&lt;-</span> <span class="fu">WDI</span>(<span class="at">country =</span> <span class="st">&quot;all&quot;</span>, <span class="at">indicator =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>, <span class="at">extra =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1188-2"><a href="public.html#cb1188-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gdp_pcap_extra)</span></code></pre></div>
 <pre><code>##   iso2c    country NY.GDP.PCAP.KD year status lastupdated iso3c     region
 ## 1    1A Arab World             NA 1968         2022-09-16   ARB Aggregates
 ## 2    1A Arab World             NA 1974         2022-09-16   ARB Aggregates
@@ -1440,8 +1440,8 @@ Data frame with code, name, source, and description of all series which match th
 <li>16,226 rows = 13,054 rows (country) + 3172 rows (not country)</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="public.html#cb65-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_country <span class="ot">&lt;-</span> gdp_pcap <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>)</span>
-<span id="cb65-2"><a href="public.html#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gdp_pcap_country)</span></code></pre></div>
+<div class="sourceCode" id="cb1190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1190-1"><a href="public.html#cb1190-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_country <span class="ot">&lt;-</span> gdp_pcap <span class="sc">%&gt;%</span> <span class="fu">semi_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&quot;country&quot;</span>)</span>
+<span id="cb1190-2"><a href="public.html#cb1190-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(gdp_pcap_country)</span></code></pre></div>
 <pre><code>##   iso2c     country NY.GDP.PCAP.KD year
 ## 1    AF Afghanistan             NA 2021
 ## 2    AF Afghanistan       529.7412 2020
@@ -1449,7 +1449,7 @@ Data frame with code, name, source, and description of all series which match th
 ## 4    AF Afghanistan       546.7430 2018
 ## 5    AF Afghanistan       553.3551 2017
 ## 6    AF Afghanistan       552.9969 2016</code></pre>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="public.html#cb67-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_extra <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1192-1"><a href="public.html#cb1192-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_extra <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##   iso2c country NY.GDP.PCAP.KD year status lastupdated iso3c
 ## 1    AD Andorra       37620.35 2003         2022-09-16   AND
 ##                  region          capital longitude latitude      income
@@ -1462,7 +1462,7 @@ Data frame with code, name, source, and description of all series which match th
 <li>13,176 rows is not equal to 13,054 rows + 183 rows</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="public.html#cb69-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_extra <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(gdp_pcap_country) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1194-1"><a href="public.html#cb1194-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap_extra <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;Aggregates&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(gdp_pcap_country) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## Joining, by = c(&quot;iso2c&quot;, &quot;country&quot;, &quot;NY.GDP.PCAP.KD&quot;, &quot;year&quot;)</code></pre>
 <pre><code>##   iso2c       country NY.GDP.PCAP.KD year status lastupdated iso3c
 ## 1    CI Cote d&#39;Ivoire       1566.577 2003         2022-09-16   CIV
@@ -1470,7 +1470,7 @@ Data frame with code, name, source, and description of all series which match th
 ## 1 Sub-Saharan Africa Yamoussoukro   -4.0305    5.332 Lower middle income
 ##   lending
 ## 1     IDA</code></pre>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="public.html#cb72-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(wb_countries) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1197-1"><a href="public.html#cb1197-1" aria-hidden="true" tabindex="-1"></a>gdp_pcap <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(wb_countries) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## Joining, by = &quot;country&quot;</code></pre>
 <pre><code>##   iso2c                     country NY.GDP.PCAP.KD year
 ## 1    ZH Africa Eastern and Southern        1513.37 2012</code></pre>
@@ -1484,8 +1484,8 @@ Data frame with code, name, source, and description of all series which match th
 <li>WDISeries.csv” - 3.5MB</li>
 </ol>
 </div>
-<div id="join-tables-1" class="section level4 hasAnchor" number="11.2.5.5">
-<h4><span class="header-section-number">A.2.5.5</span> Join Tables<a href="public.html#join-tables-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="join-tables-1" class="section level4 hasAnchor" number="12.2.5.5">
+<h4><span class="header-section-number">B.2.5.5</span> Join Tables<a href="public.html#join-tables-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>There are three types of joining tables. Commands are from tidyverse packages though there is a way to do the same by Base R with appropriate arguments.</p>
 <ol style="list-style-type: decimal">
 <li>Bind rows: bind_rows(), intersect(), setdiff(), union()</li>
@@ -1496,8 +1496,8 @@ Data frame with code, name, source, and description of all series which match th
 <li><a href="https://dplyr.tidyverse.org/reference/bind.html" class="uri">https://dplyr.tidyverse.org/reference/bind.html</a></li>
 </ul>
 </div>
-<div id="join-tables-quick-references-1" class="section level4 hasAnchor" number="11.2.5.6">
-<h4><span class="header-section-number">A.2.5.6</span> Join Tables: Quick References<a href="public.html#join-tables-quick-references-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="join-tables-quick-references-1" class="section level4 hasAnchor" number="12.2.5.6">
+<h4><span class="header-section-number">B.2.5.6</span> Join Tables: Quick References<a href="public.html#join-tables-quick-references-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://r4ds.had.co.nz/relational-data.html#relational-data" class="uri">https://r4ds.had.co.nz/relational-data.html#relational-data</a></p></li>
 <li><p>Cheatsheet: Data Transformation, pages 2 and 3. You can download it from RStudio &gt; Help.</p></li>
@@ -1516,13 +1516,13 @@ Data frame with code, name, source, and description of all series which match th
 </div>
 </div>
 </div>
-<div id="united-nations" class="section level2 hasAnchor" number="11.3">
-<h2><span class="header-section-number">A.3</span> United Nations<a href="public.html#united-nations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="united-nations" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">B.3</span> United Nations<a href="public.html#united-nations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>`
 * UN Data: <a href="https://data.un.org" class="uri">https://data.un.org</a>
 - Datamarts: <a href="http://data.un.org/Explorer.aspx" class="uri">http://data.un.org/Explorer.aspx</a></p>
-<div id="importing-data-2" class="section level3 hasAnchor" number="11.3.1">
-<h3><span class="header-section-number">A.3.1</span> Importing Data<a href="public.html#importing-data-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="importing-data-2" class="section level3 hasAnchor" number="12.3.1">
+<h3><span class="header-section-number">B.3.1</span> Importing Data<a href="public.html#importing-data-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Get the URL (uniform resource locator) - copy the link</li>
 </ol>
@@ -1544,25 +1544,25 @@ Data frame with code, name, source, and description of all series which match th
 <p>Alternative, skip 2 and read the file using the URL.
 * <code>read_csv(url)</code></p>
 </div>
-<div id="example" class="section level3 hasAnchor" number="11.3.2">
-<h3><span class="header-section-number">A.3.2</span> Example<a href="public.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="population-1" class="section level4 hasAnchor" number="11.3.2.1">
-<h4><span class="header-section-number">A.3.2.1</span> Population<a href="public.html#population-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example" class="section level3 hasAnchor" number="12.3.2">
+<h3><span class="header-section-number">B.3.2</span> Example<a href="public.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="population-1" class="section level4 hasAnchor" number="12.3.2.1">
+<h4><span class="header-section-number">B.3.2.1</span> Population<a href="public.html#population-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><a href="https://data.un.org/_Docs/SYB/PDFs/SYB64_1_202110_Population,%20Surface%20Area%20and%20Density.pdf">Population, surface area and density in PDF</a></li>
 </ul>
 <p>The followind do not look line the pdf above.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="public.html#cb75-1" aria-hidden="true" tabindex="-1"></a>df_un_pop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://data.un.org/_Docs/SYB/CSV/SYB64_1_202110_Population,%20Surface%20Area%20and%20Density.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1200-1"><a href="public.html#cb1200-1" aria-hidden="true" tabindex="-1"></a>df_un_pop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://data.un.org/_Docs/SYB/CSV/SYB64_1_202110_Population,%20Surface%20Area%20and%20Density.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## New names:
 ## Rows: 7260 Columns: 7
 ## ── Column specification
-## ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (2):
-## Region/Country/Area, Year
-## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-## Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## ────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (2): Region/Country/Area,
+## Year
+## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ Specify the
+## column types or set `show_col_types = FALSE` to quiet this message.
 ## • `` -&gt; `...2`</code></pre>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="public.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_un_pop)</span></code></pre></div>
+<div class="sourceCode" id="cb1202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1202-1"><a href="public.html#cb1202-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_un_pop)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 7
 ##   `Region/Country/Area` ...2                    Year Series Value Footn…¹ Source
 ##                   &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
@@ -1573,13 +1573,13 @@ Data frame with code, name, source, and description of all series which match th
 ## 5                     1 Total, all countries …  2010 Popul…   27  &lt;NA&gt;    Unite…
 ## 6                     1 Total, all countries …  2010 Popul…   11  &lt;NA&gt;    Unite…
 ## # … with abbreviated variable name ¹​Footnotes</code></pre>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="public.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(df_un_pop)</span></code></pre></div>
+<div class="sourceCode" id="cb1204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1204-1"><a href="public.html#cb1204-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(df_un_pop)</span></code></pre></div>
 <pre><code>## [1] &quot;Region/Country/Area&quot; &quot;...2&quot;                &quot;Year&quot;               
 ## [4] &quot;Series&quot;              &quot;Value&quot;               &quot;Footnotes&quot;          
 ## [7] &quot;Source&quot;</code></pre>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="public.html#cb81-1" aria-hidden="true" tabindex="-1"></a>un_pop_tbl <span class="ot">&lt;-</span> df_un_pop <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">num =</span> <span class="st">&quot;Region/Country/Area&quot;</span>, <span class="at">region =</span> <span class="st">&quot;...2&quot;</span>, <span class="at">year =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">series =</span> <span class="st">&quot;Series&quot;</span>, <span class="at">value =</span> <span class="st">&quot;Value&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb81-2"><a href="public.html#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) </span>
-<span id="cb81-3"><a href="public.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(un_pop_tbl)</span></code></pre></div>
+<div class="sourceCode" id="cb1206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1206-1"><a href="public.html#cb1206-1" aria-hidden="true" tabindex="-1"></a>un_pop_tbl <span class="ot">&lt;-</span> df_un_pop <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">num =</span> <span class="st">&quot;Region/Country/Area&quot;</span>, <span class="at">region =</span> <span class="st">&quot;...2&quot;</span>, <span class="at">year =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">series =</span> <span class="st">&quot;Series&quot;</span>, <span class="at">value =</span> <span class="st">&quot;Value&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1206-2"><a href="public.html#cb1206-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) </span>
+<span id="cb1206-3"><a href="public.html#cb1206-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(un_pop_tbl)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 11
 ##     num region      year Popul…¹ Popul…² Popul…³ Sex r…⁴ Popul…⁵ Popul…⁶ Popul…⁷
 ##   &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -1596,8 +1596,8 @@ Data frame with code, name, source, and description of all series which match th
 ## #   ⁴​`Sex ratio (males per 100 females)`,
 ## #   ⁵​`Population aged 0 to 14 years old (percentage)`,
 ## #   ⁶​`Population aged 60+ years old (percentage)`, ⁷​`Population density`</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="public.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(un_pop_tbl) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;num&quot;</span>, <span class="st">&quot;region&quot;</span>, <span class="st">&quot;year&quot;</span>, <span class="st">&quot;total&quot;</span>, <span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;ratio&quot;</span>, <span class="st">&quot;0-14&quot;</span>, <span class="st">&quot;60+&quot;</span>, <span class="st">&quot;density&quot;</span>, <span class="st">&quot;area&quot;</span>)</span>
-<span id="cb83-2"><a href="public.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(un_pop_tbl)</span></code></pre></div>
+<div class="sourceCode" id="cb1208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1208-1"><a href="public.html#cb1208-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(un_pop_tbl) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;num&quot;</span>, <span class="st">&quot;region&quot;</span>, <span class="st">&quot;year&quot;</span>, <span class="st">&quot;total&quot;</span>, <span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;ratio&quot;</span>, <span class="st">&quot;0-14&quot;</span>, <span class="st">&quot;60+&quot;</span>, <span class="st">&quot;density&quot;</span>, <span class="st">&quot;area&quot;</span>)</span>
+<span id="cb1208-2"><a href="public.html#cb1208-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(un_pop_tbl)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 11
 ##     num region         year total  male female ratio `0-14` `60+` density   area
 ##   &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
@@ -1617,7 +1617,7 @@ Data frame with code, name, source, and description of all series which match th
           </div>
         </div>
       </div>
-<a href="presentation-learning-resources.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="nightingale.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="model.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

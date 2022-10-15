@@ -215,7 +215,7 @@ part-ii-various-databases
 example-ii-1
 world-development-indicators-wdi
 world-bank-country-and-lending-groups
-about-class.xls
+about-class.xlsx
 geographic-classifications
 note
 importing-excel-files-part-i
@@ -230,7 +230,7 @@ rstudio-primers-see-references-in-moodle-at-the-bottom-1
 the-fifth-assignment-in-moodle
 responses-to-the-fifth-assignment
 setup-and-yaml-1
-class.xls
+class.xlsx
 introduction
 importing-excel-files
 countries
@@ -268,7 +268,6 @@ history-of-regression-analysis-wikipedia
 the-first-example-1
 model-analysis-with-tidyverse-modelr
 predictions-haty-a_1-a_2x-and-residuals-y---haty
-geom_jitter
 iris-1
 linear-model-sepal.w-sepal.l
 linear-model-petal.w-petal.l
@@ -305,7 +304,7 @@ quotation-marks
 examples-and-comments-2
 preparations
 extra-packages
-class.xlsx
+class.xlsx-1
 importing-excel-files-1
 countries-1
 regions-1
@@ -328,11 +327,10 @@ importing-3
 glimpsing-2
 transforming-1
 visualising-2
-modeling-2
 education
 importing-4
 transforming-2
-modeling-3
+modeling-2
 topics1
 part-i-regression-1
 why-does-gdp-vary-from-country-to-country
@@ -343,19 +341,24 @@ vif-variance-inflation-factor
 conclusion
 a-time-series-data-of-world-from-1960-to-2020
 excercise
+regression-2-co2-emission
 project
 regression-analysis
 wdi-indicator-cordes
 regression-1
 we-select-regression-model
 a-time-series-data-of-world-from-1960-to-2020-1
+regression-3-co2-emission-standardization
 regression-2
 not-standardized
 regression-3
 standadized-again
 we-select-regression-model-1
+regression-of-categorical-variables-and-anova
 regression-4
 t-test
+regression-analysis-with-categorical-variables
+anova-analysis-of-variance
 week-7-assignment
 topics2
 classification-iris-dataset
@@ -393,9 +396,7 @@ minutes-5-7-min.-presentation-and-3-5-min.-qa
 the-eighth-assignment-in-moodle
 learning-resources-viii
 rstudio-primers-see-references-in-moodle-at-the-bottom-3
-presentation
-minutes-5-7-min.-presentation-and-3-5-min.-qa-1
-share-your-exploratory-data-analysis-experience
+part-ii.-2022-02-16-presentation
 the-ninth-assignment-in-moodle
 learning-resources-ix
 rstudio-primers-see-references-in-moodle-at-the-bottom-4
@@ -432,6 +433,7 @@ swirl-courses-github-1
 rstudio-primers-httpsrstudio.cloudlearnprimers-2
 learning-resources-x-books-1
 learning-resources-x-moocs-and-online-courses-1
+nightingale
 basic-references
 histdata-data-sets-from-the-history-of-statistics-and-data-visualization
 nightingale-datasets
@@ -465,7 +467,6 @@ function-wdisearch-1
 the-first-example-2
 setup-2
 gdp-per-capita
-more-examples-1
 search-indicators-related-to-gdp
 population
 more-than-one-indicator
@@ -474,7 +475,7 @@ gender
 world-bank-country-and-lending-groups-and-an-option-extra-true
 review-basics-world-development-indicators-wdi
 world-bank-country-and-lending-groups-1
-about-class.xls-1
+about-class.xls
 geographic-classifications-1
 note-1
 importing-excel-files-2
@@ -501,7 +502,6 @@ history-of-regression-analysis-wikipedia-1
 galtons-example
 summary-of-the-data
 what-type-of-variation-occurs-within-my-variables
-r-commands-on-statistical-measurements
 what-type-of-covariation-occurs-between-my-variables
 basic-facts
 visual-illustration
@@ -548,7 +548,6 @@ visualization-using-ggplot2-package
 setting-a-period
 importing-and-transforming-data-with-readr-and-dplyr-in-tidyverse-packages
 review
-library-loadingattaching-packages
 importing-data-by-readr-in-tidyverse
 transforming-data-by-dplyr-in-tidyverse
 slice-subset-rows-using-their-positions
@@ -567,7 +566,6 @@ aggregated-by-countries
 population-of-2019
 region
 income
-analysis-suggested-by-rami-krispin
 summary-of-the-total-confrimed-cases-by-country
 summary-of-new-cases-during-the-past-24-hours-by-country-and-type
 pop
@@ -594,14 +592,3 @@ thailand
 united-states
 vietnam
 project-2
-regression-2-co2-emission
-regression-3-co2-emission-standardization
-regression-of-categorical-variables-and-anova
-presentation-1
-nightingale
-data-frame-wb_arb
-about-class.xlsx
-class.xlsx-1
-regression-analysis-with-categorical-variables
-anova-analysis-of-variance
-part-ii.-2022-02-16-presentation
