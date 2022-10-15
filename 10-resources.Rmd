@@ -119,7 +119,7 @@ All documents must contain 'ID', 'Name', 'Date' of submission
 
 In the following, we focus on the second option and explain how to handle chunks and the MS Word style file.
 
----
+
 
 ```
 title: "Title of Your Paper"
@@ -288,15 +288,6 @@ _RStudio.cloud is in 1.4. For your computer you need to install RStudio 1.4._
   - DataCamp: https://www.datacamp.com
   - Dataquest: https://www.dataquest.io
 
-
----
-
-\vfill
-\begin{center}
-\LARGE The END of Data Analysis for Researchers
-\end{center}
-
-\vfill
 
 ## Learning Resources {#resources}
 

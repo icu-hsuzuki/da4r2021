@@ -599,3 +599,9 @@ regression-3-co2-emission-standardization
 regression-of-categorical-variables-and-anova
 presentation-1
 nightingale
+data-frame-wb_arb
+about-class.xlsx
+class.xlsx-1
+regression-analysis-with-categorical-variables
+anova-analysis-of-variance
+part-ii.-2022-02-16-presentation

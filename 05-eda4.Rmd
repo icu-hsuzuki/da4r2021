@@ -136,7 +136,7 @@ is.na()	| Is x an NA?	| is.na(x)
 !is.na() |	Is x not an NA? |	!is.na(x)
 
 
----
+
 
 ```{r}
 filter(iris, (Species == "versicolor") & 
@@ -489,9 +489,9 @@ extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel
 ### World Bank Country and Lending Groups
 
 * URL [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
-* [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls) 
+* [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xlsx) 
 
-#### About CLASS.xls
+#### About CLASS.xlsx
 
 This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are: 
 
@@ -501,8 +501,7 @@ This table classifies all World Bank member countries (189), and all other econo
 * and high income, $12,536 or more. 
   
 The effective operational cutoff for IDA eligibility is $1,185 or less.								
-	
----
+
 
 #### Geographic classifications							
 								
@@ -514,7 +513,6 @@ The effective operational cutoff for IDA eligibility is $1,185 or less.
 
 * Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.								
 
----
 
 #### Note
 
@@ -528,19 +526,19 @@ The effective operational cutoff for IDA eligibility is $1,185 or less.
 
 ### Importing Excel Files, Part I
 
-* CLASS.xls: - _copy the following link_
-  - [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls) 
+* CLASS.xlsx: - _copy the following link_
+  - [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xlsx) 
 * readxl: https://readxl.tidyverse.org
 * Help: `read_excel`, `read_xls`, `read_xlsx`
 
 ```
 url_class <- "http://databank.worldbank.org/ 
-  data/download/site-content/CLASS.xls"
-download.file(url = url_class, destfile = "data/CLASS.xls")
+  data/download/site-content/CLASS.xlsx"
+download.file(url = url_class, destfile = "data/CLASS.xlsx")
 ```
 ```
 library(readxl)
-wb_countries_tmp <- read_excel("data/CLASS.xls", 
+wb_countries_tmp <- read_excel("data/CLASS.xlsx", 
   sheet = 1, skip = 4, n_max =219) %>% slice(-1)
 wb_countries <- wb_countries_tmp %>% 
   select(Economy, Code, Region, `Income group`, 
@@ -554,7 +552,7 @@ wb_countries
 * Help: `read_excel`, `read_xls`, `read_xlsx`
 
 ```
-wb_regions_tmp <- read_excel("data/CLASS.xls", 
+wb_regions_tmp <- read_excel("data/CLASS.xlsx", 
   sheet = 1, skip = 4, n_max =272) %>% 
   slice(-(1:221))
 wb_regions <- wb_regions_tmp %>% 
@@ -562,7 +560,7 @@ wb_regions <- wb_regions_tmp %>%
 wb_regions
 ```
 ```
-wb_groups_tmp <- read_excel("data/CLASS.xls", 
+wb_groups_tmp <- read_excel("data/CLASS.xlsx", 
   sheet = "Groups") # sheet = 3
 wb_groups_tmp
 ```
@@ -794,7 +792,7 @@ There are three types of joining tables. Commands are from tidyverse packages th
 
 
 <!-- * Choose a World Bank or UN data. Clearly state how to obtain the data. Even if you are able to give the URL to download the data, explain the steps you reached and obtained the data.  -->
-<!-- * If you choose WDI, use CLASS.xls, World Bank Country and Lending Groups information. -->
+<!-- * If you choose WDI, use CLASS.xlsx, World Bank Country and Lending Groups information. -->
 <!-- * Create an R Notebook (_file name_.nb.html) of an EDA containing: -->
 
 <!--   1. title, date, and author, i.e., Your Name -->
@@ -811,7 +809,7 @@ There are three types of joining tables. Commands are from tidyverse packages th
 ### The Fifth Assignment (in Moodle)
 
 * Choose a World Bank or UN data. Clearly state how to obtain the data. Even if you are able to give the URL to download the data, explain the steps you reached and obtained the data. 
-* If you choose WDI, use `CLASS.xls`, World Bank Country and Lending Groups information. 
+* If you choose WDI, use `CLASS.xlsx`, World Bank Country and Lending Groups information. 
 * Create an R Notebook (_file name_.nb.html) of an EDA containing:
 
   1. title, date, and author, i.e., Your Name
@@ -833,7 +831,7 @@ library(tidyverse)
 library(WDI)
 ```
 
-## `CLASS.xls`
+## `CLASS.xlsx`
 
 ### Introduction
 
@@ -1086,7 +1084,7 @@ df_fertility %>% filter(income == "High income")  %>%
 
 So far we used only three classifications of groups, region, income and lending. However, `CLASS.xls` contains more information. 
 
-For example if we compare data within a group, say Arab World (ARB), we need the information taken from `CLASS.xls`. If you need the information of the aggregated data of the group, it is included. We know that there are 22 countries.
+For example if we compare data within a group, say Arab World (ARB), we need the information taken from `CLASS.xlsx`. If you need the information of the aggregated data of the group, it is included. We know that there are 22 countries.
 
 ```{r}
 wb_arb <- wb_groups %>% filter(gcode == "ARB") %>% select(iso3c, country)

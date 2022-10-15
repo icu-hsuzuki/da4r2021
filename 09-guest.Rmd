@@ -111,34 +111,6 @@ All documents must contain 'ID', 'Name', 'Date' of submission
 * Note: Be ready to show your codes by R Notebook or R Scripts, when requested
  
 
-<!-- ### Presentation Schedule on 2021-02-17 -->
-
-<!-- 1. SHIQI YANG:   -->
-
-<!-- 2. YAPING TU:  -->
-
-<!-- 3. TATSUYA ORYU: -->
-
-<!-- 4. AYANE MARUICHI -->
-
-<!-- 5. YURI INAO -->
-
-<!-- 6. LAKMINI KAUSHALYA HERATH -->
-
-<!-- 7. NIROSHA HARSHANI NAGALMULLE KANKANAMALAGE -->
-
-<!-- 8. RYU OGURO -->
-
-<!-- ### Presentation Schedule on 2021-02-24 -->
-
-<!-- 1. OLIVIA WELLESLEY-COLE -->
-
-<!-- 2. CHISAKI TAKENAKA -->
-
-<!-- 3. MEGUMI KOGA -->
-
-<!-- 4. NOOR UL HUDA MALLICK -->
-
 
 ### The Eighth Assignment (in Moodle)
 
@@ -176,21 +148,21 @@ C. Option: Share the link(s) to your R Notebook(s) in RStudio.cloud
   - Reshape Data, Separate and Unite Columns, Join Data Sets
 ::: 
 
-# 2022-02-16 Presentation
+## Part II. 2022-02-16 Presentation
 
-### Presentation
+### Presentation {-}
 
 :::{.block}
-#### 10 minutes (5-7 min. presentation and 3-5 min. QA)
+#### 10 minutes (5-7 min. presentation and 3-5 min. QA) {-}
 
 * On 2021-02-17 and 2021-02-24
-* \textcolor{red}{Revised: 15 minutes (7-10 min. presentation and 5-8 min. QA)}
+* Revised: 15 minutes (7-10 min. presentation and 5-8 min. QA)
 * With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share
 * Note: Be ready to show your codes by R Notebook or R Scripts, when requested
 :::
 
 :::{.block}
-#### Share Your Exploratory Data Analysis Experience
+#### Share Your Exploratory Data Analysis Experience {-}
 
 **Presentation Example:**
 

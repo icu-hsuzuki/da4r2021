@@ -222,6 +222,7 @@ In this R Notebook, we will use the following packages. Istall them before you c
 library(tidyverse)
 library(WDI)
 ```
+
 #### GDP Per Capita
 
 The following is taken from the usage.
@@ -300,6 +301,7 @@ WDIsearch(string = "Population, Total", field = "name", cache = NULL)
 ```{r}
 WDIsearch(string = "SP.POP.TOTL", field = "indicator", cache = NULL)
 ```
+
 #### More Than One Indicator
 
 ```{r cash = TRUE}
@@ -533,12 +535,12 @@ wb_groups <- wb_groups_tmp %>%
 
 
 ```{r cash = TRUE}
-gdp_pcap <- WDI(country = "all", indicator = "NY.GDP.PCAP.KD")
-gdp_pcap
+gdp_pcap <- WDI(country = "all", indicator = "NY.GDP.PCAP.KD") 
+head(gdp_pcap)
 ```
-```{r}
+```{r cash = TRUE}
 gdp_pcap_extra <- WDI(country = "all", indicator = "NY.GDP.PCAP.KD", extra = TRUE)
-gdp_pcap_extra
+head(gdp_pcap_extra)
 ```
 
 * Compare the following:
@@ -550,7 +552,7 @@ gdp_pcap_country <- gdp_pcap %>% semi_join(wb_countries, by = "country")
 head(gdp_pcap_country)
 ```
 ```{r}
-gdp_pcap_extra %>% filter(region != "Aggregates") 
+gdp_pcap_extra %>% filter(region != "Aggregates") %>% slice(10)
 ```
 
 * What is the difference?
@@ -558,12 +560,12 @@ gdp_pcap_extra %>% filter(region != "Aggregates")
   - 13,176 rows is not equal to  13,054 rows + 183 rows
 
 ```{r}
-gdp_pcap_extra %>% filter(region != "Aggregates") %>% anti_join(gdp_pcap_country)
+gdp_pcap_extra %>% filter(region != "Aggregates") %>% anti_join(gdp_pcap_country) %>% slice(10)
 ```
 
 
 ```{r}
-gdp_pcap %>% anti_join(wb_countries)
+gdp_pcap %>% anti_join(wb_countries) %>% slice(10)
 ```
 
 **Note:** World Bank provides the WDI_csv for more information.
@@ -631,7 +633,7 @@ The followind do not look line the pdf above.
 
 ```{r cash = TRUE}
 df_un_pop <- read_csv("https://data.un.org/_Docs/SYB/CSV/SYB64_1_202110_Population,%20Surface%20Area%20and%20Density.csv", skip = 1)
-df_un_pop
+head(df_un_pop)
 ```
 
 ```{r}
@@ -642,9 +644,9 @@ colnames(df_un_pop)
 ```{r}
 un_pop_tbl <- df_un_pop %>% select(num = "Region/Country/Area", region = "...2", year = "Year", series = "Series", value = "Value") %>% 
   pivot_wider(names_from = series, values_from = value) 
-un_pop_tbl
+head(un_pop_tbl)
 ```
 ```{r}
 colnames(un_pop_tbl) <- c("num", "region", "year", "total", "male", "female", "ratio", "0-14", "60+", "density", "area")
-un_pop_tbl
+head(un_pop_tbl)
 ```

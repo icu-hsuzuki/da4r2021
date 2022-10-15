@@ -97,6 +97,7 @@ analyzing the data on dead and sick soldiers in the Crimean War. Reduced the mor
   * Increase of computational power that can process the above huge data
   
   ![My Personal View of Data Science](data/kaizoji.png)
+
 ### R and R Studio
 
   * [The Comprehensive R Archive Network](https://cloud.r-project.org)

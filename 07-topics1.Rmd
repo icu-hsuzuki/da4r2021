@@ -219,7 +219,7 @@ wb_world_extra %>% ggplot(aes(x = diff_pop, y = diff_gdp)) + geom_point() +
 wb_world_extra %>% lm(diff_gdp ~ diff_pop, .) %>% summary()
 ```
 
-## Excercise: 
+### Excercise: 
 
 1.  Select a region from the following; 
 
@@ -233,9 +233,9 @@ wb_world_extra %>% lm(diff_gdp ~ diff_pop, .) %>% summary()
 
 3. Select the best model.
 
-# Regression 2 : CO2 Emission
+## Regression 2 : CO2 Emission
 
-## Project
+### Project
 
 * Problem: “What are the causes of increased CO2 emissions?”
 * Plan: To develop and test the hypothesis that CO2 emissions depends on GDP, population and land under cereal production of each region.
@@ -246,7 +246,7 @@ wb_world_extra %>% lm(diff_gdp ~ diff_pop, .) %>% summary()
   - Total Population (X1): "SP.POP.TOTL"
   - Land under cereal production (hectares): "AG.LND.CREL.HA"
   
-### Regression Analysis
+#### Regression Analysis
 
 * Regression equation:Y =c + a x1 + b x2 + d x3 Y: CO2 emission: independent variable
   - x1: GDP (Y) : independent variable
@@ -255,7 +255,7 @@ independent variable
 * We perform a regression analysis of the above regression equation (estimate the parameters, c (intercept), a, b, d) and elect the best model.
 
 
-### WDI Indicator cordes
+#### WDI Indicator cordes
 
 * co2 = EN.ATM.CO2E.KT: CO2 Emission 
 * gdp =  NY.GDP.MKTP.CD:  GDP (current USD)
@@ -309,7 +309,7 @@ wb_co2_18
 
 
 
-## Regression
+### Regression
 
 ```{r}
 wb_co2_18 %>% ggplot(aes(gdp, co2)) + geom_point() + 
@@ -364,7 +364,7 @@ list(gdp_pop = vif(co2_gdp_pop), gdp_cereal = vif(co2_gdp_cereal), pop_cereal = 
 ```
 
 
-## We select regression model; 
+#### We select regression model; 
 
 
 CO2 emission = c + a (GDP) + b (population)
@@ -372,7 +372,7 @@ CO2 emission = c + a (GDP) + b (population)
 (Omit land because of multicollinearity)
 
 
-## A time series data of World from 1960 to 2020
+#### A time series data of World from 1960 to 2020
 
 
 ```{r}
@@ -412,7 +412,7 @@ wb_co2_world_extra %>% lm(diff_co2 ~ diff_gdp, .) %>% summary()
 ```
 
 
-# Regression 3: CO2 emission (Standardization)
+## Regression 3: CO2 emission (Standardization)
 
 * Prof. Kaizoji provided a data in csv format in Moodle and use scale function to standardize the data, let us proceed one step by one step.
 * He starts with a WDI data in 2016 and use the aggregated part. There may be arguments on the set of data, let us use the same one.
@@ -463,7 +463,7 @@ co2_ag16_rv
 
 
 
-## Regression
+### Regression
 
 ```{r}
 co2_al16_scaled  %>% ggplot(aes(st_gdp, st_co2)) + geom_point() + 
@@ -504,14 +504,14 @@ vif(st_co2_all)
 ```
 
 
-## Not Standardized
+### Not Standardized
 
 ```{r}
 co2_al16 <- wb_co2 %>% filter(region != "Aggregates", year == 2016)
 co2_al16
 ```
 
-## Regression
+### Regression
 
 ```{r}
 co2_al16 %>% ggplot(aes(gdp, co2)) + geom_point() + 
@@ -550,7 +550,8 @@ vif(orig_co2_gdp_cereal)
 vif(orig_co2_pop_cereal)
 vif(orig_co2_all)
 ```
-### Standadized (Again)
+
+#### Standadized (Again)
 
 ```{r}
 msummary(list(st_gdp = st_co2_gdp, st_pop = st_co2_pop, st_cereal = st_co2_cereal, st_gdp_pop = st_co2_gdp_pop, st_gdp_cereal = st_co2_gdp_cereal, st_pop_cereal = st_co2_pop_cereal, st_all = st_co2_all))
@@ -571,7 +572,7 @@ vif(st_co2_all)
 
 
 
-# Regression of Categorical Variables and ANOVA
+## Regression of Categorical Variables and ANOVA
 
 If you start from here, you need to load the following packages.
 
@@ -608,7 +609,7 @@ wb_co2_4anova %>% group_by(income) %>%
 
 
 
-## Regression
+### Regression
 
 ```
 y <- CO2$EN.ATM.CO2E.PC #CO2 Emission per capita
@@ -668,7 +669,7 @@ income_model %>% summary()
 msummary(list(co2_model = wb_co2_model, co2_log_model = wb_co2_log_model, co2_income_model = income_model), statistic = 'p.value')
 ```
 
-### t-test
+#### t-test
 
 ```{r}
 high <- wb_co2_4anova %>% filter(income == "High income") %>% pull(co2)
@@ -676,7 +677,7 @@ low <- wb_co2_4anova %>% filter(income == "Low income") %>% pull(co2)
 t.test(high, low)
 ```
 
-#Regression analysis with categorical variables
+### Regression analysis with categorical variables
 
 model_3=lm(EN.ATM.CO2E.PC ~ factor(income), data = CO2) 
 
@@ -686,7 +687,7 @@ msummary(model_3, statistic = 'p.value')
 
 
 
-#ANOVA (Analysis of Variance)
+### ANOVA (Analysis of Variance)
 
 ```{r}
 wb_co2_4anova %>% aov(co2 ~ factor(income), .) %>% summary()
@@ -716,270 +717,5 @@ wb_co2_4anova %>% aov(co2 ~ factor(income), .) %>% summary()
 * Submission: Your rmd file (Rmarkdown) on Moodle box. 
 
 *Deadline : Feb. 8. 
-
-<!-- ## Part I: Topics in Exploratory Data Analysis -->
-
-<!-- ### Topological Data Analysis -->
-
-<!-- > Lecture by Professor Taisei Kaizoji -->
-
-<!-- ## Part II: Towards Your Course Project -->
-
-<!-- ### Contents -->
-
-<!-- * About Assignment 6, World Development Indicator -->
-<!--   - WDI -->
-<!--   - `read_excel` -->
-<!--   - Filtering Join -->
-
-<!-- * Join Tables -->
-<!--   - Bind rows -->
-<!--   - Bind columns -->
-<!--   - Filtering join -->
-
-<!-- * Your Course Project -->
-<!--   - Short Paper -->
-<!--   - Presentation -->
-<!--   - Paper -->
-
-<!-- <!-- ### World Development Indicators: ?WDI --> -->
-
-<!-- <!-- 1. Basic Usage --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- WDI(country = "all", indicator = "NY.GDP.PCAP.KD") --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- 2. Vector Notation --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- WDI(country = c("US", "CN", JP"), # ISO-2 codes --> -->
-<!-- <!--    indicator = c("gdp_pcap" = "NY.GDP.PCAP.KD",  --> -->
-<!-- <!--                 "life_exp" = "SP.DYN.LE00.IN")) --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- 3. Use Extra:  --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- WDI(country = "all",  --> -->
-<!-- <!--    indicator = c("gdp_pcap" = NY.GDP.PCAP.KD",  --> -->
-<!-- <!--                 "life_exp" = "SP.DYN.LE00.IN"), extra = TRUE) --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- extra: TRUE returns extra variables such as region, iso3c code, and incomeLevel --> -->
-
-<!-- <!-- ### World Bank Country and Lending Groups --> -->
-
-<!-- <!-- * URL [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups) --> -->
-<!-- <!-- * [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls)  --> -->
-
-<!-- <!-- #### About CLASS.xls --> -->
-
-<!-- <!-- This table classifies all World Bank member countries (189), and all other economies with populations of more than 30,000. For operational and analytical purposes, economies are divided among income groups according to 2019 gross national income (GNI) per capita, calculated using the World Bank Atlas method. The groups are:  --> -->
-
-<!-- <!-- * low income, $1,035 or less;  --> -->
-<!-- <!-- * lower middle income, $1,036 - 4,045;  --> -->
-<!-- <!-- * upper middle income, $4,046 - 12,535;  --> -->
-<!-- <!-- * and high income, $12,536 or more.  --> -->
-
-<!-- <!-- The effective operational cutoff for IDA eligibility is $1,185 or less.								 --> -->
-
-<!-- <!-- --- --> -->
-
-<!-- <!-- #### Geographic classifications							 --> -->
-
-<!-- <!-- * IDA countries are those that lack the financial ability to borrow from IBRD.  --> -->
-
-<!-- <!-- * IDA credits are deeply concessional—interest-free loans and grants for programs aimed at boosting economic growth and improving living conditions.  --> -->
-
-<!-- <!-- * IBRD loans are noncessional.  --> -->
-
-<!-- <!-- * Blend countries are eligible for IDA credits because of their low per capita incomes but are also eligible for IBRD because they are financially creditworthy.								 --> -->
-
-<!-- <!-- --- --> -->
-
-<!-- <!-- #### Note --> -->
-
-<!-- <!-- * The term country, used interchangeably with economy, does not imply political independence but refers to any territory for which authorities report separate social or economic statistics.  --> -->
-
-<!-- <!-- * Income classifications set on 1 July 2020 remain in effect until 1 July 2021.  --> -->
-
-<!-- <!-- * Argentina, which was temporarily unclassified in July 2016 pending release of revised national accounts statistics, was classified as upper middle income for FY17 as of 29 September 2016 based on alternative conversion factors. Also effective 29 September 2016, Syrian Arab Republic is reclassified from IBRD lending category to IDA-only.  --> -->
-
-<!-- <!-- * On 29 March 2017, new country codes were introduced to align World Bank 3-letter codes with ISO 3-letter codes: Andorra (AND), Dem. Rep. Congo (COD), Isle of Man (IMN), Kosovo (XKX), Romania (ROU), Timor-Leste (TLS), and West Bank and Gaza (PSE).								 --> -->
-
-<!-- <!-- ### Importing Excel Files, Part I --> -->
-
-<!-- <!-- * CLASS.xls: - _copy the following link_ --> -->
-<!-- <!--   - [The current classification by income in XLS format](http://databank.worldbank.org/data/download/site-content/CLASS.xls)  --> -->
-<!-- <!-- * readxl: https://readxl.tidyverse.org --> -->
-<!-- <!-- * Help: `read_excel`, `read_xls`, `read_xlsx` --> -->
-
-<!-- <!-- ``` --> -->
-<!-- <!-- url_class <- "http://databank.worldbank.org/  --> -->
-<!-- <!--   data/download/site-content/CLASS.xls" --> -->
-<!-- <!-- download.file(url = url_class, destfile = "data/CLASS.xls") --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- library(readxl) --> -->
-<!-- <!-- wb_countries_tmp <- read_excel("data/CLASS.xls",  --> -->
-<!-- <!--   sheet = 1, skip = 4, n_max =219) %>% slice(-1) --> -->
-<!-- <!-- wb_countries <- wb_countries_tmp %>%  --> -->
-<!-- <!--   select(Economy, Code, Region, `Income group`,  --> -->
-<!-- <!--         Code, Region:Other) --> -->
-<!-- <!-- wb_countries --> -->
-<!-- <!-- ``` --> -->
-
-<!-- <!-- ### Importing Excel Files, Part II --> -->
-
-<!-- <!-- * readxl: https://readxl.tidyverse.org --> -->
-<!-- <!-- * Help: `read_excel`, `read_xls`, `read_xlsx` --> -->
-
-<!-- <!-- ``` --> -->
-<!-- <!-- wb_regions_tmp <- read_excel("data/CLASS.xls",  --> -->
-<!-- <!--   sheet = 1, skip = 4, n_max =272) %>%  --> -->
-<!-- <!--   slice(-(1:221)) --> -->
-<!-- <!-- wb_regions <- wb_regions_tmp %>%  --> -->
-<!-- <!--   select(Economy:Code) %>% drop_na() --> -->
-<!-- <!-- wb_regions --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- wb_groups_tmp <- read_excel("data/CLASS.xls",  --> -->
-<!-- <!--   sheet = "Groups") # sheet = 3 --> -->
-<!-- <!-- wb_groups_tmp --> -->
-<!-- <!-- ``` --> -->
-
-<!-- <!-- * Please study 'About Assignment Five' in Moodle --> -->
-
-<!-- <!-- ### Filtering Join --> -->
-
-<!-- <!-- ``` --> -->
-<!-- <!-- gdp_pcap <- WDI(country = "all",  --> -->
-<!-- <!--     indicator = "NY.GDP.PCAP.KD") --> -->
-<!-- <!-- gdp_pcap_extra <- WDI(country = "all",  --> -->
-<!-- <!--     indicator = "NY.GDP.PCAP.KD", extra = TRUE) --> -->
-<!-- <!-- ``` --> -->
-
-<!-- <!-- * Compare the following: --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- gdp_pcap %>% semi_join(country_list) --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- gdp_pcap %>% filter(region != "Aggregates") --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- ``` --> -->
-<!-- <!-- gdp_pcap %>% anti_join(country_list) --> -->
-<!-- <!-- ``` --> -->
-
-<!-- <!-- * Please study 'About Assignment Five' in Moodle --> -->
-
-
-<!-- <!-- ### Join Tables --> -->
-
-<!-- <!-- There are three types of joining tables. Commands are from tidyverse packages though there is a way to do the same by Base R with appropriate arguments. --> -->
-
-<!-- <!-- 1. Bind rows: bind_rows(), intersect(), setdiff(), union() --> -->
-<!-- <!-- 2. Bind columns: bind_cols(), left_join(), right_join(), inner_join(), full_join() --> -->
-<!-- <!-- 3. Filtering join: semi_join(), anti_join() --> -->
-
-<!-- <!-- ### Join Tables: Quick References --> -->
-
-<!-- <!-- 1. https://r4ds.had.co.nz/relational-data.html#relational-data --> -->
-
-<!-- <!-- 2. Cheatsheet: Data Transformation, pages 2 and 3. You can download it from RStudio > Help. --> -->
-
-<!-- <!-- 3. Tidyverse Homepage: --> -->
-<!-- <!--     a. [Efficiently bind multiple data frames by row and column](https://dplyr.tidyverse.org/reference/bind.html): bind_rows(), bind_cols() --> -->
-<!-- <!--     b. [Set operations](https://dplyr.tidyverse.org/reference/setops.html): intersect(), setdiff(), union() --> -->
-<!-- <!--     c. [Mutating joins](https://dplyr.tidyverse.org/reference/mutate-joins.html): left_join(), right_join(), inner_join(), full_join() --> -->
-<!-- <!--     d. [Filtering joins](https://dplyr.tidyverse.org/reference/filter-joins.html): semi_join(), anti_join() --> -->
-
-<!-- <!-- 4. R Studio Primers: Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) --> -->
-<!-- <!--     - Reshape Data, Separate and Unite Columns, **Join Data Sets** --> -->
-
-<!-- ### About This Course -->
-
-<!-- * Features: -->
-<!--   - Inter-disciplinary field -->
-<!--   - Empirical: based on, concerned with, or verifiable by observation or experience rather than theory or pure logic -->
-<!--   - Extract knowledge and insights from data using scientific methods, processes, algorithms and systems  -->
-
-<!-- * Learning Methods: -->
-<!--   - Getting Information, Knowledge and Raise Questions: Lectures and Readings, Assignment 1 -->
-<!--   - Interactive Practicum: `swirl`, R Studio Primers, etc. Assignment 2 -->
-<!--   - Mini Projects: Assignment 3 - Assignment 6 -->
-<!--   - Project and Collaboration with Communication - Assignment 7, Your Course Project -->
-<!--     + Project Design, Exploration, Presentation and Share, Final Output -->
-
-<!-- * Assignments: -->
-<!--   - Enroll:12 > A1:12 > A2:12(15) > A3:12 > A4:10 > A5:9 > A6:7 -->
-<!--   - _Better Late Than Never_ -->
-
-
-<!-- ### Your Course Project, Part I -->
-
-<!-- All documents must contain 'ID', 'Name', 'Date' of submission -->
-
-<!-- 1. 'Short Paper' (that can be much longer than the Paper -->
-<!--   * Due: 2021-02-09 for Interim Report (and 2021-03-03: supporting doc for Paper) -->
-<!--   * Contents:  -->
-<!--      a. Objective: What and Why  -->
-<!--      b. Data  -->
-<!--      c. Reproducible Exploratory Data Analysis with Explanations -->
-<!--      d. Questions based on your findings and technical quesitons -->
-<!--   * Format: R Notebook (*.nb.html) -->
-
-<!-- 2. Presentation: 10 minutes (5-7 min. presentation and 3-5 min. QA) -->
-<!--   * On 2021-02-17 [or 2021-02-24, a reserve] -->
-<!--   * With a digital file (.nb.html, html, pdf, word, ppt, ... ) by file share -->
-<!--   * Note: Be ready to show your codes by R Notebook or R Scripts, when requested -->
-
-<!-- ###  Your Course Project, Part II -->
-
-<!-- 3. Paper: 5 to 10 pages -->
-<!--   * Due: 2021-03-03 -->
-<!--   * Contents: Exploratory Data Analysis Using **Public Data** -->
-<!--       a. Introduction - include what and why -->
-<!--       b. Description of Data -->
-<!--       c. Exposition of Your Exploration with Visualization of Data -->
-<!--       d. Concluding Remarks -->
-<!--       e. References, if any -->
-<!--       f. Acknowledgements, if any (can give a credit to your classmate) -->
-<!--   * Note: -->
-<!--       - Give logical explanations of your observations using data tables and charts -->
-<!--       - No need to include the whole process -->
-<!--       - Include codes only when necessary -->
-<!--   * Format: pdf. (Rmd > pdf, Rmd > MS Word > pdf, Rmd > MS Word > Google Doc > pdf) -->
-
-<!-- ### The Seventh Assignment (in Moodle) -->
-
-<!-- A. Share a part (a and possibly b) of your 'Short Paper'. -->
-
-<!--   1. What do you want to analyze? -->
-<!--   2. Why do you want to analyze it? -->
-
-<!-- B. Share your thoughts about this course. -->
-
-<!--   1. What have you learned? -->
-<!--   2. What do you want to learn, understand, or clarify towards the end of this course? -->
-<!--   3. Requests and suggestions to improve this course. -->
-
-<!-- C. Option: Share the link(s) to your R Notebook(s) in RStudio.cloud -->
-
-<!-- * Submit your response to Moodle (The Seventh Assignment) by 2021-02-09 23:59:00 -->
-
-<!-- ### Learning Resources, VII -->
-
-<!-- * [R for Data Science, Part VI Communicate](https://r4ds.had.co.nz/communicate-intro.html#communicate-intro) -->
-<!--   - [Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html#graphics-for-communication) -->
-<!--   - [R Markdown workflow](https://r4ds.had.co.nz/r-markdown-workflow.html#r-markdown-workflow) -->
-<!-- * Data analysis write-ups: https://jgscott.github.io/teaching/writeups/write_ups/ -->
-
-<!-- ::: {.block} -->
-<!-- #### RStudio Primers: See References in Moodle at the bottom -->
-
-<!-- 1. The Basics -- [r4ds: Explore, I](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
-<!-- 2. Work with Data -- [r4ds: Wrangle, I](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
-<!-- 3. Visualize Data -- [r4ds: Explore, II](https://r4ds.had.co.nz/explore-intro.html#explore-intro) -->
-<!--   - Exploratory Data Analysis, Bar Charts, Histograms -->
-<!--   - **Boxplots and Counts, Scatterplots, Line Plots** -->
-<!--   - Overplotting and Big Data, Customize Your Plots -->
-<!-- 4. Tidy Your Data -- [r4ds: Wrangle, II](https://r4ds.had.co.nz/wrangle-intro.html#wrangle-intro) -->
-<!--   - Reshape Data, Separate and Unite Columns, Join Data Sets -->
-<!-- :::  -->
 
 
