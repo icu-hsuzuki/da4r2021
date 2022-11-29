@@ -4,3 +4,4 @@ This is a **bookdown** project following https://bookdown.org/yihui/bookdownbook
 
 https://github.com/jtr13/bookdown-template
 
+We plan to update and develop a new lecture note on Data Analysis for Reseachers. 
