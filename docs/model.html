@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>C Appendix C Modeling | Data Analysis for Researchers</title>
-  <meta name="description" content="C Appendix C Modeling | Data Analysis for Researchers" />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <title>C Appendix C Modeling | Data Analysis for Researchers 2021</title>
+  <meta name="description" content="C Appendix C Modeling | Data Analysis for Researchers 2021" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="C Appendix C Modeling | Data Analysis for Researchers" />
+  <meta property="og:title" content="C Appendix C Modeling | Data Analysis for Researchers 2021" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="C Appendix C Modeling | Data Analysis for Researchers" />
+  <meta name="twitter:title" content="C Appendix C Modeling | Data Analysis for Researchers 2021" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="DS SL" />
 
 
-<meta name="date" content="2022-10-15" />
+<meta name="date" content="2022-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,10 +54,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.25/datatables.js"></script>
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.26/datatables.js"></script>
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Researchers</a></li>
+<li><a href="./">Data Analysis for Researchers 2021</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
@@ -652,7 +652,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers 2021</a>
           </h1>
         </div>
 
@@ -809,10 +809,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="galtons-example" class="section level4 hasAnchor" number="13.3.2.3">
 <h4><span class="header-section-number">C.3.2.3</span> Galton’s Example<a href="model.html#galtons-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We use <code>HistData</code> Package. See <a href="https://CRAN.R-project.org/package=HistData" class="uri">https://CRAN.R-project.org/package=HistData</a>.</p>
-<div class="sourceCode" id="cb1210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1210-1"><a href="model.html#cb1210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1210-2"><a href="model.html#cb1210-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr)</span>
-<span id="cb1210-3"><a href="model.html#cb1210-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets)</span>
-<span id="cb1210-4"><a href="model.html#cb1210-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(HistData)</span></code></pre></div>
+<div class="sourceCode" id="cb1207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1207-1"><a href="model.html#cb1207-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1207-2"><a href="model.html#cb1207-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr)</span>
+<span id="cb1207-3"><a href="model.html#cb1207-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets)</span>
+<span id="cb1207-4"><a href="model.html#cb1207-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(HistData)</span></code></pre></div>
 <p><strong>Galton’s data on the heights of parents and their children, by child</strong></p>
 <ul>
 <li><strong>Description:</strong>
@@ -822,8 +822,8 @@ This data set lists the individual observations for 934 children in 205 families
 <ul>
 <li>See Help: GaltonFamilies</li>
 </ul>
-<div class="sourceCode" id="cb1211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1211-1"><a href="model.html#cb1211-1" aria-hidden="true" tabindex="-1"></a>gf <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(GaltonFamilies)</span>
-<span id="cb1211-2"><a href="model.html#cb1211-2" aria-hidden="true" tabindex="-1"></a>gf</span></code></pre></div>
+<div class="sourceCode" id="cb1208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1208-1"><a href="model.html#cb1208-1" aria-hidden="true" tabindex="-1"></a>gf <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(GaltonFamilies)</span>
+<span id="cb1208-2"><a href="model.html#cb1208-2" aria-hidden="true" tabindex="-1"></a>gf</span></code></pre></div>
 <pre><code>## # A tibble: 934 × 8
 ##    family father mother midparentHeight children childNum gender childHeight
 ##    &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt; &lt;fct&gt;        &lt;dbl&gt;
@@ -838,35 +838,35 @@ This data set lists the individual observations for 934 children in 205 families
 ##  9 003      75     64              72.1        2        1 male          71  
 ## 10 003      75     64              72.1        2        2 female        68  
 ## # … with 924 more rows</code></pre>
-<div class="sourceCode" id="cb1213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1213-1"><a href="model.html#cb1213-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1213-2"><a href="model.html#cb1213-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1213-3"><a href="model.html#cb1213-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(father, childHeight)) <span class="sc">+</span></span>
-<span id="cb1213-4"><a href="model.html#cb1213-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;father&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;son&#39;s height&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1210-1"><a href="model.html#cb1210-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1210-2"><a href="model.html#cb1210-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1210-3"><a href="model.html#cb1210-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(father, childHeight)) <span class="sc">+</span></span>
+<span id="cb1210-4"><a href="model.html#cb1210-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;father&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;son&#39;s height&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-529-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1214-1"><a href="model.html#cb1214-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1214-2"><a href="model.html#cb1214-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1214-3"><a href="model.html#cb1214-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(mother, childHeight)) <span class="sc">+</span></span>
-<span id="cb1214-4"><a href="model.html#cb1214-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;mother&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;daughter&#39;s height&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1211-1"><a href="model.html#cb1211-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1211-2"><a href="model.html#cb1211-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1211-3"><a href="model.html#cb1211-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(mother, childHeight)) <span class="sc">+</span></span>
+<span id="cb1211-4"><a href="model.html#cb1211-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;mother&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;daughter&#39;s height&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-530-1.png" width="672" /></p>
 <blockquote>
 <p>“The heights of descendants of tall ancestors tend to regress down towards a normal average (a phenomenon also known as regression toward the mean).”</p>
 </blockquote>
-<div class="sourceCode" id="cb1215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1215-1"><a href="model.html#cb1215-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1215-2"><a href="model.html#cb1215-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight)) <span class="sc">+</span></span>
-<span id="cb1215-3"><a href="model.html#cb1215-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1215-4"><a href="model.html#cb1215-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb1215-5"><a href="model.html#cb1215-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;father&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;son&#39;s height&quot;</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1212-1"><a href="model.html#cb1212-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1212-2"><a href="model.html#cb1212-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight)) <span class="sc">+</span></span>
+<span id="cb1212-3"><a href="model.html#cb1212-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1212-4"><a href="model.html#cb1212-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1212-5"><a href="model.html#cb1212-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;father&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;son&#39;s height&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-531-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1217-1"><a href="model.html#cb1217-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1217-2"><a href="model.html#cb1217-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(mother, childHeight)) <span class="sc">+</span></span>
-<span id="cb1217-3"><a href="model.html#cb1217-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1217-4"><a href="model.html#cb1217-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb1217-5"><a href="model.html#cb1217-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;mother&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;daughter&#39;s height&quot;</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1214-1"><a href="model.html#cb1214-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1214-2"><a href="model.html#cb1214-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(mother, childHeight)) <span class="sc">+</span></span>
+<span id="cb1214-3"><a href="model.html#cb1214-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1214-4"><a href="model.html#cb1214-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1214-5"><a href="model.html#cb1214-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;GaltonFamilies&quot;</span>, <span class="at">x =</span> <span class="st">&quot;mother&#39;s height&quot;</span>, <span class="at">y =</span> <span class="st">&quot;daughter&#39;s height&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-532-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1219-1"><a href="model.html#cb1219-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1219-2"><a href="model.html#cb1219-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1216-1"><a href="model.html#cb1216-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1216-2"><a href="model.html#cb1216-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = childHeight ~ father, data = .)
@@ -885,8 +885,8 @@ This data set lists the individual observations for 934 children in 205 families
 ## Residual standard error: 2.416 on 479 degrees of freedom
 ## Multiple R-squared:  0.154,  Adjusted R-squared:  0.1522 
 ## F-statistic: 87.17 on 1 and 479 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb1221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1221-1"><a href="model.html#cb1221-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1221-2"><a href="model.html#cb1221-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> mother, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1218-1"><a href="model.html#cb1218-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1218-2"><a href="model.html#cb1218-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> mother, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = childHeight ~ mother, data = .)
@@ -909,8 +909,8 @@ This data set lists the individual observations for 934 children in 205 families
 <li><strong>midparentHeight:</strong>
 mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </ul>
-<div class="sourceCode" id="cb1223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1223-1"><a href="model.html#cb1223-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1223-2"><a href="model.html#cb1223-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> midparentHeight, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1220-1"><a href="model.html#cb1220-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1220-2"><a href="model.html#cb1220-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(childHeight <span class="sc">~</span> midparentHeight, <span class="at">data =</span> .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = childHeight ~ midparentHeight, data = .)
@@ -932,7 +932,7 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="summary-of-the-data" class="section level4 hasAnchor" number="13.3.2.4">
 <h4><span class="header-section-number">C.3.2.4</span> Summary of the Data<a href="model.html#summary-of-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1225-1"><a href="model.html#cb1225-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1222-1"><a href="model.html#cb1222-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>##      family        father         mother      midparentHeight    children     
 ##  185    : 15   Min.   :62.0   Min.   :58.00   Min.   :64.40   Min.   : 1.000  
 ##  066    : 11   1st Qu.:68.0   1st Qu.:63.00   1st Qu.:68.14   1st Qu.: 4.000  
@@ -950,10 +950,10 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ##  Max.   :15.000                Max.   :79.00  
 ## </code></pre>
 <p>The following information can be found in summary above.</p>
-<div class="sourceCode" id="cb1227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1227-1"><a href="model.html#cb1227-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">n_father =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(father)), </span>
-<span id="cb1227-2"><a href="model.html#cb1227-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_mother =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(mother)), </span>
-<span id="cb1227-3"><a href="model.html#cb1227-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_male =</span> <span class="fu">sum</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>),</span>
-<span id="cb1227-4"><a href="model.html#cb1227-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_female =</span> <span class="fu">sum</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb1224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1224-1"><a href="model.html#cb1224-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">n_father =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(father)), </span>
+<span id="cb1224-2"><a href="model.html#cb1224-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_mother =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(mother)), </span>
+<span id="cb1224-3"><a href="model.html#cb1224-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_male =</span> <span class="fu">sum</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>),</span>
+<span id="cb1224-4"><a href="model.html#cb1224-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">n_female =</span> <span class="fu">sum</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 4
 ##   n_father n_mother n_male n_female
 ##      &lt;int&gt;    &lt;int&gt;  &lt;int&gt;    &lt;int&gt;
@@ -961,7 +961,7 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="what-type-of-variation-occurs-within-my-variables" class="section level4 hasAnchor" number="13.3.2.5">
 <h4><span class="header-section-number">C.3.2.5</span> What type of variation occurs within my variables?<a href="model.html#what-type-of-variation-occurs-within-my-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1229-1"><a href="model.html#cb1229-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(childHeight) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1226-1"><a href="model.html#cb1226-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(childHeight) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>##   childHeight   
 ##  Min.   :56.00  
 ##  1st Qu.:64.00  
@@ -969,98 +969,98 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ##  Mean   :66.75  
 ##  3rd Qu.:69.70  
 ##  Max.   :79.00</code></pre>
-<div class="sourceCode" id="cb1231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1231-1"><a href="model.html#cb1231-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1231-2"><a href="model.html#cb1231-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight))</span></code></pre></div>
+<div class="sourceCode" id="cb1228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1228-1"><a href="model.html#cb1228-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1228-2"><a href="model.html#cb1228-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-539-1.png" width="672" /></p>
 <ul>
 <li><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html"><code>geom_boxplot()</code></a></li>
 </ul>
-<div class="sourceCode" id="cb1232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1232-1"><a href="model.html#cb1232-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1232-2"><a href="model.html#cb1232-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight))</span></code></pre></div>
+<div class="sourceCode" id="cb1229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1229-1"><a href="model.html#cb1229-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1229-2"><a href="model.html#cb1229-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight))</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-540-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1234-1"><a href="model.html#cb1234-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(gender, childHeight) <span class="sc">%&gt;%</span></span>
-<span id="cb1234-2"><a href="model.html#cb1234-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
-<span id="cb1234-3"><a href="model.html#cb1234-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">q1 =</span> <span class="fu">quantile</span>(childHeight, <span class="fl">0.25</span>), <span class="at">med =</span> <span class="fu">median</span>(childHeight), <span class="at">q3 =</span> <span class="fu">quantile</span>(childHeight, <span class="fl">0.75</span>), <span class="at">left =</span> q1 <span class="sc">-</span> <span class="fl">1.5</span><span class="sc">*</span>(q3<span class="sc">-</span>q1), <span class="at">right =</span> q3 <span class="sc">+</span> <span class="fl">1.5</span><span class="sc">*</span>(q3<span class="sc">-</span>q1))</span></code></pre></div>
+<div class="sourceCode" id="cb1231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1231-1"><a href="model.html#cb1231-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(gender, childHeight) <span class="sc">%&gt;%</span></span>
+<span id="cb1231-2"><a href="model.html#cb1231-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
+<span id="cb1231-3"><a href="model.html#cb1231-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">q1 =</span> <span class="fu">quantile</span>(childHeight, <span class="fl">0.25</span>), <span class="at">med =</span> <span class="fu">median</span>(childHeight), <span class="at">q3 =</span> <span class="fu">quantile</span>(childHeight, <span class="fl">0.75</span>), <span class="at">left =</span> q1 <span class="sc">-</span> <span class="fl">1.5</span><span class="sc">*</span>(q3<span class="sc">-</span>q1), <span class="at">right =</span> q3 <span class="sc">+</span> <span class="fl">1.5</span><span class="sc">*</span>(q3<span class="sc">-</span>q1))</span></code></pre></div>
 <pre><code>## # A tibble: 2 × 6
 ##   gender    q1   med    q3  left right
 ##   &lt;fct&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1 female  62.5  64    65.5  58    70  
 ## 2 male    67.5  69.2  71    62.2  76.2</code></pre>
-<div class="sourceCode" id="cb1236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1236-1"><a href="model.html#cb1236-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1236-2"><a href="model.html#cb1236-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">y =</span> gender))</span></code></pre></div>
+<div class="sourceCode" id="cb1233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1233-1"><a href="model.html#cb1233-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1233-2"><a href="model.html#cb1233-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">y =</span> gender))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-542-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1237-1"><a href="model.html#cb1237-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb1237-2"><a href="model.html#cb1237-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">fill =</span> gender), <span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1234-1"><a href="model.html#cb1234-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb1234-2"><a href="model.html#cb1234-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">fill =</span> gender), <span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-543-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1239-1"><a href="model.html#cb1239-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb1239-2"><a href="model.html#cb1239-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">fill =</span> gender)) <span class="sc">+</span></span>
-<span id="cb1239-3"><a href="model.html#cb1239-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
+<div class="sourceCode" id="cb1236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1236-1"><a href="model.html#cb1236-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb1236-2"><a href="model.html#cb1236-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">fill =</span> gender)) <span class="sc">+</span></span>
+<span id="cb1236-3"><a href="model.html#cb1236-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-544-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1241-1"><a href="model.html#cb1241-1" aria-hidden="true" tabindex="-1"></a>mm <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1241-2"><a href="model.html#cb1241-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(childHeight)), <span class="at">ave =</span> <span class="fu">mean</span>(childHeight), <span class="at">se =</span> <span class="fu">sd</span>(childHeight))</span>
-<span id="cb1241-3"><a href="model.html#cb1241-3" aria-hidden="true" tabindex="-1"></a>mm</span></code></pre></div>
+<div class="sourceCode" id="cb1238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1238-1"><a href="model.html#cb1238-1" aria-hidden="true" tabindex="-1"></a>mm <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1238-2"><a href="model.html#cb1238-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(childHeight)), <span class="at">ave =</span> <span class="fu">mean</span>(childHeight), <span class="at">se =</span> <span class="fu">sd</span>(childHeight))</span>
+<span id="cb1238-3"><a href="model.html#cb1238-3" aria-hidden="true" tabindex="-1"></a>mm</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 3
 ##       m   ave    se
 ##   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1   481  69.2  2.62</code></pre>
-<div class="sourceCode" id="cb1243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1243-1"><a href="model.html#cb1243-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1243-2"><a href="model.html#cb1243-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight)) <span class="sc">+</span> </span>
-<span id="cb1243-3"><a href="model.html#cb1243-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb1243-4"><a href="model.html#cb1243-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1243-5"><a href="model.html#cb1243-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave <span class="sc">-</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb1243-6"><a href="model.html#cb1243-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave <span class="sc">+</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1240-1"><a href="model.html#cb1240-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1240-2"><a href="model.html#cb1240-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight)) <span class="sc">+</span> </span>
+<span id="cb1240-3"><a href="model.html#cb1240-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb1240-4"><a href="model.html#cb1240-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1240-5"><a href="model.html#cb1240-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave <span class="sc">-</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb1240-6"><a href="model.html#cb1240-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> mm<span class="sc">$</span>ave <span class="sc">+</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-546-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1245-1"><a href="model.html#cb1245-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1245-2"><a href="model.html#cb1245-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(childHeight <span class="sc">&gt;=</span> mm<span class="sc">$</span>ave <span class="sc">-</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1245-3"><a href="model.html#cb1245-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(childHeight <span class="sc">&lt;=</span> mm<span class="sc">$</span>ave <span class="sc">+</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1245-4"><a href="model.html#cb1245-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(childHeight)), <span class="at">ratio =</span> n<span class="sc">/</span>mm<span class="sc">$</span>m)</span></code></pre></div>
+<div class="sourceCode" id="cb1242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1242-1"><a href="model.html#cb1242-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1242-2"><a href="model.html#cb1242-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(childHeight <span class="sc">&gt;=</span> mm<span class="sc">$</span>ave <span class="sc">-</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1242-3"><a href="model.html#cb1242-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(childHeight <span class="sc">&lt;=</span> mm<span class="sc">$</span>ave <span class="sc">+</span> mm<span class="sc">$</span>se <span class="sc">*</span> <span class="fl">1.96</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1242-4"><a href="model.html#cb1242-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(childHeight)), <span class="at">ratio =</span> n<span class="sc">/</span>mm<span class="sc">$</span>m)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 2
 ##       n ratio
 ##   &lt;int&gt; &lt;dbl&gt;
 ## 1   458 0.952</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-548-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1247-1"><a href="model.html#cb1247-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1247-2"><a href="model.html#cb1247-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
-<span id="cb1247-3"><a href="model.html#cb1247-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
-<span id="cb1247-4"><a href="model.html#cb1247-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1244-1"><a href="model.html#cb1244-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1244-2"><a href="model.html#cb1244-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
+<span id="cb1244-3"><a href="model.html#cb1244-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
+<span id="cb1244-4"><a href="model.html#cb1244-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-549-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1248-1"><a href="model.html#cb1248-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1248-2"><a href="model.html#cb1248-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
-<span id="cb1248-3"><a href="model.html#cb1248-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
-<span id="cb1248-4"><a href="model.html#cb1248-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1245-1"><a href="model.html#cb1245-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1245-2"><a href="model.html#cb1245-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
+<span id="cb1245-3"><a href="model.html#cb1245-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
+<span id="cb1245-4"><a href="model.html#cb1245-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-550-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1249-1"><a href="model.html#cb1249-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> </span>
-<span id="cb1249-2"><a href="model.html#cb1249-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
-<span id="cb1249-3"><a href="model.html#cb1249-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
-<span id="cb1249-4"><a href="model.html#cb1249-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1246-1"><a href="model.html#cb1246-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> </span>
+<span id="cb1246-2"><a href="model.html#cb1246-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">sample =</span> childHeight)) <span class="sc">+</span>  </span>
+<span id="cb1246-3"><a href="model.html#cb1246-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
+<span id="cb1246-4"><a href="model.html#cb1246-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>(<span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-551-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1250-1"><a href="model.html#cb1250-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb1250-2"><a href="model.html#cb1250-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">color =</span> gender))</span></code></pre></div>
+<div class="sourceCode" id="cb1247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1247-1"><a href="model.html#cb1247-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb1247-2"><a href="model.html#cb1247-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> childHeight, <span class="at">color =</span> gender))</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-552-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1252-1"><a href="model.html#cb1252-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1252-2"><a href="model.html#cb1252-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> father), <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb1252-3"><a href="model.html#cb1252-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> mother), <span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1249-1"><a href="model.html#cb1249-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1249-2"><a href="model.html#cb1249-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> father), <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb1249-3"><a href="model.html#cb1249-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> mother), <span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-553-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1254-1"><a href="model.html#cb1254-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1254-2"><a href="model.html#cb1254-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> father), <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb1254-3"><a href="model.html#cb1254-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> mother), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1251-1"><a href="model.html#cb1251-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1251-2"><a href="model.html#cb1251-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> father), <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb1251-3"><a href="model.html#cb1251-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">x =</span> mother), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-554-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1256-1"><a href="model.html#cb1256-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1256-2"><a href="model.html#cb1256-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> childHeight))</span></code></pre></div>
+<div class="sourceCode" id="cb1253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1253-1"><a href="model.html#cb1253-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1253-2"><a href="model.html#cb1253-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> childHeight))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-555-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1257-1"><a href="model.html#cb1257-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(father, mother) <span class="sc">%&gt;%</span></span>
-<span id="cb1257-2"><a href="model.html#cb1257-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">&quot;parents&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;height&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1257-3"><a href="model.html#cb1257-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1257-4"><a href="model.html#cb1257-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> parents, <span class="at">y =</span> height))</span></code></pre></div>
+<div class="sourceCode" id="cb1254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1254-1"><a href="model.html#cb1254-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(father, mother) <span class="sc">%&gt;%</span></span>
+<span id="cb1254-2"><a href="model.html#cb1254-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(), <span class="at">names_to =</span> <span class="st">&quot;parents&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;height&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1254-3"><a href="model.html#cb1254-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1254-4"><a href="model.html#cb1254-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> parents, <span class="at">y =</span> height))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-556-1.png" width="672" />
 ##### R commands on statistical measurements</p>
 <p><strong>One Variable</strong></p>
@@ -1105,16 +1105,16 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="what-type-of-covariation-occurs-between-my-variables" class="section level4 hasAnchor" number="13.3.2.6">
 <h4><span class="header-section-number">C.3.2.6</span> What type of covariation occurs between my variables?<a href="model.html#what-type-of-covariation-occurs-between-my-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1258-1"><a href="model.html#cb1258-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1258-2"><a href="model.html#cb1258-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> father, <span class="at">y =</span> childHeight, <span class="at">color =</span> gender))</span></code></pre></div>
+<div class="sourceCode" id="cb1255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1255-1"><a href="model.html#cb1255-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1255-2"><a href="model.html#cb1255-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> father, <span class="at">y =</span> childHeight, <span class="at">color =</span> gender))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-557-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1259-1"><a href="model.html#cb1259-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1259-2"><a href="model.html#cb1259-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> father, <span class="at">y =</span> childHeight, <span class="at">color =</span> gender)) <span class="sc">+</span></span>
-<span id="cb1259-3"><a href="model.html#cb1259-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
+<div class="sourceCode" id="cb1256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1256-1"><a href="model.html#cb1256-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1256-2"><a href="model.html#cb1256-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> father, <span class="at">y =</span> childHeight, <span class="at">color =</span> gender)) <span class="sc">+</span></span>
+<span id="cb1256-3"><a href="model.html#cb1256-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-558-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1260-1"><a href="model.html#cb1260-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(father, mother, gender, childHeight) <span class="sc">%&gt;%</span></span>
-<span id="cb1260-2"><a href="model.html#cb1260-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
-<span id="cb1260-3"><a href="model.html#cb1260-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="st">&quot;cor_w/father&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(father, childHeight), <span class="st">&quot;sq_w/father&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(father, childHeight)<span class="sc">^</span><span class="dv">2</span>, <span class="st">&quot;cor_w/mother&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(mother, childHeight), <span class="st">&quot;sq_w/mother&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(mother, childHeight)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1257-1"><a href="model.html#cb1257-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">select</span>(father, mother, gender, childHeight) <span class="sc">%&gt;%</span></span>
+<span id="cb1257-2"><a href="model.html#cb1257-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb1257-3"><a href="model.html#cb1257-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="st">&quot;cor_w/father&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(father, childHeight), <span class="st">&quot;sq_w/father&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(father, childHeight)<span class="sc">^</span><span class="dv">2</span>, <span class="st">&quot;cor_w/mother&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(mother, childHeight), <span class="st">&quot;sq_w/mother&quot;</span> <span class="ot">=</span> <span class="fu">cor</span>(mother, childHeight)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 2 × 5
 ##   gender `cor_w/father` `sq_w/father` `cor_w/mother` `sq_w/mother`
 ##   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;
@@ -1136,17 +1136,17 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 \mbox{R squared} = R^2 &amp; = 1 - \frac{SS_{res}}{SS_{tot}} = cor(x,y)^2
 \end{aligned}
 \]</span></p>
-<div class="sourceCode" id="cb1262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1262-1"><a href="model.html#cb1262-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight, <span class="at">color =</span> gender)) <span class="sc">+</span> </span>
-<span id="cb1262-2"><a href="model.html#cb1262-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) </span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1259-1"><a href="model.html#cb1259-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight, <span class="at">color =</span> gender)) <span class="sc">+</span> </span>
+<span id="cb1259-2"><a href="model.html#cb1259-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) </span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-560-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1264-1"><a href="model.html#cb1264-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight, <span class="at">group =</span> gender)) <span class="sc">+</span> </span>
-<span id="cb1264-2"><a href="model.html#cb1264-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb1264-3"><a href="model.html#cb1264-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1261-1"><a href="model.html#cb1261-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, childHeight, <span class="at">group =</span> gender)) <span class="sc">+</span> </span>
+<span id="cb1261-2"><a href="model.html#cb1261-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1261-3"><a href="model.html#cb1261-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(gender))</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-561-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1266-1"><a href="model.html#cb1266-1" aria-hidden="true" tabindex="-1"></a>mod_mf <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, .) </span>
-<span id="cb1266-2"><a href="model.html#cb1266-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_mf)</span></code></pre></div>
+<div class="sourceCode" id="cb1263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1263-1"><a href="model.html#cb1263-1" aria-hidden="true" tabindex="-1"></a>mod_mf <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, .) </span>
+<span id="cb1263-2"><a href="model.html#cb1263-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_mf)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = childHeight ~ father, data = .)
@@ -1165,9 +1165,9 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ## Residual standard error: 2.416 on 479 degrees of freedom
 ## Multiple R-squared:  0.154,  Adjusted R-squared:  0.1522 
 ## F-statistic: 87.17 on 1 and 479 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb1268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1268-1"><a href="model.html#cb1268-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1268-2"><a href="model.html#cb1268-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod_mf) <span class="sc">%&gt;%</span> </span>
-<span id="cb1268-3"><a href="model.html#cb1268-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(mod_mf)</span></code></pre></div>
+<div class="sourceCode" id="cb1265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1265-1"><a href="model.html#cb1265-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;male&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1265-2"><a href="model.html#cb1265-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod_mf) <span class="sc">%&gt;%</span> </span>
+<span id="cb1265-3"><a href="model.html#cb1265-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(mod_mf)</span></code></pre></div>
 <pre><code>## # A tibble: 481 × 10
 ##    family father mother midparentH…¹ child…² child…³ gender child…⁴  pred  resid
 ##    &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
@@ -1183,8 +1183,8 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ## 10 007      74     68           73.7       6       1 male      76.5  71.4  5.09 
 ## # … with 471 more rows, and abbreviated variable names ¹​midparentHeight,
 ## #   ²​children, ³​childNum, ⁴​childHeight</code></pre>
-<div class="sourceCode" id="cb1270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1270-1"><a href="model.html#cb1270-1" aria-hidden="true" tabindex="-1"></a>mod_ff <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, .) </span>
-<span id="cb1270-2"><a href="model.html#cb1270-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_ff)</span></code></pre></div>
+<div class="sourceCode" id="cb1267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1267-1"><a href="model.html#cb1267-1" aria-hidden="true" tabindex="-1"></a>mod_ff <span class="ot">&lt;-</span> gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">lm</span>(childHeight <span class="sc">~</span> father, .) </span>
+<span id="cb1267-2"><a href="model.html#cb1267-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_ff)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = childHeight ~ father, data = .)
@@ -1203,9 +1203,9 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ## Residual standard error: 2.131 on 451 degrees of freedom
 ## Multiple R-squared:  0.1836, Adjusted R-squared:  0.1817 
 ## F-statistic: 101.4 on 1 and 451 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb1272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1272-1"><a href="model.html#cb1272-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1272-2"><a href="model.html#cb1272-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod_ff) <span class="sc">%&gt;%</span> </span>
-<span id="cb1272-3"><a href="model.html#cb1272-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(mod_ff)</span></code></pre></div>
+<div class="sourceCode" id="cb1269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1269-1"><a href="model.html#cb1269-1" aria-hidden="true" tabindex="-1"></a>gf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(gender <span class="sc">==</span> <span class="st">&quot;female&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1269-2"><a href="model.html#cb1269-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod_ff) <span class="sc">%&gt;%</span> </span>
+<span id="cb1269-3"><a href="model.html#cb1269-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(mod_ff)</span></code></pre></div>
 <pre><code>## # A tibble: 453 × 10
 ##    family father mother midparentH…¹ child…² child…³ gender child…⁴  pred  resid
 ##    &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
@@ -1238,26 +1238,27 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 <h4><span class="header-section-number">C.3.2.7</span> Visual Illustration<a href="model.html#visual-illustration" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div id="example-1.-strong-positive-correlation" class="section level5 hasAnchor" number="13.3.2.7.1">
 <h5><span class="header-section-number">C.3.2.7.1</span> Example 1. Strong positive correlation<a href="model.html#example-1.-strong-positive-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb1274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1274-1"><a href="model.html#cb1274-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
-<span id="cb1274-2"><a href="model.html#cb1274-2" aria-hidden="true" tabindex="-1"></a>dt1 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.8</span>, <span class="fl">0.8</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span></code></pre></div>
-<pre><code>## Warning: The `x` argument of `as_tibble.matrix()` must have unique column names if `.name_repair` is omitted as of tibble 2.0.0.
-## Using compatibility `.name_repair`.</code></pre>
-<div class="sourceCode" id="cb1276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1276-1"><a href="model.html#cb1276-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
-<span id="cb1276-2"><a href="model.html#cb1276-2" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1271-1"><a href="model.html#cb1271-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb1271-2"><a href="model.html#cb1271-2" aria-hidden="true" tabindex="-1"></a>dt1 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.8</span>, <span class="fl">0.8</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span></code></pre></div>
+<pre><code>## Warning: The `x` argument of `as_tibble.matrix()` must have unique column names if
+## `.name_repair` is omitted as of tibble 2.0.0.
+## ℹ Using compatibility `.name_repair`.</code></pre>
+<div class="sourceCode" id="cb1273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1273-1"><a href="model.html#cb1273-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb1273-2"><a href="model.html#cb1273-2" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-564-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1277-1"><a href="model.html#cb1277-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1274-1"><a href="model.html#cb1274-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 3
 ##     cor   ave1   ave2
 ##   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
 ## 1 0.794 0.0751 0.0814</code></pre>
-<div class="sourceCode" id="cb1279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1279-1"><a href="model.html#cb1279-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
-<span id="cb1279-2"><a href="model.html#cb1279-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1279-3"><a href="model.html#cb1279-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1279-4"><a href="model.html#cb1279-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1279-5"><a href="model.html#cb1279-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1276-1"><a href="model.html#cb1276-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb1276-2"><a href="model.html#cb1276-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1276-3"><a href="model.html#cb1276-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1276-4"><a href="model.html#cb1276-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1276-5"><a href="model.html#cb1276-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-566-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1281-1"><a href="model.html#cb1281-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1278-1"><a href="model.html#cb1278-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = V2 ~ V1, data = .)
@@ -1279,24 +1280,24 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="example-2.-weak-positive-correlation" class="section level5 hasAnchor" number="13.3.2.7.2">
 <h5><span class="header-section-number">C.3.2.7.2</span> Example 2. Weak positive correlation<a href="model.html#example-2.-weak-positive-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb1283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1283-1"><a href="model.html#cb1283-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
-<span id="cb1283-2"><a href="model.html#cb1283-2" aria-hidden="true" tabindex="-1"></a>dt2 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
-<span id="cb1283-3"><a href="model.html#cb1283-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
-<span id="cb1283-4"><a href="model.html#cb1283-4" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1280-1"><a href="model.html#cb1280-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb1280-2"><a href="model.html#cb1280-2" aria-hidden="true" tabindex="-1"></a>dt2 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
+<span id="cb1280-3"><a href="model.html#cb1280-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb1280-4"><a href="model.html#cb1280-4" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-568-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1284-1"><a href="model.html#cb1284-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1281-1"><a href="model.html#cb1281-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 3
 ##     cor   ave1   ave2
 ##   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
 ## 1 0.184 0.0576 0.0702</code></pre>
-<div class="sourceCode" id="cb1286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1286-1"><a href="model.html#cb1286-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
-<span id="cb1286-2"><a href="model.html#cb1286-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1286-3"><a href="model.html#cb1286-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt2<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1286-4"><a href="model.html#cb1286-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt2<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1286-5"><a href="model.html#cb1286-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1283-1"><a href="model.html#cb1283-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb1283-2"><a href="model.html#cb1283-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1283-3"><a href="model.html#cb1283-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt2<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1283-4"><a href="model.html#cb1283-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt2<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1283-5"><a href="model.html#cb1283-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-570-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1288-1"><a href="model.html#cb1288-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1285-1"><a href="model.html#cb1285-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = V2 ~ V1, data = .)
@@ -1318,24 +1319,24 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="example-3.-strong-negative-correlation" class="section level5 hasAnchor" number="13.3.2.7.3">
 <h5><span class="header-section-number">C.3.2.7.3</span> Example 3. Strong negative correlation<a href="model.html#example-3.-strong-negative-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb1290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1290-1"><a href="model.html#cb1290-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
-<span id="cb1290-2"><a href="model.html#cb1290-2" aria-hidden="true" tabindex="-1"></a>dt3 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.8</span>, <span class="sc">-</span><span class="fl">0.8</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
-<span id="cb1290-3"><a href="model.html#cb1290-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt3) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
-<span id="cb1290-4"><a href="model.html#cb1290-4" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1287-1"><a href="model.html#cb1287-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb1287-2"><a href="model.html#cb1287-2" aria-hidden="true" tabindex="-1"></a>dt3 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.8</span>, <span class="sc">-</span><span class="fl">0.8</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
+<span id="cb1287-3"><a href="model.html#cb1287-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt3) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb1287-4"><a href="model.html#cb1287-4" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-572-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1291-1"><a href="model.html#cb1291-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1288-1"><a href="model.html#cb1288-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 3
 ##      cor    ave1   ave2
 ##    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
 ## 1 -0.794 -0.0814 0.0751</code></pre>
-<div class="sourceCode" id="cb1293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1293-1"><a href="model.html#cb1293-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
-<span id="cb1293-2"><a href="model.html#cb1293-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1293-3"><a href="model.html#cb1293-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1293-4"><a href="model.html#cb1293-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1293-5"><a href="model.html#cb1293-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1290-1"><a href="model.html#cb1290-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb1290-2"><a href="model.html#cb1290-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1290-3"><a href="model.html#cb1290-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1290-4"><a href="model.html#cb1290-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1290-5"><a href="model.html#cb1290-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-574-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1295-1"><a href="model.html#cb1295-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1292-1"><a href="model.html#cb1292-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = V2 ~ V1, data = .)
@@ -1357,24 +1358,24 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="example-4.-weak-negative-correlation" class="section level5 hasAnchor" number="13.3.2.7.4">
 <h5><span class="header-section-number">C.3.2.7.4</span> Example 4. Weak negative correlation<a href="model.html#example-4.-weak-negative-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<div class="sourceCode" id="cb1297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1297-1"><a href="model.html#cb1297-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
-<span id="cb1297-2"><a href="model.html#cb1297-2" aria-hidden="true" tabindex="-1"></a>dt4 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.2</span>, <span class="sc">-</span><span class="fl">0.2</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
-<span id="cb1297-3"><a href="model.html#cb1297-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt4) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
-<span id="cb1297-4"><a href="model.html#cb1297-4" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1294-1"><a href="model.html#cb1294-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb1294-2"><a href="model.html#cb1294-2" aria-hidden="true" tabindex="-1"></a>dt4 <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(<span class="dv">500</span>, <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">Sigma =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="fl">0.2</span>, <span class="sc">-</span><span class="fl">0.2</span>, <span class="dv">1</span>), <span class="dv">2</span>,<span class="dv">2</span>))) </span>
+<span id="cb1294-3"><a href="model.html#cb1294-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dt4) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2&quot;</span>)</span>
+<span id="cb1294-4"><a href="model.html#cb1294-4" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> V1, <span class="at">y =</span> V2))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-576-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1298-1"><a href="model.html#cb1298-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
+<div class="sourceCode" id="cb1295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1295-1"><a href="model.html#cb1295-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">cor =</span> <span class="fu">cor</span>(V1, V2), <span class="at">ave1 =</span> <span class="fu">mean</span>(V1), <span class="at">ave2 =</span> <span class="fu">mean</span>(V2))</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 3
 ##      cor    ave1   ave2
 ##    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
 ## 1 -0.184 -0.0702 0.0576</code></pre>
-<div class="sourceCode" id="cb1300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1300-1"><a href="model.html#cb1300-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
-<span id="cb1300-2"><a href="model.html#cb1300-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1300-3"><a href="model.html#cb1300-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1300-4"><a href="model.html#cb1300-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
-<span id="cb1300-5"><a href="model.html#cb1300-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1297-1"><a href="model.html#cb1297-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1, V2)) <span class="sc">+</span></span>
+<span id="cb1297-2"><a href="model.html#cb1297-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1297-3"><a href="model.html#cb1297-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V1), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1297-4"><a href="model.html#cb1297-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(dt1<span class="sc">$</span>V2), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1297-5"><a href="model.html#cb1297-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-578-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1302-1"><a href="model.html#cb1302-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1299-1"><a href="model.html#cb1299-1" aria-hidden="true" tabindex="-1"></a>dt4 <span class="sc">%&gt;%</span> <span class="fu">lm</span>(V2<span class="sc">~</span>V1, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = V2 ~ V1, data = .)
@@ -1401,13 +1402,13 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 <h2><span class="header-section-number">C.4</span> Examples<a href="model.html#examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="cars" class="section level3 hasAnchor" number="13.4.1">
 <h3><span class="header-section-number">C.4.1</span> <code>cars</code><a href="model.html#cars" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb1304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1304-1"><a href="model.html#cb1304-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(cars)</span></code></pre></div>
-<div class="sourceCode" id="cb1305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1305-1"><a href="model.html#cb1305-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb1301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1301-1"><a href="model.html#cb1301-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb1302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1302-1"><a href="model.html#cb1302-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-581-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1306-1"><a href="model.html#cb1306-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars) <span class="co"># cars: Speed and Stopping Distances of Cars</span></span>
-<span id="cb1306-2"><a href="model.html#cb1306-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(cars<span class="sc">$</span>dist<span class="sc">~</span>cars<span class="sc">$</span>speed))</span></code></pre></div>
+<div class="sourceCode" id="cb1303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1303-1"><a href="model.html#cb1303-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars) <span class="co"># cars: Speed and Stopping Distances of Cars</span></span>
+<span id="cb1303-2"><a href="model.html#cb1303-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(cars<span class="sc">$</span>dist<span class="sc">~</span>cars<span class="sc">$</span>speed))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-582-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1307-1"><a href="model.html#cb1307-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(cars<span class="sc">$</span>dist<span class="sc">~</span>cars<span class="sc">$</span>speed))</span></code></pre></div>
+<div class="sourceCode" id="cb1304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1304-1"><a href="model.html#cb1304-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(cars<span class="sc">$</span>dist<span class="sc">~</span>cars<span class="sc">$</span>speed))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = cars$dist ~ cars$speed)
@@ -1435,12 +1436,12 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 <li><a href="https://modelr.tidyverse.org/reference/model-quality.html">Compute model quality for a given dataset</a></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb1309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1309-1"><a href="model.html#cb1309-1" aria-hidden="true" tabindex="-1"></a>t_cars <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(cars)</span></code></pre></div>
-<div class="sourceCode" id="cb1310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1310-1"><a href="model.html#cb1310-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars) <span class="sc">+</span></span>
-<span id="cb1310-2"><a href="model.html#cb1310-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(speed, dist))</span></code></pre></div>
+<div class="sourceCode" id="cb1306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1306-1"><a href="model.html#cb1306-1" aria-hidden="true" tabindex="-1"></a>t_cars <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb1307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1307-1"><a href="model.html#cb1307-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars) <span class="sc">+</span></span>
+<span id="cb1307-2"><a href="model.html#cb1307-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(speed, dist))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-585-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1311-1"><a href="model.html#cb1311-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> t_cars)</span>
-<span id="cb1311-2"><a href="model.html#cb1311-2" aria-hidden="true" tabindex="-1"></a>mod</span></code></pre></div>
+<div class="sourceCode" id="cb1308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1308-1"><a href="model.html#cb1308-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> t_cars)</span>
+<span id="cb1308-2"><a href="model.html#cb1308-2" aria-hidden="true" tabindex="-1"></a>mod</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dist ~ speed, data = t_cars)
@@ -1448,7 +1449,7 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ## Coefficients:
 ## (Intercept)        speed  
 ##     -17.579        3.932</code></pre>
-<div class="sourceCode" id="cb1313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1313-1"><a href="model.html#cb1313-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod)</span></code></pre></div>
+<div class="sourceCode" id="cb1310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1310-1"><a href="model.html#cb1310-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dist ~ speed, data = t_cars)
@@ -1468,18 +1469,18 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ## Multiple R-squared:  0.6511, Adjusted R-squared:  0.6438 
 ## F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
 <p>Note that <code>cor(speed, dist)</code> = 0.8068949.</p>
-<div class="sourceCode" id="cb1315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1315-1"><a href="model.html#cb1315-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars, <span class="fu">aes</span>(speed, dist)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1315-2"><a href="model.html#cb1315-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="fu">coef</span>(mod)[[<span class="dv">2</span>]], <span class="at">intercept =</span> <span class="fu">coef</span>(mod)[[<span class="dv">1</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb1312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1312-1"><a href="model.html#cb1312-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars, <span class="fu">aes</span>(speed, dist)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1312-2"><a href="model.html#cb1312-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="fu">coef</span>(mod)[[<span class="dv">2</span>]], <span class="at">intercept =</span> <span class="fu">coef</span>(mod)[[<span class="dv">1</span>]])</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-588-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1316-1"><a href="model.html#cb1316-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars, <span class="fu">aes</span>(speed, dist)) <span class="sc">+</span> <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="cb1316-2"><a href="model.html#cb1316-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1313-1"><a href="model.html#cb1313-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_cars, <span class="fu">aes</span>(speed, dist)) <span class="sc">+</span> <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb1313-2"><a href="model.html#cb1313-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-589-1.png" width="672" /></p>
 </div>
 <div id="predictions-haty-a_1-a_2x-and-residuals-y---haty-1" class="section level4 hasAnchor" number="13.4.1.2">
 <h4><span class="header-section-number">C.4.1.2</span> Predictions <span class="math inline">\(\hat{y} = a_1 + a_2x\)</span> and Residuals <span class="math inline">\(y - \hat{y}\)</span><a href="model.html#predictions-haty-a_1-a_2x-and-residuals-y---haty-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1318-1"><a href="model.html#cb1318-1" aria-hidden="true" tabindex="-1"></a>mod_table <span class="ot">&lt;-</span> t_cars <span class="sc">%&gt;%</span> <span class="fu">add_predictions</span>(mod) <span class="sc">%&gt;%</span> <span class="fu">add_residuals</span>(mod, <span class="at">var =</span> <span class="st">&quot;resid&quot;</span>)</span>
-<span id="cb1318-2"><a href="model.html#cb1318-2" aria-hidden="true" tabindex="-1"></a>mod_table</span></code></pre></div>
+<div class="sourceCode" id="cb1315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1315-1"><a href="model.html#cb1315-1" aria-hidden="true" tabindex="-1"></a>mod_table <span class="ot">&lt;-</span> t_cars <span class="sc">%&gt;%</span> <span class="fu">add_predictions</span>(mod) <span class="sc">%&gt;%</span> <span class="fu">add_residuals</span>(mod, <span class="at">var =</span> <span class="st">&quot;resid&quot;</span>)</span>
+<span id="cb1315-2"><a href="model.html#cb1315-2" aria-hidden="true" tabindex="-1"></a>mod_table</span></code></pre></div>
 <pre><code>## # A tibble: 50 × 4
 ##    speed  dist  pred resid
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1494,7 +1495,7 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ##  9    10    34 21.7  12.3 
 ## 10    11    17 25.7  -8.68
 ## # … with 40 more rows</code></pre>
-<div class="sourceCode" id="cb1320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1320-1"><a href="model.html#cb1320-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_table)</span></code></pre></div>
+<div class="sourceCode" id="cb1317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1317-1"><a href="model.html#cb1317-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod_table)</span></code></pre></div>
 <pre><code>##      speed           dist             pred            resid        
 ##  Min.   : 4.0   Min.   :  2.00   Min.   :-1.849   Min.   :-29.069  
 ##  1st Qu.:12.0   1st Qu.: 26.00   1st Qu.:29.610   1st Qu.: -9.525  
@@ -1502,17 +1503,17 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ##  Mean   :15.4   Mean   : 42.98   Mean   :42.980   Mean   :  0.000  
 ##  3rd Qu.:19.0   3rd Qu.: 56.00   3rd Qu.:57.137   3rd Qu.:  9.215  
 ##  Max.   :25.0   Max.   :120.00   Max.   :80.731   Max.   : 43.201</code></pre>
-<div class="sourceCode" id="cb1322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1322-1"><a href="model.html#cb1322-1" aria-hidden="true" tabindex="-1"></a>mod_table <span class="sc">%&gt;%</span> </span>
-<span id="cb1322-2"><a href="model.html#cb1322-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(speed, resid)) <span class="sc">+</span> </span>
-<span id="cb1322-3"><a href="model.html#cb1322-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1319-1"><a href="model.html#cb1319-1" aria-hidden="true" tabindex="-1"></a>mod_table <span class="sc">%&gt;%</span> </span>
+<span id="cb1319-2"><a href="model.html#cb1319-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(speed, resid)) <span class="sc">+</span> </span>
+<span id="cb1319-3"><a href="model.html#cb1319-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-592-1.png" width="672" /></p>
 <ul>
 <li><code>geom_jitter()</code></li>
 </ul>
-<div class="sourceCode" id="cb1323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1323-1"><a href="model.html#cb1323-1" aria-hidden="true" tabindex="-1"></a>t_cars <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(speed, dist) <span class="sc">%&gt;%</span> </span>
-<span id="cb1323-2"><a href="model.html#cb1323-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(count))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;speed&#39;. You can override using the `.groups`
-## argument.</code></pre>
+<div class="sourceCode" id="cb1320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1320-1"><a href="model.html#cb1320-1" aria-hidden="true" tabindex="-1"></a>t_cars <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(speed, dist) <span class="sc">%&gt;%</span> </span>
+<span id="cb1320-2"><a href="model.html#cb1320-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(count))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;speed&#39;. You can override using the
+## `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 49 × 3
 ## # Groups:   speed [19]
 ##    speed  dist count
@@ -1532,9 +1533,9 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="iris-2" class="section level3 hasAnchor" number="13.4.2">
 <h3><span class="header-section-number">C.4.2</span> iris<a href="model.html#iris-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb1326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1326-1"><a href="model.html#cb1326-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span></code></pre></div>
-<div class="sourceCode" id="cb1327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1327-1"><a href="model.html#cb1327-1" aria-hidden="true" tabindex="-1"></a>t_iris <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(iris)</span>
-<span id="cb1327-2"><a href="model.html#cb1327-2" aria-hidden="true" tabindex="-1"></a>t_iris</span></code></pre></div>
+<div class="sourceCode" id="cb1323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1323-1"><a href="model.html#cb1323-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span></code></pre></div>
+<div class="sourceCode" id="cb1324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1324-1"><a href="model.html#cb1324-1" aria-hidden="true" tabindex="-1"></a>t_iris <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(iris)</span>
+<span id="cb1324-2"><a href="model.html#cb1324-2" aria-hidden="true" tabindex="-1"></a>t_iris</span></code></pre></div>
 <pre><code>## # A tibble: 150 × 5
 ##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ##           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
@@ -1551,7 +1552,7 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 ## # … with 140 more rows</code></pre>
 <div id="linear-model-sepal.width-sepal.length" class="section level4 hasAnchor" number="13.4.2.1">
 <h4><span class="header-section-number">C.4.2.1</span> Linear Model: Sepal.Width ~ Sepal.Length<a href="model.html#linear-model-sepal.width-sepal.length" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1329-1"><a href="model.html#cb1329-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(Sepal.Width <span class="sc">~</span> Sepal.Length, <span class="at">data =</span> t_iris)</span></code></pre></div>
+<div class="sourceCode" id="cb1326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1326-1"><a href="model.html#cb1326-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(Sepal.Width <span class="sc">~</span> Sepal.Length, <span class="at">data =</span> t_iris)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = Sepal.Width ~ Sepal.Length, data = t_iris)
@@ -1562,7 +1563,7 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="linear-model-petal.width-petal.length" class="section level4 hasAnchor" number="13.4.2.2">
 <h4><span class="header-section-number">C.4.2.2</span> Linear Model: Petal.Width ~ Petal.Length<a href="model.html#linear-model-petal.width-petal.length" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1331-1"><a href="model.html#cb1331-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(Petal.Width <span class="sc">~</span> Petal.Length, <span class="at">data =</span> t_iris)</span></code></pre></div>
+<div class="sourceCode" id="cb1328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1328-1"><a href="model.html#cb1328-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(Petal.Width <span class="sc">~</span> Petal.Length, <span class="at">data =</span> t_iris)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = Petal.Width ~ Petal.Length, data = t_iris)
@@ -1573,7 +1574,7 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="correlation-1" class="section level4 hasAnchor" number="13.4.2.3">
 <h4><span class="header-section-number">C.4.2.3</span> Correlation<a href="model.html#correlation-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1333-1"><a href="model.html#cb1333-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb1330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1330-1"><a href="model.html#cb1330-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
 <pre><code>##              Sepal.Length Sepal.Width Petal.Length Petal.Width
 ## Sepal.Length    1.0000000  -0.1175698    0.8717538   0.8179411
 ## Sepal.Width    -0.1175698   1.0000000   -0.4284401  -0.3661259
@@ -1586,9 +1587,9 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="aessepal.length-sepal.width-color-species" class="section level4 hasAnchor" number="13.4.2.5">
 <h4><span class="header-section-number">C.4.2.5</span> <code>aes(Sepal.Length, Sepal.Width, color = Species)</code><a href="model.html#aessepal.length-sepal.width-color-species" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1335-1"><a href="model.html#cb1335-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_iris, <span class="fu">aes</span>(Sepal.Length, Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
-<span id="cb1335-2"><a href="model.html#cb1335-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) </span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb1332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1332-1"><a href="model.html#cb1332-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(t_iris, <span class="fu">aes</span>(Sepal.Length, Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
+<span id="cb1332-2"><a href="model.html#cb1332-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) </span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-600-1.png" width="672" /></p>
 </div>
 </div>
@@ -1604,13 +1605,13 @@ mid-parent height, calculated as (father + 1.08*mother)/2</li>
 </div>
 <div id="correlation-and-covariance-1" class="section level4 hasAnchor" number="13.4.3.3">
 <h4><span class="header-section-number">C.4.3.3</span> Correlation and Covariance<a href="model.html#correlation-and-covariance-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1337-1"><a href="model.html#cb1337-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb1334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1334-1"><a href="model.html#cb1334-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
 <pre><code>##              Sepal.Length Sepal.Width Petal.Length Petal.Width
 ## Sepal.Length    1.0000000  -0.1175698    0.8717538   0.8179411
 ## Sepal.Width    -0.1175698   1.0000000   -0.4284401  -0.3661259
 ## Petal.Length    0.8717538  -0.4284401    1.0000000   0.9628654
 ## Petal.Width     0.8179411  -0.3661259    0.9628654   1.0000000</code></pre>
-<div class="sourceCode" id="cb1339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1339-1"><a href="model.html#cb1339-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb1336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1336-1"><a href="model.html#cb1336-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
 <pre><code>##              Sepal.Length Sepal.Width Petal.Length Petal.Width
 ## Sepal.Length    0.6856935  -0.0424340    1.2743154   0.5162707
 ## Sepal.Width    -0.0424340   0.1899794   -0.3296564  -0.1216394

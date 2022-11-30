@@ -1,5 +1,5 @@
 --- 
-title: "Data Analysis for Researchers"
+title: "Data Analysis for Researchers 2021"
 author: "DS SL"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

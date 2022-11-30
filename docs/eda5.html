@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers</title>
-  <meta name="description" content="Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers" />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <title>Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers 2021</title>
+  <meta name="description" content="Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers 2021" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers" />
+  <meta property="og:title" content="Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers 2021" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers" />
+  <meta name="twitter:title" content="Chapter 6 Exploratory Data Analysis (EDA) 5 | Data Analysis for Researchers 2021" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="DS SL" />
 
 
-<meta name="date" content="2022-10-15" />
+<meta name="date" content="2022-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,10 +54,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.25/datatables.js"></script>
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.26/datatables.js"></script>
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Researchers</a></li>
+<li><a href="./">Data Analysis for Researchers 2021</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
@@ -652,7 +652,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers 2021</a>
           </h1>
         </div>
 
@@ -924,8 +924,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ### geom_jitter()</p>
 <div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb599-1"><a href="eda5.html#cb599-1" aria-hidden="true" tabindex="-1"></a>t_cars <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(speed, dist) <span class="sc">%&gt;%</span> </span>
 <span id="cb599-2"><a href="eda5.html#cb599-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(count))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;speed&#39;. You can override using the `.groups`
-## argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;speed&#39;. You can override using the
+## `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 49 × 3
 ## # Groups:   speed [19]
 ##    speed  dist count
@@ -1042,17 +1042,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="aessepal.l-sepal.w-color-species-1" class="section level3 hasAnchor" number="6.2.2">
 <h3><span class="header-section-number">6.2.2</span> <code>aes(Sepal.L, Sepal.W, color = Species)</code><a href="eda5.html#aessepal.l-sepal.w-color-species-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-235-1.png" width="672" /></p>
 </div>
 <div id="correlation-and-covariance" class="section level3 hasAnchor" number="6.2.3">
 <h3><span class="header-section-number">6.2.3</span> Correlation and Covariance<a href="eda5.html#correlation-and-covariance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="eda5.html#cb612-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb613"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb613-1"><a href="eda5.html#cb613-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
 <pre><code>##            Sepal.L    Sepal.W    Petal.L    Petal.W
 ## Sepal.L  1.0000000 -0.1175698  0.8717538  0.8179411
 ## Sepal.W -0.1175698  1.0000000 -0.4284401 -0.3661259
 ## Petal.L  0.8717538 -0.4284401  1.0000000  0.9628654
 ## Petal.W  0.8179411 -0.3661259  0.9628654  1.0000000</code></pre>
-<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="eda5.html#cb614-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb615"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb615-1"><a href="eda5.html#cb615-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(t_iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code></pre></div>
 <pre><code>##            Sepal.L    Sepal.W    Petal.L    Petal.W
 ## Sepal.L  0.6856935 -0.0424340  1.2743154  0.5162707
 ## Sepal.W -0.0424340  0.1899794 -0.3296564 -0.1216394
@@ -1378,10 +1380,10 @@ output:
 <li>forcats, for factors.</li>
 </ul>
 <p>Hence the following code chunk loads every core package above, and <code>modelr</code>. Although <code>modelr</code> is a tidyverse package but it is not a core tidyverse package, you need to add <code>library(modelr)</code>.</p>
-<div class="sourceCode" id="cb617"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb617-1"><a href="eda5.html#cb617-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb617-2"><a href="eda5.html#cb617-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr)</span></code></pre></div>
+<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="eda5.html#cb618-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb618-2"><a href="eda5.html#cb618-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr)</span></code></pre></div>
 <p>We will use <code>WDI</code> package for examples.</p>
-<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="eda5.html#cb618-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI)</span></code></pre></div>
+<div class="sourceCode" id="cb619"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb619-1"><a href="eda5.html#cb619-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI)</span></code></pre></div>
 </div>
 <div id="modeling-and-eda-summary" class="section level3 hasAnchor" number="6.3.3">
 <h3><span class="header-section-number">6.3.3</span> Modeling and EDA Summary<a href="eda5.html#modeling-and-eda-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1423,8 +1425,8 @@ Backslash is used to start an escape sequence inside character constants.</p>
 <li>‘single quotes can be used more-or-less interchangeably’</li>
 <li>“with double quotes to create character vectors”</li>
 </ul>
-<div class="sourceCode" id="cb619"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb619-1"><a href="eda5.html#cb619-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="st">&#39;&quot;It</span><span class="sc">\&#39;</span><span class="st">s alive!&quot;, he screamed.&#39;</span>,</span>
-<span id="cb619-2"><a href="eda5.html#cb619-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;</span><span class="sc">\&quot;</span><span class="st">It&#39;s alive!</span><span class="sc">\&quot;</span><span class="st">, he screamed.&quot;</span>) <span class="co"># same</span></span></code></pre></div>
+<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="eda5.html#cb620-1" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="st">&#39;&quot;It</span><span class="sc">\&#39;</span><span class="st">s alive!&quot;, he screamed.&#39;</span>,</span>
+<span id="cb620-2"><a href="eda5.html#cb620-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;</span><span class="sc">\&quot;</span><span class="st">It&#39;s alive!</span><span class="sc">\&quot;</span><span class="st">, he screamed.&quot;</span>) <span class="co"># same</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <ul>
 <li>Backticks are used for non-standard variable names. (See make.names and ?Reserved for what counts as non-standard.)
@@ -1432,17 +1434,17 @@ Backslash is used to start an escape sequence inside character constants.</p>
 <li><em>When you have a space, or other special characters, in the variable name, use backticks.</em></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb621"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb621-1"><a href="eda5.html#cb621-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">x y</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>  <span class="co"># variable</span></span>
-<span id="cb621-2"><a href="eda5.html#cb621-2" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">x y</span><span class="st">`</span>         <span class="co"># variable</span></span></code></pre></div>
+<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb622-1"><a href="eda5.html#cb622-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">x y</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>  <span class="co"># variable</span></span>
+<span id="cb622-2"><a href="eda5.html#cb622-2" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">x y</span><span class="st">`</span>         <span class="co"># variable</span></span></code></pre></div>
 <pre><code>## [1] 1 2 3 4 5</code></pre>
-<div class="sourceCode" id="cb623"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb623-1"><a href="eda5.html#cb623-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;x y&quot;</span> <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>  <span class="co"># variable</span></span>
-<span id="cb623-2"><a href="eda5.html#cb623-2" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">x y</span><span class="st">`</span>         <span class="co"># variable</span></span></code></pre></div>
+<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="eda5.html#cb624-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;x y&quot;</span> <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>  <span class="co"># variable</span></span>
+<span id="cb624-2"><a href="eda5.html#cb624-2" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">x y</span><span class="st">`</span>         <span class="co"># variable</span></span></code></pre></div>
 <pre><code>## [1] 1 2 3 4 5</code></pre>
-<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="eda5.html#cb625-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;x y&quot;</span>         <span class="co"># character vector</span></span></code></pre></div>
+<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="eda5.html#cb626-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;x y&quot;</span>         <span class="co"># character vector</span></span></code></pre></div>
 <pre><code>## [1] &quot;x y&quot;</code></pre>
-<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb627-1"><a href="eda5.html#cb627-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">`</span><span class="at">1st column</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">rchisq</span>(<span class="dv">5</span>, <span class="dv">2</span>), <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb627-2"><a href="eda5.html#cb627-2" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span><span class="st">`</span><span class="at">1st column</span><span class="st">`</span></span></code></pre></div>
-<pre><code>## [1]  0.4699876 17.3023553  0.1229061  1.7946872  0.5451939</code></pre>
+<div class="sourceCode" id="cb628"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb628-1"><a href="eda5.html#cb628-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">`</span><span class="at">1st column</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">rchisq</span>(<span class="dv">5</span>, <span class="dv">2</span>), <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb628-2"><a href="eda5.html#cb628-2" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span><span class="st">`</span><span class="at">1st column</span><span class="st">`</span></span></code></pre></div>
+<pre><code>## [1] 0.17567387 3.29307718 7.64980796 0.06908813 0.21082179</code></pre>
 </div>
 </div>
 <div id="examples-and-comments-2" class="section level3 hasAnchor" number="6.3.4">
@@ -1455,7 +1457,7 @@ Backslash is used to start an escape sequence inside character constants.</p>
 You need to install it if you have not by the followiin in you console or from Tools menu on top.</p>
 <p>See: <a href="https://CRAN.R-project.org/package=modelsummary" class="uri">https://CRAN.R-project.org/package=modelsummary</a></p>
 <pre><code>install.packages(&quot;modelsummary&quot;)</code></pre>
-<div class="sourceCode" id="cb630"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb630-1"><a href="eda5.html#cb630-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co"># Tool for writting tables of the regression results</span></span></code></pre></div>
+<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb631-1"><a href="eda5.html#cb631-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co"># Tool for writting tables of the regression results</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1472,8 +1474,8 @@ You need to install it if you have not by the followiin in you console or from T
 <li>readxl: <a href="https://readxl.tidyverse.org" class="uri">https://readxl.tidyverse.org</a></li>
 <li>Help: <code>read_excel</code>, <code>read_xls</code>, <code>read_xlsx</code></li>
 </ul>
-<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb631-1"><a href="eda5.html#cb631-1" aria-hidden="true" tabindex="-1"></a>url_class <span class="ot">&lt;-</span> <span class="st">&quot;https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx&quot;</span></span>
-<span id="cb631-2"><a href="eda5.html#cb631-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_class, <span class="at">destfile =</span> <span class="st">&quot;data/CLASS.xlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb632"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb632-1"><a href="eda5.html#cb632-1" aria-hidden="true" tabindex="-1"></a>url_class <span class="ot">&lt;-</span> <span class="st">&quot;https://databankfiles.worldbank.org/data/download/site-content/CLASS.xlsx&quot;</span></span>
+<span id="cb632-2"><a href="eda5.html#cb632-2" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="at">url =</span> url_class, <span class="at">destfile =</span> <span class="st">&quot;data/CLASS.xlsx&quot;</span>)</span></code></pre></div>
 <div id="countries-1" class="section level5 hasAnchor" number="6.3.5.1.1">
 <h5><span class="header-section-number">6.3.5.1.1</span> Countries<a href="eda5.html#countries-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Let us look at the first sheet.</p>
@@ -1482,11 +1484,11 @@ You need to install it if you have not by the followiin in you console or from T
 <li>The country data starts from the 7th row.</li>
 <li>Zimbabue is at the last row.</li>
 </ol>
-<div class="sourceCode" id="cb632"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb632-1"><a href="eda5.html#cb632-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb632-2"><a href="eda5.html#cb632-2" aria-hidden="true" tabindex="-1"></a>wb_countries_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">219</span>) </span>
-<span id="cb632-3"><a href="eda5.html#cb632-3" aria-hidden="true" tabindex="-1"></a>wb_countries <span class="ot">&lt;-</span> wb_countries_tmp <span class="sc">%&gt;%</span> </span>
-<span id="cb632-4"><a href="eda5.html#cb632-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> Economy, <span class="at">iso3c =</span> Code, <span class="at">region =</span> Region, <span class="at">income =</span> <span class="st">`</span><span class="at">Income group</span><span class="st">`</span>, <span class="at">lending =</span> <span class="st">&quot;Lending category&quot;</span>, <span class="at">other =</span> <span class="st">&quot;Other (EMU or HIPC)&quot;</span>)</span>
-<span id="cb632-5"><a href="eda5.html#cb632-5" aria-hidden="true" tabindex="-1"></a>wb_countries</span></code></pre></div>
+<div class="sourceCode" id="cb633"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb633-1"><a href="eda5.html#cb633-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb633-2"><a href="eda5.html#cb633-2" aria-hidden="true" tabindex="-1"></a>wb_countries_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">219</span>) </span>
+<span id="cb633-3"><a href="eda5.html#cb633-3" aria-hidden="true" tabindex="-1"></a>wb_countries <span class="ot">&lt;-</span> wb_countries_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb633-4"><a href="eda5.html#cb633-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> Economy, <span class="at">iso3c =</span> Code, <span class="at">region =</span> Region, <span class="at">income =</span> <span class="st">`</span><span class="at">Income group</span><span class="st">`</span>, <span class="at">lending =</span> <span class="st">&quot;Lending category&quot;</span>, <span class="at">other =</span> <span class="st">&quot;Other (EMU or HIPC)&quot;</span>)</span>
+<span id="cb633-5"><a href="eda5.html#cb633-5" aria-hidden="true" tabindex="-1"></a>wb_countries</span></code></pre></div>
 <pre><code>## # A tibble: 218 × 6
 ##    country              iso3c region                     income    lending other
 ##    &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt;                      &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;
@@ -1512,11 +1514,11 @@ You need to install it if you have not by the followiin in you console or from T
 <li>Regions start from the 221th row.</li>
 <li>Regions end at the 266th row.</li>
 </ol>
-<div class="sourceCode" id="cb634"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb634-1"><a href="eda5.html#cb634-1" aria-hidden="true" tabindex="-1"></a>wb_regions_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">266</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb634-2"><a href="eda5.html#cb634-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">220</span>))</span>
-<span id="cb634-3"><a href="eda5.html#cb634-3" aria-hidden="true" tabindex="-1"></a>wb_regions <span class="ot">&lt;-</span> wb_regions_tmp <span class="sc">%&gt;%</span> </span>
-<span id="cb634-4"><a href="eda5.html#cb634-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">region =</span> Economy, <span class="at">iso3c =</span> Code) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>()</span>
-<span id="cb634-5"><a href="eda5.html#cb634-5" aria-hidden="true" tabindex="-1"></a>wb_regions</span></code></pre></div>
+<div class="sourceCode" id="cb635"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb635-1"><a href="eda5.html#cb635-1" aria-hidden="true" tabindex="-1"></a>wb_regions_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">0</span>, <span class="at">n_max =</span><span class="dv">266</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb635-2"><a href="eda5.html#cb635-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="sc">-</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">220</span>))</span>
+<span id="cb635-3"><a href="eda5.html#cb635-3" aria-hidden="true" tabindex="-1"></a>wb_regions <span class="ot">&lt;-</span> wb_regions_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb635-4"><a href="eda5.html#cb635-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">region =</span> Economy, <span class="at">iso3c =</span> Code) <span class="sc">%&gt;%</span> <span class="fu">drop_na</span>()</span>
+<span id="cb635-5"><a href="eda5.html#cb635-5" aria-hidden="true" tabindex="-1"></a>wb_regions</span></code></pre></div>
 <pre><code>## # A tibble: 45 × 2
 ##    region                                        iso3c
 ##    &lt;chr&gt;                                         &lt;chr&gt;
@@ -1532,9 +1534,9 @@ You need to install it if you have not by the followiin in you console or from T
 ## 10 Europe &amp; Central Asia (IDA &amp; IBRD)            TEC  
 ## # … with 35 more rows</code></pre>
 <p>Let us look at the second sheet.</p>
-<div class="sourceCode" id="cb636"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb636-1"><a href="eda5.html#cb636-1" aria-hidden="true" tabindex="-1"></a>wb_groups_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;Groups&quot;</span>) <span class="co"># sheet = 3</span></span>
-<span id="cb636-2"><a href="eda5.html#cb636-2" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="ot">&lt;-</span> wb_groups_tmp <span class="sc">%&gt;%</span> </span>
-<span id="cb636-3"><a href="eda5.html#cb636-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">gcode =</span> GroupCode, <span class="at">group =</span> GroupName, <span class="at">iso3c =</span> CountryCode, <span class="at">country =</span> CountryName)</span></code></pre></div>
+<div class="sourceCode" id="cb637"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb637-1"><a href="eda5.html#cb637-1" aria-hidden="true" tabindex="-1"></a>wb_groups_tmp <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CLASS.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;Groups&quot;</span>) <span class="co"># sheet = 3</span></span>
+<span id="cb637-2"><a href="eda5.html#cb637-2" aria-hidden="true" tabindex="-1"></a>wb_groups <span class="ot">&lt;-</span> wb_groups_tmp <span class="sc">%&gt;%</span> </span>
+<span id="cb637-3"><a href="eda5.html#cb637-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">gcode =</span> GroupCode, <span class="at">group =</span> GroupName, <span class="at">iso3c =</span> CountryCode, <span class="at">country =</span> CountryName)</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1542,39 +1544,39 @@ You need to install it if you have not by the followiin in you console or from T
 <h3><span class="header-section-number">6.3.6</span> Population and GDP per Capita<a href="eda5.html#population-and-gdp-per-capita" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="importing" class="section level4 hasAnchor" number="6.3.6.1">
 <h4><span class="header-section-number">6.3.6.1</span> Importing<a href="eda5.html#importing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb637"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb637-1"><a href="eda5.html#cb637-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>)</span></code></pre></div>
-<pre><code>##      indicator            name                                              
-## [1,] &quot;SP.POP.TOTL&quot;        &quot;Population, total&quot;                               
-## [2,] &quot;SP.POP.TOTL.FE.IN&quot;  &quot;Population, female&quot;                              
-## [3,] &quot;SP.POP.TOTL.FE.ZS&quot;  &quot;Population, female (% of total population)&quot;      
-## [4,] &quot;SP.POP.TOTL.ICP&quot;    &quot;SP.POP.TOTL.ICP:Population&quot;                      
-## [5,] &quot;SP.POP.TOTL.ICP.ZS&quot; &quot;SP.POP.TOTL.ICP.ZS:Population shares (World=100)&quot;
-## [6,] &quot;SP.POP.TOTL.MA.IN&quot;  &quot;Population, male&quot;                                
-## [7,] &quot;SP.POP.TOTL.MA.ZS&quot;  &quot;Population, male (% of total population)&quot;        
-## [8,] &quot;SP.POP.TOTL.ZS&quot;     &quot;Population (% of total)&quot;</code></pre>
-<div class="sourceCode" id="cb639"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb639-1"><a href="eda5.html#cb639-1" aria-hidden="true" tabindex="-1"></a>df_pop_gdpcap <span class="ot">&lt;-</span> <span class="fu">WDI</span>(</span>
-<span id="cb639-2"><a href="eda5.html#cb639-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
-<span id="cb639-3"><a href="eda5.html#cb639-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="at">pop =</span><span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">gdpcap =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>),</span>
-<span id="cb639-4"><a href="eda5.html#cb639-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1961</span>,</span>
-<span id="cb639-5"><a href="eda5.html#cb639-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span></span>
-<span id="cb639-6"><a href="eda5.html#cb639-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb639-7"><a href="eda5.html#cb639-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_pop_gdpcap)</span></code></pre></div>
-<pre><code>##   iso2c    country year       pop gdpcap
-## 1    1A Arab World 1961  94724540     NA
-## 2    1A Arab World 1962  97334438     NA
-## 3    1A Arab World 1963 100034191     NA
-## 4    1A Arab World 1964 102832792     NA
-## 5    1A Arab World 1965 105736428     NA
-## 6    1A Arab World 1966 108758634     NA</code></pre>
+<div class="sourceCode" id="cb638"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb638-1"><a href="eda5.html#cb638-1" aria-hidden="true" tabindex="-1"></a><span class="fu">WDIsearch</span>(<span class="at">string =</span> <span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">field =</span> <span class="st">&quot;indicator&quot;</span>)</span></code></pre></div>
+<pre><code>##                indicator                                             name
+## 17674        SP.POP.TOTL                                Population, total
+## 17675  SP.POP.TOTL.FE.IN                               Population, female
+## 17676  SP.POP.TOTL.FE.ZS       Population, female (% of total population)
+## 17677    SP.POP.TOTL.ICP                       SP.POP.TOTL.ICP:Population
+## 17678 SP.POP.TOTL.ICP.ZS SP.POP.TOTL.ICP.ZS:Population shares (World=100)
+## 17679  SP.POP.TOTL.MA.IN                                 Population, male
+## 17680  SP.POP.TOTL.MA.ZS         Population, male (% of total population)
+## 17681     SP.POP.TOTL.ZS                          Population (% of total)</code></pre>
+<div class="sourceCode" id="cb640"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb640-1"><a href="eda5.html#cb640-1" aria-hidden="true" tabindex="-1"></a>df_pop_gdpcap <span class="ot">&lt;-</span> <span class="fu">WDI</span>(</span>
+<span id="cb640-2"><a href="eda5.html#cb640-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">&quot;all&quot;</span>,</span>
+<span id="cb640-3"><a href="eda5.html#cb640-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">indicator =</span> <span class="fu">c</span>(<span class="at">pop =</span><span class="st">&quot;SP.POP.TOTL&quot;</span>, <span class="at">gdpcap =</span> <span class="st">&quot;NY.GDP.PCAP.KD&quot;</span>),</span>
+<span id="cb640-4"><a href="eda5.html#cb640-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="dv">1961</span>,</span>
+<span id="cb640-5"><a href="eda5.html#cb640-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">end =</span> <span class="dv">2020</span></span>
+<span id="cb640-6"><a href="eda5.html#cb640-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb640-7"><a href="eda5.html#cb640-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_pop_gdpcap)</span></code></pre></div>
+<pre><code>##       country iso2c iso3c year      pop gdpcap
+## 1 Afghanistan    AF   AFG 1961  9169406     NA
+## 2 Afghanistan    AF   AFG 1962  9351442     NA
+## 3 Afghanistan    AF   AFG 1963  9543200     NA
+## 4 Afghanistan    AF   AFG 1964  9744772     NA
+## 5 Afghanistan    AF   AFG 1965  9956318     NA
+## 6 Afghanistan    AF   AFG 1966 10174840     NA</code></pre>
 </div>
 <div id="visializing-and-modeling" class="section level4 hasAnchor" number="6.3.6.2">
 <h4><span class="header-section-number">6.3.6.2</span> Visializing and Modeling<a href="eda5.html#visializing-and-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb641"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb641-1"><a href="eda5.html#cb641-1" aria-hidden="true" tabindex="-1"></a>df_pop_gdpcap <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;World&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb641-2"><a href="eda5.html#cb641-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> pop, <span class="at">y =</span> gdpcap)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb642"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb642-1"><a href="eda5.html#cb642-1" aria-hidden="true" tabindex="-1"></a>df_pop_gdpcap <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;World&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb642-2"><a href="eda5.html#cb642-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> pop, <span class="at">y =</span> gdpcap)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-253-1.png" width="672" /></p>
-<div class="sourceCode" id="cb643"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb643-1"><a href="eda5.html#cb643-1" aria-hidden="true" tabindex="-1"></a>df_pop_gdpcap <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;World&quot;</span>) <span class="ot">-&gt;</span> df_pk</span>
-<span id="cb643-2"><a href="eda5.html#cb643-2" aria-hidden="true" tabindex="-1"></a>df_pk <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdpcap <span class="sc">~</span> pop, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb644"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb644-1"><a href="eda5.html#cb644-1" aria-hidden="true" tabindex="-1"></a>df_pop_gdpcap <span class="sc">%&gt;%</span> <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;World&quot;</span>) <span class="ot">-&gt;</span> df_pk</span>
+<span id="cb644-2"><a href="eda5.html#cb644-2" aria-hidden="true" tabindex="-1"></a>df_pk <span class="sc">%&gt;%</span> <span class="fu">lm</span>(gdpcap <span class="sc">~</span> pop, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = gdpcap ~ pop, data = .)
@@ -1599,21 +1601,21 @@ You need to install it if you have not by the followiin in you console or from T
 <h3><span class="header-section-number">6.3.7</span> Internet<a href="eda5.html#internet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="importing-1" class="section level4 hasAnchor" number="6.3.7.1">
 <h4><span class="header-section-number">6.3.7.1</span> Importing<a href="eda5.html#importing-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb645"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb645-1"><a href="eda5.html#cb645-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://data.un.org/_Docs/SYB/CSV/SYB64_314_202110_Internet%20Usage.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb646"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb646-1"><a href="eda5.html#cb646-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://data.un.org/_Docs/SYB/CSV/SYB64_314_202110_Internet%20Usage.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## New names:
 ## Rows: 1357 Columns: 7
 ## ── Column specification
-## ────────────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (3): Region/Country/Area,
-## Year, Value
-## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ Specify the
-## column types or set `show_col_types = FALSE` to quiet this message.
+## ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (3):
+## Region/Country/Area, Year, Value
+## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+## Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ## • `` -&gt; `...2`</code></pre>
 </div>
 <div id="glimpsing" class="section level4 hasAnchor" number="6.3.7.2">
 <h4><span class="header-section-number">6.3.7.2</span> Glimpsing<a href="eda5.html#glimpsing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We first overview the structure of the data briefly</p>
-<div class="sourceCode" id="cb647"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb647-1"><a href="eda5.html#cb647-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_un_internet)</span></code></pre></div>
+<div class="sourceCode" id="cb648"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb648-1"><a href="eda5.html#cb648-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_un_internet)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 7
 ##   `Region/Country/Area` ...2                    Year Series Value Footn…¹ Source
 ##                   &lt;dbl&gt; &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
@@ -1624,7 +1626,7 @@ You need to install it if you have not by the followiin in you console or from T
 ## 5                     1 Total, all countries …  2017 Perce…  46.3 &lt;NA&gt;    Inter…
 ## 6                     1 Total, all countries …  2018 Perce…  49   &lt;NA&gt;    Inter…
 ## # … with abbreviated variable name ¹​Footnotes</code></pre>
-<div class="sourceCode" id="cb649"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb649-1"><a href="eda5.html#cb649-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df_un_internet)</span></code></pre></div>
+<div class="sourceCode" id="cb650"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb650-1"><a href="eda5.html#cb650-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df_un_internet)</span></code></pre></div>
 <pre><code>## Rows: 1,357
 ## Columns: 7
 ## $ `Region/Country/Area` &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 15, 15, 15, 15, 15, 15, 15,…
@@ -1637,7 +1639,7 @@ You need to install it if you have not by the followiin in you console or from T
 <ul>
 <li>Note that the first column name is surrounded by backticks.</li>
 </ul>
-<div class="sourceCode" id="cb651"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb651-1"><a href="eda5.html#cb651-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb652"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb652-1"><a href="eda5.html#cb652-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>##  Region/Country/Area     ...2                Year         Series         
 ##  Min.   :  1         Length:1357        Min.   :2000   Length:1357       
 ##  1st Qu.:156         Class :character   1st Qu.:2005   Class :character  
@@ -1652,7 +1654,7 @@ You need to install it if you have not by the followiin in you console or from T
 ##  Mean   :39.01                                        
 ##  3rd Qu.:68.10                                        
 ##  Max.   :99.70</code></pre>
-<div class="sourceCode" id="cb653"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb653-1"><a href="eda5.html#cb653-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Source)</span></code></pre></div>
+<div class="sourceCode" id="cb654"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb654-1"><a href="eda5.html#cb654-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Source)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   Source                                                                        
 ##   &lt;chr&gt;                                                                         
@@ -1660,7 +1662,7 @@ You need to install it if you have not by the followiin in you console or from T
 <ul>
 <li>All sources are ‘International Telecommunication Union (ITU), Geneva, the ITU database, last accessed January 2021’.</li>
 </ul>
-<div class="sourceCode" id="cb655"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb655-1"><a href="eda5.html#cb655-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Footnotes)</span></code></pre></div>
+<div class="sourceCode" id="cb656"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb656-1"><a href="eda5.html#cb656-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Footnotes)</span></code></pre></div>
 <pre><code>## # A tibble: 71 × 1
 ##    Footnotes                                                                    
 ##    &lt;chr&gt;                                                                        
@@ -1675,7 +1677,7 @@ You need to install it if you have not by the followiin in you console or from T
 ##  9 Population aged 16 years and over.                                           
 ## 10 Users in the last 12 months.                                                 
 ## # … with 61 more rows</code></pre>
-<div class="sourceCode" id="cb657"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb657-1"><a href="eda5.html#cb657-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Series)</span></code></pre></div>
+<div class="sourceCode" id="cb658"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb658-1"><a href="eda5.html#cb658-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Series)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   Series                                      
 ##   &lt;chr&gt;                                       
@@ -1683,8 +1685,8 @@ You need to install it if you have not by the followiin in you console or from T
 <ul>
 <li>There is only one series. ‘Percentage of individuals using the internet’ can be for the title.</li>
 </ul>
-<div class="sourceCode" id="cb659"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb659-1"><a href="eda5.html#cb659-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Footnotes) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_regions =</span> <span class="fu">n_distinct</span>(<span class="st">`</span><span class="at">...2</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb659-2"><a href="eda5.html#cb659-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_of_regions))</span></code></pre></div>
+<div class="sourceCode" id="cb660"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb660-1"><a href="eda5.html#cb660-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Footnotes) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_regions =</span> <span class="fu">n_distinct</span>(<span class="st">`</span><span class="at">...2</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb660-2"><a href="eda5.html#cb660-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_of_regions))</span></code></pre></div>
 <pre><code>## # A tibble: 71 × 2
 ##    Footnotes                                                   number_of_regions
 ##    &lt;chr&gt;                                                                   &lt;int&gt;
@@ -1702,7 +1704,7 @@ You need to install it if you have not by the followiin in you console or from T
 <ul>
 <li>We need to see Footnotes carefully but in the beginning we do not examine.</li>
 </ul>
-<div class="sourceCode" id="cb661"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb661-1"><a href="eda5.html#cb661-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Year)</span></code></pre></div>
+<div class="sourceCode" id="cb662"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb662-1"><a href="eda5.html#cb662-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Year)</span></code></pre></div>
 <pre><code>## # A tibble: 7 × 1
 ##    Year
 ##   &lt;dbl&gt;
@@ -1713,8 +1715,8 @@ You need to install it if you have not by the followiin in you console or from T
 ## 5  2017
 ## 6  2018
 ## 7  2019</code></pre>
-<div class="sourceCode" id="cb663"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb663-1"><a href="eda5.html#cb663-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_regions =</span> <span class="fu">n_distinct</span>(...<span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb663-2"><a href="eda5.html#cb663-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_of_regions))</span></code></pre></div>
+<div class="sourceCode" id="cb664"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb664-1"><a href="eda5.html#cb664-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_regions =</span> <span class="fu">n_distinct</span>(...<span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb664-2"><a href="eda5.html#cb664-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_of_regions))</span></code></pre></div>
 <pre><code>## # A tibble: 7 × 2
 ##    Year number_of_regions
 ##   &lt;dbl&gt;             &lt;int&gt;
@@ -1725,8 +1727,8 @@ You need to install it if you have not by the followiin in you console or from T
 ## 5  2017               222
 ## 6  2018               110
 ## 7  2019               101</code></pre>
-<div class="sourceCode" id="cb665"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb665-1"><a href="eda5.html#cb665-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(...<span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_years =</span> <span class="fu">n_distinct</span>(Year)) <span class="sc">%&gt;%</span></span>
-<span id="cb665-2"><a href="eda5.html#cb665-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(number_of_years)</span></code></pre></div>
+<div class="sourceCode" id="cb666"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb666-1"><a href="eda5.html#cb666-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(...<span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_years =</span> <span class="fu">n_distinct</span>(Year)) <span class="sc">%&gt;%</span></span>
+<span id="cb666-2"><a href="eda5.html#cb666-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(number_of_years)</span></code></pre></div>
 <pre><code>## # A tibble: 246 × 2
 ##    ...2                     number_of_years
 ##    &lt;chr&gt;                              &lt;int&gt;
@@ -1741,8 +1743,8 @@ You need to install it if you have not by the followiin in you console or from T
 ##  9 &quot;Guernsey&quot;                             2
 ## 10 &quot;Jersey&quot;                               2
 ## # … with 236 more rows</code></pre>
-<div class="sourceCode" id="cb667"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb667-1"><a href="eda5.html#cb667-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_years =</span> <span class="fu">n_distinct</span>(Year)) <span class="sc">%&gt;%</span></span>
-<span id="cb667-2"><a href="eda5.html#cb667-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(number_of_years)</span></code></pre></div>
+<div class="sourceCode" id="cb668"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb668-1"><a href="eda5.html#cb668-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_years =</span> <span class="fu">n_distinct</span>(Year)) <span class="sc">%&gt;%</span></span>
+<span id="cb668-2"><a href="eda5.html#cb668-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(number_of_years)</span></code></pre></div>
 <pre><code>## # A tibble: 246 × 2
 ##    `Region/Country/Area` number_of_years
 ##                    &lt;dbl&gt;           &lt;int&gt;
@@ -1757,7 +1759,7 @@ You need to install it if you have not by the followiin in you console or from T
 ##  9                   474               2
 ## 10                   638               2
 ## # … with 236 more rows</code></pre>
-<div class="sourceCode" id="cb669"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb669-1"><a href="eda5.html#cb669-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, ...<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb670"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb670-1"><a href="eda5.html#cb670-1" aria-hidden="true" tabindex="-1"></a>df_un_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, ...<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 246 × 2
 ##    `Region/Country/Area` ...2                         
 ##                    &lt;dbl&gt; &lt;chr&gt;                        
@@ -1776,14 +1778,14 @@ You need to install it if you have not by the followiin in you console or from T
 <li>Region/Country/Area and names in …2 are in one to one correspondence. It seems that the first 21 of them are areas and data are aggregated and the rest of them are countries or regions.</li>
 <li>Since these 21 regions are overlapping, we need to study the definition. Let us choose</li>
 </ul>
-<div class="sourceCode" id="cb671"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb671-1"><a href="eda5.html#cb671-1" aria-hidden="true" tabindex="-1"></a>area_num_tmp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">202</span>, <span class="dv">21</span>, <span class="dv">29</span>, <span class="dv">420</span>, <span class="dv">142</span>, <span class="dv">150</span>, <span class="dv">9</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb672"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb672-1"><a href="eda5.html#cb672-1" aria-hidden="true" tabindex="-1"></a>area_num_tmp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">202</span>, <span class="dv">21</span>, <span class="dv">29</span>, <span class="dv">420</span>, <span class="dv">142</span>, <span class="dv">150</span>, <span class="dv">9</span>)</span></code></pre></div>
 </div>
 <div id="transforming" class="section level4 hasAnchor" number="6.3.7.3">
 <h4><span class="header-section-number">6.3.7.3</span> Transforming<a href="eda5.html#transforming" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb672"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb672-1"><a href="eda5.html#cb672-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="ot">&lt;-</span> df_un_internet <span class="sc">%&gt;%</span></span>
-<span id="cb672-2"><a href="eda5.html#cb672-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">num =</span> <span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, <span class="at">region =</span> ...<span class="dv">2</span>, <span class="at">year =</span> Year, <span class="at">value =</span> Value) <span class="sc">%&gt;%</span></span>
-<span id="cb672-3"><a href="eda5.html#cb672-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year))</span>
-<span id="cb672-4"><a href="eda5.html#cb672-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_internet)</span></code></pre></div>
+<div class="sourceCode" id="cb673"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb673-1"><a href="eda5.html#cb673-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="ot">&lt;-</span> df_un_internet <span class="sc">%&gt;%</span></span>
+<span id="cb673-2"><a href="eda5.html#cb673-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">num =</span> <span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span>, <span class="at">region =</span> ...<span class="dv">2</span>, <span class="at">year =</span> Year, <span class="at">value =</span> Value) <span class="sc">%&gt;%</span></span>
+<span id="cb673-3"><a href="eda5.html#cb673-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.integer</span>(year))</span>
+<span id="cb673-4"><a href="eda5.html#cb673-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_internet)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 4
 ##     num region                         year value
 ##   &lt;dbl&gt; &lt;chr&gt;                         &lt;int&gt; &lt;dbl&gt;
@@ -1793,8 +1795,8 @@ You need to install it if you have not by the followiin in you console or from T
 ## 4     1 Total, all countries or areas  2015  41.1
 ## 5     1 Total, all countries or areas  2017  46.3
 ## 6     1 Total, all countries or areas  2018  49</code></pre>
-<div class="sourceCode" id="cb674"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb674-1"><a href="eda5.html#cb674-1" aria-hidden="true" tabindex="-1"></a>area_vector <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(region) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">21</span>) <span class="sc">%&gt;%</span> <span class="fu">pull</span>()</span>
-<span id="cb674-2"><a href="eda5.html#cb674-2" aria-hidden="true" tabindex="-1"></a>area_vector</span></code></pre></div>
+<div class="sourceCode" id="cb675"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb675-1"><a href="eda5.html#cb675-1" aria-hidden="true" tabindex="-1"></a>area_vector <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(region) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">21</span>) <span class="sc">%&gt;%</span> <span class="fu">pull</span>()</span>
+<span id="cb675-2"><a href="eda5.html#cb675-2" aria-hidden="true" tabindex="-1"></a>area_vector</span></code></pre></div>
 <pre><code>##  [1] &quot;Total, all countries or areas&quot; &quot;Northern Africa&quot;              
 ##  [3] &quot;Sub-Saharan Africa&quot;            &quot;Eastern Africa&quot;               
 ##  [5] &quot;Middle Africa&quot;                 &quot;Southern Africa&quot;              
@@ -1809,28 +1811,28 @@ You need to install it if you have not by the followiin in you console or from T
 </div>
 <div id="visualising" class="section level4 hasAnchor" number="6.3.7.4">
 <h4><span class="header-section-number">6.3.7.4</span> Visualising<a href="eda5.html#visualising" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb676"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb676-1"><a href="eda5.html#cb676-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Total, all countries or areas&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb676-2"><a href="eda5.html#cb676-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb677"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb677-1"><a href="eda5.html#cb677-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Total, all countries or areas&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb677-2"><a href="eda5.html#cb677-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-271-1.png" width="672" />
 The value, ‘Percentage of individuals using the internet’ is increasing and almost on a straight line. We will study linear regression later.</p>
-<div class="sourceCode" id="cb677"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb677-1"><a href="eda5.html#cb677-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(num <span class="sc">%in%</span> area_num_tmp) <span class="sc">%&gt;%</span></span>
-<span id="cb677-2"><a href="eda5.html#cb677-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb678"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb678-1"><a href="eda5.html#cb678-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(num <span class="sc">%in%</span> area_num_tmp) <span class="sc">%&gt;%</span></span>
+<span id="cb678-2"><a href="eda5.html#cb678-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-272-1.png" width="672" /></p>
-<div class="sourceCode" id="cb678"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb678-1"><a href="eda5.html#cb678-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">%in%</span> area_vector) <span class="sc">%&gt;%</span></span>
-<span id="cb678-2"><a href="eda5.html#cb678-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb679"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb679-1"><a href="eda5.html#cb679-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">%in%</span> area_vector) <span class="sc">%&gt;%</span></span>
+<span id="cb679-2"><a href="eda5.html#cb679-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> region)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-273-1.png" width="672" /></p>
-<div class="sourceCode" id="cb679"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb679-1"><a href="eda5.html#cb679-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span></span>
-<span id="cb679-2"><a href="eda5.html#cb679-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(year), <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb679-3"><a href="eda5.html#cb679-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&#39;Percentage of individuals using the internet&#39;</span>, <span class="at">x =</span> <span class="st">&#39;year&#39;</span>, <span class="at">y =</span> <span class="st">&#39;percentage&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb680"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb680-1"><a href="eda5.html#cb680-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span></span>
+<span id="cb680-2"><a href="eda5.html#cb680-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(year), <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb680-3"><a href="eda5.html#cb680-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&#39;Percentage of individuals using the internet&#39;</span>, <span class="at">x =</span> <span class="st">&#39;year&#39;</span>, <span class="at">y =</span> <span class="st">&#39;percentage&#39;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-274-1.png" width="672" /></p>
-<div class="sourceCode" id="cb680"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb680-1"><a href="eda5.html#cb680-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2005</span>, <span class="dv">2010</span>, <span class="dv">2015</span>, <span class="dv">2019</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb680-2"><a href="eda5.html#cb680-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">color =</span> <span class="fu">factor</span>(year))) <span class="sc">+</span> <span class="fu">geom_freqpoly</span>() <span class="sc">+</span></span>
-<span id="cb680-3"><a href="eda5.html#cb680-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&#39;Percentage of individuals using the internet&#39;</span>, <span class="at">x =</span> <span class="st">&#39;percentage&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb681"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb681-1"><a href="eda5.html#cb681-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2005</span>, <span class="dv">2010</span>, <span class="dv">2015</span>, <span class="dv">2019</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb681-2"><a href="eda5.html#cb681-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">color =</span> <span class="fu">factor</span>(year))) <span class="sc">+</span> <span class="fu">geom_freqpoly</span>() <span class="sc">+</span></span>
+<span id="cb681-3"><a href="eda5.html#cb681-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&#39;Percentage of individuals using the internet&#39;</span>, <span class="at">x =</span> <span class="st">&#39;percentage&#39;</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-275-1.png" width="672" /></p>
-<div class="sourceCode" id="cb682"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb682-1"><a href="eda5.html#cb682-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb682-2"><a href="eda5.html#cb682-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb682-3"><a href="eda5.html#cb682-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&#39;Percentage of individuals using the internet&#39;</span>, <span class="at">x =</span> <span class="st">&#39;percentage&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb683"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb683-1"><a href="eda5.html#cb683-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb683-2"><a href="eda5.html#cb683-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb683-3"><a href="eda5.html#cb683-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&#39;Percentage of individuals using the internet&#39;</span>, <span class="at">x =</span> <span class="st">&#39;percentage&#39;</span>)</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-276-1.png" width="672" /></p>
 <ul>
@@ -1841,13 +1843,13 @@ The value, ‘Percentage of individuals using the internet’ is increasing and 
 </div>
 <div id="modeling" class="section level4 hasAnchor" number="6.3.7.5">
 <h4><span class="header-section-number">6.3.7.5</span> Modeling<a href="eda5.html#modeling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb684"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb684-1"><a href="eda5.html#cb684-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Total, all countries or areas&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb684-2"><a href="eda5.html#cb684-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb685-1"><a href="eda5.html#cb685-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Total, all countries or areas&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb685-2"><a href="eda5.html#cb685-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-277-1.png" width="672" /></p>
-<div class="sourceCode" id="cb686"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb686-1"><a href="eda5.html#cb686-1" aria-hidden="true" tabindex="-1"></a>internet_all <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Total, all countries or areas&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb686-2"><a href="eda5.html#cb686-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .) </span>
-<span id="cb686-3"><a href="eda5.html#cb686-3" aria-hidden="true" tabindex="-1"></a>internet_all <span class="sc">%&gt;%</span>  <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb687"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb687-1"><a href="eda5.html#cb687-1" aria-hidden="true" tabindex="-1"></a>internet_all <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">&quot;Total, all countries or areas&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb687-2"><a href="eda5.html#cb687-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .) </span>
+<span id="cb687-3"><a href="eda5.html#cb687-3" aria-hidden="true" tabindex="-1"></a>internet_all <span class="sc">%&gt;%</span>  <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = value ~ year, data = .)
@@ -1869,14 +1871,14 @@ The value, ‘Percentage of individuals using the internet’ is increasing and 
 <ul>
 <li>Each year internet use is increasing by about 2.4 percents.</li>
 </ul>
-<div class="sourceCode" id="cb688"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb688-1"><a href="eda5.html#cb688-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(num <span class="sc">%in%</span> area_num_tmp) <span class="sc">%&gt;%</span></span>
-<span id="cb688-2"><a href="eda5.html#cb688-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb688-3"><a href="eda5.html#cb688-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb689"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb689-1"><a href="eda5.html#cb689-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(num <span class="sc">%in%</span> area_num_tmp) <span class="sc">%&gt;%</span></span>
+<span id="cb689-2"><a href="eda5.html#cb689-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb689-3"><a href="eda5.html#cb689-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-279-1.png" width="672" /></p>
-<div class="sourceCode" id="cb690"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb690-1"><a href="eda5.html#cb690-1" aria-hidden="true" tabindex="-1"></a>internet_area <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(num <span class="sc">%in%</span> area_num_tmp) <span class="sc">%&gt;%</span></span>
-<span id="cb690-2"><a href="eda5.html#cb690-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
-<span id="cb690-3"><a href="eda5.html#cb690-3" aria-hidden="true" tabindex="-1"></a>internet_area  <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb691"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb691-1"><a href="eda5.html#cb691-1" aria-hidden="true" tabindex="-1"></a>internet_area <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(num <span class="sc">%in%</span> area_num_tmp) <span class="sc">%&gt;%</span></span>
+<span id="cb691-2"><a href="eda5.html#cb691-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
+<span id="cb691-3"><a href="eda5.html#cb691-3" aria-hidden="true" tabindex="-1"></a>internet_area  <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = value ~ year, data = .)
@@ -1895,14 +1897,14 @@ The value, ‘Percentage of individuals using the internet’ is increasing and 
 ## Residual standard error: 20.68 on 54 degrees of freedom
 ## Multiple R-squared:  0.4118, Adjusted R-squared:  0.4009 
 ## F-statistic:  37.8 on 1 and 54 DF,  p-value: 9.851e-08</code></pre>
-<div class="sourceCode" id="cb692"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb692-1"><a href="eda5.html#cb692-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span></span>
-<span id="cb692-2"><a href="eda5.html#cb692-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb692-3"><a href="eda5.html#cb692-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb693"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb693-1"><a href="eda5.html#cb693-1" aria-hidden="true" tabindex="-1"></a>df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span></span>
+<span id="cb693-2"><a href="eda5.html#cb693-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb693-3"><a href="eda5.html#cb693-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-281-1.png" width="672" /></p>
-<div class="sourceCode" id="cb694"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb694-1"><a href="eda5.html#cb694-1" aria-hidden="true" tabindex="-1"></a>internet_country <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span></span>
-<span id="cb694-2"><a href="eda5.html#cb694-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .) </span>
-<span id="cb694-3"><a href="eda5.html#cb694-3" aria-hidden="true" tabindex="-1"></a>internet_country <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb695"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb695-1"><a href="eda5.html#cb695-1" aria-hidden="true" tabindex="-1"></a>internet_country <span class="ot">&lt;-</span> df_internet <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(region <span class="sc">%in%</span> area_vector)) <span class="sc">%&gt;%</span></span>
+<span id="cb695-2"><a href="eda5.html#cb695-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .) </span>
+<span id="cb695-3"><a href="eda5.html#cb695-3" aria-hidden="true" tabindex="-1"></a>internet_country <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = value ~ year, data = .)
@@ -1921,8 +1923,8 @@ The value, ‘Percentage of individuals using the internet’ is increasing and 
 ## Residual standard error: 24.65 on 1208 degrees of freedom
 ## Multiple R-squared:  0.4078, Adjusted R-squared:  0.4073 
 ## F-statistic: 831.8 on 1 and 1208 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb696-1"><a href="eda5.html#cb696-1" aria-hidden="true" tabindex="-1"></a>internet_summary <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ALL =</span> internet_all, <span class="at">By_Area =</span> internet_area, <span class="at">By_Country =</span> internet_country)</span>
-<span id="cb696-2"><a href="eda5.html#cb696-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(internet_summary, <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb697"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb697-1"><a href="eda5.html#cb697-1" aria-hidden="true" tabindex="-1"></a>internet_summary <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ALL =</span> internet_all, <span class="at">By_Area =</span> internet_area, <span class="at">By_Country =</span> internet_country)</span>
+<span id="cb697-2"><a href="eda5.html#cb697-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(internet_summary, <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1945,26 +1947,26 @@ By_Country
 (Intercept)
 </td>
 <td style="text-align:center;">
-−4768.989
+-4768.989
 </td>
 <td style="text-align:center;">
-−5045.546
+-5045.546
 </td>
 <td style="text-align:center;">
-−6160.704
+-6160.704
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 </tr>
 <tr>
@@ -1985,13 +1987,13 @@ year
 <td style="text-align:left;box-shadow: 0px 1px">
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 </tr>
 <tr>
@@ -2069,13 +2071,13 @@ BIC
 Log.Lik.
 </td>
 <td style="text-align:center;">
-−5.192
+-5.192
 </td>
 <td style="text-align:center;">
-−248.085
+-248.085
 </td>
 <td style="text-align:center;">
-−5593.626
+-5593.626
 </td>
 </tr>
 <tr>
@@ -2110,9 +2112,9 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 <li>Downloaded Data file in CSV: UNdata_Export_20220205_134850951.csv</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb697"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb697-1"><a href="eda5.html#cb697-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/UNdata_Export_20220205_134850951.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb698"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb698-1"><a href="eda5.html#cb698-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/UNdata_Export_20220205_134850951.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Rows: 2462 Columns: 6
-## ── Column specification ────────────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (4): OID, Country or Area, Description, Magnitude
 ## dbl (2): Year, Value
@@ -2122,7 +2124,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 </div>
 <div id="glimpsing-1" class="section level4 hasAnchor" number="6.3.8.2">
 <h4><span class="header-section-number">6.3.8.2</span> Glimpsing<a href="eda5.html#glimpsing-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb699"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb699-1"><a href="eda5.html#cb699-1" aria-hidden="true" tabindex="-1"></a>df_by</span></code></pre></div>
+<div class="sourceCode" id="cb700"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb700-1"><a href="eda5.html#cb700-1" aria-hidden="true" tabindex="-1"></a>df_by</span></code></pre></div>
 <pre><code>## # A tibble: 2,462 × 6
 ##    OID           `Country or Area`  Year Description              Magnit…¹ Value
 ##    &lt;chr&gt;         &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;                    &lt;chr&gt;    &lt;dbl&gt;
@@ -2137,7 +2139,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 19361A..ZF... AUSTRALIA          2009 TREASURY BONDS: 3 YEARS  PERCENT…  4.26
 ## 10 19361...ZF... AUSTRALIA          2009 TREASURY BONDS: 15 YEARS PERCENT…  5.09
 ## # … with 2,452 more rows, and abbreviated variable name ¹​Magnitude</code></pre>
-<div class="sourceCode" id="cb701"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb701-1"><a href="eda5.html#cb701-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb702"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb702-1"><a href="eda5.html#cb702-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code></pre></div>
 <pre><code>## Rows: 2,462
 ## Columns: 6
 ## $ OID               &lt;chr&gt; &quot;91161...ZF...&quot;, &quot;91161...ZF...&quot;, &quot;91161...ZF...&quot;, &quot;…
@@ -2146,7 +2148,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ## $ Description       &lt;chr&gt; &quot;GOVERNMENT BOND YIELD&quot;, &quot;GOVERNMENT BOND YIELD&quot;, &quot;G…
 ## $ Magnitude         &lt;chr&gt; &quot;PERCENT PER ANNU&quot;, &quot;PERCENT PER ANNU&quot;, &quot;PERCENT PER…
 ## $ Value             &lt;dbl&gt; 6.56222, 5.85693, 5.18325, 8.20862, 15.71420, 17.442…</code></pre>
-<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb703-1"><a href="eda5.html#cb703-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Description)</span></code></pre></div>
+<div class="sourceCode" id="cb704"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb704-1"><a href="eda5.html#cb704-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Description)</span></code></pre></div>
 <pre><code>## # A tibble: 33 × 1
 ##    Description                    
 ##    &lt;chr&gt;                          
@@ -2161,24 +2163,24 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 MORTGAGE BOND YIELD            
 ## 10 LONG-TERM LOAN RATE            
 ## # … with 23 more rows</code></pre>
-<div class="sourceCode" id="cb705"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb705-1"><a href="eda5.html#cb705-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Description) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">num_of_regions =</span> <span class="fu">n_distinct</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb705-2"><a href="eda5.html#cb705-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(num_of_regions))</span></code></pre></div>
+<div class="sourceCode" id="cb706"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb706-1"><a href="eda5.html#cb706-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Description) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">num_of_regions =</span> <span class="fu">n_distinct</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb706-2"><a href="eda5.html#cb706-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(num_of_regions))</span></code></pre></div>
 <pre><code>## # A tibble: 33 × 2
-##    Description                      num_of_regions
-##    &lt;chr&gt;                                     &lt;int&gt;
-##  1 GOVERNMENT BOND YIELD                        44
-##  2 15 YEAR TREASURY BOND YIELD                   1
-##  3 5 YEAR TREASURY BOND YIELD                    1
-##  4 AVG SHT TRM GOVT BONDS RATE                   1
-##  5 COUPON RATE ON L.T.DEVELPT BONDS              1
-##  6 GOV. BONDS: 10 YEARS                          1
-##  7 GOVENMENT BOND YIELD                          1
-##  8 GOVERNMENT BOND RATE                          1
-##  9 GOVERNMENT BOND YEILD                         1
-## 10 GOVERNMENT BOND YIELD (7 YRS)                 1
+##    Description                          num_of_regions
+##    &lt;chr&gt;                                         &lt;int&gt;
+##  1 GOVERNMENT BOND YIELD                            44
+##  2 15 YEAR TREASURY BOND YIELD                       1
+##  3 5 YEAR TREASURY BOND YIELD                        1
+##  4 AVG SHT TRM GOVT BONDS RATE                       1
+##  5 COUPON RATE ON L.T.DEVELPT BONDS                  1
+##  6 GOV. BONDS: 10 YEARS                              1
+##  7 GOVENMENT BOND YIELD                              1
+##  8 GOVERNMENT BOND RATE                              1
+##  9 GOVERNMENT BOND YEILD                             1
+## 10 GOVERNMENT BOND YIELD - 10 YEAR IND.              1
 ## # … with 23 more rows</code></pre>
-<div class="sourceCode" id="cb707"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb707-1"><a href="eda5.html#cb707-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">==</span> <span class="st">&quot;GOVERNMENT BOND YIELD&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb707-2"><a href="eda5.html#cb707-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(OID, <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>, Description)</span></code></pre></div>
+<div class="sourceCode" id="cb708"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb708-1"><a href="eda5.html#cb708-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">==</span> <span class="st">&quot;GOVERNMENT BOND YIELD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb708-2"><a href="eda5.html#cb708-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(OID, <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>, Description)</span></code></pre></div>
 <pre><code>## # A tibble: 44 × 3
 ##    OID           `Country or Area` Description          
 ##    &lt;chr&gt;         &lt;chr&gt;             &lt;chr&gt;                
@@ -2193,8 +2195,8 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 13261...ZF... FRANCE            GOVERNMENT BOND YIELD
 ## 10 13461...ZF... GERMANY           GOVERNMENT BOND YIELD
 ## # … with 34 more rows</code></pre>
-<div class="sourceCode" id="cb709"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb709-1"><a href="eda5.html#cb709-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">!=</span> <span class="st">&quot;GOVERNMENT BOND YIELD&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb709-2"><a href="eda5.html#cb709-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(OID, <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>, Description)</span></code></pre></div>
+<div class="sourceCode" id="cb710"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb710-1"><a href="eda5.html#cb710-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">!=</span> <span class="st">&quot;GOVERNMENT BOND YIELD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb710-2"><a href="eda5.html#cb710-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(OID, <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>, Description)</span></code></pre></div>
 <pre><code>## # A tibble: 32 × 3
 ##    OID           `Country or Area` Description                    
 ##    &lt;chr&gt;         &lt;chr&gt;             &lt;chr&gt;                          
@@ -2209,12 +2211,12 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 93961...ZF... ESTONIA           LONG-TERM LOAN RATE            
 ## 10 81961...ZF... FIJI              AVG SHT TRM GOVT BONDS RATE    
 ## # … with 22 more rows</code></pre>
-<div class="sourceCode" id="cb711"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb711-1"><a href="eda5.html#cb711-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Magnitude)</span></code></pre></div>
+<div class="sourceCode" id="cb712"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb712-1"><a href="eda5.html#cb712-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Magnitude)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   Magnitude       
 ##   &lt;chr&gt;           
 ## 1 PERCENT PER ANNU</code></pre>
-<div class="sourceCode" id="cb713"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb713-1"><a href="eda5.html#cb713-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Year) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(Year))</span></code></pre></div>
+<div class="sourceCode" id="cb714"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb714-1"><a href="eda5.html#cb714-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(Year) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(Year))</span></code></pre></div>
 <pre><code>## # A tibble: 62 × 1
 ##     Year
 ##    &lt;dbl&gt;
@@ -2229,8 +2231,8 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9  2001
 ## 10  2000
 ## # … with 52 more rows</code></pre>
-<div class="sourceCode" id="cb715"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb715-1"><a href="eda5.html#cb715-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_countries =</span> <span class="fu">n_distinct</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb715-2"><a href="eda5.html#cb715-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_of_countries))</span></code></pre></div>
+<div class="sourceCode" id="cb716"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb716-1"><a href="eda5.html#cb716-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">number_of_countries =</span> <span class="fu">n_distinct</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb716-2"><a href="eda5.html#cb716-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_of_countries))</span></code></pre></div>
 <pre><code>## # A tibble: 62 × 2
 ##     Year number_of_countries
 ##    &lt;dbl&gt;               &lt;int&gt;
@@ -2245,7 +2247,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9  1995                  47
 ## 10  2000                  47
 ## # … with 52 more rows</code></pre>
-<div class="sourceCode" id="cb717"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb717-1"><a href="eda5.html#cb717-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(OID)</span></code></pre></div>
+<div class="sourceCode" id="cb718"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb718-1"><a href="eda5.html#cb718-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(OID)</span></code></pre></div>
 <pre><code>## # A tibble: 76 × 1
 ##    OID          
 ##    &lt;chr&gt;        
@@ -2260,7 +2262,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 15661...ZF...
 ## 10 42361...ZF...
 ## # … with 66 more rows</code></pre>
-<div class="sourceCode" id="cb719"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb719-1"><a href="eda5.html#cb719-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb720"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb720-1"><a href="eda5.html#cb720-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 69 × 1
 ##    `Country or Area`
 ##    &lt;chr&gt;            
@@ -2275,7 +2277,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 CZECH REPUBLIC   
 ## 10 DENMARK          
 ## # … with 59 more rows</code></pre>
-<div class="sourceCode" id="cb721"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb721-1"><a href="eda5.html#cb721-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(OID, <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb722"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb722-1"><a href="eda5.html#cb722-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(OID, <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 76 × 2
 ##    OID           `Country or Area`
 ##    &lt;chr&gt;         &lt;chr&gt;            
@@ -2290,8 +2292,8 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 15661...ZF... CANADA           
 ## 10 42361...ZF... CYPRUS           
 ## # … with 66 more rows</code></pre>
-<div class="sourceCode" id="cb723"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb723-1"><a href="eda5.html#cb723-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">num_of_oid =</span> <span class="fu">n_distinct</span>(OID)) <span class="sc">%&gt;%</span></span>
-<span id="cb723-2"><a href="eda5.html#cb723-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(num_of_oid))</span></code></pre></div>
+<div class="sourceCode" id="cb724"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb724-1"><a href="eda5.html#cb724-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">num_of_oid =</span> <span class="fu">n_distinct</span>(OID)) <span class="sc">%&gt;%</span></span>
+<span id="cb724-2"><a href="eda5.html#cb724-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(num_of_oid))</span></code></pre></div>
 <pre><code>## # A tibble: 69 × 2
 ##    `Country or Area` num_of_oid
 ##    &lt;chr&gt;                  &lt;int&gt;
@@ -2312,25 +2314,25 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 </div>
 <div id="visualising-1" class="section level4 hasAnchor" number="6.3.8.3">
 <h4><span class="header-section-number">6.3.8.3</span> Visualising<a href="eda5.html#visualising-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb725"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb725-1"><a href="eda5.html#cb725-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">==</span> <span class="st">&#39;JAPAN&#39;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb725-2"><a href="eda5.html#cb725-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
-<span id="cb725-3"><a href="eda5.html#cb725-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-298-1.png" width="672" /></p>
-<div class="sourceCode" id="cb726"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb726-1"><a href="eda5.html#cb726-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;FRANCE&#39;</span>, <span class="st">&#39;GERMANY&#39;</span>, <span class="st">&#39;GREECE&#39;</span>, <span class="st">&#39;CHINA&#39;</span>, <span class="st">&#39;INDIA&#39;</span>, <span class="st">&#39;JAPAN&#39;</span>, <span class="st">&#39;PAKISTAN&#39;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb726-2"><a href="eda5.html#cb726-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">color =</span> <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<div class="sourceCode" id="cb726"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb726-1"><a href="eda5.html#cb726-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">==</span> <span class="st">&#39;JAPAN&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb726-2"><a href="eda5.html#cb726-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
 <span id="cb726-3"><a href="eda5.html#cb726-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-298-1.png" width="672" /></p>
+<div class="sourceCode" id="cb727"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb727-1"><a href="eda5.html#cb727-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;FRANCE&#39;</span>, <span class="st">&#39;GERMANY&#39;</span>, <span class="st">&#39;GREECE&#39;</span>, <span class="st">&#39;CHINA&#39;</span>, <span class="st">&#39;INDIA&#39;</span>, <span class="st">&#39;JAPAN&#39;</span>, <span class="st">&#39;PAKISTAN&#39;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb727-2"><a href="eda5.html#cb727-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">color =</span> <span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb727-3"><a href="eda5.html#cb727-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-299-1.png" width="672" /></p>
 </div>
 <div id="modeling-1" class="section level4 hasAnchor" number="6.3.8.4">
 <h4><span class="header-section-number">6.3.8.4</span> Modeling<a href="eda5.html#modeling-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb727"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb727-1"><a href="eda5.html#cb727-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;JAPAN&#39;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb727-2"><a href="eda5.html#cb727-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
-<span id="cb727-3"><a href="eda5.html#cb727-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb727-4"><a href="eda5.html#cb727-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb728"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb728-1"><a href="eda5.html#cb728-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;JAPAN&#39;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb728-2"><a href="eda5.html#cb728-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
+<span id="cb728-3"><a href="eda5.html#cb728-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb728-4"><a href="eda5.html#cb728-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-300-1.png" width="672" /></p>
-<div class="sourceCode" id="cb729"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb729-1"><a href="eda5.html#cb729-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;JAPAN&#39;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb729-2"><a href="eda5.html#cb729-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(Value <span class="sc">~</span> Year, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb730"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb730-1"><a href="eda5.html#cb730-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="st">`</span><span class="at">Country or Area</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;JAPAN&#39;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb730-2"><a href="eda5.html#cb730-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(Value <span class="sc">~</span> Year, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = Value ~ Year, data = .)
@@ -2349,20 +2351,20 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ## Residual standard error: 1.374 on 42 degrees of freedom
 ## Multiple R-squared:  0.766,  Adjusted R-squared:  0.7604 
 ## F-statistic: 137.5 on 1 and 42 DF,  p-value: 7.864e-15</code></pre>
-<div class="sourceCode" id="cb731"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb731-1"><a href="eda5.html#cb731-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;GOVERNMENT BOND YIELD&#39;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb731-2"><a href="eda5.html#cb731-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
-<span id="cb731-3"><a href="eda5.html#cb731-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb731-4"><a href="eda5.html#cb731-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb732"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb732-1"><a href="eda5.html#cb732-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;GOVERNMENT BOND YIELD&#39;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb732-2"><a href="eda5.html#cb732-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
+<span id="cb732-3"><a href="eda5.html#cb732-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb732-4"><a href="eda5.html#cb732-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-302-1.png" width="672" /></p>
-<div class="sourceCode" id="cb733"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb733-1"><a href="eda5.html#cb733-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;GOVERNMENT BOND YIELD&#39;</span>)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Year <span class="sc">&gt;=</span><span class="dv">1980</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb733-2"><a href="eda5.html#cb733-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
-<span id="cb733-3"><a href="eda5.html#cb733-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb733-4"><a href="eda5.html#cb733-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb734"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb734-1"><a href="eda5.html#cb734-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;GOVERNMENT BOND YIELD&#39;</span>)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Year <span class="sc">&gt;=</span><span class="dv">1980</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb734-2"><a href="eda5.html#cb734-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value)) <span class="sc">+</span></span>
+<span id="cb734-3"><a href="eda5.html#cb734-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb734-4"><a href="eda5.html#cb734-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-303-1.png" width="672" /></p>
-<div class="sourceCode" id="cb735"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb735-1"><a href="eda5.html#cb735-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;GOVERNMENT BOND YIELD&#39;</span>)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Year <span class="sc">&gt;=</span><span class="dv">1980</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb735-2"><a href="eda5.html#cb735-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(Value <span class="sc">~</span> Year, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb736"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb736-1"><a href="eda5.html#cb736-1" aria-hidden="true" tabindex="-1"></a>df_by <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Description <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&#39;GOVERNMENT BOND YIELD&#39;</span>)) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Year <span class="sc">&gt;=</span><span class="dv">1980</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb736-2"><a href="eda5.html#cb736-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(Value <span class="sc">~</span> Year, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = Value ~ Year, data = .)
@@ -2402,10 +2404,10 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 <li>The elderly population is defined as people aged 65 and over.</li>
 </ul>
 <p>Use of CLASS.xls</p>
-<div class="sourceCode" id="cb737"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb737-1"><a href="eda5.html#cb737-1" aria-hidden="true" tabindex="-1"></a>url_oecd_elderly <span class="ot">&lt;-</span> <span class="st">&quot;https://stats.oecd.org/sdmx-json/data/DP_LIVE/.ELDLYPOP.TOT.PC_POP.A/OECD?contentType=csv&amp;detail=code&amp;separator=comma&amp;csv-lang=en&amp;startPeriod=1970&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb738"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb738-1"><a href="eda5.html#cb738-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(url_oecd_elderly)</span></code></pre></div>
+<div class="sourceCode" id="cb738"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb738-1"><a href="eda5.html#cb738-1" aria-hidden="true" tabindex="-1"></a>url_oecd_elderly <span class="ot">&lt;-</span> <span class="st">&quot;https://stats.oecd.org/sdmx-json/data/DP_LIVE/.ELDLYPOP.TOT.PC_POP.A/OECD?contentType=csv&amp;detail=code&amp;separator=comma&amp;csv-lang=en&amp;startPeriod=1970&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb739"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb739-1"><a href="eda5.html#cb739-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(url_oecd_elderly)</span></code></pre></div>
 <pre><code>## Rows: 2909 Columns: 8
-## ── Column specification ────────────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (5): LOCATION, INDICATOR, SUBJECT, MEASURE, FREQUENCY
 ## dbl (2): TIME, Value
@@ -2416,7 +2418,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 </div>
 <div id="glimpsing-2" class="section level4 hasAnchor" number="6.3.9.2">
 <h4><span class="header-section-number">6.3.9.2</span> Glimpsing<a href="eda5.html#glimpsing-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb740"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb740-1"><a href="eda5.html#cb740-1" aria-hidden="true" tabindex="-1"></a>elderly_population</span></code></pre></div>
+<div class="sourceCode" id="cb741"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb741-1"><a href="eda5.html#cb741-1" aria-hidden="true" tabindex="-1"></a>elderly_population</span></code></pre></div>
 <pre><code>## # A tibble: 2,909 × 8
 ##    LOCATION INDICATOR SUBJECT MEASURE FREQUENCY  TIME Value `Flag Codes`
 ##    &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;lgl&gt;       
@@ -2431,27 +2433,27 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 AUS      ELDLYPOP  TOT     PC_POP  A          1978  9.24 NA          
 ## 10 AUS      ELDLYPOP  TOT     PC_POP  A          1979  9.44 NA          
 ## # … with 2,899 more rows</code></pre>
-<div class="sourceCode" id="cb742"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb742-1"><a href="eda5.html#cb742-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(INDICATOR)</span></code></pre></div>
+<div class="sourceCode" id="cb743"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb743-1"><a href="eda5.html#cb743-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(INDICATOR)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   INDICATOR
 ##   &lt;chr&gt;    
 ## 1 ELDLYPOP</code></pre>
-<div class="sourceCode" id="cb744"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb744-1"><a href="eda5.html#cb744-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(SUBJECT)</span></code></pre></div>
+<div class="sourceCode" id="cb745"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb745-1"><a href="eda5.html#cb745-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(SUBJECT)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   SUBJECT
 ##   &lt;chr&gt;  
 ## 1 TOT</code></pre>
-<div class="sourceCode" id="cb746"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb746-1"><a href="eda5.html#cb746-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(MEASURE)</span></code></pre></div>
+<div class="sourceCode" id="cb747"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb747-1"><a href="eda5.html#cb747-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(MEASURE)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   MEASURE
 ##   &lt;chr&gt;  
 ## 1 PC_POP</code></pre>
-<div class="sourceCode" id="cb748"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb748-1"><a href="eda5.html#cb748-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(FREQUENCY)</span></code></pre></div>
+<div class="sourceCode" id="cb749"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb749-1"><a href="eda5.html#cb749-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(FREQUENCY)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   FREQUENCY
 ##   &lt;chr&gt;    
 ## 1 A</code></pre>
-<div class="sourceCode" id="cb750"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb750-1"><a href="eda5.html#cb750-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">Flag Codes</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb751"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb751-1"><a href="eda5.html#cb751-1" aria-hidden="true" tabindex="-1"></a>elderly_population <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(<span class="st">`</span><span class="at">Flag Codes</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 1
 ##   `Flag Codes`
 ##   &lt;lgl&gt;       
@@ -2459,8 +2461,8 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 </div>
 <div id="transforming-1" class="section level4 hasAnchor" number="6.3.9.3">
 <h4><span class="header-section-number">6.3.9.3</span> Transforming<a href="eda5.html#transforming-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb752"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb752-1"><a href="eda5.html#cb752-1" aria-hidden="true" tabindex="-1"></a>elderly_pop <span class="ot">&lt;-</span> elderly_population <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">iso3c =</span> LOCATION, <span class="at">year =</span> TIME, <span class="at">value =</span> Value)</span></code></pre></div>
-<div class="sourceCode" id="cb753"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb753-1"><a href="eda5.html#cb753-1" aria-hidden="true" tabindex="-1"></a>elderly_pop</span></code></pre></div>
+<div class="sourceCode" id="cb753"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb753-1"><a href="eda5.html#cb753-1" aria-hidden="true" tabindex="-1"></a>elderly_pop <span class="ot">&lt;-</span> elderly_population <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">iso3c =</span> LOCATION, <span class="at">year =</span> TIME, <span class="at">value =</span> Value)</span></code></pre></div>
+<div class="sourceCode" id="cb754"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb754-1"><a href="eda5.html#cb754-1" aria-hidden="true" tabindex="-1"></a>elderly_pop</span></code></pre></div>
 <pre><code>## # A tibble: 2,909 × 3
 ##    iso3c  year value
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -2475,8 +2477,8 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 AUS    1978  9.24
 ## 10 AUS    1979  9.44
 ## # … with 2,899 more rows</code></pre>
-<div class="sourceCode" id="cb755"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb755-1"><a href="eda5.html#cb755-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="ot">&lt;-</span> elderly_pop <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&#39;iso3c&#39;</span>) </span>
-<span id="cb755-2"><a href="eda5.html#cb755-2" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext</span></code></pre></div>
+<div class="sourceCode" id="cb756"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb756-1"><a href="eda5.html#cb756-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="ot">&lt;-</span> elderly_pop <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(wb_countries, <span class="at">by =</span> <span class="st">&#39;iso3c&#39;</span>) </span>
+<span id="cb756-2"><a href="eda5.html#cb756-2" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext</span></code></pre></div>
 <pre><code>## # A tibble: 2,909 × 8
 ##    iso3c  year value country   region              income      lending other
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;               &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt;
@@ -2491,7 +2493,7 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ##  9 AUS    1978  9.24 Australia East Asia &amp; Pacific High income &lt;NA&gt;    &lt;NA&gt; 
 ## 10 AUS    1979  9.44 Australia East Asia &amp; Pacific High income &lt;NA&gt;    &lt;NA&gt; 
 ## # … with 2,899 more rows</code></pre>
-<div class="sourceCode" id="cb757"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb757-1"><a href="eda5.html#cb757-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(iso3c, country)</span></code></pre></div>
+<div class="sourceCode" id="cb758"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb758-1"><a href="eda5.html#cb758-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(iso3c, country)</span></code></pre></div>
 <pre><code>## # A tibble: 56 × 2
 ##    iso3c country       
 ##    &lt;chr&gt; &lt;chr&gt;         
@@ -2510,35 +2512,35 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 <div id="visualising-2" class="section level4 hasAnchor" number="6.3.9.4">
 <h4><span class="header-section-number">6.3.9.4</span> Visualising<a href="eda5.html#visualising-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The following render the same chart.</p>
-<div class="sourceCode" id="cb759"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb759-1"><a href="eda5.html#cb759-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>, <span class="sc">!</span><span class="fu">is.na</span>(region)) <span class="sc">%&gt;%</span></span>
-<span id="cb759-2"><a href="eda5.html#cb759-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(region, <span class="at">fill =</span> income)) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">coord_flip</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-317-1.png" width="672" /></p>
 <div class="sourceCode" id="cb760"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb760-1"><a href="eda5.html#cb760-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>, <span class="sc">!</span><span class="fu">is.na</span>(region)) <span class="sc">%&gt;%</span></span>
-<span id="cb760-2"><a href="eda5.html#cb760-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> region, <span class="at">fill =</span> income)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">orientation =</span> <span class="st">&quot;y&quot;</span>)</span></code></pre></div>
+<span id="cb760-2"><a href="eda5.html#cb760-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(region, <span class="at">fill =</span> income)) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">coord_flip</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-317-1.png" width="672" /></p>
+<div class="sourceCode" id="cb761"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb761-1"><a href="eda5.html#cb761-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>, <span class="sc">!</span><span class="fu">is.na</span>(region)) <span class="sc">%&gt;%</span></span>
+<span id="cb761-2"><a href="eda5.html#cb761-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> region, <span class="at">fill =</span> income)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">orientation =</span> <span class="st">&quot;y&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-318-1.png" width="672" /></p>
-<div class="sourceCode" id="cb761"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb761-1"><a href="eda5.html#cb761-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(iso3c <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;AUS&quot;</span>, <span class="st">&quot;CAN&quot;</span>, <span class="st">&quot;DEU&quot;</span>, <span class="st">&quot;FRA&quot;</span>, <span class="st">&quot;GBR&quot;</span>, <span class="st">&quot;JPN&quot;</span>, <span class="st">&quot;KOR&quot;</span>, <span class="st">&quot;USA&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb761-2"><a href="eda5.html#cb761-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb761-3"><a href="eda5.html#cb761-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-319-1.png" width="672" /></p>
-<div class="sourceCode" id="cb762"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb762-1"><a href="eda5.html#cb762-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<div class="sourceCode" id="cb762"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb762-1"><a href="eda5.html#cb762-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(iso3c <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;AUS&quot;</span>, <span class="st">&quot;CAN&quot;</span>, <span class="st">&quot;DEU&quot;</span>, <span class="st">&quot;FRA&quot;</span>, <span class="st">&quot;GBR&quot;</span>, <span class="st">&quot;JPN&quot;</span>, <span class="st">&quot;KOR&quot;</span>, <span class="st">&quot;USA&quot;</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb762-2"><a href="eda5.html#cb762-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb762-3"><a href="eda5.html#cb762-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb762-4"><a href="eda5.html#cb762-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;High income&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-320-1.png" width="672" /></p>
-<div class="sourceCode" id="cb763"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb763-1"><a href="eda5.html#cb763-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Upper middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb762-3"><a href="eda5.html#cb762-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-319-1.png" width="672" /></p>
+<div class="sourceCode" id="cb763"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb763-1"><a href="eda5.html#cb763-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb763-2"><a href="eda5.html#cb763-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> country)) <span class="sc">+</span></span>
 <span id="cb763-3"><a href="eda5.html#cb763-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb763-4"><a href="eda5.html#cb763-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Upper middle income&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-321-1.png" width="672" /></p>
-<div class="sourceCode" id="cb764"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb764-1"><a href="eda5.html#cb764-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb763-4"><a href="eda5.html#cb763-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;High income&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-320-1.png" width="672" /></p>
+<div class="sourceCode" id="cb764"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb764-1"><a href="eda5.html#cb764-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Upper middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb764-2"><a href="eda5.html#cb764-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> country)) <span class="sc">+</span></span>
 <span id="cb764-3"><a href="eda5.html#cb764-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb764-4"><a href="eda5.html#cb764-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Lower middle income&quot;</span>)</span></code></pre></div>
+<span id="cb764-4"><a href="eda5.html#cb764-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Upper middle income&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-321-1.png" width="672" /></p>
+<div class="sourceCode" id="cb765"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb765-1"><a href="eda5.html#cb765-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb765-2"><a href="eda5.html#cb765-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> value, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb765-3"><a href="eda5.html#cb765-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb765-4"><a href="eda5.html#cb765-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Lower middle income&quot;</span>)</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-322-1.png" width="672" />
 #### Modeling</p>
-<div class="sourceCode" id="cb765"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb765-1"><a href="eda5.html#cb765-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_all <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> </span>
-<span id="cb765-2"><a href="eda5.html#cb765-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
-<span id="cb765-3"><a href="eda5.html#cb765-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_all <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb766"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb766-1"><a href="eda5.html#cb766-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_all <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> </span>
+<span id="cb766-2"><a href="eda5.html#cb766-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
+<span id="cb766-3"><a href="eda5.html#cb766-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_all <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = value ~ year, data = .)
@@ -2557,9 +2559,9 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ## Residual standard error: 4.254 on 2907 degrees of freedom
 ## Multiple R-squared:  0.2054, Adjusted R-squared:  0.2051 
 ## F-statistic: 751.4 on 1 and 2907 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb767"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb767-1"><a href="eda5.html#cb767-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_high <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb767-2"><a href="eda5.html#cb767-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
-<span id="cb767-3"><a href="eda5.html#cb767-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_high <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb768"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb768-1"><a href="eda5.html#cb768-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_high <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;High income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb768-2"><a href="eda5.html#cb768-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
+<span id="cb768-3"><a href="eda5.html#cb768-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_high <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = value ~ year, data = .)
@@ -2578,9 +2580,9 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ## Residual standard error: 3.344 on 2077 degrees of freedom
 ## Multiple R-squared:  0.3344, Adjusted R-squared:  0.334 
 ## F-statistic:  1043 on 1 and 2077 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb769"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb769-1"><a href="eda5.html#cb769-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_upper_middle <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Upper middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb769-2"><a href="eda5.html#cb769-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
-<span id="cb769-3"><a href="eda5.html#cb769-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_upper_middle <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb770"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb770-1"><a href="eda5.html#cb770-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_upper_middle <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Upper middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb770-2"><a href="eda5.html#cb770-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
+<span id="cb770-3"><a href="eda5.html#cb770-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_upper_middle <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = value ~ year, data = .)
@@ -2599,9 +2601,9 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ## Residual standard error: 3.405 on 517 degrees of freedom
 ## Multiple R-squared:  0.196,  Adjusted R-squared:  0.1945 
 ## F-statistic: 126.1 on 1 and 517 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb771"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb771-1"><a href="eda5.html#cb771-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_lower_middle <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb771-2"><a href="eda5.html#cb771-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
-<span id="cb771-3"><a href="eda5.html#cb771-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_lower_middle <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb772"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb772-1"><a href="eda5.html#cb772-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_lower_middle <span class="ot">&lt;-</span> elderly_pop_ext <span class="sc">%&gt;%</span> <span class="fu">filter</span>(income <span class="sc">==</span> <span class="st">&quot;Lower middle income&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb772-2"><a href="eda5.html#cb772-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(value <span class="sc">~</span> year, .)</span>
+<span id="cb772-3"><a href="eda5.html#cb772-3" aria-hidden="true" tabindex="-1"></a>elderly_pop_lower_middle <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = value ~ year, data = .)
@@ -2620,8 +2622,8 @@ All aggreagated growth, growth by area, or growth by country of the internet use
 ## Residual standard error: 0.3097 on 102 degrees of freedom
 ## Multiple R-squared:  0.8935, Adjusted R-squared:  0.8924 
 ## F-statistic: 855.6 on 1 and 102 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb773"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb773-1"><a href="eda5.html#cb773-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_summary <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ALL =</span> elderly_pop_all,<span class="at">High =</span> elderly_pop_high, <span class="at">Upper_middle =</span> elderly_pop_upper_middle, <span class="at">Loer_middle =</span> elderly_pop_lower_middle)</span>
-<span id="cb773-2"><a href="eda5.html#cb773-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(elderly_pop_summary, <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb774"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb774-1"><a href="eda5.html#cb774-1" aria-hidden="true" tabindex="-1"></a>elderly_pop_summary <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ALL =</span> elderly_pop_all,<span class="at">High =</span> elderly_pop_high, <span class="at">Upper_middle =</span> elderly_pop_upper_middle, <span class="at">Loer_middle =</span> elderly_pop_lower_middle)</span>
+<span id="cb774-2"><a href="eda5.html#cb774-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(elderly_pop_summary, <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -2647,32 +2649,32 @@ Loer_middle
 (Intercept)
 </td>
 <td style="text-align:center;">
-−275.966
+-275.966
 </td>
 <td style="text-align:center;">
-−301.813
+-301.813
 </td>
 <td style="text-align:center;">
-−216.065
+-216.065
 </td>
 <td style="text-align:center;">
-−113.712
+-113.712
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 </tr>
 <tr>
@@ -2696,16 +2698,16 @@ year
 <td style="text-align:left;box-shadow: 0px 1px">
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 </tr>
 <tr>
@@ -2798,16 +2800,16 @@ BIC
 Log.Lik.
 </td>
 <td style="text-align:center;">
-−8338.381
+-8338.381
 </td>
 <td style="text-align:center;">
-−5458.809
+-5458.809
 </td>
 <td style="text-align:center;">
-−1371.326
+-1371.326
 </td>
 <td style="text-align:center;">
-−24.672
+-24.672
 </td>
 </tr>
 <tr>
@@ -2845,17 +2847,17 @@ RMSE
 <li>At the bottom in popular statistical tables, scroll to education</li>
 <li>download from “education at the primary, secondary and tertiary level”</li>
 </ol>
-<div class="sourceCode" id="cb774"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb774-1"><a href="eda5.html#cb774-1" aria-hidden="true" tabindex="-1"></a>edu_tmp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/edu.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>, <span class="at">n_max =</span><span class="dv">6942</span>) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb775"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb775-1"><a href="eda5.html#cb775-1" aria-hidden="true" tabindex="-1"></a>edu_tmp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/edu.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>, <span class="at">n_max =</span><span class="dv">6942</span>) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## New names:
 ## Rows: 6940 Columns: 7
 ## ── Column specification
-## ────────────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (2): Region/Country/Area,
-## Year
-## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ Specify the
-## column types or set `show_col_types = FALSE` to quiet this message.
+## ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot; chr (4): ...2, Series, Footnotes, Source dbl (2):
+## Region/Country/Area, Year num (1): Value
+## ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+## Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ## • `` -&gt; `...2`</code></pre>
-<div class="sourceCode" id="cb776"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb776-1"><a href="eda5.html#cb776-1" aria-hidden="true" tabindex="-1"></a>edu_tmp</span></code></pre></div>
+<div class="sourceCode" id="cb777"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb777-1"><a href="eda5.html#cb777-1" aria-hidden="true" tabindex="-1"></a>edu_tmp</span></code></pre></div>
 <pre><code>## # A tibble: 6,939 × 7
 ##    `Region/Country/Area` ...2                  Year Series  Value Footn…¹ Source
 ##                    &lt;dbl&gt; &lt;chr&gt;                &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
@@ -2873,8 +2875,8 @@ RMSE
 </div>
 <div id="transforming-2" class="section level4 hasAnchor" number="6.3.10.2">
 <h4><span class="header-section-number">6.3.10.2</span> Transforming<a href="eda5.html#transforming-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb778"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb778-1"><a href="eda5.html#cb778-1" aria-hidden="true" tabindex="-1"></a>edu_data <span class="ot">&lt;-</span> edu_tmp <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span><span class="sc">:</span>Source)</span>
-<span id="cb778-2"><a href="eda5.html#cb778-2" aria-hidden="true" tabindex="-1"></a>edu_data</span></code></pre></div>
+<div class="sourceCode" id="cb779"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb779-1"><a href="eda5.html#cb779-1" aria-hidden="true" tabindex="-1"></a>edu_data <span class="ot">&lt;-</span> edu_tmp <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="st">`</span><span class="at">Region/Country/Area</span><span class="st">`</span><span class="sc">:</span>Source)</span>
+<span id="cb779-2"><a href="eda5.html#cb779-2" aria-hidden="true" tabindex="-1"></a>edu_data</span></code></pre></div>
 <pre><code>## # A tibble: 6,939 × 7
 ##    `Region/Country/Area` ...2                  Year Series  Value Footn…¹ Source
 ##                    &lt;dbl&gt; &lt;chr&gt;                &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt; 
@@ -2889,13 +2891,13 @@ RMSE
 ##  9                     1 Total, all countrie…  2010 Stude… 6.97e5 &lt;NA&gt;    Unite…
 ## 10                     1 Total, all countrie…  2010 Gross… 1.04e2 &lt;NA&gt;    Unite…
 ## # … with 6,929 more rows, and abbreviated variable name ¹​Footnotes</code></pre>
-<div class="sourceCode" id="cb780"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb780-1"><a href="eda5.html#cb780-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(edu_data)</span></code></pre></div>
+<div class="sourceCode" id="cb781"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb781-1"><a href="eda5.html#cb781-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(edu_data)</span></code></pre></div>
 <pre><code>## [1] &quot;Region/Country/Area&quot; &quot;...2&quot;                &quot;Year&quot;               
 ## [4] &quot;Series&quot;              &quot;Value&quot;               &quot;Footnotes&quot;          
 ## [7] &quot;Source&quot;</code></pre>
-<div class="sourceCode" id="cb782"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb782-1"><a href="eda5.html#cb782-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="ot">&lt;-</span> edu_data <span class="sc">%&gt;%</span></span>
-<span id="cb782-2"><a href="eda5.html#cb782-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="st">`</span><span class="at">...2</span><span class="st">`</span>, <span class="at">year =</span> Year, <span class="at">series =</span> Series, <span class="at">value =</span> Value)</span>
-<span id="cb782-3"><a href="eda5.html#cb782-3" aria-hidden="true" tabindex="-1"></a>edu_tidy</span></code></pre></div>
+<div class="sourceCode" id="cb783"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb783-1"><a href="eda5.html#cb783-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="ot">&lt;-</span> edu_data <span class="sc">%&gt;%</span></span>
+<span id="cb783-2"><a href="eda5.html#cb783-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="st">`</span><span class="at">...2</span><span class="st">`</span>, <span class="at">year =</span> Year, <span class="at">series =</span> Series, <span class="at">value =</span> Value)</span>
+<span id="cb783-3"><a href="eda5.html#cb783-3" aria-hidden="true" tabindex="-1"></a>edu_tidy</span></code></pre></div>
 <pre><code>## # A tibble: 6,939 × 4
 ##    country                        year series                              value
 ##    &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;                               &lt;dbl&gt;
@@ -2910,7 +2912,7 @@ RMSE
 ##  9 Total, all countries or areas  2010 Students enrolled in primary educ… 6.97e5
 ## 10 Total, all countries or areas  2010 Gross enrollment ratio - Primary … 1.04e2
 ## # … with 6,929 more rows</code></pre>
-<div class="sourceCode" id="cb784"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb784-1"><a href="eda5.html#cb784-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(series)</span></code></pre></div>
+<div class="sourceCode" id="cb785"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb785-1"><a href="eda5.html#cb785-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(series)</span></code></pre></div>
 <pre><code>## # A tibble: 9 × 1
 ##   series                                                    
 ##   &lt;chr&gt;                                                     
@@ -2923,7 +2925,7 @@ RMSE
 ## 7 Gross enrollment ratio - Upper secondary level (male)     
 ## 8 Gross enrollment ratio - Upper secondary level (female)   
 ## 9 Students enrolled in primary education (thousands)</code></pre>
-<div class="sourceCode" id="cb786"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb786-1"><a href="eda5.html#cb786-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n_distinct</span>(country)) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb787"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb787-1"><a href="eda5.html#cb787-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n_distinct</span>(country)) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code></pre></div>
 <pre><code>## # A tibble: 15 × 2
 ##     year     n
 ##    &lt;dbl&gt; &lt;int&gt;
@@ -2946,16 +2948,16 @@ RMSE
 <div id="modeling-2" class="section level4 hasAnchor" number="6.3.10.3">
 <h4><span class="header-section-number">6.3.10.3</span> Modeling<a href="eda5.html#modeling-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>From the correlation, we can see R squared values.</p>
-<div class="sourceCode" id="cb788"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb788-1"><a href="eda5.html#cb788-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb788-2"><a href="eda5.html#cb788-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> drop_na <span class="sc">%&gt;%</span> </span>
-<span id="cb788-3"><a href="eda5.html#cb788-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb789"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb789-1"><a href="eda5.html#cb789-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb789-2"><a href="eda5.html#cb789-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> drop_na <span class="sc">%&gt;%</span> </span>
+<span id="cb789-3"><a href="eda5.html#cb789-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>()</span></code></pre></div>
 <pre><code>##             primary secondary  tertiary
 ## primary   1.0000000 0.9968584 0.9927488
 ## secondary 0.9968584 1.0000000 0.9987411
 ## tertiary  0.9927488 0.9987411 1.0000000</code></pre>
-<div class="sourceCode" id="cb790"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb790-1"><a href="eda5.html#cb790-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb790-2"><a href="eda5.html#cb790-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">p_male =</span> <span class="dv">4</span>, <span class="at">p_female =</span> <span class="dv">5</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">s_mele =</span> <span class="dv">7</span>, <span class="at">s_female =</span> <span class="dv">8</span>, <span class="at">tertiary =</span> <span class="dv">9</span>, <span class="at">t_male =</span> <span class="dv">10</span>, <span class="at">t_female =</span> <span class="dv">11</span>) <span class="sc">%&gt;%</span> drop_na <span class="sc">%&gt;%</span> </span>
-<span id="cb790-3"><a href="eda5.html#cb790-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb791"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb791-1"><a href="eda5.html#cb791-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb791-2"><a href="eda5.html#cb791-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">p_male =</span> <span class="dv">4</span>, <span class="at">p_female =</span> <span class="dv">5</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">s_mele =</span> <span class="dv">7</span>, <span class="at">s_female =</span> <span class="dv">8</span>, <span class="at">tertiary =</span> <span class="dv">9</span>, <span class="at">t_male =</span> <span class="dv">10</span>, <span class="at">t_female =</span> <span class="dv">11</span>) <span class="sc">%&gt;%</span> drop_na <span class="sc">%&gt;%</span> </span>
+<span id="cb791-3"><a href="eda5.html#cb791-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>()</span></code></pre></div>
 <pre><code>##               primary      p_male    p_female   secondary      s_mele
 ## primary    1.00000000 -0.04596002 -0.06210728  0.99681390 -0.05181750
 ## p_male    -0.04596002  1.00000000  0.91721150 -0.05414662  0.06900585
@@ -2976,26 +2978,26 @@ RMSE
 ## tertiary  -0.04502461  1.00000000 -0.02458739 -0.04279010
 ## t_male     0.85201284 -0.02458739  1.00000000  0.95488259
 ## t_female   0.91859578 -0.04279010  0.95488259  1.00000000</code></pre>
-<div class="sourceCode" id="cb792"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb792-1"><a href="eda5.html#cb792-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb792-2"><a href="eda5.html#cb792-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> </span>
-<span id="cb792-3"><a href="eda5.html#cb792-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb792-4"><a href="eda5.html#cb792-4" aria-hidden="true" tabindex="-1"></a>  drop_na <span class="sc">%&gt;%</span></span>
-<span id="cb792-5"><a href="eda5.html#cb792-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> secondary, <span class="at">y =</span> tertiary)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb793"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb793-1"><a href="eda5.html#cb793-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb793-2"><a href="eda5.html#cb793-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> </span>
+<span id="cb793-3"><a href="eda5.html#cb793-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb793-4"><a href="eda5.html#cb793-4" aria-hidden="true" tabindex="-1"></a>  drop_na <span class="sc">%&gt;%</span></span>
+<span id="cb793-5"><a href="eda5.html#cb793-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> secondary, <span class="at">y =</span> tertiary)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-336-1.png" width="672" /></p>
-<div class="sourceCode" id="cb794"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb794-1"><a href="eda5.html#cb794-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb794-2"><a href="eda5.html#cb794-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> </span>
-<span id="cb794-3"><a href="eda5.html#cb794-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb794-4"><a href="eda5.html#cb794-4" aria-hidden="true" tabindex="-1"></a>  drop_na <span class="sc">%&gt;%</span></span>
-<span id="cb794-5"><a href="eda5.html#cb794-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(secondary <span class="sc">&lt;</span> <span class="dv">100000</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb794-6"><a href="eda5.html#cb794-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> secondary, <span class="at">y =</span> tertiary)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb795"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb795-1"><a href="eda5.html#cb795-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb795-2"><a href="eda5.html#cb795-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> </span>
+<span id="cb795-3"><a href="eda5.html#cb795-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb795-4"><a href="eda5.html#cb795-4" aria-hidden="true" tabindex="-1"></a>  drop_na <span class="sc">%&gt;%</span></span>
+<span id="cb795-5"><a href="eda5.html#cb795-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(secondary <span class="sc">&lt;</span> <span class="dv">100000</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb795-6"><a href="eda5.html#cb795-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> secondary, <span class="at">y =</span> tertiary)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-337-1.png" width="672" /></p>
-<div class="sourceCode" id="cb796"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb796-1"><a href="eda5.html#cb796-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb796-2"><a href="eda5.html#cb796-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> </span>
-<span id="cb796-3"><a href="eda5.html#cb796-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb796-4"><a href="eda5.html#cb796-4" aria-hidden="true" tabindex="-1"></a>  drop_na <span class="sc">%&gt;%</span></span>
-<span id="cb796-5"><a href="eda5.html#cb796-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(tertiary <span class="sc">~</span> secondary, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb797"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb797-1"><a href="eda5.html#cb797-1" aria-hidden="true" tabindex="-1"></a>edu_tidy <span class="sc">%&gt;%</span> <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2019</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb797-2"><a href="eda5.html#cb797-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> series, <span class="at">values_from =</span> value) <span class="sc">%&gt;%</span> </span>
+<span id="cb797-3"><a href="eda5.html#cb797-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">primary =</span> <span class="dv">3</span>, <span class="at">secondary =</span> <span class="dv">6</span>, <span class="at">tertiary =</span> <span class="dv">9</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb797-4"><a href="eda5.html#cb797-4" aria-hidden="true" tabindex="-1"></a>  drop_na <span class="sc">%&gt;%</span></span>
+<span id="cb797-5"><a href="eda5.html#cb797-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(tertiary <span class="sc">~</span> secondary, .) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = tertiary ~ secondary, data = .)

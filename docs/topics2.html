@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers</title>
-  <meta name="description" content="Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers" />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <title>Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers 2021</title>
+  <meta name="description" content="Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers 2021" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers" />
+  <meta property="og:title" content="Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers 2021" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers" />
+  <meta name="twitter:title" content="Chapter 8 Topics in Exploratory Data Analysis II　 | Data Analysis for Researchers 2021" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="DS SL" />
 
 
-<meta name="date" content="2022-10-15" />
+<meta name="date" content="2022-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,10 +54,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.25/datatables.js"></script>
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.26/datatables.js"></script>
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Researchers</a></li>
+<li><a href="./">Data Analysis for Researchers 2021</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
@@ -652,7 +652,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Researchers 2021</a>
           </h1>
         </div>
 
@@ -680,16 +680,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">8.1</span> Classification IRIS dataset<a href="topics2.html#classification-iris-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="setup-1" class="section level3 hasAnchor" number="8.1.1">
 <h3><span class="header-section-number">8.1.1</span> Setup<a href="topics2.html#setup-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb999"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb999-1"><a href="topics2.html#cb999-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb999-2"><a href="topics2.html#cb999-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr) <span class="co"># a part of tidyverse package but not a core and need to load</span></span>
-<span id="cb999-3"><a href="topics2.html#cb999-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co"># handy comparison introduced by Prof. Kaizoji</span></span>
-<span id="cb999-4"><a href="topics2.html#cb999-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets) <span class="co"># attached as default</span></span></code></pre></div>
+<div class="sourceCode" id="cb995"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><a href="topics2.html#cb995-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb995-2"><a href="topics2.html#cb995-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelr) <span class="co"># a part of tidyverse package but not a core and need to load</span></span>
+<span id="cb995-3"><a href="topics2.html#cb995-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary) <span class="co"># handy comparison introduced by Prof. Kaizoji</span></span>
+<span id="cb995-4"><a href="topics2.html#cb995-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets) <span class="co"># attached as default</span></span></code></pre></div>
 </div>
 <div id="data-iris-1" class="section level3 hasAnchor" number="8.1.2">
 <h3><span class="header-section-number">8.1.2</span> Data: <code>iris</code><a href="topics2.html#data-iris-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We want to consider a problem to classify iris by species using the data provided.</p>
-<div class="sourceCode" id="cb1000"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1000-1"><a href="topics2.html#cb1000-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris) <span class="co"># renew the data</span></span>
-<span id="cb1000-2"><a href="topics2.html#cb1000-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code></pre></div>
+<div class="sourceCode" id="cb996"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb996-1"><a href="topics2.html#cb996-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris) <span class="co"># renew the data</span></span>
+<span id="cb996-2"><a href="topics2.html#cb996-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code></pre></div>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 ## 1          5.1         3.5          1.4         0.2  setosa
 ## 2          4.9         3.0          1.4         0.2  setosa
@@ -698,10 +698,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5          5.0         3.6          1.4         0.2  setosa
 ## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
 <p>Since it is easier to handle data and we add many columns later, we shorten the column names.</p>
-<div class="sourceCode" id="cb1002"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1002-1"><a href="topics2.html#cb1002-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(iris) <span class="co">#%&gt;%</span></span>
-<span id="cb1002-2"><a href="topics2.html#cb1002-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(iris_tbl) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;sl&quot;</span>, <span class="st">&quot;sw&quot;</span>, <span class="st">&quot;pl&quot;</span>, <span class="st">&quot;pw&quot;</span>, <span class="st">&quot;species&quot;</span>)</span>
-<span id="cb1002-3"><a href="topics2.html#cb1002-3" aria-hidden="true" tabindex="-1"></a><span class="co">#rename(sl = Sepal.Length, sw = Sepal.Width, pl = Petal.Length, pw = Petal.Width, species = Species)</span></span>
-<span id="cb1002-4"><a href="topics2.html#cb1002-4" aria-hidden="true" tabindex="-1"></a>iris_tbl</span></code></pre></div>
+<div class="sourceCode" id="cb998"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb998-1"><a href="topics2.html#cb998-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(iris) <span class="co">#%&gt;%</span></span>
+<span id="cb998-2"><a href="topics2.html#cb998-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(iris_tbl) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;sl&quot;</span>, <span class="st">&quot;sw&quot;</span>, <span class="st">&quot;pl&quot;</span>, <span class="st">&quot;pw&quot;</span>, <span class="st">&quot;species&quot;</span>)</span>
+<span id="cb998-3"><a href="topics2.html#cb998-3" aria-hidden="true" tabindex="-1"></a><span class="co">#rename(sl = Sepal.Length, sw = Sepal.Width, pl = Petal.Length, pw = Petal.Width, species = Species)</span></span>
+<span id="cb998-4"><a href="topics2.html#cb998-4" aria-hidden="true" tabindex="-1"></a>iris_tbl</span></code></pre></div>
 <pre><code>## # A tibble: 150 × 5
 ##       sl    sw    pl    pw species
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  
@@ -718,7 +718,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## # … with 140 more rows</code></pre>
 <p>Before we start, let us look at the basic imformation of the data.
 There are three kinds of species.</p>
-<div class="sourceCode" id="cb1004"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1004-1"><a href="topics2.html#cb1004-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1000"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1000-1"><a href="topics2.html#cb1000-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>##        sl              sw              pl              pw       
 ##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
 ##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
@@ -736,10 +736,10 @@ There are three kinds of species.</p>
 <div id="visualization-2" class="section level4 hasAnchor" number="8.1.2.1">
 <h4><span class="header-section-number">8.1.2.1</span> Visualization<a href="topics2.html#visualization-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The following already tell something about species.</p>
-<div class="sourceCode" id="cb1006"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1006-1"><a href="topics2.html#cb1006-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pw,pl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1002"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1002-1"><a href="topics2.html#cb1002-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pw,pl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-422-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1007"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1007-1"><a href="topics2.html#cb1007-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
-<span id="cb1007-2"><a href="topics2.html#cb1007-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">sl_mean =</span> <span class="fu">mean</span>(sl), <span class="at">sw_mean =</span> <span class="fu">mean</span>(sw), <span class="at">pl_mean =</span> <span class="fu">mean</span>(pl), <span class="at">pw_mean =</span> <span class="fu">mean</span>(pw))</span></code></pre></div>
+<div class="sourceCode" id="cb1003"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1003-1"><a href="topics2.html#cb1003-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb1003-2"><a href="topics2.html#cb1003-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">sl_mean =</span> <span class="fu">mean</span>(sl), <span class="at">sw_mean =</span> <span class="fu">mean</span>(sw), <span class="at">pl_mean =</span> <span class="fu">mean</span>(pl), <span class="at">pw_mean =</span> <span class="fu">mean</span>(pw))</span></code></pre></div>
 <pre><code>## # A tibble: 3 × 5
 ##   species    sl_mean sw_mean pl_mean pw_mean
 ##   &lt;fct&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -748,13 +748,13 @@ There are three kinds of species.</p>
 ## 3 virginica     6.59    2.97    5.55   2.03</code></pre>
 <p>The mean of setosa’s petal length is very small compared with others. So it may be possible to classify setosa by petal lenght.</p>
 <p>The following are a boxplot and a frequency polygon of the data by petal length.</p>
-<div class="sourceCode" id="cb1009"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1009-1"><a href="topics2.html#cb1009-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pl, <span class="at">fill =</span> species)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1005"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1005-1"><a href="topics2.html#cb1005-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pl, <span class="at">fill =</span> species)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-424-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1010"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1010-1"><a href="topics2.html#cb1010-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_freqpoly</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1006"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1006-1"><a href="topics2.html#cb1006-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(pl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_freqpoly</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-425-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1012"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1012-1"><a href="topics2.html#cb1012-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
-<span id="cb1012-2"><a href="topics2.html#cb1012-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">min_of_petal_lenght =</span> <span class="fu">min</span>(pl), <span class="at">max_of_petal_lenght =</span> <span class="fu">max</span>(pl))</span></code></pre></div>
+<div class="sourceCode" id="cb1008"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1008-1"><a href="topics2.html#cb1008-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb1008-2"><a href="topics2.html#cb1008-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">min_of_petal_lenght =</span> <span class="fu">min</span>(pl), <span class="at">max_of_petal_lenght =</span> <span class="fu">max</span>(pl))</span></code></pre></div>
 <pre><code>## # A tibble: 3 × 3
 ##   species    min_of_petal_lenght max_of_petal_lenght
 ##   &lt;fct&gt;                    &lt;dbl&gt;               &lt;dbl&gt;
@@ -762,8 +762,8 @@ There are three kinds of species.</p>
 ## 2 versicolor                 3                   5.1
 ## 3 virginica                  4.5                 6.9</code></pre>
 <p>Hence if we set the threshhold to be around 2.5, we can separate setosa.</p>
-<div class="sourceCode" id="cb1014"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1014-1"><a href="topics2.html#cb1014-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2 <span class="ot">&lt;-</span> iris_tbl <span class="sc">%&gt;%</span> <span class="fu">filter</span>(pl <span class="sc">&gt;=</span> <span class="fl">2.5</span>)</span>
-<span id="cb1014-2"><a href="topics2.html#cb1014-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iris_tbl2)</span></code></pre></div>
+<div class="sourceCode" id="cb1010"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1010-1"><a href="topics2.html#cb1010-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2 <span class="ot">&lt;-</span> iris_tbl <span class="sc">%&gt;%</span> <span class="fu">filter</span>(pl <span class="sc">&gt;=</span> <span class="fl">2.5</span>)</span>
+<span id="cb1010-2"><a href="topics2.html#cb1010-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iris_tbl2)</span></code></pre></div>
 <pre><code>##        sl              sw              pl              pw       
 ##  Min.   :4.900   Min.   :2.000   Min.   :3.000   Min.   :1.000  
 ##  1st Qu.:5.800   1st Qu.:2.700   1st Qu.:4.375   1st Qu.:1.300  
@@ -779,15 +779,15 @@ There are three kinds of species.</p>
 ##                 
 ## </code></pre>
 <p>Since it looks difficult to classify versicolor and virginica only by petal length, let us look at other variables.</p>
-<div class="sourceCode" id="cb1016"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1016-1"><a href="topics2.html#cb1016-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(sl,pl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1012"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1012-1"><a href="topics2.html#cb1012-1" aria-hidden="true" tabindex="-1"></a>iris_tbl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(sl,pl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-428-1.png" width="672" /></p>
 </div>
 <div id="sepal-length" class="section level4 hasAnchor" number="8.1.2.2">
 <h4><span class="header-section-number">8.1.2.2</span> Sepal Length<a href="topics2.html#sepal-length" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>You can find different features of charts, boxplots and frequency polygons of sepal length.</p>
-<div class="sourceCode" id="cb1017"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1017-1"><a href="topics2.html#cb1017-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(sl, <span class="at">fill =</span> species)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1013"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1013-1"><a href="topics2.html#cb1013-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(sl, <span class="at">fill =</span> species)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-429-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1018"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1018-1"><a href="topics2.html#cb1018-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(sl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_freqpoly</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1014"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1014-1"><a href="topics2.html#cb1014-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(sl, <span class="at">color =</span> species)) <span class="sc">+</span> <span class="fu">geom_freqpoly</span>()</span></code></pre></div>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-430-1.png" width="672" /></p>
 </div>
@@ -795,9 +795,9 @@ There are three kinds of species.</p>
 <div id="binary-classification" class="section level3 hasAnchor" number="8.1.3">
 <h3><span class="header-section-number">8.1.3</span> Binary classification<a href="topics2.html#binary-classification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let us set a numerical marker 1 to virginica.</p>
-<div class="sourceCode" id="cb1020"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1020-1"><a href="topics2.html#cb1020-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="ot">&lt;-</span> iris_tbl2 <span class="sc">%&gt;%</span> </span>
-<span id="cb1020-2"><a href="topics2.html#cb1020-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">virginica =</span> <span class="fu">as.numeric</span>(species <span class="sc">==</span> <span class="st">&#39;virginica&#39;</span>))</span>
-<span id="cb1020-3"><a href="topics2.html#cb1020-3" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="sc">-</span>virginica)</span></code></pre></div>
+<div class="sourceCode" id="cb1016"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1016-1"><a href="topics2.html#cb1016-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="ot">&lt;-</span> iris_tbl2 <span class="sc">%&gt;%</span> </span>
+<span id="cb1016-2"><a href="topics2.html#cb1016-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">virginica =</span> <span class="fu">as.numeric</span>(species <span class="sc">==</span> <span class="st">&#39;virginica&#39;</span>))</span>
+<span id="cb1016-3"><a href="topics2.html#cb1016-3" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="sc">-</span>virginica)</span></code></pre></div>
 <pre><code>## # A tibble: 100 × 6
 ##       sl    sw    pl    pw species   virginica
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;         &lt;dbl&gt;
@@ -814,16 +814,16 @@ There are three kinds of species.</p>
 ## # … with 90 more rows</code></pre>
 <div id="manual-classificaiton-using-boxplot" class="section level4 hasAnchor" number="8.1.3.1">
 <h4><span class="header-section-number">8.1.3.1</span> Manual Classificaiton Using Boxplot<a href="topics2.html#manual-classificaiton-using-boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1022"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1022-1"><a href="topics2.html#cb1022-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
-<span id="cb1022-2"><a href="topics2.html#cb1022-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">min =</span> <span class="fu">quantile</span>(sl)[<span class="dv">1</span>], <span class="st">`</span><span class="at">25%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(sl)[<span class="dv">2</span>], <span class="st">`</span><span class="at">55%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(sl)[<span class="dv">3</span>], <span class="st">`</span><span class="at">75%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(sl)[<span class="dv">4</span>], <span class="at">max =</span> <span class="fu">quantile</span>(sl)[<span class="dv">5</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb1018"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1018-1"><a href="topics2.html#cb1018-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span> </span>
+<span id="cb1018-2"><a href="topics2.html#cb1018-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">min =</span> <span class="fu">quantile</span>(sl)[<span class="dv">1</span>], <span class="st">`</span><span class="at">25%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(sl)[<span class="dv">2</span>], <span class="st">`</span><span class="at">55%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(sl)[<span class="dv">3</span>], <span class="st">`</span><span class="at">75%</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(sl)[<span class="dv">4</span>], <span class="at">max =</span> <span class="fu">quantile</span>(sl)[<span class="dv">5</span>])</span></code></pre></div>
 <pre><code>## # A tibble: 2 × 6
 ##   species      min `25%` `55%` `75%`   max
 ##   &lt;fct&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1 versicolor   4.9  5.6    5.9   6.3   7  
 ## 2 virginica    4.9  6.22   6.5   6.9   7.9</code></pre>
 <p>By the boxplot, the value between 6.225 and 6.3 can be a candidate. So let us take 6.263.</p>
-<div class="sourceCode" id="cb1024"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1024-1"><a href="topics2.html#cb1024-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="ot">&lt;-</span> iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">v0 =</span> <span class="fu">as.integer</span>(sl <span class="sc">&gt;</span> <span class="fl">6.263</span>))</span>
-<span id="cb1024-2"><a href="topics2.html#cb1024-2" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext</span></code></pre></div>
+<div class="sourceCode" id="cb1020"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1020-1"><a href="topics2.html#cb1020-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext <span class="ot">&lt;-</span> iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">v0 =</span> <span class="fu">as.integer</span>(sl <span class="sc">&gt;</span> <span class="fl">6.263</span>))</span>
+<span id="cb1020-2"><a href="topics2.html#cb1020-2" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext</span></code></pre></div>
 <pre><code>## # A tibble: 100 × 7
 ##       sl    sw    pl    pw species    virginica    v0
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt; &lt;int&gt;
@@ -841,8 +841,8 @@ There are three kinds of species.</p>
 </div>
 <div id="logistic-model-using-glm-general-linear-model-sepal-length" class="section level4 hasAnchor" number="8.1.3.2">
 <h4><span class="header-section-number">8.1.3.2</span> Logistic Model Using <code>glm()</code> General Linear Model: Sepal Length<a href="topics2.html#logistic-model-using-glm-general-linear-model-sepal-length" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1026"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1026-1"><a href="topics2.html#cb1026-1" aria-hidden="true" tabindex="-1"></a>iris_mod1 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1026-2"><a href="topics2.html#cb1026-2" aria-hidden="true" tabindex="-1"></a>iris_mod1 <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1022"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1022-1"><a href="topics2.html#cb1022-1" aria-hidden="true" tabindex="-1"></a>iris_mod1 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1022-2"><a href="topics2.html#cb1022-2" aria-hidden="true" tabindex="-1"></a>iris_mod1 <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## glm(formula = virginica ~ sl, family = binomial, data = .)
@@ -865,11 +865,11 @@ There are three kinds of species.</p>
 ## AIC: 114.55
 ## 
 ## Number of Fisher Scoring iterations: 4</code></pre>
-<div class="sourceCode" id="cb1028"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1028-1"><a href="topics2.html#cb1028-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="ot">&lt;-</span> iris_tbl2ext <span class="sc">%&gt;%</span> </span>
-<span id="cb1028-2"><a href="topics2.html#cb1028-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod1, <span class="at">var =</span> <span class="st">&quot;pred_1&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1028-3"><a href="topics2.html#cb1028-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(iris_mod1, <span class="at">var =</span> <span class="st">&quot;resid_1&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1028-4"><a href="topics2.html#cb1028-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v1 =</span> <span class="fu">as.integer</span>(pred_1 <span class="sc">&gt;=</span> <span class="fl">0.5</span>))</span>
-<span id="cb1028-5"><a href="topics2.html#cb1028-5" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
+<div class="sourceCode" id="cb1024"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1024-1"><a href="topics2.html#cb1024-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="ot">&lt;-</span> iris_tbl2ext <span class="sc">%&gt;%</span> </span>
+<span id="cb1024-2"><a href="topics2.html#cb1024-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod1, <span class="at">var =</span> <span class="st">&quot;pred_1&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1024-3"><a href="topics2.html#cb1024-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(iris_mod1, <span class="at">var =</span> <span class="st">&quot;resid_1&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1024-4"><a href="topics2.html#cb1024-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v1 =</span> <span class="fu">as.integer</span>(pred_1 <span class="sc">&gt;=</span> <span class="fl">0.5</span>))</span>
+<span id="cb1024-5"><a href="topics2.html#cb1024-5" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
 <pre><code>## # A tibble: 100 × 10
 ##       sl    sw    pl    pw species   virginica    v0 pred_1 resid_1    v1
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;         &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;
@@ -884,24 +884,24 @@ There are three kinds of species.</p>
 ##  9   7.2   3.6   6.1   2.5 virginica         1     1  0.872  -0.922     1
 ## 10   7.2   3.2   6     1.8 virginica         1     1  0.872  -0.922     1
 ## # … with 90 more rows</code></pre>
-<div class="sourceCode" id="cb1030"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1030-1"><a href="topics2.html#cb1030-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb1030-2"><a href="topics2.html#cb1030-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> sl, <span class="at">y =</span> virginica, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb1030-3"><a href="topics2.html#cb1030-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> sl, <span class="at">y =</span> pred_1))</span></code></pre></div>
+<div class="sourceCode" id="cb1026"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1026-1"><a href="topics2.html#cb1026-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb1026-2"><a href="topics2.html#cb1026-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> sl, <span class="at">y =</span> virginica, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb1026-3"><a href="topics2.html#cb1026-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> sl, <span class="at">y =</span> pred_1))</span></code></pre></div>
 <p><img src="bookdownproj_files/figure-html/unnamed-chunk-436-1.png" width="672" /></p>
-<div class="sourceCode" id="cb1031"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1031-1"><a href="topics2.html#cb1031-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v0 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1027"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1027-1"><a href="topics2.html#cb1027-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v0 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.74</code></pre>
-<div class="sourceCode" id="cb1033"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1033-1"><a href="topics2.html#cb1033-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v1 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1029"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1029-1"><a href="topics2.html#cb1029-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v1 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.74</code></pre>
 <p>For both models, 74% of virginica was classified as virginica.</p>
 </div>
 <div id="confusion-matrices" class="section level4 hasAnchor" number="8.1.3.3">
 <h4><span class="header-section-number">8.1.3.3</span> Confusion Matrices<a href="topics2.html#confusion-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1035"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1035-1"><a href="topics2.html#cb1035-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v0 <span class="sc">+</span> virginica, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1031"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1031-1"><a href="topics2.html#cb1031-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v0 <span class="sc">+</span> virginica, .)</span></code></pre></div>
 <pre><code>##    virginica
 ## v0   0  1
 ##   0 36 13
 ##   1 14 37</code></pre>
-<div class="sourceCode" id="cb1037"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1037-1"><a href="topics2.html#cb1037-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v1 <span class="sc">+</span> virginica, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1033"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1033-1"><a href="topics2.html#cb1033-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_1 <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v1 <span class="sc">+</span> virginica, .)</span></code></pre></div>
 <pre><code>##    virginica
 ## v1   0  1
 ##   0 36 13
@@ -912,17 +912,17 @@ There are three kinds of species.</p>
 <h3><span class="header-section-number">8.1.4</span> Various Logistic Models<a href="topics2.html#various-logistic-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="one-variable" class="section level4 hasAnchor" number="8.1.4.1">
 <h4><span class="header-section-number">8.1.4.1</span> One Variable<a href="topics2.html#one-variable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1039"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1039-1"><a href="topics2.html#cb1039-1" aria-hidden="true" tabindex="-1"></a>iris_mod2 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1039-2"><a href="topics2.html#cb1039-2" aria-hidden="true" tabindex="-1"></a>iris_mod3 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>pl, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1039-3"><a href="topics2.html#cb1039-3" aria-hidden="true" tabindex="-1"></a>iris_mod4 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
-<div class="sourceCode" id="cb1040"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1040-1"><a href="topics2.html#cb1040-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="ot">&lt;-</span> iris_tbl2ext_1 <span class="sc">%&gt;%</span> </span>
-<span id="cb1040-2"><a href="topics2.html#cb1040-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod2, <span class="at">var =</span> <span class="st">&quot;pred_2&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1040-3"><a href="topics2.html#cb1040-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v2 =</span> <span class="fu">as.integer</span>(pred_2 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1040-4"><a href="topics2.html#cb1040-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod3, <span class="at">var =</span> <span class="st">&quot;pred_3&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1040-5"><a href="topics2.html#cb1040-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v3 =</span> <span class="fu">as.integer</span>(pred_3 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1040-6"><a href="topics2.html#cb1040-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod4, <span class="at">var =</span> <span class="st">&quot;pred_4&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1040-7"><a href="topics2.html#cb1040-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v4 =</span> <span class="fu">as.integer</span>(pred_4 <span class="sc">&gt;=</span> <span class="fl">0.5</span>))</span>
-<span id="cb1040-8"><a href="topics2.html#cb1040-8" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
+<div class="sourceCode" id="cb1035"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1035-1"><a href="topics2.html#cb1035-1" aria-hidden="true" tabindex="-1"></a>iris_mod2 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1035-2"><a href="topics2.html#cb1035-2" aria-hidden="true" tabindex="-1"></a>iris_mod3 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>pl, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1035-3"><a href="topics2.html#cb1035-3" aria-hidden="true" tabindex="-1"></a>iris_mod4 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1036"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1036-1"><a href="topics2.html#cb1036-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="ot">&lt;-</span> iris_tbl2ext_1 <span class="sc">%&gt;%</span> </span>
+<span id="cb1036-2"><a href="topics2.html#cb1036-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod2, <span class="at">var =</span> <span class="st">&quot;pred_2&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1036-3"><a href="topics2.html#cb1036-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v2 =</span> <span class="fu">as.integer</span>(pred_2 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1036-4"><a href="topics2.html#cb1036-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod3, <span class="at">var =</span> <span class="st">&quot;pred_3&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1036-5"><a href="topics2.html#cb1036-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v3 =</span> <span class="fu">as.integer</span>(pred_3 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1036-6"><a href="topics2.html#cb1036-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod4, <span class="at">var =</span> <span class="st">&quot;pred_4&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1036-7"><a href="topics2.html#cb1036-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v4 =</span> <span class="fu">as.integer</span>(pred_4 <span class="sc">&gt;=</span> <span class="fl">0.5</span>))</span>
+<span id="cb1036-8"><a href="topics2.html#cb1036-8" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
 <pre><code>## # A tibble: 100 × 16
 ##       sl    sw    pl    pw species   virginica    v0 pred_1 resid_1    v1 pred_2
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;         &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;
@@ -938,16 +938,16 @@ There are three kinds of species.</p>
 ## 10   7.2   3.2   6     1.8 virginica         1     1  0.872  -0.922     1  0.665
 ## # … with 90 more rows, and 5 more variables: v2 &lt;int&gt;, pred_3 &lt;dbl&gt;, v3 &lt;int&gt;,
 ## #   pred_4 &lt;dbl&gt;, v4 &lt;int&gt;</code></pre>
-<div class="sourceCode" id="cb1042"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1042-1"><a href="topics2.html#cb1042-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v2 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1038"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1038-1"><a href="topics2.html#cb1038-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v2 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.62</code></pre>
-<div class="sourceCode" id="cb1044"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1044-1"><a href="topics2.html#cb1044-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v3 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1040"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1040-1"><a href="topics2.html#cb1040-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v3 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.94</code></pre>
-<div class="sourceCode" id="cb1046"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1046-1"><a href="topics2.html#cb1046-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v4 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1042"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1042-1"><a href="topics2.html#cb1042-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_one <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v4 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.92</code></pre>
 </div>
 <div id="model-summary" class="section level4 hasAnchor" number="8.1.4.2">
 <h4><span class="header-section-number">8.1.4.2</span> Model Summary<a href="topics2.html#model-summary" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1048"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1048-1"><a href="topics2.html#cb1048-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">mod1 =</span> iris_mod1, <span class="at">mod2 =</span> iris_mod2, <span class="at">mod3 =</span> iris_mod3, <span class="at">mod4 =</span> iris_mod3), <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1044"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1044-1"><a href="topics2.html#cb1044-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">mod1 =</span> iris_mod1, <span class="at">mod2 =</span> iris_mod2, <span class="at">mod3 =</span> iris_mod3, <span class="at">mod4 =</span> iris_mod3), <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -973,32 +973,32 @@ mod4
 (Intercept)
 </td>
 <td style="text-align:center;">
-−12.571
+-12.571
 </td>
 <td style="text-align:center;">
-−6.001
+-6.001
 </td>
 <td style="text-align:center;">
-−43.781
+-43.781
 </td>
 <td style="text-align:center;">
-−43.781
+-43.781
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 (0.004)
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 </tr>
 <tr>
@@ -1019,7 +1019,7 @@ sl
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 </td>
@@ -1078,10 +1078,10 @@ pl
 <td style="text-align:center;box-shadow: 0px 1px">
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 </tr>
 <tr>
@@ -1140,16 +1140,16 @@ BIC
 Log.Lik.
 </td>
 <td style="text-align:center;">
-−55.273
+-55.273
 </td>
 <td style="text-align:center;">
-−64.290
+-64.290
 </td>
 <td style="text-align:center;">
-−16.716
+-16.716
 </td>
 <td style="text-align:center;">
-−16.716
+-16.716
 </td>
 </tr>
 <tr>
@@ -1174,26 +1174,26 @@ RMSE
 </div>
 <div id="two-variables" class="section level4 hasAnchor" number="8.1.4.3">
 <h4><span class="header-section-number">8.1.4.3</span> Two Variables<a href="topics2.html#two-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1049"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1049-1"><a href="topics2.html#cb1049-1" aria-hidden="true" tabindex="-1"></a>iris_mod12 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1049-2"><a href="topics2.html#cb1049-2" aria-hidden="true" tabindex="-1"></a>iris_mod13 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> pl, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1049-3"><a href="topics2.html#cb1049-3" aria-hidden="true" tabindex="-1"></a>iris_mod14 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1049-4"><a href="topics2.html#cb1049-4" aria-hidden="true" tabindex="-1"></a>iris_mod23 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw <span class="sc">+</span> pl, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1049-5"><a href="topics2.html#cb1049-5" aria-hidden="true" tabindex="-1"></a>iris_mod24 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1049-6"><a href="topics2.html#cb1049-6" aria-hidden="true" tabindex="-1"></a>iris_mod34 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
-<div class="sourceCode" id="cb1050"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1050-1"><a href="topics2.html#cb1050-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="ot">&lt;-</span> iris_tbl2ext_one <span class="sc">%&gt;%</span> </span>
-<span id="cb1050-2"><a href="topics2.html#cb1050-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod12, <span class="at">var =</span> <span class="st">&quot;pred_12&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1050-3"><a href="topics2.html#cb1050-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v12 =</span> <span class="fu">as.integer</span>(pred_12 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1050-4"><a href="topics2.html#cb1050-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod13, <span class="at">var =</span> <span class="st">&quot;pred_13&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1050-5"><a href="topics2.html#cb1050-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v13 =</span> <span class="fu">as.integer</span>(pred_13 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1050-6"><a href="topics2.html#cb1050-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod14, <span class="at">var =</span> <span class="st">&quot;pred_14&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1050-7"><a href="topics2.html#cb1050-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v14 =</span> <span class="fu">as.integer</span>(pred_14 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1050-8"><a href="topics2.html#cb1050-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod23, <span class="at">var =</span> <span class="st">&quot;pred_23&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1050-9"><a href="topics2.html#cb1050-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v23 =</span> <span class="fu">as.integer</span>(pred_23 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1050-10"><a href="topics2.html#cb1050-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod24, <span class="at">var =</span> <span class="st">&quot;pred_24&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1050-11"><a href="topics2.html#cb1050-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v24 =</span> <span class="fu">as.integer</span>(pred_24 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1050-12"><a href="topics2.html#cb1050-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod34, <span class="at">var =</span> <span class="st">&quot;pred_34&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1050-13"><a href="topics2.html#cb1050-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v34 =</span> <span class="fu">as.integer</span>(pred_34 <span class="sc">&gt;=</span> <span class="fl">0.5</span>))</span>
-<span id="cb1050-14"><a href="topics2.html#cb1050-14" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
+<div class="sourceCode" id="cb1045"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1045-1"><a href="topics2.html#cb1045-1" aria-hidden="true" tabindex="-1"></a>iris_mod12 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1045-2"><a href="topics2.html#cb1045-2" aria-hidden="true" tabindex="-1"></a>iris_mod13 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> pl, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1045-3"><a href="topics2.html#cb1045-3" aria-hidden="true" tabindex="-1"></a>iris_mod14 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1045-4"><a href="topics2.html#cb1045-4" aria-hidden="true" tabindex="-1"></a>iris_mod23 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw <span class="sc">+</span> pl, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1045-5"><a href="topics2.html#cb1045-5" aria-hidden="true" tabindex="-1"></a>iris_mod24 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1045-6"><a href="topics2.html#cb1045-6" aria-hidden="true" tabindex="-1"></a>iris_mod34 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1046"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1046-1"><a href="topics2.html#cb1046-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="ot">&lt;-</span> iris_tbl2ext_one <span class="sc">%&gt;%</span> </span>
+<span id="cb1046-2"><a href="topics2.html#cb1046-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod12, <span class="at">var =</span> <span class="st">&quot;pred_12&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1046-3"><a href="topics2.html#cb1046-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v12 =</span> <span class="fu">as.integer</span>(pred_12 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1046-4"><a href="topics2.html#cb1046-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod13, <span class="at">var =</span> <span class="st">&quot;pred_13&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1046-5"><a href="topics2.html#cb1046-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v13 =</span> <span class="fu">as.integer</span>(pred_13 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1046-6"><a href="topics2.html#cb1046-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod14, <span class="at">var =</span> <span class="st">&quot;pred_14&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1046-7"><a href="topics2.html#cb1046-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v14 =</span> <span class="fu">as.integer</span>(pred_14 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1046-8"><a href="topics2.html#cb1046-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod23, <span class="at">var =</span> <span class="st">&quot;pred_23&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1046-9"><a href="topics2.html#cb1046-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v23 =</span> <span class="fu">as.integer</span>(pred_23 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1046-10"><a href="topics2.html#cb1046-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod24, <span class="at">var =</span> <span class="st">&quot;pred_24&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1046-11"><a href="topics2.html#cb1046-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v24 =</span> <span class="fu">as.integer</span>(pred_24 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1046-12"><a href="topics2.html#cb1046-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod34, <span class="at">var =</span> <span class="st">&quot;pred_34&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1046-13"><a href="topics2.html#cb1046-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v34 =</span> <span class="fu">as.integer</span>(pred_34 <span class="sc">&gt;=</span> <span class="fl">0.5</span>))</span>
+<span id="cb1046-14"><a href="topics2.html#cb1046-14" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
 <pre><code>## # A tibble: 100 × 28
 ##       sl    sw    pl    pw species   virginica    v0 pred_1 resid_1    v1 pred_2
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;         &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;
@@ -1211,22 +1211,22 @@ RMSE
 ## #   pred_4 &lt;dbl&gt;, v4 &lt;int&gt;, pred_12 &lt;dbl&gt;, v12 &lt;int&gt;, pred_13 &lt;dbl&gt;, v13 &lt;int&gt;,
 ## #   pred_14 &lt;dbl&gt;, v14 &lt;int&gt;, pred_23 &lt;dbl&gt;, v23 &lt;int&gt;, pred_24 &lt;dbl&gt;,
 ## #   v24 &lt;int&gt;, pred_34 &lt;dbl&gt;, v34 &lt;int&gt;</code></pre>
-<div class="sourceCode" id="cb1052"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1052-1"><a href="topics2.html#cb1052-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v12 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1048"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1048-1"><a href="topics2.html#cb1048-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v12 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.74</code></pre>
-<div class="sourceCode" id="cb1054"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1054-1"><a href="topics2.html#cb1054-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v13 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1050"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1050-1"><a href="topics2.html#cb1050-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v13 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.96</code></pre>
-<div class="sourceCode" id="cb1056"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1056-1"><a href="topics2.html#cb1056-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v14 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1052"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1052-1"><a href="topics2.html#cb1052-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v14 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.92</code></pre>
-<div class="sourceCode" id="cb1058"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1058-1"><a href="topics2.html#cb1058-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v23 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1054"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1054-1"><a href="topics2.html#cb1054-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v23 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.92</code></pre>
-<div class="sourceCode" id="cb1060"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1060-1"><a href="topics2.html#cb1060-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v24 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1056"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1056-1"><a href="topics2.html#cb1056-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v24 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.94</code></pre>
-<div class="sourceCode" id="cb1062"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1062-1"><a href="topics2.html#cb1062-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v34 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1058"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1058-1"><a href="topics2.html#cb1058-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_two <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v34 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.94</code></pre>
 </div>
 <div id="model-summary-1" class="section level4 hasAnchor" number="8.1.4.4">
 <h4><span class="header-section-number">8.1.4.4</span> Model Summary<a href="topics2.html#model-summary-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1064"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1064-1"><a href="topics2.html#cb1064-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">mod12 =</span> iris_mod12, <span class="at">mod13 =</span> iris_mod13, <span class="at">mod14 =</span> iris_mod14, <span class="at">mod23 =</span> iris_mod23, <span class="at">mod24 =</span> iris_mod24, <span class="at">mod34 =</span> iris_mod34), <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1060"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1060-1"><a href="topics2.html#cb1060-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">mod12 =</span> iris_mod12, <span class="at">mod13 =</span> iris_mod13, <span class="at">mod14 =</span> iris_mod14, <span class="at">mod23 =</span> iris_mod23, <span class="at">mod24 =</span> iris_mod24, <span class="at">mod34 =</span> iris_mod34), <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1258,44 +1258,44 @@ mod34
 (Intercept)
 </td>
 <td style="text-align:center;">
-−13.046
+-13.046
 </td>
 <td style="text-align:center;">
-−39.839
+-39.839
 </td>
 <td style="text-align:center;">
-−22.874
+-22.874
 </td>
 <td style="text-align:center;">
-−37.058
+-37.058
 </td>
 <td style="text-align:center;">
-−14.379
+-14.379
 </td>
 <td style="text-align:center;">
-−45.272
+-45.272
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 (0.002)
 </td>
 <td style="text-align:center;">
-(0.001)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
-(0.001)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 (0.005)
 </td>
 <td style="text-align:center;">
-(0.001)
+(&lt;0.001)
 </td>
 </tr>
 <tr>
@@ -1306,7 +1306,7 @@ sl
 1.902
 </td>
 <td style="text-align:center;">
-−4.017
+-4.017
 </td>
 <td style="text-align:center;">
 0.306
@@ -1322,7 +1322,7 @@ sl
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 (0.013)
@@ -1349,10 +1349,10 @@ sw
 <td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-−2.509
+-2.509
 </td>
 <td style="text-align:center;">
-−3.907
+-3.907
 </td>
 <td style="text-align:center;">
 </td>
@@ -1402,12 +1402,12 @@ pl
 <td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-(0.001)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 </td>
@@ -1443,12 +1443,12 @@ pw
 <td style="text-align:center;box-shadow: 0px 1px">
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
 (0.005)
@@ -1528,22 +1528,22 @@ BIC
 Log.Lik.
 </td>
 <td style="text-align:center;">
-−55.163
+-55.163
 </td>
 <td style="text-align:center;">
-−11.925
+-11.925
 </td>
 <td style="text-align:center;">
-−16.643
+-16.643
 </td>
 <td style="text-align:center;">
-−15.756
+-15.756
 </td>
 <td style="text-align:center;">
-−13.700
+-13.700
 </td>
 <td style="text-align:center;">
-−10.282
+-10.282
 </td>
 </tr>
 <tr>
@@ -1574,24 +1574,24 @@ RMSE
 </div>
 <div id="three-and-all-variables" class="section level4 hasAnchor" number="8.1.4.5">
 <h4><span class="header-section-number">8.1.4.5</span> Three and All Variables<a href="topics2.html#three-and-all-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1065"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1065-1"><a href="topics2.html#cb1065-1" aria-hidden="true" tabindex="-1"></a>iris_mod123 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pl, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1065-2"><a href="topics2.html#cb1065-2" aria-hidden="true" tabindex="-1"></a>iris_mod124 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1065-3"><a href="topics2.html#cb1065-3" aria-hidden="true" tabindex="-1"></a>iris_mod134 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
-<span id="cb1065-4"><a href="topics2.html#cb1065-4" aria-hidden="true" tabindex="-1"></a>iris_mod234 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
-<pre><code>## Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
-<div class="sourceCode" id="cb1067"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1067-1"><a href="topics2.html#cb1067-1" aria-hidden="true" tabindex="-1"></a>iris_mod1234 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
-<div class="sourceCode" id="cb1068"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1068-1"><a href="topics2.html#cb1068-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="ot">&lt;-</span> iris_tbl2ext_two <span class="sc">%&gt;%</span> </span>
-<span id="cb1068-2"><a href="topics2.html#cb1068-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod123, <span class="at">var =</span> <span class="st">&quot;pred_123&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1068-3"><a href="topics2.html#cb1068-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v123 =</span> <span class="fu">as.integer</span>(pred_123 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1068-4"><a href="topics2.html#cb1068-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod124, <span class="at">var =</span> <span class="st">&quot;pred_124&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1068-5"><a href="topics2.html#cb1068-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v124 =</span> <span class="fu">as.integer</span>(pred_124 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1068-6"><a href="topics2.html#cb1068-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod134, <span class="at">var =</span> <span class="st">&quot;pred_134&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1068-7"><a href="topics2.html#cb1068-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v134 =</span> <span class="fu">as.integer</span>(pred_134 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1068-8"><a href="topics2.html#cb1068-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod234, <span class="at">var =</span> <span class="st">&quot;pred_234&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1068-9"><a href="topics2.html#cb1068-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v234 =</span> <span class="fu">as.integer</span>(pred_234 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1068-10"><a href="topics2.html#cb1068-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod1234, <span class="at">var =</span> <span class="st">&quot;pred_1234&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1068-11"><a href="topics2.html#cb1068-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v1234 =</span> <span class="fu">as.integer</span>(pred_1234 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) </span>
-<span id="cb1068-12"><a href="topics2.html#cb1068-12" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
+<div class="sourceCode" id="cb1061"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1061-1"><a href="topics2.html#cb1061-1" aria-hidden="true" tabindex="-1"></a>iris_mod123 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pl, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1061-2"><a href="topics2.html#cb1061-2" aria-hidden="true" tabindex="-1"></a>iris_mod124 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1061-3"><a href="topics2.html#cb1061-3" aria-hidden="true" tabindex="-1"></a>iris_mod134 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span>
+<span id="cb1061-4"><a href="topics2.html#cb1061-4" aria-hidden="true" tabindex="-1"></a>iris_mod234 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sw <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
+<pre><code>## Warning: glm.fit: 数値的に 0 か 1 である確率が生じました</code></pre>
+<div class="sourceCode" id="cb1063"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1063-1"><a href="topics2.html#cb1063-1" aria-hidden="true" tabindex="-1"></a>iris_mod1234 <span class="ot">&lt;-</span>iris_tbl2ext <span class="sc">%&gt;%</span> <span class="fu">glm</span>(virginica<span class="sc">~</span>sl <span class="sc">+</span> sw <span class="sc">+</span> pl <span class="sc">+</span> pw, <span class="at">family =</span> binomial, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1064"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1064-1"><a href="topics2.html#cb1064-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="ot">&lt;-</span> iris_tbl2ext_two <span class="sc">%&gt;%</span> </span>
+<span id="cb1064-2"><a href="topics2.html#cb1064-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod123, <span class="at">var =</span> <span class="st">&quot;pred_123&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1064-3"><a href="topics2.html#cb1064-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v123 =</span> <span class="fu">as.integer</span>(pred_123 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1064-4"><a href="topics2.html#cb1064-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod124, <span class="at">var =</span> <span class="st">&quot;pred_124&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1064-5"><a href="topics2.html#cb1064-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v124 =</span> <span class="fu">as.integer</span>(pred_124 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1064-6"><a href="topics2.html#cb1064-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod134, <span class="at">var =</span> <span class="st">&quot;pred_134&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1064-7"><a href="topics2.html#cb1064-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v134 =</span> <span class="fu">as.integer</span>(pred_134 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1064-8"><a href="topics2.html#cb1064-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod234, <span class="at">var =</span> <span class="st">&quot;pred_234&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1064-9"><a href="topics2.html#cb1064-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v234 =</span> <span class="fu">as.integer</span>(pred_234 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1064-10"><a href="topics2.html#cb1064-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(iris_mod1234, <span class="at">var =</span> <span class="st">&quot;pred_1234&quot;</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1064-11"><a href="topics2.html#cb1064-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v1234 =</span> <span class="fu">as.integer</span>(pred_1234 <span class="sc">&gt;=</span> <span class="fl">0.5</span>)) </span>
+<span id="cb1064-12"><a href="topics2.html#cb1064-12" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all  <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(sl))</span></code></pre></div>
 <pre><code>## # A tibble: 100 × 38
 ##       sl    sw    pl    pw species   virginica    v0 pred_1 resid_1    v1 pred_2
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;         &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;
@@ -1611,30 +1611,30 @@ RMSE
 ## #   v24 &lt;int&gt;, pred_34 &lt;dbl&gt;, v34 &lt;int&gt;, pred_123 &lt;dbl&gt;, v123 &lt;int&gt;,
 ## #   pred_124 &lt;dbl&gt;, v124 &lt;int&gt;, pred_134 &lt;dbl&gt;, v134 &lt;int&gt;, pred_234 &lt;dbl&gt;,
 ## #   v234 &lt;int&gt;, pred_1234 &lt;dbl&gt;, v1234 &lt;int&gt;</code></pre>
-<div class="sourceCode" id="cb1070"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1070-1"><a href="topics2.html#cb1070-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v123 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1066"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1066-1"><a href="topics2.html#cb1066-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v123 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.96</code></pre>
-<div class="sourceCode" id="cb1072"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1072-1"><a href="topics2.html#cb1072-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v124 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1068"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1068-1"><a href="topics2.html#cb1068-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v124 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.96</code></pre>
-<div class="sourceCode" id="cb1074"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1074-1"><a href="topics2.html#cb1074-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v134 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1070"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1070-1"><a href="topics2.html#cb1070-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v134 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.98</code></pre>
-<div class="sourceCode" id="cb1076"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1076-1"><a href="topics2.html#cb1076-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v234 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1072"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1072-1"><a href="topics2.html#cb1072-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v234 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.98</code></pre>
-<div class="sourceCode" id="cb1078"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1078-1"><a href="topics2.html#cb1078-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v1234 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
+<div class="sourceCode" id="cb1074"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1074-1"><a href="topics2.html#cb1074-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">filter</span>(v1234 <span class="sc">==</span> <span class="dv">1</span>, virginica <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="fu">nrow</span>()<span class="sc">/</span><span class="dv">50</span></span></code></pre></div>
 <pre><code>## [1] 0.98</code></pre>
 </div>
 <div id="confusion-matrices-1" class="section level4 hasAnchor" number="8.1.4.6">
 <h4><span class="header-section-number">8.1.4.6</span> Confusion Matrices<a href="topics2.html#confusion-matrices-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1080"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1080-1"><a href="topics2.html#cb1080-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v134 <span class="sc">+</span> virginica, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1076"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1076-1"><a href="topics2.html#cb1076-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v134 <span class="sc">+</span> virginica, .)</span></code></pre></div>
 <pre><code>##     virginica
 ## v134  0  1
 ##    0 48  1
 ##    1  2 49</code></pre>
-<div class="sourceCode" id="cb1082"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1082-1"><a href="topics2.html#cb1082-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v234 <span class="sc">+</span> virginica, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1078"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1078-1"><a href="topics2.html#cb1078-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v234 <span class="sc">+</span> virginica, .)</span></code></pre></div>
 <pre><code>##     virginica
 ## v234  0  1
 ##    0 48  1
 ##    1  2 49</code></pre>
-<div class="sourceCode" id="cb1084"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1084-1"><a href="topics2.html#cb1084-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v1234 <span class="sc">+</span> virginica, .)</span></code></pre></div>
+<div class="sourceCode" id="cb1080"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1080-1"><a href="topics2.html#cb1080-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">xtabs</span>(<span class="sc">~</span> v1234 <span class="sc">+</span> virginica, .)</span></code></pre></div>
 <pre><code>##      virginica
 ## v1234  0  1
 ##     0 49  1
@@ -1642,7 +1642,7 @@ RMSE
 </div>
 <div id="model-summary-2" class="section level4 hasAnchor" number="8.1.4.7">
 <h4><span class="header-section-number">8.1.4.7</span> Model Summary<a href="topics2.html#model-summary-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb1086"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1086-1"><a href="topics2.html#cb1086-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">mod123 =</span> iris_mod123, <span class="at">mod124 =</span> iris_mod124, <span class="at">mod134 =</span> iris_mod134, <span class="at">mod234 =</span> iris_mod234, <span class="at">mod1234 =</span> iris_mod1234), <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1082"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1082-1"><a href="topics2.html#cb1082-1" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(<span class="fu">list</span>(<span class="at">mod123 =</span> iris_mod123, <span class="at">mod124 =</span> iris_mod124, <span class="at">mod134 =</span> iris_mod134, <span class="at">mod234 =</span> iris_mod234, <span class="at">mod1234 =</span> iris_mod1234), <span class="at">statistic =</span> <span class="st">&#39;p.value&#39;</span>)</span></code></pre></div>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1671,19 +1671,19 @@ mod1234
 (Intercept)
 </td>
 <td style="text-align:center;">
-−38.215
+-38.215
 </td>
 <td style="text-align:center;">
-−20.287
+-20.287
 </td>
 <td style="text-align:center;">
-−40.831
+-40.831
 </td>
 <td style="text-align:center;">
-−50.527
+-50.527
 </td>
 <td style="text-align:center;">
-−42.638
+-42.638
 </td>
 </tr>
 <tr>
@@ -1710,18 +1710,18 @@ mod1234
 sl
 </td>
 <td style="text-align:center;">
-−3.852
+-3.852
 </td>
 <td style="text-align:center;">
 1.295
 </td>
 <td style="text-align:center;">
-−3.839
+-3.839
 </td>
 <td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-−2.465
+-2.465
 </td>
 </tr>
 <tr>
@@ -1747,18 +1747,18 @@ sl
 sw
 </td>
 <td style="text-align:center;">
-−0.639
+-0.639
 </td>
 <td style="text-align:center;">
-−4.823
+-4.823
 </td>
 <td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-−8.376
+-8.376
 </td>
 <td style="text-align:center;">
-−6.681
+-6.681
 </td>
 </tr>
 <tr>
@@ -1802,7 +1802,7 @@ pl
 <td style="text-align:left;">
 </td>
 <td style="text-align:center;">
-(0.001)
+(&lt;0.001)
 </td>
 <td style="text-align:center;">
 </td>
@@ -1841,7 +1841,7 @@ pw
 <td style="text-align:center;box-shadow: 0px 1px">
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
-(0.000)
+(&lt;0.001)
 </td>
 <td style="text-align:center;box-shadow: 0px 1px">
 (0.028)
@@ -1918,19 +1918,19 @@ BIC
 Log.Lik.
 </td>
 <td style="text-align:center;">
-−11.886
+-11.886
 </td>
 <td style="text-align:center;">
-−12.951
+-12.951
 </td>
 <td style="text-align:center;">
-−7.746
+-7.746
 </td>
 <td style="text-align:center;">
-−6.633
+-6.633
 </td>
 <td style="text-align:center;">
-−5.949
+-5.949
 </td>
 </tr>
 <tr>
@@ -1955,7 +1955,7 @@ RMSE
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb1087"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1087-1"><a href="topics2.html#cb1087-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">select</span>(virginica, v0, v1, v2, v3, v4, v12, v13, v14, v23, v24, v34, v123, v124, v134, v234, v1234)</span></code></pre></div>
+<div class="sourceCode" id="cb1083"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1083-1"><a href="topics2.html#cb1083-1" aria-hidden="true" tabindex="-1"></a>iris_tbl2ext_all <span class="sc">%&gt;%</span> <span class="fu">select</span>(virginica, v0, v1, v2, v3, v4, v12, v13, v14, v23, v24, v34, v123, v124, v134, v234, v1234)</span></code></pre></div>
 <pre><code>## # A tibble: 100 × 17
 ##    virginica    v0    v1    v2    v3    v4   v12   v13   v14   v23   v24   v34
 ##        &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;

@@ -396,7 +396,7 @@ summary(dfwe, country)
 ```
 
 ```{r}
-dfwe %>% group_by(country) %>% select(2,4,5) %>%
+dfwe %>% group_by(country) %>% select(2,4,5,6) %>%
   summarize(private_n = sum(is.na(women_private_sector)), 
             private = mean(is.na(women_private_sector)), 
             public_n = sum(is.na(women_public_sector)), 
